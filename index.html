@@ -3,80 +3,218 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Libras com Eduarda — Liturgia, glosas, músicas e recursos católicos em Libras." />
-  <title>Libras com Eduarda — Liturgia e Glosas</title>
+  <meta name="description" content="Libras com Eduarda — liturgia, glosas, calendário, Bíblia Ave-Maria, plano de leitura e repertório católico." />
+  <title>Libras com Eduarda — Católicos</title>
   <link rel="stylesheet" href="./styles.css" />
 </head>
 <body>
   <header class="site-header">
     <div class="shell header-inner">
-      <div>
+      <div class="brand-block">
         <p class="eyebrow">Libras com Eduarda · Católicos</p>
-        <h1>Liturgia e Glosas</h1>
+        <h1>Acervo Católico em Libras</h1>
       </div>
       <nav class="primary-nav" aria-label="Seções principais">
         <button class="nav-button is-active" data-section="liturgia">Liturgia</button>
+        <button class="nav-button" data-section="calendario">Calendário</button>
+        <button class="nav-button" data-section="biblia">Bíblia Ave-Maria</button>
+        <button class="nav-button" data-section="plano">Plano de leitura</button>
         <button class="nav-button" data-section="musicas">Músicas</button>
       </nav>
     </div>
   </header>
 
   <main class="shell main-layout">
-    <section class="search-panel" aria-labelledby="busca-title">
-      <div>
-        <p class="eyebrow">Acervo pesquisável</p>
-        <h2 id="busca-title">Encontre a passagem e estude lado a lado</h2>
-        <p class="supporting-text">Pesquise pelo texto original, referência bíblica, ano litúrgico, item litúrgico ou palavra-chave.</p>
-      </div>
+    <section id="liturgiaSection" class="content-section section-top">
+      <section class="search-panel" aria-labelledby="busca-title">
+        <div>
+          <p class="eyebrow">Acervo pesquisável</p>
+          <h2 id="busca-title">Texto litúrgico e glosa, no mesmo ponto de leitura</h2>
+          <p class="supporting-text">Pesquise pela passagem, pelo texto litúrgico, referência bíblica, ano, item litúrgico ou data.</p>
+        </div>
 
-      <div class="search-grid">
-        <label class="field field-search">
-          <span>Pesquisar</span>
-          <input id="query" type="search" placeholder="Ex.: vinha, Mt 21, Ano A, Evangelho" autocomplete="off" />
-        </label>
+        <div class="search-grid">
+          <label class="field field-search">
+            <span>Pesquisar</span>
+            <input id="query" type="search" placeholder="Ex.: vinha, Mt 21, Ano A, Evangelho" autocomplete="off" />
+          </label>
 
-        <label class="field">
-          <span>Ano litúrgico</span>
-          <select id="yearFilter">
-            <option value="">Todos</option>
-            <option value="A">Ano A</option>
-            <option value="B">Ano B</option>
-            <option value="C">Ano C</option>
-          </select>
-        </label>
+          <label class="field">
+            <span>Data</span>
+            <input id="dateFilter" type="date" min="2026-01-01" max="2030-12-31" />
+          </label>
 
-        <label class="field">
-          <span>Item litúrgico</span>
-          <select id="itemFilter">
-            <option value="">Todos</option>
-            <option value="primeira-leitura">Primeira leitura</option>
-            <option value="salmo">Salmo</option>
-            <option value="segunda-leitura">Segunda leitura</option>
-            <option value="aclamacao">Aclamação</option>
-            <option value="evangelho">Evangelho</option>
-          </select>
-        </label>
+          <label class="field">
+            <span>Ano litúrgico</span>
+            <select id="yearFilter">
+              <option value="">Todos</option>
+              <option value="A">Ano A</option>
+              <option value="B">Ano B</option>
+              <option value="C">Ano C</option>
+            </select>
+          </label>
 
-        <button id="clearFilters" class="secondary-button" type="button">Limpar filtros</button>
-      </div>
-    </section>
+          <label class="field">
+            <span>Item litúrgico</span>
+            <select id="itemFilter">
+              <option value="">Todos</option>
+              <option value="primeira-leitura">Primeira leitura</option>
+              <option value="salmo">Salmo</option>
+              <option value="segunda-leitura">Segunda leitura</option>
+              <option value="aclamacao">Aclamação</option>
+              <option value="evangelho">Evangelho</option>
+            </select>
+          </label>
 
-    <section id="liturgiaSection" class="content-section">
+          <button id="clearFilters" class="secondary-button" type="button">Limpar</button>
+        </div>
+      </section>
+
       <div class="section-heading">
         <div>
-          <p class="eyebrow">Liturgia dominical</p>
-          <h2>Texto original × glosa</h2>
+          <p class="eyebrow">Liturgia</p>
+          <h2>Lista de conteúdos</h2>
+          <p class="supporting-text compact">A lista permanece enxuta. Abra somente o item que deseja estudar.</p>
         </div>
         <p id="resultCount" class="result-count" aria-live="polite"></p>
       </div>
-      <div id="liturgyResults" class="results-list"></div>
+      <div id="liturgyResults" class="accordion-list"></div>
     </section>
 
-    <section id="musicasSection" class="content-section" hidden>
+    <section id="calendarioSection" class="content-section section-top" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">2026–2030</p>
+          <h2>Calendário litúrgico</h2>
+          <p class="supporting-text compact">Base brasileira para navegação por data. Os dias com conteúdo já cadastrado levam diretamente à liturgia correspondente.</p>
+        </div>
+      </div>
+
+      <div class="source-strip">
+        <div>
+          <strong>Referência operacional:</strong> GCatholic — Brasil
+          <a href="https://gcatholic.org/calendar/2026/BR-pt" target="_blank" rel="noopener">abrir fonte</a>
+        </div>
+        <div>
+          <strong>Referência normativa complementar:</strong> Secretariado Nacional de Liturgia
+          <a href="https://www.liturgia.pt/documentos/ano_lit.php" target="_blank" rel="noopener">abrir fonte</a>
+        </div>
+      </div>
+
+      <div class="calendar-shell">
+        <div class="calendar-toolbar">
+          <button id="calendarPrev" class="icon-button" type="button" aria-label="Mês anterior">‹</button>
+          <label class="field calendar-select">
+            <span>Ano</span>
+            <select id="calendarYear">
+              <option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option>
+            </select>
+          </label>
+          <label class="field calendar-select">
+            <span>Mês</span>
+            <select id="calendarMonth"></select>
+          </label>
+          <button id="calendarNext" class="icon-button" type="button" aria-label="Mês seguinte">›</button>
+        </div>
+
+        <div class="calendar-weekdays" aria-hidden="true">
+          <span>Dom</span><span>Seg</span><span>Ter</span><span>Qua</span><span>Qui</span><span>Sex</span><span>Sáb</span>
+        </div>
+        <div id="calendarGrid" class="calendar-grid" role="grid" aria-label="Calendário litúrgico"></div>
+        <aside id="calendarDetail" class="calendar-detail" aria-live="polite"></aside>
+      </div>
+    </section>
+
+    <section id="bibliaSection" class="content-section section-top" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">73 livros · leitura e áudio</p>
+          <h2>Bíblia Sagrada Ave-Maria</h2>
+          <p class="supporting-text compact">Navegação interna por livros e capítulos. O texto e o áudio abrem na fonte licenciada da Editora Ave-Maria disponibilizada pela YouVersion.</p>
+        </div>
+      </div>
+
+      <div class="bible-actions">
+        <a class="primary-link" href="https://www.bible.com/pt/versions/4542" target="_blank" rel="noopener">Ler Bíblia Ave-Maria</a>
+        <a class="secondary-link" href="https://www.bible.com/pt/audio-bible-app-versions/4542-avm-b%C3%ADblia-sagrada-ave-maria" target="_blank" rel="noopener">Ouvir Bíblia Ave-Maria</a>
+      </div>
+
+      <div class="bible-browser">
+        <div class="bible-filter-row">
+          <label class="field">
+            <span>Buscar livro</span>
+            <input id="bibleQuery" type="search" placeholder="Ex.: João, Tobias, Salmos" />
+          </label>
+          <label class="field">
+            <span>Testamento</span>
+            <select id="bibleTestament">
+              <option value="">Todos</option>
+              <option value="AT">Antigo Testamento</option>
+              <option value="NT">Novo Testamento</option>
+            </select>
+          </label>
+        </div>
+        <div id="bibleBooks" class="book-list"></div>
+        <div id="bibleChapterPanel" class="chapter-panel empty-state">Selecione um livro para escolher o capítulo.</div>
+      </div>
+    </section>
+
+    <section id="planoSection" class="content-section section-top" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Método “A Bíblia no meu dia a dia”</p>
+          <h2>Plano de leitura — Monsenhor Jonas Abib</h2>
+          <p class="supporting-text compact">Sequência baseada no método publicado pela Canção Nova, com meta diária de 3 ou 4 capítulos e progresso salvo neste dispositivo.</p>
+        </div>
+      </div>
+
+      <div class="plan-toolbar">
+        <label class="field">
+          <span>Meta diária</span>
+          <select id="dailyTarget">
+            <option value="3">3 capítulos</option>
+            <option value="4">4 capítulos</option>
+          </select>
+        </label>
+        <button id="resetPlan" class="secondary-button danger-quiet" type="button">Reiniciar progresso</button>
+      </div>
+
+      <div class="progress-grid">
+        <article class="progress-card">
+          <p class="eyebrow">Plano</p>
+          <strong id="planPercent" class="progress-number">0%</strong>
+          <div class="progress-track"><span id="planProgressBar"></span></div>
+          <p id="planProgressText" class="supporting-text compact"></p>
+        </article>
+        <article class="progress-card">
+          <p class="eyebrow">Bíblia percorrida</p>
+          <strong id="biblePercent" class="progress-number">0%</strong>
+          <div class="progress-track"><span id="bibleProgressBar"></span></div>
+          <p id="bibleProgressText" class="supporting-text compact"></p>
+        </article>
+      </div>
+
+      <div class="plan-grid">
+        <article class="plan-card">
+          <p class="eyebrow">Próxima meta</p>
+          <h3>Capítulos de hoje</h3>
+          <div id="todayReadings" class="reading-checklist"></div>
+        </article>
+        <article class="plan-card">
+          <p class="eyebrow">Fonte</p>
+          <h3>Canção Nova</h3>
+          <p class="supporting-text">A sequência de leitura segue o método de Monsenhor Jonas Abib. O sistema diferencia repetições do método e cobertura única dos capítulos bíblicos.</p>
+          <a class="text-link" href="https://padrejonas.cancaonova.com/?p=1441" target="_blank" rel="noopener">Ver orientação do Diário Espiritual</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="musicasSection" class="content-section section-top" hidden>
       <div class="section-heading">
         <div>
           <p class="eyebrow">Repertório católico</p>
           <h2>Músicas prioritárias</h2>
+          <p class="supporting-text compact">Estrutura preparada para função litúrgica, tempo, tema, ocasião, glosa e vídeo.</p>
         </div>
       </div>
       <div id="musicResults" class="music-grid"></div>
@@ -84,30 +222,39 @@
   </main>
 
   <template id="liturgyCardTemplate">
-    <article class="liturgy-card">
-      <header class="card-header">
-        <div>
+    <article class="accordion-item">
+      <button class="accordion-trigger" type="button" aria-expanded="false">
+        <div class="accordion-main">
           <p class="card-kicker"></p>
           <h3 class="card-title"></h3>
           <p class="card-meta"></p>
         </div>
-        <span class="status-pill"></span>
-      </header>
+        <div class="accordion-side">
+          <span class="status-pill"></span>
+          <span class="chevron" aria-hidden="true">⌄</span>
+        </div>
+      </button>
 
-      <div class="parallel-view">
-        <section class="text-pane original-pane">
-          <div class="pane-label">Texto original</div>
-          <div class="text-content original-text"></div>
-        </section>
-        <section class="text-pane glosa-pane">
-          <div class="pane-label">Glosa e orientação visual</div>
-          <div class="text-content glosa-text"></div>
-        </section>
+      <div class="accordion-panel" hidden>
+        <div class="parallel-view">
+          <section class="text-pane original-pane">
+            <div class="pane-label">Texto litúrgico · Missal/Lecionário</div>
+            <div class="source-version"></div>
+            <div class="text-content original-text"></div>
+          </section>
+          <section class="text-pane glosa-pane">
+            <div class="pane-label">Glosa</div>
+            <div class="text-content glosa-text"></div>
+          </section>
+        </div>
       </div>
     </article>
   </template>
 
   <script src="./data.js"></script>
+  <script src="./bible-data.js"></script>
+  <script src="./calendar.js"></script>
   <script src="./app.js"></script>
+  <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
 </body>
 </html>
