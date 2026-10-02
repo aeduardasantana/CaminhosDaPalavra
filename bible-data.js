@@ -25,6 +25,8 @@ window.LCE_BIBLE = {
     {id:"TOB",name:"Tobias",testament:"AT",chapters:14},
     {id:"JDT",name:"Judite",testament:"AT",chapters:16},
     {id:"EST",name:"Ester",testament:"AT",chapters:16},
+    {id:"1MA",name:"I Macabeus",testament:"AT",chapters:16},
+    {id:"2MA",name:"II Macabeus",testament:"AT",chapters:15},
     {id:"JOB",name:"Jó",testament:"AT",chapters:42},
     {id:"PSA",name:"Salmos",testament:"AT",chapters:150},
     {id:"PRO",name:"Provérbios",testament:"AT",chapters:31},
@@ -107,8 +109,3 @@ window.LCE_BIBLE = {
   ]
 };
 
-// Livros deuterocanônicos com códigos USFM usados para navegação/licenciamento.
-window.LCE_BIBLE.books.splice(42, 0,
-  {id:"1MA",name:"I Macabeus",testament:"AT",chapters:16},
-  {id:"2MA",name:"II Macabeus",testament:"AT",chapters:15}
-);
