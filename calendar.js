@@ -62,7 +62,7 @@
     const year = date.getUTCFullYear();
     const startYear = date >= adventStart(year) ? year : year - 1;
     const cycles = ["A", "B", "C"];
-    return cycles[((startYear - 2026) % 3 + 3) % 3];
+    return cycles[((startYear - 2025) % 3 + 3) % 3];
   }
 
   function seasonFor(date) {
