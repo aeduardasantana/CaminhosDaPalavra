@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Libras com Eduarda — Liturgia, glosas, músicas e recursos católicos em Libras." />
+  <title>Libras com Eduarda — Liturgia e Glosas</title>
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="shell header-inner">
+      <div>
+        <p class="eyebrow">Libras com Eduarda · Católicos</p>
+        <h1>Liturgia e Glosas</h1>
+      </div>
+      <nav class="primary-nav" aria-label="Seções principais">
+        <button class="nav-button is-active" data-section="liturgia">Liturgia</button>
+        <button class="nav-button" data-section="musicas">Músicas</button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="shell main-layout">
+    <section class="search-panel" aria-labelledby="busca-title">
+      <div>
+        <p class="eyebrow">Acervo pesquisável</p>
+        <h2 id="busca-title">Encontre a passagem e estude lado a lado</h2>
+        <p class="supporting-text">Pesquise pelo texto original, referência bíblica, ano litúrgico, item litúrgico ou palavra-chave.</p>
+      </div>
+
+      <div class="search-grid">
+        <label class="field field-search">
+          <span>Pesquisar</span>
+          <input id="query" type="search" placeholder="Ex.: vinha, Mt 21, Ano A, Evangelho" autocomplete="off" />
+        </label>
+
+        <label class="field">
+          <span>Ano litúrgico</span>
+          <select id="yearFilter">
+            <option value="">Todos</option>
+            <option value="A">Ano A</option>
+            <option value="B">Ano B</option>
+            <option value="C">Ano C</option>
+          </select>
+        </label>
+
+        <label class="field">
+          <span>Item litúrgico</span>
+          <select id="itemFilter">
+            <option value="">Todos</option>
+            <option value="primeira-leitura">Primeira leitura</option>
+            <option value="salmo">Salmo</option>
+            <option value="segunda-leitura">Segunda leitura</option>
+            <option value="aclamacao">Aclamação</option>
+            <option value="evangelho">Evangelho</option>
+          </select>
+        </label>
+
+        <button id="clearFilters" class="secondary-button" type="button">Limpar filtros</button>
+      </div>
+    </section>
+
+    <section id="liturgiaSection" class="content-section">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Liturgia dominical</p>
+          <h2>Texto original × glosa</h2>
+        </div>
+        <p id="resultCount" class="result-count" aria-live="polite"></p>
+      </div>
+      <div id="liturgyResults" class="results-list"></div>
+    </section>
+
+    <section id="musicasSection" class="content-section" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Repertório católico</p>
+          <h2>Músicas prioritárias</h2>
+        </div>
+      </div>
+      <div id="musicResults" class="music-grid"></div>
+    </section>
+  </main>
+
+  <template id="liturgyCardTemplate">
+    <article class="liturgy-card">
+      <header class="card-header">
+        <div>
+          <p class="card-kicker"></p>
+          <h3 class="card-title"></h3>
+          <p class="card-meta"></p>
+        </div>
+        <span class="status-pill"></span>
+      </header>
+
+      <div class="parallel-view">
+        <section class="text-pane original-pane">
+          <div class="pane-label">Texto original</div>
+          <div class="text-content original-text"></div>
+        </section>
+        <section class="text-pane glosa-pane">
+          <div class="pane-label">Glosa e orientação visual</div>
+          <div class="text-content glosa-text"></div>
+        </section>
+      </div>
+    </article>
+  </template>
+
+  <script src="./data.js"></script>
+  <script src="./app.js"></script>
+</body>
+</html>
