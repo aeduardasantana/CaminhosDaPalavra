@@ -3,6 +3,7 @@ const bible = window.LCE_BIBLE;
 const litCalendar = window.LCE_CALENDAR;
 const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
+const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 
 const els = {
   query: document.querySelector('#query'),
