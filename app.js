@@ -742,7 +742,7 @@ function renderFullSchedule(progress, startDate, target) {
 
       const verseField = document.createElement('label');
       verseField.className = 'verse-note';
-      verseField.innerHTML = '<span>Versículos destacados</span>';
+      verseField.innerHTML = '<span>Versículos lidos / destacados</span>';
 
       const verseInput = document.createElement('input');
       verseInput.type = 'text';
