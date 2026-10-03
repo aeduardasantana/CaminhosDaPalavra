@@ -82,7 +82,7 @@ window.LCE_BIBLE = {
     {id:"REV",name:"Apocalipse",testament:"NT",chapters:22}
   ],
 
-  planSource: "Método 'A Bíblia no meu dia a dia' — Monsenhor Jonas Abib / Canção Nova",
+  planSource: "Plano de leitura do projeto",
   planOrder: [
     {book:"1JN",repeat:2,label:"I São João — duas leituras"},
     {book:"JHN"},
