@@ -458,8 +458,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Sf 2,3",
-          "note": "3,12-13"
+          "reference": "Sf 2,3; 3,12-13",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -1450,8 +1450,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Gn 2,7-9",
-          "note": "3,1-7"
+          "reference": "Gn 2,7-9; 3,1-7",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -1936,8 +1936,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Is 63,16-17.19",
-          "note": "64,2-7"
+          "reference": "Is 63,16-17.19; 64,2-7",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -2192,8 +2192,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Gn 15,1-6",
-          "note": "21,1-3"
+          "reference": "Gn 15,1-6; 21,1-3",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -2654,8 +2654,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Sb 1,13-15",
-          "note": "2,23-24"
+          "reference": "Sb 1,13-15; 2,23-24",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -4260,8 +4260,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "evangelho",
           "label": "Evangelho",
-          "reference": "Lc 1,1-4",
-          "note": "4,14-21"
+          "reference": "Lc 1,1-4; 4,14-21",
+          "note": ""
         }
       ],
       "sourceLine": "3º Domingo — 1ª: Ne 8,2-4.5-6.8-10 | Sl: Sl 19 | 2ª: 1Cor 12,12-30; forma breve prevista | Ev: Lc 1,1-4; 4,14-21"
@@ -4530,8 +4530,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Zc 12,10-11",
-          "note": "13,1"
+          "reference": "Zc 12,10-11; 13,1",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -4722,8 +4722,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Ecl 1,2",
-          "note": "2,21-23"
+          "reference": "Ecl 1,2; 2,21-23",
+          "note": ""
         },
         {
           "type": "salmo",
@@ -5010,8 +5010,8 @@ window.LCE_LECTIONARY = {
         {
           "type": "primeira-leitura",
           "label": "Primeira leitura",
-          "reference": "Hab 1,2-3",
-          "note": "2,2-4"
+          "reference": "Hab 1,2-3; 2,2-4",
+          "note": ""
         },
         {
           "type": "salmo",
