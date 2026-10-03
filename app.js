@@ -165,7 +165,7 @@ function recordForDate(isoDate) {
   }
 
   if (celebration === 'Santíssima Trindade' || celebration === 'Ascensão do Senhor' || celebration === 'Pentecostes' ||
-      celebration === 'Epifania do Senhor' || celebration === 'Batismo do Senhor' || celebration === 'Santa Maria, Mãe de Deus' ||
+      celebration === 'Epifania do Senhor' || celebration === 'Batismo do Senhor' || celebration === 'Santa Maria, Mãe de Deus' || celebration === 'Sagrada Família' ||
       celebration === 'Domingo da Páscoa' || celebration === 'Domingo de Ramos e da Paixão') {
     return records.filter(r => r.celebration === celebration);
   }
