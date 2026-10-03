@@ -749,6 +749,7 @@ function createVerseGrid(step, progress, verseProgress) {
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.dataset.verse = String(verse);
     checkbox.checked = verseProgress.has(verseProgressKey(step, verse));
     checkbox.setAttribute('aria-label', step.bookName + ' ' + step.chapter + ', versículo ' + verse);
 
@@ -786,12 +787,13 @@ function createChapterToggle(step, progress, verseProgress) {
 
   checkbox.addEventListener('change', () => {
     setChapterCompletion(step, checkbox.checked, progress, verseProgress);
-    document.querySelectorAll('[data-verse-step="' + step.key + '"] .verse-check').forEach((verseLabel, index) => {
+    document.querySelectorAll('[data-verse-step="' + step.key + '"] .verse-check').forEach(verseLabel => {
       const input = verseLabel.querySelector('input');
+      const verse = Number(input.dataset.verse);
       input.checked = checkbox.checked;
       verseLabel.classList.toggle('is-done', checkbox.checked);
-      if (checkbox.checked) verseProgress.add(verseProgressKey(step, index + 1));
-      else verseProgress.delete(verseProgressKey(step, index + 1));
+      if (checkbox.checked) verseProgress.add(verseProgressKey(step, verse));
+      else verseProgress.delete(verseProgressKey(step, verse));
     });
     saveVerseProgress(verseProgress);
     updateStepPresentations(step, progress, verseProgress);
