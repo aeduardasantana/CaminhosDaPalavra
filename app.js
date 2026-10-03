@@ -11,7 +11,6 @@ const els = {
   item: document.querySelector('#itemFilter'),
   clear: document.querySelector('#clearFilters'),
   liturgyResults: document.querySelector('#liturgyResults'),
-  musicResults: document.querySelector('#musicResults'),
   resultCount: document.querySelector('#resultCount'),
   template: document.querySelector('#liturgyCardTemplate'),
   navButtons: [...document.querySelectorAll('.nav-button')],
@@ -20,8 +19,7 @@ const els = {
     liturgia: document.querySelector('#liturgiaSection'),
     calendario: document.querySelector('#calendarioSection'),
     biblia: document.querySelector('#bibliaSection'),
-    plano: document.querySelector('#planoSection'),
-    musicas: document.querySelector('#musicasSection')
+    plano: document.querySelector('#planoSection')
   },
 
   calendarYear: document.querySelector('#calendarYear'),
@@ -302,22 +300,6 @@ function renderLiturgia() {
   });
 }
 
-function renderMusicas() {
-  els.musicResults.replaceChildren();
-  data.musicas.forEach(song => {
-    const article = document.createElement('article');
-    article.className = 'music-card';
-    article.innerHTML =
-      '<p class="eyebrow">' + song.tema + '</p>' +
-      '<h3>' + song.titulo + '</h3>' +
-      '<p class="music-meta"><strong>Função:</strong> ' + song.funcao + '</p>' +
-      '<p class="music-meta"><strong>Tempo:</strong> ' + song.tempo + '</p>' +
-      '<p class="music-meta"><strong>Ocasião:</strong> ' + song.ocasiao + '</p>' +
-      '<span class="priority-tag">' + song.status + '</span>';
-    els.musicResults.appendChild(article);
-  });
-}
-
 function setSection(section) {
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
@@ -325,7 +307,6 @@ function setSection(section) {
   if (section === 'calendario') renderCalendar();
   if (section === 'biblia') renderBibleBooks();
   if (section === 'plano') renderPlan();
-  if (section === 'musicas') renderMusicas();
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
@@ -348,7 +329,7 @@ function initCalendarControls() {
 }
 
 function contentForDate(isoDate) {
-  return data.liturgia.filter(entry => entry.data === isoDate);
+  return entriesForDate(isoDate);
 }
 
 function selectCalendarDate(dayInfo) {
@@ -515,19 +496,22 @@ function renderBibleChapters(book) {
 const PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
 const TARGET_STORAGE_KEY = 'lce-jonas-target-v1';
 const START_STORAGE_KEY = 'lce-jonas-start-v1';
-const VERSE_NOTES_STORAGE_KEY = 'lce-jonas-verse-notes-v1';
+const VERSE_PROGRESS_STORAGE_KEY = 'lce-jonas-verse-progress-v1';
+const VERSE_COUNTS_STORAGE_KEY = 'lce-avm-verse-counts-v1';
+const LEGACY_VERSE_NOTES_STORAGE_KEY = 'lce-jonas-verse-notes-v1';
+const AVM_STRUCTURE_URL = 'https://raw.githubusercontent.com/thiagobodruk/bible/master/json/pt_avm.json';
+
+let avmVerseCounts = loadCachedVerseCounts();
+let avmVerseCountsPromise = null;
 
 function buildPlanSteps() {
   const steps = [];
-
   bible.planOrder.forEach((item, orderIndex) => {
     const book = bookById(item.book);
     if (!book) return;
-
     const from = item.from || 1;
     const to = item.to || book.chapters;
     const repeat = item.repeat || 1;
-
     for (let repetition = 1; repetition <= repeat; repetition++) {
       for (let chapter = from; chapter <= to; chapter++) {
         steps.push({
@@ -543,7 +527,6 @@ function buildPlanSteps() {
       }
     }
   });
-
   return steps;
 }
 
@@ -551,23 +534,142 @@ const planSteps = buildPlanSteps();
 const totalUniqueBibleChapters = bible.books.reduce((sum, book) => sum + book.chapters, 0);
 
 function loadPlanProgress() {
-  try {
-    return new Set(JSON.parse(localStorage.getItem(PLAN_STORAGE_KEY) || '[]'));
-  } catch {
-    return new Set();
-  }
+  try { return new Set(JSON.parse(localStorage.getItem(PLAN_STORAGE_KEY) || '[]')); }
+  catch { return new Set(); }
 }
 
-function loadVerseNotes() {
-  try {
-    return JSON.parse(localStorage.getItem(VERSE_NOTES_STORAGE_KEY) || '{}');
-  } catch {
-    return {};
-  }
+function savePlanProgress(progress) {
+  localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify([...progress]));
 }
 
-function saveVerseNotes(notes) {
-  localStorage.setItem(VERSE_NOTES_STORAGE_KEY, JSON.stringify(notes));
+function loadVerseProgress() {
+  try { return new Set(JSON.parse(localStorage.getItem(VERSE_PROGRESS_STORAGE_KEY) || '[]')); }
+  catch { return new Set(); }
+}
+
+function saveVerseProgress(progress) {
+  localStorage.setItem(VERSE_PROGRESS_STORAGE_KEY, JSON.stringify([...progress]));
+}
+
+function loadCachedVerseCounts() {
+  try {
+    const parsed = JSON.parse(localStorage.getItem(VERSE_COUNTS_STORAGE_KEY) || 'null');
+    if (parsed && typeof parsed === 'object' && Object.keys(parsed).length >= 70) return parsed;
+  } catch {}
+  return null;
+}
+
+function normalizedBookName(value) {
+  return normalize(value)
+    .replace(/^primeira\s+/, 'i ')
+    .replace(/^segunda\s+/, 'ii ')
+    .replace(/^terceira\s+/, 'iii ')
+    .replace(/^1\s+/, 'i ')
+    .replace(/^2\s+/, 'ii ')
+    .replace(/^3\s+/, 'iii ')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+async function ensureVerseCounts() {
+  if (avmVerseCounts) return avmVerseCounts;
+  if (avmVerseCountsPromise) return avmVerseCountsPromise;
+
+  avmVerseCountsPromise = (async () => {
+    const response = await fetch(AVM_STRUCTURE_URL, {cache: 'force-cache'});
+    if (!response.ok) throw new Error('Não foi possível carregar a estrutura de versículos da Bíblia Ave-Maria.');
+
+    const sourceBooks = await response.json();
+    if (!Array.isArray(sourceBooks)) throw new Error('Estrutura bíblica inválida.');
+
+    const targetByName = new Map(bible.books.map(book => [normalizedBookName(book.name), book]));
+    const counts = {};
+
+    sourceBooks.forEach((sourceBook, index) => {
+      if (!sourceBook || !Array.isArray(sourceBook.chapters)) return;
+
+      let target = targetByName.get(normalizedBookName(sourceBook.name || ''));
+      if (!target) {
+        const indexed = bible.books[index];
+        if (indexed && indexed.chapters === sourceBook.chapters.length) target = indexed;
+      }
+
+      if (!target || target.chapters !== sourceBook.chapters.length) return;
+      counts[target.id] = sourceBook.chapters.map(chapter => Array.isArray(chapter) ? chapter.length : 0);
+    });
+
+    if (Object.keys(counts).length < 70) {
+      throw new Error('A estrutura de versículos não corresponde ao cânon católico configurado.');
+    }
+
+    localStorage.setItem(VERSE_COUNTS_STORAGE_KEY, JSON.stringify(counts));
+    avmVerseCounts = counts;
+    return counts;
+  })();
+
+  try { return await avmVerseCountsPromise; }
+  finally { avmVerseCountsPromise = null; }
+}
+
+function verseCountForStep(step) {
+  const counts = avmVerseCounts?.[step.bookId] || [];
+  return Number(counts[step.chapter - 1] || 0);
+}
+
+function verseProgressKey(step, verse) {
+  return step.key + ':v' + verse;
+}
+
+function stepHasVerseData(step, verseProgress) {
+  const prefix = step.key + ':v';
+  for (const key of verseProgress) if (key.startsWith(prefix)) return true;
+  return false;
+}
+
+function seedLegacyCompletedStep(step, progress, verseProgress) {
+  if (!progress.has(step.key) || stepHasVerseData(step, verseProgress)) return false;
+  const total = verseCountForStep(step);
+  if (!total) return false;
+  for (let verse = 1; verse <= total; verse++) verseProgress.add(verseProgressKey(step, verse));
+  return true;
+}
+
+function verseStats(step, progress, verseProgress) {
+  const total = verseCountForStep(step);
+  if (!total) return {done: 0, total: 0, complete: progress.has(step.key)};
+
+  let done = 0;
+  for (let verse = 1; verse <= total; verse++) {
+    if (verseProgress.has(verseProgressKey(step, verse))) done++;
+  }
+  if (progress.has(step.key) && done === 0 && !stepHasVerseData(step, verseProgress)) done = total;
+  return {done, total, complete: done === total};
+}
+
+function setChapterCompletion(step, checked, progress, verseProgress) {
+  const total = verseCountForStep(step);
+  if (checked) {
+    progress.add(step.key);
+    for (let verse = 1; verse <= total; verse++) verseProgress.add(verseProgressKey(step, verse));
+  } else {
+    progress.delete(step.key);
+    for (let verse = 1; verse <= total; verse++) verseProgress.delete(verseProgressKey(step, verse));
+  }
+  savePlanProgress(progress);
+  saveVerseProgress(verseProgress);
+}
+
+function syncStepCompletion(step, progress, verseProgress) {
+  const total = verseCountForStep(step);
+  if (!total) return;
+  let done = 0;
+  for (let verse = 1; verse <= total; verse++) {
+    if (verseProgress.has(verseProgressKey(step, verse))) done++;
+  }
+  if (done === total) progress.add(step.key);
+  else progress.delete(step.key);
+  savePlanProgress(progress);
+  saveVerseProgress(verseProgress);
 }
 
 function addLocalDays(isoDate, amount) {
@@ -580,9 +682,7 @@ function addLocalDays(isoDate, amount) {
   ].join('-');
 }
 
-function monthKey(isoDate) {
-  return isoDate.slice(0, 7);
-}
+function monthKey(isoDate) { return isoDate.slice(0, 7); }
 
 function monthHeading(isoDate) {
   const [y,m] = isoDate.split('-').map(Number);
@@ -593,94 +693,225 @@ function monthHeading(isoDate) {
 function buildDatedSchedule(startDate, target) {
   const schedule = [];
   for (let i = 0, dayIndex = 0; i < planSteps.length; i += target, dayIndex++) {
-    schedule.push({
-      date: addLocalDays(startDate, dayIndex),
-      steps: planSteps.slice(i, i + target)
-    });
+    schedule.push({date: addLocalDays(startDate, dayIndex), steps: planSteps.slice(i, i + target)});
   }
   return schedule;
 }
 
-function savePlanProgress(progress) {
-  localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify([...progress]));
-}
-
 function completedCoverage(progress) {
   const unique = new Set();
-  planSteps.forEach(step => {
-    if (progress.has(step.key)) unique.add(step.coverageKey);
-  });
+  planSteps.forEach(step => { if (progress.has(step.key)) unique.add(step.coverageKey); });
   return unique;
 }
 
-function renderPlan() {
-  const progress = loadPlanProgress();
-  const target = Number(els.dailyTarget.value || 3);
-  const startDate = els.planStartDate.value || '2026-01-01';
+function updateProgressIndicators(progress) {
   const planDone = planSteps.filter(step => progress.has(step.key)).length;
   const coverageDone = completedCoverage(progress).size;
-
   const planPct = Math.round((planDone / planSteps.length) * 100);
   const biblePct = Math.round((coverageDone / totalUniqueBibleChapters) * 100);
 
   els.planPercent.textContent = planPct + '%';
   els.planProgressBar.style.width = planPct + '%';
   els.planProgressText.textContent = planDone + ' de ' + planSteps.length + ' etapas do método concluídas.';
-
   els.biblePercent.textContent = biblePct + '%';
   els.bibleProgressBar.style.width = biblePct + '%';
   els.bibleProgressText.textContent = coverageDone + ' de ' + totalUniqueBibleChapters + ' capítulos distintos percorridos.';
+}
 
-  const nextSteps = planSteps.filter(step => !progress.has(step.key)).slice(0, target);
-  els.todayReadings.replaceChildren();
+function updateStepPresentations(step, progress, verseProgress) {
+  const stats = verseStats(step, progress, verseProgress);
+  document.querySelectorAll('[data-step-key="' + step.key + '"]').forEach(root => {
+    root.classList.toggle('is-done', stats.complete);
+    root.querySelectorAll('.verse-count-status').forEach(el => {
+      el.textContent = stats.total ? stats.done + ' de ' + stats.total + ' versículos' : 'estrutura indisponível';
+    });
+    root.querySelectorAll('[data-chapter-toggle]').forEach(input => { input.checked = stats.complete; });
+  });
+  updateProgressIndicators(progress);
+}
 
-  if (!nextSteps.length) {
-    els.todayReadings.innerHTML = '<div class="empty-state">Plano concluído.</div>';
+function createVerseGrid(step, progress, verseProgress) {
+  const total = verseCountForStep(step);
+  const grid = document.createElement('div');
+  grid.className = 'verse-grid';
+  grid.dataset.verseStep = step.key;
+
+  if (!total) {
+    grid.innerHTML = '<p class="verse-load-error">Não foi possível identificar os versículos deste capítulo.</p>';
+    return grid;
   }
 
-  nextSteps.forEach(step => {
-    const row = document.createElement('label');
-    row.className = 'reading-row';
+  if (seedLegacyCompletedStep(step, progress, verseProgress)) saveVerseProgress(verseProgress);
+
+  for (let verse = 1; verse <= total; verse++) {
+    const label = document.createElement('label');
+    label.className = 'verse-check';
 
     const checkbox = document.createElement('input');
     checkbox.type = 'checkbox';
+    checkbox.checked = verseProgress.has(verseProgressKey(step, verse));
+    checkbox.setAttribute('aria-label', step.bookName + ' ' + step.chapter + ', versículo ' + verse);
 
-    const text = document.createElement('strong');
-    text.textContent = step.bookName + ' ' + step.chapter;
-
-    const link = document.createElement('a');
-    link.href = chapterUrl(step.bookId, step.chapter);
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = 'abrir AVM';
-    link.addEventListener('click', event => event.stopPropagation());
+    const number = document.createElement('span');
+    number.textContent = String(verse);
+    if (checkbox.checked) label.classList.add('is-done');
 
     checkbox.addEventListener('change', () => {
-      if (checkbox.checked) {
-        progress.add(step.key);
-        savePlanProgress(progress);
-        renderPlan();
-      }
+      if (seedLegacyCompletedStep(step, progress, verseProgress)) saveVerseProgress(verseProgress);
+      const key = verseProgressKey(step, verse);
+      if (checkbox.checked) verseProgress.add(key);
+      else verseProgress.delete(key);
+      label.classList.toggle('is-done', checkbox.checked);
+      syncStepCompletion(step, progress, verseProgress);
+      updateStepPresentations(step, progress, verseProgress);
     });
 
-    row.append(checkbox, text, link);
-    els.todayReadings.appendChild(row);
-  });
-
-  renderFullSchedule(progress, startDate, target);
+    label.append(checkbox, number);
+    grid.appendChild(label);
+  }
+  return grid;
 }
 
-function renderFullSchedule(progress, startDate, target) {
-  const notes = loadVerseNotes();
+function createChapterToggle(step, progress, verseProgress) {
+  const label = document.createElement('label');
+  label.className = 'chapter-toggle';
+
+  const checkbox = document.createElement('input');
+  checkbox.type = 'checkbox';
+  checkbox.dataset.chapterToggle = 'true';
+  checkbox.checked = verseStats(step, progress, verseProgress).complete;
+
+  const text = document.createElement('span');
+  text.textContent = 'Marcar capítulo inteiro';
+
+  checkbox.addEventListener('change', () => {
+    setChapterCompletion(step, checkbox.checked, progress, verseProgress);
+    document.querySelectorAll('[data-verse-step="' + step.key + '"] .verse-check').forEach((verseLabel, index) => {
+      const input = verseLabel.querySelector('input');
+      input.checked = checkbox.checked;
+      verseLabel.classList.toggle('is-done', checkbox.checked);
+      if (checkbox.checked) verseProgress.add(verseProgressKey(step, index + 1));
+      else verseProgress.delete(verseProgressKey(step, index + 1));
+    });
+    saveVerseProgress(verseProgress);
+    updateStepPresentations(step, progress, verseProgress);
+  });
+
+  label.append(checkbox, text);
+  return label;
+}
+
+function createReadingDetail(step, progress, verseProgress) {
+  const article = document.createElement('article');
+  article.className = 'reading-detail';
+  article.dataset.stepKey = step.key;
+
+  const head = document.createElement('div');
+  head.className = 'reading-detail-head';
+  const title = document.createElement('strong');
+  title.textContent = step.bookName + ' ' + step.chapter;
+
+  const status = document.createElement('span');
+  status.className = 'verse-count-status';
+  const stats = verseStats(step, progress, verseProgress);
+  status.textContent = stats.done + ' de ' + stats.total + ' versículos';
+
+  const link = document.createElement('a');
+  link.href = chapterUrl(step.bookId, step.chapter);
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = 'abrir Ave-Maria';
+
+  head.append(title, status, link);
+  article.append(head, createChapterToggle(step, progress, verseProgress), createVerseGrid(step, progress, verseProgress));
+  article.classList.toggle('is-done', stats.complete);
+  return article;
+}
+
+function createVerseDetails(step, progress, verseProgress) {
+  const details = document.createElement('details');
+  details.className = 'verse-details';
+  details.dataset.stepKey = step.key;
+
+  const summary = document.createElement('summary');
+  const name = document.createElement('strong');
+  name.textContent = step.bookName + ' ' + step.chapter;
+  const status = document.createElement('span');
+  status.className = 'verse-count-status';
+  const stats = verseStats(step, progress, verseProgress);
+  status.textContent = stats.done + ' de ' + stats.total + ' versículos';
+  summary.append(name, status);
+
+  const body = document.createElement('div');
+  body.className = 'verse-details-body';
+  const actions = document.createElement('div');
+  actions.className = 'verse-details-actions';
+
+  const link = document.createElement('a');
+  link.href = chapterUrl(step.bookId, step.chapter);
+  link.target = '_blank';
+  link.rel = 'noopener';
+  link.textContent = 'Abrir capítulo na Bíblia Ave-Maria';
+  actions.append(createChapterToggle(step, progress, verseProgress), link);
+  body.appendChild(actions);
+
+  let rendered = false;
+  const ensureGrid = () => {
+    if (rendered) return;
+    body.appendChild(createVerseGrid(step, progress, verseProgress));
+    rendered = true;
+    details.dataset.versesRendered = 'true';
+  };
+
+  details.addEventListener('toggle', () => { if (details.open) ensureGrid(); });
+  details._ensureVerseGrid = ensureGrid;
+  details.append(summary, body);
+  details.classList.toggle('is-done', stats.complete);
+  return details;
+}
+
+async function renderPlan() {
+  els.todayReadings.innerHTML = '<div class="empty-state">Carregando a estrutura de capítulos e versículos da Bíblia Ave-Maria…</div>';
+  els.fullPlanSchedule.innerHTML = '<div class="empty-state">Preparando o cronograma detalhado…</div>';
+
+  try {
+    await ensureVerseCounts();
+  } catch {
+    const message = 'Não foi possível carregar agora a estrutura de versículos da Bíblia Ave-Maria. Verifique a conexão e tente novamente.';
+    els.todayReadings.innerHTML = '<div class="empty-state">' + message + '</div>';
+    els.fullPlanSchedule.innerHTML = '<div class="empty-state">' + message + '</div>';
+    return;
+  }
+
+  const progress = loadPlanProgress();
+  const verseProgress = loadVerseProgress();
+  const target = Number(els.dailyTarget.value || 3);
+  const startDate = els.planStartDate.value || '2026-01-01';
+
+  updateProgressIndicators(progress);
+
+  const nextSteps = planSteps.filter(step => !progress.has(step.key)).slice(0, target);
+  els.todayReadings.replaceChildren();
+  if (!nextSteps.length) {
+    els.todayReadings.innerHTML = '<div class="empty-state">Plano concluído.</div>';
+  } else {
+    nextSteps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
+  }
+
+  renderFullSchedule(progress, verseProgress, startDate, target);
+}
+
+function renderFullSchedule(progress, verseProgress, startDate, target) {
   const schedule = buildDatedSchedule(startDate, target);
   const groups = new Map();
-
   const endDate = schedule.length ? schedule[schedule.length - 1].date : startDate;
+
   els.printPlanMeta.innerHTML =
     '<strong>Plano de leitura — Monsenhor Jonas Abib</strong>' +
     '<span>Início: ' + formatDate(startDate) + '</span>' +
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Meta: ' + target + ' capítulos por dia</span>' +
+    '<span>Controle: capítulo e versículo</span>' +
     '<span>Salmos: leitura paralela e livre</span>';
 
   schedule.forEach(day => {
@@ -717,57 +948,11 @@ function renderFullSchedule(progress, startDate, target) {
 
       const content = document.createElement('div');
       content.className = 'plan-day-content';
-
       const readings = document.createElement('div');
       readings.className = 'plan-day-readings';
+      day.steps.forEach(step => readings.appendChild(createVerseDetails(step, progress, verseProgress)));
 
-      day.steps.forEach(step => {
-        const label = document.createElement('label');
-        label.className = 'plan-chapter' + (progress.has(step.key) ? ' is-done' : '');
-
-        const checkbox = document.createElement('input');
-        checkbox.type = 'checkbox';
-        checkbox.checked = progress.has(step.key);
-
-        const name = document.createElement('span');
-        name.textContent = step.bookName + ' ' + step.chapter;
-
-        const open = document.createElement('a');
-        open.href = chapterUrl(step.bookId, step.chapter);
-        open.target = '_blank';
-        open.rel = 'noopener';
-        open.textContent = 'ler';
-
-        checkbox.addEventListener('change', () => {
-          const current = loadPlanProgress();
-          if (checkbox.checked) current.add(step.key);
-          else current.delete(step.key);
-          savePlanProgress(current);
-          renderPlan();
-        });
-
-        open.addEventListener('click', event => event.stopPropagation());
-        label.append(checkbox, name, open);
-        readings.appendChild(label);
-      });
-
-      const verseField = document.createElement('label');
-      verseField.className = 'verse-note';
-      verseField.innerHTML = '<span>Versículos lidos / destacados</span>';
-
-      const verseInput = document.createElement('input');
-      verseInput.type = 'text';
-      verseInput.placeholder = 'Ex.: Jo 1,14; palavra-chave; anotação';
-      verseInput.value = notes[day.date] || '';
-      verseInput.addEventListener('change', () => {
-        const currentNotes = loadVerseNotes();
-        if (verseInput.value.trim()) currentNotes[day.date] = verseInput.value.trim();
-        else delete currentNotes[day.date];
-        saveVerseNotes(currentNotes);
-      });
-
-      verseField.appendChild(verseInput);
-      content.append(readings, verseField);
+      content.appendChild(readings);
       article.append(dateBox, content);
       list.appendChild(article);
     });
@@ -822,10 +1007,26 @@ els.planStartDate.addEventListener('change', () => {
 
 els.printPlan.addEventListener('click', () => window.print());
 
+window.addEventListener('beforeprint', () => {
+  document.querySelectorAll('.verse-details').forEach(details => {
+    if (typeof details._ensureVerseGrid === 'function') details._ensureVerseGrid();
+    details.dataset.openBeforePrint = details.open ? 'true' : 'false';
+    details.open = true;
+  });
+});
+
+window.addEventListener('afterprint', () => {
+  document.querySelectorAll('.verse-details').forEach(details => {
+    if (details.dataset.openBeforePrint === 'false') details.open = false;
+    delete details.dataset.openBeforePrint;
+  });
+});
+
 els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
     localStorage.removeItem(PLAN_STORAGE_KEY);
-    localStorage.removeItem(VERSE_NOTES_STORAGE_KEY);
+    localStorage.removeItem(VERSE_PROGRESS_STORAGE_KEY);
+    localStorage.removeItem(LEGACY_VERSE_NOTES_STORAGE_KEY);
     renderPlan();
   }
 });
