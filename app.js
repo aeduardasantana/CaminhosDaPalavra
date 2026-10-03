@@ -320,9 +320,11 @@ function renderMusicas() {
 function setSection(section) {
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
+  if (section === 'liturgia') renderLiturgia();
   if (section === 'calendario') renderCalendar();
   if (section === 'biblia') renderBibleBooks();
   if (section === 'plano') renderPlan();
+  if (section === 'musicas') renderMusicas();
   window.scrollTo({top: 0, behavior: 'smooth'});
 }
 
@@ -820,7 +822,3 @@ els.resetPlan.addEventListener('click', () => {
 });
 
 initCalendarControls();
-renderLiturgia();
-renderMusicas();
-renderBibleBooks();
-renderPlan();
