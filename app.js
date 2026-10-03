@@ -212,7 +212,7 @@ function recordForDate(isoDate) {
 
 function entriesForDate(isoDate) {
   const records = recordForDate(isoDate);
-  return records.flatMap(record => record.items.map(item => {
+  return records.flatMap(record => recordItems(record).map(item => {
     const base = allLiturgyEntries.find(entry =>
       entry.ano === record.cycle &&
       entry.section === record.section &&
@@ -518,7 +518,7 @@ function renderBibleChapters(book) {
   els.bibleChapterPanel.appendChild(audio);
 }
 
-/* Plano de leitura Monsenhor Jonas Abib */
+/* Plano de leitura da Bíblia */
 const PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
 const TARGET_STORAGE_KEY = 'lce-jonas-target-v1';
 const START_STORAGE_KEY = 'lce-jonas-start-v1';
