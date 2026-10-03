@@ -502,7 +502,6 @@ function renderPlan() {
 
   if (!nextSteps.length) {
     els.todayReadings.innerHTML = '<div class="empty-state">Plano concluído.</div>';
-    return;
   }
 
   nextSteps.forEach(step => {
