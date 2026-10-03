@@ -126,6 +126,7 @@ function genericLiturgyEntries() {
       referencia: item.reference,
       status: detailedPilot ? detailedPilot.status : (glossa[item.reference] ? 'Glosa-base preliminar' : 'Glosa em produção'),
       sourceVersion: detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário/Missal Romano, edição brasileira: campo preparado para inserção validada',
+      sourceUrl: detailedPilot?.sourceUrl || '',
       original: detailedPilot?.original || (item.reference + ' — referência litúrgica levantada. O texto integral da edição brasileira será inserido após validação da fonte/licença correspondente.'),
       glosa: detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       note: item.note || '',
@@ -293,6 +294,13 @@ function renderLiturgia() {
     node.querySelector('.status-pill').textContent = entry.status;
     node.querySelector('.source-version').textContent = entry.sourceVersion || '';
     node.querySelector('.original-text').textContent = entry.original;
+    const originalSourceLink = node.querySelector('.original-source-link');
+    if (entry.sourceUrl) {
+      originalSourceLink.href = entry.sourceUrl;
+      originalSourceLink.hidden = false;
+    } else {
+      originalSourceLink.hidden = true;
+    }
     node.querySelector('.glosa-text').appendChild(formatGlosa(entry.glosa));
 
     els.liturgyResults.appendChild(node);
