@@ -117,6 +117,9 @@
     const christKing = addDays(advent, -7);
     const epiphany = epiphanySunday(year);
     const baptism = baptismOfLord(year);
+    const dec26 = utcDate(year, 11, 26);
+    const holyFamilySunday = sundayOnOrAfter(dec26);
+    const holyFamily = holyFamilySunday.getUTCMonth() === 11 ? holyFamilySunday : utcDate(year, 11, 30);
 
     if (sameDay(date, utcDate(year, 0, 1))) return "Santa Maria, Mãe de Deus";
     if (sameDay(date, epiphany)) return "Epifania do Senhor";
@@ -133,6 +136,7 @@
     if (sameDay(date, corpus)) return "Santíssimo Corpo e Sangue de Cristo";
     if (sameDay(date, christKing)) return "Nosso Senhor Jesus Cristo, Rei do Universo";
     if (sameDay(date, utcDate(year, 11, 25))) return "Natal do Senhor";
+    if (sameDay(date, holyFamily)) return "Sagrada Família";
 
     if (date.getUTCDay() === 0 && date >= advent && date < utcDate(year, 11, 25)) {
       const n = 1 + Math.floor(daysBetween(advent, date) / 7);
