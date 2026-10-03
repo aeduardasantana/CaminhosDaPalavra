@@ -123,7 +123,7 @@ function liturgyOriginalKey(record, item) {
 }
 
 function genericLiturgyEntries() {
-  return lectionary.records.flatMap(record => record.items.map(item => {
+  return lectionary.records.flatMap(record => recordItems(record).map(item => {
     const detailedPilot = data.liturgia.find(p =>
       p.ano === record.cycle &&
       p.item === item.type &&
