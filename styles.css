@@ -488,3 +488,176 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .calendar-day { min-height: 52px; }
   .day-label { display: none; }
 }
+
+
+/* Projeto e posicionamento */
+.project-hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(280px, .55fr);
+  gap: 24px;
+  align-items: center;
+  padding: clamp(28px, 5vw, 58px);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #fff 0%, #fbf7ec 100%);
+  box-shadow: var(--shadow);
+}
+.project-copy h2 { max-width: 780px; font-size: clamp(2rem, 4vw, 3.7rem); }
+.project-lead { max-width: 760px; margin: 18px 0 0; color: var(--muted); font-size: 1.05rem; }
+.project-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 24px; }
+.primary-action {
+  min-height: 46px;
+  padding: 0 17px;
+  border: 1px solid var(--deep);
+  border-radius: 11px;
+  background: var(--deep);
+  color: #fff;
+  font-weight: 820;
+}
+.project-status {
+  display: flex;
+  gap: 12px;
+  padding: 18px;
+  border: 1px solid #dcc895;
+  border-radius: 14px;
+  background: #fffaf0;
+}
+.project-status p { margin: 5px 0 0; color: var(--muted); font-size: .9rem; }
+.status-dot { width: 10px; height: 10px; flex: 0 0 auto; margin-top: 6px; border-radius: 50%; background: var(--accent); }
+.principles-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+  margin-top: 14px;
+}
+.principles-grid article {
+  padding: 20px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface);
+}
+.principles-grid h3 { margin-bottom: 8px; font-size: 1rem; }
+.principles-grid p:last-child { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+.notice-card {
+  margin-top: 14px;
+  padding: 17px 20px;
+  border-left: 4px solid var(--accent);
+  border-radius: 8px 14px 14px 8px;
+  background: var(--accent-soft);
+}
+.notice-card p { margin: 4px 0 0; }
+
+/* Cronograma completo */
+.plan-toolbar { flex-wrap: wrap; }
+.plan-toolbar > .field { min-width: 190px; }
+.plan-actions { display: flex; gap: 8px; margin-left: auto; }
+.full-plan-section { margin-top: 30px; }
+.compact-heading { margin-bottom: 12px; }
+.full-plan-schedule { display: grid; gap: 20px; }
+.plan-month {
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 8px 26px rgba(54,46,30,.04);
+}
+.plan-month-title {
+  margin: 0;
+  padding: 14px 18px;
+  border-bottom: 1px solid var(--line);
+  background: var(--deep);
+  color: #fff;
+  font-size: 1rem;
+}
+.plan-days { display: grid; }
+.plan-day {
+  display: grid;
+  grid-template-columns: 70px minmax(0, 1fr);
+  min-height: 86px;
+  border-bottom: 1px solid #ece7de;
+}
+.plan-day:last-child { border-bottom: 0; }
+.plan-date {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-right: 1px solid #ece7de;
+  background: var(--surface-soft);
+}
+.plan-date strong { font-size: 1.25rem; line-height: 1; }
+.plan-date span { margin-top: 4px; color: var(--muted); font-size: .72rem; text-transform: uppercase; }
+.plan-day-content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr);
+  gap: 14px;
+  align-items: center;
+  padding: 12px 14px;
+}
+.plan-day-readings { display: flex; flex-wrap: wrap; gap: 7px; }
+.plan-chapter {
+  display: inline-grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  gap: 6px;
+  padding: 7px 9px;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: #fff;
+  font-size: .84rem;
+}
+.plan-chapter input { width: 15px; height: 15px; min-height: auto; }
+.plan-chapter a { color: var(--accent-strong); font-size: .7rem; font-weight: 800; }
+.plan-chapter.is-done { opacity: .62; text-decoration: line-through; background: #f4f4f1; }
+.verse-note { display: grid; gap: 5px; }
+.verse-note span { color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
+.verse-note input { min-height: 40px; font-size: .82rem; }
+
+@media (max-width: 980px) {
+  .project-hero { grid-template-columns: 1fr; }
+  .principles-grid { grid-template-columns: 1fr 1fr; }
+  .plan-day-content { grid-template-columns: 1fr; }
+  .plan-actions { margin-left: 0; }
+}
+
+@media (max-width: 680px) {
+  .project-hero { padding: 24px 18px; }
+  .principles-grid { grid-template-columns: 1fr; }
+  .plan-actions { width: 100%; }
+  .plan-actions button { flex: 1; }
+  .plan-day { grid-template-columns: 52px minmax(0, 1fr); }
+  .plan-day-content { padding: 10px; }
+  .plan-chapter { grid-template-columns: auto minmax(0,1fr) auto; width: 100%; }
+}
+
+@media print {
+  @page { margin: 12mm; }
+  body { background: #fff; color: #000; font-size: 10pt; }
+  .site-header,
+  #projetoSection,
+  #liturgiaSection,
+  #calendarioSection,
+  #bibliaSection,
+  #musicasSection,
+  .section-heading:not(.compact-heading),
+  .plan-toolbar,
+  .progress-grid,
+  .plan-grid { display: none !important; }
+  #planoSection { display: block !important; margin: 0; }
+  #planoSection > .section-heading:first-child { display: block !important; margin: 0 0 10mm; }
+  .full-plan-section { margin: 0; }
+  .compact-heading { display: block !important; margin: 0 0 6mm; }
+  .full-plan-schedule { gap: 6mm; }
+  .plan-month {
+    box-shadow: none;
+    border: 1px solid #999;
+    break-inside: avoid;
+  }
+  .plan-month-title { background: #fff; color: #000; border-bottom: 2px solid #000; }
+  .plan-day { min-height: 0; grid-template-columns: 16mm 1fr; break-inside: avoid; }
+  .plan-day-content { grid-template-columns: 1fr 65mm; padding: 2.5mm 3mm; gap: 3mm; }
+  .plan-date { background: #fff; }
+  .plan-chapter { padding: 1.5mm 2mm; border: 0; background: #fff; }
+  .plan-chapter a { display: none; }
+  .verse-note input { border: 0; border-bottom: 1px solid #999; border-radius: 0; min-height: 7mm; }
+  .verse-note span { color: #000; }
+}
