@@ -402,7 +402,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 }
 .plan-toolbar .field { width: 220px; }
 .progress-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
-.progress-card, .plan-card, .music-card {
+.progress-card, .plan-card {
   border: 1px solid var(--line);
   border-radius: var(--radius);
   background: var(--surface);
@@ -414,34 +414,86 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .progress-track span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s ease; }
 .plan-grid { display: grid; grid-template-columns: 1.4fr .8fr; gap: 14px; }
 .plan-card h3 { margin-bottom: 12px; }
-.reading-checklist { display: grid; gap: 8px; }
-.reading-row {
+.reading-checklist { display: grid; gap: 12px; }
+.reading-detail {
   display: grid;
-  grid-template-columns: auto minmax(0,1fr) auto;
-  align-items: center;
   gap: 10px;
-  padding: 10px 11px;
+  padding: 14px;
   border: 1px solid var(--line);
-  border-radius: 10px;
+  border-radius: 12px;
   background: #fff;
 }
-.reading-row input { width: 18px; min-height: auto; height: 18px; }
-.reading-row strong { font-size: .94rem; }
-.reading-row a { color: var(--accent-strong); font-size: .78rem; font-weight: 800; }
-.reading-row.is-done { opacity: .62; background: #f4f4f1; }
-
-.music-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
-.music-card h3 { margin-bottom: 7px; }
-.music-meta { color: var(--muted); margin: 0 0 3px; }
-.priority-tag {
-  display: inline-block;
-  margin-top: 12px;
-  font-size: .73rem;
-  font-weight: 850;
-  color: #654508;
+.reading-detail.is-done { background: #f4f4f1; }
+.reading-detail-head {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto auto;
+  gap: 10px;
+  align-items: center;
+}
+.reading-detail-head strong { font-size: .98rem; }
+.reading-detail-head a,
+.verse-details-actions a {
+  color: var(--accent-strong);
+  font-size: .76rem;
+  font-weight: 800;
+}
+.verse-count-status {
+  color: var(--muted);
+  font-size: .74rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+.chapter-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  width: fit-content;
+  color: var(--muted);
+  font-size: .76rem;
+  font-weight: 750;
+}
+.chapter-toggle input {
+  width: 16px;
+  height: 16px;
+  min-height: auto;
+}
+.verse-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(42px, 1fr));
+  gap: 7px;
+}
+.verse-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  min-height: 38px;
+  padding: 6px 5px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--surface);
+  cursor: pointer;
+  user-select: none;
+}
+.verse-check input {
+  width: 15px;
+  height: 15px;
+  min-height: auto;
+  margin: 0;
+}
+.verse-check span {
+  font-size: .78rem;
+  font-weight: 800;
+}
+.verse-check.is-done {
   background: var(--accent-soft);
-  border-radius: 999px;
-  padding: 5px 8px;
+  border-color: #d7bd77;
+}
+.verse-load-error {
+  grid-column: 1 / -1;
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
 }
 
 @media (max-width: 980px) {
@@ -462,7 +514,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .main-layout { padding-top: 16px; }
   .nav-button { padding: 8px 12px; font-size: .88rem; }
   .search-panel { padding: 20px 16px; }
-  .search-grid, .bible-filter-row, .progress-grid, .source-strip, .music-grid { grid-template-columns: 1fr; }
+  .search-grid, .bible-filter-row, .progress-grid, .source-strip { grid-template-columns: 1fr; }
   .field-search { grid-column: auto; }
   .section-heading { align-items: flex-start; flex-direction: column; margin-top: 28px; }
   .accordion-trigger { padding: 15px; align-items: flex-start; }
@@ -601,34 +653,68 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .plan-date span { margin-top: 4px; color: var(--muted); font-size: .72rem; text-transform: uppercase; }
 .plan-day-content {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(220px, .7fr);
-  gap: 14px;
-  align-items: center;
+  grid-template-columns: 1fr;
+  gap: 10px;
   padding: 12px 14px;
 }
-.plan-day-readings { display: flex; flex-wrap: wrap; gap: 7px; }
-.plan-chapter {
-  display: inline-grid;
-  grid-template-columns: auto auto auto;
-  align-items: center;
-  gap: 6px;
-  padding: 7px 9px;
+.plan-day-readings {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+  gap: 8px;
+}
+.verse-details {
   border: 1px solid var(--line);
   border-radius: 9px;
   background: #fff;
-  font-size: .84rem;
+  overflow: hidden;
 }
-.plan-chapter input { width: 15px; height: 15px; min-height: auto; }
-.plan-chapter a { color: var(--accent-strong); font-size: .7rem; font-weight: 800; }
-.plan-chapter.is-done { opacity: .62; text-decoration: line-through; background: #f4f4f1; }
-.verse-note { display: grid; gap: 5px; }
-.verse-note span { color: var(--muted); font-size: .7rem; font-weight: 800; text-transform: uppercase; letter-spacing: .05em; }
-.verse-note input { min-height: 40px; font-size: .82rem; }
+.verse-details.is-done { background: #f4f4f1; }
+.verse-details summary {
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 5px 8px;
+  align-items: center;
+  padding: 9px 30px 9px 10px;
+  cursor: pointer;
+  list-style: none;
+}
+.verse-details summary::-webkit-details-marker { display: none; }
+.verse-details summary::after {
+  content: "＋";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: .8rem;
+}
+.verse-details[open] summary::after { content: "−"; }
+.verse-details summary .verse-count-status {
+  grid-column: 1 / -1;
+  white-space: normal;
+}
+.verse-details-body {
+  display: grid;
+  gap: 10px;
+  padding: 0 10px 10px;
+  border-top: 1px solid #ece7de;
+}
+.verse-details-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 8px 14px;
+  align-items: center;
+  padding-top: 10px;
+}
 
 @media (max-width: 980px) {
   .project-hero { grid-template-columns: 1fr; }
   .principles-grid { grid-template-columns: 1fr 1fr; }
   .plan-day-content { grid-template-columns: 1fr; }
+  .reading-detail-head { grid-template-columns: 1fr auto; }
+  .reading-detail-head .verse-count-status { grid-column: 1; }
+  .reading-detail-head a { grid-column: 2; grid-row: 1 / span 2; }
   .plan-actions { margin-left: 0; }
 }
 
@@ -639,7 +725,8 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .plan-actions button { flex: 1; }
   .plan-day { grid-template-columns: 52px minmax(0, 1fr); }
   .plan-day-content { padding: 10px; }
-  .plan-chapter { grid-template-columns: auto minmax(0,1fr) auto; width: 100%; }
+  .plan-day-readings { grid-template-columns: 1fr; }
+  .verse-grid { grid-template-columns: repeat(auto-fill, minmax(38px, 1fr)); }
 }
 
 @media print {
@@ -650,7 +737,6 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   #liturgiaSection,
   #calendarioSection,
   #bibliaSection,
-  #musicasSection,
   .section-heading:not(.compact-heading),
   .plan-toolbar,
   .progress-grid,
@@ -677,10 +763,15 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   }
   .plan-month-title { background: #fff; color: #000; border-bottom: 2px solid #000; }
   .plan-day { min-height: 0; grid-template-columns: 16mm 1fr; break-inside: avoid; }
-  .plan-day-content { grid-template-columns: 1fr 65mm; padding: 2.5mm 3mm; gap: 3mm; }
+  .plan-day-content { grid-template-columns: 1fr; padding: 2.5mm 3mm; gap: 3mm; }
   .plan-date { background: #fff; }
-  .plan-chapter { padding: 1.5mm 2mm; border: 0; background: #fff; }
-  .plan-chapter a { display: none; }
-  .verse-note input { border: 0; border-bottom: 1px solid #999; border-radius: 0; min-height: 7mm; }
-  .verse-note span { color: #000; }
+  .plan-day-readings { grid-template-columns: 1fr; }
+  .verse-details { border: 0; break-inside: avoid; }
+  .verse-details summary { padding: 1.5mm 0; border-bottom: 1px solid #bbb; }
+  .verse-details summary::after { display: none; }
+  .verse-details-body { padding: 2mm 0; border-top: 0; }
+  .verse-details-actions a { display: none; }
+  .verse-grid { grid-template-columns: repeat(12, 1fr); gap: 1.2mm; }
+  .verse-check { min-height: 6mm; padding: .5mm; border: 1px solid #777; border-radius: 1mm; }
+  .verse-check span { font-size: 7pt; }
 }
