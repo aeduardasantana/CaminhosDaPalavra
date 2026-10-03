@@ -771,11 +771,23 @@ function monthHeading(isoDate) {
   return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
-function buildDatedSchedule(startDate, target) {
+function buildDatedSchedule(startDate) {
   const schedule = [];
-  for (let i = 0, dayIndex = 0; i < planSteps.length; i += target, dayIndex++) {
-    schedule.push({date: addLocalDays(startDate, dayIndex), steps: planSteps.slice(i, i + target)});
+  const basePerDay = Math.floor(planSteps.length / PLAN_DAYS);
+  const extraDays = planSteps.length % PLAN_DAYS;
+  let cursor = 0;
+
+  for (let dayIndex = 0; dayIndex < PLAN_DAYS; dayIndex++) {
+    const extraBefore = Math.floor((dayIndex * extraDays) / PLAN_DAYS);
+    const extraAfter = Math.floor(((dayIndex + 1) * extraDays) / PLAN_DAYS);
+    const count = basePerDay + (extraAfter > extraBefore ? 1 : 0);
+    schedule.push({
+      date: addLocalDays(startDate, dayIndex),
+      steps: planSteps.slice(cursor, cursor + count)
+    });
+    cursor += count;
   }
+
   return schedule;
 }
 
@@ -793,10 +805,10 @@ function updateProgressIndicators(progress) {
 
   els.planPercent.textContent = planPct + '%';
   els.planProgressBar.style.width = planPct + '%';
-  els.planProgressText.textContent = planDone + ' de ' + planSteps.length + ' etapas do método concluídas.';
+  els.planProgressText.textContent = planDone + ' de ' + planSteps.length + ' capítulos do plano concluídos.';
   els.biblePercent.textContent = biblePct + '%';
   els.bibleProgressBar.style.width = biblePct + '%';
-  els.bibleProgressText.textContent = coverageDone + ' de ' + totalUniqueBibleChapters + ' capítulos distintos percorridos.';
+  els.bibleProgressText.textContent = coverageDone + ' de ' + totalUniqueBibleChapters + ' capítulos da Bíblia concluídos.';
 }
 
 function updateStepPresentations(step, progress, verseProgress) {
