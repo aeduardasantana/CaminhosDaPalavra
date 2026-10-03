@@ -95,7 +95,6 @@ window.LCE_BIBLE = {
     {book:"WIS",label:"Sabedoria — leitura sapiencial inicial"},
     {book:"SIR",label:"Eclesiástico — leitura sapiencial inicial"},
     {book:"PRO",label:"Provérbios — leitura sapiencial inicial"},
-    {book:"PSA",label:"Salmos — leitura paralela"},
 
     {book:"GEN"},{book:"EXO"},{book:"NUM"},{book:"JOS"},{book:"JDG"},{book:"1SA"},{book:"2SA"},{book:"1KI"},{book:"2KI"},
     {book:"AMO"},{book:"HOS"},
