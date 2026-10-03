@@ -1,6 +1,8 @@
 const data = window.LCE_DATA;
 const bible = window.LCE_BIBLE;
 const litCalendar = window.LCE_CALENDAR;
+const lectionary = window.LCE_LECTIONARY || {records: []};
+const glossa = window.LCE_GLOSSA || {};
 
 const els = {
   query: document.querySelector('#query'),
@@ -76,6 +78,134 @@ function formatDate(isoDate) {
   }).format(new Date(Date.UTC(y, m - 1, d)));
 }
 
+function lectionarySectionLabel(section) {
+  if (section === 'ADVENTO') return 'Advento';
+  if (section === 'QUARESMA') return 'Quaresma';
+  if (section === 'PÁSCOA E TEMPO PASCAL') return 'Tempo Pascal';
+  if (section === 'CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO') return 'Tempo do Natal';
+  if (section === 'SOLENIDADES DOMINICAIS DO TEMPO COMUM') return 'Solenidade';
+  if (section.startsWith('TEMPO COMUM')) return 'Tempo Comum';
+  return section;
+}
+
+function fullCelebrationName(record) {
+  const name = record.celebration;
+  if (record.section.startsWith('TEMPO COMUM') && /^\d+º Domingo$/.test(name)) return name + ' do Tempo Comum';
+  if (record.section === 'ADVENTO' && /^\d+º Domingo$/.test(name)) return name + ' do Advento';
+  if (record.section === 'QUARESMA' && /^\d+º Domingo$/.test(name)) return name + ' da Quaresma';
+  return name;
+}
+
+function slug(value) {
+  return normalize(value).replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+function fallbackGlosa(reference) {
+  return '(GLOSA PRELIMINAR EM PRODUÇÃO)\n' +
+    'REFERÊNCIA ' + reference + ' / LEITURA JÁ INCLUÍDA NO CICLO DOMINICAL.\n' +
+    '(REVISÃO OBRIGATÓRIA: produzir unidades de sentido, referentes, espaço, ações e mudanças de papel antes de uso.)';
+}
+
+function genericLiturgyEntries() {
+  return lectionary.records.flatMap(record => record.items.map(item => {
+    const detailedPilot = data.liturgia.find(p =>
+      p.ano === record.cycle &&
+      p.item === item.type &&
+      p.referencia === item.reference &&
+      fullCelebrationName(record).includes('27º Domingo do Tempo Comum')
+    );
+
+    return {
+      id: [record.cycle, record.section, record.celebration, item.type, item.reference].map(slug).join('--'),
+      data: detailedPilot?.data || '',
+      ano: record.cycle,
+      tempo: lectionarySectionLabel(record.section),
+      section: record.section,
+      celebracao: fullCelebrationName(record),
+      item: item.type,
+      itemLabel: item.label,
+      referencia: item.reference,
+      status: detailedPilot ? detailedPilot.status : (glossa[item.reference] ? 'Glosa-base preliminar' : 'Glosa em produção'),
+      sourceVersion: detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário/Missal Romano, edição brasileira: campo preparado para inserção validada',
+      original: detailedPilot?.original || (item.reference + ' — referência litúrgica levantada. O texto integral da edição brasileira será inserido após validação da fonte/licença correspondente.'),
+      glosa: detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
+      note: item.note || '',
+      keywords: [
+        record.cycle,
+        record.section,
+        record.celebration,
+        item.type,
+        item.label,
+        item.reference,
+        item.note || ''
+      ]
+    };
+  }));
+}
+
+const allLiturgyEntries = genericLiturgyEntries();
+
+function ordinalFromCelebration(text) {
+  const m = (text || '').match(/^(\d+)º/);
+  return m ? m[1] + 'º Domingo' : '';
+}
+
+function recordForDate(isoDate) {
+  const info = litCalendar.infoForIso(isoDate);
+  const cycle = info.cycle;
+  const celebration = info.celebration || '';
+  const records = lectionary.records.filter(r => r.cycle === cycle);
+
+  if (celebration === 'Natal do Senhor') {
+    return records.filter(r => r.section === 'CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO' && r.celebration.startsWith('Natal —'));
+  }
+
+  if (celebration === 'Nosso Senhor Jesus Cristo, Rei do Universo') {
+    return records.filter(r => r.celebration.includes('Cristo Rei'));
+  }
+
+  if (celebration === 'Santíssima Trindade' || celebration === 'Ascensão do Senhor' || celebration === 'Pentecostes' ||
+      celebration === 'Epifania do Senhor' || celebration === 'Batismo do Senhor' || celebration === 'Santa Maria, Mãe de Deus' ||
+      celebration === 'Domingo da Páscoa' || celebration === 'Domingo de Ramos e da Paixão') {
+    return records.filter(r => r.celebration === celebration);
+  }
+
+  if (/Domingo do Advento/.test(celebration)) {
+    const ord = ordinalFromCelebration(celebration);
+    return records.filter(r => r.section === 'ADVENTO' && r.celebration === ord);
+  }
+
+  if (/Domingo da Quaresma/.test(celebration)) {
+    const ord = ordinalFromCelebration(celebration);
+    return records.filter(r => r.section === 'QUARESMA' && r.celebration === ord);
+  }
+
+  if (/Domingo da Páscoa/.test(celebration)) {
+    return records.filter(r => r.section === 'PÁSCOA E TEMPO PASCAL' && r.celebration === celebration);
+  }
+
+  if (/Domingo do Tempo Comum/.test(celebration)) {
+    const ord = ordinalFromCelebration(celebration);
+    return records.filter(r => r.section.startsWith('TEMPO COMUM') && r.celebration === ord);
+  }
+
+  return [];
+}
+
+function entriesForDate(isoDate) {
+  const records = recordForDate(isoDate);
+  return records.flatMap(record => record.items.map(item => {
+    const base = allLiturgyEntries.find(entry =>
+      entry.ano === record.cycle &&
+      entry.section === record.section &&
+      entry.celebracao === fullCelebrationName(record) &&
+      entry.item === item.type &&
+      entry.referencia === item.reference
+    );
+    return Object.assign({}, base || {}, {data: isoDate});
+  }));
+}
+
 function searchableText(entry) {
   return normalize([
     entry.data,
@@ -130,7 +260,8 @@ function renderLiturgia() {
   const year = els.year.value;
   const item = els.item.value;
 
-  const filtered = data.liturgia
+  const sourceEntries = date ? entriesForDate(date) : allLiturgyEntries;
+  const filtered = sourceEntries
     .filter(entry => {
       const matchesQuery = !q || searchableText(entry).includes(q);
       const matchesDate = !date || entry.data === date;
@@ -159,7 +290,7 @@ function renderLiturgia() {
 
     node.querySelector('.card-kicker').textContent = 'Ano ' + entry.ano + ' · ' + entry.itemLabel;
     node.querySelector('.card-title').textContent = entry.celebracao + ' — ' + entry.referencia;
-    node.querySelector('.card-meta').textContent = [formatDate(entry.data), entry.tempo].filter(Boolean).join(' · ');
+    node.querySelector('.card-meta').textContent = [formatDate(entry.data), entry.tempo, entry.note].filter(Boolean).join(' · ');
     node.querySelector('.status-pill').textContent = entry.status;
     node.querySelector('.source-version').textContent = entry.sourceVersion || '';
     node.querySelector('.original-text').textContent = entry.original;
