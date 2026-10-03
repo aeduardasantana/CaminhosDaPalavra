@@ -106,6 +106,22 @@ function fallbackGlosa(reference) {
     '(REVISÃO OBRIGATÓRIA: produzir unidades de sentido, referentes, espaço, ações e mudanças de papel antes de uso.)';
 }
 
+function recordItems(record) {
+  if (record.celebration === 'Batismo do Senhor' && (record.cycle === 'B' || record.cycle === 'C') && record.items.length === 1) {
+    return [
+      {type: 'primeira-leitura', label: 'Primeira leitura', reference: 'Is 42,1-4.6-7', note: ''},
+      {type: 'salmo', label: 'Salmo responsorial', reference: 'Sl 29', note: ''},
+      {type: 'segunda-leitura', label: 'Segunda leitura', reference: 'At 10,34-38', note: ''},
+      ...record.items
+    ];
+  }
+  return record.items;
+}
+
+function liturgyOriginalKey(record, item) {
+  return [record.cycle, record.section, record.celebration, item.type, item.reference].join('|');
+}
+
 function genericLiturgyEntries() {
   return lectionary.records.flatMap(record => record.items.map(item => {
     const detailedPilot = data.liturgia.find(p =>
