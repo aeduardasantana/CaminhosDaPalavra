@@ -519,12 +519,15 @@ function renderBibleChapters(book) {
 }
 
 /* Plano de leitura da Bíblia */
-const PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
-const TARGET_STORAGE_KEY = 'lce-jonas-target-v1';
-const START_STORAGE_KEY = 'lce-jonas-start-v1';
-const VERSE_PROGRESS_STORAGE_KEY = 'lce-jonas-verse-progress-v1';
+const PLAN_STORAGE_KEY = 'lce-bible365-plan-v1';
+const START_STORAGE_KEY = 'lce-bible365-start-v1';
+const VERSE_PROGRESS_STORAGE_KEY = 'lce-bible365-verse-progress-v1';
 const VERSE_COUNTS_STORAGE_KEY = 'lce-avm-verse-counts-v1';
+const LEGACY_PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
+const LEGACY_START_STORAGE_KEY = 'lce-jonas-start-v1';
+const LEGACY_VERSE_PROGRESS_STORAGE_KEY = 'lce-jonas-verse-progress-v1';
 const LEGACY_VERSE_NOTES_STORAGE_KEY = 'lce-jonas-verse-notes-v1';
+const PLAN_DAYS = 365;
 const AVM_STRUCTURE_URL = 'https://raw.githubusercontent.com/thiagobodruk/bible/master/json/pt_avm.json';
 
 let avmVerseCounts = loadCachedVerseCounts();
@@ -532,27 +535,45 @@ let avmVerseCountsPromise = null;
 
 function buildPlanSteps() {
   const steps = [];
-  bible.planOrder.forEach((item, orderIndex) => {
+  const seen = new Set();
+
+  bible.planOrder.forEach(item => {
     const book = bookById(item.book);
     if (!book) return;
     const from = item.from || 1;
     const to = item.to || book.chapters;
-    const repeat = item.repeat || 1;
-    for (let repetition = 1; repetition <= repeat; repetition++) {
-      for (let chapter = from; chapter <= to; chapter++) {
-        steps.push({
-          key: orderIndex + ':' + repetition + ':' + book.id + ':' + chapter,
-          coverageKey: book.id + ':' + chapter,
-          bookId: book.id,
-          bookName: book.name,
-          chapter,
-          label: item.label || book.name,
-          repetition,
-          repeat
-        });
-      }
+
+    for (let chapter = from; chapter <= to; chapter++) {
+      const coverageKey = book.id + ':' + chapter;
+      if (seen.has(coverageKey)) continue;
+      seen.add(coverageKey);
+      steps.push({
+        key: coverageKey,
+        coverageKey,
+        bookId: book.id,
+        bookName: book.name,
+        chapter,
+        label: item.label || book.name
+      });
     }
   });
+
+  bible.books.forEach(book => {
+    for (let chapter = 1; chapter <= book.chapters; chapter++) {
+      const coverageKey = book.id + ':' + chapter;
+      if (seen.has(coverageKey)) continue;
+      seen.add(coverageKey);
+      steps.push({
+        key: coverageKey,
+        coverageKey,
+        bookId: book.id,
+        bookName: book.name,
+        chapter,
+        label: book.name
+      });
+    }
+  });
+
   return steps;
 }
 
