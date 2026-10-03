@@ -14,6 +14,7 @@ const els = {
   template: document.querySelector('#liturgyCardTemplate'),
   navButtons: [...document.querySelectorAll('.nav-button')],
   sections: {
+    projeto: document.querySelector('#projetoSection'),
     liturgia: document.querySelector('#liturgiaSection'),
     calendario: document.querySelector('#calendarioSection'),
     biblia: document.querySelector('#bibliaSection'),
@@ -34,6 +35,8 @@ const els = {
   bibleChapterPanel: document.querySelector('#bibleChapterPanel'),
 
   dailyTarget: document.querySelector('#dailyTarget'),
+  planStartDate: document.querySelector('#planStartDate'),
+  printPlan: document.querySelector('#printPlan'),
   resetPlan: document.querySelector('#resetPlan'),
   planPercent: document.querySelector('#planPercent'),
   planProgressBar: document.querySelector('#planProgressBar'),
@@ -41,7 +44,8 @@ const els = {
   biblePercent: document.querySelector('#biblePercent'),
   bibleProgressBar: document.querySelector('#bibleProgressBar'),
   bibleProgressText: document.querySelector('#bibleProgressText'),
-  todayReadings: document.querySelector('#todayReadings')
+  todayReadings: document.querySelector('#todayReadings'),
+  fullPlanSchedule: document.querySelector('#fullPlanSchedule')
 };
 
 const itemOrder = {
@@ -376,6 +380,8 @@ function renderBibleChapters(book) {
 /* Plano de leitura Monsenhor Jonas Abib */
 const PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
 const TARGET_STORAGE_KEY = 'lce-jonas-target-v1';
+const START_STORAGE_KEY = 'lce-jonas-start-v1';
+const VERSE_NOTES_STORAGE_KEY = 'lce-jonas-verse-notes-v1';
 
 function buildPlanSteps() {
   const steps = [];
@@ -418,6 +424,49 @@ function loadPlanProgress() {
   }
 }
 
+function loadVerseNotes() {
+  try {
+    return JSON.parse(localStorage.getItem(VERSE_NOTES_STORAGE_KEY) || '{}');
+  } catch {
+    return {};
+  }
+}
+
+function saveVerseNotes(notes) {
+  localStorage.setItem(VERSE_NOTES_STORAGE_KEY, JSON.stringify(notes));
+}
+
+function addLocalDays(isoDate, amount) {
+  const [y,m,d] = isoDate.split('-').map(Number);
+  const date = new Date(y, m - 1, d + amount, 12, 0, 0);
+  return [
+    date.getFullYear(),
+    String(date.getMonth() + 1).padStart(2, '0'),
+    String(date.getDate()).padStart(2, '0')
+  ].join('-');
+}
+
+function monthKey(isoDate) {
+  return isoDate.slice(0, 7);
+}
+
+function monthHeading(isoDate) {
+  const [y,m] = isoDate.split('-').map(Number);
+  const label = new Intl.DateTimeFormat('pt-BR', {month:'long', year:'numeric'}).format(new Date(y, m - 1, 1, 12));
+  return label.charAt(0).toUpperCase() + label.slice(1);
+}
+
+function buildDatedSchedule(startDate, target) {
+  const schedule = [];
+  for (let i = 0, dayIndex = 0; i < planSteps.length; i += target, dayIndex++) {
+    schedule.push({
+      date: addLocalDays(startDate, dayIndex),
+      steps: planSteps.slice(i, i + target)
+    });
+  }
+  return schedule;
+}
+
 function savePlanProgress(progress) {
   localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify([...progress]));
 }
@@ -433,6 +482,7 @@ function completedCoverage(progress) {
 function renderPlan() {
   const progress = loadPlanProgress();
   const target = Number(els.dailyTarget.value || 3);
+  const startDate = els.planStartDate.value || '2026-01-01';
   const planDone = planSteps.filter(step => progress.has(step.key)).length;
   const coverageDone = completedCoverage(progress).size;
 
@@ -483,6 +533,107 @@ function renderPlan() {
     row.append(checkbox, text, link);
     els.todayReadings.appendChild(row);
   });
+
+  renderFullSchedule(progress, startDate, target);
+}
+
+function renderFullSchedule(progress, startDate, target) {
+  const notes = loadVerseNotes();
+  const schedule = buildDatedSchedule(startDate, target);
+  const groups = new Map();
+
+  schedule.forEach(day => {
+    const key = monthKey(day.date);
+    if (!groups.has(key)) groups.set(key, []);
+    groups.get(key).push(day);
+  });
+
+  els.fullPlanSchedule.replaceChildren();
+
+  groups.forEach(days => {
+    const monthSection = document.createElement('section');
+    monthSection.className = 'plan-month';
+
+    const heading = document.createElement('h4');
+    heading.className = 'plan-month-title';
+    heading.textContent = monthHeading(days[0].date);
+    monthSection.appendChild(heading);
+
+    const list = document.createElement('div');
+    list.className = 'plan-days';
+
+    days.forEach(day => {
+      const article = document.createElement('article');
+      article.className = 'plan-day';
+
+      const dateBox = document.createElement('div');
+      dateBox.className = 'plan-date';
+      const [y,m,d] = day.date.split('-').map(Number);
+      const dateObj = new Date(y, m - 1, d, 12);
+      dateBox.innerHTML =
+        '<strong>' + d + '</strong>' +
+        '<span>' + new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(dateObj).replace('.', '') + '</span>';
+
+      const content = document.createElement('div');
+      content.className = 'plan-day-content';
+
+      const readings = document.createElement('div');
+      readings.className = 'plan-day-readings';
+
+      day.steps.forEach(step => {
+        const label = document.createElement('label');
+        label.className = 'plan-chapter' + (progress.has(step.key) ? ' is-done' : '');
+
+        const checkbox = document.createElement('input');
+        checkbox.type = 'checkbox';
+        checkbox.checked = progress.has(step.key);
+
+        const name = document.createElement('span');
+        name.textContent = step.bookName + ' ' + step.chapter;
+
+        const open = document.createElement('a');
+        open.href = chapterUrl(step.bookId, step.chapter);
+        open.target = '_blank';
+        open.rel = 'noopener';
+        open.textContent = 'ler';
+
+        checkbox.addEventListener('change', () => {
+          const current = loadPlanProgress();
+          if (checkbox.checked) current.add(step.key);
+          else current.delete(step.key);
+          savePlanProgress(current);
+          renderPlan();
+        });
+
+        open.addEventListener('click', event => event.stopPropagation());
+        label.append(checkbox, name, open);
+        readings.appendChild(label);
+      });
+
+      const verseField = document.createElement('label');
+      verseField.className = 'verse-note';
+      verseField.innerHTML = '<span>Versículos destacados</span>';
+
+      const verseInput = document.createElement('input');
+      verseInput.type = 'text';
+      verseInput.placeholder = 'Ex.: Jo 1,14; palavra-chave; anotação';
+      verseInput.value = notes[day.date] || '';
+      verseInput.addEventListener('change', () => {
+        const currentNotes = loadVerseNotes();
+        if (verseInput.value.trim()) currentNotes[day.date] = verseInput.value.trim();
+        else delete currentNotes[day.date];
+        saveVerseNotes(currentNotes);
+      });
+
+      verseField.appendChild(verseInput);
+      content.append(readings, verseField);
+      article.append(dateBox, content);
+      list.appendChild(article);
+    });
+
+    monthSection.appendChild(list);
+    els.fullPlanSchedule.appendChild(monthSection);
+  });
 }
 
 /* Eventos */
@@ -498,6 +649,7 @@ els.clear.addEventListener('click', () => {
 });
 
 els.navButtons.forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.section)));
+document.querySelectorAll('[data-go]').forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.go)));
 
 els.calendarYear.addEventListener('change', () => {
   selectedCalendarDate = null;
@@ -514,14 +666,25 @@ els.calendarNext.addEventListener('click', () => moveCalendarMonth(1));
 
 const storedTarget = localStorage.getItem(TARGET_STORAGE_KEY);
 if (storedTarget === '4') els.dailyTarget.value = '4';
+const storedStart = localStorage.getItem(START_STORAGE_KEY);
+if (storedStart) els.planStartDate.value = storedStart;
+
 els.dailyTarget.addEventListener('change', () => {
   localStorage.setItem(TARGET_STORAGE_KEY, els.dailyTarget.value);
   renderPlan();
 });
 
+els.planStartDate.addEventListener('change', () => {
+  if (els.planStartDate.value) localStorage.setItem(START_STORAGE_KEY, els.planStartDate.value);
+  renderPlan();
+});
+
+els.printPlan.addEventListener('click', () => window.print());
+
 els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
     localStorage.removeItem(PLAN_STORAGE_KEY);
+    localStorage.removeItem(VERSE_NOTES_STORAGE_KEY);
     renderPlan();
   }
 });
