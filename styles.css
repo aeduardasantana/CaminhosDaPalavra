@@ -553,6 +553,19 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .plan-actions { display: flex; gap: 8px; margin-left: auto; }
 .full-plan-section { margin-top: 30px; }
 .compact-heading { margin-bottom: 12px; }
+.print-plan-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 18px;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-soft);
+  color: var(--muted);
+  font-size: .82rem;
+}
+.print-plan-meta strong { color: var(--deep); }
 .full-plan-schedule { display: grid; gap: 20px; }
 .plan-month {
   overflow: hidden;
@@ -646,6 +659,16 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   #planoSection > .section-heading:first-child { display: block !important; margin: 0 0 10mm; }
   .full-plan-section { margin: 0; }
   .compact-heading { display: block !important; margin: 0 0 6mm; }
+  .print-plan-meta {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 3mm 4mm;
+    border: 1px solid #777;
+    color: #000;
+    font-size: 9pt;
+    break-inside: avoid;
+  }
+  .print-plan-meta strong { grid-column: 1 / -1; color: #000; }
   .full-plan-schedule { gap: 6mm; }
   .plan-month {
     box-shadow: none;
