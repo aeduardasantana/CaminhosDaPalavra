@@ -130,6 +130,7 @@ function genericLiturgyEntries() {
       p.referencia === item.reference &&
       fullCelebrationName(record).includes('27º Domingo do Tempo Comum')
     );
+    const originalRecord = liturgyOriginals[liturgyOriginalKey(record, item)];
 
     return {
       id: [record.cycle, record.section, record.celebration, item.type, item.reference].map(slug).join('--'),
