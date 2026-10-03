@@ -580,9 +580,34 @@ function buildPlanSteps() {
 const planSteps = buildPlanSteps();
 const totalUniqueBibleChapters = bible.books.reduce((sum, book) => sum + book.chapters, 0);
 
+function normalizeLegacyChapterKey(key) {
+  const parts = String(key || '').split(':');
+  if (parts.length >= 4) return parts[parts.length - 2] + ':' + parts[parts.length - 1];
+  if (parts.length === 2) return parts[0] + ':' + parts[1];
+  return '';
+}
+
+function normalizeLegacyVerseKey(key) {
+  const parts = String(key || '').split(':');
+  const versePart = parts.pop() || '';
+  const chapter = parts.pop() || '';
+  const book = parts.pop() || '';
+  if (!/^v\d+$/.test(versePart) || !book || !chapter) return '';
+  return book + ':' + chapter + ':' + versePart;
+}
+
 function loadPlanProgress() {
-  try { return new Set(JSON.parse(localStorage.getItem(PLAN_STORAGE_KEY) || '[]')); }
-  catch { return new Set(); }
+  try {
+    const current = JSON.parse(localStorage.getItem(PLAN_STORAGE_KEY) || 'null');
+    if (Array.isArray(current)) return new Set(current);
+
+    const legacy = JSON.parse(localStorage.getItem(LEGACY_PLAN_STORAGE_KEY) || '[]');
+    const migrated = new Set(legacy.map(normalizeLegacyChapterKey).filter(Boolean));
+    if (migrated.size) savePlanProgress(migrated);
+    return migrated;
+  } catch {
+    return new Set();
+  }
 }
 
 function savePlanProgress(progress) {
@@ -590,8 +615,17 @@ function savePlanProgress(progress) {
 }
 
 function loadVerseProgress() {
-  try { return new Set(JSON.parse(localStorage.getItem(VERSE_PROGRESS_STORAGE_KEY) || '[]')); }
-  catch { return new Set(); }
+  try {
+    const current = JSON.parse(localStorage.getItem(VERSE_PROGRESS_STORAGE_KEY) || 'null');
+    if (Array.isArray(current)) return new Set(current);
+
+    const legacy = JSON.parse(localStorage.getItem(LEGACY_VERSE_PROGRESS_STORAGE_KEY) || '[]');
+    const migrated = new Set(legacy.map(normalizeLegacyVerseKey).filter(Boolean));
+    if (migrated.size) saveVerseProgress(migrated);
+    return migrated;
+  } catch {
+    return new Set();
+  }
 }
 
 function saveVerseProgress(progress) {
