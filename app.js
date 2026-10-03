@@ -35,7 +35,6 @@ const els = {
   bibleBooks: document.querySelector('#bibleBooks'),
   bibleChapterPanel: document.querySelector('#bibleChapterPanel'),
 
-  dailyTarget: document.querySelector('#dailyTarget'),
   planStartDate: document.querySelector('#planStartDate'),
   printPlan: document.querySelector('#printPlan'),
   resetPlan: document.querySelector('#resetPlan'),
@@ -1093,15 +1092,11 @@ els.calendarNext.addEventListener('click', () => moveCalendarMonth(1));
 
 [els.bibleQuery, els.bibleTestament].forEach(el => el.addEventListener('input', renderBibleBooks));
 
-const storedTarget = localStorage.getItem(TARGET_STORAGE_KEY);
-if (storedTarget === '4') els.dailyTarget.value = '4';
-const storedStart = localStorage.getItem(START_STORAGE_KEY);
-if (storedStart) els.planStartDate.value = storedStart;
-
-els.dailyTarget.addEventListener('change', () => {
-  localStorage.setItem(TARGET_STORAGE_KEY, els.dailyTarget.value);
-  renderPlan();
-});
+const storedStart = localStorage.getItem(START_STORAGE_KEY) || localStorage.getItem(LEGACY_START_STORAGE_KEY);
+if (storedStart) {
+  els.planStartDate.value = storedStart;
+  localStorage.setItem(START_STORAGE_KEY, storedStart);
+}
 
 els.planStartDate.addEventListener('change', () => {
   if (els.planStartDate.value) localStorage.setItem(START_STORAGE_KEY, els.planStartDate.value);
@@ -1129,6 +1124,8 @@ els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
     localStorage.removeItem(PLAN_STORAGE_KEY);
     localStorage.removeItem(VERSE_PROGRESS_STORAGE_KEY);
+    localStorage.removeItem(LEGACY_PLAN_STORAGE_KEY);
+    localStorage.removeItem(LEGACY_VERSE_PROGRESS_STORAGE_KEY);
     localStorage.removeItem(LEGACY_VERSE_NOTES_STORAGE_KEY);
     renderPlan();
   }
