@@ -966,26 +966,16 @@ function createVerseDetails(step, progress, verseProgress) {
 }
 
 async function renderPlan() {
-  els.todayReadings.innerHTML = '<div class="empty-state">Carregando a estrutura de capítulos e versículos da Bíblia Ave-Maria…</div>';
-  els.fullPlanSchedule.innerHTML = '<div class="empty-state">Preparando o cronograma detalhado…</div>';
-
-  try {
-    await ensureVerseCounts();
-  } catch {
-    const message = 'Não foi possível carregar agora a estrutura de versículos da Bíblia Ave-Maria. Verifique a conexão e tente novamente.';
-    els.todayReadings.innerHTML = '<div class="empty-state">' + message + '</div>';
-    els.fullPlanSchedule.innerHTML = '<div class="empty-state">' + message + '</div>';
-    return;
-  }
-
   const progress = loadPlanProgress();
   const verseProgress = loadVerseProgress();
-  const target = Number(els.dailyTarget.value || 3);
   const startDate = els.planStartDate.value || '2026-01-01';
+  const schedule = buildDatedSchedule(startDate);
 
   updateProgressIndicators(progress);
 
-  const nextSteps = planSteps.filter(step => !progress.has(step.key)).slice(0, target);
+  const firstPendingDay = schedule.find(day => day.steps.some(step => !progress.has(step.key)));
+  const nextSteps = firstPendingDay ? firstPendingDay.steps : [];
+
   els.todayReadings.replaceChildren();
   if (!nextSteps.length) {
     els.todayReadings.innerHTML = '<div class="empty-state">Plano concluído.</div>';
@@ -993,21 +983,34 @@ async function renderPlan() {
     nextSteps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
   }
 
-  renderFullSchedule(progress, verseProgress, startDate, target);
+  renderFullSchedule(progress, verseProgress, startDate);
+
+  if (!avmVerseCounts) {
+    ensureVerseCounts()
+      .then(() => renderPlan())
+      .catch(() => {
+        document.querySelectorAll('.verse-load-error').forEach(el => {
+          el.textContent = 'A marcação por versículo está temporariamente indisponível; as passagens e o cronograma continuam acessíveis.';
+        });
+      });
+  }
 }
 
-function renderFullSchedule(progress, verseProgress, startDate, target) {
-  const schedule = buildDatedSchedule(startDate, target);
+function renderFullSchedule(progress, verseProgress, startDate) {
+  const schedule = buildDatedSchedule(startDate);
   const groups = new Map();
   const endDate = schedule.length ? schedule[schedule.length - 1].date : startDate;
+  const daysWithFour = schedule.filter(day => day.steps.length === 4).length;
+  const daysWithThree = schedule.filter(day => day.steps.length === 3).length;
 
   els.printPlanMeta.innerHTML =
-    '<strong>Plano de leitura — Monsenhor Jonas Abib</strong>' +
+    '<strong>Plano de leitura — Bíblia completa em 365 dias</strong>' +
     '<span>Início: ' + formatDate(startDate) + '</span>' +
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
-    '<span>Meta: ' + target + ' capítulos por dia</span>' +
+    '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
+    '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
     '<span>Controle: capítulo e versículo</span>' +
-    '<span>Salmos: leitura paralela e livre</span>';
+    '<span>Salmos: incluídos no cronograma</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
@@ -1043,11 +1046,16 @@ function renderFullSchedule(progress, verseProgress, startDate, target) {
 
       const content = document.createElement('div');
       content.className = 'plan-day-content';
+
+      const passageSummary = document.createElement('p');
+      passageSummary.className = 'plan-passage-summary';
+      passageSummary.textContent = day.steps.map(step => step.bookName + ' ' + step.chapter).join(' · ');
+
       const readings = document.createElement('div');
       readings.className = 'plan-day-readings';
       day.steps.forEach(step => readings.appendChild(createVerseDetails(step, progress, verseProgress)));
 
-      content.appendChild(readings);
+      content.append(passageSummary, readings);
       article.append(dateBox, content);
       list.appendChild(article);
     });
