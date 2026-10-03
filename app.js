@@ -47,6 +47,7 @@ const els = {
   bibleProgressBar: document.querySelector('#bibleProgressBar'),
   bibleProgressText: document.querySelector('#bibleProgressText'),
   todayReadings: document.querySelector('#todayReadings'),
+  printPlanMeta: document.querySelector('#printPlanMeta'),
   fullPlanSchedule: document.querySelector('#fullPlanSchedule')
 };
 
@@ -673,6 +674,14 @@ function renderFullSchedule(progress, startDate, target) {
   const notes = loadVerseNotes();
   const schedule = buildDatedSchedule(startDate, target);
   const groups = new Map();
+
+  const endDate = schedule.length ? schedule[schedule.length - 1].date : startDate;
+  els.printPlanMeta.innerHTML =
+    '<strong>Plano de leitura — Monsenhor Jonas Abib</strong>' +
+    '<span>Início: ' + formatDate(startDate) + '</span>' +
+    '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
+    '<span>Meta: ' + target + ' capítulos por dia</span>' +
+    '<span>Salmos: leitura paralela e livre</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
