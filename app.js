@@ -143,9 +143,9 @@ function genericLiturgyEntries() {
       itemLabel: item.label,
       referencia: item.reference,
       status: detailedPilot ? detailedPilot.status : (glossa[item.reference] ? 'Glosa-base preliminar' : 'Glosa em produção'),
-      sourceVersion: detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário/Missal Romano, edição brasileira: campo preparado para inserção validada',
-      sourceUrl: detailedPilot?.sourceUrl || '',
-      original: detailedPilot?.original || (item.reference + ' — referência litúrgica levantada. O texto integral da edição brasileira será inserido após validação da fonte/licença correspondente.'),
+      sourceVersion: originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado',
+      sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
+      original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
       glosa: detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       note: item.note || '',
       keywords: [
