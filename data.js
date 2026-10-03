@@ -5,7 +5,6 @@ window.LCE_DATA = {
     ciclosCNBB: "https://www.cnbb.org.br/a-liturgia-e-o-ano-b/",
     bibliaAveMaria: "https://www.bible.com/pt/versions/4542",
     bibliaAveMariaAudio: "https://www.bible.com/pt/audio-bible-app-versions/4542-avm-b%C3%ADblia-sagrada-ave-maria",
-    planoJonas: "https://padrejonas.cancaonova.com/?p=1441",
     liturgiaDiaria20261004: "https://liturgia.cancaonova.com/pb/liturgia/27o-domingo-tempo-comum-8/?sAno=2026&sDia=4&sMes=10"
   },
 
