@@ -227,6 +227,81 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   font-style: italic;
   font-weight: 650;
 }
+
+.psalm-header {
+  margin-bottom: 14px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid var(--line);
+  font-size: .9rem;
+  font-weight: 800;
+  color: var(--muted);
+}
+.psalm-sequence {
+  display: grid;
+  gap: 12px;
+}
+.psalm-refrain,
+.psalm-stanza {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 15px;
+  background: #fff;
+}
+.psalm-refrain {
+  border-width: 2px;
+  border-color: var(--accent);
+  background: var(--accent-soft);
+}
+.psalm-refrain.is-repeat {
+  padding: 10px 12px;
+  border-style: dashed;
+}
+.psalm-stanza {
+  position: relative;
+}
+.psalm-part-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: .72rem;
+  font-weight: 900;
+  letter-spacing: .065em;
+  text-transform: uppercase;
+  color: var(--accent-strong);
+}
+.psalm-stanza .psalm-part-label {
+  color: var(--deep);
+}
+.psalm-part-text {
+  white-space: pre-line;
+  line-height: 1.62;
+}
+.psalm-alternative {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px dashed var(--line);
+  white-space: pre-line;
+  font-size: .92rem;
+  font-weight: 700;
+}
+.psalm-glosa-sequence {
+  gap: 12px;
+}
+.glosa-refrain {
+  background: #fff7dc;
+}
+.glosa-stanza {
+  display: grid;
+  gap: 7px;
+  background: #fffefa;
+}
+.psalm-glosa-missing {
+  padding: 10px 12px;
+  border-left: 4px solid var(--line);
+  color: var(--muted);
+  background: var(--surface-soft);
+  font-size: .9rem;
+  font-style: italic;
+}
 .empty-state {
   padding: 30px;
   border: 1px dashed var(--line);
