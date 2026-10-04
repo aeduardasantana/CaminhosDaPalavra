@@ -4,6 +4,7 @@ const litCalendar = window.LCE_CALENDAR;
 const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
+const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
 
 const els = {
   query: document.querySelector('#query'),
@@ -322,7 +323,34 @@ function splitPsalmBody(lines, stanzaGroups) {
   return groups.filter(group => group.length);
 }
 
-function parsePsalmOriginal(text) {
+function normalizePsalmStructurePart(value = '') {
+  return normalize(value).replace(/\s+/g, ' ').trim();
+}
+
+function psalmStructureKey(cycle, header, refrain, alternative) {
+  const cleanHeader = String(header || '').replace(/^SALMO RESPONSORIAL\s*/i, '');
+  return [
+    cycle,
+    normalizePsalmStructurePart(cleanHeader),
+    normalizePsalmStructurePart((refrain || []).join(' ')),
+    normalizePsalmStructurePart((alternative || []).join(' '))
+  ].join('|');
+}
+
+function splitByPsalmStructure(lines, sizes) {
+  if (!Array.isArray(sizes) || !sizes.length) return null;
+  if (sizes.reduce((sum, n) => sum + n, 0) !== lines.length) return null;
+
+  const groups = [];
+  let cursor = 0;
+  sizes.forEach(size => {
+    groups.push(lines.slice(cursor, cursor + size));
+    cursor += size;
+  });
+  return groups;
+}
+
+function parsePsalmOriginal(text, cycle = '') {
   const lines = String(text || '')
     .replace(/\r/g, '')
     .split('\n')
@@ -339,7 +367,7 @@ function parsePsalmOriginal(text) {
 
   let index = refrainIndex;
   const refrain = [lines[index].replace(/^Refrão:\s*/i, '')];
-  while (index + 1 < lines.length && !/[.!?;:»”]$/.test(refrain[refrain.length - 1])) {
+  while (index + 1 < lines.length && !/[.!?;»”]$/.test(refrain[refrain.length - 1])) {
     index += 1;
     refrain.push(lines[index]);
   }
@@ -348,16 +376,22 @@ function parsePsalmOriginal(text) {
   if (index + 1 < lines.length && /^Ou:/i.test(lines[index + 1])) {
     index += 1;
     alternative.push(lines[index].replace(/^Ou:\s*/i, ''));
-    while (index + 1 < lines.length && !/[.!?;:»”]$/.test(alternative[alternative.length - 1])) {
+    while (index + 1 < lines.length && !/[.!?;»”]$/.test(alternative[alternative.length - 1])) {
       index += 1;
       alternative.push(lines[index]);
     }
   }
 
   const body = lines.slice(index + 1);
-  const stanzaGroups = psalmStanzaGroups(header);
-  const fallbackGroups = Array.from({length: Math.max(1, Math.round(body.length / 4))}, () => '1');
-  return {header, refrain, alternative, stanzas: splitPsalmBody(body, stanzaGroups.length ? stanzaGroups : fallbackGroups)};
+  const key = psalmStructureKey(cycle, header, refrain, alternative);
+  const structure = psalmStructures[key];
+  const structuredStanzas = splitByPsalmStructure(body, structure?.s);
+
+  if (structuredStanzas) {
+    return {header, refrain, alternative, stanzas: structuredStanzas, structureVerified: true};
+  }
+
+  return {header, refrain, alternative, stanzas: [body], structureVerified: false};
 }
 
 function appendPsalmRefrain(container, refrain, alternative, compact = false) {
@@ -384,8 +418,8 @@ function appendPsalmRefrain(container, refrain, alternative, compact = false) {
   container.appendChild(box);
 }
 
-function formatPsalmOriginal(text) {
-  const parsed = parsePsalmOriginal(text);
+function formatPsalmOriginal(text, cycle) {
+  const parsed = parsePsalmOriginal(text, cycle);
   const frag = document.createDocumentFragment();
 
   const header = document.createElement('div');
@@ -411,7 +445,7 @@ function formatPsalmOriginal(text) {
 
     const label = document.createElement('strong');
     label.className = 'psalm-part-label';
-    label.textContent = 'ESTROFE ' + (index + 1);
+    label.textContent = parsed.structureVerified ? ('ESTROFE ' + (index + 1)) : 'ESTROFES — separação ainda não conferida';
 
     const body = document.createElement('div');
     body.className = 'psalm-part-text';
@@ -612,7 +646,7 @@ function renderLiturgia() {
 
     if (entry.item === 'salmo') {
       originalTextBox.replaceChildren();
-      const formattedPsalm = formatPsalmOriginal(entry.original);
+      const formattedPsalm = formatPsalmOriginal(entry.original, entry.ano);
       parsedPsalm = formattedPsalm.parsed;
       originalTextBox.appendChild(formattedPsalm.fragment);
       glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm));
