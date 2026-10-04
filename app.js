@@ -463,6 +463,8 @@ function formatPsalmOriginal(text, cycle) {
 function glosaUnits(text) {
   const lines = String(text || '').replace(/\r/g, '').split('\n').map(line => line.trim()).filter(Boolean);
   const units = [];
+  const explicitGroups = [];
+  let currentExplicitGroup = null;
   let notes = [];
   let refrain = '';
   let explicitRefrain = false;
@@ -472,20 +474,33 @@ function glosaUnits(text) {
       explicitRefrain = true;
       return;
     }
+
+    if (/^\(ESTROFE\s+\d+/i.test(line)) {
+      currentExplicitGroup = [];
+      explicitGroups.push(currentExplicitGroup);
+      notes = [];
+      return;
+    }
+
     if (line.startsWith('(')) {
       notes.push(line);
       return;
     }
+
     if (explicitRefrain && !refrain) {
       refrain = line;
       return;
     }
+
     if (refrain && line === refrain) return;
-    units.push({notes, text: line});
+
+    const unit = {notes, text: line};
     notes = [];
+    if (currentExplicitGroup) currentExplicitGroup.push(unit);
+    else units.push(unit);
   });
 
-  return {refrain, units, trailingNotes: notes};
+  return {refrain, units, explicitGroups, trailingNotes: notes};
 }
 
 function distributeGlosaUnits(units, stanzaLineCounts) {
@@ -519,9 +534,9 @@ function formatPsalmGlosa(text, parsedOriginal) {
   const wrapper = document.createElement('div');
   wrapper.className = 'psalm-sequence psalm-glosa-sequence';
 
-  const {refrain, units} = glosaUnits(text);
+  const {refrain, units, explicitGroups} = glosaUnits(text);
   const stanzaCounts = parsedOriginal.stanzas.map(stanza => stanza.length);
-  const groups = distributeGlosaUnits(units, stanzaCounts);
+  const groups = explicitGroups.length ? explicitGroups : distributeGlosaUnits(units, stanzaCounts);
 
   const refrainBox = document.createElement('div');
   refrainBox.className = 'psalm-refrain glosa-refrain';
