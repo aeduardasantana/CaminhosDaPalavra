@@ -278,36 +278,47 @@ function splitPsalmBody(lines, stanzaGroups) {
   if (!lines.length) return [];
   if (!stanzaGroups?.length || stanzaGroups.length <= 1) return [lines];
 
-  const weights = stanzaGroups.map(psalmVerseGroupWeight);
-  const groups = [];
-  let start = 0;
+  const groupCount = Math.min(stanzaGroups.length, lines.length);
+  const weights = stanzaGroups.slice(0, groupCount).map(psalmVerseGroupWeight);
+  const totalWeight = weights.reduce((sum, value) => sum + value, 0);
+  const equalTarget = lines.length / groupCount;
+  const weightedTargets = weights.map(weight => lines.length * weight / totalWeight);
+  const punctuationEnd = index => /[.!?;:»”]$/.test(lines[index] || '');
 
-  for (let stanza = 0; stanza < weights.length - 1; stanza++) {
-    const remainingLines = lines.length - start;
-    const remainingWeights = weights.slice(stanza).reduce((sum, value) => sum + value, 0);
-    const remainingGroups = weights.length - stanza;
-    const expectedSize = Math.max(1, remainingLines * weights[stanza] / remainingWeights);
-    const idealEnd = start + Math.round(expectedSize) - 1;
-    const minEnd = start;
-    const maxEnd = Math.min(lines.length - (remainingGroups - 1) - 1, idealEnd + 3);
+  const dp = Array.from({length: groupCount + 1}, () => Array(lines.length + 1).fill(null));
+  dp[0][0] = {cost: 0, cuts: []};
 
-    let bestEnd = idealEnd;
-    let bestScore = Infinity;
-    for (let end = minEnd; end <= maxEnd; end++) {
-      const line = lines[end] || '';
-      const punctuationBonus = /[.!?;:»”]$/.test(line) ? -2.2 : 0;
-      const score = Math.abs(end - idealEnd) + punctuationBonus;
-      if (score < bestScore) {
-        bestScore = score;
-        bestEnd = end;
+  for (let group = 1; group <= groupCount; group++) {
+    const minEnd = group;
+    const maxEnd = lines.length - (groupCount - group);
+
+    for (let endPos = minEnd; endPos <= maxEnd; endPos++) {
+      for (let startPos = group - 1; startPos < endPos; startPos++) {
+        const prev = dp[group - 1][startPos];
+        if (!prev) continue;
+
+        const size = endPos - startPos;
+        const equalPenalty = Math.pow(size - equalTarget, 2);
+        const weightedPenalty = Math.pow(size - weightedTargets[group - 1], 2) * 0.35;
+        const boundaryPenalty = group < groupCount && !punctuationEnd(endPos - 1) ? 4 : 0;
+        const cost = prev.cost + equalPenalty + weightedPenalty + boundaryPenalty;
+
+        if (!dp[group][endPos] || cost < dp[group][endPos].cost) {
+          dp[group][endPos] = {cost, cuts: [...prev.cuts, endPos]};
+        }
       }
     }
-
-    groups.push(lines.slice(start, bestEnd + 1));
-    start = bestEnd + 1;
   }
 
-  groups.push(lines.slice(start));
+  const solution = dp[groupCount][lines.length];
+  if (!solution) return [lines];
+
+  const groups = [];
+  let startPos = 0;
+  solution.cuts.forEach(endPos => {
+    groups.push(lines.slice(startPos, endPos));
+    startPos = endPos;
+  });
   return groups.filter(group => group.length);
 }
 
