@@ -252,6 +252,277 @@ function formatGlosa(text) {
   return frag;
 }
 
+function psalmStanzaCount(header) {
+  const match = String(header || '').match(/,\s*(.+?)\s*\(R\./i);
+  if (!match) return 0;
+  return match[1]
+    .split('.')
+    .map(part => part.trim())
+    .filter(Boolean)
+    .length;
+}
+
+function splitPsalmBody(lines, stanzaCount) {
+  if (!lines.length) return [];
+  if (!stanzaCount || stanzaCount <= 1) return [lines];
+
+  const total = lines.length;
+  const groups = [];
+  let start = 0;
+
+  for (let stanza = 0; stanza < stanzaCount - 1; stanza++) {
+    const remainingGroups = stanzaCount - stanza;
+    const remainingLines = total - start;
+    const idealSize = Math.max(1, Math.round(remainingLines / remainingGroups));
+    const idealEnd = start + idealSize - 1;
+    const minEnd = start;
+    const maxEnd = Math.min(total - (remainingGroups - 1) - 1, start + idealSize + 2);
+
+    let bestEnd = idealEnd;
+    let bestScore = Infinity;
+    for (let end = minEnd; end <= maxEnd; end++) {
+      const line = lines[end] || '';
+      const punctuationBonus = /[.!?;:»”]$/.test(line) ? -1.3 : 0;
+      const score = Math.abs(end - idealEnd) + punctuationBonus;
+      if (score < bestScore) {
+        bestScore = score;
+        bestEnd = end;
+      }
+    }
+
+    groups.push(lines.slice(start, bestEnd + 1));
+    start = bestEnd + 1;
+  }
+
+  groups.push(lines.slice(start));
+  return groups.filter(group => group.length);
+}
+
+function parsePsalmOriginal(text) {
+  const lines = String(text || '')
+    .replace(/\r/g, '')
+    .split('\n')
+    .map(line => line.trim())
+    .filter(Boolean);
+
+  if (!lines.length) return {header: '', refrain: [], alternative: [], stanzas: []};
+
+  const header = lines[0];
+  const refrainIndex = lines.findIndex(line => /^Refrão:/i.test(line));
+  if (refrainIndex < 0) {
+    return {header, refrain: [], alternative: [], stanzas: splitPsalmBody(lines.slice(1), psalmStanzaCount(header))};
+  }
+
+  let index = refrainIndex;
+  const refrain = [lines[index].replace(/^Refrão:\s*/i, '')];
+  while (index + 1 < lines.length && !/[.!?;:»”]$/.test(refrain[refrain.length - 1])) {
+    index += 1;
+    refrain.push(lines[index]);
+  }
+
+  const alternative = [];
+  if (index + 1 < lines.length && /^Ou:/i.test(lines[index + 1])) {
+    index += 1;
+    alternative.push(lines[index].replace(/^Ou:\s*/i, ''));
+    while (index + 1 < lines.length && !/[.!?;:»”]$/.test(alternative[alternative.length - 1])) {
+      index += 1;
+      alternative.push(lines[index]);
+    }
+  }
+
+  const body = lines.slice(index + 1);
+  const stanzaCount = psalmStanzaCount(header) || Math.max(1, Math.round(body.length / 4));
+  return {header, refrain, alternative, stanzas: splitPsalmBody(body, stanzaCount)};
+}
+
+function appendPsalmRefrain(container, refrain, alternative, compact = false) {
+  const box = document.createElement('div');
+  box.className = 'psalm-refrain' + (compact ? ' is-repeat' : '');
+
+  const label = document.createElement('strong');
+  label.className = 'psalm-part-label';
+  label.textContent = compact ? 'REFRÃO — REPETIR' : 'REFRÃO';
+  box.appendChild(label);
+
+  const main = document.createElement('div');
+  main.className = 'psalm-part-text';
+  main.textContent = refrain.join('\n');
+  box.appendChild(main);
+
+  if (alternative?.length) {
+    const alt = document.createElement('div');
+    alt.className = 'psalm-alternative';
+    alt.textContent = 'OU: ' + alternative.join('\n');
+    box.appendChild(alt);
+  }
+
+  container.appendChild(box);
+}
+
+function formatPsalmOriginal(text) {
+  const parsed = parsePsalmOriginal(text);
+  const frag = document.createDocumentFragment();
+
+  const header = document.createElement('div');
+  header.className = 'psalm-header';
+  header.textContent = parsed.header;
+  frag.appendChild(header);
+
+  if (!parsed.refrain.length) {
+    const fallback = document.createElement('div');
+    fallback.className = 'psalm-stanza';
+    fallback.textContent = String(text || '');
+    frag.appendChild(fallback);
+    return {fragment: frag, parsed};
+  }
+
+  const sequence = document.createElement('div');
+  sequence.className = 'psalm-sequence';
+  appendPsalmRefrain(sequence, parsed.refrain, parsed.alternative);
+
+  parsed.stanzas.forEach((stanza, index) => {
+    const block = document.createElement('section');
+    block.className = 'psalm-stanza';
+
+    const label = document.createElement('strong');
+    label.className = 'psalm-part-label';
+    label.textContent = 'ESTROFE ' + (index + 1);
+
+    const body = document.createElement('div');
+    body.className = 'psalm-part-text';
+    body.textContent = stanza.join('\n');
+
+    block.append(label, body);
+    sequence.appendChild(block);
+    appendPsalmRefrain(sequence, parsed.refrain, parsed.alternative, true);
+  });
+
+  frag.appendChild(sequence);
+  return {fragment: frag, parsed};
+}
+
+function glosaUnits(text) {
+  const lines = String(text || '').replace(/\r/g, '').split('\n').map(line => line.trim()).filter(Boolean);
+  const units = [];
+  let notes = [];
+  let refrain = '';
+  let explicitRefrain = false;
+
+  lines.forEach(line => {
+    if (/^\(REFRÃO/i.test(line)) {
+      explicitRefrain = true;
+      return;
+    }
+    if (line.startsWith('(')) {
+      notes.push(line);
+      return;
+    }
+    if (explicitRefrain && !refrain) {
+      refrain = line;
+      return;
+    }
+    if (refrain && line === refrain) return;
+    units.push({notes, text: line});
+    notes = [];
+  });
+
+  return {refrain, units, trailingNotes: notes};
+}
+
+function distributeGlosaUnits(units, stanzaLineCounts) {
+  if (!stanzaLineCounts.length) return [units];
+  const groups = [];
+  let cursor = 0;
+  const totalWeight = stanzaLineCounts.reduce((sum, value) => sum + Math.max(1, value), 0);
+
+  stanzaLineCounts.forEach((weight, index) => {
+    const remainingGroups = stanzaLineCounts.length - index;
+    const remainingUnits = units.length - cursor;
+    let count;
+
+    if (index === stanzaLineCounts.length - 1) {
+      count = remainingUnits;
+    } else {
+      count = Math.max(0, Math.round(units.length * Math.max(1, weight) / totalWeight));
+      count = Math.min(count, Math.max(0, remainingUnits - (remainingGroups - 1)));
+    }
+
+    groups.push(units.slice(cursor, cursor + count));
+    cursor += count;
+  });
+
+  if (cursor < units.length && groups.length) groups[groups.length - 1].push(...units.slice(cursor));
+  return groups;
+}
+
+function formatPsalmGlosa(text, parsedOriginal) {
+  const frag = document.createDocumentFragment();
+  const wrapper = document.createElement('div');
+  wrapper.className = 'psalm-sequence psalm-glosa-sequence';
+
+  const {refrain, units} = glosaUnits(text);
+  const stanzaCounts = parsedOriginal.stanzas.map(stanza => stanza.length);
+  const groups = distributeGlosaUnits(units, stanzaCounts);
+
+  const refrainBox = document.createElement('div');
+  refrainBox.className = 'psalm-refrain glosa-refrain';
+  const refrainLabel = document.createElement('strong');
+  refrainLabel.className = 'psalm-part-label';
+  refrainLabel.textContent = 'REFRÃO — GLOSA';
+  const refrainText = document.createElement('div');
+  refrainText.className = 'psalm-part-text';
+  refrainText.textContent = refrain || 'Glosa do refrão ainda precisa ser estruturada.';
+  refrainBox.append(refrainLabel, refrainText);
+  wrapper.appendChild(refrainBox);
+
+  parsedOriginal.stanzas.forEach((_, index) => {
+    const block = document.createElement('section');
+    block.className = 'psalm-stanza glosa-stanza';
+
+    const label = document.createElement('strong');
+    label.className = 'psalm-part-label';
+    label.textContent = 'ESTROFE ' + (index + 1) + ' — GLOSA';
+    block.appendChild(label);
+
+    const group = groups[index] || [];
+    if (!group.length) {
+      const missing = document.createElement('div');
+      missing.className = 'psalm-glosa-missing';
+      missing.textContent = 'Glosa desta estrofe ainda precisa ser completada.';
+      block.appendChild(missing);
+    } else {
+      group.forEach(unit => {
+        unit.notes.forEach(note => {
+          const noteEl = document.createElement('span');
+          noteEl.className = 'visual-note';
+          noteEl.textContent = note;
+          block.appendChild(noteEl);
+        });
+        const line = document.createElement('div');
+        line.className = 'glosa-line';
+        line.textContent = unit.text;
+        block.appendChild(line);
+      });
+    }
+
+    wrapper.appendChild(block);
+
+    const repeat = document.createElement('div');
+    repeat.className = 'psalm-refrain glosa-refrain is-repeat';
+    const repeatLabel = document.createElement('strong');
+    repeatLabel.className = 'psalm-part-label';
+    repeatLabel.textContent = 'REFRÃO — REPETIR';
+    const repeatText = document.createElement('div');
+    repeatText.className = 'psalm-part-text';
+    repeatText.textContent = refrain || 'Glosa do refrão ainda precisa ser estruturada.';
+    repeat.append(repeatLabel, repeatText);
+    wrapper.appendChild(repeat);
+  });
+
+  frag.appendChild(wrapper);
+  return frag;
+}
+
 function closeOtherAccordions(currentTrigger) {
   document.querySelectorAll('.accordion-trigger[aria-expanded="true"]').forEach(trigger => {
     if (trigger !== currentTrigger) {
@@ -310,7 +581,21 @@ function renderLiturgia() {
     node.querySelector('.card-meta').textContent = [formatDate(entry.data), entry.tempo, entry.note].filter(Boolean).join(' · ');
     node.querySelector('.status-pill').textContent = entry.status;
     node.querySelector('.source-version').textContent = entry.sourceVersion || '';
-    node.querySelector('.original-text').textContent = entry.original;
+    const originalTextBox = node.querySelector('.original-text');
+    const glosaTextBox = node.querySelector('.glosa-text');
+    let parsedPsalm = null;
+
+    if (entry.item === 'salmo') {
+      originalTextBox.replaceChildren();
+      const formattedPsalm = formatPsalmOriginal(entry.original);
+      parsedPsalm = formattedPsalm.parsed;
+      originalTextBox.appendChild(formattedPsalm.fragment);
+      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm));
+    } else {
+      originalTextBox.textContent = entry.original;
+      glosaTextBox.appendChild(formatGlosa(entry.glosa));
+    }
+
     const originalSourceLink = node.querySelector('.original-source-link');
     if (entry.sourceUrl) {
       originalSourceLink.href = entry.sourceUrl;
@@ -318,7 +603,6 @@ function renderLiturgia() {
     } else {
       originalSourceLink.hidden = true;
     }
-    node.querySelector('.glosa-text').appendChild(formatGlosa(entry.glosa));
 
     els.liturgyResults.appendChild(node);
     bindAccordion(els.liturgyResults.lastElementChild.querySelector('.accordion-trigger'));
