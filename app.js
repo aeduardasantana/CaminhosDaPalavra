@@ -252,37 +252,50 @@ function formatGlosa(text) {
   return frag;
 }
 
-function psalmStanzaCount(header) {
+function psalmStanzaGroups(header) {
   const match = String(header || '').match(/,\s*(.+?)\s*\(R\./i);
-  if (!match) return 0;
+  if (!match) return [];
   return match[1]
     .split('.')
     .map(part => part.trim())
-    .filter(Boolean)
-    .length;
+    .filter(Boolean);
 }
 
-function splitPsalmBody(lines, stanzaCount) {
-  if (!lines.length) return [];
-  if (!stanzaCount || stanzaCount <= 1) return [lines];
+function psalmVerseGroupWeight(group) {
+  const ranges = String(group || '').match(/\d+[a-z]*(?:\s*-\s*\d+[a-z]*)?/gi) || [];
+  let total = 0;
 
-  const total = lines.length;
+  ranges.forEach(range => {
+    const nums = range.match(/\d+/g)?.map(Number) || [];
+    if (nums.length >= 2) total += Math.max(1, nums[1] - nums[0] + 1);
+    else if (nums.length === 1) total += 1;
+  });
+
+  return Math.max(1, total);
+}
+
+function splitPsalmBody(lines, stanzaGroups) {
+  if (!lines.length) return [];
+  if (!stanzaGroups?.length || stanzaGroups.length <= 1) return [lines];
+
+  const weights = stanzaGroups.map(psalmVerseGroupWeight);
   const groups = [];
   let start = 0;
 
-  for (let stanza = 0; stanza < stanzaCount - 1; stanza++) {
-    const remainingGroups = stanzaCount - stanza;
-    const remainingLines = total - start;
-    const idealSize = Math.max(1, Math.round(remainingLines / remainingGroups));
-    const idealEnd = start + idealSize - 1;
+  for (let stanza = 0; stanza < weights.length - 1; stanza++) {
+    const remainingLines = lines.length - start;
+    const remainingWeights = weights.slice(stanza).reduce((sum, value) => sum + value, 0);
+    const remainingGroups = weights.length - stanza;
+    const expectedSize = Math.max(1, remainingLines * weights[stanza] / remainingWeights);
+    const idealEnd = start + Math.round(expectedSize) - 1;
     const minEnd = start;
-    const maxEnd = Math.min(total - (remainingGroups - 1) - 1, start + idealSize + 2);
+    const maxEnd = Math.min(lines.length - (remainingGroups - 1) - 1, idealEnd + 3);
 
     let bestEnd = idealEnd;
     let bestScore = Infinity;
     for (let end = minEnd; end <= maxEnd; end++) {
       const line = lines[end] || '';
-      const punctuationBonus = /[.!?;:»”]$/.test(line) ? -1.3 : 0;
+      const punctuationBonus = /[.!?;:»”]$/.test(line) ? -2.2 : 0;
       const score = Math.abs(end - idealEnd) + punctuationBonus;
       if (score < bestScore) {
         bestScore = score;
@@ -310,7 +323,7 @@ function parsePsalmOriginal(text) {
   const header = lines[0];
   const refrainIndex = lines.findIndex(line => /^Refrão:/i.test(line));
   if (refrainIndex < 0) {
-    return {header, refrain: [], alternative: [], stanzas: splitPsalmBody(lines.slice(1), psalmStanzaCount(header))};
+    return {header, refrain: [], alternative: [], stanzas: splitPsalmBody(lines.slice(1), psalmStanzaGroups(header))};
   }
 
   let index = refrainIndex;
@@ -331,8 +344,9 @@ function parsePsalmOriginal(text) {
   }
 
   const body = lines.slice(index + 1);
-  const stanzaCount = psalmStanzaCount(header) || Math.max(1, Math.round(body.length / 4));
-  return {header, refrain, alternative, stanzas: splitPsalmBody(body, stanzaCount)};
+  const stanzaGroups = psalmStanzaGroups(header);
+  const fallbackGroups = Array.from({length: Math.max(1, Math.round(body.length / 4))}, () => '1');
+  return {header, refrain, alternative, stanzas: splitPsalmBody(body, stanzaGroups.length ? stanzaGroups : fallbackGroups)};
 }
 
 function appendPsalmRefrain(container, refrain, alternative, compact = false) {
