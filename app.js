@@ -549,10 +549,12 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
   wrapper.className = 'psalm-sequence psalm-glosa-sequence';
 
   let refrain = '';
+  let alternativeRefrain = '';
   let groups = [];
 
   if (contextual && typeof contextual === 'object') {
     refrain = String(contextual.refrain || '').trim();
+    alternativeRefrain = String(contextual.alternativeRefrain || '').trim();
     groups = Array.isArray(contextual.stanzas)
       ? contextual.stanzas.map(stanza => (Array.isArray(stanza) ? stanza : []).map(line => ({
           notes: [],
@@ -577,6 +579,12 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
   refrainText.className = 'psalm-part-text';
   refrainText.textContent = refrain || 'Glosa do refrão ainda precisa ser estruturada.';
   refrainBox.append(refrainLabel, refrainText);
+  if (alternativeRefrain) {
+    const alt = document.createElement('div');
+    alt.className = 'psalm-alternative';
+    alt.textContent = 'OU — GLOSA: ' + alternativeRefrain;
+    refrainBox.appendChild(alt);
+  }
   wrapper.appendChild(refrainBox);
 
   parsedOriginal.stanzas.forEach((_, index) => {
