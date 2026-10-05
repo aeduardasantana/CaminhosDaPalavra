@@ -213,7 +213,7 @@
         <div>
           <p class="eyebrow">Bíblia completa · 365 dias</p>
           <h2>Plano de leitura de 100% da Bíblia</h2>
-          <p class="supporting-text compact">Cronograma de 365 dias para percorrer os 1.334 capítulos do cânon católico, com 3 ou 4 capítulos por dia, indicação das passagens e marcação individual de cada versículo. O progresso fica salvo neste dispositivo.</p>
+          <p class="supporting-text compact">Escolha a data de início e acompanhe, a cada dia, a leitura sugerida. Marque capítulos ou versículos conforme avança; o progresso fica salvo neste dispositivo. O cronograma completo permanece disponível para impressão.</p>
         </div>
       </div>
 
@@ -243,25 +243,21 @@
         </article>
       </div>
 
-      <div class="plan-grid">
-        <article class="plan-card">
-          <p class="eyebrow">Próxima leitura</p>
-          <h3>Passagens programadas</h3>
+      <div class="plan-grid daily-plan-grid">
+        <article class="plan-card daily-reading-card">
+          <p class="eyebrow">Leitura do dia</p>
+          <h3 id="todayReadingTitle">Sugestão para hoje</h3>
+          <p id="todayReadingDate" class="supporting-text compact"></p>
           <div id="todayReadings" class="reading-checklist"></div>
-        </article>
-        <article class="plan-card">
-          <p class="eyebrow">Organização</p>
-          <h3>Sequência do plano</h3>
-          <p class="supporting-text">A sequência é própria deste projeto e usa referências de métodos de leitura bíblica apenas como inspiração de organização. Todos os 73 livros e todos os 1.334 capítulos entram no cronograma, inclusive os 150 Salmos, sem atribuir a autoria do plano a terceiros.</p>
         </article>
       </div>
 
-      <section class="full-plan-section">
+      <section class="full-plan-section print-only-plan" aria-hidden="true">
         <div class="section-heading compact-heading">
           <div>
-            <p class="eyebrow">Cronograma completo</p>
-            <h3>Leitura dia a dia</h3>
-            <p class="supporting-text compact">Consulte o plano inteiro e acompanhe a leitura com quadradinhos individuais para cada versículo de cada capítulo. Você pode marcar versículo por versículo ou concluir o capítulo inteiro de uma vez.</p>
+            <p class="eyebrow">Cronograma completo para impressão</p>
+            <h3>Plano de leitura dia a dia</h3>
+            <p class="supporting-text compact">O cronograma completo é preparado exclusivamente para impressão, conforme a data de início escolhida.</p>
           </div>
         </div>
         <div id="printPlanMeta" class="print-plan-meta"></div>
