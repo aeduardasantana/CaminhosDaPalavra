@@ -1,12 +1,14 @@
-# Acervo Católico Acessível — projeto de Libras com Eduarda
+# Caminhos da Palavra — por Libras com Eduarda
 
-Aplicação web em desenvolvimento para organizar liturgia, Escritura, glosas de preparação, calendário litúrgico, plano de leitura e repertório católico em uma experiência visual, responsiva e acessível.
+Ambiente digital de experiência com a Palavra de Deus que reúne Bíblia, plano de leitura, calendário litúrgico e recursos de preparação da Liturgia em Libras. A proposta é favorecer leitura, compreensão, preparação e participação na vida da Igreja em uma experiência visual, organizada e acessível.
 
 ## Posicionamento
 
-O projeto **não se apresenta como conteúdo em Libras**. As glosas são ferramentas escritas de preparação e não equivalem à Libras, a uma interpretação sinalizada ou a uma tradução oficial.
+**Caminhos da Palavra** é um ambiente para viver a Palavra de Deus ao longo dos dias e no ritmo da Igreja. A experiência integra quatro caminhos principais: **Bíblia Sagrada, Plano de Leitura, Calendário Litúrgico e Liturgia e Libras**.
 
-A proposta é oferecer apoio inicial, especialmente para quem está começando a se preparar para interpretar no contexto da Igreja Católica, sem substituir:
+O projeto **não se apresenta como conteúdo em Libras**. Na frente Liturgia e Libras, as glosas são ferramentas escritas de preparação e não equivalem à Libras, a uma interpretação sinalizada ou a uma tradução oficial.
+
+Os recursos de preparação podem apoiar especialmente quem está começando a interpretar no contexto da Igreja Católica, sem substituir:
 
 - cursos e formação linguística;
 - profissionais qualificados;
@@ -14,9 +16,9 @@ A proposta é oferecer apoio inicial, especialmente para quem está começando a
 - contato e convivência com pessoas surdas;
 - revisão e validação por usuários e profissionais competentes.
 
-O conteúdo também serve a cristãos que desejam estudar liturgia, Bíblia e repertório religioso de forma organizada. A acessibilidade é tratada como princípio transversal da apresentação.
+O ambiente também serve a cristãos que desejam ler a Bíblia, manter uma caminhada de leitura, acompanhar o calendário litúrgico e se preparar para a Liturgia da Palavra. A acessibilidade é tratada como princípio transversal da apresentação.
 
-**Acervo Católico Acessível** é um nome de trabalho para o produto. A origem institucional permanece identificada como **projeto de Libras com Eduarda** enquanto posicionamento, marca, SEO e expansão são avaliados.
+A assinatura **por Libras com Eduarda** preserva a origem e a autoria do projeto sem limitar a plataforma exclusivamente à Libras.
 
 ## Liturgia dominical
 
