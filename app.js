@@ -5,6 +5,7 @@ const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
+const psalmGlossaContext = window.LCE_PSALM_GLOSSA_CONTEXT || {};
 
 const els = {
   query: document.querySelector('#query'),
@@ -141,8 +142,11 @@ function genericLiturgyEntries() {
     );
     const originalRecord = liturgyOriginals[liturgyOriginalKey(record, item)];
 
+    const contextKey = liturgyOriginalKey(record, item);
+
     return {
       id: [record.cycle, record.section, record.celebration, item.type, item.reference].map(slug).join('--'),
+      contextKey,
       data: detailedPilot?.data || '',
       ano: record.cycle,
       tempo: lectionarySectionLabel(record.section),
@@ -156,6 +160,7 @@ function genericLiturgyEntries() {
       sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
       glosa: detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
+      glosaContext: item.type === 'salmo' ? (psalmGlossaContext[contextKey] || null) : null,
       note: item.note || '',
       keywords: [
         record.cycle,
@@ -538,14 +543,30 @@ function distributeGlosaUnits(units, stanzaLineCounts) {
   return groups;
 }
 
-function formatPsalmGlosa(text, parsedOriginal) {
+function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
   const frag = document.createDocumentFragment();
   const wrapper = document.createElement('div');
   wrapper.className = 'psalm-sequence psalm-glosa-sequence';
 
-  const {refrain, units, explicitGroups} = glosaUnits(text);
-  const stanzaCounts = parsedOriginal.stanzas.map(stanza => stanza.length);
-  const groups = explicitGroups.length ? explicitGroups : distributeGlosaUnits(units, stanzaCounts);
+  let refrain = '';
+  let groups = [];
+
+  if (contextual && typeof contextual === 'object') {
+    refrain = String(contextual.refrain || '').trim();
+    groups = Array.isArray(contextual.stanzas)
+      ? contextual.stanzas.map(stanza => (Array.isArray(stanza) ? stanza : []).map(line => ({
+          notes: [],
+          text: String(line || '').trim()
+        })).filter(unit => unit.text))
+      : [];
+  } else {
+    const parsedGlosa = glosaUnits(text);
+    refrain = parsedGlosa.refrain;
+    const stanzaCounts = parsedOriginal.stanzas.map(stanza => stanza.length);
+    groups = parsedGlosa.explicitGroups.length
+      ? parsedGlosa.explicitGroups
+      : distributeGlosaUnits(parsedGlosa.units, stanzaCounts);
+  }
 
   const refrainBox = document.createElement('div');
   refrainBox.className = 'psalm-refrain glosa-refrain';
@@ -575,7 +596,7 @@ function formatPsalmGlosa(text, parsedOriginal) {
       block.appendChild(missing);
     } else {
       group.forEach(unit => {
-        unit.notes.forEach(note => {
+        (unit.notes || []).forEach(note => {
           const noteEl = document.createElement('span');
           noteEl.className = 'visual-note';
           noteEl.textContent = note;
@@ -673,7 +694,7 @@ function renderLiturgia() {
       const formattedPsalm = formatPsalmOriginal(entry.original, entry.ano);
       parsedPsalm = formattedPsalm.parsed;
       originalTextBox.appendChild(formattedPsalm.fragment);
-      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm));
+      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext));
     } else {
       originalTextBox.textContent = entry.original;
       glosaTextBox.appendChild(formatGlosa(entry.glosa));
