@@ -488,6 +488,9 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .progress-track { height: 8px; border-radius: 999px; background: #ebe7df; overflow: hidden; }
 .progress-track span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .2s ease; }
 .plan-grid { display: grid; grid-template-columns: 1.4fr .8fr; gap: 14px; }
+.daily-plan-grid { grid-template-columns: 1fr; }
+.daily-reading-card { max-width: 100%; }
+.daily-reading-card #todayReadingDate { margin: -6px 0 14px; }
 .plan-card h3 { margin-bottom: 12px; }
 .reading-checklist { display: grid; gap: 12px; }
 .reading-detail {
@@ -679,6 +682,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 .plan-toolbar > .field { min-width: 190px; }
 .plan-actions { display: flex; gap: 8px; margin-left: auto; }
 .full-plan-section { margin-top: 30px; }
+.print-only-plan { display: none; }
 .compact-heading { margin-bottom: 12px; }
 .print-plan-meta {
   display: flex;
@@ -818,7 +822,8 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .plan-grid { display: none !important; }
   #planoSection { display: block !important; margin: 0; }
   #planoSection > .section-heading:first-child { display: block !important; margin: 0 0 10mm; }
-  .full-plan-section { margin: 0; }
+  .full-plan-section,
+  .print-only-plan { display: block !important; margin: 0; }
   .compact-heading { display: block !important; margin: 0 0 6mm; }
   .print-plan-meta {
     display: grid;
