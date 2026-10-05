@@ -209,24 +209,52 @@
     </section>
 
     <section id="planoSection" class="content-section section-top" hidden>
-      <div class="section-heading">
+      <div class="section-heading reading-intro">
         <div>
           <p class="eyebrow">Bíblia completa · 365 dias</p>
-          <h2>Plano de leitura de 100% da Bíblia</h2>
-          <p class="supporting-text compact">Escolha a data de início e acompanhe, a cada dia, a leitura sugerida. Marque capítulos ou versículos conforme avança; o progresso fica salvo neste dispositivo. O cronograma completo permanece disponível para impressão.</p>
+          <h2>Leia a Palavra. Caminhe com ela.</h2>
+          <p class="supporting-text">Organize sua leitura de duas formas independentes: gere um plano completo com datas para imprimir ou salvar em PDF, e use a plataforma para registrar sua caminhada real, no seu ritmo.</p>
         </div>
       </div>
 
-      <div class="plan-toolbar">
-        <label class="field">
-          <span>Data de início do cronograma para impressão</span>
-          <input id="planStartDate" type="date" value="2026-01-01" />
-        </label>
-        <div class="plan-actions">
-          <button id="printPlan" class="secondary-button" type="button">Gerar / imprimir cronograma</button>
-          <button id="resetPlan" class="secondary-button danger-quiet" type="button">Reiniciar progresso</button>
-        </div>
-      </div>
+      <section class="scripture-inspiration" aria-label="Inspiração para a leitura da Bíblia">
+        <blockquote>
+          <p>“Vossa palavra é um facho que ilumina meus passos, uma luz em meu caminho.”</p>
+          <cite>Salmo 118(119),105</cite>
+        </blockquote>
+        <blockquote>
+          <p>“Ignorar as Escrituras é ignorar Cristo.”</p>
+          <cite>São Jerônimo</cite>
+        </blockquote>
+      </section>
+
+      <section class="reading-paths" aria-label="Escolha como deseja usar o plano de leitura">
+        <article class="reading-path-card print-path">
+          <div class="path-number" aria-hidden="true">1</div>
+          <div>
+            <p class="eyebrow">Planejamento</p>
+            <h3>Gerar plano de leitura em PDF</h3>
+            <p>Escolha uma data de início para montar o cronograma completo de 365 dias. Esta data serve apenas para o documento impresso ou salvo em PDF e não altera seu progresso online.</p>
+            <div class="path-controls">
+              <label class="field">
+                <span>Data de início do plano</span>
+                <input id="planStartDate" type="date" value="2026-01-01" />
+              </label>
+              <button id="printPlan" class="primary-action" type="button">Gerar plano em PDF</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="reading-path-card progress-path">
+          <div class="path-number" aria-hidden="true">2</div>
+          <div>
+            <p class="eyebrow">Acompanhamento</p>
+            <h3>Registrar progresso online</h3>
+            <p>Comece pelo Dia 1 e avance conforme concluir as leituras. Você pode marcar capítulos inteiros ou versículos individualmente. Sua caminhada real é independente da data escolhida para o PDF.</p>
+            <button id="storageInfoButton" class="secondary-button storage-info-button" type="button">Como meu progresso é salvo?</button>
+          </div>
+        </article>
+      </section>
 
       <section class="reading-journey-status" aria-label="Andamento da caminhada de leitura">
         <div>
@@ -237,7 +265,7 @@
         <div>
           <p class="eyebrow">Ritmo</p>
           <strong id="journeyPace">Sem atraso</strong>
-          <p id="journeyPaceDetail" class="supporting-text compact">O cronograma diário avança conforme a leitura é concluída.</p>
+          <p id="journeyPaceDetail" class="supporting-text compact">O ritmo será calculado a partir do primeiro dia de leitura.</p>
         </div>
       </section>
 
@@ -258,19 +286,35 @@
 
       <div class="plan-grid daily-plan-grid">
         <article class="plan-card daily-reading-card">
-          <p class="eyebrow">Leitura atual</p>
-          <h3 id="todayReadingTitle">Comece sua caminhada</h3>
-          <p id="todayReadingDate" class="supporting-text compact"></p>
+          <div class="daily-reading-heading">
+            <div>
+              <p class="eyebrow">Leitura atual</p>
+              <h3 id="todayReadingTitle">Comece sua caminhada</h3>
+              <p id="todayReadingDate" class="supporting-text compact"></p>
+            </div>
+            <button id="resetPlan" class="secondary-button danger-quiet" type="button">Reiniciar progresso</button>
+          </div>
           <div id="todayReadings" class="reading-checklist"></div>
         </article>
       </div>
+
+      <dialog id="storageInfoDialog" class="storage-dialog" aria-labelledby="storageInfoTitle">
+        <div class="storage-dialog-inner">
+          <button id="storageInfoClose" class="dialog-close" type="button" aria-label="Fechar">×</button>
+          <p class="eyebrow">Seu progresso</p>
+          <h3 id="storageInfoTitle">Como os dados são salvos?</h3>
+          <p>As marcações de capítulos, versículos, início da caminhada e progresso são salvas localmente neste navegador e neste dispositivo.</p>
+          <p>Isso significa que, se você trocar de computador ou celular, usar outro navegador, limpar os dados do site ou navegar em modo anônimo, o progresso pode não aparecer.</p>
+          <p>O plano em PDF é independente: a data escolhida para gerar o documento não altera nem reinicia sua caminhada online.</p>
+        </div>
+      </dialog>
 
       <section class="full-plan-section print-only-plan" aria-hidden="true">
         <div class="section-heading compact-heading">
           <div>
             <p class="eyebrow">Cronograma completo para impressão</p>
             <h3>Plano de leitura dia a dia</h3>
-            <p class="supporting-text compact">O cronograma completo é preparado exclusivamente para impressão, conforme a data de início escolhida.</p>
+            <p class="supporting-text compact">Cronograma de 365 dias preparado a partir da data escolhida para o PDF.</p>
           </div>
         </div>
         <div id="printPlanMeta" class="print-plan-meta"></div>
