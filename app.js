@@ -1485,8 +1485,7 @@ function renderFullSchedule(progress, verseProgress, startDate) {
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
     '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
-    '<span>Fonte do plano: ' + (bible.planSource || 'organização própria do projeto') + '</span>' +
-    '<span>Versão bíblica de referência: ' + (bible.version || 'Bíblia Sagrada Ave-Maria') + '</span>';
+    '<span>Fonte do plano: ' + (bible.planSource || 'organização própria do projeto') + '</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
