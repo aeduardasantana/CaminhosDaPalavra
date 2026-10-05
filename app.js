@@ -45,6 +45,8 @@ const els = {
   biblePercent: document.querySelector('#biblePercent'),
   bibleProgressBar: document.querySelector('#bibleProgressBar'),
   bibleProgressText: document.querySelector('#bibleProgressText'),
+  todayReadingTitle: document.querySelector('#todayReadingTitle'),
+  todayReadingDate: document.querySelector('#todayReadingDate'),
   todayReadings: document.querySelector('#todayReadings'),
   printPlanMeta: document.querySelector('#printPlanMeta'),
   fullPlanSchedule: document.querySelector('#fullPlanSchedule')
@@ -1322,22 +1324,45 @@ function createVerseDetails(step, progress, verseProgress) {
   return details;
 }
 
+function localIsoToday() {
+  const now = new Date();
+  return [
+    now.getFullYear(),
+    String(now.getMonth() + 1).padStart(2, '0'),
+    String(now.getDate()).padStart(2, '0')
+  ].join('-');
+}
+
 async function renderPlan() {
   const progress = loadPlanProgress();
   const verseProgress = loadVerseProgress();
   const startDate = els.planStartDate.value || '2026-01-01';
   const schedule = buildDatedSchedule(startDate);
+  const today = localIsoToday();
+  const firstDay = schedule[0];
+  const lastDay = schedule[schedule.length - 1];
+  const todayDay = schedule.find(day => day.date === today);
 
   updateProgressIndicators(progress);
 
-  const firstPendingDay = schedule.find(day => day.steps.some(step => !progress.has(step.key)));
-  const nextSteps = firstPendingDay ? firstPendingDay.steps : [];
-
   els.todayReadings.replaceChildren();
-  if (!nextSteps.length) {
-    els.todayReadings.innerHTML = '<div class="empty-state">Plano concluído.</div>';
+
+  if (todayDay) {
+    els.todayReadingTitle.textContent = 'Sugestão para hoje';
+    els.todayReadingDate.textContent = formatDate(todayDay.date);
+    todayDay.steps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
+  } else if (firstDay && today < firstDay.date) {
+    els.todayReadingTitle.textContent = 'Seu plano ainda não começou';
+    els.todayReadingDate.textContent = 'Início programado para ' + formatDate(firstDay.date) + '.';
+    els.todayReadings.innerHTML = '<div class="empty-state">Na data de início, a leitura sugerida do dia aparecerá aqui.</div>';
+  } else if (lastDay && today > lastDay.date) {
+    els.todayReadingTitle.textContent = 'Período do plano concluído';
+    els.todayReadingDate.textContent = 'O cronograma terminou em ' + formatDate(lastDay.date) + '.';
+    els.todayReadings.innerHTML = '<div class="empty-state">Você pode conferir seu progresso acima ou escolher uma nova data de início.</div>';
   } else {
-    nextSteps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
+    els.todayReadingTitle.textContent = 'Leitura do dia';
+    els.todayReadingDate.textContent = '';
+    els.todayReadings.innerHTML = '<div class="empty-state">Não foi possível localizar a leitura correspondente à data de hoje.</div>';
   }
 
   renderFullSchedule(progress, verseProgress, startDate);
