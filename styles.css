@@ -476,6 +476,23 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   margin-bottom: 14px;
 }
 .plan-toolbar .field { width: 220px; }
+.reading-journey-status {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.reading-journey-status > div {
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface-soft);
+  padding: 16px 18px;
+}
+.reading-journey-status strong {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 1.15rem;
+}
 .progress-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-bottom: 14px; }
 .progress-card, .plan-card {
   border: 1px solid var(--line);
@@ -592,7 +609,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .main-layout { padding-top: 16px; }
   .nav-button { padding: 8px 12px; font-size: .88rem; }
   .search-panel { padding: 20px 16px; }
-  .search-grid, .bible-filter-row, .progress-grid, .source-strip { grid-template-columns: 1fr; }
+  .search-grid, .bible-filter-row, .progress-grid, .source-strip, .reading-journey-status { grid-template-columns: 1fr; }
   .field-search { grid-column: auto; }
   .section-heading { align-items: flex-start; flex-direction: column; margin-top: 28px; }
   .accordion-trigger { padding: 15px; align-items: flex-start; }
@@ -818,6 +835,7 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   #bibliaSection,
   .section-heading:not(.compact-heading),
   .plan-toolbar,
+  .reading-journey-status,
   .progress-grid,
   .plan-grid { display: none !important; }
   #planoSection { display: block !important; margin: 0; }
