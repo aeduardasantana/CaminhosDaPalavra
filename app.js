@@ -39,6 +39,9 @@ const els = {
   planStartDate: document.querySelector('#planStartDate'),
   printPlan: document.querySelector('#printPlan'),
   resetPlan: document.querySelector('#resetPlan'),
+  storageInfoButton: document.querySelector('#storageInfoButton'),
+  storageInfoDialog: document.querySelector('#storageInfoDialog'),
+  storageInfoClose: document.querySelector('#storageInfoClose'),
   journeyDay: document.querySelector('#journeyDay'),
   journeyStart: document.querySelector('#journeyStart'),
   journeyPace: document.querySelector('#journeyPace'),
@@ -1549,6 +1552,29 @@ els.planStartDate.addEventListener('change', () => {
 });
 
 els.printPlan.addEventListener('click', () => window.print());
+
+if (els.storageInfoButton && els.storageInfoDialog) {
+  els.storageInfoButton.addEventListener('click', () => {
+    if (typeof els.storageInfoDialog.showModal === 'function') els.storageInfoDialog.showModal();
+    else els.storageInfoDialog.setAttribute('open', '');
+  });
+}
+
+if (els.storageInfoClose && els.storageInfoDialog) {
+  els.storageInfoClose.addEventListener('click', () => els.storageInfoDialog.close());
+}
+
+if (els.storageInfoDialog) {
+  els.storageInfoDialog.addEventListener('click', event => {
+    const rect = els.storageInfoDialog.getBoundingClientRect();
+    const inside =
+      event.clientX >= rect.left &&
+      event.clientX <= rect.right &&
+      event.clientY >= rect.top &&
+      event.clientY <= rect.bottom;
+    if (!inside) els.storageInfoDialog.close();
+  });
+}
 
 window.addEventListener('beforeprint', () => {
   document.querySelectorAll('.verse-details').forEach(details => {
