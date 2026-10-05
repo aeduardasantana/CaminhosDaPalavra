@@ -758,6 +758,19 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
   gap: 8px;
 }
+.print-chapter-checklist { display: none; }
+.print-chapter-check {
+  align-items: center;
+  gap: 6px;
+}
+.print-check-box {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border: 1px solid currentColor;
+  border-radius: 2px;
+  flex: 0 0 auto;
+}
 .verse-details {
   border: 1px solid var(--line);
   border-radius: 9px;
@@ -826,8 +839,8 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 }
 
 @media print {
-  @page { margin: 12mm; }
-  body { background: #fff; color: #000; font-size: 10pt; }
+  @page { size: A4 portrait; margin: 10mm; }
+  body { background: #fff; color: #000; font-size: 9pt; line-height: 1.25; }
   .site-header,
   #projetoSection,
   #liturgiaSection,
@@ -839,39 +852,74 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .progress-grid,
   .plan-grid { display: none !important; }
   #planoSection { display: block !important; margin: 0; }
-  #planoSection > .section-heading:first-child { display: block !important; margin: 0 0 10mm; }
+  #planoSection > .section-heading:first-child { display: block !important; margin: 0 0 5mm; }
   .full-plan-section,
   .print-only-plan { display: block !important; margin: 0; }
-  .compact-heading { display: block !important; margin: 0 0 6mm; }
+  .compact-heading { display: block !important; margin: 0 0 3mm; }
   .print-plan-meta {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 3mm 4mm;
-    border: 1px solid #777;
+    gap: 1.5mm 4mm;
+    padding: 2.5mm 3mm;
+    border: 1px solid #888;
     color: #000;
-    font-size: 9pt;
+    font-size: 8pt;
     break-inside: avoid;
   }
-  .print-plan-meta strong { grid-column: 1 / -1; color: #000; }
-  .full-plan-schedule { gap: 6mm; }
+  .print-plan-meta strong { grid-column: 1 / -1; color: #000; font-size: 10pt; }
+  .full-plan-schedule { display: block; }
   .plan-month {
+    margin: 0 0 4mm;
     box-shadow: none;
-    border: 1px solid #999;
+    border: 1px solid #aaa;
+    border-radius: 0;
+    break-inside: auto;
+  }
+  .plan-month-title {
+    margin: 0;
+    padding: 2mm 3mm;
+    background: #fff;
+    color: #000;
+    border-bottom: 1.5px solid #000;
+    font-size: 9.5pt;
+    break-after: avoid;
+  }
+  .plan-day {
+    min-height: 0;
+    grid-template-columns: 13mm 1fr;
     break-inside: avoid;
   }
-  .plan-month-title { background: #fff; color: #000; border-bottom: 2px solid #000; }
-  .plan-day { min-height: 0; grid-template-columns: 16mm 1fr; break-inside: avoid; }
-  .plan-day-content { grid-template-columns: 1fr; padding: 2.5mm 3mm; gap: 3mm; }
-  .plan-date { background: #fff; }
-  .plan-day-readings { grid-template-columns: 1fr; }
-  .verse-details { border: 0; break-inside: avoid; }
-  .verse-details summary { padding: 1.5mm 0; border-bottom: 1px solid #bbb; }
-  .verse-details summary::after { display: none; }
-  .verse-details-body { padding: 2mm 0; border-top: 0; }
-  .verse-details-actions a { display: none; }
-  .verse-grid { grid-template-columns: repeat(12, 1fr); gap: 1.2mm; }
-  .verse-check { min-height: 6mm; padding: .5mm; border: 1px solid #777; border-radius: 1mm; }
-  .verse-check span { font-size: 7pt; }
+  .plan-date {
+    padding: 1.2mm 0;
+    background: #fff;
+  }
+  .plan-date strong { font-size: 10pt; }
+  .plan-date span { margin-top: 1mm; font-size: 6.5pt; }
+  .plan-day-content {
+    display: block;
+    padding: 1.4mm 2mm;
+  }
+  .plan-passage-summary,
+  .plan-day-readings {
+    display: none !important;
+  }
+  .print-chapter-checklist {
+    display: flex !important;
+    flex-wrap: wrap;
+    gap: 1.2mm 4mm;
+  }
+  .print-chapter-check {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    font-size: 8.5pt;
+  }
+  .print-check-box {
+    width: 3.5mm;
+    height: 3.5mm;
+    border: 1px solid #000;
+    border-radius: 0;
+  }
 }
 
 
