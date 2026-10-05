@@ -1039,3 +1039,190 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
   .reading-paths,
   .storage-dialog { display: none !important; }
 }
+
+
+/* Refinamento visual institucional */
+:root {
+  --radius: 5px;
+  --shadow: 0 8px 24px rgba(54, 46, 30, 0.05);
+}
+
+.site-header {
+  background: rgba(255, 255, 255, .98);
+  border-bottom: 1px solid #cfc8ba;
+  backdrop-filter: blur(10px);
+}
+
+.header-inner {
+  min-height: 78px;
+  gap: 36px;
+}
+
+.brand-block {
+  padding: 8px 0 10px;
+  border-left: 3px solid var(--accent);
+  padding-left: 14px;
+}
+
+.brand-block .eyebrow {
+  margin-bottom: 2px;
+  font-size: .66rem;
+  letter-spacing: .16em;
+}
+
+.brand-block h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -.015em;
+}
+
+.primary-nav {
+  gap: 24px;
+  align-items: stretch;
+  padding: 0;
+  overflow: visible;
+}
+
+.nav-button {
+  position: relative;
+  min-height: 78px;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  color: #5e594f;
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+.nav-button::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 3px;
+  background: transparent;
+}
+
+.nav-button:hover {
+  color: var(--ink);
+  border: 0;
+}
+
+.nav-button.is-active {
+  background: transparent;
+  color: var(--deep);
+}
+
+.nav-button.is-active::after {
+  background: var(--accent);
+}
+
+.search-panel,
+.project-hero,
+.principles-grid article,
+.notice-card,
+.accordion-item,
+.calendar-shell,
+.chapter-panel,
+.progress-card,
+.plan-card,
+.reading-detail,
+.reading-path-card,
+.reading-journey-status > div,
+.storage-dialog,
+.plan-month {
+  border-radius: 4px;
+}
+
+.secondary-button,
+.primary-action,
+.primary-link,
+.secondary-link,
+.icon-button,
+input,
+select,
+.book-button,
+.chapter-link {
+  border-radius: 3px;
+}
+
+.status-pill {
+  border-radius: 2px;
+}
+
+.project-hero {
+  border-top: 3px solid var(--accent);
+  background: #fff;
+}
+
+.project-copy h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  letter-spacing: -.025em;
+}
+
+.principles-grid {
+  gap: 1px;
+  background: var(--line);
+  border: 1px solid var(--line);
+}
+
+.principles-grid article {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.notice-card {
+  border-left-width: 3px;
+}
+
+.accordion-list {
+  gap: 6px;
+}
+
+.accordion-item {
+  box-shadow: none;
+}
+
+.calendar-day,
+.verse-details,
+.verse-check,
+.source-strip > div,
+.psalm-refrain,
+.psalm-stanza,
+.glosa-line {
+  border-radius: 3px;
+}
+
+@media (max-width: 980px) {
+  .header-inner {
+    gap: 12px;
+  }
+
+  .primary-nav {
+    gap: 18px;
+    overflow-x: auto;
+  }
+
+  .nav-button {
+    min-height: 42px;
+    padding: 0 2px;
+  }
+}
+
+@media (max-width: 680px) {
+  .brand-block {
+    width: 100%;
+  }
+
+  .primary-nav {
+    gap: 16px;
+  }
+
+  .nav-button {
+    font-size: .82rem;
+  }
+}
