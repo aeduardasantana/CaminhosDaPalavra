@@ -1485,8 +1485,8 @@ function renderFullSchedule(progress, verseProgress, startDate) {
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
     '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
-    '<span>Controle: capítulo e versículo</span>' +
-    '<span>Salmos: incluídos no cronograma</span>';
+    '<span>Fonte do plano: ' + (bible.planSource || 'organização própria do projeto') + '</span>' +
+    '<span>Versão bíblica de referência: ' + (bible.version || 'Bíblia Sagrada Ave-Maria') + '</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
@@ -1527,11 +1527,22 @@ function renderFullSchedule(progress, verseProgress, startDate) {
       passageSummary.className = 'plan-passage-summary';
       passageSummary.textContent = day.steps.map(step => step.bookName + ' ' + step.chapter).join(' · ');
 
+      const printChecklist = document.createElement('div');
+      printChecklist.className = 'print-chapter-checklist';
+      day.steps.forEach(step => {
+        const item = document.createElement('span');
+        item.className = 'print-chapter-check';
+        item.innerHTML =
+          '<span class="print-check-box" aria-hidden="true"></span>' +
+          '<span>' + step.bookName + ' ' + step.chapter + '</span>';
+        printChecklist.appendChild(item);
+      });
+
       const readings = document.createElement('div');
       readings.className = 'plan-day-readings';
       day.steps.forEach(step => readings.appendChild(createVerseDetails(step, progress, verseProgress)));
 
-      content.append(passageSummary, readings);
+      content.append(passageSummary, printChecklist, readings);
       article.append(dateBox, content);
       list.appendChild(article);
     });
@@ -1604,21 +1615,6 @@ if (els.storageInfoDialog) {
     if (!inside) els.storageInfoDialog.close();
   });
 }
-
-window.addEventListener('beforeprint', () => {
-  document.querySelectorAll('.verse-details').forEach(details => {
-    if (typeof details._ensureVerseGrid === 'function') details._ensureVerseGrid();
-    details.dataset.openBeforePrint = details.open ? 'true' : 'false';
-    details.open = true;
-  });
-});
-
-window.addEventListener('afterprint', () => {
-  document.querySelectorAll('.verse-details').forEach(details => {
-    if (details.dataset.openBeforePrint === 'false') details.open = false;
-    delete details.dataset.openBeforePrint;
-  });
-});
 
 els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
