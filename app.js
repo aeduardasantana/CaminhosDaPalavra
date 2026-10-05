@@ -39,6 +39,10 @@ const els = {
   planStartDate: document.querySelector('#planStartDate'),
   printPlan: document.querySelector('#printPlan'),
   resetPlan: document.querySelector('#resetPlan'),
+  journeyDay: document.querySelector('#journeyDay'),
+  journeyStart: document.querySelector('#journeyStart'),
+  journeyPace: document.querySelector('#journeyPace'),
+  journeyPaceDetail: document.querySelector('#journeyPaceDetail'),
   planPercent: document.querySelector('#planPercent'),
   planProgressBar: document.querySelector('#planProgressBar'),
   planProgressText: document.querySelector('#planProgressText'),
@@ -882,6 +886,7 @@ const PLAN_STORAGE_KEY = 'lce-bible365-plan-v1';
 const START_STORAGE_KEY = 'lce-bible365-start-v1';
 const VERSE_PROGRESS_STORAGE_KEY = 'lce-bible365-verse-progress-v1';
 const VERSE_COUNTS_STORAGE_KEY = 'lce-avm-verse-counts-v1';
+const JOURNEY_START_STORAGE_KEY = 'lce-bible365-journey-start-v1';
 const LEGACY_PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
 const LEGACY_START_STORAGE_KEY = 'lce-jonas-start-v1';
 const LEGACY_VERSE_PROGRESS_STORAGE_KEY = 'lce-jonas-verse-progress-v1';
@@ -989,6 +994,36 @@ function loadVerseProgress() {
 
 function saveVerseProgress(progress) {
   localStorage.setItem(VERSE_PROGRESS_STORAGE_KEY, JSON.stringify([...progress]));
+}
+
+function ensureJourneyStarted() {
+  let start = localStorage.getItem(JOURNEY_START_STORAGE_KEY);
+  if (!start) {
+    start = localIsoToday();
+    localStorage.setItem(JOURNEY_START_STORAGE_KEY, start);
+  }
+  return start;
+}
+
+function journeyStartDate() {
+  return localStorage.getItem(JOURNEY_START_STORAGE_KEY) || '';
+}
+
+function dayDiff(fromIso, toIso) {
+  const [fy,fm,fd] = fromIso.split('-').map(Number);
+  const [ty,tm,td] = toIso.split('-').map(Number);
+  const from = Date.UTC(fy, fm - 1, fd);
+  const to = Date.UTC(ty, tm - 1, td);
+  return Math.floor((to - from) / 86400000);
+}
+
+function completedPlanDays(schedule, progress) {
+  let completed = 0;
+  for (const day of schedule) {
+    if (day.steps.every(step => progress.has(step.key))) completed++;
+    else break;
+  }
+  return completed;
 }
 
 function loadCachedVerseCounts() {
@@ -1210,6 +1245,7 @@ function createVerseGrid(step, progress, verseProgress) {
     if (checkbox.checked) label.classList.add('is-done');
 
     checkbox.addEventListener('change', () => {
+      if (checkbox.checked) ensureJourneyStarted();
       if (seedLegacyCompletedStep(step, progress, verseProgress)) saveVerseProgress(verseProgress);
       const key = verseProgressKey(step, verse);
       if (checkbox.checked) verseProgress.add(key);
@@ -1238,6 +1274,7 @@ function createChapterToggle(step, progress, verseProgress) {
   text.textContent = 'Marcar capítulo inteiro';
 
   checkbox.addEventListener('change', () => {
+    if (checkbox.checked) ensureJourneyStarted();
     setChapterCompletion(step, checkbox.checked, progress, verseProgress);
     document.querySelectorAll('[data-verse-step="' + step.key + '"] .verse-check').forEach(verseLabel => {
       const input = verseLabel.querySelector('input');
@@ -1336,36 +1373,61 @@ function localIsoToday() {
 async function renderPlan() {
   const progress = loadPlanProgress();
   const verseProgress = loadVerseProgress();
-  const startDate = els.planStartDate.value || '2026-01-01';
-  const schedule = buildDatedSchedule(startDate);
+  const printStartDate = els.planStartDate.value || '2026-01-01';
+  const schedule = buildDatedSchedule('2000-01-01');
+  const completedDays = completedPlanDays(schedule, progress);
+  const currentDayIndex = Math.min(completedDays, PLAN_DAYS - 1);
+  const currentDay = schedule[currentDayIndex];
+  const start = journeyStartDate();
   const today = localIsoToday();
-  const firstDay = schedule[0];
-  const lastDay = schedule[schedule.length - 1];
-  const todayDay = schedule.find(day => day.date === today);
 
   updateProgressIndicators(progress);
-
   els.todayReadings.replaceChildren();
 
-  if (todayDay) {
-    els.todayReadingTitle.textContent = 'Sugestão para hoje';
-    els.todayReadingDate.textContent = formatDate(todayDay.date);
-    todayDay.steps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
-  } else if (firstDay && today < firstDay.date) {
-    els.todayReadingTitle.textContent = 'Seu plano ainda não começou';
-    els.todayReadingDate.textContent = 'Início programado para ' + formatDate(firstDay.date) + '.';
-    els.todayReadings.innerHTML = '<div class="empty-state">Na data de início, a leitura sugerida do dia aparecerá aqui.</div>';
-  } else if (lastDay && today > lastDay.date) {
-    els.todayReadingTitle.textContent = 'Período do plano concluído';
-    els.todayReadingDate.textContent = 'O cronograma terminou em ' + formatDate(lastDay.date) + '.';
-    els.todayReadings.innerHTML = '<div class="empty-state">Você pode conferir seu progresso acima ou escolher uma nova data de início.</div>';
+  if (completedDays >= PLAN_DAYS) {
+    els.todayReadingTitle.textContent = 'Plano concluído';
+    els.todayReadingDate.textContent = 'Você completou os 365 dias de leitura.';
+    els.todayReadings.innerHTML = '<div class="empty-state">Parabéns pela conclusão da caminhada bíblica.</div>';
   } else {
-    els.todayReadingTitle.textContent = 'Leitura do dia';
-    els.todayReadingDate.textContent = '';
-    els.todayReadings.innerHTML = '<div class="empty-state">Não foi possível localizar a leitura correspondente à data de hoje.</div>';
+    els.todayReadingTitle.textContent = 'Dia ' + (currentDayIndex + 1) + ' de ' + PLAN_DAYS;
+    els.todayReadingDate.textContent = start
+      ? 'Continue de onde parou. Esta etapa avança quando todas as leituras do dia forem concluídas.'
+      : 'Sua caminhada começa quando você registrar a primeira leitura.';
+    currentDay.steps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
   }
 
-  renderFullSchedule(progress, verseProgress, startDate);
+  if (!start) {
+    els.journeyDay.textContent = 'Ainda não iniciada';
+    els.journeyStart.textContent = 'A caminhada começa no primeiro dia em que você registrar uma leitura.';
+    els.journeyPace.textContent = 'Sem atraso';
+    els.journeyPaceDetail.textContent = 'O ritmo será calculado a partir do primeiro dia de leitura.';
+  } else if (completedDays >= PLAN_DAYS) {
+    els.journeyDay.textContent = '365 de 365 dias concluídos';
+    els.journeyStart.textContent = 'Início da caminhada: ' + formatDate(start) + '.';
+    els.journeyPace.textContent = 'Caminhada concluída';
+    els.journeyPaceDetail.textContent = 'Você completou todas as etapas do plano.';
+  } else {
+    const elapsedCalendarDays = Math.max(1, dayDiff(start, today) + 1);
+    const activePlanDay = currentDayIndex + 1;
+    const delta = elapsedCalendarDays - activePlanDay;
+
+    els.journeyDay.textContent = 'Dia ' + activePlanDay + ' de ' + PLAN_DAYS;
+    els.journeyStart.textContent = 'Início da caminhada: ' + formatDate(start) + '.';
+
+    if (delta > 0) {
+      els.journeyPace.textContent = delta + (delta === 1 ? ' dia em atraso' : ' dias em atraso');
+      els.journeyPaceDetail.textContent = 'Conclua etapas adicionais quando puder para retomar o ritmo de 365 dias.';
+    } else if (delta < 0) {
+      const ahead = Math.abs(delta);
+      els.journeyPace.textContent = ahead + (ahead === 1 ? ' dia adiantado' : ' dias adiantado');
+      els.journeyPaceDetail.textContent = 'Você está avançando acima do ritmo mínimo do plano.';
+    } else {
+      els.journeyPace.textContent = 'Em dia';
+      els.journeyPaceDetail.textContent = 'Seu progresso está alinhado ao ritmo de 365 dias.';
+    }
+  }
+
+  renderFullSchedule(progress, verseProgress, printStartDate);
 
   if (!avmVerseCounts) {
     ensureVerseCounts()
@@ -1507,6 +1569,7 @@ els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
     localStorage.removeItem(PLAN_STORAGE_KEY);
     localStorage.removeItem(VERSE_PROGRESS_STORAGE_KEY);
+    localStorage.removeItem(JOURNEY_START_STORAGE_KEY);
     localStorage.removeItem(LEGACY_PLAN_STORAGE_KEY);
     localStorage.removeItem(LEGACY_VERSE_PROGRESS_STORAGE_KEY);
     localStorage.removeItem(LEGACY_VERSE_NOTES_STORAGE_KEY);
