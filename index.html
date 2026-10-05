@@ -219,14 +219,27 @@
 
       <div class="plan-toolbar">
         <label class="field">
-          <span>Início do cronograma</span>
+          <span>Data de início do cronograma para impressão</span>
           <input id="planStartDate" type="date" value="2026-01-01" />
         </label>
         <div class="plan-actions">
-          <button id="printPlan" class="secondary-button" type="button">Imprimir cronograma</button>
+          <button id="printPlan" class="secondary-button" type="button">Gerar / imprimir cronograma</button>
           <button id="resetPlan" class="secondary-button danger-quiet" type="button">Reiniciar progresso</button>
         </div>
       </div>
+
+      <section class="reading-journey-status" aria-label="Andamento da caminhada de leitura">
+        <div>
+          <p class="eyebrow">Sua caminhada</p>
+          <strong id="journeyDay">Ainda não iniciada</strong>
+          <p id="journeyStart" class="supporting-text compact">A caminhada começa no primeiro dia em que você registrar uma leitura.</p>
+        </div>
+        <div>
+          <p class="eyebrow">Ritmo</p>
+          <strong id="journeyPace">Sem atraso</strong>
+          <p id="journeyPaceDetail" class="supporting-text compact">O cronograma diário avança conforme a leitura é concluída.</p>
+        </div>
+      </section>
 
       <div class="progress-grid">
         <article class="progress-card">
@@ -245,8 +258,8 @@
 
       <div class="plan-grid daily-plan-grid">
         <article class="plan-card daily-reading-card">
-          <p class="eyebrow">Leitura do dia</p>
-          <h3 id="todayReadingTitle">Sugestão para hoje</h3>
+          <p class="eyebrow">Leitura atual</p>
+          <h3 id="todayReadingTitle">Comece sua caminhada</h3>
           <p id="todayReadingDate" class="supporting-text compact"></p>
           <div id="todayReadings" class="reading-checklist"></div>
         </article>
