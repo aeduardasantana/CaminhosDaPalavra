@@ -1419,7 +1419,7 @@ async function renderPlan() {
       els.journeyPaceDetail.textContent = 'Conclua etapas adicionais quando puder para retomar o ritmo de 365 dias.';
     } else if (delta < 0) {
       const ahead = Math.abs(delta);
-      els.journeyPace.textContent = ahead + (ahead === 1 ? ' dia adiantado' : ' dias adiantado');
+      els.journeyPace.textContent = ahead + (ahead === 1 ? ' dia adiantado' : ' dias adiantados');
       els.journeyPaceDetail.textContent = 'Você está avançando acima do ritmo mínimo do plano.';
     } else {
       els.journeyPace.textContent = 'Em dia';
