@@ -1226,3 +1226,31 @@ select,
     font-size: .82rem;
   }
 }
+
+.app-footer{
+  width:min(1220px,calc(100% - 32px));
+  margin:20px auto 0;
+  padding:18px 0 22px;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  background:transparent;
+  text-align:center;
+  display:grid;
+  gap:5px;
+  font-size:.78rem;
+  line-height:1.45;
+}
+.app-footer p{margin:0}
+.app-footer a{
+  color:var(--accent-strong);
+  text-decoration:underline;
+  text-underline-offset:2px;
+  font-weight:700;
+}
+.app-footer a:hover,.app-footer a:focus-visible{color:var(--deep)}
+@media(max-width:680px){
+  .app-footer{
+    width:min(100% - 18px,1220px);
+    padding:16px 0 20px;
+  }
+}
