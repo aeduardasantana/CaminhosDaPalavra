@@ -135,11 +135,11 @@
       button.textContent = 'Gerar PDF comparativo';
       button.addEventListener('click', () => exportItem(article));
       wrap.append(button);
-      panel.append(wrap);
+      panel.prepend(wrap);
     });
   }
   const css = document.createElement('style');
-  css.textContent = `.lce-pdf-toolbar{padding:13px 20px 18px;display:flex;justify-content:flex-end;border-top:1px solid #ddd6c8}
+  css.textContent = `.lce-pdf-toolbar{padding:13px 20px 18px;display:flex;justify-content:flex-end;border-bottom:1px solid #ddd6c8}
     .lce-pdf-dialog{max-width:min(94vw,520px);width:100%;border:1px solid #ddd6c8;border-radius:8px;padding:0;box-shadow:0 18px 80px #0003}
     .lce-pdf-dialog::backdrop{background:#19171291}
     .lce-pdf-form{display:grid;gap:14px;padding:25px}
