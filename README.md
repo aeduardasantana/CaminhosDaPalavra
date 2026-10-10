@@ -167,11 +167,15 @@ O VLibras não substitui interpretação humana.
 6. Conferir a prévia do PDF litúrgico em A4 retrato, sem controles flutuantes.
 7. Validar `https://caminhosdapalavra.compassrosesystems.com.br/` e o certificado SSL em um navegador real.
 
-## Revisão editorial das glosas — Ano A (10/10/2026)
+## Revisão editorial das glosas — Ano A (atualização 10/10/2026)
 
-O acervo do Ano A contém **60 celebrações e 241 itens**, com originais e glosas-base associados. Foi realizada triagem estrutural dos 241 registros e revisão editorial ampliada de 7 roteiros prioritários (Jo 4,5-42; Jo 9,1-41; Jo 11,1-45; Mt 26,14–27,66; Rm 5,12-19; Mt 5,17-37; Mt 13,1-23). Os textos reescritos estão isolados em `glosas-revisadas-ano-a.js`, identificados pela chave da celebração, sem alterar as glosas dos ciclos B e C.
+**Situação real da revisão:** 60 celebrações, 241 itens com original e glosa-base, 32 roteiros não salmódicos com revisão editorial ampliada, 60 refrões contextualizados por celebração e 13 salmos com estrutura de estrofes explícita. Ainda exigem revisão editorial integral 149 leituras não salmódicas e 47 salmos cuja correspondência semântica das estrofes não foi homologada.
 
-Também foram criados mapeamentos específicos de refrão e estrofes para o **Salmo 72** no 2º Domingo do Advento e na Epifania, evitando reutilizar uma mesma glosa para configurações litúrgicas distintas. A correspondência dos demais salmos deve ser conferida individualmente.
+O **Advento** (16 itens) possui revisão editorial por registro: 12 roteiros ampliados e quatro salmos com refrões e estrofes específicos. Outros roteiros importantes do Natal, Quaresma, Páscoa e Tempo Comum receberam ampliação; o trabalho não está integralmente concluído.
 
-O inventário, os alertas editoriais e os critérios de homologação estão em [REVISAO-GLOSAS-ANO-A.md](./REVISAO-GLOSAS-ANO-A.md). **A revisão editorial escrita não constitui validação da Libras**: naturalidade, espacialização, uso de marcadores não manuais, adequação pastoral e concordância com a comunidade surda dependem de análise especializada e ensaio. Os demais itens continuam classificados como preliminares.
+Os textos ampliados estão em `glosas-revisadas-ano-a.js`, por chave contextual. A glosa-base original e o texto original do Lecionário permanecem preservados. Os refrões exclusivos foram registrados em `psalm-refrains-ano-a.js`; os contextos completos de estrofes, em `psalm-glossa-context-ano-a.js` e `psalm-glossa-context-2026-q4.js`. Um teste automatizado de 13 salmos confirmou que o número de estrofes de glosa corresponde à divisão original cadastrada.
+
+A página Liturgia permite selecionar forma longa ou breve apenas quando **ambas as formas estão efetivamente presentes no texto-fonte** (cinco registros no Ano A), preservando a opção escolhida na visualização para impressão. Em outros 11 registros, só a forma longa está disponível: não há geração de uma forma breve fictícia.
+
+Consulte [REVISAO-GLOSAS-ANO-A.md](./REVISAO-GLOSAS-ANO-A.md) e a [matriz individual dos 241 itens](./AUDITORIA-GLOSAS-ANO-A-241.csv). **Nenhuma revisão escrita deve ser anunciada como tradução validada em Libras** sem avaliação com intérpretes proficientes e pessoas surdas, especialmente quanto a naturalidade, espacialização, concordância discursiva, recursos não manuais e adequação litúrgica.
 
