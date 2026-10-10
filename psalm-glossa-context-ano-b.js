@@ -375,5 +375,199 @@ window.LCE_PSALM_GLOSSA_CONTEXT = Object.assign(window.LCE_PSALM_GLOSSA_CONTEXT 
         "POVO ISRAEL / REVERENCIAR SENHOR."
       ]
     ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|Domingo da Páscoa|salmo|Sl 118": {
+    "refrain": "ESTE DIA / SENHOR FEZ / NÓS ALEGRAR E CANTAR.",
+    "alternativeRefrain": "ALELUIA.",
+    "stanzas": [
+      [
+        "AGRADECER SENHOR / ELE BOM.",
+        "MISERICÓRDIA DELE / PARA SEMPRE.",
+        "CASA ISRAEL / PROCLAMAR:",
+        "MISERICÓRDIA DE DEUS / PARA SEMPRE."
+      ],
+      [
+        "MÃO SENHOR / MARAVILHAS FAZER.",
+        "MÃO SENHOR / MOSTRAR PODER.",
+        "EU NÃO MORRER / VIVEREI.",
+        "ANUNCIAR OBRAS SENHOR."
+      ],
+      [
+        "PEDRA QUE CONSTRUTORES REJEITARAM.",
+        "TORNAR-SE PEDRA PRINCIPAL.",
+        "ISSO / SENHOR FAZER.",
+        "NOSSOS OLHOS / ADMIRAR."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|2º Domingo da Páscoa|salmo|Sl 118": {
+    "refrain": "AGRADECER SENHOR / ELE BOM / MISERICÓRDIA DELE PARA SEMPRE.",
+    "alternativeRefrain": "ACLAMAR SENHOR / ELE BOM / AMOR DELE PARA SEMPRE. / OU ALELUIA.",
+    "stanzas": [
+      [
+        "CASA ISRAEL / PROCLAMAR MISERICÓRDIA PARA SEMPRE.",
+        "CASA AARÃO / PROCLAMAR MISERICÓRDIA PARA SEMPRE.",
+        "PESSOAS QUE RESPEITAM SENHOR / PROCLAMAR MISERICÓRDIA PARA SEMPRE."
+      ],
+      [
+        "MÃO DO SENHOR / FAZER MARAVILHAS.",
+        "MÃO SENHOR / PODEROSA.",
+        "EU NÃO MORRER / VIVER.",
+        "ANUNCIAR OBRAS SENHOR.",
+        "SENHOR ME CORRIGIR COM FIRMEZA.",
+        "MAS NÃO ME ENTREGAR À MORTE."
+      ],
+      [
+        "PEDRA QUE CONSTRUTORES REJEITARAM.",
+        "TORNAR-SE PEDRA PRINCIPAL.",
+        "SENHOR FEZ ISSO.",
+        "ADMIRÁVEL AOS NOSSOS OLHOS.",
+        "ESTE DIA SENHOR FEZ.",
+        "NÓS ALEGRAR E CANTAR."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|3º Domingo da Páscoa|salmo|Sl 4": {
+    "refrain": "SENHOR / LUZ DO TEU ROSTO / BRILHAR SOBRE NÓS.",
+    "stanzas": [
+      [
+        "DEUS JUSTO / QUANDO EU CHAMAR / ESCUTAR-ME.",
+        "NA DIFICULDADE / TU ME PROTEGER.",
+        "TER COMPAIXÃO DE MIM.",
+        "ESCUTAR MINHA ORAÇÃO."
+      ],
+      [
+        "SENHOR / MARAVILHAS FAZER PARA AMIGOS.",
+        "QUANDO EU CHAMAR / ELE ME ESCUTAR."
+      ],
+      [
+        "MUITOS PERGUNTAR: QUEM NOS FARÁ FELIZES?",
+        "SENHOR / LUZ TEU ROSTO / BRILHAR SOBRE NÓS."
+      ],
+      [
+        "À NOITE / EU DEITAR EM PAZ E DORMIR.",
+        "PORQUE SOMENTE TU SENHOR.",
+        "FAZER-ME DESCANSAR EM SEGURANÇA."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|4º Domingo da Páscoa|salmo|Sl 118": {
+    "refrain": "PEDRA REJEITADA PELOS CONSTRUTORES / TORNAR PEDRA PRINCIPAL.",
+    "alternativeRefrain": "ALELUIA.",
+    "stanzas": [
+      [
+        "AGRADECER SENHOR / ELE BOM / SUA MISERICÓRDIA ETERNA.",
+        "MELHOR BUSCAR REFÚGIO NO SENHOR / NÃO CONFIAR APENAS EM PESSOAS.",
+        "MELHOR REFÚGIO EM SENHOR / QUE CONFIAR EM PODEROSOS."
+      ],
+      [
+        "EU TE AGRADECER / TU ME ESCUTAR E SALVAR.",
+        "PEDRA CONSTRUTORES REJEITAR / TORNAR PEDRA PRINCIPAL.",
+        "FOI SENHOR QUEM FEZ / NÓS ADMIRAR."
+      ],
+      [
+        "BENDITO QUEM VIR EM NOME SENHOR / SUA CASA / NÓS ABENÇOAR.",
+        "TU MEU DEUS / EU TE AGRADECER E EXALTAR.",
+        "AGRADECER SENHOR / ELE BOM / MISERICÓRDIA ETERNA."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|5º Domingo da Páscoa|salmo|Sl 22": {
+    "refrain": "SENHOR / NA ASSEMBLEIA DOS JUSTOS / EU TE LOUVAR.",
+    "alternativeRefrain": "SENHOR / NO MEIO MULTIDÃO / EU TE LOUVAR.",
+    "stanzas": [
+      [
+        "EU CUMPRIR PROMESSA DIANTE TEUS FIÉIS.",
+        "POBRES COMER / FICAR SATISFEITOS.",
+        "QUEM BUSCAR SENHOR / LOUVAR.",
+        "CORAÇÃO DELES / VIDA PARA SEMPRE."
+      ],
+      [
+        "ATÉ CONFINS TERRA / POVOS LEMBRAR SENHOR / VOLTAR PARA ELE.",
+        "FAMÍLIAS TODAS NAÇÕES / DIANTE SENHOR SE PROSTRAR."
+      ],
+      [
+        "TODOS GRANDES DO MUNDO / ADORAR SENHOR.",
+        "PESSOAS À BEIRA DA MORTE / DIANTE DELE SE PROSTRAR."
+      ],
+      [
+        "MINHA VIDA PERTENCER DEUS.",
+        "MINHA DESCENDÊNCIA / SERVIR SENHOR.",
+        "FUTURAS GERAÇÕES / OUVIR SOBRE SENHOR.",
+        "JUSTIÇA DELE / PROCLAMADA A POVO QUE AINDA NASCER.",
+        "TODOS DIZER: SENHOR FEZ ISSO."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|6º Domingo da Páscoa|salmo|Sl 98": {
+    "refrain": "SENHOR / REVELAR SALVAÇÃO A TODOS POVOS.",
+    "alternativeRefrain": "DEUS / DIANTE TODOS POVOS / SALVAÇÃO MOSTRAR.",
+    "stanzas": [
+      [
+        "CANTAR NOVO CANTO AO SENHOR.",
+        "ELE MARAVILHAS FAZER.",
+        "MÃO E BRAÇO SANTO DELE.",
+        "ALCANÇAR VITÓRIA."
+      ],
+      [
+        "SENHOR / SALVAÇÃO FAZER CONHECER.",
+        "NAÇÕES VER JUSTIÇA DELE.",
+        "DEUS LEMBRAR BONDADE E FIDELIDADE.",
+        "EM FAVOR POVO ISRAEL."
+      ],
+      [
+        "ATÉ CONFINS TERRA / PESSOAS VER SALVAÇÃO DE DEUS.",
+        "TERRA INTEIRA / SENHOR ACLAMAR.",
+        "ALEGRIA GRANDE / EXULTAR.",
+        "CANTAR LOUVORES."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|Ascensão do Senhor|salmo|Sl 47": {
+    "refrain": "DEUS SENHOR / SUBIR ENTRE ACLAMAÇÕES / TROMBETA TOCAR.",
+    "alternativeRefrain": "DEUS SENHOR / SUBIR COM ALEGRIA / SOM TROMBETA.",
+    "stanzas": [
+      [
+        "TODOS POVOS / BATER PALMAS.",
+        "ACLAMAR DEUS COM ALEGRIA.",
+        "SENHOR ALTÍSSIMO / PODEROSO.",
+        "REI DE TODA TERRA."
+      ],
+      [
+        "DEUS SUBIR ENTRE ACLAMAÇÕES.",
+        "SENHOR / SOM TROMBETA.",
+        "CANTAR HINOS A DEUS / CANTAR.",
+        "CANTAR A NOSSO REI / CANTAR."
+      ],
+      [
+        "DEUS REI DO UNIVERSO.",
+        "CANTAR HINOS MUITO BELOS.",
+        "DEUS REINAR SOBRE POVOS.",
+        "DEUS SENTADO EM SEU TRONO SANTO."
+      ]
+    ]
+  },
+  "B|PÁSCOA E TEMPO PASCAL|Pentecostes|salmo|Sl 104": {
+    "refrain": "SENHOR / TEU ESPÍRITO ENVIAR / TERRA RENOVAR.",
+    "alternativeRefrain": "SENHOR / TEU ESPÍRITO MANDAR / TERRA RENOVAR. / OU ALELUIA.",
+    "stanzas": [
+      [
+        "MINHA ALMA / SENHOR BENDIZER.",
+        "SENHOR MEU DEUS / COMO TU ÉS GRANDE.",
+        "TUAS OBRAS / NUMEROSAS.",
+        "TERRA CHEIA DAS TUAS CRIATURAS."
+      ],
+      [
+        "DEUS TIRAR FÔLEGO / CRIATURAS MORRER / VOLTAR PÓ.",
+        "DEUS ENVIAR ESPÍRITO / ELAS RENASCER.",
+        "FACE TERRA / RENOVAR."
+      ],
+      [
+        "GLÓRIA DEUS / PARA SEMPRE.",
+        "SENHOR / ALEGRAR-SE NAS SUAS OBRAS.",
+        "MEU CANTO / AGRADAR SENHOR.",
+        "EU / ME ALEGRAR NELE."
+      ]
+    ]
   }
 });
