@@ -993,18 +993,10 @@ function renderBibleChapters(book) {
 /* Plano de leitura da Bíblia */
 const PLAN_STORAGE_KEY = 'lce-bible365-plan-v1';
 const START_STORAGE_KEY = 'lce-bible365-start-v1';
-const VERSE_PROGRESS_STORAGE_KEY = 'lce-bible365-verse-progress-v1';
-const VERSE_COUNTS_STORAGE_KEY = 'lce-avm-verse-counts-v1';
 const JOURNEY_START_STORAGE_KEY = 'lce-bible365-journey-start-v1';
 const LEGACY_PLAN_STORAGE_KEY = 'lce-jonas-plan-v1';
 const LEGACY_START_STORAGE_KEY = 'lce-jonas-start-v1';
-const LEGACY_VERSE_PROGRESS_STORAGE_KEY = 'lce-jonas-verse-progress-v1';
-const LEGACY_VERSE_NOTES_STORAGE_KEY = 'lce-jonas-verse-notes-v1';
 const PLAN_DAYS = 365;
-const AVM_STRUCTURE_URL = 'https://raw.githubusercontent.com/thiagobodruk/bible/master/json/pt_avm.json';
-
-let avmVerseCounts = loadCachedVerseCounts();
-let avmVerseCountsPromise = null;
 
 function buildPlanSteps() {
   const steps = [];
@@ -1060,14 +1052,7 @@ function normalizeLegacyChapterKey(key) {
   return '';
 }
 
-function normalizeLegacyVerseKey(key) {
-  const parts = String(key || '').split(':');
-  const versePart = parts.pop() || '';
-  const chapter = parts.pop() || '';
-  const book = parts.pop() || '';
-  if (!/^v\d+$/.test(versePart) || !book || !chapter) return '';
-  return book + ':' + chapter + ':' + versePart;
-}
+
 
 function loadPlanProgress() {
   try {
@@ -1087,23 +1072,7 @@ function savePlanProgress(progress) {
   localStorage.setItem(PLAN_STORAGE_KEY, JSON.stringify([...progress]));
 }
 
-function loadVerseProgress() {
-  try {
-    const current = JSON.parse(localStorage.getItem(VERSE_PROGRESS_STORAGE_KEY) || 'null');
-    if (Array.isArray(current)) return new Set(current);
 
-    const legacy = JSON.parse(localStorage.getItem(LEGACY_VERSE_PROGRESS_STORAGE_KEY) || '[]');
-    const migrated = new Set(legacy.map(normalizeLegacyVerseKey).filter(Boolean));
-    if (migrated.size) saveVerseProgress(migrated);
-    return migrated;
-  } catch {
-    return new Set();
-  }
-}
-
-function saveVerseProgress(progress) {
-  localStorage.setItem(VERSE_PROGRESS_STORAGE_KEY, JSON.stringify([...progress]));
-}
 
 function ensureJourneyStarted() {
   let start = localStorage.getItem(JOURNEY_START_STORAGE_KEY);
@@ -1135,125 +1104,14 @@ function completedPlanDays(schedule, progress) {
   return completed;
 }
 
-function loadCachedVerseCounts() {
-  try {
-    const parsed = JSON.parse(localStorage.getItem(VERSE_COUNTS_STORAGE_KEY) || 'null');
-    if (parsed && typeof parsed === 'object' && Object.keys(parsed).length >= 70) return parsed;
-  } catch {}
-  return null;
-}
-
-function normalizedBookName(value) {
-  return normalize(value)
-    .replace(/^primeira\s+/, 'i ')
-    .replace(/^segunda\s+/, 'ii ')
-    .replace(/^terceira\s+/, 'iii ')
-    .replace(/^1\s+/, 'i ')
-    .replace(/^2\s+/, 'ii ')
-    .replace(/^3\s+/, 'iii ')
-    .replace(/\s+/g, ' ')
-    .trim();
-}
-
-async function ensureVerseCounts() {
-  if (avmVerseCounts) return avmVerseCounts;
-  if (avmVerseCountsPromise) return avmVerseCountsPromise;
-
-  avmVerseCountsPromise = (async () => {
-    const response = await fetch(AVM_STRUCTURE_URL, {cache: 'force-cache'});
-    if (!response.ok) throw new Error('Não foi possível carregar a estrutura de versículos da Bíblia Ave-Maria.');
-
-    const sourceBooks = await response.json();
-    if (!Array.isArray(sourceBooks)) throw new Error('Estrutura bíblica inválida.');
-
-    const targetByName = new Map(bible.books.map(book => [normalizedBookName(book.name), book]));
-    const counts = {};
-
-    sourceBooks.forEach((sourceBook, index) => {
-      if (!sourceBook || !Array.isArray(sourceBook.chapters)) return;
-
-      let target = targetByName.get(normalizedBookName(sourceBook.name || ''));
-      if (!target) {
-        const indexed = bible.books[index];
-        if (indexed && indexed.chapters === sourceBook.chapters.length) target = indexed;
-      }
-
-      if (!target || target.chapters !== sourceBook.chapters.length) return;
-      counts[target.id] = sourceBook.chapters.map(chapter => Array.isArray(chapter) ? chapter.length : 0);
-    });
-
-    if (Object.keys(counts).length < 70) {
-      throw new Error('A estrutura de versículos não corresponde ao cânon católico configurado.');
-    }
-
-    localStorage.setItem(VERSE_COUNTS_STORAGE_KEY, JSON.stringify(counts));
-    avmVerseCounts = counts;
-    return counts;
-  })();
-
-  try { return await avmVerseCountsPromise; }
-  finally { avmVerseCountsPromise = null; }
-}
-
-function verseCountForStep(step) {
-  const counts = avmVerseCounts?.[step.bookId] || [];
-  return Number(counts[step.chapter - 1] || 0);
-}
-
-function verseProgressKey(step, verse) {
-  return step.key + ':v' + verse;
-}
-
-function stepHasVerseData(step, verseProgress) {
-  const prefix = step.key + ':v';
-  for (const key of verseProgress) if (key.startsWith(prefix)) return true;
-  return false;
-}
-
-function seedLegacyCompletedStep(step, progress, verseProgress) {
-  if (!progress.has(step.key) || stepHasVerseData(step, verseProgress)) return false;
-  const total = verseCountForStep(step);
-  if (!total) return false;
-  for (let verse = 1; verse <= total; verse++) verseProgress.add(verseProgressKey(step, verse));
-  return true;
-}
-
-function verseStats(step, progress, verseProgress) {
-  const total = verseCountForStep(step);
-  if (!total) return {done: 0, total: 0, complete: progress.has(step.key)};
-
-  let done = 0;
-  for (let verse = 1; verse <= total; verse++) {
-    if (verseProgress.has(verseProgressKey(step, verse))) done++;
-  }
-  if (progress.has(step.key) && done === 0 && !stepHasVerseData(step, verseProgress)) done = total;
-  return {done, total, complete: done === total};
-}
-
-function setChapterCompletion(step, checked, progress, verseProgress) {
-  const total = verseCountForStep(step);
+function setChapterCompletion(step, checked, progress) {
   if (checked) {
     progress.add(step.key);
-    for (let verse = 1; verse <= total; verse++) verseProgress.add(verseProgressKey(step, verse));
+    ensureJourneyStarted();
   } else {
     progress.delete(step.key);
-    for (let verse = 1; verse <= total; verse++) verseProgress.delete(verseProgressKey(step, verse));
   }
   savePlanProgress(progress);
-  saveVerseProgress(verseProgress);
-}
-
-function syncStepCompletion(step, progress, verseProgress) {
-  const total = verseCountForStep(step);
-  if (!total) return;
-  let done = 0;
-  for (let verse = 1; verse <= total; verse++) {
-    if (verseProgress.has(verseProgressKey(step, verse))) done++;
-  }
-  if (done === total) progress.add(step.key);
-  else progress.delete(step.key);
-  savePlanProgress(progress);
-  saveVerseProgress(verseProgress);
 }
 
 function addLocalDays(isoDate, amount) {
@@ -1314,160 +1172,31 @@ function updateProgressIndicators(progress) {
   els.bibleProgressText.textContent = coverageDone + ' de ' + totalUniqueBibleChapters + ' capítulos da Bíblia concluídos.';
 }
 
-function updateStepPresentations(step, progress, verseProgress) {
-  const stats = verseStats(step, progress, verseProgress);
-  document.querySelectorAll('[data-step-key="' + step.key + '"]').forEach(root => {
-    root.classList.toggle('is-done', stats.complete);
-    root.querySelectorAll('.verse-count-status').forEach(el => {
-      el.textContent = stats.total ? stats.done + ' de ' + stats.total + ' versículos' : 'estrutura indisponível';
-    });
-    root.querySelectorAll('[data-chapter-toggle]').forEach(input => { input.checked = stats.complete; });
-  });
-  updateProgressIndicators(progress);
-}
-
-function createVerseGrid(step, progress, verseProgress) {
-  const total = verseCountForStep(step);
-  const grid = document.createElement('div');
-  grid.className = 'verse-grid';
-  grid.dataset.verseStep = step.key;
-
-  if (!total) {
-    grid.innerHTML = '<p class="verse-load-error">Não foi possível identificar os versículos deste capítulo.</p>';
-    return grid;
-  }
-
-  if (seedLegacyCompletedStep(step, progress, verseProgress)) saveVerseProgress(verseProgress);
-
-  for (let verse = 1; verse <= total; verse++) {
-    const label = document.createElement('label');
-    label.className = 'verse-check';
-
-    const checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
-    checkbox.dataset.verse = String(verse);
-    checkbox.checked = verseProgress.has(verseProgressKey(step, verse));
-    checkbox.setAttribute('aria-label', step.bookName + ' ' + step.chapter + ', versículo ' + verse);
-
-    const number = document.createElement('span');
-    number.textContent = String(verse);
-    if (checkbox.checked) label.classList.add('is-done');
-
-    checkbox.addEventListener('change', () => {
-      if (checkbox.checked) ensureJourneyStarted();
-      if (seedLegacyCompletedStep(step, progress, verseProgress)) saveVerseProgress(verseProgress);
-      const key = verseProgressKey(step, verse);
-      if (checkbox.checked) verseProgress.add(key);
-      else verseProgress.delete(key);
-      label.classList.toggle('is-done', checkbox.checked);
-      syncStepCompletion(step, progress, verseProgress);
-      updateStepPresentations(step, progress, verseProgress);
-    });
-
-    label.append(checkbox, number);
-    grid.appendChild(label);
-  }
-  return grid;
-}
-
-function createChapterToggle(step, progress, verseProgress) {
+function createReadingDetail(step, progress) {
+  const article = document.createElement('article');
+  article.className = 'reading-detail chapter-only-detail';
+  article.dataset.stepKey = step.key;
+  article.classList.toggle('is-done', progress.has(step.key));
   const label = document.createElement('label');
-  label.className = 'chapter-toggle';
-
+  label.className = 'chapter-only-check';
   const checkbox = document.createElement('input');
   checkbox.type = 'checkbox';
-  checkbox.dataset.chapterToggle = 'true';
-  checkbox.checked = verseStats(step, progress, verseProgress).complete;
-
-  const text = document.createElement('span');
-  text.textContent = 'Marcar capítulo inteiro';
-
-  checkbox.addEventListener('change', () => {
-    if (checkbox.checked) ensureJourneyStarted();
-    setChapterCompletion(step, checkbox.checked, progress, verseProgress);
-    document.querySelectorAll('[data-verse-step="' + step.key + '"] .verse-check').forEach(verseLabel => {
-      const input = verseLabel.querySelector('input');
-      const verse = Number(input.dataset.verse);
-      input.checked = checkbox.checked;
-      verseLabel.classList.toggle('is-done', checkbox.checked);
-      if (checkbox.checked) verseProgress.add(verseProgressKey(step, verse));
-      else verseProgress.delete(verseProgressKey(step, verse));
-    });
-    saveVerseProgress(verseProgress);
-    updateStepPresentations(step, progress, verseProgress);
-  });
-
-  label.append(checkbox, text);
-  return label;
-}
-
-function createReadingDetail(step, progress, verseProgress) {
-  const article = document.createElement('article');
-  article.className = 'reading-detail';
-  article.dataset.stepKey = step.key;
-
-  const head = document.createElement('div');
-  head.className = 'reading-detail-head';
-  const title = document.createElement('strong');
-  title.textContent = step.bookName + ' ' + step.chapter;
-
-  const status = document.createElement('span');
-  status.className = 'verse-count-status';
-  const stats = verseStats(step, progress, verseProgress);
-  status.textContent = stats.done + ' de ' + stats.total + ' versículos';
-
-  const link = document.createElement('a');
-  link.href = chapterUrl(step.bookId, step.chapter);
-  link.target = '_blank';
-  link.rel = 'noopener';
-  link.textContent = 'abrir Ave-Maria';
-
-  head.append(title, status, link);
-  article.append(head, createChapterToggle(step, progress, verseProgress), createVerseGrid(step, progress, verseProgress));
-  article.classList.toggle('is-done', stats.complete);
-  return article;
-}
-
-function createVerseDetails(step, progress, verseProgress) {
-  const details = document.createElement('details');
-  details.className = 'verse-details';
-  details.dataset.stepKey = step.key;
-
-  const summary = document.createElement('summary');
+  checkbox.checked = progress.has(step.key);
+  checkbox.setAttribute('aria-label', 'Concluir ' + step.bookName + ' capítulo ' + step.chapter);
   const name = document.createElement('strong');
   name.textContent = step.bookName + ' ' + step.chapter;
-  const status = document.createElement('span');
-  status.className = 'verse-count-status';
-  const stats = verseStats(step, progress, verseProgress);
-  status.textContent = stats.done + ' de ' + stats.total + ' versículos';
-  summary.append(name, status);
-
-  const body = document.createElement('div');
-  body.className = 'verse-details-body';
-  const actions = document.createElement('div');
-  actions.className = 'verse-details-actions';
-
+  label.append(checkbox, name);
   const link = document.createElement('a');
   link.href = chapterUrl(step.bookId, step.chapter);
   link.target = '_blank';
   link.rel = 'noopener';
-  link.textContent = 'Abrir capítulo na Bíblia Ave-Maria';
-  actions.append(createChapterToggle(step, progress, verseProgress), link);
-  body.appendChild(actions);
-
-  let rendered = false;
-  const ensureGrid = () => {
-    if (rendered) return;
-    body.appendChild(createVerseGrid(step, progress, verseProgress));
-    rendered = true;
-    details.dataset.versesRendered = 'true';
-  };
-
-  details.addEventListener('toggle', () => { if (details.open) ensureGrid(); });
-  details._ensureVerseGrid = ensureGrid;
-  details.append(summary, body);
-  details.classList.toggle('is-done', stats.complete);
-  return details;
+  link.textContent = 'Ler capítulo';
+  checkbox.addEventListener('change', () => {
+    setChapterCompletion(step, checkbox.checked, progress);
+    renderPlan();
+  });
+  article.append(label, link);
+  return article;
 }
 
 function localIsoToday() {
@@ -1479,9 +1208,8 @@ function localIsoToday() {
   ].join('-');
 }
 
-async function renderPlan() {
+function renderPlan() {
   const progress = loadPlanProgress();
-  const verseProgress = loadVerseProgress();
   const printStartDate = els.planStartDate.value || '2026-01-01';
   const schedule = buildDatedSchedule('2000-01-01');
   const completedDays = completedPlanDays(schedule, progress);
@@ -1502,7 +1230,7 @@ async function renderPlan() {
     els.todayReadingDate.textContent = start
       ? 'Continue de onde parou. Esta etapa avança quando todas as leituras do dia forem concluídas.'
       : 'Sua caminhada começa quando você registrar a primeira leitura.';
-    currentDay.steps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress, verseProgress)));
+    currentDay.steps.forEach(step => els.todayReadings.appendChild(createReadingDetail(step, progress)));
   }
 
   if (!start) {
@@ -1536,20 +1264,12 @@ async function renderPlan() {
     }
   }
 
-  renderFullSchedule(progress, verseProgress, printStartDate);
+  renderFullSchedule(progress, printStartDate);
 
-  if (!avmVerseCounts) {
-    ensureVerseCounts()
-      .then(() => renderPlan())
-      .catch(() => {
-        document.querySelectorAll('.verse-load-error').forEach(el => {
-          el.textContent = 'A marcação por versículo está temporariamente indisponível; as passagens e o cronograma continuam acessíveis.';
-        });
-      });
-  }
 }
 
-function renderFullSchedule(progress, verseProgress, startDate) {
+
+function renderFullSchedule(progress, startDate) {
   const schedule = buildDatedSchedule(startDate);
   const groups = new Map();
   const endDate = schedule.length ? schedule[schedule.length - 1].date : startDate;
@@ -1562,7 +1282,7 @@ function renderFullSchedule(progress, verseProgress, startDate) {
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
     '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
-    '<span>Fonte do plano: ' + (bible.planSource || 'organização própria do projeto') + '</span>';
+    '<span>Referência: inspiração no método de Monsenhor Jonas Abib; sequência e divisão diária organizadas pelo projeto.</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
@@ -1614,11 +1334,7 @@ function renderFullSchedule(progress, verseProgress, startDate) {
         printChecklist.appendChild(item);
       });
 
-      const readings = document.createElement('div');
-      readings.className = 'plan-day-readings';
-      day.steps.forEach(step => readings.appendChild(createVerseDetails(step, progress, verseProgress)));
-
-      content.append(passageSummary, printChecklist, readings);
+      content.append(passageSummary, printChecklist);
       article.append(dateBox, content);
       list.appendChild(article);
     });
@@ -1696,11 +1412,8 @@ if (els.storageInfoDialog) {
 els.resetPlan.addEventListener('click', () => {
   if (window.confirm('Reiniciar todo o progresso deste plano neste dispositivo?')) {
     localStorage.removeItem(PLAN_STORAGE_KEY);
-    localStorage.removeItem(VERSE_PROGRESS_STORAGE_KEY);
     localStorage.removeItem(JOURNEY_START_STORAGE_KEY);
     localStorage.removeItem(LEGACY_PLAN_STORAGE_KEY);
-    localStorage.removeItem(LEGACY_VERSE_PROGRESS_STORAGE_KEY);
-    localStorage.removeItem(LEGACY_VERSE_NOTES_STORAGE_KEY);
     renderPlan();
   }
 });
