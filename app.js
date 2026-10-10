@@ -557,7 +557,7 @@ function distributeGlosaUnits(units, stanzaLineCounts) {
   return groups;
 }
 
-function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverride = null) {
+function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverride = null, cycle = '') {
   const frag = document.createDocumentFragment();
   const wrapper = document.createElement('div');
   wrapper.className = 'psalm-sequence psalm-glosa-sequence';
@@ -615,7 +615,9 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverri
     const label = document.createElement('strong');
     label.className = 'psalm-part-label';
     label.textContent = 'ESTROFE ' + (index + 1) +
-      (contextual ? ' — GLOSA PRELIMINAR' : ' — GLOSA-BASE (ALINHAMENTO PENDENTE)');
+      (cycle === 'A'
+        ? (contextual ? ' — GLOSA PRELIMINAR' : ' — GLOSA-BASE (ALINHAMENTO PENDENTE)')
+        : ' — GLOSA');
     block.appendChild(label);
 
     const group = groups[index] || [];
@@ -793,7 +795,7 @@ function renderLiturgia() {
       const formattedPsalm = formatPsalmOriginal(entry.original, entry.ano);
       parsedPsalm = formattedPsalm.parsed;
       originalTextBox.appendChild(formattedPsalm.fragment);
-      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext, entry.glosaRefrainContext));
+      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext, entry.glosaRefrainContext, entry.ano));
     } else {
       const variants = entry.ano === 'A' ? splitLectionaryVariants(entry.original) : null;
       originalTextBox.textContent = variants ? variants.longa : entry.original;
