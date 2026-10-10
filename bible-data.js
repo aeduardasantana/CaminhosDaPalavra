@@ -82,14 +82,14 @@ window.LCE_BIBLE = {
     {id:"REV",name:"Apocalipse",testament:"NT",chapters:22}
   ],
 
-  planSource: "Plano de leitura bíblica de 365 dias — organização própria do projeto",
+  planSource: "Caminhos da Palavra — plano próprio de 365 dias, com um Salmo diário durante 150 dias do Antigo Testamento",
   planOrder: [
+    // Novo Testamento: uma passagem única por capítulo, sem releituras.
     {book:"1JN"},{book:"JHN"},{book:"MRK"},
     {book:"GAL"},{book:"EPH"},{book:"PHP"},{book:"COL"},{book:"1TH"},{book:"2TH"},{book:"1TI"},{book:"2TI"},{book:"TIT"},{book:"PHM"},
     {book:"LUK"},{book:"ACT"},{book:"ROM"},{book:"MAT"},{book:"1CO"},{book:"2CO"},{book:"HEB"},{book:"JAS"},{book:"1PE"},{book:"2PE"},{book:"2JN"},{book:"3JN"},{book:"JUD"},{book:"REV"},
 
-    {book:"WIS"},{book:"SIR"},{book:"PRO"},{book:"PSA"},
-
+    // Antigo Testamento: Salmos são distribuídos em paralelo no cronograma.
     {book:"GEN"},{book:"EXO"},{book:"NUM"},{book:"JOS"},{book:"JDG"},{book:"1SA"},{book:"2SA"},{book:"1KI"},{book:"2KI"},
     {book:"AMO"},{book:"HOS"},
     {book:"ISA",from:1,to:39,label:"Isaías 1–39"},
@@ -98,7 +98,8 @@ window.LCE_BIBLE = {
     {book:"1CH"},{book:"2CH"},{book:"EZR"},{book:"NEH"},{book:"HAG"},{book:"ZEC"},
     {book:"ISA",from:56,to:66,label:"Isaías 56–66"},
     {book:"MAL"},{book:"JOL"},{book:"JON"},{book:"RUT"},{book:"TOB"},{book:"JDT"},{book:"EST"},
-    {book:"SNG"},{book:"JOB"},{book:"ECC"},{book:"1MA"},{book:"2MA"},{book:"BAR"},{book:"DAN"},{book:"LEV"},{book:"DEU"}
+    {book:"SIR"},{book:"PRO"},{book:"SNG"},{book:"JOB"},{book:"ECC"},{book:"1MA"},{book:"2MA"},{book:"BAR"},{book:"DAN"},{book:"WIS"},{book:"LEV"},{book:"DEU"},
+    {book:"PSA"}
   ]
 };
 
