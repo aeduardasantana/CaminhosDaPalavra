@@ -401,19 +401,34 @@ function parsePsalmOriginal(text, cycle = '') {
   }
 
   const alternative = [];
-  if (index + 1 < lines.length && /^Ou:/i.test(lines[index + 1])) {
+  const firstAlternative = [];
+  let extraAlternativeLines = 0;
+  // O mesmo salmo pode trazer mais de uma alternativa (ex.: 'Ou: Aleluia').
+  // Preservar todas como refrão, nunca como falsa estrofe.
+  while (index + 1 < lines.length && /^Ou:/i.test(lines[index + 1])) {
+    const group = [];
     index += 1;
-    alternative.push(lines[index].replace(/^Ou:\s*/i, ''));
-    while (index + 1 < lines.length && !/[.!?;»”]$/.test(alternative[alternative.length - 1])) {
+    group.push(lines[index].replace(/^Ou:\s*/i, ''));
+    while (index + 1 < lines.length && !/[.!?;»”]$/.test(group[group.length - 1])) {
       index += 1;
-      alternative.push(lines[index]);
+      group.push(lines[index]);
     }
+    if (!firstAlternative.length) firstAlternative.push(...group);
+    else extraAlternativeLines += group.length;
+    alternative.push(...group);
   }
 
   const body = lines.slice(index + 1);
-  const key = psalmStructureKey(cycle, header, refrain, alternative);
+  // Preserva a chave legada dos esquemas cadastrados com a primeira alternativa.
+  const key = psalmStructureKey(cycle, header, refrain, firstAlternative);
   const structure = psalmStructures[key];
-  const structuredStanzas = splitByPsalmStructure(body, structure?.s);
+  let stanzaSizes = structure?.s;
+  // Alguns esquemas antigos contavam 'Ou: Aleluia' como uma estrofe de uma linha.
+  if (extraAlternativeLines && stanzaSizes?.[0] === extraAlternativeLines &&
+      stanzaSizes.slice(1).reduce((sum, n) => sum + n, 0) === body.length) {
+    stanzaSizes = stanzaSizes.slice(1);
+  }
+  const structuredStanzas = splitByPsalmStructure(body, stanzaSizes);
 
   if (structuredStanzas) {
     return {header, refrain, alternative, stanzas: structuredStanzas, structureVerified: true};
