@@ -733,8 +733,8 @@ function renderLiturgia() {
     const empty = document.createElement('div');
     empty.className = 'empty-state';
     empty.textContent = date
-      ? 'Ainda não há conteúdo cadastrado para esta data.'
-      : 'Nenhum conteúdo encontrado com esses filtros.';
+      ? 'Ainda não há conteúdo cadastrado para esta data. Experimente outra data ou consulte o acervo completo.'
+      : 'Nenhum conteúdo encontrado. Ajuste a pesquisa ou limpe os filtros.';
     els.liturgyResults.appendChild(empty);
     return;
   }
@@ -786,11 +786,16 @@ const SECTION_PATHS = Object.freeze({
 });
 const PATH_SECTIONS = Object.fromEntries(Object.entries(SECTION_PATHS).map(([key, path]) => [path, key]));
 function sectionFromUrl() {
-  const slug = decodeURIComponent(window.location.hash.slice(1)).replace(/^\/+/, '').toLowerCase();
+  const slug = decodeURIComponent(window.location.hash.slice(1).split('?')[0]).replace(/^\/+/, '').toLowerCase();
   return PATH_SECTIONS[slug] || 'projeto';
 }
-function syncSectionUrl(section) {
-  const hash = '#' + SECTION_PATHS[section];
+function syncSectionUrl(section, options = {}) {
+  const params = new URLSearchParams();
+  if (section === 'liturgia' && options.liturgyDate) {
+    params.set('data', options.liturgyDate);
+    if (options.liturgyItem) params.set('item', options.liturgyItem);
+  }
+  const hash = '#' + SECTION_PATHS[section] + (params.size ? '?' + params.toString() : '');
   if (window.location.hash !== hash) {
     window.history.pushState({section}, '', hash);
   }
@@ -798,7 +803,22 @@ function syncSectionUrl(section) {
 
 function setSection(section, options = {}) {
   if (!els.sections[section]) section = 'projeto';
-  if (!options.fromHistory) syncSectionUrl(section);
+  if (!options.fromHistory) syncSectionUrl(section, options);
+  const titles = {projeto:'Início',biblia:'Bíblia',plano:'Plano de Leitura',calendario:'Calendário Litúrgico',liturgia:'Liturgia para Libras'};
+  document.title = titles[section] + ' — Caminhos da Palavra';
+  els.navButtons.forEach(btn => {
+    if (btn.dataset.section === section) btn.setAttribute('aria-current', 'page');
+    else btn.removeAttribute('aria-current');
+  });
+  if (section === 'liturgia' && options.fromHistory) {
+    const rawParams = window.location.hash.split('?')[1] || '';
+    const params = new URLSearchParams(rawParams);
+    const date = params.get('data') || '';
+    const item = params.get('item') || '';
+    els.date.value = /^\d{4}-\d{2}-\d{2}$/.test(date) ? date : '';
+    els.item.value = [...els.item.options].some(opt => opt.value === item) ? item : '';
+    if (els.date.value) { els.query.value = ''; els.year.value = ''; }
+  }
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
   if (section === 'liturgia') renderLiturgia();
@@ -846,7 +866,7 @@ function openLiturgicalDate(iso) {
   els.date.value = iso;
   els.year.value = '';
   els.item.value = '';
-  setSection('liturgia', {scrollToResults: true});
+  setSection('liturgia', {scrollToResults: true, liturgyDate: iso});
 }
 
 function selectCalendarDate(dayInfo) {
@@ -893,6 +913,7 @@ function renderCalendar() {
       return;
     }
 
+    if (dayInfo.iso === localIsoToday()) { button.classList.add('is-today'); button.setAttribute('aria-current', 'date'); }
     if (dayInfo.weekday === 0) button.classList.add('is-sunday');
     if (contentForDate(dayInfo.iso).length) button.classList.add('has-content');
     if (selectedCalendarDate === dayInfo.iso) button.classList.add('is-selected');
@@ -903,7 +924,7 @@ function renderCalendar() {
       (shortLabel ? '<span class="day-label">' + shortLabel + '</span>' : '') +
       '<span class="day-season">Ano ' + dayInfo.cycle + '</span>';
 
-    button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle);
+    button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle + (contentForDate(dayInfo.iso).length ? ', possui leituras' : ', sem leituras cadastradas'));
     button.addEventListener('click', () => {
       if (contentForDate(dayInfo.iso).length) {
         openLiturgicalDate(dayInfo.iso);
