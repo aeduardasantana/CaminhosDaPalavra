@@ -1270,3 +1270,9 @@ select,
 .lectionary-variant-notice { margin:6px 0 12px; padding:9px 12px; font-size:.82rem; color:#544c3e; background:#faf4e6; border-left:3px solid var(--accent); }
 @media (max-width:520px) { .lectionary-variant-switch button { flex:1 1 120px; } }
 @media print { .lectionary-variant-switch { display:none !important; } }
+
+/* Revisão do Ano B: sequência litúrgica separada das leituras alternativas. */
+.lectionary-sequence { margin:12px 0; padding:11px 14px; border:1px solid #d8c8a8; border-radius:9px; background:#fffaf0; }
+.lectionary-sequence summary { cursor:pointer; font-weight:700; color:#514127; }
+.lectionary-sequence .text-content { margin-top:12px; padding-top:10px; border-top:1px solid #e5d7bd; white-space:pre-wrap; }
+@media(max-width:640px) { .lectionary-sequence { padding:9px 11px; } .lectionary-variant-switch { gap:6px; } }
