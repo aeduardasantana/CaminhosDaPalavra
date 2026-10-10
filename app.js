@@ -746,6 +746,42 @@ function splitLectionaryVariants(text) {
   };
 }
 
+// Ano B: alguns registros do acervo contêm duas leituras ALTERNATIVAS,
+ // que não são uma única leitura longa (e nem sempre constituem forma breve).
+function splitYearBAlternativeReading(entry) {
+  if (entry.ano !== 'B') return null;
+  const source = String(entry.original || '');
+  const patterns = [
+    { marker: /^Ou a leitura seguinte:\s*Gal\s*5,\s*16-25\s*$/mi,
+      labels: ['1Cor 12,3-7.12-13', 'Gl 5,16-25'], prefix: 'LEITURA II Gal 5,16-25\n' },
+    { marker: /^Ou a seguinte leitura facultativa:\s*$/mi,
+      labels: ['Ef 1,17-23', 'Ef 4,1-13'], prefix: '' },
+    { marker: /^Ou Jo\s*12,\s*12-16\s*$/mi,
+      labels: ['Mc 11,1-10', 'Jo 12,12-16'], prefix: 'EVANGELHO Jo 12,12-16\n' }
+  ];
+  for (const pattern of patterns) {
+    const hit = pattern.marker.exec(source);
+    if (!hit) continue;
+    const after = source.slice(hit.index + hit[0].length);
+    const sequenceIndex = after.search(/^SEQUÊNCIA\s*$/mi);
+    const second = sequenceIndex >= 0 ? after.slice(0, sequenceIndex) : after;
+    const sequence = sequenceIndex >= 0 ? after.slice(sequenceIndex).trim() : '';
+    const allGlosa = String(entry.glosa || '');
+    const firstMark = allGlosa.search(/^\[OPÇÃO 1:/mi);
+    const secondMark = allGlosa.search(/^\[OPÇÃO 2:/mi);
+    if (firstMark < 0 || secondMark < 0 || secondMark <= firstMark) return null;
+    const firstGlosa = allGlosa.slice(firstMark, secondMark).trim();
+    const secondGlosa = allGlosa.slice(secondMark).split(/^\[SEQUÊNCIA/i)[0].trim();
+    return {
+      labels: pattern.labels,
+      originals: [source.slice(0, hit.index).trim(), (pattern.prefix + second).trim()],
+      glosas: [firstGlosa, secondGlosa],
+      sequence
+    };
+  }
+  return null;
+}
+
 function renderLiturgia() {
   const q = normalize(els.query.value);
   const date = els.date.value;
@@ -799,25 +835,34 @@ function renderLiturgia() {
       originalTextBox.appendChild(formattedPsalm.fragment);
       glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext, entry.glosaRefrainContext, entry.ano));
     } else {
-      const variants = entry.ano === 'A' ? splitLectionaryVariants(entry.original) : null;
-      originalTextBox.textContent = variants ? variants.longa : entry.original;
-      glosaTextBox.appendChild(formatGlosa(entry.glosa));
-      if (variants) {
+      const alternate = splitYearBAlternativeReading(entry);
+      const variants = (entry.ano === 'A' || entry.ano === 'B') && !alternate
+        ? splitLectionaryVariants(entry.original) : null;
+      originalTextBox.textContent = alternate ? alternate.originals[0]
+        : variants ? variants.longa : entry.original;
+      glosaTextBox.replaceChildren(formatGlosa(alternate ? alternate.glosas[0] : entry.glosa));
+      if (alternate || variants) {
         const switcher = document.createElement('div');
         switcher.className = 'lectionary-variant-switch';
         switcher.setAttribute('role', 'group');
-        switcher.setAttribute('aria-label', 'Escolher forma do texto litúrgico');
+        switcher.setAttribute('aria-label', 'Escolher a leitura que será proclamada');
         const notice = document.createElement('p');
         notice.className = 'lectionary-variant-notice';
-        notice.textContent = 'O Lecionário apresenta duas formas. Escolha a que será proclamada. A glosa disponível é uma base de preparação e deve ser conferida para a forma selecionada.';
-        Object.entries({longa:'Forma longa', breve:'Forma breve'}).forEach(([key, title]) => {
+        notice.textContent = alternate
+          ? 'Este registro oferece leituras alternativas: selecione somente a que será proclamada. As glosas são roteiros de preparação pendentes de validação em Libras.'
+          : 'O Lecionário apresenta duas formas. Escolha a proclamada e confira a glosa para a forma escolhida.';
+        const choices = alternate
+          ? alternate.labels.map((label, i) => ({key:i, title:label}))
+          : Object.entries({longa:'Forma longa', breve:'Forma breve'}).map(([key,title])=>({key,title}));
+        choices.forEach(({key, title}, i) => {
           const button = document.createElement('button');
           button.type = 'button';
           button.className = 'secondary-button lectionary-variant-button';
           button.textContent = title;
-          button.setAttribute('aria-pressed', key === 'longa' ? 'true' : 'false');
+          button.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
           button.addEventListener('click', () => {
-            originalTextBox.textContent = variants[key];
+            originalTextBox.textContent = alternate ? alternate.originals[key] : variants[key];
+            if (alternate) glosaTextBox.replaceChildren(formatGlosa(alternate.glosas[key]));
             switcher.querySelectorAll('button').forEach(item =>
               item.setAttribute('aria-pressed', item === button ? 'true' : 'false')
             );
@@ -825,6 +870,17 @@ function renderLiturgia() {
           switcher.appendChild(button);
         });
         originalTextBox.before(switcher, notice);
+        if (alternate?.sequence) {
+          const extra = document.createElement('details');
+          extra.className = 'lectionary-sequence';
+          const summary = document.createElement('summary');
+          summary.textContent = 'Sequência de Pentecostes — texto litúrgico complementar';
+          const body = document.createElement('div');
+          body.className = 'text-content';
+          body.textContent = alternate.sequence;
+          extra.append(summary, body);
+          originalTextBox.after(extra);
+        }
       }
     }
 
