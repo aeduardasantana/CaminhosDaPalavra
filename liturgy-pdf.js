@@ -6,18 +6,52 @@
   const root = document.querySelector('#liturgyResults');
   if (!root) return;
 
-  function asBlocks(el) {
-    if (!el) return [];
-    const semantic = [...el.children].filter(x => clean(x.textContent));
-    if (!semantic.length) return clean(el.textContent) ? [clean(el.textContent)] : [];
-    return semantic.map(x => clean(x.textContent)).filter(Boolean);
+  // The site already constructs a semantic psalm sequence: refrain, stanza, repeat.
+  // Export exactly those paired units rather than flattening each pane into one block.
+  function contentBlock(element) {
+    const title = clean(element.querySelector(':scope > .psalm-part-label')?.textContent);
+    const parts = [...element.children].filter(child => !child.classList.contains('psalm-part-label'));
+    const chunks = parts.length ? parts.map(child => ({
+      kind: child.classList.contains('glosa-line') ? 'glosa' :
+        child.classList.contains('psalm-alternative') ? 'alternative' : 'text',
+      text: (child.innerText || child.textContent || '').trim()
+    })).filter(part => part.text) : [{kind:'text',text:(element.innerText || element.textContent || '').trim()}];
+    return {title, chunks};
   }
-  function compareRows(left, right) {
-    // Do not invent verse-level equivalence from a difference in paragraph counts.
-    // A single shared row keeps the columns synchronized without suggesting unverified alignment.
-    if (left.length > 1 && left.length === right.length)
-      return left.map((x, i) => [x, right[i]]);
-    return [[left.join('\n\n') || 'Texto integral não disponível no acervo.', right.join('\n\n') || 'Glosa não disponível.']];
+  function blocksFor(el) {
+    if (!el) return [];
+    const sequence = el.querySelector('.psalm-sequence');
+    if (sequence) {
+      const header = el.querySelector('.psalm-header');
+      const blocks = [...sequence.children].map(contentBlock);
+      if (header && clean(header.textContent)) blocks.unshift({title:'Identificação',chunks:[{kind:'text',text:clean(header.textContent)}]});
+      return blocks;
+    }
+    const text = (el.innerText || el.textContent || '').trim();
+    return [{title:'',chunks:[{kind:'text',text:text || 'Conteúdo não disponível no acervo.'}]}];
+  }
+  function compareRows(left, right, psalm) {
+    if (psalm) {
+      // The identification line has no equivalent on the glosa side.
+      const header = left[0]?.title === 'Identificação' ? left.shift() : null;
+      const rows = [];
+      if (header) rows.push([header,{title:'',chunks:[]}]);
+      if (left.length === right.length) {
+        rows.push(...left.map((block,index) => [block,right[index]]));
+        return rows;
+      }
+      // Never shift all later pairs when one unit is missing.
+      rows.push([{title:'Texto original — agrupamento não confirmado',chunks:left.flatMap(x=>x.chunks)},
+        {title:'Glosa — agrupamento não confirmado',chunks:right.flatMap(x=>x.chunks)}]);
+      return rows;
+    }
+    return [[left[0],right[0]]];
+  }
+  function renderBlock(block) {
+    if (!block) return '';
+    return `<div class="unit">${block.title ? `<strong class="unit-label">${escapeHTML(block.title)}</strong>` : ''}
+      ${(block.chunks||[]).map(x=>`<div class="unit-line ${x.kind==='glosa'?'is-glosa':x.kind==='alternative'?'is-alternative':''}">${escapeHTML(x.text)}</div>`).join('')}
+    </div>`;
   }
   function styleFor(font, format, notes) {
     return `@page{size:${format} landscape;margin:12mm}*{box-sizing:border-box}
@@ -28,7 +62,7 @@
       table{width:100%;border-collapse:collapse;table-layout:fixed}
       th{background:#ede7da;text-align:left;padding:3mm;border:1px solid #cfc7b8;font-size:10pt}
       td{width:50%;padding:4mm;vertical-align:top;border:1px solid #cfc7b8;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.48}
-      tr{break-inside:avoid;page-break-inside:avoid}
+      tr{break-inside:avoid;page-break-inside:avoid}\n      .unit-label{display:block;font-size:.86em;color:#74531e;letter-spacing:.025em;margin-bottom:2mm}\n      .unit-line{white-space:pre-wrap;margin:0 0 1.5mm;line-height:1.48}\n      .is-glosa{background:#f2e6c9;border-left:3px solid #a87318;padding:2mm 3mm;font-weight:650;margin-bottom:1.5mm}\n      .is-alternative{font-style:italic}\n      tbody tr:nth-child(even) td{background:#fdfbf6}
       td:nth-child(2){background:#fcfaf5}
       .notice{font-size:9pt;color:#675d4d;margin-top:5mm}
       .notes{margin-top:8mm;break-inside:avoid}
@@ -44,7 +78,7 @@
     const context = clean(article.querySelector('.card-kicker')?.textContent);
     const meta = clean(article.querySelector('.card-meta')?.textContent);
     const source = clean(article.querySelector('.source-version')?.textContent);
-    const left = asBlocks(original), right = asBlocks(glosa);
+    const isPsalm = Boolean(original?.querySelector('.psalm-sequence'));\n    const left = blocksFor(original), right = blocksFor(glosa);
     const settings = document.createElement('dialog');
     settings.className = 'lce-pdf-dialog';
     settings.setAttribute('aria-label', 'Configurar PDF comparativo');
@@ -54,7 +88,7 @@
       <label>Fonte <select name="font"><option>10</option><option selected>11</option><option>12</option><option>14</option></select></label>
       <label><input type="checkbox" name="reference" checked> Referência e identificação litúrgica</label>
       <label><input type="checkbox" name="notes"> Espaço para anotações</label>
-      <p class="lce-pdf-caution">A correspondência por parágrafo só será aplicada quando os dois lados possuírem a mesma quantidade de blocos. Caso contrário, as colunas serão mantidas como um único par de textos, sem presumir equivalência trecho a trecho. Glosas preliminares exigem revisão.</p>
+      <p class="lce-pdf-caution">Nos salmos, os refrões e as estrofes serão comparados em linhas correspondentes. Se houver divergência estrutural, o PDF não inventará pares. Glosas preliminares exigem revisão.</p>
       <div class="lce-pdf-actions"><button value="cancel" class="secondary-button">Cancelar</button><button value="generate" class="primary-action">Abrir PDF / Imprimir</button></div>
     </form>`;
     document.body.appendChild(settings);
