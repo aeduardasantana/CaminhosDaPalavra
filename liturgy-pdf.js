@@ -54,14 +54,14 @@
     </div>`;
   }
   function styleFor(font, format, notes) {
-    return `@page{size:${format} landscape;margin:12mm}*{box-sizing:border-box}
+    return `@page{size:${format};margin:10mm}*{box-sizing:border-box}
       html,body{margin:0;padding:0;color:#29251d;font-family:Arial,sans-serif;font-size:${font}pt}
-      .mast{border-bottom:2px solid #a87318;padding:0 0 7mm;margin:0 0 7mm}
+      .mast{border-bottom:2px solid #a87318;padding:0 0 3mm;margin:0 0 4mm}
       .mast small{color:#756a55;font-size:9pt;text-transform:uppercase;letter-spacing:.08em}
-      h1{font-size:17pt;margin:3mm 0 2mm} .meta{font-size:10pt;color:#655d4f}
+      h1{font-size:15pt;margin:2mm 0 1mm} .meta{font-size:10pt;color:#655d4f}
       table{width:100%;border-collapse:collapse;table-layout:fixed}
-      th{background:#ede7da;text-align:left;padding:3mm;border:1px solid #cfc7b8;font-size:10pt}
-      td{width:50%;padding:4mm;vertical-align:top;border:1px solid #cfc7b8;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.48}
+      th{background:#ede7da;text-align:left;padding:2mm;border:1px solid #cfc7b8;font-size:10pt}
+      td{width:50%;padding:2.5mm;vertical-align:top;border:1px solid #cfc7b8;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.48}
       tr{break-inside:avoid;page-break-inside:avoid}\n      .unit-label{display:block;font-size:.86em;color:#74531e;letter-spacing:.025em;margin-bottom:2mm}\n      .unit-line{white-space:pre-wrap;margin:0 0 1.5mm;line-height:1.48}\n      .is-glosa{background:#f2e6c9;border-left:3px solid #a87318;padding:2mm 3mm;font-weight:650;margin-bottom:1.5mm}\n      .is-alternative{font-style:italic}\n      tbody tr:nth-child(even) td{background:#fdfbf6}
       td:nth-child(2){background:#fcfaf5}
       .notice{font-size:9pt;color:#675d4d;margin-top:5mm}
@@ -84,11 +84,19 @@
     settings.className = 'lce-pdf-dialog';
     settings.setAttribute('aria-label', 'Configurar PDF comparativo');
     settings.innerHTML = `<form method="dialog" class="lce-pdf-form">
-      <h3>PDF litúrgico comparativo</h3><p>Configure o documento em paisagem. O texto e a glosa permanecerão lado a lado.</p>
-      <label>Formato <select name="paper"><option>A4</option><option>A3</option></select></label>
-      <label>Fonte <select name="font"><option>10</option><option selected>11</option><option>12</option><option>14</option></select></label>
-      <label><input type="checkbox" name="reference" checked> Referência e identificação litúrgica</label>
-      <label><input type="checkbox" name="notes"> Espaço para anotações</label>
+      <h3>PDF litúrgico comparativo</h3><p>Escolha o formato de impressão. O texto e a glosa permanecerão em colunas correspondentes.</p>
+      <div class="lce-pdf-fields">
+        <label class="lce-pdf-field"><span>Formato do papel</span><select name="paper">
+          <option value="A4 portrait" selected>A4 · Retrato (recomendado)</option>
+          <option value="A4 landscape">A4 · Paisagem</option>
+          <option value="A3 landscape">A3 · Paisagem</option>
+        </select></label>
+        <label class="lce-pdf-field"><span>Tamanho da fonte</span><select name="font"><option value="10">10 pt</option><option value="11" selected>11 pt</option><option value="12">12 pt</option><option value="14">14 pt</option></select></label>
+      </div>
+      <fieldset class="lce-pdf-options"><legend>Informações adicionais</legend>
+        <label class="lce-pdf-check"><input type="checkbox" name="reference" checked><span>Incluir referência e identificação litúrgica</span></label>
+        <label class="lce-pdf-check"><input type="checkbox" name="notes"><span>Reservar espaço para anotações</span></label>
+      </fieldset>
       <p class="lce-pdf-caution">Nos salmos, os refrões e as estrofes serão comparados em linhas correspondentes. Se houver divergência estrutural, o PDF não inventará pares. Glosas preliminares exigem revisão.</p>
       <div class="lce-pdf-actions"><button value="cancel" class="secondary-button">Cancelar</button><button value="generate" class="primary-action">Abrir PDF / Imprimir</button></div>
     </form>`;
@@ -96,7 +104,7 @@
     settings.addEventListener('close', () => {
       if (settings.returnValue === 'generate') {
         const form = settings.querySelector('form');
-        const paper = form.elements.paper.value === 'A3' ? 'A3' : 'A4';
+        const paper = ['A4 portrait', 'A4 landscape', 'A3 landscape'].includes(form.elements.paper.value) ? form.elements.paper.value : 'A4 portrait';
         const font = ['10','11','12','14'].includes(form.elements.font.value) ? form.elements.font.value : '11';
         const reference = form.elements.reference.checked;
         const notes = form.elements.notes.checked;
@@ -140,16 +148,23 @@
   }
   const css = document.createElement('style');
   css.textContent = `.lce-pdf-toolbar{padding:13px 20px 18px;display:flex;justify-content:flex-end;border-bottom:1px solid #ddd6c8}
-    .lce-pdf-dialog{max-width:min(94vw,520px);width:100%;border:1px solid #ddd6c8;border-radius:8px;padding:0;box-shadow:0 18px 80px #0003}
+    .lce-pdf-dialog{max-width:min(94vw,540px);width:100%;max-height:min(90vh,740px);overflow:auto;border:1px solid #ddd6c8;border-radius:12px;padding:0;box-shadow:0 18px 80px #0003;background:#fff;color:#1f1d18}
     .lce-pdf-dialog::backdrop{background:#19171291}
-    .lce-pdf-form{display:grid;gap:14px;padding:25px}
+    .lce-pdf-form{display:grid;gap:16px;padding:28px}
     .lce-pdf-form h3,.lce-pdf-form p{margin:0}
-    .lce-pdf-form label{display:flex;justify-content:space-between;align-items:center;gap:16px}
-    .lce-pdf-form label:has(input){justify-content:flex-start}
-    .lce-pdf-form select{min-width:120px}
-    .lce-pdf-caution{font-size:.82rem;color:#6f6a60}
-    .lce-pdf-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px}
-    @media(max-width:600px){.lce-pdf-toolbar{justify-content:stretch}.lce-pdf-button{width:100%}}`;
+    .lce-pdf-form h3{font-size:1.28rem;line-height:1.3}
+    .lce-pdf-form>p:not(.lce-pdf-caution){font-size:.93rem;line-height:1.5;color:#635e56}
+    .lce-pdf-fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+    .lce-pdf-field{display:grid;gap:7px;min-width:0;font-size:.88rem;font-weight:650}
+    .lce-pdf-field select{width:100%;min-width:0;height:43px;border:1px solid #d4cdbf;border-radius:5px;background:#fff;color:#1f1d18;padding:8px;font-size:.91rem;font-weight:400}
+    .lce-pdf-options{min-width:0;display:grid;gap:14px;border:1px solid #e2dccf;border-radius:7px;padding:15px 16px 17px}
+    .lce-pdf-options legend{padding:0 5px;font-weight:700;font-size:.9rem}
+    .lce-pdf-check{display:flex;align-items:center;justify-content:flex-start;gap:11px;line-height:1.4;font-size:.91rem;cursor:pointer;font-weight:400}
+    .lce-pdf-check input{width:18px;height:18px;flex:0 0 18px;margin:0;accent-color:#a87318}
+    .lce-pdf-caution{font-size:.79rem;color:#6f6a60;line-height:1.5}
+    .lce-pdf-actions{display:flex;justify-content:flex-end;flex-wrap:wrap;gap:10px;border-top:1px solid #e2dccf;padding-top:16px}
+    .lce-pdf-actions button{min-height:43px}
+    @media(max-width:600px){.lce-pdf-toolbar{justify-content:stretch}.lce-pdf-button{width:100%}.lce-pdf-form{padding:20px;gap:14px}.lce-pdf-fields{grid-template-columns:1fr}.lce-pdf-actions button{flex:1 1 auto}}`;
   document.head.appendChild(css);
   new MutationObserver(attachButtons).observe(root,{childList:true});
   attachButtons();
