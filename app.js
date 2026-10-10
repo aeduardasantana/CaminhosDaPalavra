@@ -1162,7 +1162,8 @@ function buildDatedSchedule(startDate) {
     const isNT = dayIndex < NT_DAYS;
     const atIndex = dayIndex - NT_DAYS;
     const steps = isNT ? [...ntChunks[dayIndex]] : [...atChunks[atIndex]];
-    if (!isNT && atIndex < psalms.length) steps.push(psalms[atIndex]);
+    // Salmo do dia é pré-definido: Salmo 1 no dia 1, até Salmo 150 no dia 150.
+    if (dayIndex < psalms.length) steps.push(psalms[dayIndex]);
     return {date: addLocalDays(startDate, dayIndex), steps};
   });
 }
@@ -1297,8 +1298,8 @@ function renderFullSchedule(progress, startDate) {
     '<span>Início: ' + formatDate(startDate) + '</span>' +
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
-    '<span>Ritmo: ' + minDaily + '–' + maxDaily + ' capítulos/dia · Salmos: dias 76–225 (' + daysWithPsalm + ' dias)</span>' +
-    '<span>Organização: Caminhos da Palavra · referência metodológica: Pe. Jonas Abib e Revista Ave Maria (setembro/2026, p. 6). Sequência diária própria; sem releituras; um Salmo por dia durante 150 dias do Antigo Testamento.</span>';
+    '<span>Ritmo: ' + minDaily + '–' + maxDaily + ' capítulos/dia · Salmos: dias 1–150 (' + daysWithPsalm + ' dias)</span>' +
+    '<span>Organização: Caminhos da Palavra · referência metodológica: Pe. Jonas Abib e Revista Ave Maria (setembro/2026, p. 6). Sequência diária própria; sem releituras; um Salmo por dia nos primeiros 150 dias, em paralelo à sequência bíblica.</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
