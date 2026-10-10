@@ -830,7 +830,7 @@ window.LCE_LITURGY_ORIGINALS = Object.assign(window.LCE_LITURGY_ORIGINALS || {},
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
   "B|TEMPO COMUM — ANO B|32º Domingo|salmo|Sl 146": {
-    "text": "SALMO RESPONSORIAL Salmo 15 (16), 5.8.9-10.11 (R. 1)\nRefrão: Defendei-me, Senhor: Vós sois o meu refúgio.\n Ou:Guardai-me, Senhor, porque esperei em Vós.\nSenhor, porção da minha herança e do meu cálice,\nestá nas vossas mãos o meu destino.\nO Senhor está sempre na minha presença,\ncom Ele a meu lado não vacilarei.\nPor isso o meu coração se alegra e a minha alma exulta\ne até o meu corpo descansa tranquilo.\nVós não abandonareis a minha alma\nna mansão dos mortos,\nnem deixareis o vosso fiel sofrer a corrupção.\nDar-me-eis a conhecer os caminhos da vida,\nalegria plena em vossa presença,\ndelícias eternas à vossa direita.",
+    "text": "SALMO RESPONSORIAL Salmo 145 (146), 7.8-9a.9bc-10 (R. 1)\nRefrão: Ó minha alma, louva o Senhor.\n Ou: Aleluia.\nO Senhor faz justiça aos oprimidos,\ndá pão aos que têm fome\ne a liberdade aos cativos.\nO Senhor ilumina os olhos dos cegos,\no Senhor levanta os abatidos,\no Senhor ama os justos.\nO Senhor protege os peregrinos,\nampara o órfão e a viúva\ne entrava o caminho aos pecadores.\nO Senhor reina eternamente;\no teu Deus, ó Sião,\né rei por todas as gerações.",
     "sourceVersion": "Lecionário Dominical — Ano B · arquivo fornecido pela responsável do projeto",
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
