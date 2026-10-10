@@ -11,7 +11,7 @@
 - 60 salmos; 8 com mapeamento contextual explícito de estrofes no arquivo atual; 52 exigem checagem de correspondência entre versos/estrofes.
 - 14 referências de salmo reutilizadas em celebrações diferentes, que podem usar versos e refrões distintos.
 - 9 glosas com tamanho inferior a 15% do texto litúrgico, usadas como **alerta de condensação** (indicador heurístico, não erro comprovado).
-- 4 roteiros com revisão editorial ampliada no arquivo `glosas-revisadas-ano-a.js`. Os outros 237 itens permanecem preliminares, não linguisticamente validados.
+- 7 roteiros com revisão editorial ampliada no arquivo `glosas-revisadas-ano-a.js`. Os outros 234 itens permanecem preliminares, não linguisticamente validados.
 
 ## Revisões editoriais ampliadas já implementadas
 
@@ -33,6 +33,13 @@
 | 4º Domingo | evangelho | Jo 9,1-41 | 757/81 | Sim |
 | 5º Domingo | evangelho | Jo 11,1-45 | 741/67 | Sim |
 | Domingo de Ramos e da Paixão | paixao | Mt 26,14–27,66 | 2446/108 | Sim |
+
+## Revisão contextual dos salmos
+
+- Advento, 2º Domingo (Sl 72): refrão **justiça e paz** e quatro grupos de estrofes.
+- Epifania do Senhor (Sl 72): refrão **adoração dos povos** e quatro grupos, incluindo as ofertas dos reis.
+- Os dois casos foram separados em `psalm-glossa-context-ano-a.js` para evitar reutilizar automaticamente a mesma glosa por número de salmo.
+- Outros 50 salmos do Ano A ainda precisam de revisão da correspondência estrofe ↔ glosa.
 
 ## Salmos que compartilham a mesma referência
 
@@ -135,4 +142,4 @@ Um salmo usado em celebrações distintas pode ter repertório, versículos e re
 4. Ensaiar a interpretação em Libras e colher validação de pessoa surda proficiente, preferencialmente no contexto pastoral.
 5. Registrar versão, data, responsável e comentários antes de alterar o status para 'validado'.
 
-**Importante:** A revisão textual automática e os quatro roteiros ampliados não equivalem à homologação integral das 241 glosas.
+**Importante:** A revisão textual automática e os sete roteiros ampliados não equivalem à homologação integral das 241 glosas.
