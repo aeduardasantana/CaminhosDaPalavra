@@ -108,25 +108,6 @@ window.LCE_PSALM_REFRAINS_ANO_B = {
   "B|TEMPO COMUM — ANO B|34º Domingo — Cristo Rei|salmo|Sl 93": {
     "refrain": "SENHOR / REI / TRONO DE LUZ."
   },
-  "B|QUARESMA|1º Domingo|salmo|Sl 25": {
-    "refrain": "SENHOR / TODOS TEUS CAMINHOS AMOR E VERDADE / PARA QUEM CUMPRE TUA ALIANÇA."
-  },
-  "B|QUARESMA|2º Domingo|salmo|Sl 116": {
-    "refrain": "EU CAMINHAR NA PRESENÇA SENHOR / TERRA DOS VIVOS.",
-    "alternativeRefrain": "EU CAMINHAR NA TERRA DOS VIVOS / SENHOR DIANTE DE MIM."
-  },
-  "B|QUARESMA|3º Domingo|salmo|Sl 19": {
-    "refrain": "SENHOR / TU TER PALAVRAS DE VIDA ETERNA."
-  },
-  "B|QUARESMA|4º Domingo|salmo|Sl 137": {
-    "refrain": "JERUSALÉM / SE EU NÃO LEMBRAR VOCÊ / MINHA LÍNGUA NÃO CONSEGUIR FALAR."
-  },
-  "B|QUARESMA|5º Domingo|salmo|Sl 51": {
-    "refrain": "SENHOR / CORAÇÃO PURO CRIAR EM MIM."
-  },
-  "B|QUARESMA|Domingo de Ramos e da Paixão|salmo|Sl 22": {
-    "refrain": "MEU DEUS / MEU DEUS / POR QUE ME ABANDONAR?"
-  },
   "B|PÁSCOA E TEMPO PASCAL|Domingo da Páscoa|salmo|Sl 118": {
     "refrain": "ESTE DIA / SENHOR FEZ / NÓS ALEGRAR E CANTAR.",
     "alternativeRefrain": "ALELUIA."
