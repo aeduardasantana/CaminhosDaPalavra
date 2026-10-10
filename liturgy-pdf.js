@@ -99,8 +99,8 @@
         const font = ['10','11','12','14'].includes(form.elements.font.value) ? form.elements.font.value : '11';
         const reference = form.elements.reference.checked;
         const notes = form.elements.notes.checked;
-        const rows = compareRows(left,right).map(([a,b]) =>
-          `<tr><td>${escapeHTML(a)}</td><td>${escapeHTML(b)}</td></tr>`).join('');
+        const rows = compareRows([...left],[...right],isPsalm).map(([a,b]) =>
+          `<tr><td>${renderBlock(a)}</td><td>${renderBlock(b)}</td></tr>`).join('');
         const doc = `<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><title>${escapeHTML(title)} — Caminhos da Palavra</title><style>${styleFor(font,paper,notes)}</style></head><body>
           <header class="mast"><small>Caminhos da Palavra · por Libras com Eduarda</small><h1>${escapeHTML(title)}</h1>
           ${reference ? `<div class="meta">${escapeHTML([context,meta,source].filter(Boolean).join(' · '))}</div>` : ''}</header>
