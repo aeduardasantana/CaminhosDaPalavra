@@ -776,14 +776,25 @@ function renderLiturgia() {
   });
 }
 
-function setSection(section) {
+function setSection(section, options = {}) {
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
   if (section === 'liturgia') renderLiturgia();
   if (section === 'calendario') renderCalendar();
   if (section === 'biblia') renderBibleBooks();
   if (section === 'plano') renderPlan();
-  window.scrollTo({top: 0, behavior: 'smooth'});
+  if (options.scrollToResults && section === 'liturgia') {
+    // Only scroll after the destination is made visible and its cards are rendered.
+    requestAnimationFrame(() => {
+      const target = els.liturgyResults.closest('#liturgiaSection')?.querySelector('.section-heading') || els.liturgyResults;
+      const header = document.querySelector('.site-header');
+      const offset = (header?.getBoundingClientRect().height || 0) + 18;
+      const y = Math.max(0, window.scrollY + target.getBoundingClientRect().top - offset);
+      window.scrollTo({top: y, behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'});
+    });
+  } else {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  }
 }
 
 /* Calendário 2026–2030 */
@@ -831,8 +842,7 @@ function selectCalendarDate(dayInfo) {
       els.query.value = '';
       els.year.value = '';
       els.item.value = '';
-      renderLiturgia();
-      setSection('liturgia');
+      setSection('liturgia', {scrollToResults: true});
     });
     els.calendarDetail.appendChild(button);
   }
