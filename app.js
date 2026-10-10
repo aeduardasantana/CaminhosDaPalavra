@@ -4,10 +4,12 @@ const litCalendar = window.LCE_CALENDAR;
 const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
 const glossaAnoARevisada = window.LCE_GLOSSA_ANO_A_REVISADA || {};
+const glossaAnoBRevisada = window.LCE_GLOSSA_ANO_B_REVISADA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
 const psalmGlossaContext = window.LCE_PSALM_GLOSSA_CONTEXT || {};
 const yearAPsalmRefrains = window.LCE_PSALM_REFRAINS_ANO_A || {};
+const yearBPsalmRefrains = window.LCE_PSALM_REFRAINS_ANO_B || {};
 
 const els = {
   query: document.querySelector('#query'),
@@ -157,22 +159,22 @@ function genericLiturgyEntries() {
       item: item.type,
       itemLabel: item.label,
       referencia: item.reference,
-      status: glossaAnoARevisada[contextKey]
+      status: (glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey])
         ? 'Roteiro editorial ampliado — validação linguística em Libras pendente'
-        : (item.type === 'salmo' && record.cycle === 'A' && yearAPsalmRefrains[contextKey])
+        : (item.type === 'salmo' && ((record.cycle === 'A' && yearAPsalmRefrains[contextKey]) || (record.cycle === 'B' && yearBPsalmRefrains[contextKey])))
           ? 'Refrão contextual revisado — estrofes e Libras pendentes'
-        : (item.type === 'salmo' && record.cycle === 'A' && psalmGlossaContext[contextKey])
+        : (item.type === 'salmo' && (record.cycle === 'A' || record.cycle === 'B') && psalmGlossaContext[contextKey])
           ? 'Estrutura de salmo preparada — validação linguística pendente'
         : detailedPilot ? detailedPilot.status
         : (glossa[item.reference]
-          ? (record.cycle === 'A' ? 'Glosa-base preliminar — validação linguística pendente' : 'Glosa-base preliminar')
+          ? (record.cycle === 'A' || record.cycle === 'B' ? 'Glosa-base preliminar — validação linguística pendente' : 'Glosa-base preliminar')
           : 'Glosa em produção'),
       sourceVersion: originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado',
       sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
-      glosa: glossaAnoARevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
+      glosa: glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       glosaContext: item.type === 'salmo' ? (psalmGlossaContext[contextKey] || null) : null,
-      glosaRefrainContext: item.type === 'salmo' ? (yearAPsalmRefrains[contextKey] || null) : null,
+      glosaRefrainContext: item.type === 'salmo' ? (yearAPsalmRefrains[contextKey] || yearBPsalmRefrains[contextKey] || null) : null,
       note: item.note || '',
       keywords: [
         record.cycle,
@@ -615,7 +617,7 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverri
     const label = document.createElement('strong');
     label.className = 'psalm-part-label';
     label.textContent = 'ESTROFE ' + (index + 1) +
-      (cycle === 'A'
+      ((cycle === 'A' || cycle === 'B')
         ? (contextual ? ' — GLOSA PRELIMINAR' : ' — GLOSA-BASE (ALINHAMENTO PENDENTE)')
         : ' — GLOSA');
     block.appendChild(label);
