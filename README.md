@@ -87,26 +87,24 @@ O repositório mantém metadados, navegação, relações, glosas próprias e pr
 
 A conexão entre versões bíblicas e suas respectivas glosas fica para uma etapa futura.
 
-## Plano de leitura — versão final por capítulos
+## Plano de leitura — versão definitiva (365 dias, capítulos)
 
-**Referência metodológica:** proposta de leitura de Monsenhor Jonas Abib, divulgada pela Canção Nova:
-https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
+**Proposta do Caminhos da Palavra:** leitura integral dos 73 livros e 1.334 capítulos da Bíblia Católica em 365 dias, sem repetir capítulos e sem marcar versículos. Novo Testamento nos dias 1–75; Antigo Testamento nos dias 76–365. Do dia 76 ao 225, um Salmo em ordem numérica é acrescentado diariamente à leitura dos outros capítulos do Antigo Testamento. Depois do Salmo 150, permanece apenas a sequência dos outros livros. O ritmo resulta em 3 a 5 capítulos por dia.
 
-**Referência editorial complementar:** Revista Ave Maria. “Por onde começar a ler a Bíblia?”, seção Espaço do Leitor, setembro de 2026, p. 6, texto da Redação. https://revistaavemaria.com.br/wp-content/uploads/2026/09/avemaria-setembro2026-05.pdf — A revista registra a contribuição do método do Pe. Jonas Abib, incluindo releituras de I João e João e a leitura dos Salmos em paralelo. O roteiro de 365 dias do site não reproduz literalmente essa sequência.
+**Referências de inspiração para a ordem dos livros** (não fontes literais da distribuição diária):
+- Monsenhor Jonas Abib, Canção Nova: https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
+- *Revista Ave Maria*, “Por onde começar a ler a Bíblia?”, setembro de 2026, p. 6: https://revistaavemaria.com.br/wp-content/uploads/2026/09/avemaria-setembro2026-05.pdf
 
-**Autoria do cronograma:** organização própria do projeto Caminhos da Palavra. A ordem específica dos livros, a inclusão de todo o cânon católico e a distribuição dos capítulos em 365 dias não devem ser atribuídas integralmente a Monsenhor Jonas Abib.
+O cronograma é **adaptação própria do Caminhos da Palavra**, sem as releituras de I João e João previstas na inspiração metodológica; as indicações da revista não especificam um Salmo por dia. A intercalagem exata dos 150 salmos foi estabelecida neste projeto.
 
-O plano apresenta os 73 livros da Bíblia Católica, organizados por capítulos, com:
-- cronograma definitivo de 365 dias, distribuído por data de início;
-- impressão ou salvamento em PDF com caixas para marcar somente capítulos;
-- acompanhamento online exclusivamente por capítulo concluído ou pendente;
-- progresso salvo localmente no navegador;
-- indicadores de conclusão do plano e de cobertura da Bíblia;
-- leitura dos capítulos na plataforma da Bíblia Ave-Maria.
+### Regras técnicas e preservação do progresso
 
-A visualização não dispõe de marcações por versículo, campos de observação ou edição do conteúdo do plano. A data usada para produzir o PDF não altera a caminhada online. Marcas de capítulos já concluídos permanecem na chave existente de armazenamento local.
-
-**Nota:** os capítulos são registrados uma única vez no cronograma, mesmo quando a inspiração metodológica contempla releituras. O projeto prioriza a cobertura integral dos 73 livros em 365 dias, e não a reprodução literal de um roteiro de releituras.
+- O site e o PDF são produzidos pela mesma função `buildDatedSchedule`.
+- Uma marcação por capítulo, por meio da chave histórica `LIVRO:CAPÍTULO` (ex.: `PSA:1`), sem alterar a chave `lce-bible365-plan-v1` do armazenamento local.
+- O conteúdo e as datas do plano são fixos para cada data de início escolhida. A data de impressão não modifica o acompanhamento online.
+- Conclusões de capítulos anteriores são mantidas, mesmo que a data programada desses capítulos tenha mudado. O dia corrente online é o primeiro dia ainda não concluído de forma consecutiva.
+- As 1.334 chaves aparecem exatamente uma vez no roteiro; não há dias vazios.
+- A opção de impressão gera o cronograma de 365 dias com caixas exclusivamente para marcar capítulos.
 
 ## Acessibilidade
 
