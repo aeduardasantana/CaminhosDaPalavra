@@ -29,7 +29,11 @@
   (panel.querySelector('.path-number')?.nextElementSibling || panel).append(actions);
 
   function validKey(value) {
-    return typeof value === 'string' && /^[A-Z0-9]{2,4}:\d{1,3}$/.test(value);
+    if (typeof value !== 'string' || !/^[A-Z0-9]{2,4}:\d{1,3}$/.test(value)) return false;
+    const [bookId, chapterText] = value.split(':');
+    const book = window.LCE_BIBLE?.books?.find(item => item.id === bookId);
+    const chapter = Number(chapterText);
+    return Boolean(book && Number.isInteger(chapter) && chapter >= 1 && chapter <= book.chapters);
   }
   function readProgress() {
     const stored = JSON.parse(localStorage.getItem(KEY) || '[]');
