@@ -26,7 +26,7 @@
   status.setAttribute('role','status');
   status.setAttribute('aria-live','polite');
   actions.append(exportButton, importButton, chooser, status);
-  panel.querySelector('.reading-path-card > div:last-child')?.append(actions) || panel.append(actions);
+  (panel.querySelector('.path-number')?.nextElementSibling || panel).append(actions);
 
   function validKey(value) {
     return typeof value === 'string' && /^[A-Z0-9]{2,4}:\d{1,3}$/.test(value);
