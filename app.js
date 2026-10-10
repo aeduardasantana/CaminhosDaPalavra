@@ -1453,6 +1453,14 @@ function printReadingPlan() {
     @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
   `;
 
+  let printStarted = false;
+  const openPrintPreview = () => {
+    if (printStarted) return;
+    printStarted = true;
+    popup.focus();
+    popup.print();
+  };
+  popup.addEventListener('load', openPrintPreview, { once: true });
   popup.document.open();
   popup.document.write(
     '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>' +
@@ -1463,9 +1471,8 @@ function printReadingPlan() {
     '</main></body></html>'
   );
   popup.document.close();
-  // Aguarda a diagramação do documento independente antes da prévia.
-  popup.addEventListener('load', () => popup.print(), { once: true });
-  if (popup.document.readyState === 'complete') popup.print();
+  // Evita disparar a impressão duas vezes quando o carregamento já terminou.
+  if (popup.document.readyState === 'complete') openPrintPreview();
 }
 
 els.printPlan.addEventListener('click', printReadingPlan);
