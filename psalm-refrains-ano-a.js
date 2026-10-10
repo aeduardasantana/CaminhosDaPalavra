@@ -3,17 +3,6 @@
  * Não substituir nem homologar glosas em Libras por este arquivo.
  */
 window.LCE_PSALM_REFRAINS_ANO_A = {
-  "A|ADVENTO|1º Domingo|salmo|Sl 122": {
-    "refrain": "VAMOS COM ALEGRIA / CASA SENHOR IR."
-  },
-  "A|ADVENTO|3º Domingo|salmo|Sl 146": {
-    "refrain": "SENHOR / VENHA / NÓS SALVAR.",
-    "alternativeRefrain": "SENHOR / VENHA SALVAR-NOS."
-  },
-  "A|ADVENTO|4º Domingo|salmo|Sl 24": {
-    "refrain": "SENHOR VIR / ELE REI DA GLÓRIA.",
-    "alternativeRefrain": "SENHOR VIRÁ / ELE REI GLÓRIA."
-  },
   "A|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Natal — Vigília|salmo|Sl 89": {
     "refrain": "SENHOR / TUA MISERICÓRDIA / EU CANTAR PARA SEMPRE."
   },
