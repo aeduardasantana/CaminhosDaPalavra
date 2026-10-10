@@ -89,7 +89,7 @@ A conexão entre versões bíblicas e suas respectivas glosas fica para uma etap
 
 ## Plano de leitura — versão definitiva (365 dias, capítulos)
 
-**Proposta do Caminhos da Palavra:** leitura integral dos 73 livros e 1.334 capítulos da Bíblia Católica em 365 dias, sem repetir capítulos e sem marcar versículos. Novo Testamento nos dias 1–75; Antigo Testamento nos dias 76–365. Do dia 76 ao 225, um Salmo em ordem numérica é acrescentado diariamente à leitura dos outros capítulos do Antigo Testamento. Depois do Salmo 150, permanece apenas a sequência dos outros livros. O ritmo resulta em 3 a 5 capítulos por dia.
+**Proposta do Caminhos da Palavra:** leitura integral dos 73 livros e 1.334 capítulos da Bíblia Católica em 365 dias, sem repetir capítulos e sem marcar versículos. Novo Testamento nos dias 1–75; Antigo Testamento nos dias 76–365. Os Salmos são atribuídos automaticamente, em ordem numérica, aos dias 1–150: Salmo 1 no dia 1, Salmo 2 no dia 2, até Salmo 150 no dia 150. Nesse período, cada Salmo acompanha os capítulos do Novo Testamento ou do Antigo Testamento previstos para o dia; nos dias 151–365 permanecem somente os outros capítulos. O ritmo fica entre 3 e 5 capítulos por dia.
 
 **Referências de inspiração para a ordem dos livros** (não fontes literais da distribuição diária):
 - Monsenhor Jonas Abib, Canção Nova: https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
