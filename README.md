@@ -92,6 +92,8 @@ A conexão entre versões bíblicas e suas respectivas glosas fica para uma etap
 **Referência metodológica:** proposta de leitura de Monsenhor Jonas Abib, divulgada pela Canção Nova:
 https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
 
+**Referência editorial complementar:** Revista Ave Maria. “Por onde começar a ler a Bíblia?”, seção Espaço do Leitor, setembro de 2026, p. 6, texto da Redação. https://revistaavemaria.com.br/wp-content/uploads/2026/09/avemaria-setembro2026-05.pdf — A revista registra a contribuição do método do Pe. Jonas Abib, incluindo releituras de I João e João e a leitura dos Salmos em paralelo. O roteiro de 365 dias do site não reproduz literalmente essa sequência.
+
 **Autoria do cronograma:** organização própria do projeto Caminhos da Palavra. A ordem específica dos livros, a inclusão de todo o cânon católico e a distribuição dos capítulos em 365 dias não devem ser atribuídas integralmente a Monsenhor Jonas Abib.
 
 O plano apresenta os 73 livros da Bíblia Católica, organizados por capítulos, com:
