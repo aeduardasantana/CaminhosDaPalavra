@@ -712,7 +712,10 @@ function renderLiturgia() {
   const year = els.year.value;
   const item = els.item.value;
 
-  const noFilters = !q && !date && !year && !item;\n  const defaultDate = noFilters && !showFullLiturgyArchive ? upcomingLiturgyDate() : '';\n  const sourceEntries = date ? entriesForDate(date) : defaultDate ? entriesForDate(defaultDate) : allLiturgyEntries;\n  updateLiturgyArchiveControl(defaultDate);
+  const noFilters = !q && !date && !year && !item;
+  const defaultDate = noFilters && !showFullLiturgyArchive ? upcomingLiturgyDate() : '';
+  const sourceEntries = date ? entriesForDate(date) : defaultDate ? entriesForDate(defaultDate) : allLiturgyEntries;
+  updateLiturgyArchiveControl(defaultDate);
   const filtered = sourceEntries
     .filter(entry => {
       const matchesQuery = !q || searchableText(entry).includes(q);
@@ -1611,6 +1614,7 @@ els.clear.addEventListener('click', () => {
   els.date.value = '';
   els.year.value = '';
   els.item.value = '';
+  showFullLiturgyArchive = false;
   renderLiturgia();
   els.query.focus();
 });
