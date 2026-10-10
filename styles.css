@@ -1262,3 +1262,11 @@ select,
   .progress-backup-controls button { flex:1 1 150px; }
 }
 @media print { .progress-backup-controls,.calendar-today,.share-liturgy-link { display:none !important; } }
+
+/* Ano A: formas longas e breves apresentadas separadamente. */
+.lectionary-variant-switch { display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 4px; }
+.lectionary-variant-button { padding:7px 12px; font-size:.85rem; }
+.lectionary-variant-button[aria-pressed="true"] { background:var(--deep); color:#fff; border-color:var(--deep); }
+.lectionary-variant-notice { margin:6px 0 12px; padding:9px 12px; font-size:.82rem; color:#544c3e; background:#faf4e6; border-left:3px solid var(--accent); }
+@media (max-width:520px) { .lectionary-variant-switch button { flex:1 1 120px; } }
+@media print { .lectionary-variant-switch { display:none !important; } }
