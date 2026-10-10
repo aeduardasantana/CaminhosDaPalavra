@@ -24,7 +24,7 @@
     if (sequence) {
       const header = el.querySelector('.psalm-header');
       const blocks = [...sequence.children].map(contentBlock);
-      if (header && clean(header.textContent)) blocks.unshift({title:'Identificação',chunks:[{kind:'text',text:clean(header.textContent)}]});
+      // Identification moves to the header so it does not create an empty comparison cell.
       return blocks;
     }
     const text = (el.innerText || el.textContent || '').trim();
@@ -33,9 +33,7 @@
   function compareRows(left, right, psalm) {
     if (psalm) {
       // The identification line has no equivalent on the glosa side.
-      const header = left[0]?.title === 'Identificação' ? left.shift() : null;
       const rows = [];
-      if (header) rows.push([header,{title:'',chunks:[]}]);
       if (left.length === right.length) {
         rows.push(...left.map((block,index) => [block,right[index]]));
         return rows;
@@ -58,13 +56,16 @@
       html,body{margin:0;padding:0;color:#29251d;font-family:Arial,sans-serif;font-size:${font}pt}
       .mast{border-bottom:2px solid #a87318;padding:0 0 3mm;margin:0 0 4mm}
       .mast small{color:#756a55;font-size:9pt;text-transform:uppercase;letter-spacing:.08em}
+      .psalm-id{font-size:9pt;color:#655d4f;margin:2mm 0 0}
       h1{font-size:15pt;margin:2mm 0 1mm} .meta{font-size:10pt;color:#655d4f}
       table{width:100%;border-collapse:collapse;table-layout:fixed}
       th{background:#ede7da;text-align:left;padding:2mm;border:1px solid #cfc7b8;font-size:10pt}
-      td{width:50%;padding:2.5mm;vertical-align:top;border:1px solid #cfc7b8;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.48}
-      tr{break-inside:avoid;page-break-inside:avoid}\n      .unit-label{display:block;font-size:.86em;color:#74531e;letter-spacing:.025em;margin-bottom:2mm}\n      .unit-line{white-space:pre-wrap;margin:0 0 1.5mm;line-height:1.48}\n      .is-glosa{background:#f2e6c9;border-left:3px solid #a87318;padding:2mm 3mm;font-weight:650;margin-bottom:1.5mm}\n      .is-alternative{font-style:italic}\n      tbody tr:nth-child(even) td{background:#fdfbf6}
+      td{width:50%;padding:2.2mm;vertical-align:top;border:1px solid #cfc7b8;white-space:normal;overflow-wrap:anywhere;line-height:1.38}
+      tr{break-inside:avoid;page-break-inside:avoid}\n      .unit-label{display:block;font-size:.86em;color:#74531e;letter-spacing:.025em;margin-bottom:1mm}\n      .unit-line{white-space:pre-wrap;margin:0 0 1mm;line-height:1.38}\n      .is-glosa{background:#f2e6c9;border-left:3px solid #a87318;padding:1.4mm 2mm;font-weight:650;margin-bottom:1mm}\n      .is-alternative{font-style:italic}\n      tbody tr:nth-child(even) td{background:#fdfbf6}
       td:nth-child(2){background:#fcfaf5}
-      .notice{font-size:9pt;color:#675d4d;margin-top:5mm}
+      .notice{font-size:8pt;color:#675d4d;margin-top:3mm}
+      .contact{font-size:8pt;color:#6f6a60;margin-top:4mm;text-align:right;break-inside:avoid}
+      .contact a{color:inherit;text-decoration:none;border-bottom:1px solid #cfc7b8}
       .notes{margin-top:8mm;break-inside:avoid}
       .notes h2{font-size:10pt}.notes .line{border-bottom:1px solid #cfc7b8;height:12mm}
       @media screen{body{padding:15mm;max-width:1100px;margin:auto;background:white}}
@@ -78,6 +79,7 @@
     const context = clean(article.querySelector('.card-kicker')?.textContent);
     const meta = clean(article.querySelector('.card-meta')?.textContent);
     const source = clean(article.querySelector('.source-version')?.textContent);
+    const psalmHeading = clean(article.querySelector('.psalm-header')?.textContent);
     const isPsalm = Boolean(original?.querySelector('.psalm-sequence'));
     const left = blocksFor(original), right = blocksFor(glosa);
     const settings = document.createElement('dialog');
@@ -112,10 +114,12 @@
           `<tr><td>${renderBlock(a)}</td><td>${renderBlock(b)}</td></tr>`).join('');
         const doc = `<!doctype html><html lang="pt-BR"><head><meta charset="UTF-8"><title>${escapeHTML(title)} — Caminhos da Palavra</title><style>${styleFor(font,paper,notes)}</style></head><body>
           <header class="mast"><small>Caminhos da Palavra · por Libras com Eduarda</small><h1>${escapeHTML(title)}</h1>
-          ${reference ? `<div class="meta">${escapeHTML([context,meta,source].filter(Boolean).join(' · '))}</div>` : ''}</header>
+          ${reference ? `<div class="meta">${escapeHTML([context,meta,source].filter(Boolean).join(' · '))}</div>` : ''}
+          ${psalmHeading ? `<p class="psalm-id">${escapeHTML(psalmHeading)}</p>` : ''}</header>
           <table><thead><tr><th>Texto litúrgico</th><th>Glosa de apoio à Libras</th></tr></thead><tbody>${rows}</tbody></table>
           <p class="notice">Material de estudo. Glosas são instrumentos de preparação, não constituem Libras nem tradução oficial. Verifique a fonte e os direitos de reprodução do texto.</p>
           ${notes ? '<section class="notes"><h2>Anotações</h2><div class="line"></div><div class="line"></div><div class="line"></div></section>' : ''}
+          <footer class="contact">Caminhos da Palavra · WhatsApp <a href="https://wa.me/5562992053534" target="_blank" rel="noopener">(62) 99205-3534</a></footer>
           <script>window.addEventListener('load',()=>setTimeout(()=>window.print(),350));<\/script></body></html>`;
         const pop = window.open('', '_blank');
         if (!pop) {
