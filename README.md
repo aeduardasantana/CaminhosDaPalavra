@@ -145,3 +145,24 @@ O VLibras não substitui interpretação humana.
 - vídeos próprios e interpretação humana em Libras;
 - expansão de músicas, orações, rosário e glossário;
 - conexão futura entre versões bíblicas e glosas específicas de cada tradução.
+
+## Auditoria UX e manutenção — 10/10/2026
+
+- Navegação sem subpáginas físicas por âncoras `#inicio`, `#biblia`, `#plano-de-leitura`, `#calendario-liturgico`, `#liturgia-e-libras`; títulos de aba atualizados por seção e histórico do navegador preservado.
+- Link específico de leitura: `#liturgia-e-libras?data=AAAA-MM-DD&item=salmo` (o tipo pode ser leitura ou evangelho conforme os valores cadastrados). Cada cartão oferece copiar o link. O link direciona à seção, aplica data e tipo de item; não identifica um registro individual quando há mais de um com o mesmo tipo na data.
+- Calendário: indicador do dia atual, aviso de disponibilidade de leituras no nome acessível dos dias e botão de retorno ao mês atual.
+- Plano de Leitura: botões Exportar/Importar progresso geram e leem JSON local. Importação valida catálogo e faixas de capítulos, limita tamanho e une as marcações existentes às importadas; não apaga capítulos previamente concluídos. O usuário deve guardar o arquivo com segurança. Não há envio para servidores.
+- Acessibilidade: foco visível e modo de movimento reduzido; ainda são necessários testes manuais em teclado, leitores de tela e aparelhos móveis.
+- PDFs: o cronograma é impresso em um documento isolado da interface para evitar o VLibras no papel; o PDF litúrgico conserva comparação por trechos quando disponíveis. Os dois fluxos requerem confirmação visual após o deploy.
+- HTTPS: verificar no painel da Locaweb o certificado SSL do subdomínio, a validade e o redirecionamento HTTP→HTTPS. Não publicar regras de redirect sem confirmar SSL ativo e a topologia da hospedagem.
+- Deploy: workflow GitHub Actions configurado na `main` para FTP em `public_html/caminhosdapalavra/`; sucesso de commits não garante, por si só, publicação ou validade do HTTPS.
+
+### Critérios de aceitação manuais recomendados
+
+1. Abrir cada âncora em aba anônima, atualizar e testar Voltar/Avançar.
+2. Copiar um link de salmo, abrir em nova aba e confirmar data e tipo aplicados.
+3. Marcar um capítulo, exportar o JSON, importar em outro navegador e confirmar a união sem perda das marcações.
+4. Navegar pelo calendário com Tab e Shift+Tab, testar mês atual e clicar numa data com leitura.
+5. Conferir PDF de 365 dias no começo, no dia 150, no dia 151 e no final, verificando tabelas sem coluna vazia.
+6. Conferir a prévia do PDF litúrgico em A4 retrato, sem controles flutuantes.
+7. Validar `https://caminhosdapalavra.compassrosesystems.com.br/` e o certificado SSL em um navegador real.
