@@ -1254,3 +1254,38 @@ select,
     padding:16px 0 20px;
   }
 }
+
+/* Plano final de leitura: uma marcação por capítulo, sem controles por versículo. */
+.chapter-only-detail {
+  grid-template-columns: minmax(0,1fr) auto;
+  align-items: center;
+  gap: 14px;
+  padding: 15px 17px;
+}
+.chapter-only-check {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.chapter-only-check input {
+  width: 20px;
+  height: 20px;
+  min-height: 0;
+  flex: 0 0 20px;
+  margin: 0;
+  accent-color: var(--accent-strong);
+}
+.chapter-only-check strong { overflow-wrap: anywhere; }
+.chapter-only-detail > a {
+  color: var(--accent-strong);
+  font-size: .84rem;
+  font-weight: 750;
+  white-space: nowrap;
+}
+@media (max-width: 520px) {
+  .chapter-only-detail { grid-template-columns: 1fr; }
+  .chapter-only-detail > a { padding-left: 32px; }
+}
