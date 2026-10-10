@@ -166,3 +166,12 @@ O VLibras não substitui interpretação humana.
 5. Conferir PDF de 365 dias no começo, no dia 150, no dia 151 e no final, verificando tabelas sem coluna vazia.
 6. Conferir a prévia do PDF litúrgico em A4 retrato, sem controles flutuantes.
 7. Validar `https://caminhosdapalavra.compassrosesystems.com.br/` e o certificado SSL em um navegador real.
+
+## Revisão editorial das glosas — Ano A (10/10/2026)
+
+O acervo do Ano A contém **60 celebrações e 241 itens**, com originais e glosas-base associados. Foi realizada triagem estrutural dos 241 registros e revisão editorial ampliada de 7 roteiros prioritários (Jo 4,5-42; Jo 9,1-41; Jo 11,1-45; Mt 26,14–27,66; Rm 5,12-19; Mt 5,17-37; Mt 13,1-23). Os textos reescritos estão isolados em `glosas-revisadas-ano-a.js`, identificados pela chave da celebração, sem alterar as glosas dos ciclos B e C.
+
+Também foram criados mapeamentos específicos de refrão e estrofes para o **Salmo 72** no 2º Domingo do Advento e na Epifania, evitando reutilizar uma mesma glosa para configurações litúrgicas distintas. A correspondência dos demais salmos deve ser conferida individualmente.
+
+O inventário, os alertas editoriais e os critérios de homologação estão em [REVISAO-GLOSAS-ANO-A.md](./REVISAO-GLOSAS-ANO-A.md). **A revisão editorial escrita não constitui validação da Libras**: naturalidade, espacialização, uso de marcadores não manuais, adequação pastoral e concordância com a comunidade surda dependem de análise especializada e ensaio. Os demais itens continuam classificados como preliminares.
+
