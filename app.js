@@ -654,13 +654,65 @@ function bindAccordion(trigger) {
   });
 }
 
+// Default view follows the closest upcoming celebration with available readings.
+let showFullLiturgyArchive = false;
+function todayIsoLocal() {
+  const now = new Date();
+  return [now.getFullYear(), String(now.getMonth()+1).padStart(2, '0'), String(now.getDate()).padStart(2, '0')].join('-');
+}
+function upcomingLiturgyDate() {
+  const today = todayIsoLocal();
+  const start = new Date(today + 'T12:00:00');
+  for (let offset = 0; offset <= 370; offset++) {
+    const candidate = new Date(start);
+    candidate.setDate(start.getDate() + offset);
+    const iso = [candidate.getFullYear(), String(candidate.getMonth()+1).padStart(2,'0'), String(candidate.getDate()).padStart(2,'0')].join('-');
+    if (candidate.getFullYear() > litCalendar.maxYear) break;
+    if (candidate.getFullYear() < litCalendar.minYear) continue;
+    if (recordForDate(iso).length) return iso;
+  }
+  return '';
+}
+function updateLiturgyArchiveControl(defaultDate) {
+  const parent = els.resultCount.parentElement;
+  let control = parent.querySelector('.liturgy-archive-toggle');
+  if (!control) {
+    control = document.createElement('button');
+    control.className = 'secondary-button liturgy-archive-toggle';
+    control.type = 'button';
+    control.style.cssText = 'margin-top:8px;font-size:.82rem;padding:8px 12px;white-space:normal';
+    control.addEventListener('click', () => {
+      showFullLiturgyArchive = !showFullLiturgyArchive;
+      els.query.value = '';
+      els.date.value = '';
+      els.year.value = '';
+      els.item.value = '';
+      renderLiturgia();
+    });
+    parent.appendChild(control);
+  }
+  const hasFilters = Boolean(els.query.value.trim() || els.date.value || els.year.value || els.item.value);
+  control.textContent = showFullLiturgyArchive && !hasFilters ? 'Ver próxima celebração' : 'Consultar acervo completo';
+  control.hidden = hasFilters;
+  let hint = parent.querySelector('.liturgy-date-hint');
+  if (!hint) {
+    hint = document.createElement('div');
+    hint.className = 'liturgy-date-hint';
+    hint.style.cssText = 'font-size:.82rem;color:#6f6a60;margin-top:6px';
+    parent.appendChild(hint);
+  }
+  hint.textContent = !hasFilters && !showFullLiturgyArchive && defaultDate
+    ? 'Próxima celebração: ' + formatDate(defaultDate)
+    : '';
+}
+
 function renderLiturgia() {
   const q = normalize(els.query.value);
   const date = els.date.value;
   const year = els.year.value;
   const item = els.item.value;
 
-  const sourceEntries = date ? entriesForDate(date) : allLiturgyEntries;
+  const noFilters = !q && !date && !year && !item;\n  const defaultDate = noFilters && !showFullLiturgyArchive ? upcomingLiturgyDate() : '';\n  const sourceEntries = date ? entriesForDate(date) : defaultDate ? entriesForDate(defaultDate) : allLiturgyEntries;\n  updateLiturgyArchiveControl(defaultDate);
   const filtered = sourceEntries
     .filter(entry => {
       const matchesQuery = !q || searchableText(entry).includes(q);
