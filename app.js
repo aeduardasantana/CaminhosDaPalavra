@@ -1297,7 +1297,7 @@ function renderFullSchedule(progress, startDate) {
     '<span>Início: ' + formatDate(startDate) + '</span>' +
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
-    '<span>Ritmo: ' + minDaily + ' a ' + maxDaily + ' capítulos por dia; ' + daysWithPsalm + ' dias com um Salmo diário no Antigo Testamento</span>' +
+    '<span>Ritmo: ' + minDaily + '–' + maxDaily + ' capítulos/dia · Salmos: dias 76–225 (' + daysWithPsalm + ' dias)</span>' +
     '<span>Organização: Caminhos da Palavra · referência metodológica: Pe. Jonas Abib e Revista Ave Maria (setembro/2026, p. 6). Sequência diária própria; sem releituras; um Salmo por dia durante 150 dias do Antigo Testamento.</span>';
 
   schedule.forEach(day => {
@@ -1308,54 +1308,55 @@ function renderFullSchedule(progress, startDate) {
 
   els.fullPlanSchedule.replaceChildren();
 
+  let overallDay = 0;
   groups.forEach(days => {
     const monthSection = document.createElement('section');
     monthSection.className = 'plan-month';
-
     const heading = document.createElement('h4');
     heading.className = 'plan-month-title';
     heading.textContent = monthHeading(days[0].date);
     monthSection.appendChild(heading);
 
-    const list = document.createElement('div');
-    list.className = 'plan-days';
+    const table = document.createElement('table');
+    table.className = 'plan-print-table';
+    const thead = document.createElement('thead');
+    thead.innerHTML = '<tr><th scope="col">Dia</th><th scope="col">Data</th><th scope="col">Capítulos da leitura</th><th scope="col">Salmo diário</th></tr>';
+    const tbody = document.createElement('tbody');
+
+    function addChapter(container, step) {
+      const label = document.createElement('span');
+      label.className = 'print-chapter-check';
+      const tick = document.createElement('span');
+      tick.className = 'print-check-box';
+      tick.setAttribute('aria-hidden','true');
+      const name = document.createElement('span');
+      name.textContent = step.bookName + ' ' + step.chapter;
+      label.append(tick, name);
+      container.appendChild(label);
+    }
 
     days.forEach(day => {
-      const article = document.createElement('article');
-      article.className = 'plan-day';
-
-      const dateBox = document.createElement('div');
-      dateBox.className = 'plan-date';
-      const [y,m,d] = day.date.split('-').map(Number);
-      const dateObj = new Date(y, m - 1, d, 12);
-      dateBox.innerHTML =
-        '<strong>' + d + '</strong>' +
-        '<span>' + new Intl.DateTimeFormat('pt-BR',{weekday:'short'}).format(dateObj).replace('.', '') + '</span>';
-
-      const content = document.createElement('div');
-      content.className = 'plan-day-content';
-
-      const passageSummary = document.createElement('p');
-      passageSummary.className = 'plan-passage-summary';
-      passageSummary.textContent = day.steps.map(step => step.bookName + ' ' + step.chapter).join(' · ');
-
-      const printChecklist = document.createElement('div');
-      printChecklist.className = 'print-chapter-checklist';
-      day.steps.forEach(step => {
-        const item = document.createElement('span');
-        item.className = 'print-chapter-check';
-        item.innerHTML =
-          '<span class="print-check-box" aria-hidden="true"></span>' +
-          '<span>' + step.bookName + ' ' + step.chapter + '</span>';
-        printChecklist.appendChild(item);
-      });
-
-      content.append(passageSummary, printChecklist);
-      article.append(dateBox, content);
-      list.appendChild(article);
+      overallDay++;
+      const dateParts = day.date.split('-');
+      const row = document.createElement('tr');
+      const number = document.createElement('td');
+      number.className = 'plan-print-number';
+      number.textContent = String(overallDay).padStart(3, '0');
+      const date = document.createElement('td');
+      date.className = 'plan-print-date';
+      date.textContent = dateParts[2] + '/' + dateParts[1];
+      const main = document.createElement('td');
+      main.className = 'plan-print-readings';
+      day.steps.filter(step => step.bookId !== 'PSA').forEach(step => addChapter(main, step));
+      const psalm = document.createElement('td');
+      psalm.className = 'plan-print-psalm';
+      day.steps.filter(step => step.bookId === 'PSA').forEach(step => addChapter(psalm, step));
+      if (!psalm.children.length) psalm.textContent = '—';
+      row.append(number, date, main, psalm);
+      tbody.appendChild(row);
     });
-
-    monthSection.appendChild(list);
+    table.append(thead, tbody);
+    monthSection.appendChild(table);
     els.fullPlanSchedule.appendChild(monthSection);
   });
 }
