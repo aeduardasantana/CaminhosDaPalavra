@@ -1282,7 +1282,7 @@ function renderFullSchedule(progress, startDate) {
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
     '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
-    '<span>Referência: inspiração no método de Monsenhor Jonas Abib; sequência e divisão diária organizadas pelo projeto.</span>';
+    '<span>Referência: Revista Ave Maria, setembro de 2026, p. 6 — “Por onde começar a ler a Bíblia?” (inspirada no método do Pe. Jonas Abib). Cronograma de 365 dias adaptado pelo Caminhos da Palavra.</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
