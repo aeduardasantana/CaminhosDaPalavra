@@ -1318,46 +1318,66 @@ function renderFullSchedule(progress, startDate) {
     heading.textContent = monthHeading(days[0].date);
     monthSection.appendChild(heading);
 
-    const table = document.createElement('table');
-    table.className = 'plan-print-table';
-    const thead = document.createElement('thead');
-    thead.innerHTML = '<tr><th scope="col">Dia</th><th scope="col">Data</th><th scope="col">Capítulos da leitura</th><th scope="col">Salmo diário</th></tr>';
-    const tbody = document.createElement('tbody');
+    // Quando terminam os Salmos, a coluna deixa de existir completamente.
+    // Um mês que inclua o dia 150 é dividido em dois segmentos na própria ordem.
+    const segments = [];
+    days.forEach(day => {
+      overallDay++;
+      const hasPsalm = day.steps.some(step => step.bookId === 'PSA');
+      const last = segments[segments.length - 1];
+      if (!last || last.hasPsalm !== hasPsalm) {
+        segments.push({hasPsalm, days: []});
+      }
+      segments[segments.length - 1].days.push({day, number: overallDay});
+    });
 
     function addChapter(container, step) {
       const label = document.createElement('span');
       label.className = 'print-chapter-check';
       const tick = document.createElement('span');
       tick.className = 'print-check-box';
-      tick.setAttribute('aria-hidden','true');
+      tick.setAttribute('aria-hidden', 'true');
       const name = document.createElement('span');
+      name.className = 'print-chapter-name';
       name.textContent = step.bookName + ' ' + step.chapter;
       label.append(tick, name);
       container.appendChild(label);
     }
 
-    days.forEach(day => {
-      overallDay++;
-      const dateParts = day.date.split('-');
-      const row = document.createElement('tr');
-      const number = document.createElement('td');
-      number.className = 'plan-print-number';
-      number.textContent = String(overallDay).padStart(3, '0');
-      const date = document.createElement('td');
-      date.className = 'plan-print-date';
-      date.textContent = dateParts[2] + '/' + dateParts[1];
-      const main = document.createElement('td');
-      main.className = 'plan-print-readings';
-      day.steps.filter(step => step.bookId !== 'PSA').forEach(step => addChapter(main, step));
-      const psalm = document.createElement('td');
-      psalm.className = 'plan-print-psalm';
-      day.steps.filter(step => step.bookId === 'PSA').forEach(step => addChapter(psalm, step));
-      if (!psalm.children.length) psalm.textContent = '—';
-      row.append(number, date, main, psalm);
-      tbody.appendChild(row);
+    segments.forEach(segment => {
+      const table = document.createElement('table');
+      table.className = 'plan-print-table' + (segment.hasPsalm ? ' has-psalm' : ' without-psalm');
+      const thead = document.createElement('thead');
+      thead.innerHTML = segment.hasPsalm
+        ? '<tr><th scope="col">Dia</th><th scope="col">Data</th><th scope="col">Capítulos da leitura</th><th scope="col">Salmo diário</th></tr>'
+        : '<tr><th scope="col">Dia</th><th scope="col">Data</th><th scope="col">Capítulos da leitura</th></tr>';
+      const tbody = document.createElement('tbody');
+
+      segment.days.forEach(({day, number: dayNumber}) => {
+        const dateParts = day.date.split('-');
+        const row = document.createElement('tr');
+        const number = document.createElement('td');
+        number.className = 'plan-print-number';
+        number.textContent = String(dayNumber).padStart(3, '0');
+        const date = document.createElement('td');
+        date.className = 'plan-print-date';
+        date.textContent = dateParts[2] + '/' + dateParts[1];
+        const main = document.createElement('td');
+        main.className = 'plan-print-readings';
+        day.steps.filter(step => step.bookId !== 'PSA').forEach(step => addChapter(main, step));
+        row.append(number, date, main);
+
+        if (segment.hasPsalm) {
+          const psalm = document.createElement('td');
+          psalm.className = 'plan-print-psalm';
+          day.steps.filter(step => step.bookId === 'PSA').forEach(step => addChapter(psalm, step));
+          row.appendChild(psalm);
+        }
+        tbody.appendChild(row);
+      });
+      table.append(thead, tbody);
+      monthSection.appendChild(table);
     });
-    table.append(thead, tbody);
-    monthSection.appendChild(table);
     els.fullPlanSchedule.appendChild(monthSection);
   });
 }
