@@ -44,5 +44,72 @@ window.LCE_PSALM_GLOSSA_CONTEXT = Object.assign(window.LCE_PSALM_GLOSSA_CONTEXT 
         "TER COMPAIXÃO FRACOS E POBRES / PROTEGER VIDA OPRIMIDOS."
       ]
     ]
+  },
+  "A|ADVENTO|1º Domingo|salmo|Sl 122": {
+    "refrain": "VAMOS COM ALEGRIA / CASA DO SENHOR IR.",
+    "stanzas": [
+      [
+        "PESSOAS DIZER: VAMOS CASA SENHOR / EU FICAR ALEGRE.",
+        "NOSSOS PÉS CHEGAR / PARAR NAS PORTAS JERUSALÉM."
+      ],
+      [
+        "TRIBOS POVO ISRAEL / SUBIR JERUSALÉM.",
+        "ALI / NOME SENHOR CELEBRAR.",
+        "ALI TAMBÉM / TRIBUNAIS DE JUSTIÇA / CASA DE DAVID."
+      ],
+      [
+        "JERUSALÉM / PAZ PEDIR.",
+        "PESSOAS QUE AMAM CIDADE / VIVER SEGURAS.",
+        "DENTRO MUROS / PAZ / NOS PALÁCIOS / TRANQUILIDADE."
+      ],
+      [
+        "POR AMOR IRMÃOS E AMIGOS / EU PEDIR PAZ PARA VOCÊ JERUSALÉM.",
+        "POR AMOR CASA SENHOR / PEDIR TODOS BENS PARA VOCÊ."
+      ]
+    ]
+  },
+  "A|ADVENTO|3º Domingo|salmo|Sl 146": {
+    "refrain": "SENHOR / VENHA SALVAR-NOS.",
+    "alternativeRefrain": "VENHA / SENHOR / NÓS SALVAR.",
+    "stanzas": [
+      [
+        "SENHOR FAZER JUSTIÇA A PESSOAS OPRIMIDAS.",
+        "PESSOAS COM FOME / ELE PÃO DAR.",
+        "PESSOAS PRESAS / ELE LIBERTAR."
+      ],
+      [
+        "SENHOR / OLHOS CEGOS ABRIR.",
+        "PESSOAS ABATIDAS / ELE LEVANTAR.",
+        "SENHOR / AMAR PESSOAS JUSTAS."
+      ],
+      [
+        "PESSOAS PEREGRINAS / SENHOR PROTEGER.",
+        "CRIANÇA ÓRFÃ E MULHER VIÚVA / ELE AMPARAR.",
+        "CAMINHO DE QUEM PRATICA MAL / ELE IMPEDIR.",
+        "SENHOR REINAR PARA SEMPRE / DE GERAÇÃO EM GERAÇÃO."
+      ]
+    ]
+  },
+  "A|ADVENTO|4º Domingo|salmo|Sl 24": {
+    "refrain": "SENHOR / VENHA / ELE REI GLORIOSO.",
+    "alternativeRefrain": "SENHOR VIRÁ / ELE REI DA GLÓRIA.",
+    "stanzas": [
+      [
+        "TERRA E TUDO QUE NELA EXISTIR / PERTENCER AO SENHOR.",
+        "MUNDO / TODOS QUE NELE VIVEM / PERTENCER AO SENHOR.",
+        "SENHOR CRIAR TERRA / FIRMAR SOBRE ÁGUAS."
+      ],
+      [
+        "QUEM PODER SUBIR MONTE DO SENHOR?",
+        "QUEM PODER FICAR EM SEU SANTUÁRIO?",
+        "PESSOA MÃOS INOCENTES / CORAÇÃO PURO.",
+        "NOME DE DEUS NÃO USAR EM VÃO / NÃO JURAR FALSO."
+      ],
+      [
+        "ESSA PESSOA / SENHOR ABENÇOAR.",
+        "DEUS SALVADOR / RECOMPENSAR.",
+        "ESSE POVO / BUSCAR SENHOR / BUSCAR FACE DEUS DE JACÓ."
+      ]
+    ]
   }
 });
