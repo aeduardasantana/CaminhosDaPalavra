@@ -776,7 +776,29 @@ function renderLiturgia() {
   });
 }
 
+// Links compartilháveis por seção sem criar subdiretórios na Locaweb.
+const SECTION_PATHS = Object.freeze({
+  projeto: 'inicio',
+  biblia: 'biblia',
+  plano: 'plano-de-leitura',
+  calendario: 'calendario-liturgico',
+  liturgia: 'liturgia-e-libras'
+});
+const PATH_SECTIONS = Object.fromEntries(Object.entries(SECTION_PATHS).map(([key, path]) => [path, key]));
+function sectionFromUrl() {
+  const slug = decodeURIComponent(window.location.hash.slice(1)).replace(/^\/+/, '').toLowerCase();
+  return PATH_SECTIONS[slug] || 'projeto';
+}
+function syncSectionUrl(section) {
+  const hash = '#' + SECTION_PATHS[section];
+  if (window.location.hash !== hash) {
+    window.history.pushState({section}, '', hash);
+  }
+}
+
 function setSection(section, options = {}) {
+  if (!els.sections[section]) section = 'projeto';
+  if (!options.fromHistory) syncSectionUrl(section);
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
   if (section === 'liturgia') renderLiturgia();
@@ -1395,6 +1417,9 @@ els.clear.addEventListener('click', () => {
   els.query.focus();
 });
 
+window.addEventListener('popstate', () => setSection(sectionFromUrl(), {fromHistory:true}));
+window.addEventListener('hashchange', () => setSection(sectionFromUrl(), {fromHistory:true}));
+
 els.navButtons.forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.section)));
 document.querySelectorAll('[data-go]').forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.go)));
 
@@ -1533,3 +1558,6 @@ els.resetPlan.addEventListener('click', () => {
 });
 
 initCalendarControls();
+// Abre o destino correto inclusive ao carregar ou atualizar um link compartilhado.
+setSection(sectionFromUrl(), {fromHistory:true});
+
