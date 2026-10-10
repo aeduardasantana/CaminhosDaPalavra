@@ -1247,3 +1247,18 @@ select,
 /* A tabela do cronograma é reservada para a versão impressa. */
 .plan-print-table { display:none; }
 @media print { .plan-print-table { display:table; } }
+
+/* Refinamentos UX: controles de backup, links, calendário e foco acessível. */
+.progress-backup-controls { display:flex; flex-wrap:wrap; align-items:center; gap:10px; margin-top:14px; }
+.progress-backup-status { flex-basis:100%; margin:0; color:var(--muted); font-size:.84rem; }
+.progress-backup-status:empty { display:none; }
+.calendar-today { align-self:end; white-space:nowrap; }
+.calendar-day.is-today { outline:2px solid var(--accent-strong); outline-offset:-3px; }
+.share-liturgy-link { margin:12px 16px; font-size:.8rem; padding:7px 10px; }
+:where(a,button,input,select,summary,textarea):focus-visible { outline:3px solid #926116; outline-offset:3px; }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *, *::before, *::after { transition-duration:.01ms !important; animation-duration:.01ms !important; } }
+@media(max-width:700px) {
+  .calendar-today { width:100%; }
+  .progress-backup-controls button { flex:1 1 150px; }
+}
+@media print { .progress-backup-controls,.calendar-today,.share-liturgy-link { display:none !important; } }
