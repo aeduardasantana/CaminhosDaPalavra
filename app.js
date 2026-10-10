@@ -1465,9 +1465,12 @@ function printReadingPlan() {
     .plan-print-table tr:nth-child(even) td { background: #faf9f6; }
     .plan-print-table th:nth-child(1),.plan-print-table td:nth-child(1) { width: 11mm; }
     .plan-print-table th:nth-child(2),.plan-print-table td:nth-child(2) { width: 18mm; }
-    .plan-print-table th:nth-child(4),.plan-print-table td:nth-child(4) { width: 33mm; border-left: 1px solid #ded7cd; }
+    .plan-print-table.has-psalm th:nth-child(4),.plan-print-table.has-psalm td:nth-child(4) { width: 33mm; border-left: 1px solid #ded7cd; }
+    .plan-print-table.without-psalm th:nth-child(3),.plan-print-table.without-psalm td:nth-child(3) { width: auto; }
     .plan-print-number { color: #8a6117; font-weight: 700; }
-    .print-chapter-check { display: inline-flex; align-items: center; gap: 1.2mm; margin: 0 2mm 1mm 0; white-space: nowrap; }
+    .plan-print-readings, .plan-print-psalm { line-height: 1.5; }
+    .print-chapter-check { display: inline-flex; align-items: center; vertical-align: top; gap: 1.2mm; margin: 0 3mm 1.4mm 0; white-space: nowrap; max-width: 100%; }
+    .print-chapter-name { line-height: 1.35; }
     .print-check-box { display: inline-block; width: 3mm; height: 3mm; flex: 0 0 3mm; border: 1px solid #514b43; }
     .print-footer { color: #6a6256; font-size: 8pt; margin: 6mm 0 0; border-top: 1px solid #ded7cd; padding-top: 2mm; }
     @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
