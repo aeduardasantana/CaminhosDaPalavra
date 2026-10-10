@@ -3,6 +3,7 @@ const bible = window.LCE_BIBLE;
 const litCalendar = window.LCE_CALENDAR;
 const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
+const glossaAnoARevisada = window.LCE_GLOSSA_ANO_A_REVISADA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
 const psalmGlossaContext = window.LCE_PSALM_GLOSSA_CONTEXT || {};
@@ -155,11 +156,16 @@ function genericLiturgyEntries() {
       item: item.type,
       itemLabel: item.label,
       referencia: item.reference,
-      status: detailedPilot ? detailedPilot.status : (glossa[item.reference] ? 'Glosa-base preliminar' : 'Glosa em produção'),
+      status: glossaAnoARevisada[contextKey]
+        ? 'Roteiro editorial ampliado — validação linguística em Libras pendente'
+        : detailedPilot ? detailedPilot.status
+        : (glossa[item.reference]
+          ? (record.cycle === 'A' ? 'Glosa-base preliminar — validação linguística pendente' : 'Glosa-base preliminar')
+          : 'Glosa em produção'),
       sourceVersion: originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado',
       sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
-      glosa: detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
+      glosa: glossaAnoARevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       glosaContext: item.type === 'salmo' ? (psalmGlossaContext[contextKey] || null) : null,
       note: item.note || '',
       keywords: [
