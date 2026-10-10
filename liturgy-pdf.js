@@ -78,7 +78,8 @@
     const context = clean(article.querySelector('.card-kicker')?.textContent);
     const meta = clean(article.querySelector('.card-meta')?.textContent);
     const source = clean(article.querySelector('.source-version')?.textContent);
-    const isPsalm = Boolean(original?.querySelector('.psalm-sequence'));\n    const left = blocksFor(original), right = blocksFor(glosa);
+    const isPsalm = Boolean(original?.querySelector('.psalm-sequence'));
+    const left = blocksFor(original), right = blocksFor(glosa);
     const settings = document.createElement('dialog');
     settings.className = 'lce-pdf-dialog';
     settings.setAttribute('aria-label', 'Configurar PDF comparativo');
