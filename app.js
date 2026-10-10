@@ -819,6 +819,14 @@ function contentForDate(isoDate) {
   return entriesForDate(isoDate);
 }
 
+function openLiturgicalDate(iso) {
+  els.query.value = '';
+  els.date.value = iso;
+  els.year.value = '';
+  els.item.value = '';
+  setSection('liturgia', {scrollToResults: true});
+}
+
 function selectCalendarDate(dayInfo) {
   selectedCalendarDate = dayInfo.iso;
   const contents = contentForDate(dayInfo.iso);
@@ -837,13 +845,7 @@ function selectCalendarDate(dayInfo) {
     button.type = 'button';
     button.className = 'secondary-button calendar-action';
     button.textContent = 'Abrir liturgia desta data';
-    button.addEventListener('click', () => {
-      els.date.value = dayInfo.iso;
-      els.query.value = '';
-      els.year.value = '';
-      els.item.value = '';
-      setSection('liturgia', {scrollToResults: true});
-    });
+    button.addEventListener('click', () => openLiturgicalDate(dayInfo.iso));
     els.calendarDetail.appendChild(button);
   }
 
@@ -880,7 +882,17 @@ function renderCalendar() {
       '<span class="day-season">Ano ' + dayInfo.cycle + '</span>';
 
     button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle);
-    button.addEventListener('click', () => selectCalendarDate(dayInfo));
+    button.addEventListener('click', () => {
+      if (contentForDate(dayInfo.iso).length) {
+        openLiturgicalDate(dayInfo.iso);
+      } else {
+        selectCalendarDate(dayInfo);
+        requestAnimationFrame(() => els.calendarDetail.scrollIntoView({
+          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+          block: 'nearest'
+        }));
+      }
+    });
     els.calendarGrid.appendChild(button);
   });
 
