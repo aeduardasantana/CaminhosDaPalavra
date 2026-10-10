@@ -223,5 +223,157 @@ window.LCE_PSALM_GLOSSA_CONTEXT = Object.assign(window.LCE_PSALM_GLOSSA_CONTEXT 
         "POR TODAS GERAÇÕES / ELE REI."
       ]
     ]
+  },
+  "B|QUARESMA|1º Domingo|salmo|Sl 25": {
+    "refrain": "SENHOR / TEUS CAMINHOS / AMOR E VERDADE / PARA QUEM SER FIEL À TUA ALIANÇA.",
+    "stanzas": [
+      [
+        "SENHOR / MOSTRAR TEUS CAMINHOS PARA MIM.",
+        "ENSINAR TUAS VEREDAS.",
+        "TUA VERDADE / ME GUIAR E ENSINAR.",
+        "TU MEU DEUS SALVADOR."
+      ],
+      [
+        "SENHOR / TUA MISERICÓRDIA LEMBRAR.",
+        "TUA GRAÇA / DESDE SEMPRE.",
+        "LEMBRAR DE MIM COM COMPAIXÃO.",
+        "POR CAUSA TUA BONDADE / SENHOR."
+      ],
+      [
+        "SENHOR / BOM E JUSTO.",
+        "ENSINAR CAMINHO A QUEM PECOU.",
+        "HUMILDES / GUIAR NA JUSTIÇA.",
+        "SUA ALIANÇA / FAZER CONHECER."
+      ]
+    ]
+  },
+  "B|QUARESMA|2º Domingo|salmo|Sl 116": {
+    "refrain": "EU CAMINHAR NA PRESENÇA SENHOR / TERRA DOS VIVOS.",
+    "alternativeRefrain": "NA TERRA DOS VIVOS / DIANTE SENHOR / EU CAMINHAR.",
+    "stanzas": [
+      [
+        "EU CONFIAR NO SENHOR / MESMO QUANDO DIZER SOU MUITO INFELIZ.",
+        "A MORTE PESSOAS FIÉIS / PRECIOSA DIANTE SENHOR."
+      ],
+      [
+        "SENHOR / EU TEU SERVO / FILHO TUA SERVA.",
+        "TU QUEBRAR MINHAS CORRENTES.",
+        "EU OFERECER SACRIFÍCIO LOUVOR.",
+        "TEU NOME / INVOCAR SENHOR."
+      ],
+      [
+        "MINHAS PROMESSAS / EU CUMPRIR DIANTE SENHOR.",
+        "DIANTE TODO SEU POVO.",
+        "NA CASA SENHOR / SEUS ÁTRIOS.",
+        "DENTRO TEUS MUROS / JERUSALÉM."
+      ]
+    ]
+  },
+  "B|QUARESMA|3º Domingo|salmo|Sl 19": {
+    "refrain": "SENHOR / TU TER PALAVRAS DE VIDA ETERNA.",
+    "stanzas": [
+      [
+        "LEI SENHOR / PERFEITA.",
+        "ELA FORTALECER ALMA.",
+        "ORDENS SENHOR / FIRMES.",
+        "DAR SABEDORIA A PESSOAS SIMPLES."
+      ],
+      [
+        "PRECEITOS SENHOR / JUSTOS.",
+        "ALEGRAR CORAÇÃO.",
+        "MANDAMENTOS SENHOR / CLAROS.",
+        "ILUMINAR OLHOS."
+      ],
+      [
+        "RESPEITO AO SENHOR / PURO / DURAR PARA SEMPRE.",
+        "JUÍZOS SENHOR / VERDADEIROS.",
+        "TODOS JUSTOS.",
+        "MAIS PRECIOSOS QUE OURO.",
+        "OURO MAIS PURO.",
+        "MAIS DOCES QUE MEL.",
+        "MEL PURO DOS FAVOS."
+      ]
+    ]
+  },
+  "B|QUARESMA|4º Domingo|salmo|Sl 137": {
+    "refrain": "JERUSALÉM / SE EU TE ESQUECER / MINHA LÍNGUA FIQUE PRESA.",
+    "stanzas": [
+      [
+        "ÀS MARGENS RIOS BABILÔNIA / NÓS SENTAR E CHORAR.",
+        "NÓS SENTIR SAUDADE SIÃO.",
+        "NAS ÁRVORES PRÓXIMAS ÁGUA.",
+        "NÓS PENDURAR HARPAS."
+      ],
+      [
+        "PESSOAS QUE NOS LEVARAM CATIVOS / PEDIR CANÇÕES.",
+        "NOSSOS OPRESSORES / PEDIR CANÇÃO ALEGRE.",
+        "ELES: CANTEM PARA NÓS.",
+        "CANÇÕES DE SIÃO."
+      ],
+      [
+        "NÓS: COMO CANTAR CANÇÃO SENHOR EM TERRA ESTRANGEIRA?",
+        "JERUSALÉM / SE EU TE ESQUECER.",
+        "MINHA MÃO DIREITA / ESQUECER SUA HABILIDADE."
+      ],
+      [
+        "MINHA LÍNGUA FICAR PRESA AO CÉU DA BOCA.",
+        "SE EU NÃO LEMBRAR DE TI.",
+        "SE JERUSALÉM NÃO SER.",
+        "MINHA MAIOR ALEGRIA."
+      ]
+    ]
+  },
+  "B|QUARESMA|5º Domingo|salmo|Sl 51": {
+    "refrain": "SENHOR / CRIAR CORAÇÃO PURO EM MIM.",
+    "stanzas": [
+      [
+        "DEUS / PELA TUA BONDADE / TER PIEDADE DE MIM.",
+        "POR TUA GRANDE MISERICÓRDIA / APAGAR MEUS PECADOS.",
+        "LAVAR TODA MINHA INJUSTIÇA.",
+        "PURIFICAR TODAS MINHAS FALTAS."
+      ],
+      [
+        "DEUS / CRIAR CORAÇÃO PURO EM MIM.",
+        "ESPÍRITO FIRME / RENOVAR DENTRO MIM.",
+        "NÃO ME AFASTAR DA TUA PRESENÇA.",
+        "TEU ESPÍRITO SANTO / NÃO TIRAR DE MIM."
+      ],
+      [
+        "TUA SALVAÇÃO / ALEGRIA DEVOLVER-ME.",
+        "ESPÍRITO GENEROSO / ME SUSTENTAR.",
+        "EU ENSINAR TEUS CAMINHOS A PECADORES.",
+        "PESSOAS DESVIADAS / VOLTAR PARA TI."
+      ]
+    ]
+  },
+  "B|QUARESMA|Domingo de Ramos e da Paixão|salmo|Sl 22": {
+    "refrain": "MEU DEUS / MEU DEUS / POR QUE ME ABANDONASTE?",
+    "stanzas": [
+      [
+        "PESSOAS VER-ME / ZOMBAR.",
+        "MEXER LÁBIOS / BALANÇAR CABEÇA.",
+        "DIZER: ELE CONFIOU NO SENHOR / QUE SENHOR O LIVRE.",
+        "SE DEUS AMA ELE / QUE DEUS O SALVE."
+      ],
+      [
+        "PESSOAS MÁS / COMO CÃES / ME CERCAR.",
+        "GRUPO CRIMINOSOS / ME RODEAR.",
+        "MINHAS MÃOS E PÉS / TRANSPASSADOS.",
+        "MEUS OSSOS / POSSO CONTAR."
+      ],
+      [
+        "MINHAS ROUPAS / DIVIDIR ENTRE ELES.",
+        "MINHA TÚNICA / SORTEAR.",
+        "MAS SENHOR / NÃO FICAR LONGE DE MIM.",
+        "TU MINHA FORÇA / VENHA SOCORRER RAPIDAMENTE."
+      ],
+      [
+        "TEU NOME / VOU ANUNCIAR A MEUS IRMÃOS.",
+        "NO MEIO ASSEMBLEIA / VOU TE LOUVAR.",
+        "VOCÊS QUE RESPEITAM SENHOR / LOUVEM.",
+        "DESCENDENTES JACÓ / DEEM GLÓRIA.",
+        "POVO ISRAEL / REVERENCIAR SENHOR."
+      ]
+    ]
   }
 });
