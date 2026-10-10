@@ -108,36 +108,6 @@ window.LCE_PSALM_REFRAINS_ANO_B = {
   "B|TEMPO COMUM — ANO B|34º Domingo — Cristo Rei|salmo|Sl 93": {
     "refrain": "SENHOR / REI / TRONO DE LUZ."
   },
-  "B|PÁSCOA E TEMPO PASCAL|Domingo da Páscoa|salmo|Sl 118": {
-    "refrain": "ESTE DIA / SENHOR FEZ / NÓS ALEGRAR E CANTAR.",
-    "alternativeRefrain": "ALELUIA."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|2º Domingo da Páscoa|salmo|Sl 118": {
-    "refrain": "AGRADECER SENHOR / ELE BOM / SUA MISERICÓRDIA PARA SEMPRE.",
-    "alternativeRefrain": "SENHOR / NÓS ACLAMAR / AMOR DELE PARA SEMPRE."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|3º Domingo da Páscoa|salmo|Sl 4": {
-    "refrain": "SENHOR / LUZ DO TEU ROSTO / BRILHAR SOBRE NÓS."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|4º Domingo da Páscoa|salmo|Sl 118": {
-    "refrain": "PEDRA QUE CONSTRUTORES REJEITAR / AGORA PEDRA PRINCIPAL."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|5º Domingo da Páscoa|salmo|Sl 22": {
-    "refrain": "SENHOR / NO MEIO DOS JUSTOS REUNIDOS / EU TE LOUVAR.",
-    "alternativeRefrain": "SENHOR / ENTRE MULTIDÃO / EU TE LOUVAR."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|6º Domingo da Páscoa|salmo|Sl 98": {
-    "refrain": "SENHOR / TUA SALVAÇÃO MOSTRAR A TODOS POVOS.",
-    "alternativeRefrain": "DEUS / DIANTE DOS POVOS / SALVAÇÃO MOSTRAR."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|Ascensão do Senhor|salmo|Sl 47": {
-    "refrain": "DEUS SENHOR / SUBIR COM ACLAMAÇÕES / TROMBETA TOCAR.",
-    "alternativeRefrain": "DEUS / SUBIR COM ALEGRIA / TROMBETA TOCAR."
-  },
-  "B|PÁSCOA E TEMPO PASCAL|Pentecostes|salmo|Sl 104": {
-    "refrain": "SENHOR / TEU ESPÍRITO ENVIAR / TERRA RENOVAR.",
-    "alternativeRefrain": "SENHOR / TEU ESPÍRITO MANDAR / TERRA RENOVAR."
-  },
   "B|SOLENIDADES DOMINICAIS DO TEMPO COMUM|Santíssima Trindade|salmo|Sl 33": {
     "refrain": "FELIZ POVO / SENHOR ESCOLHER COMO SUA HERANÇA."
   }
