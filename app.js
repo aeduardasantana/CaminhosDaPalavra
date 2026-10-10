@@ -728,6 +728,20 @@ function updateLiturgyArchiveControl(defaultDate) {
     : '';
 }
 
+// Os textos do Lecionário podem incluir duas FORMAS no mesmo registro.
+ // Seleção visual não altera o texto-fonte nem homologa uma glosa distinta.
+function splitLectionaryVariants(text) {
+  const source = String(text || '');
+  const markers = [...source.matchAll(/^(?:EVANGELHO|LEITURA(?:\s+[IVX]+)?)\s+Forma (longa|breve)\b/gmi)];
+  const long = markers.find(marker => marker[1].toLowerCase() === 'longa');
+  const brief = markers.find(marker => marker[1].toLowerCase() === 'breve' && marker.index > (long?.index ?? -1));
+  if (!long || !brief) return null;
+  return {
+    longa: source.slice(long.index, brief.index).trim(),
+    breve: source.slice(brief.index).trim()
+  };
+}
+
 function renderLiturgia() {
   const q = normalize(els.query.value);
   const date = els.date.value;
@@ -781,8 +795,33 @@ function renderLiturgia() {
       originalTextBox.appendChild(formattedPsalm.fragment);
       glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext, entry.glosaRefrainContext));
     } else {
-      originalTextBox.textContent = entry.original;
+      const variants = entry.ano === 'A' ? splitLectionaryVariants(entry.original) : null;
+      originalTextBox.textContent = variants ? variants.longa : entry.original;
       glosaTextBox.appendChild(formatGlosa(entry.glosa));
+      if (variants) {
+        const switcher = document.createElement('div');
+        switcher.className = 'lectionary-variant-switch';
+        switcher.setAttribute('role', 'group');
+        switcher.setAttribute('aria-label', 'Escolher forma do texto litúrgico');
+        const notice = document.createElement('p');
+        notice.className = 'lectionary-variant-notice';
+        notice.textContent = 'O Lecionário apresenta duas formas. Escolha a que será proclamada. A glosa disponível é uma base de preparação e deve ser conferida para a forma selecionada.';
+        Object.entries({longa:'Forma longa', breve:'Forma breve'}).forEach(([key, title]) => {
+          const button = document.createElement('button');
+          button.type = 'button';
+          button.className = 'secondary-button lectionary-variant-button';
+          button.textContent = title;
+          button.setAttribute('aria-pressed', key === 'longa' ? 'true' : 'false');
+          button.addEventListener('click', () => {
+            originalTextBox.textContent = variants[key];
+            switcher.querySelectorAll('button').forEach(item =>
+              item.setAttribute('aria-pressed', item === button ? 'true' : 'false')
+            );
+          });
+          switcher.appendChild(button);
+        });
+        originalTextBox.before(switcher, notice);
+      }
     }
 
     const originalSourceLink = node.querySelector('.original-source-link');
