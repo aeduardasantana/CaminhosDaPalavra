@@ -1402,7 +1402,73 @@ els.planStartDate.addEventListener('change', () => {
   renderPlan();
 });
 
-els.printPlan.addEventListener('click', () => window.print());
+function printReadingPlan() {
+  // Cria um documento autônomo para imprimir somente o cronograma,
+  // sem recursos flutuantes de acessibilidade ou navegação da página.
+  const heading = document.querySelector('.full-plan-section .compact-heading');
+  const meta = els.printPlanMeta;
+  const schedule = els.fullPlanSchedule;
+  if (!schedule || !schedule.querySelector('.plan-print-table')) {
+    window.alert('O cronograma ainda não foi preparado. Aguarde e tente novamente.');
+    return;
+  }
+
+  const popup = window.open('', '_blank');
+  if (!popup) {
+    window.alert('Permita a abertura de janelas para gerar o PDF do plano.');
+    return;
+  }
+  const documentTitle = 'Caminhos da Palavra — Plano de Leitura em 365 dias';
+  const escapeTitle = value => String(value).replace(/[&<>"]/g, ch => ({
+    '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;'
+  })[ch]);
+
+  const css = `
+    @page { size: A4 portrait; margin: 12mm 12mm; }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; padding: 0; color: #29251c; background: white; font: 9pt/1.35 Arial, sans-serif; }
+    .print-brand { font-size: 8pt; letter-spacing: .08em; text-transform: uppercase; color: #84601c; font-weight: 700; margin: 0 0 3mm; }
+    .compact-heading { margin: 0 0 4mm; padding-bottom: 2mm; border-bottom: 1px solid #baaa8b; }
+    .compact-heading .eyebrow { display: none; }
+    .compact-heading h3 { font: bold 16pt/1.15 Georgia, serif; margin: 0 0 1mm; }
+    .compact-heading p { margin: 0; color: #605b52; font-size: 8.5pt; }
+    .print-plan-meta { border: 1px solid #c8bdab; border-left: 3px solid #9d721d; padding: 3mm; margin: 0 0 5mm; display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 4mm; font-size: 8pt; break-inside: avoid; }
+    .print-plan-meta strong { grid-column: 1/-1; font-size: 11pt; }
+    .print-plan-meta span:last-child { grid-column: 1/-1; border-top: 1px solid #ded6c7; padding-top: 1mm; color: #5e584e; font-size: 7pt; }
+    .plan-month { margin: 0 0 5mm; break-inside: auto; }
+    .plan-month-title { margin: 0; padding: 2mm 3mm; border-left: 3px solid #9d721d; background: #ede7dc; font: bold 10pt Arial, sans-serif; break-after: avoid; }
+    .plan-print-table { display: table; width: 100%; border-collapse: collapse; table-layout: fixed; font-size: 8.3pt; }
+    .plan-print-table thead { display: table-header-group; }
+    .plan-print-table tr { break-inside: avoid; page-break-inside: avoid; }
+    .plan-print-table th { background: #faf8f4; color: #51483a; border-bottom: 1px solid #aa9d88; padding: 2mm 2mm; font: bold 7.5pt Arial, sans-serif; text-align: left; }
+    .plan-print-table td { padding: 2.4mm 2mm; border-bottom: 1px solid #ded7cd; vertical-align: top; }
+    .plan-print-table tr:nth-child(even) td { background: #faf9f6; }
+    .plan-print-table th:nth-child(1),.plan-print-table td:nth-child(1) { width: 11mm; }
+    .plan-print-table th:nth-child(2),.plan-print-table td:nth-child(2) { width: 18mm; }
+    .plan-print-table th:nth-child(4),.plan-print-table td:nth-child(4) { width: 33mm; border-left: 1px solid #ded7cd; }
+    .plan-print-number { color: #8a6117; font-weight: 700; }
+    .print-chapter-check { display: inline-flex; align-items: center; gap: 1.2mm; margin: 0 2mm 1mm 0; white-space: nowrap; }
+    .print-check-box { display: inline-block; width: 3mm; height: 3mm; flex: 0 0 3mm; border: 1px solid #514b43; }
+    .print-footer { color: #6a6256; font-size: 8pt; margin: 6mm 0 0; border-top: 1px solid #ded7cd; padding-top: 2mm; }
+    @media print { body { -webkit-print-color-adjust: exact; print-color-adjust: exact; } }
+  `;
+
+  popup.document.open();
+  popup.document.write(
+    '<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><title>' +
+    escapeTitle(documentTitle) + '</title><style>' + css +
+    '</style></head><body><main><p class="print-brand">Caminhos da Palavra · por Libras com Eduarda</p>' +
+    (heading?.outerHTML || '') + meta.outerHTML + schedule.outerHTML +
+    '<footer class="print-footer">Caminhos da Palavra · Plano pessoal de leitura bíblica</footer>' +
+    '</main></body></html>'
+  );
+  popup.document.close();
+  // Aguarda a diagramação do documento independente antes da prévia.
+  popup.addEventListener('load', () => popup.print(), { once: true });
+  if (popup.document.readyState === 'complete') popup.print();
+}
+
+els.printPlan.addEventListener('click', printReadingPlan);
 
 if (els.storageInfoButton && els.storageInfoDialog) {
   els.storageInfoButton.addEventListener('click', () => {
