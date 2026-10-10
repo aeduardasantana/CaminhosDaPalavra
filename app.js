@@ -486,7 +486,7 @@ function formatPsalmOriginal(text, cycle) {
   return {fragment: frag, parsed};
 }
 
-function glosaUnits(text) {
+function glosaUnits(text, options = {}) {
   const lines = String(text || '').replace(/\r/g, '').split('\n').map(line => line.trim()).filter(Boolean);
   const units = [];
   const explicitGroups = [];
@@ -497,7 +497,9 @@ function glosaUnits(text) {
 
   lines.forEach(line => {
     if (/^\(REFRÃO/i.test(line)) {
-      explicitRefrain = true;
+      // Ao receber o refrão específico do dia, nenhuma linha da primeira estrofe
+      // deve ser consumida como se fosse um refrão genérico.
+      explicitRefrain = !options.refrainSupplied;
       return;
     }
 
@@ -574,7 +576,7 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverri
         })).filter(unit => unit.text))
       : [];
   } else {
-    const parsedGlosa = glosaUnits(text);
+    const parsedGlosa = glosaUnits(text, {refrainSupplied: Boolean(refrainOverride)});
     refrain = parsedGlosa.refrain;
     const stanzaCounts = parsedOriginal.stanzas.map(stanza => stanza.length);
     groups = parsedGlosa.explicitGroups.length
