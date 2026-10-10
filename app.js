@@ -7,6 +7,7 @@ const glossaAnoARevisada = window.LCE_GLOSSA_ANO_A_REVISADA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
 const psalmGlossaContext = window.LCE_PSALM_GLOSSA_CONTEXT || {};
+const yearAPsalmRefrains = window.LCE_PSALM_REFRAINS_ANO_A || {};
 
 const els = {
   query: document.querySelector('#query'),
@@ -158,6 +159,10 @@ function genericLiturgyEntries() {
       referencia: item.reference,
       status: glossaAnoARevisada[contextKey]
         ? 'Roteiro editorial ampliado — validação linguística em Libras pendente'
+        : (item.type === 'salmo' && record.cycle === 'A' && yearAPsalmRefrains[contextKey])
+          ? 'Refrão contextual revisado — estrofes e Libras pendentes'
+        : (item.type === 'salmo' && record.cycle === 'A' && psalmGlossaContext[contextKey])
+          ? 'Estrutura de salmo preparada — validação linguística pendente'
         : detailedPilot ? detailedPilot.status
         : (glossa[item.reference]
           ? (record.cycle === 'A' ? 'Glosa-base preliminar — validação linguística pendente' : 'Glosa-base preliminar')
@@ -167,6 +172,7 @@ function genericLiturgyEntries() {
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
       glosa: glossaAnoARevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       glosaContext: item.type === 'salmo' ? (psalmGlossaContext[contextKey] || null) : null,
+      glosaRefrainContext: item.type === 'salmo' ? (yearAPsalmRefrains[contextKey] || null) : null,
       note: item.note || '',
       keywords: [
         record.cycle,
@@ -549,7 +555,7 @@ function distributeGlosaUnits(units, stanzaLineCounts) {
   return groups;
 }
 
-function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
+function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverride = null) {
   const frag = document.createDocumentFragment();
   const wrapper = document.createElement('div');
   wrapper.className = 'psalm-sequence psalm-glosa-sequence';
@@ -576,6 +582,13 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
       : distributeGlosaUnits(parsedGlosa.units, stanzaCounts);
   }
 
+  // Um refrão pode mudar mesmo quando a referência do salmo é a mesma.
+  // Corrigimos o refrão por celebração sem insinuar que as estrofes estão homologadas.
+  if (!contextual && refrainOverride && typeof refrainOverride === 'object') {
+    refrain = String(refrainOverride.refrain || '').trim();
+    alternativeRefrain = String(refrainOverride.alternativeRefrain || '').trim();
+  }
+
   const refrainBox = document.createElement('div');
   refrainBox.className = 'psalm-refrain glosa-refrain';
   const refrainLabel = document.createElement('strong');
@@ -599,7 +612,8 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null) {
 
     const label = document.createElement('strong');
     label.className = 'psalm-part-label';
-    label.textContent = 'ESTROFE ' + (index + 1) + ' — GLOSA';
+    label.textContent = 'ESTROFE ' + (index + 1) +
+      (contextual ? ' — GLOSA PRELIMINAR' : ' — GLOSA-BASE (ALINHAMENTO PENDENTE)');
     block.appendChild(label);
 
     const group = groups[index] || [];
@@ -763,7 +777,7 @@ function renderLiturgia() {
       const formattedPsalm = formatPsalmOriginal(entry.original, entry.ano);
       parsedPsalm = formattedPsalm.parsed;
       originalTextBox.appendChild(formattedPsalm.fragment);
-      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext));
+      glosaTextBox.replaceChildren(formatPsalmGlosa(entry.glosa, parsedPsalm, entry.glosaContext, entry.glosaRefrainContext));
     } else {
       originalTextBox.textContent = entry.original;
       glosaTextBox.appendChild(formatGlosa(entry.glosa));
