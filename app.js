@@ -1298,7 +1298,7 @@ function renderFullSchedule(progress, startDate) {
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
     '<span>Ritmo: ' + minDaily + ' a ' + maxDaily + ' capítulos por dia; ' + daysWithPsalm + ' dias com um Salmo diário no Antigo Testamento</span>' +
-    '<span>Referência: Revista Ave Maria, setembro de 2026, p. 6 — “Por onde começar a ler a Bíblia?” (inspirada no método do Pe. Jonas Abib). Cronograma de 365 dias adaptado pelo Caminhos da Palavra.</span>';
+    '<span>Organização: Caminhos da Palavra · referência metodológica: Pe. Jonas Abib e Revista Ave Maria (setembro/2026, p. 6). Sequência diária própria; sem releituras; um Salmo por dia durante 150 dias do Antigo Testamento.</span>';
 
   schedule.forEach(day => {
     const key = monthKey(day.date);
