@@ -87,26 +87,24 @@ O repositório mantém metadados, navegação, relações, glosas próprias e pr
 
 A conexão entre versões bíblicas e suas respectivas glosas fica para uma etapa futura.
 
-## Plano de leitura — Monsenhor Jonas Abib
+## Plano de leitura — versão final por capítulos
 
-Fonte-base:
+**Referência metodológica:** proposta de leitura de Monsenhor Jonas Abib, divulgada pela Canção Nova:
+https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
 
-- Canção Nova / Monsenhor Jonas Abib: https://padrejonas.cancaonova.com/informativos/artigos/em-que-ordem-ler-a-biblia/
+**Autoria do cronograma:** organização própria do projeto Caminhos da Palavra. A ordem específica dos livros, a inclusão de todo o cânon católico e a distribuição dos capítulos em 365 dias não devem ser atribuídas integralmente a Monsenhor Jonas Abib.
 
-A programação atual permite:
+O plano apresenta os 73 livros da Bíblia Católica, organizados por capítulos, com:
+- cronograma definitivo de 365 dias, distribuído por data de início;
+- impressão ou salvamento em PDF com caixas para marcar somente capítulos;
+- acompanhamento online exclusivamente por capítulo concluído ou pendente;
+- progresso salvo localmente no navegador;
+- indicadores de conclusão do plano e de cobertura da Bíblia;
+- leitura dos capítulos na plataforma da Bíblia Ave-Maria.
 
-- escolher 3 ou 4 capítulos por dia;
-- definir a data inicial;
-- consultar o cronograma inteiro;
-- agrupar a leitura por mês e dia;
-- marcar cada capítulo concluído;
-- registrar versículos lidos ou destacados;
-- salvar o progresso no navegador;
-- imprimir o cronograma;
-- acompanhar progresso do método;
-- acompanhar percentual de capítulos bíblicos distintos já percorridos.
+A visualização não dispõe de marcações por versículo, campos de observação ou edição do conteúdo do plano. A data usada para produzir o PDF não altera a caminhada online. Marcas de capítulos já concluídos permanecem na chave existente de armazenamento local.
 
-As releituras de I João e João previstas no método são preservadas. Sabedoria, Eclesiástico e Provérbios aparecem como abertura sapiencial do Antigo Testamento. Os **Salmos ficam fora da sequência obrigatória**, pois a própria orientação do método recomenda trabalhá-los de forma paralela e livre.
+**Nota:** os capítulos são registrados uma única vez no cronograma, mesmo quando a inspiração metodológica contempla releituras. O projeto prioriza a cobertura integral dos 73 livros em 365 dias, e não a reprodução literal de um roteiro de releituras.
 
 ## Acessibilidade
 
