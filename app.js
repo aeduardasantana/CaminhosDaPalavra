@@ -1132,24 +1132,39 @@ function monthHeading(isoDate) {
   return label.charAt(0).toUpperCase() + label.slice(1);
 }
 
+function distributePlanChapters(steps, numberOfDays) {
+  const base = Math.floor(steps.length / numberOfDays);
+  const extra = steps.length % numberOfDays;
+  let offset = 0;
+  return Array.from({length: numberOfDays}, (_, index) => {
+    const before = Math.floor(index * extra / numberOfDays);
+    const after = Math.floor((index + 1) * extra / numberOfDays);
+    const count = base + (after > before ? 1 : 0);
+    const daySteps = steps.slice(offset, offset + count);
+    offset += count;
+    return daySteps;
+  });
+}
+
+// A mesma sequência alimenta o plano online e a impressão.
+// O NT ocupa 75 dias; no AT há um Salmo por dia nos primeiros 150 dias.
 function buildDatedSchedule(startDate) {
-  const schedule = [];
-  const basePerDay = Math.floor(planSteps.length / PLAN_DAYS);
-  const extraDays = planSteps.length % PLAN_DAYS;
-  let cursor = 0;
+  const NT_DAYS = 75;
+  const atDays = PLAN_DAYS - NT_DAYS;
+  const newTestament = planSteps.filter(step => bookById(step.bookId)?.testament === 'NT');
+  const oldTestament = planSteps.filter(step => bookById(step.bookId)?.testament === 'AT' && step.bookId !== 'PSA');
+  const psalms = planSteps.filter(step => step.bookId === 'PSA')
+    .sort((left, right) => left.chapter - right.chapter);
+  const ntChunks = distributePlanChapters(newTestament, NT_DAYS);
+  const atChunks = distributePlanChapters(oldTestament, atDays);
 
-  for (let dayIndex = 0; dayIndex < PLAN_DAYS; dayIndex++) {
-    const extraBefore = Math.floor((dayIndex * extraDays) / PLAN_DAYS);
-    const extraAfter = Math.floor(((dayIndex + 1) * extraDays) / PLAN_DAYS);
-    const count = basePerDay + (extraAfter > extraBefore ? 1 : 0);
-    schedule.push({
-      date: addLocalDays(startDate, dayIndex),
-      steps: planSteps.slice(cursor, cursor + count)
-    });
-    cursor += count;
-  }
-
-  return schedule;
+  return Array.from({length: PLAN_DAYS}, (_, dayIndex) => {
+    const isNT = dayIndex < NT_DAYS;
+    const atIndex = dayIndex - NT_DAYS;
+    const steps = isNT ? [...ntChunks[dayIndex]] : [...atChunks[atIndex]];
+    if (!isNT && atIndex < psalms.length) steps.push(psalms[atIndex]);
+    return {date: addLocalDays(startDate, dayIndex), steps};
+  });
 }
 
 function completedCoverage(progress) {
@@ -1273,15 +1288,16 @@ function renderFullSchedule(progress, startDate) {
   const schedule = buildDatedSchedule(startDate);
   const groups = new Map();
   const endDate = schedule.length ? schedule[schedule.length - 1].date : startDate;
-  const daysWithFour = schedule.filter(day => day.steps.length === 4).length;
-  const daysWithThree = schedule.filter(day => day.steps.length === 3).length;
+  const daysWithPsalm = schedule.filter(day => day.steps.some(step => step.bookId === 'PSA')).length;
+  const minDaily = Math.min(...schedule.map(day => day.steps.length));
+  const maxDaily = Math.max(...schedule.map(day => day.steps.length));
 
   els.printPlanMeta.innerHTML =
     '<strong>Plano de leitura — Bíblia completa em 365 dias</strong>' +
     '<span>Início: ' + formatDate(startDate) + '</span>' +
     '<span>Previsão final: ' + formatDate(endDate) + '</span>' +
     '<span>Cobertura: ' + planSteps.length + ' de ' + totalUniqueBibleChapters + ' capítulos</span>' +
-    '<span>Ritmo: ' + daysWithThree + ' dias com 3 capítulos e ' + daysWithFour + ' dias com 4 capítulos</span>' +
+    '<span>Ritmo: ' + minDaily + ' a ' + maxDaily + ' capítulos por dia; ' + daysWithPsalm + ' dias com um Salmo diário no Antigo Testamento</span>' +
     '<span>Referência: Revista Ave Maria, setembro de 2026, p. 6 — “Por onde começar a ler a Bíblia?” (inspirada no método do Pe. Jonas Abib). Cronograma de 365 dias adaptado pelo Caminhos da Palavra.</span>';
 
   schedule.forEach(day => {
