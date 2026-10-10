@@ -147,6 +147,8 @@ function genericLiturgyEntries() {
     const originalRecord = liturgyOriginals[liturgyOriginalKey(record, item)];
 
     const contextKey = liturgyOriginalKey(record, item);
+    const unresolvedSource = record.cycle === 'B' && item.type === 'evangelho' &&
+      record.celebration === 'Sagrada Família' && /^EVANGELHO Como atrás/i.test(originalRecord?.text || '');
 
     return {
       id: [record.cycle, record.section, record.celebration, item.type, item.reference].map(slug).join('--'),
@@ -159,7 +161,9 @@ function genericLiturgyEntries() {
       item: item.type,
       itemLabel: item.label,
       referencia: item.reference,
-      status: (glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey])
+      status: unresolvedSource
+        ? 'Texto original integral ausente — revisão bloqueada'
+        : (glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey])
         ? 'Roteiro editorial ampliado — validação linguística em Libras pendente'
         : (item.type === 'salmo' && ((record.cycle === 'A' && yearAPsalmRefrains[contextKey]) || (record.cycle === 'B' && yearBPsalmRefrains[contextKey])))
           ? 'Refrão contextual revisado — estrofes e Libras pendentes'
@@ -169,7 +173,9 @@ function genericLiturgyEntries() {
         : (glossa[item.reference]
           ? (record.cycle === 'A' || record.cycle === 'B' ? 'Glosa-base preliminar — validação linguística pendente' : 'Glosa-base preliminar')
           : 'Glosa em produção'),
-      sourceVersion: originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado',
+      sourceVersion: unresolvedSource
+        ? 'Fonte incompleta: somente remissão editorial de página; não usar esta comparação para interpretar a leitura.'
+        : (originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado'),
       sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
       glosa: glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
@@ -771,6 +777,8 @@ function splitYearBAlternativeReading(entry) {
       labels: ['1Cor 12,3-7.12-13', 'Gl 5,16-25'], prefix: 'LEITURA II Gal 5,16-25\n' },
     { marker: /^Ou a seguinte leitura facultativa:\s*$/mi,
       labels: ['Ef 1,17-23', 'Ef 4,1-13'], prefix: '' },
+    { marker: /^Ou\s+1\s*Cor\s*5,\s*6b-8\s*$/mi,
+      labels: ['Cl 3,1-4', '1Cor 5,6-8'], prefix: 'LEITURA II 1 Cor 5,6b-8\n' },
     { marker: /^Ou Jo\s*12,\s*12-16\s*$/mi,
       labels: ['Mc 11,1-10', 'Jo 12,12-16'], prefix: 'EVANGELHO Jo 12,12-16\n' }
   ];
