@@ -772,7 +772,26 @@ function renderLiturgia() {
     }
 
     els.liturgyResults.appendChild(node);
-    bindAccordion(els.liturgyResults.lastElementChild.querySelector('.accordion-trigger'));
+    const card = els.liturgyResults.lastElementChild;
+    if (entry.data && entry.item) {
+      const share = document.createElement('button');
+      share.type = 'button';
+      share.className = 'secondary-button share-liturgy-link';
+      share.textContent = 'Copiar link desta leitura';
+      share.setAttribute('aria-label', 'Copiar link direto para ' + entry.itemLabel + ', ' + formatDate(entry.data));
+      share.addEventListener('click', async () => {
+        const params = new URLSearchParams({data:entry.data,item:entry.item});
+        const url = window.location.origin + window.location.pathname + '#liturgia-e-libras?' + params.toString();
+        try {
+          await navigator.clipboard.writeText(url);
+          share.textContent = 'Link copiado';
+        } catch {
+          window.prompt('Copie o link desta leitura:', url);
+        }
+      });
+      card.querySelector('.accordion-panel')?.prepend(share);
+    }
+    bindAccordion(card.querySelector('.accordion-trigger'));
   });
 }
 
@@ -1579,6 +1598,15 @@ els.resetPlan.addEventListener('click', () => {
 });
 
 initCalendarControls();
+const todayButton = document.querySelector('#calendarToday');
+if (todayButton) todayButton.addEventListener('click', () => {
+  const now = new Date();
+  const year = Math.max(litCalendar.minYear, Math.min(litCalendar.maxYear, now.getFullYear()));
+  els.calendarYear.value = String(year);
+  els.calendarMonth.value = String(year === now.getFullYear() ? now.getMonth() : 0);
+  selectedCalendarDate = null;
+  renderCalendar();
+});
 // Abre o destino correto inclusive ao carregar ou atualizar um link compartilhado.
 setSection(sectionFromUrl(), {fromHistory:true});
 
