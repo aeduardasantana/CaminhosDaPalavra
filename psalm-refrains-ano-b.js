@@ -3,24 +3,6 @@
  * Divergências documentais são preservadas nos relatórios de auditoria.
  */
 window.LCE_PSALM_REFRAINS_ANO_B = {
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Natal — Vigília|salmo|Sl 89": {
-    "refrain": "SENHOR / TUA MISERICÓRDIA / EU CANTAR PARA SEMPRE."
-  },
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Natal — Noite|salmo|Sl 96": {
-    "refrain": "HOJE / NASCER NOSSO SALVADOR JESUS CRISTO / SENHOR."
-  },
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Natal — Aurora|salmo|Sl 97": {
-    "refrain": "HOJE / LUZ BRILHAR SOBRE NÓS / SENHOR NASCEU."
-  },
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Natal — Dia|salmo|Sl 98": {
-    "refrain": "TERRA INTEIRA ATÉ CONFINS / VER SALVAÇÃO DO NOSSO DEUS."
-  },
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Santa Maria, Mãe de Deus|salmo|Sl 67": {
-    "refrain": "DEUS / TER COMPAIXÃO DE NÓS / NOS ABENÇOAR."
-  },
-  "B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Epifania do Senhor|salmo|Sl 72": {
-    "refrain": "SENHOR / POVOS TODA TERRA / VIR ADORAR-TE."
-  },
   "B|TEMPO COMUM — ANO B|2º Domingo|salmo|Sl 40": {
     "refrain": "SENHOR / EU VENHO / TUA VONTADE FAZER."
   },
@@ -92,10 +74,6 @@ window.LCE_PSALM_REFRAINS_ANO_B = {
     "refrain": "SENHOR / QUEM PODER HABITAR TEU SANTUÁRIO?",
     "alternativeRefrain": "SENHOR / ENSINAR QUEM PODER MORAR TUA CASA."
   },
-  "B|TEMPO COMUM — ANO B|23º Domingo|salmo|Sl 146": {
-    "refrain": "MINHA ALMA / SENHOR LOUVAR.",
-    "alternativeRefrain": "ALELUIA."
-  },
   "B|TEMPO COMUM — ANO B|24º Domingo|salmo|Sl 116": {
     "refrain": "EU CAMINHAR NA PRESENÇA DO SENHOR / TERRA DOS VIVOS.",
     "alternativeRefrain": "SENHOR / DIANTE DE TI / TERRA DOS VIVOS EU CAMINHAR."
@@ -122,10 +100,6 @@ window.LCE_PSALM_REFRAINS_ANO_B = {
   },
   "B|TEMPO COMUM — ANO B|31º Domingo|salmo|Sl 18": {
     "refrain": "SENHOR / EU TE AMAR / TU MINHA FORÇA."
-  },
-  "B|TEMPO COMUM — ANO B|32º Domingo|salmo|Sl 146": {
-    "refrain": "MINHA ALMA / SENHOR LOUVAR.",
-    "alternativeRefrain": "ALELUIA."
   },
   "B|TEMPO COMUM — ANO B|33º Domingo|salmo|Sl 16": {
     "refrain": "SENHOR / TU MEU REFÚGIO / ME DEFENDER.",
