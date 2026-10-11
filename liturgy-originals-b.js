@@ -870,7 +870,7 @@ window.LCE_LITURGY_ORIGINALS = Object.assign(window.LCE_LITURGY_ORIGINALS || {},
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
   "B|TEMPO COMUM — ANO B|34º Domingo — Cristo Rei|salmo|Sl 93": {
-    "text": "SALMO RESPONSORIAL Salmo 92 (93), 1ab.1c-2.5 (R. 1a)\nRefrão: O Senhor é rei num trono de luz.\nO Senhor é rei,\nrevestiu-Se de majestade,\nrevestiu-Se e cingiu-Se de poder.CRISTO REI 391\nFirmou o universo, que não vacilará.\nÉ firme o vosso trono desde sempre,\nVós existis desde toda a eternidade.\nOs vossos testemunhos são dignos de toda a fé,\na santidade habita na vossa casa\npor todo o sempre.",
+    "text": "SALMO RESPONSORIAL Salmo 92 (93), 1ab.1c-2.5 (R. 1a)\nRefrão: O Senhor é rei num trono de luz.\nO Senhor é rei,\nrevestiu-Se de majestade,\nrevestiu-Se e cingiu-Se de poder.\nFirmou o universo, que não vacilará.\nÉ firme o vosso trono desde sempre,\nVós existis desde toda a eternidade.\nOs vossos testemunhos são dignos de toda a fé,\na santidade habita na vossa casa\npor todo o sempre.",
     "sourceVersion": "Lecionário Dominical — Ano B · arquivo fornecido pela responsável do projeto",
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
@@ -1175,7 +1175,7 @@ window.LCE_LITURGY_ORIGINALS = Object.assign(window.LCE_LITURGY_ORIGINALS || {},
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
   "B|SOLENIDADES DOMINICAIS DO TEMPO COMUM|Santíssima Trindade|salmo|Sl 33": {
-    "text": "SALMO RESPONSORIAL Salmo 32 (33), 4-5.6.9.18.19.20.22 (R. 12b)\nRefrão: Feliz o povo que o Senhor escolheu para sua herança.\nA palavra do Senhor é recta,\nda fidelidade nascem as suas obras.\nEle ama a justiça e a rectidão:\na terra está cheia da bondade do Senhor.\nA palavra do Senhor criou os céus,\no sopro da sua boca os adornou.\nEle disse e tudo foi feito,\nEle mandou e tudo foi criado.\nOs olhos do Senhor estão voltados para os que O temem,\npara os que esperam na sua bondade,\npara libertar da morte as suas almas\ne os alimentar no tempo da fome.\nA nossa alma espera o Senhor:\nEle é o nosso amparo e protector.\nVenha sobre nós a vossa bondade,\nporque em Vós esperamos, Senhor.SANTÍSSIMA TRINDADE 397",
+    "text": "SALMO RESPONSORIAL Salmo 32 (33), 4-5.6.9.18.19.20.22 (R. 12b)\nRefrão: Feliz o povo que o Senhor escolheu para sua herança.\nA palavra do Senhor é recta,\nda fidelidade nascem as suas obras.\nEle ama a justiça e a rectidão:\na terra está cheia da bondade do Senhor.\nA palavra do Senhor criou os céus,\no sopro da sua boca os adornou.\nEle disse e tudo foi feito,\nEle mandou e tudo foi criado.\nOs olhos do Senhor estão voltados para os que O temem,\npara os que esperam na sua bondade,\npara libertar da morte as suas almas\ne os alimentar no tempo da fome.\nA nossa alma espera o Senhor:\nEle é o nosso amparo e protector.\nVenha sobre nós a vossa bondade,\nporque em Vós esperamos, Senhor.",
     "sourceVersion": "Lecionário Dominical — Ano B · arquivo fornecido pela responsável do projeto",
     "sourceUrl": "https://drive.google.com/file/d/1TV5CBLknjkHYxdzB_g--wuDKl3dWYp_q/view?usp=drivesdk"
   },
