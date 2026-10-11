@@ -2,14 +2,14 @@
 
 **Data:** 11/10/2026  
 **Projeto:** Caminhos da Palavra · GEB Tecnologia  
-**Estado:** inventário técnico realizado; revisão editorial integral **não concluída**.  
+**Estado:** inventário técnico realizado; duas propostas de glosa contextual ampliada incorporadas; revisão editorial integral **não concluída**.  
 **Ramo de referência:** `main` (`0df353dfd90c45a314407a459c014367795b768d` no início da análise).
 
 ## 1. Escopo e critérios de contagem
 
 - **60 celebrações** cadastradas no ciclo C, **238 itens litúrgicos** (59 primeiras leituras, 59 salmos, 59 segundas leituras, 59 Evangelhos, 1 procissão, 1 Paixão). Os 238 registros têm chave correspondente em `liturgy-originals-c.js` e glosa-base vinculada por referência.
 - `liturgy-originals-c.js` contém **241 chaves**, três além das 238 efetivamente cadastradas: as outras três correspondem às leituras não relacionadas no Batismo do Senhor. Não confundir chaves de textos com itens do cadastro.
-- **0/238 itens aprovados nesta rodada por conferência exaustiva versículo a versículo**. O inventário e a detecção de lacunas não são revisão linguística concluída.
+- **0/238 itens aprovados definitivamente nesta rodada por revisão integral e validação especializada**. O inventário e a detecção de lacunas não são revisão linguística concluída.
 - **Validação especializada por pessoas surdas/intérpretes:** pendente em todos os 238 itens, salvo evidência posterior documentada.
 - Prioridades são indicativas (triagem): CRÍTICA para perícopes explicitamente problemáticas; ALTA para salmos, opções e desproporções de extensão; NORMAL nos demais. Prioridade NORMAL não equivale a aprovação.
 
@@ -27,11 +27,11 @@ A celebração tem somente o Evangelho `Lc 3,15-16.21-22` no cadastro do Ano C. 
 
 ### C-002 · Lc 15,1-32 — três parábolas resumidas em poucas linhas
 
-A glosa-base menciona a ovelha perdida, a moeda perdida e o filho perdido, mas omite numerosas ações, falas e transições; a conclusão teológica condensada não substitui a narrativa bíblica. Produzir glosa integral por unidades: contexto e murmuração; ovelha e celebração; moeda e alegria; filho mais novo, herança e fome; retorno e acolhida; irmão mais velho e diálogo final. **Status: correção necessária — glosa atual não aprovada.**
+A glosa-base menciona a ovelha perdida, a moeda perdida e o filho perdido, mas omite numerosas ações, falas e transições; a conclusão teológica condensada não substitui a narrativa bíblica. Produzir glosa integral por unidades: contexto e murmuração; ovelha e celebração; moeda e alegria; filho mais novo, herança e fome; retorno e acolhida; irmão mais velho e diálogo final. **Status: glosa contextual ampliada inserida em `glosas-revisadas-ano-c.js`; exige cotejo especializado versículo a versículo e validação em Libras; não aprovada definitivamente.**
 
 ### C-003 · Lc 10,25-37 — bom samaritano
 
-A glosa atual apresenta sequência narrativa resumida. Revisar integralmente o diálogo com o doutor da Lei e o motivo de sua pergunta, a viagem Jerusalém–Jericó, as atitudes distintas do sacerdote, levita e samaritano, os cuidados concretos (azeite, vinho, montaria, hospedaria, pagamento, compromisso de retorno), a pergunta final de Jesus e a resposta. **Status: correção necessária — não considerar revisado.**
+A glosa atual apresenta sequência narrativa resumida. Revisar integralmente o diálogo com o doutor da Lei e o motivo de sua pergunta, a viagem Jerusalém–Jericó, as atitudes distintas do sacerdote, levita e samaritano, os cuidados concretos (azeite, vinho, montaria, hospedaria, pagamento, compromisso de retorno), a pergunta final de Jesus e a resposta. **Status: glosa contextual ampliada inserida em `glosas-revisadas-ano-c.js`; requer validação humana; não considerar aprovado.**
 
 ### C-004 · Paixão de São Lucas — Lc 22,14–23,56
 
@@ -296,17 +296,24 @@ Legenda: **I** = identificado no cadastro; **O** = original associado; **G** = g
 
 Para mudar um item de **Pendente** para **Revisão editorial concluída**, registrar: (1) edição/texto de origem conferidos e referência correta; (2) cobertura de todos os versículos realmente proclamados; (3) sujeitos, verbos, pronomes, relações causais e temporais, negação, comparação e condição; (4) personagens, interlocutores e roteiro espacial; (5) identificação separada de informação bíblica, interpretação teológica, orientação visual e glosa proposta; (6) variantes, rubricas ou estruturas de refrão quando houver; (7) revisor, data e histórico da correção. Para **Validação em Libras concluída**, exigir comprovação específica de ensaio e avaliação humana, não apenas texto escrito.
 
-## 6. Integridade e publicação
+## 6. Alterações de código desta rodada
+
+- `glosas-revisadas-ano-c.js`: novas glosas propostas para Lc 10,25-37 e Lc 15,1-32, por chave completa de celebração.
+- `app.js`: consulta contextual do Ano C, sem substituir entradas das revisões A/B nem a glosa-base global.
+- `index.html`: carregamento do arquivo específico antes do aplicativo e alteração da versão do script para invalidar cache.
+- As 2 glosas ampliadas são **propostas editoriais preliminares**, não traduções sinalizadas ou material aprovado.
+
+## 7. Integridade e publicação
 
 A inspeção de conteúdo confirmou a existência de `app.js`, `lectionary-data.js`, `liturgy-originals-c.js`, glosas compartilhadas, `liturgy-pdf.js`, estruturas de salmos e workflow `.github/workflows/deploy.yml`, que direciona o FTP para `./public_html/caminhosdapalavra/` na Locaweb. **Ainda não equivale a teste de sintaxe de todos os JS, teste funcional da navegação/PDF ou confirmação de publicação.** Registrar resultados somente após execução observável.
 
-## 7. Resumo de situação
+## 8. Resumo de situação
 
 - Celebrações inventariadas: **60**.
 - Itens inventariados: **238**.
 - Texto de origem vinculado: **238**.
 - Glosa-base vinculada: **238**.
-- Revisões integrais comprovadamente concluídas nesta rodada: **0**.
+- Propostas contextuais ampliadas publicadas em código: **2** (`Lc 10,25-37` e `Lc 15,1-32`); aprovação especializada comprovada: **0**.
 - Prioridades por triagem: NORMAL 160; ALTA 75; CRÍTICA 3.
 - Pendentes: revisão exaustiva de 238 itens, validação em Libras, conferência editorial do texto de origem e testes de publicação.
 - Arquivos dos anos A e B: **não modificar**.
