@@ -1,150 +1,59 @@
-# Revisão editorial e bíblico-litúrgica — Ano B
+# Revisão editorial, bíblica e litúrgica — Ano B
 
-**Atualizado em 10/10/2026 · Projeto Caminhos da Palavra / GEB Tecnologia**
+**Atualização:** 11/10/2026 · **Projeto:** Caminhos da Palavra / GEB Tecnologia
 
-> **Escopo:** o texto-fonte foi confrontado com a glosa-base e foram ampliados roteiros contextualizados. As glosas são apoio escrito à preparação; não são traduções validadas em Libras. Sem ensaio e avaliação com intérpretes proficientes e pessoas surdas, nenhum registro deve ser apresentado como homologado linguisticamente.
+> **Escopo e limite:** Foram produzidos ou preservados roteiros editoriais textuais para todos os registros do Ano B, com alinhamento explícito dos 60 salmos por celebração. Estes roteiros escritos NÃO equivalem à interpretação em Libras, não são traduções oficiais e ainda requerem cotejo detalhado de cada unidade textual, ensaio e validação com intérpretes e pessoas surdas proficientes.
 
-## 1. Indicadores reais
+## 1. Cobertura e inventário
 
-| Indicador | Resultado |
+| Indicador | Verificação |
 |---|---:|
-| Celebrações do Ano B | 60 |
-| Itens registrados diretamente no `lectionary-data.js` | 238 |
-| Itens efetivamente exibidos (3 leituras complementares do Batismo do Senhor) | **241** |
-| Textos originais com conteúdo cadastrado | 241 |
-| Textos originais integrais disponíveis no acervo | **240/241** |
-| Itens com glosa-base cadastrada | 241/241 |
-| Roteiros não salmódicos editorialmente ampliados | **123/181** |
-| Salmos com refrão e estrofes contextualizados | **28/60** |
-| Salmos com refrão contextual apenas (estrofes pendentes) | **32/60** |
-| Itens pendentes de revisão editorial integral | **90** |
-| Glosas com homologação humana em Libras documentada nesta etapa | **0** |
+| Celebrações do Ano B | **60** |
+| Itens literais em `lectionary-data.js` | **238** |
+| Itens efetivamente exibidos, incluindo 3 complementos do Batismo | **241** |
+| Textos-fonte identificados e presentes no cadastro | **241/241** |
+| Glosas-base cadastradas | **241/241** |
+| Roteiros editoriais não salmódicos contextualizados | **181/181** |
+| Salmos com refrão específico e estrutura de estrofes | **60/60** |
+| Registros sem roteiro contextual ou estrutura salmódica | **0** |
+| Homologação humana registrada em Libras | **0** |
 
-**Critério para conclusão:** o Ano B **não está editorialmente completo**. Os 90 pendentes correspondem a 58 leituras não salmódicas e 32 salmos: 54 primeiras/segundas leituras e 31 salmos do Tempo Comum; Evangelho da Sagrada Família; três leituras e um salmo das solenidades dominicais restantes. A fonte incompleta da Sagrada Família requer recuperação documental, sem invenção de texto.
+**Interpretação:** a cobertura editorial estrutural foi concluída no acervo cadastrado. Isso não comprova correspondência exaustiva verso a verso nos 181 roteiros, em particular a Paixão, nem validação linguística em Libras; a revisão semântica fina e o ensaio permanecem atividades de homologação.
 
-### Atualização da execução de 11/10/2026
+## 2. Revisões realizadas nesta execução
 
-- Retomado o inventário real, incluindo os três registros complementares do Batismo do Senhor adicionados pelo programa de exibição.
-- Foram comparados novamente os arquivos `lectionary-data.js`, `liturgy-originals-b.js`, `glosas-revisadas-ano-b.js`, `psalm-glossa-context-ano-b.js` e `psalm-refrains-ano-b.js`.
-- Os 111 roteiros editoriais anteriormente registrados foram preservados; acrescentaram-se **12 roteiros de primeira e segunda leituras**, do 2º ao 7º Domingo do Tempo Comum.
-- Os novos roteiros foram revisados contra os respectivos textos originais. Mantiveram-se os rótulos de material preparatório não homologado em Libras.
-- A [matriz de auditoria dos 241 itens](./AUDITORIA-GLOSAS-ANO-B-241.csv) foi atualizada individualmente para os 12 novos roteiros.
-- A fonte incompleta do Evangelho da Sagrada Família permanece sem preenchimento artificial.
-- O trabalho ainda **não cumpre a exigência de revisão integral do Ano B**: faltam 58 leituras não salmódicas e 32 salmos com estrofes não alinhadas.
+- Identificados os **111 roteiros já revisados** anteriormente; foram preservados e acrescidos **70 roteiros novos**, incluindo as primeiras e segundas leituras de todos os domingos do Tempo Comum que permaneciam sem revisão e o Evangelho da Sagrada Família.
+- Revisadas, em chave contextual, relações de personagens, interlocutores, temporalidade, negação e figuras de linguagem, com foco em exortações paulinas e narrativas do Antigo Testamento.
+- Completadas as **32 estruturas de salmos que faltavam** no arquivo `psalm-glossa-context-ano-b-complemento.js`; carregadas após os refrões específicos e antes de `app.js`.
+- Confirmada automaticamente a correspondência entre **60 estruturas de estrofes de glosa** e os respectivos **60 grupos de estrofes do texto litúrgico**. Esse teste avalia quantidades e posições, não homologa por si só o significado em Libras.
+- Corrigidos o refrão dividido por ponto e vírgula e a segmentação de três estrofes do Salmo 32 do 6º Domingo do Tempo Comum; a alteração no parser afeta somente o ciclo B.
+- Retiradas duas marcas documentadas de paginação inseridas dentro dos versos dos salmos de Cristo Rei e da Santíssima Trindade, preservando o texto anterior no histórico Git.
+- Recuperado o texto integral da **Sagrada Família, Lc 2,22-40** (formas longa e breve) diretamente do PDF do Lecionário original vinculado ao projeto, páginas editoriais 90–91. A remissão anterior era incompleta e misturava texto da celebração seguinte.
 
-## 2. Etapas revisadas
+## 3. Revisões específicas e pontos de atenção
 
-- **Advento:** todas as 12 leituras não salmódicas e quatro salmos com estrofes. Os textos foram revisados por domingo.
-- **Natal, Epifania e Batismo:** 23 roteiros ampliados e oito salmos com estrofes. O único Evangelho pendente deste conjunto é Lc 2,22-40, Sagrada Família, pois o arquivo-fonte apenas remete a outra página.
-- **Quaresma e Domingo de Ramos:** 19 roteiros ampliados, incluindo os Evangelhos de São João e a Paixão segundo São Marcos, e seis salmos com estrofes. O roteiro da Paixão é preparação expandida, não transcrição glosada integral verso por verso.
-- **Tempo Pascal, Ascensão e Pentecostes:** 24 leituras ampliadas e oito salmos com estrofes. Separadas as variantes da 2ª leitura da Páscoa, Pentecostes e Ascensão, incluindo a Sequência em bloco autônomo na interface.
-- **Tempo Comum:** 33 Evangelhos (Mc e Jo) e 12 primeiras/segundas leituras dos 2º ao 7º Domingos revisados nesta etapa; salmos do 23º e 32º Domingos estruturados. Permanecem 54 textos de 1ª/2ª leitura e 31 salmos pendentes.
+**Marcos e João:** os roteiros contextuais já existentes foram preservados. A Paixão segundo Marcos é um roteiro narrativo organizado em cenas, mas **não uma transcrição integral, fala a fala**. Precisa de conferência litúrgica de todos os locutores e pausas antes da interpretação. A procissão de Ramos distingue expressamente as opções Mc 11 e Jo 12; o leitor deve selecionar a efetivamente proclamada.
 
-## 3. Correções de fonte e rastreabilidade
+**Ef 1,3-14, 15º Domingo do Tempo Comum:** a versão que o próprio PDF do Lecionário rotula como “forma longa” aparenta omitir versículos esperados pela referência. Esse problema está na fonte fornecida; não completar silenciosamente por inferência. A forma breve está mantida. Necessária decisão editorial documentada a partir da edição litúrgica autorizada.
 
-### 3.1 Salmo do 32º Domingo do Tempo Comum
+**Fonte e idioma:** o documento-fonte é um Lecionário em português europeu, não se deve apresentá-lo como texto oficial brasileiro sem confirmação adicional. O original foi preservado, exceto pelas duas correções de extração rastreadas e pela recuperação literal da remissão incompleta.
 
-O cadastro indicava **Sl 146**, mas o texto incorporado era do **Salmo 15(16)**. Foi restabelecido o Salmo **145(146)** a partir do próprio arquivo original do Ano B, usando a versão correspondente do 23º Domingo como fonte interna e conferindo a seleção de versículos com fontes litúrgicas externas. O valor anterior foi arquivado em [HISTORICO-CORRECAO-SALMO-ANO-B.md](./HISTORICO-CORRECAO-SALMO-ANO-B.md).
+**Libras:** não considerar glosas escritas sequências obrigatórias de sinais. Os roteiros ainda precisam de revisão de escolhas lexicais, papéis espaciais, expressões não manuais e prática de sinalização com participação da comunidade surda.
 
-### 3.2 Refrão do 4º Domingo da Páscoa
+## 4. Rastreabilidade e arquivos
 
-A extração colou `DOMINGO IV 231` à alternativa `Aleluia`, transformando paginação em texto litúrgico. O marcador foi corrigido preservando o original anterior em [HISTORICO-EXTRACAO-SALMO-PASCOA-B.md](./HISTORICO-EXTRACAO-SALMO-PASCOA-B.md). A estrutura de estrofes corrigida foi cadastrada em `psalm-structures-b-3.js`.
+- [Matriz individual dos 241 itens](./AUDITORIA-GLOSAS-ANO-B-241.csv) — situação editorial, referências, variantes e alertas.
+- `glosas-revisadas-ano-b.js` — 181 roteiros com chaves contextuais.
+- `psalm-glossa-context-ano-b.js`, `psalm-glossa-context-2026-q4.js` e `psalm-glossa-context-ano-b-complemento.js` — estrofes organizadas por celebração.
+- `psalm-refrains-ano-b.js` — refrões específicos, inclusive alternativas permitidas.
+- [Histórico da restauração da Sagrada Família](./HISTORICO-RECUPERACAO-SAGRADA-FAMILIA-B.md).
+- [Histórico de correção da paginação de salmos](./HISTORICO-EXTRACAO-SALMOS-B-FINAL.md).
+- Históricos de correções anteriores: `HISTORICO-CORRECAO-SALMO-ANO-B.md`, `HISTORICO-EXTRACAO-SALMO-PASCOA-B.md`.
 
-### 3.3 Evangelho da Sagrada Família
+## 5. Validação técnica e critérios de aceite
 
-`B|CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO|Sagrada Família|evangelho|Lc 2,22-40` contém apenas a remissão editorial **'EVANGELHO Como atrás, p. 90-91'**, seguida de informações de outras celebrações. É um registro **incompleto**. A interface passa a advertir isso; NÃO há base documental suficiente para homologar sua correspondência com a glosa-base existente. Obter a página original do Lecionário antes de concluir.
+**Testes executados:** integridade dos 241 registros exibidos, unicidade de chaves, disponibilidade dos 181 roteiros, 60 salmos com contexto, 60 estruturas de estrofes com contagem compatível, carregamento de scripts e sintaxe JavaScript. A opção de forma longa e breve da Sagrada Família está disponível no próprio original.
 
-### 3.4 Original versus glosa
+**Testes ainda exigidos em navegador real:** comparação visual original ↔ glosa, fluxo de escolha de forma longa/breve, versões móveis e impressão em PDF litúrgico (A4/A3), além de conferir a execução do FTP para Locaweb e a disponibilidade pública da versão recém-publicada.
 
-Os textos do Lecionário permanecem separados das glosas; salvo as duas correções rastreadas acima, o corpus original foi preservado. As novas versões residem em arquivo contextual `glosas-revisadas-ano-b.js`. O código não sobrescreveu glosas do Ano A ou do Ano C.
-
-## 4. Refrões, estrofes e variantes
-
-- Todos os 60 salmos têm refrão preparado por celebração. 28 têm estrofes contextuais que foram comparadas com as divisões estruturais do arquivo original; 32 continuam com necessidade de revisão semântica individual das estrofes.
-- O leitor foi ajustado para interpretar **mais de uma alternativa de refrão** sem incorporá-la como uma estrofe falsa. Os salmos do 2º Domingo da Páscoa e de Pentecostes eram afetados.
-- Seletores de leituras alternativas contemplam a **Procissão de Ramos**, a **2ª leitura do Domingo da Páscoa**, **Pentecostes** e a **Ascensão**. A Sequência Pascal/Pentecostal é material separado. Selecionar uma opção **não valida automaticamente** a glosa correspondente.
-- Registros que contêm apenas a *forma longa* não recebem uma forma breve artificial. A visualização comparativa do PDF utiliza a leitura e a glosa efetivamente selecionadas no cartão.
-
-## 5. Matriz das 60 celebrações
-
-| Tempo | Celebração | Itens | Roteiros ampliados | Salmos com estrofes | Salmos com refrão apenas | Originais incompletos |
-|---|---|---:|---:|---:|---:|---:|
-| ADVENTO | 1º Domingo | 4 | 3 | 1 | 0 | 0 |
-| ADVENTO | 2º Domingo | 4 | 3 | 1 | 0 | 0 |
-| ADVENTO | 3º Domingo | 4 | 3 | 1 | 0 | 0 |
-| ADVENTO | 4º Domingo | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Natal — Vigília | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Natal — Noite | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Natal — Aurora | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Natal — Dia | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Sagrada Família | 4 | 2 | 1 | 0 | 1 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Santa Maria, Mãe de Deus | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Epifania do Senhor | 4 | 3 | 1 | 0 | 0 |
-| CICLO DO NATAL — CELEBRAÇÕES DE REPERTÓRIO | Batismo do Senhor | 4 | 3 | 1 | 0 | 0 |
-| TEMPO COMUM — ANO B | 2º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 3º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 4º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 5º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 6º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 7º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 8º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 9º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 10º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 11º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 12º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 13º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 14º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 15º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 16º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 17º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 18º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 19º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 20º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 21º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 22º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 23º Domingo | 4 | 1 | 1 | 0 | 0 |
-| TEMPO COMUM — ANO B | 24º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 25º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 26º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 27º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 28º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 29º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 30º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 31º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 32º Domingo | 4 | 1 | 1 | 0 | 0 |
-| TEMPO COMUM — ANO B | 33º Domingo | 4 | 1 | 0 | 1 | 0 |
-| TEMPO COMUM — ANO B | 34º Domingo — Cristo Rei | 4 | 1 | 0 | 1 | 0 |
-| QUARESMA | 1º Domingo | 4 | 3 | 1 | 0 | 0 |
-| QUARESMA | 2º Domingo | 4 | 3 | 1 | 0 | 0 |
-| QUARESMA | 3º Domingo | 4 | 3 | 1 | 0 | 0 |
-| QUARESMA | 4º Domingo | 4 | 3 | 1 | 0 | 0 |
-| QUARESMA | 5º Domingo | 4 | 3 | 1 | 0 | 0 |
-| QUARESMA | Domingo de Ramos e da Paixão | 5 | 4 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | 2º Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | 3º Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | 4º Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | 5º Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | 6º Domingo da Páscoa | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | Ascensão do Senhor | 4 | 3 | 1 | 0 | 0 |
-| PÁSCOA E TEMPO PASCAL | Pentecostes | 4 | 3 | 1 | 0 | 0 |
-| SOLENIDADES DOMINICAIS DO TEMPO COMUM | Santíssima Trindade | 4 | 0 | 0 | 1 | 0 |
-
-## 6. Critérios e testes
-
-**Validação automatizada necessária:** conferir total de 241 chaves efetivas, integridade de original/glosa-base, 111 revisões por chaves válidas, 60 refrões, 28 contextos de estrofes e seus tamanhos exatos, ausência de modificações no conteúdo dos anos A/C, sintaxe dos JavaScript e ordem de carregamento de scripts.
-
-**Testes funcionais externos necessários:** abrir site em desktop e celular; comparar original/glosa por leitura; selecionar alternativas e confirmar que o PDF carrega somente a opção escolhida; ensaiar salmos com múltiplos refrões; confirmar o deploy por GitHub Actions e o FTP na Locaweb. Os testes estáticos não substituem essa execução em navegador.
-
-**Revisão linguística posterior:** cada roteiro requer validação da Libras sinalizada: concordância espacial, referenciação, troca de papéis, classificadores, expressão facial/corporal, negações, fidelidade bíblico-litúrgica e adequação à comunidade surda. Registre os responsáveis e a data da homologação.
-
-## 7. Arquivos principais
-
-- [AUDITORIA-GLOSAS-ANO-B-241.csv](./AUDITORIA-GLOSAS-ANO-B-241.csv) — situação e alertas individuais de todos os 241 itens.
-- `glosas-revisadas-ano-b.js` — roteiros editoriais contextuais (111 registros).
-- `psalm-glossa-context-ano-b.js`, `psalm-glossa-context-2026-q4.js` — salmos contextualizados.
-- `psalm-refrains-ano-b.js` — refrões por celebração pendentes de estrofes.
-- `psalm-structures-b-3.js` — estrutura restaurada do 4º Domingo da Páscoa.
-- `app.js`, `index.html`, `liturgy-pdf.js` — exibição, carregamento e PDF (preservar os módulos compartilhados).
-
-**Status final deste lote: revisão editorial parcial substancial, integralidade NÃO atingida e validação humana de Libras pendente.**
+**Situação editorial:** cobertura do acervo alcançada; **homologação em Libras e revisão detalhada de cada proposição continuam pendentes**. Não anunciar como interpretação pronta ou material linguisticamente validado.
