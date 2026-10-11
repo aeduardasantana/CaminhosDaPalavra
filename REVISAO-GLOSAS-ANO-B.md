@@ -14,13 +14,23 @@
 | Textos originais com conteúdo cadastrado | 241 |
 | Textos originais integrais disponíveis no acervo | **240/241** |
 | Itens com glosa-base cadastrada | 241/241 |
-| Roteiros não salmódicos editorialmente ampliados | **111/181** |
+| Roteiros não salmódicos editorialmente ampliados | **123/181** |
 | Salmos com refrão e estrofes contextualizados | **28/60** |
 | Salmos com refrão contextual apenas (estrofes pendentes) | **32/60** |
-| Itens pendentes de revisão editorial integral | **102** |
+| Itens pendentes de revisão editorial integral | **90** |
 | Glosas com homologação humana em Libras documentada nesta etapa | **0** |
 
-**Critério para conclusão:** o Ano B **não está editorialmente completo**. Os 102 pendentes correspondem a 70 leituras não salmódicas e 32 salmos: 66 primeiras/segundas leituras e 31 salmos do Tempo Comum; Evangelho da Sagrada Família; três leituras e um salmo das solenidades dominicais restantes. A fonte incompleta da Sagrada Família requer recuperação documental, sem invenção de texto.
+**Critério para conclusão:** o Ano B **não está editorialmente completo**. Os 90 pendentes correspondem a 58 leituras não salmódicas e 32 salmos: 54 primeiras/segundas leituras e 31 salmos do Tempo Comum; Evangelho da Sagrada Família; três leituras e um salmo das solenidades dominicais restantes. A fonte incompleta da Sagrada Família requer recuperação documental, sem invenção de texto.
+
+### Atualização da execução de 11/10/2026
+
+- Retomado o inventário real, incluindo os três registros complementares do Batismo do Senhor adicionados pelo programa de exibição.
+- Foram comparados novamente os arquivos `lectionary-data.js`, `liturgy-originals-b.js`, `glosas-revisadas-ano-b.js`, `psalm-glossa-context-ano-b.js` e `psalm-refrains-ano-b.js`.
+- Os 111 roteiros editoriais anteriormente registrados foram preservados; acrescentaram-se **12 roteiros de primeira e segunda leituras**, do 2º ao 7º Domingo do Tempo Comum.
+- Os novos roteiros foram revisados contra os respectivos textos originais. Mantiveram-se os rótulos de material preparatório não homologado em Libras.
+- A [matriz de auditoria dos 241 itens](./AUDITORIA-GLOSAS-ANO-B-241.csv) foi atualizada individualmente para os 12 novos roteiros.
+- A fonte incompleta do Evangelho da Sagrada Família permanece sem preenchimento artificial.
+- O trabalho ainda **não cumpre a exigência de revisão integral do Ano B**: faltam 58 leituras não salmódicas e 32 salmos com estrofes não alinhadas.
 
 ## 2. Etapas revisadas
 
@@ -28,7 +38,7 @@
 - **Natal, Epifania e Batismo:** 23 roteiros ampliados e oito salmos com estrofes. O único Evangelho pendente deste conjunto é Lc 2,22-40, Sagrada Família, pois o arquivo-fonte apenas remete a outra página.
 - **Quaresma e Domingo de Ramos:** 19 roteiros ampliados, incluindo os Evangelhos de São João e a Paixão segundo São Marcos, e seis salmos com estrofes. O roteiro da Paixão é preparação expandida, não transcrição glosada integral verso por verso.
 - **Tempo Pascal, Ascensão e Pentecostes:** 24 leituras ampliadas e oito salmos com estrofes. Separadas as variantes da 2ª leitura da Páscoa, Pentecostes e Ascensão, incluindo a Sequência em bloco autônomo na interface.
-- **Tempo Comum:** 33 Evangelhos (Mc e Jo) revisados, e salmos do 23º e 32º Domingos estruturados. Os demais 66 textos de 1ª/2ª leitura e 31 salmos continuam pendentes.
+- **Tempo Comum:** 33 Evangelhos (Mc e Jo) e 12 primeiras/segundas leituras dos 2º ao 7º Domingos revisados nesta etapa; salmos do 23º e 32º Domingos estruturados. Permanecem 54 textos de 1ª/2ª leitura e 31 salmos pendentes.
 
 ## 3. Correções de fonte e rastreabilidade
 
