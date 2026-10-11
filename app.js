@@ -401,7 +401,7 @@ function parsePsalmOriginal(text, cycle = '') {
 
   let index = refrainIndex;
   const refrain = [lines[index].replace(/^Refrão:\s*/i, '')];
-  while (index + 1 < lines.length && !/[.!?;»”]$/.test(refrain[refrain.length - 1])) {
+  while (index + 1 < lines.length && !(cycle === 'B' ? /[.!?»”]$/ : /[.!?;»”]$/).test(refrain[refrain.length - 1])) {
     index += 1;
     refrain.push(lines[index]);
   }
