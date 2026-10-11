@@ -180,15 +180,12 @@ A página Liturgia permite selecionar forma longa ou breve apenas quando **ambas
 Consulte [REVISAO-GLOSAS-ANO-A.md](./REVISAO-GLOSAS-ANO-A.md) e a [matriz individual dos 241 itens](./AUDITORIA-GLOSAS-ANO-A-241.csv). **Nenhuma revisão escrita deve ser anunciada como tradução validada em Libras** sem avaliação com intérpretes proficientes e pessoas surdas, especialmente quanto a naturalidade, espacialização, concordância discursiva, recursos não manuais e adequação litúrgica.
 
 
-## Revisão editorial das glosas — Ano B (atualização 10/10/2026)
+## Revisão editorial das glosas — Ano B (11/10/2026)
 
-O Ano B tem **60 celebrações e 241 itens efetivamente apresentados**, incluindo três leituras complementares do Batismo do Senhor. Todos possuem glosa-base, mas **um original está incompleto** (Lc 2,22-40, Sagrada Família).
+O inventário do Ano B cobre **60 celebrações e 241 itens efetivamente exibidos** (238 declarados e três leituras complementares do Batismo do Senhor). Todos possuem texto-fonte e glosa-base. Há **181 roteiros editoriais contextualizados para 181 itens não salmódicos** e **60 salmos com refrão específico e divisão de estrofes por celebração**. O mapeamento foi conferido estruturalmente.
 
-A revisão editorial ampliou **111 roteiros de 181 leituras não salmódicas**, contemplando Advento, parte do Natal, os Evangelhos de São Marcos e São João do Tempo Comum, Quaresma, Semana Santa e Tempo Pascal. Dos 60 salmos, **28** possuem estrofes e refrões preparados por celebração; os outros **32** receberam apenas o refrão contextual e têm estrofes pendentes. Portanto, faltam **102 itens** para concluir a revisão integral do Ano B: 70 leituras e 32 salmos.
+Nesta etapa foram preservados os 111 roteiros anteriores, elaborados 70 novos e contextualizados os 32 salmos restantes. O Evangelho da Sagrada Família foi recuperado nas formas longa e breve das páginas 90–91 do próprio PDF-fonte do Lecionário. Correções de paginação de dois salmos têm histórico arquivado. O registro Ef 1,3-14 da forma longa apresenta possível lacuna na própria edição-fonte e aguarda deliberação editorial.
 
-Foram corrigidos, com rastreabilidade, o Salmo 145(146) do 32º Domingo do Tempo Comum, anteriormente associado ao texto de Sl 15(16), e o refrão 'Aleluia' do 4º Domingo da Páscoa, contaminado por paginação. As versões antigas permanecem em arquivos de histórico e no Git.
+**Limite de validade:** cobertura editorial escrita não significa tradução pronta ou homologada em Libras. A Paixão segundo Marcos, em particular, segue como roteiro de cenas e precisa de comparação integral fala a fala, ensaio e validação humana. O texto-fonte provém de edição portuguesa e não está certificado como tradução oficial brasileira.
 
-A interface distingue as alternativas reais de leitura da Procissão de Ramos, Páscoa, Pentecostes e Ascensão, e impede que uma alternativa de refrão se torne uma falsa estrofe. Os arquivos originais e as glosas dos anos A e C permaneceram preservados.
-
-Consulte [REVISAO-GLOSAS-ANO-B.md](./REVISAO-GLOSAS-ANO-B.md) e [AUDITORIA-GLOSAS-ANO-B-241.csv](./AUDITORIA-GLOSAS-ANO-B-241.csv). **Revisão editorial em português não é validação linguística em Libras**: todos os itens dependem de avaliação humana e ensaio antes de qualquer divulgação como interpretação validada.
-
+Consulte [REVISAO-GLOSAS-ANO-B.md](./REVISAO-GLOSAS-ANO-B.md) e [AUDITORIA-GLOSAS-ANO-B-241.csv](./AUDITORIA-GLOSAS-ANO-B-241.csv). Os anos A e C, a Bíblia, o Plano de Leitura, os links e os demais módulos permanecem preservados.
