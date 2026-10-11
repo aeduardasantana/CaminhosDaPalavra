@@ -126,3 +126,15 @@ window.LCE_PSALM_STANZAS_B_ADICIONAIS = {
     ]
   ]
 };
+
+/* Carrega os refrões específicos do dia sem reutilizar o mesmo refrão por número de salmo. */
+window.LCE_PSALM_GLOSSA_CONTEXT = window.LCE_PSALM_GLOSSA_CONTEXT || {};
+Object.entries(window.LCE_PSALM_STANZAS_B_ADICIONAIS || {}).forEach(([key, stanzas]) => {
+  const refrain = (window.LCE_PSALM_REFRAINS_ANO_B || {})[key];
+  if (!refrain || !Array.isArray(stanzas) || !stanzas.length) return;
+  window.LCE_PSALM_GLOSSA_CONTEXT[key] = {
+    refrain: refrain.refrain,
+    alternativeRefrain: refrain.alternativeRefrain || '',
+    stanzas
+  };
+});
