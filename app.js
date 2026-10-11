@@ -5,6 +5,7 @@ const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
 const glossaAnoARevisada = window.LCE_GLOSSA_ANO_A_REVISADA || {};
 const glossaAnoBRevisada = window.LCE_GLOSSA_ANO_B_REVISADA || {};
+const glossaAnoCRevisada = window.LCE_GLOSSA_ANO_C_REVISADA || {};
 const liturgyOriginals = window.LCE_LITURGY_ORIGINALS || {};
 const psalmStructures = window.LCE_PSALM_STRUCTURES || {};
 const psalmGlossaContext = window.LCE_PSALM_GLOSSA_CONTEXT || {};
@@ -163,7 +164,7 @@ function genericLiturgyEntries() {
       referencia: item.reference,
       status: unresolvedSource
         ? 'Texto original integral ausente — revisão bloqueada'
-        : (glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey])
+        : (glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey] || glossaAnoCRevisada[contextKey])
         ? 'Roteiro editorial ampliado — validação linguística em Libras pendente'
         : (item.type === 'salmo' && ((record.cycle === 'A' && yearAPsalmRefrains[contextKey]) || (record.cycle === 'B' && yearBPsalmRefrains[contextKey])))
           ? 'Refrão contextual revisado — estrofes e Libras pendentes'
@@ -178,7 +179,7 @@ function genericLiturgyEntries() {
         : (originalRecord?.sourceVersion || detailedPilot?.sourceVersion || 'Texto litúrgico — Lecionário: texto original ainda não incorporado'),
       sourceUrl: originalRecord?.sourceUrl || detailedPilot?.sourceUrl || '',
       original: originalRecord?.text || detailedPilot?.original || (item.reference + ' — texto original ainda não incorporado.'),
-      glosa: glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
+      glosa: glossaAnoARevisada[contextKey] || glossaAnoBRevisada[contextKey] || glossaAnoCRevisada[contextKey] || detailedPilot?.glosa || glossa[item.reference] || fallbackGlosa(item.reference),
       glosaContext: item.type === 'salmo' ? (psalmGlossaContext[contextKey] || null) : null,
       glosaRefrainContext: item.type === 'salmo' ? (yearAPsalmRefrains[contextKey] || yearBPsalmRefrains[contextKey] || null) : null,
       note: item.note || '',
