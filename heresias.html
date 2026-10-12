@@ -38,16 +38,17 @@ footer.page-footer{margin-top:2rem;border-top:1px solid var(--border);padding-to
 <script src="./site-menu.js?v=20261012-1"></script>
 <main>
 <p class="eyebrow">Sagrada Tradição e Magistério • Pesquisa histórica</p>
-<h1>Heresias, controvérsias e condenações doutrinais</h1>
-<p class="lead">Conheça correntes combatidas, teses condenadas, cismas e práticas sobre as quais a Igreja Católica se pronunciou. Cada ficha apresenta o núcleo do debate, a posição católica e a fonte documental para consulta.</p>
-<aside role="note"><strong>Critério de classificação.</strong> Nem toda controvérsia constitui heresia em sentido canônico (Catecismo, n. 2089). Maçonaria, por exemplo, figura como associação considerada incompatível, não como heresia formal. Os resumos e enquadramentos desta versão são <strong>preliminares e sujeitos à revisão histórica e eclesial</strong>. A fonte pode ser histórica e conter formulações que exigem contextualização diante do Magistério posterior.</aside>
+<h1>Heresias, teorias e condenações da Igreja</h1>
+<p class="lead">Pesquise heresias históricas, teses condenadas, ideologias criticadas, associações incompatíveis e práticas rejeitadas pela Igreja Católica. Compare o que cada corrente propõe com o pronunciamento documentado da Igreja.</p>
+<aside role="note"><strong>Critério de classificação.</strong> Nem toda controvérsia constitui heresia em sentido canônico (Catecismo, n. 2089). Maçonaria, por exemplo, figura como associação considerada incompatível, não como heresia formal. Os resumos são instrumentos de estudo e passam por <strong>revisão documental contínua</strong>. Uma citação de documento não implica que todas as ideias associadas a um grupo tenham sido condenadas formalmente. A fonte pode ser histórica e conter formulações que exigem contextualização diante do Magistério posterior.</aside>
 <form class="controls" id="filters" role="search" aria-label="Filtros do catálogo">
 <label>Buscar por nome, conteúdo ou documento<input id="query" type="search" placeholder="Ex.: gnosticismo, maçonaria, concílio..." autocomplete="off"></label>
-<label>Classificação<select id="kind"><option value="">Todas as classificações</option></select></label>
-<label>Período<select id="period"><option value="">Todos os períodos</option></select></label>
+<label>Tipo de pronunciamento<select id="kind"><option value="">Todos os tipos</option></select></label>
+<label>Período histórico<select id="period"><option value="">Todos os períodos</option></select></label>
 <button type="reset">Limpar filtros</button>
 </form>
 <p id="count" class="meta" role="status" aria-live="polite">Carregando registros...</p>
+<p class="meta">A pesquisa inclui títulos, teses, nomes de documentos e autoridades. Cada registro pode citar um concílio, um papa, um dicastério ou o Catecismo. Consulte a fonte para compreender o contexto completo.</p>
 <div id="cards" class="cards" aria-label="Resultados da pesquisa"></div>
 <footer class="page-footer"><p>Acervo de estudo e documentação, não instrumento para atribuir culpa ou censura canônica a pessoas ou comunidades atuais. Links remetem a documentos da Santa Sé ou transcrições de documentos conciliares; a classificação final requer exame de cada fonte.</p></footer>
 </main>
@@ -61,8 +62,18 @@ const els={query:$("query"),kind:$("kind"),period:$("period"),count:$("count"),c
 let records=[];
 function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR")}
 function addText(el,tag,text,className){const child=document.createElement(tag);child.textContent=text;if(className)child.className=className;el.appendChild(child);return child}
+function family(r){
+ const s=norm(r.classificacao);
+ if(s.startsWith("heresia")||s.includes("heresia e"))return "Heresias históricas";
+ if(s.includes("cisma"))return "Cismas e controvérsias sacramentais";
+ if(s.includes("associacao"))return "Associações incompatíveis";
+ if(s.includes("pratica")||s.includes("bioetica"))return "Práticas e questões morais";
+ if(s.includes("ideologia")||s.includes("tendencia")||s.includes("movimento"))return "Ideologias e movimentos examinados";
+ if(s.includes("dogma")||s.includes("proposic")||s.includes("doutrina"))return "Teses e definições doutrinais";
+ return "Outras posições teológicas e morais";
+}
 function recordCard(r){
- const card=document.createElement("article");
+ const card=document.createElement("article");card.id="registro-"+r.id;
  addText(card,"div",r.periodo,"kicker");
  addText(card,"h2",r.titulo);
  addText(card,"span",r.classificacao,"pill");
@@ -76,8 +87,8 @@ function recordCard(r){
 }
 function update(){
  const needle=norm(els.query.value.trim());const cat=els.kind.value;const period=els.period.value;
- const shown=records.filter(r=>(!cat||r.classificacao===cat)&&(!period||r.periodo===period)&&(!needle||norm([r.titulo,r.periodo,r.classificacao,r.descricao,r.posicao,r.fonte.titulo].join(" ")).includes(needle)));
- els.count.textContent=shown.length+" de "+records.length+" registros no catálogo (rascunho editorial).";
+ const shown=records.filter(r=>(!cat||family(r)===cat)&&(!period||r.periodo===period)&&(!needle||norm([r.titulo,r.periodo,r.classificacao,r.descricao,r.posicao,r.fonte.titulo,(r.fontes_adicionais||[]).map(f=>f.titulo).join(" "),...(r.aliases||[])].join(" ")).includes(needle)));
+ els.count.textContent=shown.length+" de "+records.length+" assuntos documentados encontrados.";
  const fragment=document.createDocumentFragment();shown.forEach(r=>fragment.appendChild(recordCard(r)));
  els.cards.replaceChildren(fragment);
  if(!shown.length)addText(els.cards,"p","Nenhum registro encontrado. Ajuste os filtros.");
@@ -86,7 +97,9 @@ fetch("./dados/heresias-controversias.json",{cache:"no-cache"})
 .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
 .then(d=>{records=d.registros||[];const classes=[...new Set(records.map(r=>r.classificacao))].sort((a,b)=>a.localeCompare(b,"pt-BR"));const periods=[...new Set(records.map(r=>r.periodo))].sort((a,b)=>a.localeCompare(b,"pt-BR"));classes.forEach(c=>els.kind.add(new Option(c,c)));periods.forEach(p=>els.period.add(new Option(p,p)));update()})
 .catch(()=>{els.count.textContent="Não foi possível carregar o catálogo. Tente novamente.";});
-els.query.addEventListener("input",update);
+const initialQuery=new URLSearchParams(location.search).get("q");
+if(initialQuery){els.query.value=initialQuery;update();}
+els.query.addEventListener("input",()=>{const u=new URL(location.href);const query=els.query.value.trim();if(query)u.searchParams.set("q",query);else u.searchParams.delete("q");history.replaceState(null,"",u);update();});
 els.kind.addEventListener("change",update);
 els.period.addEventListener("change",update);
 $("filters").addEventListener("reset",()=>requestAnimationFrame(update));
