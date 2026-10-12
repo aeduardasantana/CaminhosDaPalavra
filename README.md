@@ -36,6 +36,12 @@ A nova seção pública **Ritos da Missa** apresenta, de maneira acessível ao p
 
 O objetivo é apresentar o conteúdo litúrgico ao público sem exigir que conheça os livros usados na sacristia, enquanto a glosa escrita serve de apoio à preparação do intérprete e não equivale à interpretação sinalizada.
 
+## Integridade editorial e fontes
+
+A regra de publicação é **não inventar dados**. Todo dado factual deve possuir respaldo verificável; ausência documental permanece visível como lacuna. Consulte [Política editorial e de fontes](./POLITICA-EDITORIAL-E-FONTES.md).
+
+Na relação dos papas, os 267 registros são apresentados com campos de nome de nascimento e datas transcritos da [tabela da Santa Sé](https://www.vatican.va/content/vatican/pt/holy-father.html), preservando lacunas, datas alternativas e formas originais. O arquivo de apoio é `vatican-pontificates-raw.js`. Em 12/10/2026, a tabela fornecia 134 campos de nome de nascimento e deixava 133 em branco. A qualidade factual dos demais módulos necessita conferências próprias, que não devem ser confundidas com a conferência desta lista.
+
 ## Sucessão Apostólica e Papas
 
 - Página pública autônoma: `papas.html`, vinculada ao menu e à apresentação inicial, sem alterar as seções de Bíblia, Plano de Leitura, Calendário, Liturgia e Missal.
