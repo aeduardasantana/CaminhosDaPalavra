@@ -1284,3 +1284,25 @@ select,
 .lectionary-sequence summary { cursor:pointer; font-weight:700; color:#514127; }
 .lectionary-sequence .text-content { margin-top:12px; padding-top:10px; border-top:1px solid #e5d7bd; white-space:pre-wrap; }
 @media(max-width:640px) { .lectionary-sequence { padding:9px 11px; } .lectionary-variant-switch { gap:6px; } }
+
+/* Acesso à página catequética de sucessão apostólica, sem interferir na navegação interna. */
+.primary-nav .nav-papas-link {
+  display: inline-flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  padding: 9px 14px;
+  min-height: 43px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 750;
+  color: var(--muted);
+  background: transparent;
+}
+.primary-nav .nav-papas-link:hover,
+.primary-nav .nav-papas-link:focus-visible {
+  color: var(--ink);
+  border-color: #b7ad9b;
+}
