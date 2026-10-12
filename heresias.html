@@ -69,6 +69,7 @@ function recordCard(r){
  const footer=document.createElement("footer");
  const link=document.createElement("a");link.href=r.fonte.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Consultar documento de referência ↗";footer.appendChild(link);
  addText(footer,"small",r.fonte.titulo);
+ if(Array.isArray(r.fontes_adicionais)){r.fontes_adicionais.forEach(s=>{const extra=document.createElement("p");const a=document.createElement("a");a.href=s.url;a.target="_blank";a.rel="noopener noreferrer";a.textContent=s.titulo+" ↗";extra.appendChild(a);footer.appendChild(extra);});}
  card.appendChild(footer);return card;
 }
 function update(){
