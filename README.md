@@ -56,6 +56,17 @@ A regra de publicação é **não inventar dados**. Todo dado factual deve possu
 
 Na relação dos papas, os 267 registros são apresentados com campos de nome de nascimento e datas transcritos da [tabela da Santa Sé](https://www.vatican.va/content/vatican/pt/holy-father.html), preservando lacunas, datas alternativas e formas originais. O arquivo de apoio é `vatican-pontificates-raw.js`. Em 12/10/2026, a tabela fornecia 134 campos de nome de nascimento e deixava 133 em branco. A qualidade factual dos demais módulos necessita conferências próprias, que não devem ser confundidas com a conferência desta lista.
 
+## História da Salvação — Jornada catequética conectada (12/10/2026)
+
+- Página pública: `historia-da-salvacao.html`, acessível pelo menu global e pelo cartão da página inicial, com retorno à página dos papas.
+- Origem editorial: documento-mestre arquivado e conferido no Google Drive, versão `HS-2026-10-12.1`, URL: https://docs.google.com/document/d/1d7Prfhp180AXiZ6GYvbeo8bA6IQKBfVdtssjw8YAR3M/edit
+- Extensão da versão: **16 capítulos**, **33 conexões documentadas** e **11 entradas bibliográficas/de fontes**, da Criação à consumação da História da Salvação.
+- Conteúdo: Adão/Eva e protoevangelho; Noé; Abraão/Melquisedeque; Isaac, Esaú e Jacó; tribos de Israel; Moisés, sarça e Sinai; Arão, Tabernáculo e Arca; reinos, Davi e Templo; profetas e exílio; Maria, Imaculada Conceição, Nova Eva e Arca da Nova Aliança; Evangelhos e Messias; redenção e sacerdócio de Cristo; instituição da Igreja; São Pedro e sucessão; fé e razão; retorno de Cristo, ressurreição e Juízo Final.
+- Navegação: índice com âncoras, painel de oito movimentos, capítulos com referências bíblicas, conexões classificadas, navegação anterior/seguinte e ligação ao catálogo papal. Não contém FAQ sem pesquisa de demanda.
+- **Critério de fonte**: distinguir conexões bíblicas (A), magisteriais (B), tradicionais/tipológicas (C) e pedagógicas (D), não atribuindo natureza de dogma às chaves editoriais.
+- **Governança**: material identificado como estudo catequético, sem declaração de revisão eclesial externa concluída. O conteúdo novo e a alteração na interface não substituem a Matriz Teológico 1.5 congelada. Registrar eventual parecer eclesial e decisões de publicação conforme BLOCO 7, sem presumir status APROVADO.
+- **Auditoria**: verificar estrutura, referências e consistência com o documento-mestre após alterações; GitHub Actions/Locaweb validação técnica é distinta de avaliação doutrinal.
+
 ## Sucessão Apostólica e Papas
 
 - Página pública autônoma: `papas.html`, vinculada ao menu e à apresentação inicial, sem alterar as seções de Bíblia, Plano de Leitura, Calendário, Liturgia e Missal.
