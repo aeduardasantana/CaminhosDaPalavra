@@ -1,10 +1,10 @@
 # Catálogo de heresias, controvérsias e posições doutrinais — protocolo editorial
 
-**Estado:** inventário inicial, em revisão. **Data de referência:** 12/10/2026.
+**Estado:** página incorporada ao site, revisão documental contínua. **Data de referência:** 12/10/2026.
 
 ## Alcance desta proposta
 
-O arquivo `dados/heresias-controversias.json` reúne 59 entradas históricas e temáticas. `heresias.html` oferece busca por texto, classificação e período, com links para documentos; a página **não está vinculada ao menu principal** e a proposta segue em PR para revisão, sem publicação automática no `main`.
+O arquivo `dados/heresias-controversias.json` reúne **88 entradas** históricas e temáticas. `heresias.html` oferece busca textual e filtros por tipo de pronunciamento e período, com documentos de referência. A página está vinculada ao menu lateral do site. O inventário é continuamente ampliado e revisado, sem pretensão de exaustividade.
 
 A seção integra os estudos sobre **Escritura, Tradição e Magistério**. **Não** há glosas de Libras nesta área. O recurso transversal de acessibilidade é o VLibras. A elaboração de glosas permanece restrita à **liturgia dominical**, conforme diretriz do projeto. **Oração Visual é produto separado**.
 
@@ -38,6 +38,6 @@ Os tópicos abaixo são **pistas de pesquisa documental, não uma lista de heres
 
 ## Observações de integridade
 
-Este inventário **não pretende esgotar a história das heresias** nem substituir obras de referência especializadas. Os 59 registros representam temas diferentes, inclusive proposições específicas, e **não equivalem a 59 heresias formalmente condenadas**. É fundamental preservar a classificação registrada em cada ficha.
+Este inventário **não pretende esgotar a história das heresias** nem substituir obras de referência especializadas. Os 88 registros representam temas diferentes, inclusive proposições específicas, e **não equivalem a 88 heresias formalmente condenadas**. É fundamental preservar a classificação registrada em cada ficha.
 
-A página só deverá entrar na navegação pública após verificação de todas as fichas e da estrutura de menus verticais proposta para o site. Não inserir oração nem anunciar tradução integral em Libras.
+A página funciona como catálogo referenciado, com contextualização e aviso editorial de revisão contínua. As fontes documentais deverão ser revisitadas e detalhadas progressivamente, preservando classificações corretas. Não inserir oração nem anunciar tradução integral em Libras.
