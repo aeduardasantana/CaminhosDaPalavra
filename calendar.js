@@ -122,6 +122,7 @@
     const holyFamily = holyFamilySunday.getUTCMonth() === 11 ? holyFamilySunday : utcDate(year, 11, 30);
 
     if (sameDay(date, utcDate(year, 0, 1))) return "Santa Maria, Mãe de Deus";
+    if (sameDay(date, utcDate(year, 9, 12))) return "Nossa Senhora da Conceição Aparecida"; // Solenidade no Brasil.
     if (sameDay(date, epiphany)) return "Epifania do Senhor";
     if (sameDay(date, baptism)) return "Batismo do Senhor";
     if (sameDay(date, ash)) return "Quarta-feira de Cinzas";
