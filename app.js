@@ -971,7 +971,7 @@ function syncSectionUrl(section, options = {}) {
 function setSection(section, options = {}) {
   if (!els.sections[section]) section = 'projeto';
   if (!options.fromHistory) syncSectionUrl(section, options);
-  const titles = {projeto:'Início',biblia:'Bíblia',plano:'Plano de Leitura',calendario:'Calendário Litúrgico',liturgia:'Liturgia da Palavra',missal:'Missal Romano e Libras'};
+  const titles = {projeto:'Início',biblia:'Bíblia',plano:'Plano de Leitura',calendario:'Calendário Litúrgico',liturgia:'Liturgia da Palavra',missal:'Ritos e Orações da Missa'};
   document.title = titles[section] + ' — Caminhos da Palavra';
   els.navButtons.forEach(btn => {
     if (btn.dataset.section === section) btn.setAttribute('aria-current', 'page');
