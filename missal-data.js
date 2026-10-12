@@ -1,6 +1,6 @@
-/* Acervo de textos litúrgicos destinados à apresentação no Caminhos da Palavra.
-   Fontes e controles internos não geram acesso público ao documento integral.
-   A glosa só é publicada após elaboração e revisão. */
+/* Textos dos Ritos e Orações da Missa — base editorial: Missal Romano CNBB (2023).
+   Não expõe documento integral, páginas ou arquivos PDF no site.
+   Glosas escritas só aparecem após elaboração e revisão. */
 window.LCE_MISSAL = {
   "version": "2026-10-12-ritos-acessiveis",
   "sourceName": "Missal Romano — CNBB, 3ª edição típica (Brasil, 2023)",
@@ -43,7 +43,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Sinal da cruz",
       "role": "Sacerdote e assembleia",
-      "page": "430",
       "text": "Sacerdote: Em nome do Pai e do Filho e do Espírito Santo.\nAssembleia: Amém.",
       "note": "Ao iniciar a Missa. Identificar o gesto litúrgico e a participação da assembleia."
     },
@@ -52,7 +51,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Saudação inicial — fórmula com resposta",
       "role": "Sacerdote e assembleia",
-      "page": "431",
       "text": "Sacerdote: O Senhor esteja convosco.\nAssembleia: Ele está no meio de nós.",
       "note": "Uma das fórmulas de saudação da Missa; outras também podem ser usadas."
     },
@@ -61,7 +59,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Saudação inicial — fórmula trinitária",
       "role": "Sacerdote e assembleia",
-      "page": "430–431",
       "text": "Sacerdote: A graça de nosso Senhor Jesus Cristo,\no amor do Pai\ne a comunhão do Espírito Santo\nestejam convosco.\nAssembleia: Bendito seja Deus, que nos reuniu no amor de Cristo.",
       "note": "Conferir a fórmula escolhida pelo presidente da celebração."
     },
@@ -70,7 +67,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Ato penitencial — primeira fórmula (Confesso)",
       "role": "Todos; sacerdote encerra",
-      "page": "433–434",
       "text": "Todos: Confesso a Deus todo-poderoso\ne a vós, irmãos e irmãs,\nque pequei muitas vezes\npor pensamentos e palavras,\natos e omissões,\npor minha culpa, minha culpa, minha tão grande culpa.\nE peço à Virgem Maria,\naos Anjos e Santos\ne a vós, irmãos e irmãs,\nque rogueis por mim a Deus, nosso Senhor.\nSacerdote: Deus todo-poderoso tenha compaixão de nós,\nperdoe os nossos pecados\ne nos conduza à vida eterna.\nAssembleia: Amém.",
       "note": "Uma das modalidades do rito penitencial; inclui o gesto prescrito de bater no peito."
     },
@@ -79,7 +75,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Hino do Glória",
       "role": "Assembleia/coro",
-      "page": "442",
       "text": "Glória a Deus nas alturas,\ne paz na terra aos homens por ele amados.\nSenhor Deus, rei dos céus,\nDeus Pai todo-poderoso.\nNós vos louvamos,\nnós vos bendizemos,\nnós vos adoramos,\nnós vos glorificamos,\nnós vos damos graças\npor vossa imensa glória.\nSenhor Jesus Cristo, Filho Unigênito,\nSenhor Deus, Cordeiro de Deus,\nFilho de Deus Pai.\nVós que tirais o pecado do mundo,\ntende piedade de nós.\nVós que tirais o pecado do mundo,\nacolhei a nossa súplica.\nVós que estais à direita do Pai,\ntende piedade de nós.\nSó vós sois o Santo,\nsó vós, o Senhor,\nsó vós, o Altíssimo,\nJesus Cristo,\ncom o Espírito Santo,\nna glória de Deus Pai.\nAmém.",
       "note": "O Glória não é proclamado em todas as celebrações. O canto e o ritmo podem variar."
     },
@@ -88,7 +83,6 @@ window.LCE_MISSAL = {
       "group": "iniciais",
       "title": "Oração coleta",
       "role": "Sacerdote; assembleia responde",
-      "page": "442",
       "text": "Sacerdote: Oremos.\n[Oração própria desta celebração: conteúdo em preparação.]\nAssembleia: Amém.",
       "note": "O texto da coleta varia por celebração. Não substituir por uma oração genérica."
     },
@@ -97,7 +91,6 @@ window.LCE_MISSAL = {
       "group": "palavra",
       "title": "Profissão de fé — Símbolo dos Apóstolos",
       "role": "Todos",
-      "page": "445–446",
       "text": "Creio em Deus Pai todo-poderoso,\nCriador do céu e da terra.\nE em Jesus Cristo, seu único Filho, nosso Senhor,\nque foi concebido pelo poder do Espírito Santo,\nnasceu da Virgem Maria,\npadeceu sob Pôncio Pilatos,\nfoi crucificado, morto e sepultado,\ndesceu à mansão dos mortos,\nressuscitou ao terceiro dia,\nsubiu aos céus,\nestá sentado à direita de Deus Pai todo-poderoso,\ndonde há de vir a julgar os vivos e os mortos.\nCreio no Espírito Santo,\nna santa Igreja católica,\nna comunhão dos santos,\nna remissão dos pecados;\nna ressurreição da carne\ne na vida eterna. Amém.",
       "note": "Fórmula alternativa ao Símbolo niceno-constantinopolitano, conforme rubricas. Inclinação prevista em trecho determinado."
     },
@@ -106,7 +99,6 @@ window.LCE_MISSAL = {
       "group": "palavra",
       "title": "Profissão de fé — Símbolo niceno-constantinopolitano",
       "role": "Todos",
-      "page": "444–445",
       "text": "",
       "note": "A transcrição integral desta profissão de fé ainda está em preparação. Não confundir com o Símbolo dos Apóstolos."
     },
@@ -115,7 +107,6 @@ window.LCE_MISSAL = {
       "group": "palavra",
       "title": "Oração universal / preces dos fiéis",
       "role": "Leitor ou diácono e assembleia",
-      "page": "446",
       "text": "[Intenções variáveis conforme a celebração; não há um formulário único obrigatório neste ponto do Ordinário.]",
       "note": "Preparar antecipadamente a resposta do povo e os nomes mencionados. Leituras e Evangelho devem ser consultados em Liturgia da Palavra."
     },
@@ -124,7 +115,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Preparação dos dons — pão",
       "role": "Sacerdote; resposta eventual da assembleia",
-      "page": "446–447",
       "text": "Sacerdote: Bendito sejais, Senhor, Deus do universo,\npelo pão que recebemos de vossa bondade,\nfruto da terra e do trabalho humano,\nque agora vos apresentamos,\ne para nós se vai tornar pão da vida.\nAssembleia (se recitado em voz alta): Bendito seja Deus para sempre!",
       "note": "O sacerdote pode dizer a oração em silêncio; a resposta depende da realização em voz alta."
     },
@@ -133,7 +123,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Preparação dos dons — vinho",
       "role": "Sacerdote; resposta eventual da assembleia",
-      "page": "447",
       "text": "Sacerdote: Bendito sejais, Senhor, Deus do universo,\npelo vinho que recebemos de vossa bondade,\nfruto da videira e do trabalho humano,\nque agora vos apresentamos,\ne para nós se vai tornar vinho da salvação.\nAssembleia (se recitado em voz alta): Bendito seja Deus para sempre!",
       "note": "A fórmula pode ser dita em silêncio. Identificar se há canto da preparação das oferendas."
     },
@@ -142,7 +131,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Orai, irmãos e irmãs",
       "role": "Sacerdote e assembleia",
-      "page": "447–448",
       "text": "Sacerdote: Orai, irmãos e irmãs,\npara que o meu e vosso sacrifício\nseja aceito por Deus Pai todo-poderoso.\nAssembleia: Receba o Senhor por tuas mãos este sacrifício,\npara glória do seu nome,\npara nosso bem e de toda a sua santa Igreja.",
       "note": "Existem fórmulas alternativas para este convite."
     },
@@ -151,7 +139,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Oração sobre as oferendas",
       "role": "Sacerdote e assembleia",
-      "page": "448",
       "text": "[Oração sobre as oferendas própria da celebração: conteúdo em preparação.]\nAssembleia: Amém.",
       "note": "A oração é variável conforme o formulário do dia."
     },
@@ -160,7 +147,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Diálogo do prefácio",
       "role": "Sacerdote e assembleia",
-      "page": "450",
       "text": "Sacerdote: O Senhor esteja convosco.\nAssembleia: Ele está no meio de nós.\nSacerdote: Corações ao alto.\nAssembleia: O nosso coração está em Deus.\nSacerdote: Demos graças ao Senhor, nosso Deus.\nAssembleia: É nosso dever e nossa salvação.",
       "note": "O texto do prefácio que vem depois deste diálogo varia por tempo ou celebração."
     },
@@ -169,7 +155,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Santo",
       "role": "Sacerdote e assembleia/coro",
-      "page": "450",
       "text": "Santo, Santo, Santo,\nSenhor, Deus do universo.\nO céu e a terra proclamam a vossa glória.\nHosana nas alturas!\nBendito o que vem em nome do Senhor!\nHosana nas alturas!",
       "note": "O canto e sua execução musical podem influenciar ritmo e coordenação dos intérpretes."
     },
@@ -178,7 +163,6 @@ window.LCE_MISSAL = {
       "group": "eucaristica",
       "title": "Orações Eucarísticas e aclamações",
       "role": "Sacerdote; aclamações da assembleia",
-      "page": "522–568",
       "text": "[Orações Eucarísticas e aclamações: conteúdo em preparação para disponibilização por texto.]",
       "note": "Existem várias Orações Eucarísticas. A seleção depende da celebração; este conjunto ainda não está integralmente disponível."
     },
@@ -187,7 +171,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Pai-nosso",
       "role": "Sacerdote e assembleia",
-      "page": "570",
       "text": "Pai nosso que estais nos céus,\nsantificado seja o vosso nome;\nvenha a nós o vosso reino,\nseja feita a vossa vontade,\nassim na terra como no céu.\nO pão nosso de cada dia nos daí hoje;\nperdoai-nos as nossas ofensas,\nassim como nós perdoamos\na quem nos tem ofendido;\ne não nos deixeis cair em tentação,\nmas livrai-nos do mal.",
       "note": "Há diferentes convites antes da oração do Senhor."
     },
@@ -196,7 +179,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Aclamação após o embolismo",
       "role": "Assembleia",
-      "page": "571",
       "text": "Vosso é o reino,\no poder e a glória para sempre.",
       "note": "Aclamação após a oração do sacerdote que começa por 'Livrai-nos de todos os males, ó Pai'."
     },
@@ -205,7 +187,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Saudação da paz",
       "role": "Sacerdote e assembleia",
-      "page": "572",
       "text": "Sacerdote: A paz do Senhor esteja sempre convosco.\nAssembleia: O amor de Cristo nos uniu.",
       "note": "O convite ao gesto da paz tem fórmulas próprias e pode ser omitido conforme a celebração."
     },
@@ -214,7 +195,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Cordeiro de Deus",
       "role": "Assembleia/coro",
-      "page": "573",
       "text": "Cordeiro de Deus,\nque tirais o pecado do mundo,\ntende piedade de nós.\nCordeiro de Deus,\nque tirais o pecado do mundo,\ntende piedade de nós.\nCordeiro de Deus,\nque tirais o pecado do mundo,\ndai-nos a paz.",
       "note": "Se a fração do pão se prolongar, as invocações podem ser repetidas; na última usa-se 'dai-nos a paz'."
     },
@@ -223,7 +203,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Convite à Comunhão",
       "role": "Sacerdote e assembleia",
-      "page": "574",
       "text": "Sacerdote: Felizes os convidados para a Ceia do Senhor.\n[Outras fórmulas e resposta da assembleia: em preparação.]",
       "note": "O texto está parcialmente cadastrado e aguarda a inclusão das demais fórmulas e da resposta da assembleia."
     },
@@ -232,7 +211,6 @@ window.LCE_MISSAL = {
       "group": "comunhao",
       "title": "Oração depois da Comunhão",
       "role": "Sacerdote e assembleia",
-      "page": "575",
       "text": "[Oração depois da Comunhão própria da celebração: conteúdo em preparação.]\nAssembleia: Amém.",
       "note": "Essa oração varia com a celebração; aqui existem exemplos de dois formulários."
     },
@@ -241,7 +219,6 @@ window.LCE_MISSAL = {
       "group": "finais",
       "title": "Bênção simples",
       "role": "Sacerdote e assembleia",
-      "page": "575–576",
       "text": "Sacerdote: O Senhor esteja convosco.\nAssembleia: Ele está no meio de nós.\nSacerdote: Abençoe-vos Deus todo-poderoso,\nPai e Filho e Espírito Santo.\nAssembleia: Amém.",
       "note": "Há bênçãos solenes e orações sobre o povo próprias de determinadas celebrações."
     },
@@ -250,7 +227,6 @@ window.LCE_MISSAL = {
       "group": "finais",
       "title": "Despedida",
       "role": "Diácono ou sacerdote; assembleia",
-      "page": "577",
       "text": "Diácono ou sacerdote: Ide em paz, e o Senhor vos acompanhe.\nAssembleia: Graças a Deus.",
       "note": "Há outras fórmulas, como 'Ide em paz, e anunciai o Evangelho do Senhor'."
     },
@@ -259,7 +235,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "28º Domingo do Tempo Comum — coleta",
       "role": "Sacerdote",
-      "page": "410",
       "text": "Nós vos pedimos, Senhor,\nque vossa graça nos preceda e acompanhe\ne nos torne atentos\npara perseverar na prática do bem.\nPor nosso Senhor Jesus Cristo, vosso Filho, que é Deus,\ne convosco vive e reina, na unidade do Espírito Santo,\npor todos os séculos dos séculos.",
       "note": "Oração própria do 28º Domingo do Tempo Comum. A antífona de entrada é outro elemento da celebração."
     },
@@ -268,7 +243,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "28º Domingo do Tempo Comum — sobre as oferendas",
       "role": "Sacerdote",
-      "page": "410",
       "text": "Acolhei, Senhor, as preces dos fiéis\ncom a oblação do sacrifício,\npara que possamos,\npor este serviço da nossa piedosa devoção,\nalcançar a glória do céu.\nPor Cristo, nosso Senhor.",
       "note": "Exemplo de oração própria; não é fórmula para todos os domingos."
     },
@@ -277,7 +251,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "28º Domingo do Tempo Comum — depois da Comunhão",
       "role": "Sacerdote",
-      "page": "410",
       "text": "Deus todo-poderoso, nós vos pedimos humildemente:\nassim como nos alimentais\ncom o sacramento do Corpo e Sangue de Cristo,\nfazei-nos participar da natureza divina.\nPor Cristo, nosso Senhor.",
       "note": "Exemplo do Próprio do Tempo."
     },
@@ -286,7 +259,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "Nossa Senhora da Conceição Aparecida (12/10) — coleta",
       "role": "Sacerdote",
-      "page": "827",
       "text": "Ó Deus todo-poderoso,\nao rendermos culto à Imaculada Conceição de Maria,\nMãe de Deus e Senhora nossa,\nconcedei que o povo brasileiro,\nvivendo na paz e na justiça,\npossa chegar um dia à pátria definitiva.\nPor nosso Senhor Jesus Cristo, vosso Filho, que é Deus,\ne convosco vive e reina, na unidade do Espírito Santo,\npor todos os séculos dos séculos.",
       "note": "Oração própria da solenidade de Nossa Senhora da Conceição Aparecida, celebrada no Brasil."
     },
@@ -295,7 +267,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "Nossa Senhora da Conceição Aparecida (12/10) — oferendas",
       "role": "Sacerdote",
-      "page": "827",
       "text": "Acolhei, ó Deus, as preces e oferendas\napresentadas na festa da Virgem Maria,\nMãe de Jesus Cristo, vosso Filho;\nconcedei que elas vos sejam agradáveis\ne nos tragam a graça da vossa proteção.\nPor Cristo, nosso Senhor.",
       "note": "O formulário tem também prefácio próprio, antífonas e oração depois da Comunhão."
     },
@@ -304,7 +275,6 @@ window.LCE_MISSAL = {
       "group": "proprio",
       "title": "Nossa Senhora da Conceição Aparecida (12/10) — depois da Comunhão",
       "role": "Sacerdote",
-      "page": "829",
       "text": "Alimentados com o Corpo e o Sangue do vosso Filho,\nnós vos suplicamos, ó Deus: dai ao vosso povo,\nsob o olhar de Nossa Senhora da Conceição Aparecida,\nempenhar-se nas tarefas de cada dia\npara a propagação do vosso reino.\nPor Cristo, nosso Senhor.",
       "note": "Há também a possibilidade de bênção solene própria."
     }
