@@ -95,10 +95,10 @@ function update(){
 }
 fetch("./dados/heresias-controversias.json",{cache:"no-cache"})
 .then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
-.then(d=>{records=d.registros||[];const classes=[...new Set(records.map(r=>r.classificacao))].sort((a,b)=>a.localeCompare(b,"pt-BR"));const periods=[...new Set(records.map(r=>r.periodo))].sort((a,b)=>a.localeCompare(b,"pt-BR"));classes.forEach(c=>els.kind.add(new Option(c,c)));periods.forEach(p=>els.period.add(new Option(p,p)));update()})
+.then(d=>{records=d.registros||[];const classes=[...new Set(records.map(family))].sort((a,b)=>a.localeCompare(b,"pt-BR"));const periods=[...new Set(records.map(r=>r.periodo))].sort((a,b)=>a.localeCompare(b,"pt-BR"));classes.forEach(c=>els.kind.add(new Option(c,c)));periods.forEach(p=>els.period.add(new Option(p,p)));update()})
 .catch(()=>{els.count.textContent="Não foi possível carregar o catálogo. Tente novamente.";});
 const initialQuery=new URLSearchParams(location.search).get("q");
-if(initialQuery){els.query.value=initialQuery;update();}
+if(initialQuery){els.query.value=initialQuery;}
 els.query.addEventListener("input",()=>{const u=new URL(location.href);const query=els.query.value.trim();if(query)u.searchParams.set("q",query);else u.searchParams.delete("q");history.replaceState(null,"",u);update();});
 els.kind.addEventListener("change",update);
 els.period.addEventListener("change",update);
