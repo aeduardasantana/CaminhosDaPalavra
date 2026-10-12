@@ -1,0 +1,1076 @@
+{
+  "titulo": "Heresias, controvérsias e condenações doutrinais",
+  "subtitulo": "Busca documentada de heresias, correntes e práticas condenadas ou criticadas; cada tipo é diferenciado.",
+  "data_de_referencia": "2026-10-12",
+  "estado": "acervo público de consulta: entradas com documentos de referência; revisão editorial contínua",
+  "criterio": "Não classificar como heresia o que a fonte apresenta apenas como prática proibida, incompatibilidade associativa ou tese censurada. Cada resumo exige revisão contextual e histórica.",
+  "total": 88,
+  "registros": [
+    {
+      "id": 1,
+      "titulo": "Gnosticismo antigo",
+      "periodo": "II–III",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Apresentava em certas escolas a salvação como conhecimento reservado e relativizava a Encarnação real.",
+      "posicao": "A fé apostólica afirma que o mesmo Deus cria e salva, e que o Verbo se fez verdadeiramente carne.",
+      "fonte": {
+        "titulo": "Comissão Teológica Internacional, estudo sobre Niceia (2025)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/cti_documents/rc_cti_doc_20250403_1700-nicea_en.html"
+      }
+    },
+    {
+      "id": 2,
+      "titulo": "Valentinianismo",
+      "periodo": "II",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Escola gnóstica associada a Valentino; posições cristológicas atribuíam a Cristo um corpo não recebido realmente de Maria.",
+      "posicao": "A humanidade verdadeira de Cristo e sua origem da Virgem são reafirmadas.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 3,
+      "titulo": "Marcionismo",
+      "periodo": "II",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Marcião opôs o Deus do Antigo Testamento ao Deus anunciado por Jesus.",
+      "posicao": "A Igreja professa um só Deus, autor de ambos os Testamentos.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 4,
+      "titulo": "Ebionismo cristológico",
+      "periodo": "I–II",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Em certas formulações, Jesus era considerado somente homem, sem a plena divindade do Verbo.",
+      "posicao": "A Igreja professa Jesus como verdadeiro Deus e verdadeiro homem.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 5,
+      "titulo": "Cerintianismo",
+      "periodo": "I–II",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Doutrina atribuída a Cerinto e relacionada à negação da divindade plena de Jesus.",
+      "posicao": "A Igreja reafirma a unidade pessoal do Verbo encarnado e sua verdadeira divindade.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 6,
+      "titulo": "Fotinianismo",
+      "periodo": "IV",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Formulações associadas a Fotino negavam a preexistência e divindade eterna do Filho.",
+      "posicao": "O Verbo é eterno e consubstancial ao Pai.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 7,
+      "titulo": "Doutrinas de Paulo de Samósata",
+      "periodo": "III",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Concepções cristológicas que reduziam Cristo a um homem especialmente agraciado.",
+      "posicao": "A Igreja ensina a divindade própria e a unidade pessoal do Filho encarnado.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 8,
+      "titulo": "Docetismo",
+      "periodo": "II–III",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Considerava aparente, e não real, a humanidade e o sofrimento de Cristo.",
+      "posicao": "Jesus assumiu verdadeira humanidade e sofreu realmente.",
+      "fonte": {
+        "titulo": "Comissão Teológica Internacional, estudo sobre Niceia (2025)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/cti_documents/rc_cti_doc_20250403_1700-nicea_en.html"
+      }
+    },
+    {
+      "id": 9,
+      "titulo": "Maniqueísmo",
+      "periodo": "III–V",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Dualismo de princípios supremos do bem e do mal, com distinção indevida dos autores do mundo visível e invisível.",
+      "posicao": "Um só Deus é criador de tudo; o mal não é um princípio divino rival.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 10,
+      "titulo": "Priscilianismo",
+      "periodo": "IV–VI",
+      "classificacao": "Corrente doutrinal combatida",
+      "descricao": "Certas teses de caráter dualista relacionadas à criação e à origem do mal.",
+      "posicao": "A Igreja afirma a bondade da criação e a unicidade do Criador.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Fé cristã e demonologia (1975)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19750626_fede-cristiana-demonologia_en.html"
+      }
+    },
+    {
+      "id": 11,
+      "titulo": "Arianismo",
+      "periodo": "IV",
+      "classificacao": "Heresia condenada",
+      "descricao": "Negava a plena e eterna divindade do Filho, tratando-o como criatura.",
+      "posicao": "Niceia I definiu o Filho consubstancial ao Pai.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 12,
+      "titulo": "Macedonianismo ou pneumatomaquianismo",
+      "periodo": "IV",
+      "classificacao": "Heresia condenada",
+      "descricao": "Negava a plena divindade do Espírito Santo.",
+      "posicao": "Constantinopla I reafirmou a fé na divindade do Espírito.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 13,
+      "titulo": "Apolinarismo",
+      "periodo": "IV",
+      "classificacao": "Heresia condenada",
+      "descricao": "Atribuía ao Verbo o lugar da alma racional humana de Cristo.",
+      "posicao": "Cristo assumiu humanidade completa, inclusive alma racional.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 14,
+      "titulo": "Nestorianismo",
+      "periodo": "V",
+      "classificacao": "Heresia condenada",
+      "descricao": "Separação inadequada entre o sujeito divino e o humano em Cristo.",
+      "posicao": "A Igreja reafirmou a união hipostática e a maternidade divina de Maria.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 15,
+      "titulo": "Teses cristológicas de Teodoro de Mopsuéstia",
+      "periodo": "V–VI",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Interpretações associadas a uma separação indevida entre a humanidade de Cristo e o Verbo.",
+      "posicao": "A unidade pessoal de Cristo não é mera união moral ou de graça.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 16,
+      "titulo": "Eutiquianismo",
+      "periodo": "V",
+      "classificacao": "Heresia condenada",
+      "descricao": "Confundia ou absorvia a humanidade e a divindade de Cristo numa só natureza após a união.",
+      "posicao": "Calcedônia reafirmou duas naturezas íntegras numa só pessoa.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 17,
+      "titulo": "Monotelismo",
+      "periodo": "VII",
+      "classificacao": "Heresia condenada",
+      "descricao": "Atribuía a Cristo uma única vontade.",
+      "posicao": "Constantinopla III afirmou duas vontades, divina e humana, na única pessoa de Cristo.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 18,
+      "titulo": "Monoenergismo",
+      "periodo": "VII",
+      "classificacao": "Proposição cristológica condenada",
+      "descricao": "Afirmava uma só operação em Cristo de modo incompatível com suas duas naturezas.",
+      "posicao": "A Igreja afirma duas operações próprias das duas naturezas.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 19,
+      "titulo": "Certas teses origenistas",
+      "periodo": "VI",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Algumas teses atribuídas a Orígenes ou seus seguidores foram censuradas, especialmente sobre a sorte final de demônios e condenados.",
+      "posicao": "A condenação diz respeito a proposições específicas, não ao conjunto da obra de Orígenes.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442)",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 20,
+      "titulo": "Pelagianismo",
+      "periodo": "V",
+      "classificacao": "Heresia condenada",
+      "descricao": "Sustentava capacidade humana de viver retamente sem a necessidade da graça preveniente de Deus.",
+      "posicao": "Orange II e Trento afirmaram o primado da graça na salvação.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, n. 406; II Orange e Trento",
+        "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_one/article_1/paragraph_7_the_fall.html"
+      }
+    },
+    {
+      "id": 21,
+      "titulo": "Semipelagianismo",
+      "periodo": "V–VI",
+      "classificacao": "Erro doutrinal condenado",
+      "descricao": "Atribuía ao esforço humano, sem graça preveniente, o início da fé.",
+      "posicao": "Orange II ensinou que até o início da fé é dom da graça.",
+      "fonte": {
+        "titulo": "Papa Francisco, Gaudete et exsultate, nn. 35–62 (2018)",
+        "url": "https://www.vatican.va/content/francesco/pt/apost_exhortations/documents/papa-francesco_esortazione-ap_20180319_gaudete-et-exsultate.html"
+      }
+    },
+    {
+      "id": 22,
+      "titulo": "Donatismo",
+      "periodo": "IV–V",
+      "classificacao": "Cisma e controvérsia sacramental",
+      "descricao": "Reduzia a comunhão eclesial a uma comunidade rigorosamente pura, com controvérsias sobre ministros e sacramentos.",
+      "posicao": "A Igreja combateu esse cisma e reafirmou sua unidade e a eficácia dos sacramentos.",
+      "fonte": {
+        "titulo": "Papa Bento XVI, audiência sobre Santo Agostinho (2008)",
+        "url": "https://www.vatican.va/content/benedict-xvi/en/audiences/2008/documents/hf_ben-xvi_aud_20080220.html"
+      }
+    },
+    {
+      "id": 23,
+      "titulo": "Iconoclasmo",
+      "periodo": "VIII–IX",
+      "classificacao": "Erro doutrinal condenado",
+      "descricao": "Rejeitava a legitimidade da veneração das imagens sagradas.",
+      "posicao": "Niceia II distinguiu veneração relativa das imagens e adoração devida somente a Deus.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2131–2132",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 24,
+      "titulo": "Sabelianismo ou modalismo",
+      "periodo": "III–IV",
+      "classificacao": "Doutrina trinitária refutada",
+      "descricao": "Reduzia Pai, Filho e Espírito a modos de manifestação, sem distinção pessoal real.",
+      "posicao": "A fé professada em Niceia e Constantinopla distingue as três pessoas divinas.",
+      "fonte": {
+        "titulo": "Comissão Teológica Internacional, estudo sobre Niceia (2025)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/cti_documents/rc_cti_doc_20250403_1700-nicea_en.html"
+      }
+    },
+    {
+      "id": 25,
+      "titulo": "Catarismo ou albigensismo dualista",
+      "periodo": "XII–XIII",
+      "classificacao": "Heresia e corrente combatida",
+      "descricao": "Determinadas escolas cátaras atribuíam o mundo material a um princípio mau.",
+      "posicao": "Latrão IV confessou um único Criador de tudo o que é visível e invisível.",
+      "fonte": {
+        "titulo": "IV Concílio de Latrão, cânones 1–3 (1215), transcrição acadêmica",
+        "url": "https://sourcebooks.fordham.edu/basis/lateran4.asp"
+      }
+    },
+    {
+      "id": 26,
+      "titulo": "Teses trinitárias de Joaquim de Fiore",
+      "periodo": "XII–XIII",
+      "classificacao": "Proposição condenada",
+      "descricao": "Formulação trinitária objeto de censura específica no IV Concílio de Latrão.",
+      "posicao": "O concílio reafirmou a unidade simples da essência divina e a Trindade.",
+      "fonte": {
+        "titulo": "IV Concílio de Latrão, cânones 1–3 (1215), transcrição acadêmica",
+        "url": "https://sourcebooks.fordham.edu/basis/lateran4.asp"
+      }
+    },
+    {
+      "id": 27,
+      "titulo": "Amalricianismo",
+      "periodo": "XIII",
+      "classificacao": "Doutrina condenada",
+      "descricao": "Teses associadas a Amalrico de Bène e rejeitadas pelo IV Concílio de Latrão.",
+      "posicao": "O concílio rejeitou suas proposições e manteve a distinção entre Criador e criação.",
+      "fonte": {
+        "titulo": "IV Concílio de Latrão, cânones 1–3 (1215), transcrição acadêmica",
+        "url": "https://sourcebooks.fordham.edu/basis/lateran4.asp"
+      }
+    },
+    {
+      "id": 28,
+      "titulo": "Negação do pecado original",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Contestação da transmissão do pecado original e da necessidade da graça.",
+      "posicao": "O Concílio de Trento definiu a doutrina do pecado original.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 29,
+      "titulo": "Justificação sem renovação interior",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Redução da justificação a imputação externa sem transformação pela graça.",
+      "posicao": "Trento ensinou a justificação como dom gratuito e renovação interior.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 30,
+      "titulo": "Negação dos sete sacramentos",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Afirmação de que os sacramentos da Nova Aliança não são sete.",
+      "posicao": "Trento, sessão VII, explicitou os sete sacramentos.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 31,
+      "titulo": "Negação da eficácia sacramental",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Tese de que os sacramentos seriam meros sinais sem eficácia própria da graça.",
+      "posicao": "Trento tratou da causalidade sacramental e da sua administração.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 32,
+      "titulo": "Negação da presença real na Eucaristia",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Negação da presença verdadeira, real e substancial de Cristo na Eucaristia.",
+      "posicao": "Trento, sessão XIII, reafirmou a presença real.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 33,
+      "titulo": "Negação da transubstanciação",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Recusa da conversão substancial do pão e vinho no Corpo e Sangue de Cristo.",
+      "posicao": "Trento definiu e utilizou o termo transubstanciação.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 34,
+      "titulo": "Negação do caráter sacrificial da Missa",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Redução da Missa a mera memória sem o sacrifício eucarístico.",
+      "posicao": "Trento, sessão XXII, reafirmou a doutrina sobre o sacrifício da Missa.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 35,
+      "titulo": "Negação da confissão sacramental",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Rejeição do sacramento da Penitência ou da absolvição ministerial.",
+      "posicao": "Trento, sessão XIV, definiu a doutrina da Penitência.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 36,
+      "titulo": "Negação do sacramento da Ordem",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Rejeição da Ordem como sacramento e do sacerdócio ministerial.",
+      "posicao": "Trento, sessão XXIII, afirmou a doutrina da Ordem.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 37,
+      "titulo": "Negação do purgatório",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Recusa de sua existência ou das orações pelos falecidos.",
+      "posicao": "Trento, sessão XXV, reafirmou o ensino sobre o purgatório.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 38,
+      "titulo": "Rejeição absoluta da invocação dos santos",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Condenação da invocação dos santos e da veneração das relíquias como práticas em si ilegítimas.",
+      "posicao": "Trento, sessão XXV, defendeu sua legitimidade católica.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 39,
+      "titulo": "Rejeição da veneração das imagens",
+      "periodo": "XVI",
+      "classificacao": "Proposição condenada",
+      "descricao": "Rejeição do uso e veneração de imagens sagradas em qualquer forma.",
+      "posicao": "Trento, sessão XXV, reafirmou a veneração em distinção da idolatria.",
+      "fonte": {
+        "titulo": "Concílio de Trento, cânones e decretos (1545–1563), transcrição",
+        "url": "https://www.capdox.capuchin.org.au/reform-resources-16th-century/sources/the-canons-and-decrees-of-the-council-of-trent/"
+      }
+    },
+    {
+      "id": 40,
+      "titulo": "Teses condenadas do Sínodo de Pistóia",
+      "periodo": "XVIII",
+      "classificacao": "Doutrinas condenadas",
+      "descricao": "Conjunto de proposições teológicas e disciplinares de uma tentativa de reforma eclesiástica.",
+      "posicao": "Pio VI condenou teses específicas na bula Auctorem fidei (1794).",
+      "fonte": {
+        "titulo": "Papa Pio VI, Auctorem fidei (1794)",
+        "url": "https://www.vatican.va/content/pius-vi/it/documents/bolla-auctorem-fidei-28-agosto-1794.html"
+      }
+    },
+    {
+      "id": 41,
+      "titulo": "Galicanismo sobre o primado",
+      "periodo": "XVII–XIX",
+      "classificacao": "Posições eclesiológicas rejeitadas",
+      "descricao": "Algumas teses subordinavam o primado pontifício a limitações incompatíveis com a doutrina católica.",
+      "posicao": "O Magistério reafirmou o primado e os limites dessas teses.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, O primado do sucessor de Pedro (1998)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19981031_primato-successore-pietro_en.html"
+      }
+    },
+    {
+      "id": 42,
+      "titulo": "Febronianismo",
+      "periodo": "XVIII",
+      "classificacao": "Posições eclesiológicas rejeitadas",
+      "descricao": "Teses que reduziam a autoridade própria do papa em relação à Igreja universal.",
+      "posicao": "A doutrina do primado rejeitou tais interpretações redutivas.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, O primado do sucessor de Pedro (1998)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19981031_primato-successore-pietro_en.html"
+      }
+    },
+    {
+      "id": 43,
+      "titulo": "Conciliarismo radical",
+      "periodo": "XV–XIX",
+      "classificacao": "Posições eclesiológicas rejeitadas",
+      "descricao": "Tese de superioridade ordinária de um concílio sobre o papa, incompatível com o primado definido pela Igreja.",
+      "posicao": "O Magistério reafirma a natureza do ministério petrino.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, O primado do sucessor de Pedro (1998)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19981031_primato-successore-pietro_en.html"
+      }
+    },
+    {
+      "id": 44,
+      "titulo": "Panteísmo religioso",
+      "periodo": "XIX",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Identificação de Deus com o mundo ou com a totalidade da natureza.",
+      "posicao": "O Syllabus e Quanta cura rejeitam proposições panteístas.",
+      "fonte": {
+        "titulo": "Papa Pio IX, Quanta cura e Syllabus (1864)",
+        "url": "https://www.vatican.va/content/pius-ix/en/documents/encyclica-quanta-cura-8-decembris-1864.html"
+      }
+    },
+    {
+      "id": 45,
+      "titulo": "Naturalismo religioso",
+      "periodo": "XIX",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Redução da religião ou da moral a princípios exclusivamente naturais que excluem a Revelação.",
+      "posicao": "Quanta cura e Syllabus censuraram certas proposições naturalistas.",
+      "fonte": {
+        "titulo": "Papa Pio IX, Quanta cura e Syllabus (1864)",
+        "url": "https://www.vatican.va/content/pius-ix/en/documents/encyclica-quanta-cura-8-decembris-1864.html"
+      }
+    },
+    {
+      "id": 46,
+      "titulo": "Racionalismo absoluto",
+      "periodo": "XIX",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Afirmação de que a razão humana, sem referência a Deus, é o árbitro supremo de toda verdade.",
+      "posicao": "O Syllabus condenou determinadas proposições racionalistas.",
+      "fonte": {
+        "titulo": "Papa Pio IX, Quanta cura e Syllabus (1864)",
+        "url": "https://www.vatican.va/content/pius-ix/en/documents/encyclica-quanta-cura-8-decembris-1864.html"
+      }
+    },
+    {
+      "id": 47,
+      "titulo": "Indiferentismo religioso",
+      "periodo": "XIX–XX",
+      "classificacao": "Proposições condenadas",
+      "descricao": "Afirmação de equivalência irrestrita das religiões como se a verdade revelada fosse indiferente.",
+      "posicao": "O Magistério condenou formas de indiferentismo; a análise exige contexto histórico.",
+      "fonte": {
+        "titulo": "Papa Pio IX, Quanta cura e Syllabus (1864)",
+        "url": "https://www.vatican.va/content/pius-ix/en/documents/encyclica-quanta-cura-8-decembris-1864.html"
+      }
+    },
+    {
+      "id": 48,
+      "titulo": "Modernismo teológico condenado por Pio X",
+      "periodo": "XX",
+      "classificacao": "Conjunto doutrinal condenado",
+      "descricao": "Teses modernistas acerca de Revelação, dogma, fé e Igreja censuradas no início do século XX.",
+      "posicao": "A encíclica Pascendi rejeitou o sistema modernista nela descrito.",
+      "fonte": {
+        "titulo": "Papa Pio X, Pascendi dominici gregis (1907)",
+        "url": "https://www.vatican.va/content/pius-x/pt/encyclicals/documents/hf_p-x_enc_19070908_pascendi-dominici-gregis.html"
+      }
+    },
+    {
+      "id": 49,
+      "titulo": "Relativismo da revelação de Cristo",
+      "periodo": "XX–XXI",
+      "classificacao": "Posições doutrinais rejeitadas",
+      "descricao": "Teses que negam o caráter definitivo da Revelação em Jesus Cristo.",
+      "posicao": "Dominus Iesus reafirmou a plenitude e definitividade da Revelação em Cristo.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dominus Iesus (2000)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000806_dominus-iesus_po.html"
+      }
+    },
+    {
+      "id": 50,
+      "titulo": "Relativismo religioso indiferentista",
+      "periodo": "XX–XXI",
+      "classificacao": "Posições doutrinais rejeitadas",
+      "descricao": "Tese de que todas as religiões possuem idêntico valor salvífico em princípio.",
+      "posicao": "Dominus Iesus contestou explicitamente essa equivalência.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dominus Iesus (2000)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20000806_dominus-iesus_po.html"
+      }
+    },
+    {
+      "id": 51,
+      "titulo": "Neognosticismo",
+      "periodo": "XXI",
+      "classificacao": "Tendência criticada pelo Magistério",
+      "descricao": "Salvação apresentada como experiência puramente interior, fechada à Encarnação e ao mundo criado.",
+      "posicao": "Placuit Deo identifica analogias com o antigo gnosticismo, sem equiparação histórica simples.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Placuit Deo (2018)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20180222_placuit-deo_po.html"
+      }
+    },
+    {
+      "id": 52,
+      "titulo": "Neopelagianismo",
+      "periodo": "XXI",
+      "classificacao": "Tendência criticada pelo Magistério",
+      "descricao": "Autossuficiência espiritual e confiança radical nas próprias forças para alcançar a salvação.",
+      "posicao": "Placuit Deo e Gaudete et exsultate reafirmam a primazia da graça.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Placuit Deo (2018)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20180222_placuit-deo_po.html"
+      }
+    },
+    {
+      "id": 53,
+      "titulo": "Maçonaria e filiação católica",
+      "periodo": "XVIII–XXI",
+      "classificacao": "Associação considerada incompatível",
+      "descricao": "Associações maçônicas cujos princípios a Santa Sé considera inconciliáveis com a doutrina católica.",
+      "posicao": "A Declaração de 1983 mantém proibida a filiação de católicos; posição reiterada em 2023.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Declaração sobre a Maçonaria (1983)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19831126_declaration-masonic_po.html"
+      },
+      "fontes_adicionais": [
+        {
+          "titulo": "Leão XIII, Humanum genus (1884)",
+          "url": "https://www.vatican.va/content/leo-xiii/pt/encyclicals/documents/hf_l-xiii_enc_18840420_humanum-genus.html"
+        },
+        {
+          "titulo": "Dicastério para a Doutrina da Fé, nota (2023)",
+          "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20231113_richiesta-cortes-massoneria_it.html"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "titulo": "Espiritismo mediúnico",
+      "periodo": "XIX–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Evocação de mortos ou recurso a médiuns para obter conhecimento oculto ou mensagens espirituais.",
+      "posicao": "O Catecismo rejeita evocação dos mortos, mediunidade e práticas afins.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2089, 2110–2117",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 55,
+      "titulo": "Adivinhação e astrologia divinatória",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Consulta a horóscopos, astrologia e métodos de previsão ou determinação ocultista.",
+      "posicao": "O Catecismo n. 2116 rejeita tais formas de adivinhação.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2089, 2110–2117",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 56,
+      "titulo": "Magia e feitiçaria",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Práticas que pretendem manipular forças ocultas com objetivos pessoais, mesmo terapêuticos.",
+      "posicao": "O Catecismo n. 2117 considera tais práticas contrárias à virtude de religião.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2089, 2110–2117",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 57,
+      "titulo": "Reencarnação como doutrina de salvação",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Posição incompatível com a fé católica",
+      "descricao": "Concepção de sucessivas vidas terrestres após a morte, em vez do destino definitivo da vida humana.",
+      "posicao": "O Catecismo n. 1013 rejeita a reencarnação; referência específica a conferir na ficha detalhada.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, n. 1013",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap3_683-1065_po.html"
+      }
+    },
+    {
+      "id": 58,
+      "titulo": "Nova Era (New Age)",
+      "periodo": "XX–XXI",
+      "classificacao": "Movimento analisado e criticado",
+      "descricao": "Conjunto diversificado de ideias e práticas espirituais, algumas incompatíveis com a fé cristã.",
+      "posicao": "Documento interdicasterial de 2003 explica diferenças essenciais; não constitui condenação universal de todas as pessoas ou práticas.",
+      "fonte": {
+        "titulo": "Conselhos Pontifícios para Cultura e Diálogo Inter-Religioso, reflexão sobre a Nova Era (2003)",
+        "url": "https://www.vatican.va/roman_curia/pontifical_councils/interelg/documents/rc_pc_interelg_doc_20030203_new-age_en.html"
+      }
+    },
+    {
+      "id": 59,
+      "titulo": "Reducionismos ideológicos na teologia da libertação",
+      "periodo": "XX",
+      "classificacao": "Orientações doutrinais críticas",
+      "descricao": "Algumas formulações subordinam a salvação cristã a análises e lutas exclusivamente político-sociais.",
+      "posicao": "Libertatis nuntius criticou desvios específicos; não condenou toda teologia da libertação.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Libertatis nuntius (1984)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html"
+      }
+    },
+    {
+      "id": 60,
+      "titulo": "Eunomianismo",
+      "periodo": "IV–V",
+      "classificacao": "Heresia condenada",
+      "descricao": "Subordinava o Filho a Deus Pai e negava a consubstancialidade em chave anomeana.",
+      "posicao": "A profissão de fé de Florença nomeia os eunomianos entre as correntes trinitárias condenadas.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442), profissão de fé trinitária",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 61,
+      "titulo": "Tritheísmo",
+      "periodo": "IV–VI",
+      "classificacao": "Doutrina trinitária rejeitada",
+      "descricao": "Afirmava três deuses distintos no lugar de um só Deus em três pessoas.",
+      "posicao": "A profissão trinitária de Florença reafirma uma só essência e um só Deus, não três deuses.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442), profissão de fé trinitária",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 62,
+      "titulo": "Idolatria",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Atribui a uma criatura, objeto, poder ou realidade o culto devido somente a Deus.",
+      "posicao": "O Catecismo rejeita a idolatria nos nn. 2112–2114.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 63,
+      "titulo": "Superstição religiosa",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Desvia o culto e atribui eficácia quase mágica a práticas e sinais, inclusive em atos religiosos.",
+      "posicao": "O Catecismo distingue devoção autêntica e superstição, n. 2111.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 64,
+      "titulo": "Sacrilégio",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Profana pessoas, lugares ou coisas sagradas, de modo especial os sacramentos.",
+      "posicao": "O Catecismo reprova o sacrilégio, n. 2120.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 65,
+      "titulo": "Simonia",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Pretende comprar ou vender realidades espirituais.",
+      "posicao": "O Catecismo rejeita a simonia, n. 2121.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 66,
+      "titulo": "Consequencialismo moral absoluto",
+      "periodo": "XX",
+      "classificacao": "Teoria moral rejeitada",
+      "descricao": "Faz depender a moralidade dos atos exclusivamente da avaliação de suas consequências previsíveis.",
+      "posicao": "Veritatis splendor critica esse método quando nega atos intrinsecamente maus.",
+      "fonte": {
+        "titulo": "São João Paulo II, Veritatis splendor, nn. 71–83 (1993)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html"
+      }
+    },
+    {
+      "id": 67,
+      "titulo": "Proporcionalismo moral absoluto",
+      "periodo": "XX",
+      "classificacao": "Teoria moral rejeitada",
+      "descricao": "Pretende justificar ações contrárias a normas morais negativas universais por ponderação de resultados.",
+      "posicao": "Veritatis splendor rejeita a tese de que uma intenção boa torna lícitos atos intrinsecamente maus.",
+      "fonte": {
+        "titulo": "São João Paulo II, Veritatis splendor, nn. 71–83 (1993)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html"
+      }
+    },
+    {
+      "id": 68,
+      "titulo": "Americanismo teológico (teses criticadas)",
+      "periodo": "XIX",
+      "classificacao": "Posições doutrinais rejeitadas",
+      "descricao": "Teses identificadas sob o nome americanismo que propunham adaptar indevidamente a doutrina e a vida espiritual à modernidade.",
+      "posicao": "Leão XIII rejeitou proposições específicas, não a cultura nem os católicos dos Estados Unidos.",
+      "fonte": {
+        "titulo": "Leão XIII, Testem benevolentiae (1899)",
+        "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18990122_testem-benevolentiae.html"
+      }
+    },
+    {
+      "id": 69,
+      "titulo": "Comunismo ateu marxista",
+      "periodo": "XX",
+      "classificacao": "Ideologia criticada e condenada",
+      "descricao": "Sistema explicitamente ateu e materialista analisado na encíclica de 1937.",
+      "posicao": "Pio XI criticou o comunismo ateu e apresentou a doutrina social católica em contraposição.",
+      "fonte": {
+        "titulo": "Pio XI, Divinis Redemptoris (1937)",
+        "url": "https://www.vatican.va/content/pius-xi/pt/encyclicals/documents/hf_p-xi_enc_19370319_divini-redemptoris.html"
+      }
+    },
+    {
+      "id": 70,
+      "titulo": "Idolatria da raça e da nação",
+      "periodo": "XX",
+      "classificacao": "Ideologia criticada e condenada",
+      "descricao": "Eleva povo, raça ou Estado a valor supremo ou absoluto, em detrimento de Deus e da dignidade humana.",
+      "posicao": "Mit brennender Sorge denunciou a substituição de Deus por ídolos políticos e raciais.",
+      "fonte": {
+        "titulo": "Pio XI, Mit brennender Sorge (1937)",
+        "url": "https://www.vatican.va/content/pius-xi/es/encyclicals/documents/hf_p-xi_enc_14031937_mit-brennender-sorge.html"
+      }
+    },
+    {
+      "id": 71,
+      "titulo": "Racismo e discriminação racial",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática e ideologia rejeitadas",
+      "descricao": "Nega a igual dignidade de pessoas por origem étnica ou racial.",
+      "posicao": "Dignitas infinita reafirma a igual dignidade humana e denuncia discriminações.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 72,
+      "titulo": "Negação da dignidade da pessoa com deficiência",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática e ideologia rejeitadas",
+      "descricao": "Trata pessoas com deficiência como menos dignas ou sujeitas a descarte.",
+      "posicao": "Dignitas infinita reafirma proteção, inclusão e participação das pessoas com deficiência.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 73,
+      "titulo": "Aborto voluntário",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Interrupção deliberada e direta de uma vida humana em gestação.",
+      "posicao": "Dignitas infinita reafirma a posição moral católica sobre o aborto, sem retirar a dignidade das mulheres.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 74,
+      "titulo": "Eutanásia e suicídio assistido",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Provocar deliberadamente a morte como solução para sofrimento ou doença.",
+      "posicao": "Dignitas infinita defende o cuidado e rejeita eutanásia e suicídio assistido.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 75,
+      "titulo": "Maternidade de substituição",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Gestação por substituição comercial ou não, considerada incompatível com a dignidade da criança e da mulher no documento.",
+      "posicao": "Dignitas infinita apresenta a posição contrária à maternidade de substituição.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 76,
+      "titulo": "Ideologias de gênero criticadas no documento",
+      "periodo": "XXI",
+      "classificacao": "Teoria antropológica criticada",
+      "descricao": "Formulações que, segundo o documento, apagam a diferença sexual ou propõem uma autodeterminação desvinculada do corpo.",
+      "posicao": "Dignitas infinita, nn. 55–60, critica tais teorias e simultaneamente exige respeito à dignidade de todas as pessoas, sem violência nem discriminação injusta.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 77,
+      "titulo": "Violência digital e assédio on-line",
+      "periodo": "XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Ofensas, exposição e violência contra a dignidade das pessoas por meios digitais.",
+      "posicao": "Dignitas infinita denuncia novas formas de violência digital.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 78,
+      "titulo": "Exploração e violência contra mulheres",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Violências e abusos que atentam contra a igual dignidade das mulheres.",
+      "posicao": "Dignitas infinita condena a violência contra as mulheres.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 79,
+      "titulo": "Tese de ordenação sacerdotal de mulheres",
+      "periodo": "XX",
+      "classificacao": "Posição doutrinal rejeitada",
+      "descricao": "Sustenta que a Igreja teria faculdade para conferir às mulheres a ordenação sacerdotal.",
+      "posicao": "Ordinatio sacerdotalis reafirma que a Igreja não dispõe dessa faculdade; não se trata de negar direitos ou dignidade iguais.",
+      "fonte": {
+        "titulo": "João Paulo II, Ordinatio sacerdotalis, n. 4 (1994)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html"
+      }
+    },
+    {
+      "id": 80,
+      "titulo": "Negação do dogma da Assunção de Maria",
+      "periodo": "XX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a Assunção de Maria em corpo e alma à glória celeste como verdade revelada.",
+      "posicao": "Pio XII definiu solenemente o dogma em Munificentissimus Deus (1950).",
+      "fonte": {
+        "titulo": "Pio XII, Munificentissimus Deus, nn. 44–45 (1950)",
+        "url": "https://www.vatican.va/content/pius-xii/pt/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html"
+      }
+    },
+    {
+      "id": 81,
+      "titulo": "Negação do dogma da Imaculada Conceição",
+      "periodo": "XIX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a preservação singular de Maria do pecado original desde o primeiro instante de sua concepção.",
+      "posicao": "Pio IX definiu o dogma em Ineffabilis Deus (1854).",
+      "fonte": {
+        "titulo": "Pio IX, Ineffabilis Deus (1854)",
+        "url": "https://www.vatican.va/content/pius-ix/pt/documents/18541208-costituzione-apostolica-ineffabilis-deus.html"
+      }
+    },
+    {
+      "id": 82,
+      "titulo": "Negação do dogma da infalibilidade pontifícia nas condições definidas",
+      "periodo": "XIX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a infalibilidade do papa ao definir ex cathedra doutrina de fé ou moral para toda a Igreja.",
+      "posicao": "Pastor aeternus (1870) definiu condições precisas para essa prerrogativa, não infalibilidade universal de todos os atos do papa.",
+      "fonte": {
+        "titulo": "Concílio Vaticano I, Pastor aeternus, cap. 4 (1870)",
+        "url": "https://press.vatican.va/archive/hist_councils/i-vatican-council/documents/vat-i_const_18700718_pastor-aeternus_it.html"
+      }
+    },
+    {
+      "id": 83,
+      "titulo": "Contracepção deliberada no matrimônio",
+      "periodo": "XX",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Intervenção destinada deliberadamente a impedir a procriação em um ato conjugal.",
+      "posicao": "Humanae vitae, n. 14, reafirma o ensinamento católico específico, distinguindo-o do planejamento periódico por métodos naturais.",
+      "fonte": {
+        "titulo": "Paulo VI, Humanae vitae, nn. 11–14 (1968)",
+        "url": "https://www.vatican.va/content/paul-vi/pt/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html"
+      }
+    },
+    {
+      "id": 84,
+      "titulo": "Clonagem humana reprodutiva",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Produção de seres humanos por clonagem reprodutiva.",
+      "posicao": "Dignitas personae rejeita a clonagem humana reprodutiva.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 85,
+      "titulo": "Uso destrutivo de embriões humanos em pesquisa",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Pesquisa que exige destruir embriões humanos.",
+      "posicao": "Dignitas personae reafirma a exigência de respeito à vida humana embrionária.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 86,
+      "titulo": "Diagnóstico pré-implantação com descarte seletivo de embriões",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Seleção de embriões para descarte em processos de reprodução assistida.",
+      "posicao": "Dignitas personae critica o diagnóstico pré-implantação quando associado a eliminação seletiva.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 87,
+      "titulo": "Negação da existência de seres espirituais malignos",
+      "periodo": "XX",
+      "classificacao": "Proposição teológica examinada",
+      "descricao": "Interpretações que negam a realidade pessoal do diabo e dos demônios na doutrina cristã.",
+      "posicao": "O documento Fé cristã e demonologia defende a existência de seres espirituais malignos segundo a fé da Igreja.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Fé cristã e demonologia (1975)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19750626_fede-cristiana-demonologia_en.html"
+      }
+    },
+    {
+      "id": 88,
+      "titulo": "Astrologia espiritualista na Nova Era",
+      "periodo": "XX–XXI",
+      "classificacao": "Tendência espiritual criticada",
+      "descricao": "Uso de cosmologias astrológicas para prometer realização e iluminação espiritual.",
+      "posicao": "A reflexão interdicasterial de 2003 examina criticamente essa corrente; não se trata de heresia formal imputada a todo praticante.",
+      "fonte": {
+        "titulo": "Conselhos Pontifícios, Jesus Cristo, portador da água da vida (2003)",
+        "url": "https://www.vatican.va/roman_curia/pontifical_councils/interelg/documents/rc_pc_interelg_doc_20030203_new-age_en.html"
+      }
+    }
+  ]
+}

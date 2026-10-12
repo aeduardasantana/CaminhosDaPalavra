@@ -4,9 +4,9 @@ Ambiente digital de experiência com a Palavra de Deus que reúne Bíblia, plano
 
 ## Posicionamento
 
-**Caminhos da Palavra** é um ambiente para viver a Palavra de Deus ao longo dos dias e no ritmo da Igreja. A experiência integra quatro caminhos principais: **Bíblia Sagrada, Plano de Leitura, Calendário Litúrgico e Liturgia e Libras**.
+**Caminhos da Palavra** é um ambiente para viver a Palavra de Deus ao longo dos dias e no ritmo da Igreja. O acervo organiza seus estudos pela **Sagrada Escritura, Sagrada Tradição e Magistério**, reunindo também ferramentas litúrgicas e de leitura bíblica.
 
-O projeto **não se apresenta como conteúdo em Libras**. Na frente Liturgia e Libras, as glosas são ferramentas escritas de preparação e não equivalem à Libras, a uma interpretação sinalizada ou a uma tradução oficial.
+O projeto **não se apresenta como conteúdo em Libras**. Na frente da liturgia dominical, as glosas são ferramentas escritas de preparação e não equivalem à Libras, a uma interpretação sinalizada ou a uma tradução oficial.
 
 Os recursos de preparação podem apoiar especialmente quem está começando a interpretar no contexto da Igreja Católica, sem substituir:
 
@@ -19,6 +19,20 @@ Os recursos de preparação podem apoiar especialmente quem está começando a i
 O ambiente também serve a cristãos que desejam ler a Bíblia, manter uma caminhada de leitura, acompanhar o calendário litúrgico e se preparar para a Liturgia da Palavra. A acessibilidade é tratada como princípio transversal da apresentação.
 
 A assinatura **por Libras com Eduarda** preserva a origem e a autoria do projeto sem limitar a plataforma exclusivamente à Libras.
+
+## Heresias, teorias e condenações documentadas (12/10/2026)
+
+A página `heresias.html` é um catálogo público de pesquisa e estudo com **88 registros editoriais**, pesquisáveis por nome, tese, documento, autoridade e texto; possui filtros por período e família de pronunciamento. Cada registro identifica **a doutrina ou prática examinada, a posição da Igreja, sua classificação e uma fonte documental**. É um acervo em expansão, não uma lista exaustiva nem uma declaração de que todos os registros sejam heresias formais.
+
+- `dados/heresias-controversias.json`: dados das fichas, com link de consulta e descrição.
+- `docs/PROTOCOLO-HERESIAS-E-CONDENACOES.md`: regras de revisão e classificação.
+- **Maçonaria** é enquadrada como associação considerada incompatível, com referências de 1884, 1983 e 2023; **gnosticismo** e as escolas antigas aparecem em contexto histórico. Não se equiparam cismas, heresias, opiniões condenadas, ideologias e práticas.
+- O conteúdo permanece sujeito a revisão contínua do teor e do alcance de cada pronunciamento e de todos os links de fonte.
+- O **VLibras** é transversal às páginas do projeto; **não** foram criadas glosas para esta seção. A glosa própria é recurso reservado à liturgia dominical.
+
+## Navegação do acervo (12/10/2026)
+
+O antigo menu horizontal foi substituído por um **menu vertical expansível** em `site-menu.js` e `site-menu.css`, presente na página inicial, na sucessão dos papas e no catálogo. O painel ocupa até metade da largura em monitores e a largura total no celular. As áreas presentes são Escritura, Tradição, Magistério e Vida Litúrgica; a Liturgia é uma área operacional de acesso, **não um quarto elemento** do depósito da fé. O projeto **Oração Visual** permanece independente.
 
 ## Ritos e Orações da Missa (12/10/2026)
 
