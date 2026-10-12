@@ -102,4 +102,25 @@
     else if(!event.shiftKey&&document.activeElement===last){event.preventDefault();first.focus();}
   });
   window.addEventListener('popstate',()=>closeMenu({restoreFocus:false}));
+  // VLibras é uma ferramenta transversal de acessibilidade. Não cria glosas.
+  // O script oficial é carregado uma única vez, nas três páginas do acervo.
+  if(!document.querySelector('[vw]')){
+    const widgetRoot=document.createElement('div');
+    widgetRoot.className='enabled';
+    widgetRoot.setAttribute('vw','');
+    widgetRoot.innerHTML='<div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div>';
+    document.body.appendChild(widgetRoot);
+  }
+  let initialized=false;
+  function startVLibras(){
+    if(initialized||!window.VLibras||typeof window.VLibras.Widget!=='function')return;
+    try{new window.VLibras.Widget('https://vlibras.gov.br/app');initialized=true;}
+    catch(error){console.warn('VLibras indisponível nesta sessão.',error);}
+  }
+  const vlScript=document.createElement('script');
+  vlScript.src='https://vlibras.gov.br/app/vlibras-plugin.js';
+  vlScript.async=true;
+  vlScript.onload=startVLibras;
+  document.head.appendChild(vlScript);
+  window.addEventListener('load',startVLibras);
 })();
