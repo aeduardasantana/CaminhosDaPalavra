@@ -20,6 +20,21 @@ O ambiente também serve a cristãos que desejam ler a Bíblia, manter uma camin
 
 A assinatura **por Libras com Eduarda** preserva a origem e a autoria do projeto sem limitar a plataforma exclusivamente à Libras.
 
+## Missal Romano e Libras (12/10/2026)
+
+Foi adicionada uma **área independente da Liturgia da Palavra**, com rota compartilhável `#missal-romano-e-libras`. A referência é o PDF *Missal Romano, terceira edição típica, tradução brasileira da CNBB (2023)* fornecido pela responsável do projeto.
+
+- `missal-data.js`: acervo inicial com **30 registros** do Ordinário da Missa e alguns formulários do Próprio (28º Domingo do Tempo Comum e Nossa Senhora da Conceição Aparecida).
+- `missal.js`: pesquisa, filtros por parte da Missa, abertura de cada registro e notas pessoais de preparação para Libras, salvas somente no navegador (`localStorage`). Sem envio a servidores.
+- `missal.css`: layout responsivo, com duas colunas para texto e anotações.
+- Cada registro identifica o papel litúrgico, a referência à página do Missal e as observações editoriais. O link para o PDF integral está disponível no cabeçalho do módulo.
+- Registros incompletos são **explicitamente indicados** como remissões ao PDF; não devem ser tratados como transcrições completas.
+- A transcrição veio da extração textual do PDF e sofreu correções pontuais de erros evidentes de leitura automática; **falta conferência editorial integral no documento diagramado**, incluindo rubricas e variantes.
+- Os campos de notas **não são glosas homologadas**. A pessoa usuária prepara sua própria interpretação e deve validar as escolhas linguísticas e litúrgicas.
+- As leituras e os salmos permanecem na Liturgia da Palavra; a fonte portuguesa do acervo do Lecionário exige substituição ou conferência específica com a edição brasileira.
+
+O Missal completo tem aproximadamente 97 MB e **não foi duplicado no repositório**. Esta implantação corresponde à primeira etapa do acervo, não à digitalização integral do documento.
+
 ## Liturgia dominical
 
 A base estruturada atual contém:
