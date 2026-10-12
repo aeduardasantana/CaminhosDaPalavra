@@ -1,6 +1,7 @@
 const data = window.LCE_DATA;
 const bible = window.LCE_BIBLE;
 const litCalendar = window.LCE_CALENDAR;
+const saintsArchive = window.LCE_SAINTS || {highlights: {}};
 const lectionary = window.LCE_LECTIONARY || {records: []};
 const glossa = window.LCE_GLOSSA || {};
 const glossaAnoARevisada = window.LCE_GLOSSA_ANO_A_REVISADA || {};
@@ -1046,7 +1047,54 @@ function selectCalendarDate(dayInfo) {
     '<p><strong>' + title + '</strong></p>' +
     '<p>' + (contents.length
       ? contents.length + ' item(ns) de liturgia já cadastrado(s) para esta data.'
-      : 'Calendário disponível; o conteúdo detalhado desta data ainda será alimentado.') + '</p>';
+      : 'As leituras detalhadas desta data ainda não estão cadastradas.') + '</p>';
+
+  // Memórias hagiográficas: não determinar a celebração principal por esta lista.
+  const saintsSection = document.createElement('section');
+  saintsSection.className = 'calendar-saints';
+  const heading = document.createElement('h4');
+  heading.textContent = 'Santos e beatos recordados nesta data';
+  saintsSection.appendChild(heading);
+
+  const note = document.createElement('p');
+  note.textContent = 'Destaques editoriais e fontes de consulta. Não equivale à íntegra do Martirológio Romano nem determina a celebração litúrgica no Brasil.';
+  saintsSection.appendChild(note);
+
+  const key = dayInfo.iso.slice(5);
+  const highlights = saintsArchive.highlights[key] || [];
+  if (highlights.length) {
+    const list = document.createElement('ul');
+    list.className = 'calendar-saints-list';
+    highlights.forEach(name => {
+      const item = document.createElement('li');
+      item.textContent = name;
+      list.appendChild(item);
+    });
+    saintsSection.appendChild(list);
+  } else {
+    const pending = document.createElement('p');
+    pending.textContent = 'A seleção editorial desta data ainda não foi cadastrada. Consulte o repertório completo nos acervos externos.';
+    saintsSection.appendChild(pending);
+  }
+
+  const month = dayInfo.iso.slice(5, 7);
+  const day = dayInfo.iso.slice(8, 10);
+  const catholicMonths = ['jan','feb','mar','apr','may','jun','jul','aug','sep','oct','nov','dec'];
+  const linkBox = document.createElement('div');
+  linkBox.className = 'calendar-saints-links';
+  [
+    ['Consultar Santi e Beati', 'https://www.santiebeati.it/' + month + '/' + day + '/index.html'],
+    ['Consultar Catholic.org', 'https://www.catholic.org/saints/f_day/' + catholicMonths[Number(month) - 1] + '.php']
+  ].forEach(([label, href]) => {
+    const link = document.createElement('a');
+    link.href = href;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = label + ' ↗';
+    linkBox.appendChild(link);
+  });
+  saintsSection.appendChild(linkBox);
+  els.calendarDetail.appendChild(saintsSection);
 
   if (contents.length) {
     const button = document.createElement('button');
@@ -1092,15 +1140,11 @@ function renderCalendar() {
 
     button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle + (contentForDate(dayInfo.iso).length ? ', possui leituras' : ', sem leituras cadastradas'));
     button.addEventListener('click', () => {
-      if (contentForDate(dayInfo.iso).length) {
-        openLiturgicalDate(dayInfo.iso);
-      } else {
-        selectCalendarDate(dayInfo);
-        requestAnimationFrame(() => els.calendarDetail.scrollIntoView({
-          behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
-          block: 'nearest'
-        }));
-      }
+      selectCalendarDate(dayInfo);
+      requestAnimationFrame(() => els.calendarDetail.scrollIntoView({
+        behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+        block: 'nearest'
+      }));
     });
     els.calendarGrid.appendChild(button);
   });
@@ -1110,7 +1154,7 @@ function renderCalendar() {
     els.calendarDetail.innerHTML =
       '<p class="eyebrow">Ano ' + first.cycle + '</p>' +
       '<h3>' + litCalendar.monthNames[month] + ' de ' + year + '</h3>' +
-      '<p>Selecione um dia para ver o tempo litúrgico, ciclo e conteúdos já cadastrados.</p>';
+      '<p>Selecione um dia para consultar a celebração, os santos recordados e as leituras já cadastradas.</p>';
   }
 }
 
