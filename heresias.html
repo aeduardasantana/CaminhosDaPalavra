@@ -52,8 +52,6 @@ footer.page-footer{margin-top:2rem;border-top:1px solid var(--border);padding-to
 <div id="cards" class="cards" aria-label="Resultados da pesquisa"></div>
 <footer class="page-footer"><p>Acervo de estudo e documentação, não instrumento para atribuir culpa ou censura canônica a pessoas ou comunidades atuais. Links remetem a documentos da Santa Sé ou transcrições de documentos conciliares; a classificação final requer exame de cada fonte.</p></footer>
 </main>
-<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
-<script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
 <script>
 (function(){
 "use strict";
@@ -103,7 +101,6 @@ els.query.addEventListener("input",()=>{const u=new URL(location.href);const que
 els.kind.addEventListener("change",update);
 els.period.addEventListener("change",update);
 $("filters").addEventListener("reset",()=>requestAnimationFrame(update));
-window.addEventListener("load",()=>{if(window.VLibras&&window.VLibras.Widget)new window.VLibras.Widget("https://vlibras.gov.br/app")});
 })();
 </script>
 </body>
