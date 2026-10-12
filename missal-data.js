@@ -1,10 +1,10 @@
-/* Caminhos da Palavra — extratos selecionados do Missal Romano CNBB 2023.
-   Não é a reprodução integral do Missal nem uma glosa homologada em Libras. */
+/* Acervo de textos litúrgicos destinados à apresentação no Caminhos da Palavra.
+   Fontes e controles internos não geram acesso público ao documento integral.
+   A glosa só é publicada após elaboração e revisão. */
 window.LCE_MISSAL = {
-  "version": "2026-10-12-inicial",
+  "version": "2026-10-12-ritos-acessiveis",
   "sourceName": "Missal Romano — CNBB, 3ª edição típica (Brasil, 2023)",
-  "sourceUrl": "https://drive.google.com/file/d/1Px_n1_a6_HL7_2cBrHSSVbrV5AuUtfcx/view?usp=drivesdk",
-  "publicationNote": "Acervo inicial de consulta e preparação. Transcrição revisada pontualmente a partir do PDF fornecido; conferir pontuação, rubricas e variantes com a edição antes do uso litúrgico. O PDF completo permanece na fonte. Glosas não homologadas.",
+  "publicationNote": "Acervo inicial de trechos e referências, baseado na edição brasileira da CNBB. Texto sujeito a conferência editorial. Glosas de apoio só serão mostradas quando elaboradas e revisadas. O documento-fonte e suas páginas não são exibidos aos visitantes.",
   "groups": [
     {
       "id": "iniciais",
@@ -54,7 +54,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote e assembleia",
       "page": "431",
       "text": "Sacerdote: O Senhor esteja convosco.\nAssembleia: Ele está no meio de nós.",
-      "note": "Esta é uma das fórmulas previstas no Missal; há outras formas de saudação."
+      "note": "Uma das fórmulas de saudação da Missa; outras também podem ser usadas."
     },
     {
       "id": "saudacao-trinitaria",
@@ -81,7 +81,7 @@ window.LCE_MISSAL = {
       "role": "Assembleia/coro",
       "page": "442",
       "text": "Glória a Deus nas alturas,\ne paz na terra aos homens por ele amados.\nSenhor Deus, rei dos céus,\nDeus Pai todo-poderoso.\nNós vos louvamos,\nnós vos bendizemos,\nnós vos adoramos,\nnós vos glorificamos,\nnós vos damos graças\npor vossa imensa glória.\nSenhor Jesus Cristo, Filho Unigênito,\nSenhor Deus, Cordeiro de Deus,\nFilho de Deus Pai.\nVós que tirais o pecado do mundo,\ntende piedade de nós.\nVós que tirais o pecado do mundo,\nacolhei a nossa súplica.\nVós que estais à direita do Pai,\ntende piedade de nós.\nSó vós sois o Santo,\nsó vós, o Senhor,\nsó vós, o Altíssimo,\nJesus Cristo,\ncom o Espírito Santo,\nna glória de Deus Pai.\nAmém.",
-      "note": "Nem sempre é previsto; confirmar rubricas do dia. A transcrição corrige somente erros evidentes de reconhecimento de caracteres do PDF."
+      "note": "O Glória não é proclamado em todas as celebrações. O canto e o ritmo podem variar."
     },
     {
       "id": "coleta",
@@ -89,7 +89,7 @@ window.LCE_MISSAL = {
       "title": "Oração coleta",
       "role": "Sacerdote; assembleia responde",
       "page": "442",
-      "text": "Sacerdote: Oremos.\n[Oração própria do dia — consultar Próprio do Missal.]\nAssembleia: Amém.",
+      "text": "Sacerdote: Oremos.\n[Oração própria desta celebração: conteúdo em preparação.]\nAssembleia: Amém.",
       "note": "O texto da coleta varia por celebração. Não substituir por uma oração genérica."
     },
     {
@@ -108,7 +108,7 @@ window.LCE_MISSAL = {
       "role": "Todos",
       "page": "444–445",
       "text": "",
-      "note": "O texto completo e a rubrica de inclinação estão no Missal, páginas 444–445. Entrada catalogada para revisão e transcrição integral; não confundir com a fórmula dos Apóstolos."
+      "note": "A transcrição integral desta profissão de fé ainda está em preparação. Não confundir com o Símbolo dos Apóstolos."
     },
     {
       "id": "preces",
@@ -144,7 +144,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote e assembleia",
       "page": "447–448",
       "text": "Sacerdote: Orai, irmãos e irmãs,\npara que o meu e vosso sacrifício\nseja aceito por Deus Pai todo-poderoso.\nAssembleia: Receba o Senhor por tuas mãos este sacrifício,\npara glória do seu nome,\npara nosso bem e de toda a sua santa Igreja.",
-      "note": "O Missal apresenta alternativas para o convite do sacerdote."
+      "note": "Existem fórmulas alternativas para este convite."
     },
     {
       "id": "oracao-oferendas",
@@ -152,7 +152,7 @@ window.LCE_MISSAL = {
       "title": "Oração sobre as oferendas",
       "role": "Sacerdote e assembleia",
       "page": "448",
-      "text": "[Oração própria da celebração — consultar Próprio do Missal.]\nAssembleia: Amém.",
+      "text": "[Oração sobre as oferendas própria da celebração: conteúdo em preparação.]\nAssembleia: Amém.",
       "note": "A oração é variável conforme o formulário do dia."
     },
     {
@@ -179,8 +179,8 @@ window.LCE_MISSAL = {
       "title": "Orações Eucarísticas e aclamações",
       "role": "Sacerdote; aclamações da assembleia",
       "page": "522–568",
-      "text": "[O Missal apresenta várias Orações Eucarísticas e formulários próprios. Consulte a oração escolhida e suas aclamações diretamente no PDF-fonte.]",
-      "note": "Não há uma única oração eucarística universal; conteúdo variável ainda não transcrito para esta primeira versão."
+      "text": "[Orações Eucarísticas e aclamações: conteúdo em preparação para disponibilização por texto.]",
+      "note": "Existem várias Orações Eucarísticas. A seleção depende da celebração; este conjunto ainda não está integralmente disponível."
     },
     {
       "id": "pai-nosso",
@@ -189,7 +189,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote e assembleia",
       "page": "570",
       "text": "Pai nosso que estais nos céus,\nsantificado seja o vosso nome;\nvenha a nós o vosso reino,\nseja feita a vossa vontade,\nassim na terra como no céu.\nO pão nosso de cada dia nos daí hoje;\nperdoai-nos as nossas ofensas,\nassim como nós perdoamos\na quem nos tem ofendido;\ne não nos deixeis cair em tentação,\nmas livrai-nos do mal.",
-      "note": "O convite antes da oração possui fórmulas alternativas no Missal."
+      "note": "Há diferentes convites antes da oração do Senhor."
     },
     {
       "id": "doxologia",
@@ -224,8 +224,8 @@ window.LCE_MISSAL = {
       "title": "Convite à Comunhão",
       "role": "Sacerdote e assembleia",
       "page": "574",
-      "text": "Sacerdote: Felizes os convidados para a Ceia do Senhor.\n[O Missal oferece fórmulas alternativas e a resposta da assembleia. Conferir as páginas 574–575.]",
-      "note": "Transcrição parcial, não confundir com o rito completo."
+      "text": "Sacerdote: Felizes os convidados para a Ceia do Senhor.\n[Outras fórmulas e resposta da assembleia: em preparação.]",
+      "note": "O texto está parcialmente cadastrado e aguarda a inclusão das demais fórmulas e da resposta da assembleia."
     },
     {
       "id": "oracao-pos",
@@ -233,8 +233,8 @@ window.LCE_MISSAL = {
       "title": "Oração depois da Comunhão",
       "role": "Sacerdote e assembleia",
       "page": "575",
-      "text": "[Oração própria da celebração — consultar Próprio do Missal.]\nAssembleia: Amém.",
-      "note": "Não é fixa. Exemplos do próprio de outubro constam abaixo."
+      "text": "[Oração depois da Comunhão própria da celebração: conteúdo em preparação.]\nAssembleia: Amém.",
+      "note": "Essa oração varia com a celebração; aqui existem exemplos de dois formulários."
     },
     {
       "id": "bencao",
@@ -261,7 +261,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote",
       "page": "410",
       "text": "Nós vos pedimos, Senhor,\nque vossa graça nos preceda e acompanhe\ne nos torne atentos\npara perseverar na prática do bem.\nPor nosso Senhor Jesus Cristo, vosso Filho, que é Deus,\ne convosco vive e reina, na unidade do Espírito Santo,\npor todos os séculos dos séculos.",
-      "note": "Exemplo de oração própria (página 410). A antífona de entrada é texto separado."
+      "note": "Oração própria do 28º Domingo do Tempo Comum. A antífona de entrada é outro elemento da celebração."
     },
     {
       "id": "28-oferendas",
@@ -288,7 +288,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote",
       "page": "827",
       "text": "Ó Deus todo-poderoso,\nao rendermos culto à Imaculada Conceição de Maria,\nMãe de Deus e Senhora nossa,\nconcedei que o povo brasileiro,\nvivendo na paz e na justiça,\npossa chegar um dia à pátria definitiva.\nPor nosso Senhor Jesus Cristo, vosso Filho, que é Deus,\ne convosco vive e reina, na unidade do Espírito Santo,\npor todos os séculos dos séculos.",
-      "note": "Solenidade própria do Brasil. A oração e rubricas devem ser conferidas no PDF original."
+      "note": "Oração própria da solenidade de Nossa Senhora da Conceição Aparecida, celebrada no Brasil."
     },
     {
       "id": "aparecida-oferendas",
@@ -306,7 +306,7 @@ window.LCE_MISSAL = {
       "role": "Sacerdote",
       "page": "829",
       "text": "Alimentados com o Corpo e o Sangue do vosso Filho,\nnós vos suplicamos, ó Deus: dai ao vosso povo,\nsob o olhar de Nossa Senhora da Conceição Aparecida,\nempenhar-se nas tarefas de cada dia\npara a propagação do vosso reino.\nPor Cristo, nosso Senhor.",
-      "note": "A edição inclui indicação de bênção solene."
+      "note": "Há também a possibilidade de bênção solene própria."
     }
   ]
 };
