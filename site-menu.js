@@ -6,12 +6,14 @@
   const host = document.querySelector('.site-nav-host');
   if (!host) return;
   const isHome = /(?:^|\/)(?:index\.html)?$/.test(window.location.pathname);
-  const current = /\/papas\.html$/.test(window.location.pathname) ? 'papas' :
+  const current = /\/historia-da-salvacao\.html$/.test(window.location.pathname) ? 'historia' :
+    /\/papas\.html$/.test(window.location.pathname) ? 'papas' :
     /\/heresias\.html$/.test(window.location.pathname) ? 'heresias' : 'inicio';
 
   const items = [
     {group:'Sagrada Escritura',note:'Estudo e leitura', links:[
       {label:'Bíblia Sagrada',section:'biblia',hash:'biblia'},
+      {label:'História da Salvação — Da Criação à Eternidade',url:'./historia-da-salvacao.html',page:'historia'},
       {label:'Plano de leitura bíblica',section:'plano',hash:'plano-de-leitura'}
     ]},
     {group:'Sagrada Tradição',note:'A fé transmitida pela Igreja',links:[
