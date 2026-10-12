@@ -1,10 +1,10 @@
 {
   "titulo": "Heresias, controvérsias e condenações doutrinais",
-  "subtitulo": "Inventário para pesquisa e revisão eclesial; não homogeneizar heresias, erros, cismas e práticas.",
+  "subtitulo": "Busca documentada de heresias, correntes e práticas condenadas ou criticadas; cada tipo é diferenciado.",
   "data_de_referencia": "2026-10-12",
-  "estado": "rascunho editorial — aguardando revisão de cada ficha antes de publicação",
+  "estado": "acervo público de consulta: entradas com documentos de referência; revisão editorial contínua",
   "criterio": "Não classificar como heresia o que a fonte apresenta apenas como prática proibida, incompatibilidade associativa ou tese censurada. Cada resumo exige revisão contextual e histórica.",
-  "total": 59,
+  "total": 88,
   "registros": [
     {
       "id": 1,
@@ -722,6 +722,354 @@
       "fonte": {
         "titulo": "Congregação para a Doutrina da Fé, Libertatis nuntius (1984)",
         "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19840806_theology-liberation_en.html"
+      }
+    },
+    {
+      "id": 60,
+      "titulo": "Eunomianismo",
+      "periodo": "IV–V",
+      "classificacao": "Heresia condenada",
+      "descricao": "Subordinava o Filho a Deus Pai e negava a consubstancialidade em chave anomeana.",
+      "posicao": "A profissão de fé de Florença nomeia os eunomianos entre as correntes trinitárias condenadas.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442), profissão de fé trinitária",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 61,
+      "titulo": "Tritheísmo",
+      "periodo": "IV–VI",
+      "classificacao": "Doutrina trinitária rejeitada",
+      "descricao": "Afirmava três deuses distintos no lugar de um só Deus em três pessoas.",
+      "posicao": "A profissão trinitária de Florença reafirma uma só essência e um só Deus, não três deuses.",
+      "fonte": {
+        "titulo": "Concílio de Florença, Cantate Domino (1442), profissão de fé trinitária",
+        "url": "https://www.vatican.va/content/eugenius-iv/en/documents/bulla-cantate-domino-4-febr-1442.html"
+      }
+    },
+    {
+      "id": 62,
+      "titulo": "Idolatria",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Atribui a uma criatura, objeto, poder ou realidade o culto devido somente a Deus.",
+      "posicao": "O Catecismo rejeita a idolatria nos nn. 2112–2114.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 63,
+      "titulo": "Superstição religiosa",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Desvia o culto e atribui eficácia quase mágica a práticas e sinais, inclusive em atos religiosos.",
+      "posicao": "O Catecismo distingue devoção autêntica e superstição, n. 2111.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 64,
+      "titulo": "Sacrilégio",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Profana pessoas, lugares ou coisas sagradas, de modo especial os sacramentos.",
+      "posicao": "O Catecismo reprova o sacrilégio, n. 2120.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 65,
+      "titulo": "Simonia",
+      "periodo": "Antiguidade–XXI",
+      "classificacao": "Prática rejeitada",
+      "descricao": "Pretende comprar ou vender realidades espirituais.",
+      "posicao": "O Catecismo rejeita a simonia, n. 2121.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 2110–2122",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+      }
+    },
+    {
+      "id": 66,
+      "titulo": "Consequencialismo moral absoluto",
+      "periodo": "XX",
+      "classificacao": "Teoria moral rejeitada",
+      "descricao": "Faz depender a moralidade dos atos exclusivamente da avaliação de suas consequências previsíveis.",
+      "posicao": "Veritatis splendor critica esse método quando nega atos intrinsecamente maus.",
+      "fonte": {
+        "titulo": "São João Paulo II, Veritatis splendor, nn. 71–83 (1993)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html"
+      }
+    },
+    {
+      "id": 67,
+      "titulo": "Proporcionalismo moral absoluto",
+      "periodo": "XX",
+      "classificacao": "Teoria moral rejeitada",
+      "descricao": "Pretende justificar ações contrárias a normas morais negativas universais por ponderação de resultados.",
+      "posicao": "Veritatis splendor rejeita a tese de que uma intenção boa torna lícitos atos intrinsecamente maus.",
+      "fonte": {
+        "titulo": "São João Paulo II, Veritatis splendor, nn. 71–83 (1993)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/encyclicals/documents/hf_jp-ii_enc_06081993_veritatis-splendor.html"
+      }
+    },
+    {
+      "id": 68,
+      "titulo": "Americanismo teológico (teses criticadas)",
+      "periodo": "XIX",
+      "classificacao": "Posições doutrinais rejeitadas",
+      "descricao": "Teses identificadas sob o nome americanismo que propunham adaptar indevidamente a doutrina e a vida espiritual à modernidade.",
+      "posicao": "Leão XIII rejeitou proposições específicas, não a cultura nem os católicos dos Estados Unidos.",
+      "fonte": {
+        "titulo": "Leão XIII, Testem benevolentiae (1899)",
+        "url": "https://www.vatican.va/content/leo-xiii/la/letters/documents/hf_l-xiii_let_18990122_testem-benevolentiae.html"
+      }
+    },
+    {
+      "id": 69,
+      "titulo": "Comunismo ateu marxista",
+      "periodo": "XX",
+      "classificacao": "Ideologia criticada e condenada",
+      "descricao": "Sistema explicitamente ateu e materialista analisado na encíclica de 1937.",
+      "posicao": "Pio XI criticou o comunismo ateu e apresentou a doutrina social católica em contraposição.",
+      "fonte": {
+        "titulo": "Pio XI, Divinis Redemptoris (1937)",
+        "url": "https://www.vatican.va/content/pius-xi/pt/encyclicals/documents/hf_p-xi_enc_19370319_divini-redemptoris.html"
+      }
+    },
+    {
+      "id": 70,
+      "titulo": "Idolatria da raça e da nação",
+      "periodo": "XX",
+      "classificacao": "Ideologia criticada e condenada",
+      "descricao": "Eleva povo, raça ou Estado a valor supremo ou absoluto, em detrimento de Deus e da dignidade humana.",
+      "posicao": "Mit brennender Sorge denunciou a substituição de Deus por ídolos políticos e raciais.",
+      "fonte": {
+        "titulo": "Pio XI, Mit brennender Sorge (1937)",
+        "url": "https://www.vatican.va/content/pius-xi/es/encyclicals/documents/hf_p-xi_enc_14031937_mit-brennender-sorge.html"
+      }
+    },
+    {
+      "id": 71,
+      "titulo": "Racismo e discriminação racial",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática e ideologia rejeitadas",
+      "descricao": "Nega a igual dignidade de pessoas por origem étnica ou racial.",
+      "posicao": "Dignitas infinita reafirma a igual dignidade humana e denuncia discriminações.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 72,
+      "titulo": "Negação da dignidade da pessoa com deficiência",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática e ideologia rejeitadas",
+      "descricao": "Trata pessoas com deficiência como menos dignas ou sujeitas a descarte.",
+      "posicao": "Dignitas infinita reafirma proteção, inclusão e participação das pessoas com deficiência.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 73,
+      "titulo": "Aborto voluntário",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Interrupção deliberada e direta de uma vida humana em gestação.",
+      "posicao": "Dignitas infinita reafirma a posição moral católica sobre o aborto, sem retirar a dignidade das mulheres.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 74,
+      "titulo": "Eutanásia e suicídio assistido",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Provocar deliberadamente a morte como solução para sofrimento ou doença.",
+      "posicao": "Dignitas infinita defende o cuidado e rejeita eutanásia e suicídio assistido.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 75,
+      "titulo": "Maternidade de substituição",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Gestação por substituição comercial ou não, considerada incompatível com a dignidade da criança e da mulher no documento.",
+      "posicao": "Dignitas infinita apresenta a posição contrária à maternidade de substituição.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 76,
+      "titulo": "Ideologias de gênero criticadas no documento",
+      "periodo": "XXI",
+      "classificacao": "Teoria antropológica criticada",
+      "descricao": "Formulações que, segundo o documento, apagam a diferença sexual ou propõem uma autodeterminação desvinculada do corpo.",
+      "posicao": "Dignitas infinita, nn. 55–60, critica tais teorias e simultaneamente exige respeito à dignidade de todas as pessoas, sem violência nem discriminação injusta.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 77,
+      "titulo": "Violência digital e assédio on-line",
+      "periodo": "XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Ofensas, exposição e violência contra a dignidade das pessoas por meios digitais.",
+      "posicao": "Dignitas infinita denuncia novas formas de violência digital.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 78,
+      "titulo": "Exploração e violência contra mulheres",
+      "periodo": "XX–XXI",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Violências e abusos que atentam contra a igual dignidade das mulheres.",
+      "posicao": "Dignitas infinita condena a violência contra as mulheres.",
+      "fonte": {
+        "titulo": "Dicastério para a Doutrina da Fé, Dignitas infinita (2024)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20240402_dignitas-infinita_po.html"
+      }
+    },
+    {
+      "id": 79,
+      "titulo": "Tese de ordenação sacerdotal de mulheres",
+      "periodo": "XX",
+      "classificacao": "Posição doutrinal rejeitada",
+      "descricao": "Sustenta que a Igreja teria faculdade para conferir às mulheres a ordenação sacerdotal.",
+      "posicao": "Ordinatio sacerdotalis reafirma que a Igreja não dispõe dessa faculdade; não se trata de negar direitos ou dignidade iguais.",
+      "fonte": {
+        "titulo": "João Paulo II, Ordinatio sacerdotalis, n. 4 (1994)",
+        "url": "https://www.vatican.va/content/john-paul-ii/pt/apost_letters/1994/documents/hf_jp-ii_apl_19940522_ordinatio-sacerdotalis.html"
+      }
+    },
+    {
+      "id": 80,
+      "titulo": "Negação do dogma da Assunção de Maria",
+      "periodo": "XX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a Assunção de Maria em corpo e alma à glória celeste como verdade revelada.",
+      "posicao": "Pio XII definiu solenemente o dogma em Munificentissimus Deus (1950).",
+      "fonte": {
+        "titulo": "Pio XII, Munificentissimus Deus, nn. 44–45 (1950)",
+        "url": "https://www.vatican.va/content/pius-xii/pt/apost_constitutions/documents/hf_p-xii_apc_19501101_munificentissimus-deus.html"
+      }
+    },
+    {
+      "id": 81,
+      "titulo": "Negação do dogma da Imaculada Conceição",
+      "periodo": "XIX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a preservação singular de Maria do pecado original desde o primeiro instante de sua concepção.",
+      "posicao": "Pio IX definiu o dogma em Ineffabilis Deus (1854).",
+      "fonte": {
+        "titulo": "Pio IX, Ineffabilis Deus (1854)",
+        "url": "https://www.vatican.va/content/pius-ix/pt/documents/18541208-costituzione-apostolica-ineffabilis-deus.html"
+      }
+    },
+    {
+      "id": 82,
+      "titulo": "Negação do dogma da infalibilidade pontifícia nas condições definidas",
+      "periodo": "XIX",
+      "classificacao": "Negação de dogma definido",
+      "descricao": "Recusa a infalibilidade do papa ao definir ex cathedra doutrina de fé ou moral para toda a Igreja.",
+      "posicao": "Pastor aeternus (1870) definiu condições precisas para essa prerrogativa, não infalibilidade universal de todos os atos do papa.",
+      "fonte": {
+        "titulo": "Concílio Vaticano I, Pastor aeternus, cap. 4 (1870)",
+        "url": "https://press.vatican.va/archive/hist_councils/i-vatican-council/documents/vat-i_const_18700718_pastor-aeternus_it.html"
+      }
+    },
+    {
+      "id": 83,
+      "titulo": "Contracepção deliberada no matrimônio",
+      "periodo": "XX",
+      "classificacao": "Prática moral rejeitada",
+      "descricao": "Intervenção destinada deliberadamente a impedir a procriação em um ato conjugal.",
+      "posicao": "Humanae vitae, n. 14, reafirma o ensinamento católico específico, distinguindo-o do planejamento periódico por métodos naturais.",
+      "fonte": {
+        "titulo": "Paulo VI, Humanae vitae, nn. 11–14 (1968)",
+        "url": "https://www.vatican.va/content/paul-vi/pt/encyclicals/documents/hf_p-vi_enc_25071968_humanae-vitae.html"
+      }
+    },
+    {
+      "id": 84,
+      "titulo": "Clonagem humana reprodutiva",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Produção de seres humanos por clonagem reprodutiva.",
+      "posicao": "Dignitas personae rejeita a clonagem humana reprodutiva.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 85,
+      "titulo": "Uso destrutivo de embriões humanos em pesquisa",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Pesquisa que exige destruir embriões humanos.",
+      "posicao": "Dignitas personae reafirma a exigência de respeito à vida humana embrionária.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 86,
+      "titulo": "Diagnóstico pré-implantação com descarte seletivo de embriões",
+      "periodo": "XXI",
+      "classificacao": "Prática bioética rejeitada",
+      "descricao": "Seleção de embriões para descarte em processos de reprodução assistida.",
+      "posicao": "Dignitas personae critica o diagnóstico pré-implantação quando associado a eliminação seletiva.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Dignitas personae (2008), síntese oficial",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_20081212_sintesi-dignitas-personae_po.html"
+      }
+    },
+    {
+      "id": 87,
+      "titulo": "Negação da existência de seres espirituais malignos",
+      "periodo": "XX",
+      "classificacao": "Proposição teológica examinada",
+      "descricao": "Interpretações que negam a realidade pessoal do diabo e dos demônios na doutrina cristã.",
+      "posicao": "O documento Fé cristã e demonologia defende a existência de seres espirituais malignos segundo a fé da Igreja.",
+      "fonte": {
+        "titulo": "Congregação para a Doutrina da Fé, Fé cristã e demonologia (1975)",
+        "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19750626_fede-cristiana-demonologia_en.html"
+      }
+    },
+    {
+      "id": 88,
+      "titulo": "Astrologia espiritualista na Nova Era",
+      "periodo": "XX–XXI",
+      "classificacao": "Tendência espiritual criticada",
+      "descricao": "Uso de cosmologias astrológicas para prometer realização e iluminação espiritual.",
+      "posicao": "A reflexão interdicasterial de 2003 examina criticamente essa corrente; não se trata de heresia formal imputada a todo praticante.",
+      "fonte": {
+        "titulo": "Conselhos Pontifícios, Jesus Cristo, portador da água da vida (2003)",
+        "url": "https://www.vatican.va/roman_curia/pontifical_councils/interelg/documents/rc_pc_interelg_doc_20030203_new-age_en.html"
       }
     }
   ]
