@@ -1,0 +1,31 @@
+/* Navegação unificada: painel vertical com metade da largura em desktops. */
+.site-header{position:sticky;top:0;z-index:40;background:rgba(246,243,237,.97);border-bottom:1px solid #ded6c8;backdrop-filter:blur(12px)}
+.site-header .header-inner{display:flex;justify-content:space-between;align-items:center;gap:1rem;min-height:78px}
+.site-header .brand-block h1{margin:0;font:700 clamp(1.25rem,2.4vw,1.75rem)/1.2 Georgia,serif;color:#30291e}
+.site-header .brand-block a{text-decoration:none}
+.site-nav-host{display:flex!important;align-items:center!important;width:auto!important;max-width:none!important;overflow:visible!important;gap:0!important;padding:0!important;flex:0 0 auto}
+.site-menu-trigger{display:inline-flex;align-items:center;gap:.65rem;justify-content:center;padding:.7rem 1rem;border:1px solid #b9ab90;background:#fffdf7;color:#30291e;border-radius:999px;font:700 .92rem/1.25 system-ui,sans-serif;cursor:pointer;min-height:44px}
+.site-menu-trigger:hover{background:#f1e9dc}
+.site-menu-symbol{font-size:1.2rem;line-height:1}.site-menu-chevron{font-size:1.3rem;line-height:1}
+.site-menu-backdrop{position:fixed;inset:0;background:rgba(26,22,17,.52);z-index:1001}
+.site-menu-panel{position:fixed;inset:0 0 0 auto;width:min(620px,52vw);height:100vh;height:100dvh;z-index:1002;overflow-y:auto;overscroll-behavior:contain;background:#fbf8f1;color:#30291e;box-shadow:-20px 0 50px rgba(0,0,0,.18);display:flex;flex-direction:column;padding:clamp(1.2rem,3vw,2.5rem);font-family:system-ui,-apple-system,Segoe UI,sans-serif}
+.site-menu-panel[hidden],.site-menu-backdrop[hidden]{display:none!important}
+body.site-menu-open{overflow:hidden}
+.site-menu-top{display:flex;justify-content:space-between;align-items:flex-start;gap:1rem;padding-bottom:1.2rem;border-bottom:1px solid #d9cfbb}
+.site-menu-kicker{display:block;font-size:.77rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#86631f;margin-bottom:.35rem}
+.site-menu-top h2{font:700 clamp(1.5rem,3vw,2rem)/1.1 Georgia,serif;margin:0 0 .3rem;color:#30291e}
+.site-menu-top p{font-size:.85rem;margin:0;color:#746a59}
+.site-menu-close{background:transparent;border:1px solid #c9bfac;border-radius:50%;font:400 1.6rem/1 system-ui;min-width:44px;min-height:44px;cursor:pointer;color:#30291e}
+.site-menu-links{display:flex;flex-direction:column;gap:.25rem;padding:1.15rem 0;overflow:visible!important}
+.site-menu-links .site-menu-home{border:0;background:transparent;text-decoration:none;text-align:left;font:700 .97rem/1.4 system-ui,sans-serif;color:#30291e;padding:.65rem .7rem;border-radius:7px;display:block;width:100%;min-height:0;cursor:pointer}
+.site-menu-group{border-top:1px solid #e3dacb;padding:1rem 0 .65rem}
+.site-menu-group h3{font:700 1.03rem/1.3 Georgia,serif;margin:0;padding:.1rem .7rem;color:#30291e}
+.site-menu-group p{margin:0 0 .55rem;padding:.1rem .7rem;font-size:.78rem;color:#7a715f}
+.site-menu-panel .site-menu-link{display:block;width:100%;min-height:0;text-decoration:none;text-align:left;background:transparent;border:0;border-radius:8px;padding:.7rem .85rem;color:#3f4039;font:500 .95rem/1.35 system-ui,sans-serif;white-space:normal;cursor:pointer}
+.site-menu-panel .site-menu-link:hover,.site-menu-panel .site-menu-home:hover{background:#ede5d5;color:#251e12}
+.site-menu-panel .site-menu-link.current,.site-menu-panel .site-menu-link.is-active,.site-menu-panel .site-menu-home.current,.site-menu-panel .site-menu-home.is-active{background:#eee2c9;color:#423113;font-weight:700}
+.site-menu-panel .site-menu-link::after,.site-menu-panel .site-menu-home::after{display:none!important}
+.site-menu-note{font-size:.76rem;line-height:1.5;color:#716858;border-top:1px solid #e3dacb;margin:auto 0 0;padding:1.2rem .4rem 0}
+.site-menu-panel a:focus-visible,.site-menu-panel button:focus-visible,.site-menu-trigger:focus-visible{outline:3px solid #976d18;outline-offset:3px}
+@media(max-width:780px){.site-menu-panel{width:100vw;max-width:100vw}.site-header .header-inner{flex-wrap:nowrap!important;min-height:72px}.site-menu-trigger{font-size:.82rem;padding:.65rem .75rem}.site-menu-chevron{display:none}.site-header .brand-block{width:auto!important}.site-header .brand-block h1{font-size:clamp(1.06rem,3.8vw,1.5rem)}}
+@media print{.site-nav-host,.site-menu-backdrop,.site-menu-panel{display:none!important}body.site-menu-open{overflow:visible}}
