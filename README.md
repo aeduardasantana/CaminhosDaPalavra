@@ -36,6 +36,16 @@ A nova seção pública **Ritos da Missa** apresenta, de maneira acessível ao p
 
 O objetivo é apresentar o conteúdo litúrgico ao público sem exigir que conheça os livros usados na sacristia, enquanto a glosa escrita serve de apoio à preparação do intérprete e não equivale à interpretação sinalizada.
 
+## Sucessão Apostólica e Papas
+
+- Página pública autônoma: `papas.html`, vinculada ao menu e à apresentação inicial, sem alterar as seções de Bíblia, Plano de Leitura, Calendário, Liturgia e Missal.
+- Catequese de base: Cristo fundador e Cabeça da Igreja; Pedro recebe missão singular; bispos de Roma o sucedem no ministério, não por descendência biológica.
+- Introdução à genealogia de Jesus (Mt 1 e Lc 3), claramente diferenciada da sucessão apostólica.
+- Relação cronológica de **267 registros** conforme o catálogo oficial da Santa Sé (consultado em 12/10/2026), de São Pedro até Leão XIV, com pesquisa por nome/número, filtro por século e inversão da ordem.
+- Nota histórica sobre o pontificado de Bento IX registrado três vezes e sobre a não inclusão de antipapas na relação oficial.
+- Referências: https://www.vatican.va/content/vatican/pt/holy-father.html e Catecismo da Igreja Católica §§ 880–882.
+- Dados mantidos localmente no HTML, sem banco de dados e sem dependência de buscas externas no funcionamento da lista. Em futuras mudanças no pontificado, a lista precisa ser revisada editorialmente conforme a Santa Sé.
+
 ## Liturgia dominical
 
 A base estruturada atual contém:
