@@ -25,6 +25,7 @@ const els = {
   sections: {
     projeto: document.querySelector('#projetoSection'),
     liturgia: document.querySelector('#liturgiaSection'),
+    missal: document.querySelector('#missalSection'),
     calendario: document.querySelector('#calendarioSection'),
     biblia: document.querySelector('#bibliaSection'),
     plano: document.querySelector('#planoSection')
@@ -946,7 +947,8 @@ const SECTION_PATHS = Object.freeze({
   biblia: 'biblia',
   plano: 'plano-de-leitura',
   calendario: 'calendario-liturgico',
-  liturgia: 'liturgia-e-libras'
+  liturgia: 'liturgia-e-libras',
+  missal: 'missal-romano-e-libras'
 });
 const PATH_SECTIONS = Object.fromEntries(Object.entries(SECTION_PATHS).map(([key, path]) => [path, key]));
 function sectionFromUrl() {
@@ -968,7 +970,7 @@ function syncSectionUrl(section, options = {}) {
 function setSection(section, options = {}) {
   if (!els.sections[section]) section = 'projeto';
   if (!options.fromHistory) syncSectionUrl(section, options);
-  const titles = {projeto:'Início',biblia:'Bíblia',plano:'Plano de Leitura',calendario:'Calendário Litúrgico',liturgia:'Liturgia para Libras'};
+  const titles = {projeto:'Início',biblia:'Bíblia',plano:'Plano de Leitura',calendario:'Calendário Litúrgico',liturgia:'Liturgia da Palavra',missal:'Missal Romano e Libras'};
   document.title = titles[section] + ' — Caminhos da Palavra';
   els.navButtons.forEach(btn => {
     if (btn.dataset.section === section) btn.setAttribute('aria-current', 'page');
