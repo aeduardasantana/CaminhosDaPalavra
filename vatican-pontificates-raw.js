@@ -145,7 +145,7 @@ window.VATICAN_PONTIFICATES_RAW = `\n1||64 ou 67|
 142|31.VII.1009|12.V.1012|Pietro
 143|18.V.1012|9.IV.1024|Teofilatto dos Condes de Tuscolo
 144|19.IV.1024|...1032|Romano dos Condes de Tuscolo
-145|...VIII ou IX.1032|...IX.1044|Teofilatto dos Condes de Tuscolo
+145|...VIII ou IX.1032|...IX.1044|Teofilatto dos Condes deTuscolo
 146|13 ou 20.I.1045|...III.1045|Giovanni
 147|10.III.1045|1.V.1045|Teofilatto dos Condes de Tuscolo
 148|1.V.1045|20.XII.1046|Giovanni Graziano
