@@ -6,6 +6,7 @@
   <meta name="description" content="Caminhos da Palavra — ambiente digital de experiência com a Palavra de Deus, com Bíblia, plano de leitura, calendário litúrgico e recursos de preparação da Liturgia em Libras." />
   <title>Caminhos da Palavra — por Libras com Eduarda</title>
   <link rel="stylesheet" href="./styles.css?v=20261010-10" />
+  <link rel="stylesheet" href="./missal.css?v=20261012-1" />
 </head>
 <body>
   <header class="site-header">
@@ -18,7 +19,8 @@
         <button class="nav-button" data-section="biblia">Bíblia</button>
         <button class="nav-button" data-section="plano">Plano de Leitura</button>
         <button class="nav-button" data-section="calendario">Calendário Litúrgico</button>
-        <button class="nav-button" data-section="liturgia">Liturgia e Libras</button>
+        <button class="nav-button" data-section="liturgia">Liturgia da Palavra</button>
+        <button class="nav-button" data-section="missal">Missal Romano e Libras</button>
       </nav>
     </div>
   </header>
@@ -32,7 +34,8 @@
           <p class="project-lead">Caminhos da Palavra é um ambiente digital de experiência com a Palavra de Deus. Leia a Bíblia, organize sua caminhada com um plano de leitura, acompanhe o calendário litúrgico e prepare-se para a Liturgia da Palavra com recursos de apoio e glosas para Libras.</p>
           <div class="project-actions">
             <button class="primary-action" type="button" data-go="biblia">Abrir Bíblia</button>
-            <button class="secondary-button" type="button" data-go="liturgia">Consultar Liturgia para Libras</button>
+            <button class="secondary-button" type="button" data-go="liturgia">Consultar Liturgia da Palavra</button>
+            <button class="secondary-button" type="button" data-go="missal">Preparar ritos da Missa</button>
           </div>
         </div>
         <aside class="project-status">
@@ -62,8 +65,8 @@
         </article>
         <article>
           <p class="eyebrow">Prepare e participe</p>
-          <h3>Liturgia e Libras</h3>
-          <p>Consulte as leituras da Liturgia e utilize glosas e recursos de apoio como instrumentos de preparação para a interpretação em Libras.</p>
+          <h3>Liturgia da Palavra</h3>
+          <p>Consulte as leituras, os salmos e o Evangelho com os roteiros de apoio à interpretação em Libras.</p>
         </article>
       </section>
 
@@ -127,6 +130,48 @@
         <p id="resultCount" aria-live="polite" class="result-count" aria-live="polite"></p>
       </div>
       <div id="liturgyResults" class="accordion-list"></div>
+    </section>
+
+    <section id="missalSection" class="content-section section-top" hidden>
+      <section class="search-panel missal-hero" aria-labelledby="missalTitle">
+        <div>
+          <p class="eyebrow">Missal Romano · CNBB · edição brasileira de 2023</p>
+          <h2 id="missalTitle">Missal Romano e Libras</h2>
+          <p class="supporting-text">Consulte textos e respostas dos ritos da Missa, com identificação de quem fala e espaço individual de preparação para a interpretação em Libras. Esta área é independente da Liturgia da Palavra e de seus ciclos A, B e C.</p>
+          <p class="supporting-text compact"><strong>Fonte:</strong> Missal Romano (3ª edição típica, tradução brasileira, 2023), fornecido para o projeto. <a href="https://drive.google.com/file/d/1Px_n1_a6_HL7_2cBrHSSVbrV5AuUtfcx/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">Consultar Missal completo (PDF no Drive)</a>.</p>
+          <p class="missal-caution">Acervo inicial de textos e referências selecionadas, não a transcrição integral do Missal. A extração de texto do PDF exige conferência editorial das rubricas, fórmulas alternativas e pontuação antes do uso na celebração. As anotações não equivalem a tradução validada em Libras.</p>
+        </div>
+        <div class="missal-overview" aria-label="Organização do conteúdo">
+          <article><strong>1. Textos fixos</strong><span>Diálogos, respostas, aclamações e ritos que se repetem.</span></article>
+          <article><strong>2. Textos variáveis</strong><span>Coletas, prefácios, Orações Eucarísticas e próprios dos dias.</span></article>
+          <article><strong>3. Preparação em Libras</strong><span>Anotações locais para estudo; sem publicação de glosas não validadas.</span></article>
+        </div>
+        <div class="missal-controls">
+          <label class="field">
+            <span>Buscar texto ou expressão</span>
+            <input id="missalQuery" type="search" placeholder="Ex.: Glória, Pai-nosso, 28º domingo, Aparecida" autocomplete="off" />
+          </label>
+          <label class="field">
+            <span>Parte da Missa</span>
+            <select id="missalGroup"><option value="">Todas as partes</option></select>
+          </label>
+          <button id="missalClear" class="secondary-button" type="button">Limpar</button>
+        </div>
+      </section>
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">Preparação litúrgica e acessibilidade</p>
+          <h2>Textos por momento da celebração</h2>
+          <p class="supporting-text compact">Abra um item para comparar o texto em português com suas anotações pessoais. Para leituras e Salmo Responsorial, use a área Liturgia da Palavra.</p>
+        </div>
+        <p id="missalCount" class="result-count" aria-live="polite"></p>
+      </div>
+      <div id="missalResults" class="missal-list"></div>
+      <div class="missal-crosslink">
+        <strong>Precisa preparar as leituras da Missa?</strong>
+        <p>A primeira leitura, o Salmo Responsorial e o Evangelho permanecem na Liturgia da Palavra, com busca por data e ciclo litúrgico.</p>
+        <button type="button" class="secondary-button" data-go="liturgia">Abrir Liturgia da Palavra</button>
+      </div>
     </section>
 
     <section id="calendarioSection" class="content-section section-top" hidden>
@@ -387,7 +432,9 @@
   <script src="./glosas-revisadas-ano-a.js?v=20261010-4"></script>
   <script src="./glosas-revisadas-ano-b.js?v=20261011-2"></script>
   <script src="./glosas-revisadas-ano-c.js?v=20261011-1"></script>
-  <script src="./app.js?v=20261011-ano-c-1"></script>
+  <script src="./missal-data.js?v=20261012-1"></script>
+  <script src="./app.js?v=20261012-missal-1"></script>
+  <script src="./missal.js?v=20261012-1"></script>
   <script src="./reading-backup.js?v=20261010-2"></script>
   <script src="./liturgy-pdf.js?v=20261010-4"></script>
   <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
