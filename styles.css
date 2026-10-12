@@ -402,7 +402,15 @@ input:focus, select:focus { border-color: var(--accent); box-shadow: 0 0 0 3px r
 }
 .calendar-detail h3 { margin-bottom: 4px; }
 .calendar-detail p { margin-bottom: 5px; color: var(--muted); }
-.calendar-detail .calendar-action { margin-top: 10px; }
+.calendar-detail .calendar-action { margin-top: 14px; }
+.calendar-saints { margin-top: 16px; padding-top: 13px; border-top: 1px solid var(--line); }
+.calendar-saints h4 { margin: 0 0 8px; color: var(--deep); font-size: 1rem; }
+.calendar-saints p { font-size: .88rem; line-height: 1.55; }
+.calendar-saints-list { margin: 10px 0 12px; padding-left: 20px; line-height: 1.7; }
+.calendar-saints-list li { margin: 3px 0; }
+.calendar-saints-links { display: flex; gap: 10px 16px; flex-wrap: wrap; margin-top: 12px; }
+.calendar-saints-links a { font-size: .86rem; font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+
 
 .bible-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-bottom: 16px; }
 .primary-link, .secondary-link {
