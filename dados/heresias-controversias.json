@@ -640,7 +640,17 @@
       "fonte": {
         "titulo": "Congregação para a Doutrina da Fé, Declaração sobre a Maçonaria (1983)",
         "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_con_cfaith_doc_19831126_declaration-masonic_po.html"
-      }
+      },
+      "fontes_adicionais": [
+        {
+          "titulo": "Leão XIII, Humanum genus (1884)",
+          "url": "https://www.vatican.va/content/leo-xiii/pt/encyclicals/documents/hf_l-xiii_enc_18840420_humanum-genus.html"
+        },
+        {
+          "titulo": "Dicastério para a Doutrina da Fé, nota (2023)",
+          "url": "https://www.vatican.va/roman_curia/congregations/cfaith/documents/rc_ddf_doc_20231113_richiesta-cortes-massoneria_en.html"
+        }
+      ]
     },
     {
       "id": 54,
@@ -686,8 +696,8 @@
       "descricao": "Concepção de sucessivas vidas terrestres após a morte, em vez do destino definitivo da vida humana.",
       "posicao": "O Catecismo n. 1013 rejeita a reencarnação; referência específica a conferir na ficha detalhada.",
       "fonte": {
-        "titulo": "Catecismo da Igreja Católica, nn. 2089, 2110–2117",
-        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p3s2cap1_2083-2195_po.html"
+        "titulo": "Catecismo da Igreja Católica, n. 1013",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap3_683-1065_po.html"
       }
     },
     {
