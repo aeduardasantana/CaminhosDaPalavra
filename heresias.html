@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Inventário histórico-doutrinal em revisão: heresias, controvérsias e pronunciamentos da Igreja Católica, com fontes primárias.">
+<title>Heresias e pronunciamentos da Igreja — Caminhos da Palavra</title>
+<style>
+:root{color-scheme:light;--bg:#f7f4ed;--paper:#fffefa;--ink:#232522;--muted:#5d665f;--border:#deded5;--accent:#275c4b}
+*{box-sizing:border-box}body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",sans-serif;background:var(--bg);color:var(--ink);line-height:1.5}
+a{color:var(--accent)}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid #1e7358;outline-offset:3px}
+header{background:#16392f;color:#fff;padding:1.15rem max(1rem,calc((100vw - 1130px)/2))}
+header a{color:#fff;text-decoration:none;font-weight:600}
+main{max-width:1130px;margin:auto;padding:2rem 1rem 5rem}
+h1{font-family:Georgia,serif;font-size:clamp(2rem,5vw,3.1rem);line-height:1.13;max-width:850px;margin:.5rem 0 1rem}
+.lead{font-size:1.1rem;max-width:820px;color:#37463e}.eyebrow{text-transform:uppercase;letter-spacing:.1em;font-size:.8rem;color:#577060;font-weight:700}
+aside{background:#eeeae1;padding:1rem 1.2rem;border-left:4px solid #987d4c;margin:1.5rem 0 2rem;max-width:970px}
+.controls{display:flex;flex-wrap:wrap;gap:.85rem;align-items:end;background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:1rem;margin:1.5rem 0}
+label{display:grid;gap:.35rem;min-width:185px;flex:1;color:var(--muted);font-size:.86rem;font-weight:600}
+label:first-child{flex:2 1 270px}
+input,select{width:100%;padding:.8rem;border:1px solid #b5c1b7;border-radius:8px;font:inherit;background:white;color:var(--ink)}
+button{border:1px solid #a8b4aa;border-radius:8px;padding:.75rem 1.05rem;background:white;cursor:pointer;color:var(--ink);font-weight:600}
+.meta{margin:0 0 1rem;color:var(--muted)}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,310px),1fr));gap:1rem}
+article{background:var(--paper);border:1px solid var(--border);border-radius:12px;padding:1.15rem 1.15rem 1.3rem;display:flex;flex-direction:column;gap:.45rem}
+article h2{font-family:Georgia,serif;font-size:1.28rem;line-height:1.25;margin:.1rem 0}.kicker{font-size:.75rem;color:#51675c;letter-spacing:.02em}
+.pill{display:inline-block;background:#e8efea;border-radius:99px;padding:.2rem .65rem;font-size:.72rem;width:fit-content}
+p{margin:.35rem 0}article p{font-size:.92rem}article strong{font-weight:700}
+article footer{margin-top:auto;border-top:1px solid var(--border);padding-top:.8rem;font-size:.85rem}
+small{display:block;color:var(--muted)}
+footer.page-footer{margin-top:2rem;border-top:1px solid var(--border);padding-top:1rem;color:var(--muted);font-size:.9rem}
+@media(prefers-reduced-motion:no-preference){button:hover{background:#f3f6f0}a:hover{text-decoration:underline}}
+</style>
+</head>
+<body>
+<header><a href="./index.html">← Caminhos da Palavra</a></header>
+<main>
+<p class="eyebrow">Sagrada Tradição e Magistério • Pesquisa histórica</p>
+<h1>Heresias, controvérsias e condenações doutrinais</h1>
+<p class="lead">Conheça correntes combatidas, teses condenadas, cismas e práticas sobre as quais a Igreja Católica se pronunciou. Cada ficha apresenta o núcleo do debate, a posição católica e a fonte documental para consulta.</p>
+<aside role="note"><strong>Critério de classificação.</strong> Nem toda controvérsia constitui heresia em sentido canônico (Catecismo, n. 2089). Maçonaria, por exemplo, figura como associação considerada incompatível, não como heresia formal. Os resumos e enquadramentos desta versão são <strong>preliminares e sujeitos à revisão histórica e eclesial</strong>. A fonte pode ser histórica e conter formulações que exigem contextualização diante do Magistério posterior.</aside>
+<form class="controls" id="filters" role="search" aria-label="Filtros do catálogo">
+<label>Buscar por nome, conteúdo ou documento<input id="query" type="search" placeholder="Ex.: gnosticismo, maçonaria, concílio..." autocomplete="off"></label>
+<label>Classificação<select id="kind"><option value="">Todas as classificações</option></select></label>
+<label>Período<select id="period"><option value="">Todos os períodos</option></select></label>
+<button type="reset">Limpar filtros</button>
+</form>
+<p id="count" class="meta" role="status" aria-live="polite">Carregando registros...</p>
+<div id="cards" class="cards" aria-label="Resultados da pesquisa"></div>
+<footer class="page-footer"><p>Acervo de estudo e documentação, não instrumento para atribuir culpa ou censura canônica a pessoas ou comunidades atuais. Links remetem a documentos da Santa Sé ou transcrições de documentos conciliares; a classificação final requer exame de cada fonte.</p></footer>
+</main>
+<div vw class="enabled"><div vw-access-button class="active"></div><div vw-plugin-wrapper><div class="vw-plugin-top-wrapper"></div></div></div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js" defer></script>
+<script>
+(function(){
+"use strict";
+const $=id=>document.getElementById(id);
+const els={query:$("query"),kind:$("kind"),period:$("period"),count:$("count"),cards:$("cards")};
+let records=[];
+function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/g,"").toLocaleLowerCase("pt-BR")}
+function addText(el,tag,text,className){const child=document.createElement(tag);child.textContent=text;if(className)child.className=className;el.appendChild(child);return child}
+function recordCard(r){
+ const card=document.createElement("article");
+ addText(card,"div",r.periodo,"kicker");
+ addText(card,"h2",r.titulo);
+ addText(card,"span",r.classificacao,"pill");
+ const description=addText(card,"p","","");addText(description,"strong","Questão: ");description.appendChild(document.createTextNode(r.descricao));
+ const response=addText(card,"p","","");addText(response,"strong","Posição da Igreja: ");response.appendChild(document.createTextNode(r.posicao));
+ const footer=document.createElement("footer");
+ const link=document.createElement("a");link.href=r.fonte.url;link.target="_blank";link.rel="noopener noreferrer";link.textContent="Consultar documento de referência ↗";footer.appendChild(link);
+ addText(footer,"small",r.fonte.titulo);
+ card.appendChild(footer);return card;
+}
+function update(){
+ const needle=norm(els.query.value.trim());const cat=els.kind.value;const period=els.period.value;
+ const shown=records.filter(r=>(!cat||r.classificacao===cat)&&(!period||r.periodo===period)&&(!needle||norm([r.titulo,r.periodo,r.classificacao,r.descricao,r.posicao,r.fonte.titulo].join(" ")).includes(needle)));
+ els.count.textContent=shown.length+" de "+records.length+" registros no catálogo (rascunho editorial).";
+ const fragment=document.createDocumentFragment();shown.forEach(r=>fragment.appendChild(recordCard(r)));
+ els.cards.replaceChildren(fragment);
+ if(!shown.length)addText(els.cards,"p","Nenhum registro encontrado. Ajuste os filtros.");
+}
+fetch("./dados/heresias-controversias.json",{cache:"no-cache"})
+.then(r=>{if(!r.ok)throw Error("HTTP "+r.status);return r.json()})
+.then(d=>{records=d.registros||[];const classes=[...new Set(records.map(r=>r.classificacao))].sort((a,b)=>a.localeCompare(b,"pt-BR"));const periods=[...new Set(records.map(r=>r.periodo))].sort((a,b)=>a.localeCompare(b,"pt-BR"));classes.forEach(c=>els.kind.add(new Option(c,c)));periods.forEach(p=>els.period.add(new Option(p,p)));update()})
+.catch(()=>{els.count.textContent="Não foi possível carregar o catálogo. Tente novamente.";});
+els.query.addEventListener("input",update);
+els.kind.addEventListener("change",update);
+els.period.addEventListener("change",update);
+$("filters").addEventListener("reset",()=>requestAnimationFrame(update));
+window.addEventListener("load",()=>{if(window.VLibras&&window.VLibras.Widget)new window.VLibras.Widget("https://vlibras.gov.br/app")});
+})();
+</script>
+</body>
+</html>
