@@ -1,0 +1,53 @@
+/* Módulo independente do Missal Romano (CNBB 2023) */
+#missalSection .missal-hero { gap:20px; }
+#missalSection .missal-hero .supporting-text { max-width: 90ch; }
+.missal-hero a { color:var(--accent-strong); text-underline-offset:3px; }
+.missal-caution { margin:12px 0 0; padding:13px 16px; border-left:3px solid var(--accent); background:#faf5e9; color:#594d38; font-size:.9rem; line-height:1.6; }
+.missal-overview { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:10px; }
+.missal-overview article { border:1px solid var(--line); background:#fff; padding:16px 17px; display:grid; gap:5px; border-radius:4px; }
+.missal-overview strong { color:var(--deep); font-size:.95rem; }
+.missal-overview span { font-size:.85rem; line-height:1.5; color:var(--muted); }
+.missal-controls { display:grid; grid-template-columns:minmax(240px,2fr) minmax(210px,1fr) auto; align-items:end; gap:12px; }
+.missal-list { display:grid; gap:12px; }
+.missal-entry { border:1px solid var(--line); background:var(--surface); border-radius:4px; box-shadow:0 2px 12px rgba(0,0,0,.025); overflow:hidden; }
+.missal-entry[open] { border-color:#bea777; }
+.missal-entry-head { list-style:none; display:flex; gap:12px; align-items:center; justify-content:space-between; cursor:pointer; padding:16px 20px; }
+.missal-entry-head::-webkit-details-marker { display:none; }
+.missal-entry-head:hover { background:#faf7f0; }
+.missal-entry-head:focus-visible { outline:3px solid var(--accent); outline-offset:-3px; }
+.missal-entry-main { display:grid; gap:5px; min-width:0; }
+.missal-entry-group { color:var(--accent-strong); font-size:.68rem; letter-spacing:.095em; font-weight:800; text-transform:uppercase; }
+.missal-entry-title { font-family:Georgia,"Times New Roman",serif; font-size:1.18rem; color:var(--deep); }
+.missal-entry-subtitle { color:var(--muted); font-size:.82rem; }
+.missal-entry-chevron { font-size:1.4rem; font-weight:700; color:var(--accent-strong); transition:transform .2s; }
+.missal-entry[open] .missal-entry-chevron { transform:rotate(180deg); }
+.missal-entry-body { border-top:1px solid var(--line); }
+.missal-columns { display:grid; grid-template-columns:1fr 1fr; }
+.missal-text-panel, .missal-notes-panel { min-width:0; padding:20px; }
+.missal-text-panel { background:#fdfcf9; border-right:1px solid var(--line); }
+.missal-columns h4 { color:var(--deep); font-size:.93rem; margin:0 0 12px; }
+.missal-text { white-space:pre-wrap; overflow-wrap:anywhere; line-height:1.85; margin:0 0 16px; font-size:1rem; }
+.missal-editorial-note { font-size:.81rem; color:var(--muted); line-height:1.55; margin:6px 0 10px; }
+.missal-note-label { display:block; margin:12px 0 5px; font-weight:700; font-size:.83rem; }
+.missal-note-input { display:block; width:100%; max-width:100%; padding:12px; border:1px solid var(--line); border-radius:3px; font:inherit; font-size:.9rem; line-height:1.55; resize:vertical; background:#fff; color:var(--ink); }
+.missal-note-input:focus-visible { outline:2px solid var(--accent); outline-offset:2px; }
+.missal-save-state { display:block; min-height:1em; color:var(--muted); font-size:.72rem; margin-top:6px; }
+.missal-crosslink { margin-top:24px; border:1px solid var(--line); background:var(--surface); padding:22px; }
+.missal-crosslink p { font-size:.9rem; color:var(--muted); margin:8px 0 14px; }
+@media(max-width:900px) {
+ .missal-overview { grid-template-columns:1fr; }
+ .missal-controls { grid-template-columns:minmax(0,1fr) minmax(0,1fr); }
+ .missal-controls button { grid-column:1/-1; justify-self:start; }
+}
+@media(max-width:700px) {
+ .missal-controls,.missal-columns { grid-template-columns:1fr; }
+ .missal-text-panel { border-right:0; border-bottom:1px solid var(--line); }
+ .missal-entry-head { padding:14px; }
+ .missal-text-panel,.missal-notes-panel { padding:15px; }
+}
+@media print {
+ .missal-note-input, .missal-save-state, .missal-controls { display:none!important; }
+ .missal-columns { grid-template-columns:1fr!important; }
+ .missal-notes-panel { display:none!important; }
+ .missal-entry { break-inside:avoid; }
+}
