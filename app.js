@@ -949,9 +949,10 @@ const SECTION_PATHS = Object.freeze({
   plano: 'plano-de-leitura',
   calendario: 'calendario-liturgico',
   liturgia: 'liturgia-e-libras',
-  missal: 'missal-romano-e-libras'
+  missal: 'ritos-da-missa'
 });
 const PATH_SECTIONS = Object.fromEntries(Object.entries(SECTION_PATHS).map(([key, path]) => [path, key]));
+PATH_SECTIONS['missal-romano-e-libras'] = 'missal'; // preserva links publicados na primeira versão
 function sectionFromUrl() {
   const slug = decodeURIComponent(window.location.hash.slice(1).split('?')[0]).replace(/^\/+/, '').toLowerCase();
   return PATH_SECTIONS[slug] || 'projeto';
