@@ -20,20 +20,21 @@ O ambiente também serve a cristãos que desejam ler a Bíblia, manter uma camin
 
 A assinatura **por Libras com Eduarda** preserva a origem e a autoria do projeto sem limitar a plataforma exclusivamente à Libras.
 
-## Missal Romano e Libras (12/10/2026)
+## Ritos e Orações da Missa (12/10/2026)
 
-Foi adicionada uma **área independente da Liturgia da Palavra**, com rota compartilhável `#missal-romano-e-libras`. A referência é o PDF *Missal Romano, terceira edição típica, tradução brasileira da CNBB (2023)* fornecido pela responsável do projeto.
+A nova seção pública **Ritos da Missa** apresenta, de maneira acessível ao público leigo, os textos e as respostas da celebração, organizados em Ritos Iniciais, Profissão de Fé e Preces, Liturgia Eucarística, Rito da Comunhão, Ritos Finais e exemplos de formulários próprios.
 
-- `missal-data.js`: acervo inicial com **30 registros** do Ordinário da Missa e alguns formulários do Próprio (28º Domingo do Tempo Comum e Nossa Senhora da Conceição Aparecida).
-- `missal.js`: pesquisa, filtros por parte da Missa, abertura de cada registro e notas pessoais de preparação para Libras, salvas somente no navegador (`localStorage`). Sem envio a servidores.
-- `missal.css`: layout responsivo, com duas colunas para texto e anotações.
-- Cada registro identifica o papel litúrgico, a referência à página do Missal e as observações editoriais. O link para o PDF integral está disponível no cabeçalho do módulo.
-- Registros incompletos são **explicitamente indicados** como remissões ao PDF; não devem ser tratados como transcrições completas.
-- A transcrição veio da extração textual do PDF e sofreu correções pontuais de erros evidentes de leitura automática; **falta conferência editorial integral no documento diagramado**, incluindo rubricas e variantes.
-- Os campos de notas **não são glosas homologadas**. A pessoa usuária prepara sua própria interpretação e deve validar as escolhas linguísticas e litúrgicas.
-- As leituras e os salmos permanecem na Liturgia da Palavra; a fonte portuguesa do acervo do Lecionário exige substituição ou conferência específica com a edição brasileira.
+**Base editorial interna:** Missal Romano, terceira edição típica, tradução brasileira da CNBB (2023), fornecida pela responsável do projeto.
 
-O Missal completo tem aproximadamente 97 MB e **não foi duplicado no repositório**. Esta implantação corresponde à primeira etapa do acervo, não à digitalização integral do documento.
+- `missal-data.js`: inventário inicial de 30 registros selecionados, com papéis litúrgicos e observações.
+- `missal.js`: busca, filtros, texto em português e painel de glosa de apoio. O painel só publica glosas quando forem explicitamente marcadas como revisadas e houver texto correspondente. Caso contrário, apresenta aviso de elaboração.
+- `missal.css`: interface responsiva para leitura por partes da celebração.
+- **O PDF original não é publicado ou vinculado no site, e suas páginas não são exibidas.** O documento serve de fonte de trabalho editorial, não como ferramenta que o visitante precisa consultar.
+- Os campos para anotações pessoais foram removidos da interface; não há mais escrita ou armazenamento de novas notas nesse módulo.
+- A transcrição do texto requer conferência editorial; entradas parciais ou sem texto são apresentadas como material em preparação, não como ritos completos.
+- A Liturgia da Palavra mantém o acervo próprio de leituras, salmos e Evangelhos, cuja edição brasileira ainda requer verificação. O módulo dos Ritos da Missa não substitui o Lecionário.
+
+O objetivo é apresentar o conteúdo litúrgico ao público sem exigir que conheça os livros usados na sacristia, enquanto a glosa escrita serve de apoio à preparação do intérprete e não equivale à interpretação sinalizada.
 
 ## Liturgia dominical
 
