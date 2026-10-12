@@ -3,9 +3,9 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Conheça a sucessão apostólica de São Pedro a Leão XIV: lista completa dos 267 pontificados reconhecidos pela Santa Sé, fundamentos bíblicos e explicações catequéticas." />
+  <meta name="description" content="Catequese católica: a Aliança com Israel, as doze tribos, o Messias prometido, os quatro Evangelhos, São Pedro e a sucessão dos 267 papas até Leão XIV." />
   <meta name="theme-color" content="#f6f3ed" />
-  <title>De Cristo a Pedro: Sucessão Apostólica e Papas — Caminhos da Palavra</title>
+  <title>De Israel a Cristo: Sucessão Apostólica e Papas — Caminhos da Palavra</title>
   <link rel="stylesheet" href="./styles.css?v=20261012-santos-1">
   <style>
     .pontiff-header .header-inner{gap:18px;flex-wrap:wrap}
@@ -68,6 +68,23 @@
     .p-sources a{color:var(--accent-strong);text-underline-offset:3px}
     .p-footer{margin-top:45px;padding-top:18px;border-top:1px solid var(--line);font-size:.86rem;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
     .p-footer a{color:var(--accent-strong)}
+    .p-history{list-style:none;padding:0;margin:22px 0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;counter-reset:stages}
+    .p-history li{background:var(--surface);border:1px solid var(--line);border-radius:15px;padding:19px 19px 19px 56px;position:relative;counter-increment:stages}
+    .p-history li::before{content:counter(stages);position:absolute;left:17px;top:20px;background:var(--accent-soft);color:var(--accent-strong);border-radius:50%;font-weight:800;width:27px;height:27px;display:grid;place-items:center}
+    .p-history h3{margin:5px 0 9px}.p-history p{color:var(--muted);font-size:.94rem;margin:0}
+    .p-info-details{background:#fff;border:1px solid var(--line);border-radius:14px;padding:15px 19px}
+    .p-info-details summary{cursor:pointer;font-weight:750}.p-info-details p{margin:10px 0 0;color:var(--muted)}
+    .p-scripture-grid,.p-gospels{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:20px 0}
+    .p-scripture-grid article,.p-gospels article{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px}
+    .p-scripture-grid strong{color:var(--accent-strong);font-size:.83rem}
+    .p-scripture-grid h3,.p-gospels h3{margin:7px 0;font-size:1.14rem}
+    .p-scripture-grid p,.p-gospels p{color:var(--muted);font-size:.93rem;margin:0}
+    .p-truth{margin-top:18px;padding:23px;border-radius:15px;background:#30291f;color:#f8f2e7}
+    .p-truth h3{color:#f4d397;margin:0 0 10px;font-family:Georgia,serif;font-size:1.4rem}
+    .p-truth p{margin:0;color:#f7f0e4}
+    .p-magisterium{border-left:4px solid var(--accent)}.p-magisterium h3{margin:0 0 9px}
+    .p-section a{color:var(--accent-strong);text-underline-offset:3px}
+    @media(max-width:760px){.p-history,.p-scripture-grid,.p-gospels{grid-template-columns:1fr}}
     :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
     @media(max-width:760px){.p-foundation,.p-study,.p-controls,.p-popes{grid-template-columns:1fr}.p-foundation article:not(:last-child)::after{content:"↓";left:calc(50% - 12px);right:auto;top:auto;bottom:-13px}.p-hero-stats{gap:20px}.p-century h3{align-items:center}.pontiff-header .header-inner{padding-top:12px;padding-bottom:12px}}
     @media print{.site-header,.p-controls,.p-breadcrumb,.p-footer{display:none!important}.p-century{break-inside:avoid}.p-hero{color:#000;background:#fff}.p-hero p,.p-hero .eyebrow,.p-hero-stats span,.p-hero-stats strong{color:#000}}
@@ -90,45 +107,102 @@
     <nav class="p-breadcrumb" aria-label="Você está aqui"><a href="./index.html#inicio">Início</a><span aria-hidden="true">›</span><span>História da Igreja</span><span aria-hidden="true">›</span><span>Sucessão dos Papas</span></nav>
     <section class="p-hero">
       <div class="eyebrow">Catequese · Bíblia · História da Igreja</div>
-      <h2>De Cristo a Pedro: a sucessão apostólica e os papas</h2>
-      <p>Uma caminhada pela missão confiada por Jesus a São Pedro e pela continuidade desse ministério na história da Igreja Católica, até o Papa Leão XIV.</p>
-      <div class="p-hero-stats"><span><strong>267</strong>posições na lista oficial</span><span><strong>São Pedro</strong>o primeiro da lista</span><span><strong>Leão XIV</strong>o pontífice atual</span></div>
+      <h2>De Israel a Cristo: a origem da Igreja e a sucessão apostólica</h2>
+      <p>Da Aliança com Israel ao nascimento de Jesus, o Messias prometido; de sua Paixão e Ressurreição à missão de São Pedro e à continuidade do ministério petrino na Igreja Católica, até o Papa Leão XIV.</p>
+      <div class="p-hero-stats"><span><strong>267</strong>papas na sucessão petrina</span><span><strong>São Pedro</strong>o primeiro da lista</span><span><strong>Leão XIV</strong>o pontífice atual</span></div>
     </section>
-    <section class="p-section" aria-labelledby="entender">
-      <div class="p-kicker">1 · Primeiro, compreenda</div>
-      <h2 id="entender">Como a sucessão começa?</h2>
-      <p class="p-lead">A Igreja Católica reconhece Jesus Cristo como seu fundador e Cabeça. Ele escolheu os apóstolos e confiou a Pedro uma missão singular de unidade e serviço pastoral. O papa não é um descendente biológico de Pedro: é o seu sucessor no ministério de bispo de Roma.</p>
-      <div class="p-foundation" role="list">
-        <article role="listitem"><div class="p-kicker">A origem</div><h3>Jesus Cristo</h3><p>O Senhor chama os Doze e institui a Igreja. Ele não é contado como papa.</p></article>
-        <article role="listitem"><div class="p-kicker">O primeiro</div><h3>São Pedro</h3><p>Recebe de Cristo as chaves do Reino e a missão de apascentar o rebanho.</p></article>
-        <article role="listitem"><div class="p-kicker">A continuidade</div><h3>Bispos de Roma</h3><p>O ministério petrino continua pela sucessão dos pontífices, a começar por São Lino.</p></article>
+
+    <section class="p-section" aria-labelledby="aliança">
+      <div class="p-kicker">1 · Antes de Jesus Cristo</div>
+      <h2 id="aliança">Deus prepara a vinda do Salvador na história de Israel</h2>
+      <p class="p-lead">A Igreja Católica não começa sua história apagando o povo de Israel. A revelação divina, a Antiga Aliança, a Lei, os salmos, os reis e os profetas preparam a vinda do Messias. A fé católica proclama que as promessas de Deus encontram seu cumprimento em Jesus Cristo (Catecismo, §§ 121–123, 128–130 e 522).</p>
+      <ol class="p-history" aria-label="Percurso da história do povo da Aliança">
+        <li><div class="p-kicker">Os patriarcas</div><h3>Abraão, Isaac e Jacó</h3><p>Deus chama Abraão e lhe promete uma descendência e uma bênção destinada a todas as famílias da terra (Gn 12,1–3). A promessa passa por Isaac e Jacó. Jacó recebe o nome de <strong>Israel</strong> (Gn 32,29). Seus doze filhos estão na origem das doze tribos de Israel.</p></li>
+        <li><div class="p-kicker">Libertação e Aliança</div><h3>Moisés e as doze tribos</h3><p>O povo de Israel é libertado do Egito. No Sinai, Deus estabelece a Aliança e dá a Lei. A Páscoa, o Êxodo, o culto e a Lei formam parte essencial do contexto da fé em que Jesus nasceria (Ex 12; Ex 19–20).</p></li>
+        <li><div class="p-kicker">A monarquia</div><h3>Saul, Davi e Salomão</h3><p>Com Saul começa a monarquia de Israel; Davi consolida o reino e recebe a promessa de uma descendência real (2Sm 7,12–16). Salomão constrói o Templo de Jerusalém. É por isso que chamar Jesus de <strong>Filho de Davi</strong> possui significado messiânico.</p></li>
+        <li><div class="p-kicker">A divisão política</div><h3>Israel ao norte e Judá ao sul</h3><p>Depois de Salomão, o reino se divide: o <strong>Reino de Israel</strong>, ao norte, e o <strong>Reino de Judá</strong>, ao sul (1Rs 12). Israel é também o nome de todo o povo da Aliança; neste contexto, designa especificamente o reino do norte. O nome <strong>judeu</strong> se relaciona historicamente com Judá, mas não significa que todos os israelitas tenham sido sempre chamados assim.</p></li>
+        <li><div class="p-kicker">Profetas e exílio</div><h3>A fidelidade de Deus permanece</h3><p>Profetas chamam o povo à conversão e anunciam esperança e restauração. O reino do norte cai sob a Assíria; mais tarde, Jerusalém e seu Templo sofrem a conquista babilônica e o exílio. O retorno e a reconstrução do Templo tornam-se etapas fundamentais para compreender a esperança messiânica (2Rs 17; 2Rs 25; Esd 1–6).</p></li>
+        <li><div class="p-kicker">A espera do Messias</div><h3>O judaísmo no tempo de Jesus</h3><p>No século I, o povo judeu vive sob o domínio de Roma, com o Templo de Jerusalém como referência central. Há diferentes correntes e grupos — entre eles fariseus e saduceus — e não uma única posição de todos os judeus sobre religião e política. É nesse mundo judaico que Jesus nasce, cresce, reza, ensina e chama seus discípulos.</p></li>
+      </ol>
+      <details class="p-info-details"><summary>Quais são as doze tribos de Israel?</summary>
+        <p>Os doze filhos de Jacó são Rúben, Simeão, Levi, Judá, Dã, Neftali, Gad, Aser, Issacar, Zabulon, José e Benjamim (Gn 35,22–26). Em listas territoriais, a tribo sacerdotal de Levi nem sempre aparece como território separado e os descendentes de José podem ser contados como <strong>Efraim e Manassés</strong>. Por isso, há diferentes maneiras bíblicas de enumerar doze tribos.</p>
+      </details>
+    </section>
+    <section class="p-section" aria-labelledby="profecias">
+      <div class="p-kicker">2 · A promessa messiânica</div>
+      <h2 id="profecias">O Antigo Testamento aponta para Cristo</h2>
+      <p class="p-lead">Deus não improvisa a salvação. Os acontecimentos e as promessas da Antiga Aliança preparam a vinda do Filho de Deus. A Igreja lê o Antigo e o Novo Testamentos na unidade de um mesmo plano divino.</p>
+      <div class="p-scripture-grid">
+        <article><strong>Gênesis 12,1–3</strong><h3>A bênção de Abraão</h3><p>A promessa feita a Abraão alcançará todas as famílias da terra.</p></article>
+        <article><strong>2 Samuel 7,12–16</strong><h3>A promessa a Davi</h3><p>Deus promete estabelecer a descendência e o reino da casa de Davi.</p></article>
+        <article><strong>Isaías 7,14 e Mateus 1,22–23</strong><h3>Emanuel: Deus conosco</h3><p>O Evangelho apresenta o nascimento de Jesus como cumprimento da profecia do Emanuel.</p></article>
+        <article><strong>Miqueias 5,1–2 e Mateus 2,5–6</strong><h3>Belém</h3><p>O anúncio sobre o governante vindo de Belém é retomado no relato do nascimento de Cristo.</p></article>
+        <article><strong>Isaías 52,13–53,12</strong><h3>O Servo sofredor</h3><p>A Igreja contempla a Paixão de Cristo à luz dos cânticos do Servo do Senhor.</p></article>
+        <article><strong>Jeremias 31,31–34 e Lucas 22,20</strong><h3>A Nova Aliança</h3><p>A promessa de uma Nova Aliança encontra seu cumprimento em Jesus e no mistério pascal.</p></article>
       </div>
     </section>
-    <section class="p-section" aria-labelledby="genealogia">
-      <div class="p-kicker">2 · Uma distinção importante</div>
-      <h2 id="genealogia">E a genealogia de Jesus?</h2>
-      <p class="p-lead">Ela pertence à História da Salvação e ajuda a compreender como Jesus cumpre as promessas feitas ao povo de Israel. Não é a mesma coisa que a lista dos sucessores de Pedro.</p>
+    <section class="p-section" aria-labelledby="judeu">
+      <div class="p-kicker">3 · A plenitude dos tempos</div>
+      <h2 id="judeu">Jesus nasceu judeu. Ele é o Cristo, o Messias prometido.</h2>
+      <p class="p-lead">Jesus, o Filho eterno de Deus feito homem, nasceu da Virgem Maria, uma mulher judia. São José, seu esposo, o inseriu juridicamente na casa de Davi. Jesus viveu no meio do povo de Israel, recebeu a circuncisão, participou de suas festas, frequentou a sinagoga e o Templo e conhecia profundamente as Escrituras (Lc 2; Catecismo, §§ 527 e 531–534).</p>
       <div class="p-genealogy">
-        <strong>Um percurso bíblico para situar o leitor</strong>
-        <div class="p-chain" aria-label="Abraão, depois Davi, e por fim Jesus Cristo, com gerações intermediárias"><span>Abraão</span><i aria-hidden="true">→ ··· →</i><span>Davi</span><i aria-hidden="true">→ ··· →</i><span>Jesus Cristo</span></div>
-        <p><strong>Mateus 1,1–17</strong> apresenta a genealogia de Jesus passando por Abraão e Davi, por meio da linha de José, esposo de Maria. <strong>Lucas 3,23–38</strong> oferece outra genealogia, com diferenças na sequência. Nenhuma delas deve ser lida como uma genealogia de Pedro ou dos papas. Na fé cristã, José não é apresentado como pai biológico de Jesus.</p>
+        <strong>A genealogia ilumina a identidade messiânica de Jesus</strong>
+        <div class="p-chain" aria-label="Abraão, Isaac, Jacó, Judá, Davi e Jesus Cristo, com outras gerações entre eles">
+          <span>Abraão</span><i>→</i><span>Isaac</span><i>→</i><span>Jacó (Israel)</span><i>→</i><span>Judá</span><i>→ ··· →</i><span>Davi</span><i>→ ··· →</i><span>Jesus Cristo</span>
+        </div>
+        <p><strong>Mateus 1,1–17</strong> começa com Abraão e Davi para manifestar a identidade de Jesus como Messias esperado. <strong>Lucas 3,23–38</strong> retrocede até Adão, destacando o alcance universal da salvação. Ambas são genealogias transmitidas nos Evangelhos em relação à linha de José; a concepção virginal de Jesus pelo Espírito Santo é afirmada explicitamente (Mt 1,18–25; Lc 1,26–35). Essa genealogia não é a sucessão dos papas.</p>
+      </div>
+      <div class="p-truth">
+        <h3>Cristo, Messias e Emanuel: o que significam?</h3>
+        <p><strong>Messias</strong> significa “Ungido”, em hebraico. <strong>Cristo</strong> traduz esse título para o grego. Jesus é o Messias prometido a Israel, o Filho de Deus e Salvador do mundo. <strong>Emanuel</strong> significa “Deus conosco” e expressa o mistério de sua presença, como ensina Mateus 1,23. Em João 4,25–26, Jesus se revela como o Messias; em Lucas 4,16–21, aplica a si a passagem profética de Isaías.</p>
       </div>
     </section>
-    <section class="p-section" aria-labelledby="biblical-foundation">
-      <div class="p-kicker">3 · Fundamentos da fé</div>
-      <h2 id="biblical-foundation">Onde está isso na Bíblia?</h2>
-      <p class="p-lead">Três passagens ajudam a compreender a missão de Pedro. Leia os textos em seu contexto, à luz da Tradição e do Magistério da Igreja.</p>
-      <div class="p-study">
-        <article><h3>Mateus 16,18–19</h3><p>Jesus dá a Simão o nome de Pedro e fala da edificação da Igreja e das chaves do Reino.</p></article>
-        <article><h3>Lucas 22,31–32</h3><p>Jesus reza por Pedro e lhe confia a tarefa de fortalecer seus irmãos na fé.</p></article>
-        <article><h3>João 21,15–17</h3><p>O Ressuscitado confia a Pedro o cuidado pastoral de suas ovelhas.</p></article>
+    <section class="p-section" aria-labelledby="resposta-israel">
+      <div class="p-kicker">4 · O encontro com o Messias</div>
+      <h2 id="resposta-israel">Quem reconheceu Jesus? Quem se opôs a Ele?</h2>
+      <p class="p-lead">Jesus anunciou o Reino de Deus primeiramente no meio de Israel. Alguns o reconheceram como Messias e o seguiram; outros não aceitaram sua identidade ou se opuseram à sua missão. Entre seus primeiros seguidores estavam Maria, os Apóstolos e numerosos discípulos judeus. Houve oposição de determinadas autoridades religiosas, e Jesus foi condenado à crucificação sob o poder romano de Pôncio Pilatos.</p>
+      <div class="p-note p-magisterium">
+        <h3>A Igreja não ensina uma rejeição coletiva de Cristo por todos os judeus</h3>
+        <p>Não é correto dizer que <em>todo o povo judeu</em> rejeitou Jesus, nem atribuir a todos os judeus de então — e muito menos aos judeus de hoje — a culpa por sua morte. O <strong>Catecismo da Igreja Católica, §§ 595–598</strong>, e <strong>Nostra Aetate, 4</strong>, ensinam expressamente essa distinção. Cristo ofereceu livremente a própria vida para a salvação de todos; sua Paixão não autoriza hostilidade ao povo judeu.</p>
+        <p>O judaísmo não deixou simplesmente de existir com a vinda de Jesus. Para a fé católica, a Antiga Aliança, as Escrituras e as promessas a Israel pertencem à história da nossa própria fé (Rm 9–11). A Igreja anuncia Jesus como cumprimento das promessas messiânicas sem negar as raízes judaicas do cristianismo.</p>
       </div>
-      <p class="p-lead">O <a href="https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap3_683-1065_po.html" target="_blank" rel="noopener noreferrer">Catecismo da Igreja Católica, §§ 880–882</a>, explica a relação entre Cristo, Pedro, os apóstolos e os bispos que lhes sucedem.</p>
+      <p class="p-lead">A diferença que a catequese precisa ensinar é, portanto, <strong>entre reconhecer Jesus como Cristo e não o reconhecer</strong>, sem apagar que Ele próprio, sua Mãe, seus Apóstolos e a primeira comunidade cristã eram judeus.</p>
+    </section>
+    <section class="p-section" aria-labelledby="evangelhos">
+      <div class="p-kicker">5 · Os quatro Evangelhos</div>
+      <h2 id="evangelhos">Uma só Boa-Nova, quatro testemunhos inspirados</h2>
+      <p class="p-lead">Os Evangelhos não apresentam quatro Cristos diferentes. Cada evangelista anuncia o mesmo Senhor, selecionando acontecimentos e ensinamentos com ênfases próprias para as necessidades das primeiras comunidades. As indicações de público abaixo são orientações tradicionais de leitura, não limites exclusivos de destinatários (Dei Verbum, 18–19).</p>
+      <div class="p-gospels">
+        <article><div class="p-kicker">Mateus</div><h3>Jesus cumpre as Escrituras de Israel</h3><p>Especialmente marcado pelo diálogo com leitores de tradição judaica. Começa pela genealogia de Abraão e Davi e recorre continuamente aos profetas para mostrar que Jesus é o Messias esperado (Mt 1,1; 1,22–23; 2,5–6).</p></article>
+        <article><div class="p-kicker">Marcos</div><h3>O Filho de Deus e o caminho da cruz</h3><p>Apresenta com vigor as obras de Jesus e o seguimento que passa pela Paixão. A tradição associa sua recepção inicial também a cristãos do ambiente romano, mas o Evangelho se dirige à Igreja inteira (Mc 1,1; 8,27–35).</p></article>
+        <article><div class="p-kicker">Lucas</div><h3>O Salvador oferecido a todos os povos</h3><p>Dirige seu relato a Teófilo e destaca a misericórdia, os pobres, a oração e a universalidade da salvação. A genealogia alcança Adão, mostrando que Cristo veio para toda a humanidade (Lc 1,1–4; 3,23–38).</p></article>
+        <article><div class="p-kicker">João</div><h3>O Verbo se fez carne</h3><p>Apresenta de modo particularmente explícito a identidade divina de Jesus, seus sinais e o chamado a crer nele para ter a vida. O prólogo contempla o Verbo eterno que habitou entre nós (Jo 1,1–14; 20,30–31).</p></article>
+      </div>
+    </section>
+    <section class="p-section" aria-labelledby="pedro">
+      <div class="p-kicker">6 · Da missão de Cristo à Igreja Apostólica</div>
+      <h2 id="pedro">Jesus Cristo fundou a Igreja e confiou a Pedro uma missão singular</h2>
+      <p class="p-lead">A Igreja não foi criada depois como uma associação humana separada do projeto de Cristo. O Senhor escolheu os Doze, constituiu-os Apóstolos e conferiu a Simão, chamado Pedro, as chaves do Reino e a missão de apascentar seu rebanho. Após a Ressurreição e Pentecostes, Pedro anuncia Cristo e exerce o ministério de unidade na comunidade apostólica.</p>
+      <div class="p-foundation" role="list">
+        <article role="listitem"><div class="p-kicker">Fundador e Cabeça</div><h3>Jesus Cristo</h3><p>O Filho de Deus encarnado estabelece a Nova Aliança, escolhe os Apóstolos e funda a sua Igreja. Jesus não é contado como papa.</p></article>
+        <article role="listitem"><div class="p-kicker">Primeiro Papa</div><h3>São Pedro</h3><p>Por instituição de Cristo, é a pedra sobre a qual o Senhor edifica sua Igreja. Recebe as chaves e o encargo de confirmar os irmãos e pastorear o rebanho.</p></article>
+        <article role="listitem"><div class="p-kicker">Sucessão Apostólica</div><h3>Bispos de Roma</h3><p>O ministério de Pedro permanece na Igreja em seus sucessores, os papas. O segundo da lista pontifícia é São Lino.</p></article>
+      </div>
+      <div class="p-scripture-grid">
+        <article><strong>Mateus 16,13–19</strong><h3>Pedro e as chaves</h3><p>Simão confessa Jesus como o Cristo, e o Senhor lhe confia as chaves do Reino.</p></article>
+        <article><strong>Lucas 22,31–32</strong><h3>Confirma teus irmãos</h3><p>Cristo reza pela fé de Pedro e lhe dá a missão de fortalecer os irmãos.</p></article>
+        <article><strong>João 21,15–17</strong><h3>Apascenta minhas ovelhas</h3><p>O Ressuscitado confia a Pedro o cuidado pastoral de seu rebanho.</p></article>
+        <article><strong>Atos 2 e 15</strong><h3>Pedro na Igreja nascente</h3><p>Pentecostes e a assembleia de Jerusalém mostram o ministério apostólico em ação.</p></article>
+      </div>
+      <div class="p-truth">
+        <h3>Esta é a Sucessão Apostólica professada pela Igreja Católica</h3>
+        <p>Jesus Cristo é o fundamento, a Cabeça e o Senhor da Igreja. São Pedro é o primeiro papa. O bispo de Roma é o sucessor de Pedro e o princípio visível de unidade dos fiéis e dos bispos. Essa não é apresentada aqui como mera hipótese: é doutrina da Igreja Católica, conforme o <strong>Catecismo, §§ 880–882</strong>, e a constituição <strong>Lumen Gentium, 18–23</strong>. A sucessão é de missão e ministério episcopal, não de parentesco biológico.</p>
+      </div>
     </section>
     <section class="p-section" aria-labelledby="lista-papas">
-      <div class="p-kicker">4 · Percorra a história</div>
+      <div class="p-kicker">7 · A sucessão de Pedro até hoje</div>
       <h2 id="lista-papas">Lista sucessória dos papas</h2>
-      <p class="p-lead">Os 267 registros seguem a ordem e a nomenclatura apresentadas pela Santa Sé. É possível buscar um pontífice, consultar um século ou inverter a ordem de leitura. Nos casos históricos com datas controversas, a referência oficial deve prevalecer.</p>
+      <p class="p-lead">Esta é a sucessão dos papas, de São Pedro até Leão XIV, conforme a relação pontifícia da Santa Sé. Pesquise um nome, consulte um século ou inverta a ordem. A incerteza documental sobre datas de alguns pontificados não coloca em dúvida a doutrina católica da sucessão apostólica.</p>
       <div class="p-controls" role="search">
         <label>Buscar por nome ou número<input id="popeSearch" type="search" placeholder="Ex.: Pedro, João Paulo II, 267" autocomplete="off"></label>
         <label>Século<select id="popeCentury"><option value="">Todos os séculos</option><option value="1">Século I</option><option value="2">Século II</option><option value="3">Século III</option><option value="4">Século IV</option><option value="5">Século V</option><option value="6">Século VI</option><option value="7">Século VII</option><option value="8">Século VIII</option><option value="9">Século IX</option><option value="10">Século X</option><option value="11">Século XI</option><option value="12">Século XII</option><option value="13">Século XIII</option><option value="14">Século XIV</option><option value="15">Século XV</option><option value="16">Século XVI</option><option value="17">Século XVII</option><option value="18">Século XVIII</option><option value="19">Século XIX</option><option value="20">Século XX</option><option value="21">Século XXI</option></select></label>
@@ -139,10 +213,12 @@
       <div class="p-note"><p><strong>Como interpretar a numeração?</strong> A relação apresentada reproduz as 267 posições da lista oficial. Alguns nomes aparecem em momentos diferentes: <strong>Bento IX figura três vezes</strong>, porque exerceu o pontificado em períodos separados. As datas dos primeiros séculos e determinados casos medievais possuem incertezas documentais.</p><p><strong>E os antipapas?</strong> Pessoas que reivindicaram o pontificado sem serem reconhecidas na sucessão oficial não são inseridas como novos papas nesta relação. Isso ajuda a distinguir conflitos históricos da lista recebida pela Igreja.</p></div>
     </section>
     <section class="p-section" aria-labelledby="duvidas">
-      <div class="p-kicker">5 · Catequese em perguntas</div><h2 id="duvidas">Perguntas frequentes</h2>
+      <div class="p-kicker">8 · Catequese em perguntas</div><h2 id="duvidas">Perguntas frequentes</h2>
       <div class="p-faq">
-        <details><summary>Jesus foi o primeiro papa?</summary><p>Não. Jesus Cristo é o fundador e a Cabeça da Igreja. São Pedro aparece como primeiro papa na lista pontifícia da Santa Sé.</p></details>
-        <details><summary>O papa é um descendente de Pedro?</summary><p>Não por parentesco. A sucessão é no ofício e na missão pastoral da Igreja de Roma, e não uma árvore genealógica de família.</p></details>
+        <details><summary>Jesus Cristo foi o primeiro papa?</summary><p>Não. Jesus Cristo fundou a Igreja e é sua Cabeça. São Pedro é o primeiro papa e recebeu de Cristo o ministério que permanece nos seus sucessores.</p></details>
+        <details><summary>O papa é descendente biológico de Pedro?</summary><p>Não por parentesco. A sucessão é no ofício e na missão pastoral da Igreja de Roma, e não uma árvore genealógica de família.</p></details>
+        <details><summary>Jesus nasceu no povo judeu?</summary><p>Sim. O Filho de Deus nasceu da Virgem Maria, uma mulher judia, na história da Aliança com Israel. Jesus é o Messias prometido, descendente de Davi na genealogia evangélica, e não pode ser compreendido fora das Escrituras de Israel.</p></details>
+        <details><summary>O povo judeu inteiro rejeitou Jesus Cristo?</summary><p>Não. Houve judeus que o reconheceram e seguiram, e outros que não creram ou se opuseram. As autoridades religiosas de Jerusalém também não tiveram uma posição unânime. A Igreja proíbe atribuir culpa coletiva aos judeus, conforme o Catecismo, §§ 595–598, e Nostra Aetate, 4.</p></details>
         <details><summary>Cada papa escolhe pessoalmente o próximo?</summary><p>Não. A forma de escolha dos pontífices mudou ao longo dos séculos; hoje a eleição ocorre no conclave, segundo as normas da Igreja.</p></details>
         <details><summary>Todos os papas foram santos?</summary><p>Não. A Igreja distingue a santidade de vida de uma pessoa da missão e do ministério que ela exerce. A história do papado inclui testemunhos de santidade e também crises e pecados humanos.</p></details>
         <details><summary>Por que há diferenças nas numerações de alguns papas?</summary><p>Em certos períodos houve mudanças históricas de nomenclatura, disputas e questões de registro, como nos pontífices chamados Estêvão. Para estudo e citação, esta página acompanha a sequência oficial da Santa Sé.</p></details>
@@ -150,8 +226,9 @@
     </section>
     <section class="p-sources" aria-label="Fontes e orientação editorial">
       <h2>Fontes de referência</h2>
-      <p>Lista de pontífices: <a href="https://www.vatican.va/content/vatican/pt/holy-father.html" target="_blank" rel="noopener noreferrer">Santa Sé — Papas</a>. Doutrina: <a href="https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap3_683-1065_po.html" target="_blank" rel="noopener noreferrer">Catecismo da Igreja Católica, §§ 880–882</a>. Base bíblica: Mateus 1; Mateus 16; Lucas 3; Lucas 22 e João 21.</p>
-      <p class="supporting-text">Conteúdo elaborado para fins catequéticos e educacionais. Não constitui página oficial da Santa Sé. Atualização editorial: 12 de outubro de 2026.</p>
+      <p><strong>Magistério e textos oficiais:</strong> <a href="https://www.vatican.va/content/vatican/pt/holy-father.html" target="_blank" rel="noopener noreferrer">Santa Sé — relação dos papas</a>; <a href="https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap3_683-1065_po.html" target="_blank" rel="noopener noreferrer">Catecismo, §§ 880–882 (primado e sucessão)</a>; <a href="https://www.vatican.va/archive/cathechism_po/index_new/p1s2cap2_422-682_po.html" target="_blank" rel="noopener noreferrer">Catecismo, §§ 522–528 e 595–598 (Messias e Paixão)</a>; <a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_po.html" target="_blank" rel="noopener noreferrer">Nostra Aetate, 4</a>; <a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19651118_dei-verbum_po.html" target="_blank" rel="noopener noreferrer">Dei Verbum, 18–19</a>; <a href="https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_const_19641121_lumen-gentium_po.html" target="_blank" rel="noopener noreferrer">Lumen Gentium, 18–23</a>.</p>
+      <p><strong>Referências bíblicas:</strong> Gn 12 e 32; Ex 12 e 19–20; 2Sm 7; 1Rs 12; Is 7 e 53; Mq 5; Jr 31; Mt 1–2 e 16; Lc 1–4 e 22; Jo 1, 4 e 21; At 2 e 15; Rm 9–11.</p>
+      <p class="supporting-text">Catequese confessional católica, em fidelidade à Sagrada Escritura, à Tradição Apostólica e ao Magistério. Material educativo, não uma página institucional da Santa Sé. Revisão: 12 de outubro de 2026.</p>
     </section>
     <footer class="p-footer"><span>© 2026 Caminhos da Palavra · <a href="./index.html#inicio">Voltar ao início</a></span><a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener noreferrer">Desenvolvido por Compass Rose Systems · GEB Tecnologia</a></footer>
   </main>
