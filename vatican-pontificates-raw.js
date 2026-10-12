@@ -129,4 +129,142 @@ window.VATICAN_PONTIFICATES_RAW = `\n1||64 ou 67|
 126|...I.936|13.VII.939|
 127|14.VII.939|... X.942|
 128|30.X,...XI.942|...V.946|
-129|10.V.946|...XII.955|\n`;
+129|10.V.946|...XII.955|
+130|16.XII.955|14.V.964|Ottaviano
+131|4,6.XII.963|...III.965|
+132|...V.964|4.VII.964 ou 965|
+133|1.X.965|6.IX.972|
+134|...XII.972, 19.I.973|...VII.974|
+135|...X.974|10.VII.983|
+136|...XI ou XII.983|20.VIII.984|Pietro
+137|...VIII.985|...III.996|
+138|3.V.996|...II ou III.999|Brunone dos Duques de Caríntia
+139|2.IV.999|12.V.1003|Gelberto
+140|16.V.1003|6.XI.1003|Siccone
+141|25.XII.1003|...VI o VII.1009|Fasano
+142|31.VII.1009|12.V.1012|Pietro
+143|18.V.1012|9.IV.1024|Teofilatto dos Condes de Tuscolo
+144|19.IV.1024|...1032|Romano dos Condes de Tuscolo
+145|...VIII ou IX.1032|...IX.1044|Teofilatto dos Condes de Tuscolo
+146|13 ou 20.I.1045|...III.1045|Giovanni
+147|10.III.1045|1.V.1045|Teofilatto dos Condes de Tuscolo
+148|1.V.1045|20.XII.1046|Giovanni Graziano
+149|24.XII.1046|9.X.1047|Suitgero dos senhores de Morsleben von Horneburg
+150|...X.1047|... VIII.1048|Teofilatto dos Condes de Tuscolo
+151|17.VII.1048|9.VIII.1048|Poppone
+152|2,12.II.1049|19.IV.1054|Brunone dos Condes de Egisheim
+153|13.IV.1055|28.VII.1057|Gebeardo dos Condes de Dollnstein-Hirschberg
+154|2,3.VIII.1057|29.III.1058|Federico dos Duques de Lorena
+155|...XII.1058, 24.I.1059|27.VII.1061|Gerardo
+156|30.IX, 1.X.1061|21.IV.1073|Anselmo
+157|22.IV,30.VI.1073|25.V.1085|Ildebrando
+158|24.V.1086, 9.V.1087|16.IX.1087|Dauferio (Desiderio)
+159|12.III.1088|29.VII.1099|Oddone di Lagery
+160|13,14.VIII.1099|21.I.1118|Raniero
+161|24.I,10.III.1118|28.I.1119|Giovanni Caetani
+162|2,9.II.1119|13 ou 14.XII.1124|Guido di Borgogna
+163|15,21.XII.1124|13 ou 14.II.1130|Lamberto Scannabecchi
+164|14,23.II.1130|24.IX.1143|Gregorio Papareschi
+165|26.IX,3.X.1143|8.III.1144|Guido
+166|12.III.1144|15.II.1145|Gerardo
+167|15,18.II.1145|8.VII.1153|Bernardo
+168|12.VII.1153|3.XII.1154|Corrado
+169|4,5.XII.1154|1.IX.1159|Nicolau Breakspear
+170|7,20.IX.1159|30.VIII.1181|Rolando Bandinelli
+171|1. 6.IX.1181|25.IX.1185|Ubaldo Allucingoli
+172|25.XI,1.XII.1185|20.X.1187|Umberto Crivelli
+173|21.25.X.1187|17.XII.1187|Alberto di Morra
+174|19,20.XII.1187|...III.1191|Paulo Scolari
+175|10,14.IV.1191|8.I.1198|Giacinto Bobone
+176|8.I,22.II.1198|16.VII.1216|Lotario dos Condes de Segni
+177|18,24.VII.1216|18.III.1227|Cencio
+178|19,21.III.1227|22.VIII.1241|Ugolino dos Condes de Segni
+179|25,28.X.1241|10.XI.1241|Goffredo da Castiglione
+180|25,28.VI.1243|7.XII.1254|Sinibaldo Fieschi
+181|12,20.XII.1254|25.V.1261|Rinaldo dei signori di Ienne
+182|29.VIII,4.IX.1261|2.X.1264|Jacques Pantaléon
+183|5,22.II.1265|29.XI.1268|Guy Foulques
+184|1.IX.1271,27.III.1272|10.I.1276|Tebaldo Visconti
+185|21.I,22.II.1276|22.VI.1276|Pierre di Tarentaise
+186|11.VII.1276|18.VIII.1276|Ottobono Fieschi
+187|16,20.IX.1276|20.V.1277|Pedro Julião ou Pedro Hispano
+188|25.XI, 26.XII.1277|22.VIII.1280|Giovanni Gaetano Orsini
+189|22.II,23.III.1281|29.III.1285|Simon de Brie ou de Brion ou de Mainpincien
+190|2.IV, 20.V.1285|3.IV.1287|Giacomo Savelli
+191|22.II.1288|4.IV.1292|Girolamo
+192|5.VII, 29.VIII.1294|13.XII.1294|Pietro del Morrone
+193|24.XII.1294, 23.I.1295|11.X.1303|Benedetto Caetani
+194|22,27.X.1303|7.VII.1304|Niccolò di Boccasio
+195|5.VI, 14.XI.1305|20.IV.1314|Bertrand de Got
+196|7.VIII,5.IX.1316|4.XII.1334|Jacques d'Euse
+197|20.XII.1334, 8.I.1335|25.IV.1342|jacques Fournier
+198|7,19.V.1342|6.XII.1352|Pierre Roger
+199|18,30.XII.1352|12.IX.1362|Etienne Aubert
+200|28.IX,6.XI.1362|19.XII.1370|Guillaume de Grimoard
+201|30.XII.1370, 3.I.1371|26.III.1378|Pierre Roger de Beaufort
+202|8,18.IV.1378|15.X.1389|Bartolomeu Prignano
+203|2,9.XI.1389|1.X.1404|Pietro Tomacelli
+204|17.X,11.XI.1404|6.XI.1406|Cosma Migliorati
+205|30.XI,19.XII.1406|4.VII.1415|Angelo Correr
+206|11,21.XI.1417|20.II.1431|Oddone Colonna
+207|3,11.III.1431|23.II.1447|Gabriele Condulmer
+208|6,19.III.1447|24.III.1455|Tommaso Parentucelli
+209|8,20.IV.1455|6.VIII.1458|Alonso de Borja
+210|19.VIII, 3.IX.1458|14.VIII.1464|Enea Silvio Piccolomini
+211|30.VIII, 16.IX.1464|26.VII.1471|Pietro Barbo
+212|1,9,25.VIII.1471|12.VIII.1484|Francesco della Rovere
+213|29.VIII, 12.IX.1484|25.VII.1492|Giovanni Battista Cibo
+214|11,26.VIII.1492|18.VIII.1503|Rodrigo de Borja
+215|22.IX, 1,8.X.1503|18.X.1503|Francesco Todeschini-Piccolomini
+216|1,26.XI.1503|21.II.1513|Giuliano della Rovere
+217|11,19.III.1513|1.XII.1521|Giovanni de' Medici
+218|9.I,31.VIII.1522|14.IX.1523|Adriano Florensz
+219|19,26.XI.1523|25.IX.1534|Giulio de' Medici
+220|13.X, 3.XI.1534|10.XI.1549|Alessandro Farnese
+221|7,22.II.1550|23.III.1555|Giovanni Maria Ciocchi del Monte
+222|9,10.IV.1555|1.V.1555|Marcello Cervini
+223|23,26.V.1555|18.VIII.1559|Gian Pietro Carafa
+224|26.XII.1559, 6.I.1560|9.XII.1565|Giovan Angelo Medici
+225|7,17.I.1566|1.V.1572|Antonio (Michele) Ghisleri
+226|13,25.V.1572|10.IV.1585|Ugo Boncompagni
+227|24.IV, 1.V.1585|27.VIII.1590|Felice Peretti
+228|15.IX.1590|27.IX.1590|Giambattista Castagna
+229|5,8.XII.1590|16.X.1591|Niccolò Sfondrati
+230|29.X,3.XI.1591|30.XII.1591|Giovan Antonio Facchinetti
+231|30.I,9.II.1592|3.III.1605|Ippolito Aldobrandini
+232|1,10.IV.1605|27.IV.1605|Alessandro de' Medici
+233|16,29.V.1605|28.I.1621|Camillo Borghese
+234|9,14.II.1621|8.VII.1623|Alessandro Ludovisi
+235|6.VIII, 29.IX.1623|29.VII.1644|Maffeo Barberini
+236|15.IX,4.X.1644|7.I.1655|Giovanni Battista Pamphilj
+237|7,18.IV.1655|22.V.1667|Fabio Chigi
+238|20,26.VI.1667|9.XII.1669|Giulio Rospigliosi
+239|29.IV,11.V.1670|22.VII.1676|Emilio Altieri
+240|21.IX, 4.X.1676|12.VIII.1689|Benedetto Odescalchi
+241|6,16.X.1689|1.II.1691|Pietro Ottoboni
+242|12,15.VII.1691|27.IX.1700|Antonio Pignatelli
+243|23,30.XI, 8.XII.1700|19.III.1721|Giovanni Francesco Albani
+244|8,18.V.1721|7.III.1724|Michelangelo Conti
+245|29.V, 4.VI.1724|21.II.1730|Pietro Francesco (Vincenzo Maria) Orsini
+246|12,16.VII.1730|6.II.1740|Lorenzo Corsini
+247|17,22.VIII.1740|3.V.1758|Prospero Lambertini
+248|6,16.VII.1758|2.II.1769|Carlo Rezzonico
+249|19,28.V, 4.VI.1769|22.IX.1774|Giovanni Vincenzo Antonio (Lorenzo) Ganganelli
+250|15,22.II.1775|29.VIII.1799|Giannangelo Braschi
+251|14,21.III.1800|20.VIII.1823|Barnaba (Gregorio) Chiaramonti
+252|28.IX, 5.X.1823|10.II.1829|Annibale della Genga
+253|31.III, 5.IV.1829|30.XI.1830|Francesco Saverio Castiglioni
+254|2,6.II.1831|1.VI.1846|Bartolomeo Alberto (Mauro) Cappellari
+255|16,21.VI.1846|7.II.1878|Giovanni Maria Mastai Ferretti
+256|20.II, 3.III.1878|20.VII.1903|Vincenzo Gioacchino Pecci
+257|4,9.VIII.1903|20.VIII.1914|Giuseppe Melchiorre Sarto
+258|3,6.IX.1914|22.I.1922|Giacomo della Chiesa
+259|6,12.II.1922|10.II.1939|Achille Ratti
+260|2,12.III.1939|9.X.1958|Eugenio Pacelli
+261|28.X, 4.XI.1958|3.VI.1963|Angelo Giuseppe Roncalli
+262|21,30.VI.1963|6.VIII.1978|Giovanni Battista Montini
+263|26.VIII, 3.IX.1978|28.IX.1978|Albino Luciani
+264|16,22.X.1978|2.IV.2005|Karol Wojtyła
+265|19,24.IV.2005|28.II.2013|Joseph Ratzinger
+266|13,19.III.2013|21.IV.2025|Jorge Mario Bergoglio
+267|8,18.V.2025||Robert Francis Prevost\n`;
