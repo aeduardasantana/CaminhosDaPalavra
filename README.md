@@ -56,6 +56,21 @@ A regra de publicação é **não inventar dados**. Todo dado factual deve possu
 
 Na relação dos papas, os 267 registros são apresentados com campos de nome de nascimento e datas transcritos da [tabela da Santa Sé](https://www.vatican.va/content/vatican/pt/holy-father.html), preservando lacunas, datas alternativas e formas originais. O arquivo de apoio é `vatican-pontificates-raw.js`. Em 12/10/2026, a tabela fornecia 134 campos de nome de nascimento e deixava 133 em branco. A qualidade factual dos demais módulos necessita conferências próprias, que não devem ser confundidas com a conferência desta lista.
 
+## Dois eixos em uma página — HS-2026-10-12.4
+
+A página canônica `historia-da-salvacao.html` reúne **duas perspectivas complementares da única salvação em Cristo**, com controle por abas acessível a teclado e links profundos:
+- **Eixo A: O que Deus realizou** — preserva os oito movimentos, 16 capítulos, 54 parágrafos, 33 conexões e a lista pesquisável dos 267 pontificados na mesma etapa da Igreja. O antigo `papas.html` continua redirecionando para `#sucessao-pontificia`.
+- **Eixo B: Como a pessoa responde à graça** — cinco grandes movimentos, com 19 módulos (`#b01` até `#b19`), sobre criaturas, corpo/alma/espírito, liberdade, pecado, graça, sacramentos, virtudes, Espírito Santo, *sensus fidei*, santidade e Novíssimos. Cada tema mantém formulação original, ampliação explicativa derivada do Caderno de Fundamentação e ligação à etapa correspondente no eixo histórico.
+- **Integração** — oito pontes no Eixo A conduzem ao tema apropriado do Eixo B; os 19 módulos pessoais ligam de volta à História. As âncoras abrem automaticamente a aba e os painéis necessários; a interface apresenta apenas uma perspectiva de cada vez com JavaScript, e mantém ambos os conteúdos legíveis sem JavaScript.
+- **Fonte e cronologia** — a lista de papas permanece baseada na transcrição dos registros da Santa Sé; o nome anterior de Pedro é Simão (Jo 1,42). O painel pessoal foi extraído de documentos do Drive, sem criar uma segunda página desconectada nem substituir a versão HS-2026-10-12.2.
+- **Proveniência de leitura** — os conceitos filosóficos da tradição aristotélico-tomista não são apresentados como dogmas; as fontes anteriores ao Vaticano II e as auxiliares posteriores são diferenciadas. Não há FAQ fabricada.
+- **Status** — material catequético em estudo; a publicação técnica não equivale à revisão eclesial externa.
+
+Fontes de documentação prévia, criadas ANTES do código:
+1. Arquitetura dos dois eixos: https://docs.google.com/document/d/1_aDHWRO1jKUBJxEp-FODASxDFmlM_2WsXUoopHje1KY/edit
+2. Caderno de fundamentação: https://docs.google.com/document/d/1WG2pLaY6uobaKwqNERKfEK0BbziRPNxdit_lNsOfats/edit
+3. Base de implantação dos 19 módulos: https://docs.google.com/document/d/1R6RyDs02-L540wn6xRo2FcWPwoawN1E6eGVuoCHQeHg/edit
+
 ## História da Salvação e Sucessão Apostólica — jornada unificada (HS-2026-10-12.2)
 
 **Página canônica única:** `historia-da-salvacao.html`. A História da Salvação e a relação dos 267 pontificados **não são mais duas experiências paralelas**: todos os dados estão no mesmo percurso. O antigo endereço `papas.html` encaminha para `historia-da-salvacao.html#sucessao-pontificia`, sem perder os acessos preexistentes.
