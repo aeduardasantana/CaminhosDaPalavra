@@ -56,28 +56,21 @@ A regra de publicação é **não inventar dados**. Todo dado factual deve possu
 
 Na relação dos papas, os 267 registros são apresentados com campos de nome de nascimento e datas transcritos da [tabela da Santa Sé](https://www.vatican.va/content/vatican/pt/holy-father.html), preservando lacunas, datas alternativas e formas originais. O arquivo de apoio é `vatican-pontificates-raw.js`. Em 12/10/2026, a tabela fornecia 134 campos de nome de nascimento e deixava 133 em branco. A qualidade factual dos demais módulos necessita conferências próprias, que não devem ser confundidas com a conferência desta lista.
 
-## História da Salvação — Jornada catequética conectada (12/10/2026)
+## História da Salvação e Sucessão Apostólica — jornada unificada (HS-2026-10-12.2)
 
-- Página pública: `historia-da-salvacao.html`, acessível pelo menu global e pelo cartão da página inicial, com retorno à página dos papas.
-- Origem editorial: documento-mestre arquivado e conferido no Google Drive, versão `HS-2026-10-12.1`, URL: https://docs.google.com/document/d/1d7Prfhp180AXiZ6GYvbeo8bA6IQKBfVdtssjw8YAR3M/edit
-- Extensão da versão: **16 capítulos**, **33 conexões documentadas** e **11 entradas bibliográficas/de fontes**, da Criação à consumação da História da Salvação.
-- Conteúdo: Adão/Eva e protoevangelho; Noé; Abraão/Melquisedeque; Isaac, Esaú e Jacó; tribos de Israel; Moisés, sarça e Sinai; Arão, Tabernáculo e Arca; reinos, Davi e Templo; profetas e exílio; Maria, Imaculada Conceição, Nova Eva e Arca da Nova Aliança; Evangelhos e Messias; redenção e sacerdócio de Cristo; instituição da Igreja; São Pedro e sucessão; fé e razão; retorno de Cristo, ressurreição e Juízo Final.
-- Navegação: índice com âncoras, painel de oito movimentos, capítulos com referências bíblicas, conexões classificadas, navegação anterior/seguinte e ligação ao catálogo papal. Não contém FAQ sem pesquisa de demanda.
-- **Critério de fonte**: distinguir conexões bíblicas (A), magisteriais (B), tradicionais/tipológicas (C) e pedagógicas (D), não atribuindo natureza de dogma às chaves editoriais.
-- **Governança**: material identificado como estudo catequético, sem declaração de revisão eclesial externa concluída. O conteúdo novo e a alteração na interface não substituem a Matriz Teológico 1.5 congelada. Registrar eventual parecer eclesial e decisões de publicação conforme BLOCO 7, sem presumir status APROVADO.
-- **Auditoria**: verificar estrutura, referências e consistência com o documento-mestre após alterações; GitHub Actions/Locaweb validação técnica é distinta de avaliação doutrinal.
+**Página canônica única:** `historia-da-salvacao.html`. A História da Salvação e a relação dos 267 pontificados **não são mais duas experiências paralelas**: todos os dados estão no mesmo percurso. O antigo endereço `papas.html` encaminha para `historia-da-salvacao.html#sucessao-pontificia`, sem perder os acessos preexistentes.
 
-## Sucessão Apostólica e Papas
+- **Oito etapas expansíveis:** Criação/Queda; Noé/Abraão/patriarcas; Israel/Moisés/Arca; Davi/profetas; Maria/Messias; Nova e Eterna Aliança; Igreja/Pedro/papas/fé e razão; segunda vinda/consumação.
+- **Conteúdo integral:** preservados **16 capítulos**, **54 parágrafos** da versão-mestre, **33 conexões A/B/C/D** e **11 referências bibliográficas**, verificados por comparação com o conteúdo do Drive.
+- **Interatividade:** cada etapa traz título autoexplicativo e resumo antes de abrir; cada capítulo se expande independentemente para revelar personagens, explicação integral, passagens bíblicas e conexões; submenu lateral/horizontal permite abrir diretamente qualquer tema, inclusive a lista dos papas; opção expandir/recolher; busca de pontífices por nome, nome anterior e número, filtro por século e ordem.
+- **Dados papais:** o novo `papal-name-index.js` fornece os nomes pontifícios, alinhados ordinalmente ao arquivo `vatican-pontificates-raw.js` já existente, cuja fonte é a tabela da Santa Sé. Simão → Pedro baseia-se em João 1,42. Somente nomes anteriores documentados aparecem como “Antes chamado ...”; as lacunas ficam sem campo público. Datas alternativas da Santa Sé são preservadas.
+- **Fonte-mestre Drive HS-2026-10-12.1:** https://docs.google.com/document/d/1d7Prfhp180AXiZ6GYvbeo8bA6IQKBfVdtssjw8YAR3M/edit
+- **Decisão de arquitetura HS-2026-10-12.2, arquivada antes da implementação:** https://docs.google.com/document/d/1qKTNHIttZkp2gHCovrp78BPsAACEz7ppC_KmHAFszMc/edit
+- **Governança:** a Matriz Teológico 1.5 não foi modificada. A catequese permanece identificada como estudo sem declaração de aprovação eclesial formal. A lista de papas não recebeu nomes, datas ou acontecimentos presumidos. As perguntas frequentes não são incluídas sem pesquisa de demanda real. O histórico da antiga `papas.html` está preservado no Git e nos snapshots do Drive.
 
-- Página pública autônoma: `papas.html`, vinculada ao menu e à apresentação inicial, sem alterar as seções de Bíblia, Plano de Leitura, Calendário, Liturgia e Missal.
-- Catequese confessional católica: continuidade entre a Aliança com Israel (patriarcas, doze tribos, Moisés, monarquia, divisão dos reinos, profetas e exílio), as promessas messiânicas, Jesus Cristo, os Apóstolos e o ministério petrino. A sucessão é apresentada como doutrina da Igreja, não como hipótese.
-- Jesus judeu, Maria e José, as genealogias de Mt 1 e Lc 3, os títulos Messias, Cristo e Emanuel e o cumprimento das profecias.
-- Quatro Evangelhos: ênfase judaica em Mateus, Marcos, Lucas e João com suas perspectivas catequéticas; públicos apresentados como orientações, não exclusividades.
-- Resposta de Israel a Jesus tratada conforme o Catecismo §§ 595–598 e Nostra Aetate, 4: não há culpa ou rejeição coletiva de todo o povo judeu; a origem judaica do cristianismo é preservada.
-- Relação cronológica de **267 registros** conforme o catálogo oficial da Santa Sé (consultado em 12/10/2026), de São Pedro até Leão XIV, com pesquisa por nome/número, filtro por século e inversão da ordem.
-- Nota histórica sobre o pontificado de Bento IX registrado três vezes e sobre a não inclusão de antipapas na relação oficial.
-- Referências: https://www.vatican.va/content/vatican/pt/holy-father.html e Catecismo da Igreja Católica §§ 880–882.
-- Dados mantidos localmente no HTML, sem banco de dados e sem dependência de buscas externas no funcionamento da lista. Em futuras mudanças no pontificado, a lista precisa ser revisada editorialmente conforme a Santa Sé.
+### Fundamento doutrinal da sucessão
+
+A sucessão dos pontífices está incorporada à etapa da Igreja, depois das palavras de Cristo a Pedro (Jo 1,42; Mt 16,18–19; Lc 22,31–32; Jo 21,15–17), dos testemunhos de Clemente Romano e Irineu e da doutrina de `Pastor Aeternus` (Vaticano I). Cristo é a Cabeça da Igreja; os papas sucedem Pedro em seu ministério, não por descendência familiar de Jesus ou do Apóstolo. A lista conserva as 267 posições da relação histórica da Santa Sé, incluindo os pontificados descontínuos de Bento IX e a distinção dos antipapas.
 
 ## Liturgia dominical
 
