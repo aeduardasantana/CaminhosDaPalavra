@@ -13,11 +13,11 @@
   const items = [
     {group:'Sagrada Escritura',note:'Estudo e leitura', links:[
       {label:'Bíblia Sagrada',section:'biblia',hash:'biblia'},
-      {label:'História da Salvação — Da Criação à Eternidade',url:'./historia-da-salvacao.html',page:'historia'},
+      {label:'História da Salvação e Sucessão Apostólica',url:'./historia-da-salvacao.html',page:'historia'},
       {label:'Plano de leitura bíblica',section:'plano',hash:'plano-de-leitura'}
     ]},
     {group:'Sagrada Tradição',note:'A fé transmitida pela Igreja',links:[
-      {label:'História e sucessão dos Papas',url:'./papas.html',page:'papas'}
+      {label:'Os 267 Papas · Sucessão Apostólica',url:'./historia-da-salvacao.html#sucessao-pontificia',page:'papas'}
     ]},
     {group:'Magistério',note:'Doutrina e pronunciamentos oficiais',links:[
       {label:'Heresias e condenações doutrinais',url:'./heresias.html',page:'heresias'}
