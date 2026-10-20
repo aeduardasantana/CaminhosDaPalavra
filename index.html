@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="./styles.css?v=20261012-papas-1" />
   <link rel="stylesheet" href="./missal.css?v=20261012-2" />
   <link rel="stylesheet" href="./site-menu.css?v=20261012-1" />
+  <link rel="stylesheet" href="./liturgia-diaria.css?v=20261020-1" />
 </head>
 <body>
   <header class="site-header">
@@ -183,9 +184,9 @@
     <section id="calendarioSection" class="content-section section-top" hidden>
       <div class="section-heading">
         <div>
-          <p class="eyebrow">2026–2030</p>
-          <h2>Calendário litúrgico</h2>
-          <p class="supporting-text compact">Base brasileira para navegação por data. Selecione um dia para consultar sua celebração, santos recordados e, quando cadastradas, as leituras litúrgicas.</p>
+          <p class="eyebrow">Do Advento a Cristo Rei</p>
+          <h2>Calendário litúrgico e catequese diária</h2>
+          <p class="supporting-text compact">Siga o ano litúrgico, iniciado no Advento. Selecione cada dia para conhecer a celebração, a cor litúrgica, as leituras conferidas, a catequese e eventuais sermões antigos documentados. Conteúdos ainda não validados são identificados como pendentes.</p>
         </div>
       </div>
 
@@ -201,13 +202,27 @@
       </div>
 
       <p class="supporting-text compact">Os santos associados a cada data são uma seleção editorial em expansão, distinta das solenidades, festas e memórias litúrgicas oficiais. Links externos permitem consultar outros registros sem republicar conteúdo de terceiros.</p>
+      <div class="liturgical-year-bar" id="liturgicalYearBar" aria-live="polite">
+        <strong id="liturgicalYearTitle">Ano litúrgico</strong>
+        <p id="liturgicalYearPeriod">O ano litúrgico começa no Advento e termina no sábado antes do Advento seguinte. Cristo Rei é o último domingo.</p>
+        <label for="liturgicalYearSelect">Ir ao início do ano litúrgico
+          <select id="liturgicalYearSelect">
+            <option value="2025">2025–2026 · A</option>
+            <option value="2026">2026–2027 · B</option>
+            <option value="2027">2027–2028 · C</option>
+            <option value="2028">2028–2029 · A</option>
+            <option value="2029">2029–2030 · B</option>
+            <option value="2030">2030–2031 · C</option>
+          </select>
+        </label>
+      </div>
       <div class="calendar-shell">
         <div class="calendar-toolbar">
           <button id="calendarPrev" class="icon-button" type="button" aria-label="Mês anterior">‹</button>
           <label class="field calendar-select">
             <span>Ano</span>
             <select id="calendarYear">
-              <option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option>
+              <option>2025</option><option>2026</option><option>2027</option><option>2028</option><option>2029</option><option>2030</option><option>2031</option>
             </select>
           </label>
           <label class="field calendar-select">
@@ -414,7 +429,8 @@
 
   <script src="./data.js"></script>
   <script src="./bible-data.js?v=20261010-2"></script>
-  <script src="./calendar.js?v=20261012-santos-1"></script>
+  <script src="./calendar.js?v=20261020-brasil-1"></script>
+  <script src="./liturgia-diaria.js?v=20261020-1"></script>
   <script src="./saints-data.js?v=20261012-1"></script>
   <script src="./glosa-psalms.js"></script>
   <script src="./glosa-gospels.js"></script>
@@ -441,7 +457,7 @@
   <script src="./glosas-revisadas-ano-b.js?v=20261011-2"></script>
   <script src="./glosas-revisadas-ano-c.js?v=20261011-1"></script>
   <script src="./missal-data.js?v=20261012-2"></script>
-  <script src="./app.js?v=20261012-ritos-2"></script>
+  <script src="./app.js?v=20261020-diaria-1"></script>
   <script src="./missal.js?v=20261012-2"></script>
   <script src="./reading-backup.js?v=20261010-2"></script>
   <script src="./liturgy-pdf.js?v=20261010-4"></script>
