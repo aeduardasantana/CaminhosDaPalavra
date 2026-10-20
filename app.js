@@ -1042,13 +1042,8 @@ function selectCalendarDate(dayInfo) {
   const contents = contentForDate(dayInfo.iso);
   const title = dayInfo.celebration || dayInfo.season;
 
-  els.calendarDetail.innerHTML =
-    '<p class="eyebrow">Ano ' + dayInfo.cycle + ' · ' + dayInfo.season + '</p>' +
-    '<h3>' + formatDate(dayInfo.iso) + '</h3>' +
-    '<p><strong>' + title + '</strong></p>' +
-    '<p>' + (contents.length
-      ? contents.length + ' item(ns) de liturgia já cadastrado(s) para esta data.'
-      : 'As leituras detalhadas desta data ainda não estão cadastradas.') + '</p>';
+  els.calendarDetail.replaceChildren();
+  window.LCE_DAILY.renderDetail(els.calendarDetail, dayInfo, contents);
 
   // Memórias hagiográficas: não determinar a celebração principal por esta lista.
   const saintsSection = document.createElement('section');
@@ -1113,6 +1108,14 @@ function renderCalendar() {
   const year = Number(els.calendarYear.value);
   const month = Number(els.calendarMonth.value);
   const cells = litCalendar.monthMatrix(year, month);
+  const info = selectedCalendarDate ? litCalendar.infoForIso(selectedCalendarDate) : litCalendar.infoForDate(new Date(Date.UTC(year,month,1)));
+  const litYear = window.LCE_DAILY.liturgicalYearFor(info);
+  const yTitle = document.querySelector('#liturgicalYearTitle');
+  const yPeriod = document.querySelector('#liturgicalYearPeriod');
+  const ySelect = document.querySelector('#liturgicalYearSelect');
+  if (yTitle) yTitle.textContent = 'Ano litúrgico ' + litYear.begins + '–' + litYear.ends + ' · Ciclo ' + litYear.cycle;
+  if (yPeriod) yPeriod.textContent = 'Começa em ' + litYear.start.toLocaleDateString('pt-BR',{timeZone:'UTC'}) + ' (Advento) e encerra em ' + litYear.end.toLocaleDateString('pt-BR',{timeZone:'UTC'}) + '. Cristo Rei é o último domingo.';
+  if (ySelect && [...ySelect.options].some(opt=>opt.value===String(litYear.begins))) ySelect.value=String(litYear.begins);
 
   els.calendarGrid.replaceChildren();
 
@@ -1129,6 +1132,8 @@ function renderCalendar() {
     }
 
     if (dayInfo.iso === localIsoToday()) { button.classList.add('is-today'); button.setAttribute('aria-current', 'date'); }
+    const dayColor = window.LCE_DAILY.colorFor(dayInfo);
+    button.classList.add('daily-theme-' + dayColor);
     if (dayInfo.weekday === 0) button.classList.add('is-sunday');
     if (contentForDate(dayInfo.iso).length) button.classList.add('has-content');
     if (selectedCalendarDate === dayInfo.iso) button.classList.add('is-selected');
@@ -1137,9 +1142,10 @@ function renderCalendar() {
     button.innerHTML =
       '<span class="day-number">' + dayInfo.day + '</span>' +
       (shortLabel ? '<span class="day-label">' + shortLabel + '</span>' : '') +
-      '<span class="day-season">Ano ' + dayInfo.cycle + '</span>';
+      '<span class="day-season">Ano ' + dayInfo.cycle + '</span>' +
+      '<span class="day-color-name">Cor: ' + ({verde:'verde',roxo:'roxa',branco:'branca',vermelho:'vermelha',rosa:'rosa (opcional)',nenhum:'sem Missa diurna'}[dayColor]) + '</span>';
 
-    button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle + (contentForDate(dayInfo.iso).length ? ', possui leituras' : ', sem leituras cadastradas'));
+    button.setAttribute('aria-label', formatDate(dayInfo.iso) + ', ' + (dayInfo.celebration || dayInfo.season) + ', Ano ' + dayInfo.cycle + ', cor ' + dayColor + (contentForDate(dayInfo.iso).length || window.LCE_DAILY.readings[dayInfo.iso] ? ', possui referências' : ', referências ainda não conferidas'));
     button.addEventListener('click', () => {
       selectCalendarDate(dayInfo);
       requestAnimationFrame(() => els.calendarDetail.scrollIntoView({
@@ -1665,6 +1671,13 @@ els.calendarMonth.addEventListener('change', () => {
 });
 els.calendarPrev.addEventListener('click', () => moveCalendarMonth(-1));
 els.calendarNext.addEventListener('click', () => moveCalendarMonth(1));
+const litYearSelect=document.querySelector('#liturgicalYearSelect');
+if (litYearSelect) litYearSelect.addEventListener('change',()=>{
+  const start=litCalendar.adventStart(Number(litYearSelect.value));
+  els.calendarYear.value=String(start.getUTCFullYear());
+  els.calendarMonth.value=String(start.getUTCMonth());
+  selectCalendarDate(litCalendar.infoForDate(start));
+});
 
 [els.bibleQuery, els.bibleTestament].forEach(el => el.addEventListener('input', renderBibleBooks));
 
@@ -1790,14 +1803,16 @@ els.resetPlan.addEventListener('click', () => {
 });
 
 initCalendarControls();
+if (new Date().getFullYear() >= litCalendar.minYear && new Date().getFullYear() <= litCalendar.maxYear) {
+  selectCalendarDate(litCalendar.infoForIso(localIsoToday()));
+}
 const todayButton = document.querySelector('#calendarToday');
 if (todayButton) todayButton.addEventListener('click', () => {
   const now = new Date();
   const year = Math.max(litCalendar.minYear, Math.min(litCalendar.maxYear, now.getFullYear()));
   els.calendarYear.value = String(year);
   els.calendarMonth.value = String(year === now.getFullYear() ? now.getMonth() : 0);
-  selectedCalendarDate = null;
-  renderCalendar();
+  selectCalendarDate(litCalendar.infoForIso(localIsoToday()));
 });
 // Abre o destino correto inclusive ao carregar ou atualizar um link compartilhado.
 setSection(sectionFromUrl(), {fromHistory:true});
