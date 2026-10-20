@@ -123,6 +123,16 @@
 
     if (sameDay(date, utcDate(year, 0, 1))) return "Santa Maria, Mãe de Deus";
     if (sameDay(date, utcDate(year, 9, 12))) return "Nossa Senhora da Conceição Aparecida"; // Solenidade no Brasil.
+    // Solenidades observadas no domingo no calendário brasileiro.
+    if (sameDay(date, sundayOnOrAfter(utcDate(year, 5, 28)))) return "São Pedro e São Paulo, Apóstolos";
+    if (sameDay(date, sundayOnOrAfter(utcDate(year, 7, 15)))) return "Assunção da Bem-aventurada Virgem Maria";
+    if (sameDay(date, sundayOnOrAfter(utcDate(year, 10, 1)))) return "Todos os Santos";
+    // Anunciação impedida pela Semana Santa ou Oitava Pascal:
+    // celebra-se na segunda-feira depois do II Domingo da Páscoa.
+    const annunciation = utcDate(year, 2, 25);
+    const annunciationObserved = annunciation >= palm && annunciation <= addDays(easter, 7)
+      ? addDays(easter, 8) : annunciation;
+    if (sameDay(date, annunciationObserved)) return "Anunciação do Senhor";
     if (sameDay(date, epiphany)) return "Epifania do Senhor";
     if (sameDay(date, baptism)) return "Batismo do Senhor";
     if (sameDay(date, ash)) return "Quarta-feira de Cinzas";
@@ -194,8 +204,8 @@
   }
 
   window.LCE_CALENDAR = {
-    minYear: 2026,
-    maxYear: 2030,
+    minYear: 2025,
+    maxYear: 2031,
     monthNames,
     easterSunday,
     adventStart,
