@@ -1,0 +1,21 @@
+name: Validar calendário litúrgico
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+jobs:
+  verificar:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verificar sintaxe JavaScript
+        run: |
+          node --check calendar.js
+          node --check liturgia-diaria.js
+          node --check app.js
+      - name: Regressões litúrgicas e rastreabilidade
+        run: node tests/liturgia-diaria.test.cjs
