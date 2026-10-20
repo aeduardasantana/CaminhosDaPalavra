@@ -1,0 +1,43 @@
+/* Aparência catequética da Liturgia Diária — acessibilidade, cores com rótulos. */
+.calendar-day { position:relative; border-left: 4px solid var(--day-tone, transparent); }
+.calendar-day.daily-theme-verde {--day-tone:#287346;background:#f4faf5}
+.calendar-day.daily-theme-roxo {--day-tone:#76569e;background:#faf6ff}
+.calendar-day.daily-theme-branco {--day-tone:#b6a36d;background:#fbfaf4}
+.calendar-day.daily-theme-vermelho {--day-tone:#b23f3f;background:#fff7f6}
+.calendar-day.daily-theme-rosa {--day-tone:#d47399;background:#fff5f9}
+.calendar-day.daily-theme-nenhum {--day-tone:#666;background:#f6f6f6}
+.calendar-day.is-selected {background:var(--deep);color:#fff}
+.calendar-day .day-color-name {display:block;color:#4c594f;font-size:.66rem;font-weight:800;margin-top:5px}
+.calendar-day.is-selected .day-color-name {color:#fff}
+.daily-liturgy {--daily-color:#287346}
+.daily-theme-verde {--daily-color:#287346}.daily-theme-roxo {--daily-color:#76569e}
+.daily-theme-branco {--daily-color:#b6a36d}.daily-theme-vermelho {--daily-color:#b23f3f}
+.daily-theme-rosa {--daily-color:#d47399}.daily-theme-nenhum {--daily-color:#666}
+.daily-title-block {border-left:5px solid var(--daily-color);padding-left:14px;margin-bottom:16px}
+.daily-title-block h3 {font-size:clamp(1.2rem,2.4vw,1.65rem);margin:6px 0}
+.daily-kicker {font-weight:800;font-size:.8rem;text-transform:capitalize;color:#5a5347!important}
+.daily-metadata {font-size:.84rem}
+.daily-color-note {display:flex;gap:12px;align-items:start;border:1px solid #d9d5cb;background:#fff;padding:13px;border-radius:12px}
+.daily-color-dot {background:var(--daily-color);width:24px;height:24px;min-width:24px;border:1px solid #978b6f;border-radius:50%}
+.daily-color-note p {margin:4px 0 0}
+.daily-liturgical-year {font-size:.83rem;margin:12px 0!important}
+.daily-references,.daily-catechesis,.daily-historical {margin-top:17px;padding-top:15px;border-top:1px solid #e6ded0}
+.daily-references h4,.daily-catechesis h4,.daily-historical h4 {margin:0 0 12px;color:var(--deep)}
+.daily-readings-list {display:grid;grid-template-columns:minmax(95px,145px) minmax(0,1fr);gap:7px 12px;margin:12px 0}
+.daily-readings-list dt {font-weight:750;color:#5a554d}.daily-readings-list dd {margin:0;color:#26231e;font-weight:800}
+.daily-validation,.daily-note,.daily-pending {font-size:.86rem;line-height:1.55}
+.daily-pending {padding:12px;background:#fff9ed;border:1px solid #e9dcbf;border-radius:10px}
+.daily-catechesis {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.daily-catechesis>h4 {grid-column:1/-1}
+.daily-catechesis-card {padding:14px;background:#fff;border:1px solid #ddd7cd;border-radius:12px}
+.daily-catechesis-card h4 {font-size:.94rem;margin:0 0 6px}
+.daily-catechesis-card p {font-size:.87rem;line-height:1.55}
+.daily-source-link {font-size:.78rem;margin-top:10px}
+.daily-footnote {border-top:1px solid #e6ded0;margin-top:17px!important;padding-top:12px;font-size:.8rem}
+.daily-liturgy a {color:#674f17;font-weight:750;text-decoration:underline;text-underline-offset:2px}
+.liturgical-year-bar {margin:14px 0;padding:12px 15px;border:1px solid #d9d0be;border-radius:12px;background:#f8f5ed}
+.liturgical-year-bar strong {display:block}.liturgical-year-bar p {margin:4px 0;font-size:.83rem}
+.liturgical-year-bar label {display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-weight:750}
+.liturgical-year-bar select {max-width:250px}
+@media(max-width:680px) {.daily-catechesis{grid-template-columns:1fr}.daily-readings-list{grid-template-columns:1fr;gap:4px}.daily-readings-list dd{margin:0 0 8px}}
+@media(prefers-reduced-motion:reduce) {.calendar-day{transition:none}}
