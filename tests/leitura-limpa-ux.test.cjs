@@ -1,0 +1,28 @@
+/* A interface não repete banners, metadados ou botões inativos na leitura por data. */
+const fs=require('node:fs'),assert=require('node:assert/strict');
+const html=fs.readFileSync('index.html','utf8');
+const app=fs.readFileSync('app.js','utf8');
+const online=fs.readFileSync('liturgia-fonte-online.js','utf8');
+const pdf=fs.readFileSync('liturgy-pdf.js','utf8');
+const css=fs.readFileSync('liturgia-diaria.css','utf8');
+assert.ok(html.includes('<details class="reading-source-details">'));
+assert.ok(html.includes('Fonte e revisão'));
+assert.ok(html.includes('Glosas de estudo em revisão humana'));
+assert.ok(!html.includes('<strong>Estado editorial:</strong>'));
+assert.ok(app.includes("statusPill.textContent=entry.editorialStudy?'Em estudo':entry.status"));
+assert.ok(app.includes("share.textContent = 'Copiar link'"));
+assert.ok(app.includes("card.querySelector('.accordion-panel')?.appendChild(share)"));
+assert.ok(!app.includes('Novembro/2025: cadastro de referências e fontes brasileiras por data.'));
+assert.ok(app.includes('monthly-glosa-list'));
+assert.ok(app.includes("summary.textContent='Notas de interpretação'"));
+assert.ok(app.includes("originalBox.replaceChildren(pending)"));
+assert.ok(!app.includes("glosa integral depende da correspondência com os versículos"));
+assert.ok(online.includes('pane.replaceChildren(status)'));
+assert.ok(online.includes("label.textContent='Texto litúrgico'"));
+assert.ok(online.includes("card.querySelector('.reading-source-extra')"));
+assert.ok(online.includes('monthly-remote-verse'));
+assert.ok(!online.includes("source.textContent='Texto recuperado de serviço comunitário"));
+assert.ok(pdf.includes("if(article.dataset.editorialStudy==='true' && article.dataset.completeText!=='true')return;"));
+assert.ok(css.includes('.monthly-glosa-unit'));
+assert.ok(css.includes('@media(max-width:650px)'));
+console.log('OK: foco no texto e glosa, fontes recolhidas, sem avisos duplicados ou PDF inativo.');

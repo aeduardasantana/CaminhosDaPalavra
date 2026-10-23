@@ -100,3 +100,70 @@
 .monthly-remote-options p{flex-basis:100%;margin:0;font-size:.88rem}
 .monthly-remote-options button{font:inherit;padding:9px 12px;background:#fff;cursor:pointer;border:1px solid #ad9369;border-radius:4px}
 .monthly-remote-options button[aria-pressed=true]{background:#553f19;color:#fff}
+
+
+/* Experiência de leitura: hierarquia discreta, sem banners e avisos repetidos. */
+.liturgy-editorial-caption{font-size:.88rem;line-height:1.5;color:#726652;margin:9px 0 0}
+.monthly-selection-note{margin:0 0 12px;font-size:.86rem;color:#675a43}
+.accordion-item[data-editorial-study="true"] .status-pill{
+  background:transparent;border:0;color:#74654d;font-size:.72rem;font-weight:650;padding:0;
+}
+.accordion-item[data-editorial-study="true"] .source-version:empty{display:none}
+.accordion-item[data-editorial-study="true"] .pane-label{
+  font-size:.86rem;line-height:1.3;font-weight:750;letter-spacing:0;
+  text-transform:none;color:#3c3020;background:transparent;padding:0;border-radius:0;
+  margin:0 0 15px;
+}
+.accordion-item[data-editorial-study="true"] .glosa-pane .pane-label{color:#765115;background:none}
+.accordion-item[data-editorial-study="true"] .text-pane{padding:25px 27px 24px}
+.accordion-item[data-editorial-study="true"] .glosa-pane{background:#fcfaf6}
+.monthly-glosa-list{display:grid;gap:0}
+.monthly-glosa-unit{margin:0;padding:12px 0;border-bottom:1px solid #e6dfd3}
+.monthly-glosa-unit:first-child{padding-top:0}
+.monthly-glosa-unit:last-child{border-bottom:0}
+.monthly-glosa-reference{display:block;color:#876019;font-size:.83rem;font-weight:750;margin-bottom:6px}
+.monthly-glosa-draft{font-size:.98rem;line-height:1.7;font-weight:650;color:#302920;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.monthly-editorial-details{margin-top:20px;padding:12px 0 0;border-top:1px solid #e0d5c4}
+.monthly-editorial-details summary{color:#6e5d3c;font-size:.85rem;font-weight:650;cursor:pointer}
+.monthly-editorial-details ol{margin:12px 0 0;padding:0 0 0 19px}
+.monthly-editorial-details li{padding:8px 0;font-size:.88rem}
+.monthly-editorial-details li p{font-weight:400;color:#5d564c;margin:4px 0;font-size:.88rem}
+.reading-source-details{padding:12px 0 0;margin-top:18px;border-top:1px solid #e9e2d8;font-size:.82rem;line-height:1.6;color:#746b5d}
+.reading-source-details summary{cursor:pointer;font-size:.82rem;color:#766a55;font-weight:650}
+.reading-source-details a{display:inline-block;margin-top:9px;font-size:.82rem;font-weight:650;color:#775519}
+.reading-source-note,.reading-source-extra p{margin:8px 0 0;color:#756b5b;font-size:.8rem;line-height:1.55}
+.reading-source-details .original-source-link[hidden]{display:none}
+.accordion-panel>.share-liturgy-link{
+  display:block;width:auto;margin:4px 26px 17px auto;padding:5px 0;
+  border:0;background:transparent;box-shadow:none;text-decoration:underline;
+  text-decoration-color:#c5b9a7;color:#766551;font-size:.79rem;font-weight:650;
+}
+.accordion-panel>.share-liturgy-link:hover{background:transparent;color:#493618}
+.accordion-panel>.share-liturgy-link:focus-visible,
+.reading-source-details summary:focus-visible,.monthly-editorial-details summary:focus-visible{outline:2px solid #936c28;outline-offset:3px}
+.accordion-item[data-editorial-study="true"] .monthly-remote-text{line-height:1.72;white-space:normal}
+.accordion-item[data-editorial-study="true"] .monthly-remote-title{display:block;margin:0 0 16px;font-size:.95rem}
+.accordion-item[data-editorial-study="true"] .monthly-remote-scripture,
+.accordion-item[data-editorial-study="true"] .monthly-remote-stanza{font-size:1rem;line-height:1.72;margin:0 0 1rem}
+.monthly-remote-verse{padding:0}
+.monthly-verse-number{font-size:.7em;font-weight:750;color:#8b682b;vertical-align:super;margin-right:5px}
+.accordion-item[data-editorial-study="true"] .monthly-remote-refrain{
+  background:transparent;padding:5px 0;border:0;font-weight:750;margin:5px 0 10px
+}
+.accordion-item[data-editorial-study="true"] .monthly-remote-status{
+  padding:9px 0;background:transparent;border:0;color:#766a57;font-size:.88rem
+}
+@media(max-width:800px){
+  .accordion-item[data-editorial-study="true"] .text-pane{padding:21px 19px}
+}
+@media(max-width:650px){
+  .accordion-item[data-editorial-study="true"] .parallel-view{grid-template-columns:1fr}
+  .accordion-item[data-editorial-study="true"] .text-pane{padding:20px 16px}
+  .accordion-item[data-editorial-study="true"] .glosa-pane{
+    border-left:0;border-top:1px solid #ddd2c0
+  }
+  .accordion-panel>.share-liturgy-link{margin-right:16px}
+}
+@media print{
+  .reading-source-details,.monthly-editorial-details,.accordion-panel>.share-liturgy-link{display:none!important}
+}

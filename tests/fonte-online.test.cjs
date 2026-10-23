@@ -28,5 +28,5 @@ assert.equal(a.resolveReading(sample,'2025-11-05','segunda-leitura','Rm 13,8-10'
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8');
 assert.ok(app.includes('LCE_FONTE_ONLINE.loadForEntry(entry,card)'));
 assert.ok(html.indexOf('liturgia-fonte-online.js')<html.indexOf('./app.js?v='));
-assert.ok(html.includes('liturgia-fonte-online.js?v=20261023-2'));
+assert.ok(html.includes('liturgia-fonte-online.js?v=20261023-leitura-limpa1'));
 console.log('OK: leitura externa só é exibida quando data e referência coincidem; opções independentes e fallback.');
