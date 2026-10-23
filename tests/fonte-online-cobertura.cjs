@@ -20,7 +20,7 @@ const result={days:0,daySuccess:0,items:0,matched:0,missing:[],failed:[]};
      for(const [type,reference] of rec.items){
        const match=api.resolveReading(json,date,kinds[type],reference);
        if(match)result.matched++;
-       else result.missing.push(date+' '+type+': '+reference);
+       else result.missing.push(date+' '+type+': '+reference+' | API: '+(json.leituras?.[{'primeira-leitura':'primeiraLeitura','segunda-leitura':'segundaLeitura','salmo':'salmo','evangelho':'evangelho'}[kinds[type]]]||[]).map(x=>x.referencia).join('; '));
      }
    }catch(e){result.failed.push(date+':'+String(e).slice(0,40));}
   }));
