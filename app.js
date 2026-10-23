@@ -528,9 +528,9 @@ function renderPartialBrazilianPsalm(psalm, originalBox, glosaBox) {
   originals.className = 'psalm-sequence psalm-br-partial';
   glosas.className = 'psalm-sequence psalm-glosa-sequence psalm-br-partial';
   const units = [
-    ['REFRÃO · cf. v. 1', psalm.refrain, 'Glosa do refrão não revisada.'],
-    ['ESTROFE 1 · vv. 1–2', psalm.firstStanza, 'Glosa dos vv. 1–2 ainda pendente de construção, ensaio e validação em Libras.'],
-    ['REFRÃO · REPETIR', psalm.refrain, 'Repetição do refrão ainda pendente de glosa validada.'],
+    ['REFRÃO · cf. v. 1', psalm.refrain, '(PEREGRINOS OUVEM CONVITE) QUE ALEGRIA / PESSOAS ME DIZER: VAMOS CASA SENHOR! (GLOSA EXPERIMENTAL, NÃO VALIDADA.)'],
+    ['ESTROFE 1 · vv. 1–2', psalm.firstStanza, '(JERUSALÉM ESTABELECIDA NO ESPAÇO) EU OUVIR CONVITE / ALEGRIA / NÓS CAMINHAR / CHEGAR PORTAS JERUSALÉM. (GLOSA EXPERIMENTAL, NÃO VALIDADA.)'],
+    ['REFRÃO · REPETIR', psalm.refrain, 'REPETIR ESTRUTURA EXPERIMENTAL DO REFRÃO; COMUNIDADE RESPONDE. (VALIDAÇÃO HUMANA PENDENTE.)'],
     ['ESTROFES 2–4 · vv. 4–9',
       'Texto brasileiro das demais estrofes ainda não incorporado por ausência de autorização editorial de reprodução. Consulte a fonte brasileira indicada.',
       'Correspondência textual e glosas das estrofes 2–4 pendentes.']
@@ -1017,6 +1017,7 @@ function renderLiturgia() {
     }
 
     const originalSourceLink = node.querySelector('.original-source-link');
+    if(entry.editorialStudy) originalSourceLink.textContent='Consultar índice/fonte brasileira da referência ↗';
     if (entry.sourceUrl) {
       originalSourceLink.href = entry.sourceUrl;
       originalSourceLink.hidden = false;

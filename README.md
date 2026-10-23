@@ -265,3 +265,9 @@ O **Dicionário Bíblico, Histórico e Visual** tem página própria em `diciona
 A camada `liturgia-2025-11.js` reúne as **30 datas** com referências de trabalho, classificações litúrgicas, fontes e ressalvas editoriais; inclui alternativas explícitas para Finados e roteiros visuais preliminares de 1, 2, 9, 16, 23 e 30 de novembro, além de verbetes do Dicionário Bíblico, Histórico e Visual. Não substitui a base dominical aprovada nem publica texto integral da edição brasileira. O calendário reconhece as decisões específicas da CNBB de 2025. O PDF disponível pelo diálogo de impressão desta ficha contém apenas referências e conteúdo autoral de preparação, **não a reprodução do Lecionário**.
 
 Consulte `RELATORIOS/2025-11.md` e `CONTROLE-36-COMPETENCIAS.csv`. Todas as glosas aguardam cotejo integral por unidade e validação humana especializada; a competência **permanece em revisão**, não concluída.
+
+### Revisão mensal de novembro de 2025 — entradas por dia
+
+Os scripts `estudo-liturgico-2025-11-01a15.js` e `estudo-liturgico-2025-11-16a30.js` acrescentam **96 estudos por ocorrência**, organizados em **288 unidades de pareamento autoral** (síntese de conteúdo ↔ roteiro textual de glosa preliminar) para todos os dias de 01 a 30/11/2025. Na seção Liturgia + Libras, a seleção por data passa a priorizar essa camada sem modificar o repertório dominical legado. O PDF da ocorrência imprime os pares e identifica o caráter **não oficial** da síntese. **Nenhum texto brasileiro completo foi autorizado/homologado, nenhuma glosa está integralmente revisada e nenhuma validação humana em Libras foi efetuada.**
+
+O Dicionário associado ao mês contém **46 fichas preliminares**. Fontes e limites editoriais constam em `RELATORIOS/2025-11.md` e o estado administrativo continua `EM_REVISAO`.

@@ -27,3 +27,4 @@ jobs:
           node tests/competencia-01.test.cjs
           node tests/calendario-ux.test.cjs
           node tests/dicionario.test.cjs
+          node tests/novembro-integracao-editorial.test.cjs
