@@ -45,28 +45,28 @@
 .calendar-reading-tools .primary-action{background:var(--deep);border:1px solid var(--deep);color:#fff}
 .calendar-reading-tools .primary-action:hover{filter:brightness(1.13)}
 .calendar-reading-tools .calendar-reading-notice{flex-basis:100%;font-size:.83rem;line-height:1.55;color:#635b50;margin:0}
-.daily-pairing:focus{outline:2px solid var(--accent,#9b6b18);outline-offset:5px}
 @media(max-width:680px) {.daily-catechesis{grid-template-columns:1fr}.daily-readings-list{grid-template-columns:1fr;gap:4px}.daily-readings-list dd{margin:0 0 8px}.calendar-reading-tools{align-items:stretch;flex-direction:column}.calendar-reading-tools button{width:100%}}
 @media(prefers-reduced-motion:reduce) {.calendar-day{transition:none}}
 
 /* Competência 01/36: alternativas, pareamento de estudo e vocabulário visual. */
-.daily-alternatives,.daily-pairing,.daily-dictionary{margin-top:19px;padding-top:15px;border-top:1px solid #e6ded0}
-.daily-alternatives h4,.daily-pairing h4,.daily-dictionary h4{margin:0 0 12px;color:var(--deep)}
+.daily-alternatives,.daily-dictionary{margin-top:19px;padding-top:15px;border-top:1px solid #e6ded0}
+.daily-alternatives h4,.daily-dictionary h4{margin:0 0 12px;color:var(--deep)}
 .daily-notes{padding-left:18px;font-size:.86rem;line-height:1.55;color:#554e43}
 .daily-option,.daily-dictionary-entry{background:#fff;border:1px solid #ded6c9;border-radius:10px;padding:13px;margin:10px 0}
 .daily-option a,.daily-option strong{display:block}
 .daily-dictionary-entry p{margin:8px 0;line-height:1.6}
 .daily-dictionary-entry small{display:block;color:#5a544a}
-.daily-pair-table{border-collapse:collapse;width:100%;table-layout:fixed}
-.daily-pair-table th,.daily-pair-table td{padding:12px;border:1px solid #d8cebc;vertical-align:top;overflow-wrap:anywhere;line-height:1.55;text-align:left}
-.daily-pair-table th{background:#f1eadc}.daily-pair-table td:first-child{width:34%;font-weight:750}
-.daily-print{margin:12px 0}
-@media(max-width:680px){.daily-pair-table th,.daily-pair-table td{padding:8px;font-size:.84rem}.daily-pair-table td:first-child{width:36%}}
 @media print {
   body.printing-nov-2025 *{visibility:hidden!important}
   body.printing-nov-2025 #calendarDetail,body.printing-nov-2025 #calendarDetail *{visibility:visible!important}
   body.printing-nov-2025 #calendarDetail{position:absolute;inset:0 auto auto 0;width:100%;max-width:100%;margin:0;padding:0}
-  .daily-print,.daily-source-link,.daily-footnote,.calendar-action{display:none!important}
-  .daily-pair-table tr{break-inside:avoid}
+  .daily-source-link,.daily-footnote,.calendar-action{display:none!important}
   @page{size:A4;margin:12mm}
 }
+
+/* Refrão e primeira estrofe em português brasileiro, com glosa pendente por unidade. */
+.psalm-br-partial{display:grid;gap:8px;align-content:start}
+.psalm-br-partial .psalm-stanza{border:1px solid #ded6c8;border-radius:5px;background:#fff;padding:12px;margin:0;white-space:pre-line}
+.psalm-br-partial .psalm-part-label{display:block;font-size:.84rem;color:#5c4b2e;margin-bottom:6px}
+.psalm-br-partial .psalm-part-text{line-height:1.65}
+.psalm-br-partial .glosa-pending{background:#fbf8ef;border-left:3px solid #a47728}
