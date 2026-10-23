@@ -11,7 +11,7 @@
   const normalizeReference=value=>String(value||'')
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
     .replace(/\(r\.?\s*[^)]*\)/g,'').replace(/\(forma\s+(?:longa|breve)\)/g,'')
-    .replace(/[^a-z0-9]/g,'');
+    .replace(/\(cantico\)/g,'').replace(/[^a-z0-9]/g,'').replace(/^1cor(?=\d)/,'1co');
   const kinds={'primeira-leitura':'primeiraLeitura','segunda-leitura':'segundaLeitura','salmo':'salmo','evangelho':'evangelho'};
   function normalizeDate(value){
     const m=String(value||'').match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
@@ -21,13 +21,16 @@
     const a=normalizeReference(actual),e=normalizeReference(expected);
     if(!a||!e)return false;
     if(a===e)return true;
+    // A fonte pode abreviar um limite 16a/20a/14a como 16/20/14.
+    // Exibimos o texto com alerta, nunca como recorte homologado.
+    if(e.endsWith('a') && a===e.slice(0,-1))return true;
     // Um caso particular: refrão e indicação R. vêm após os versículos.
     // Não selecionar indiscriminadamente uma alternativa só pelo mesmo livro.
     const aWithoutRefrain=String(actual||'').replace(/\s*\(R\.[^)]+\)\s*$/i,'');
     const eWithoutRefrain=String(expected||'').replace(/\s*\(R\.[^)]+\)\s*$/i,'');
     if(normalizeReference(aWithoutRefrain)===normalizeReference(eWithoutRefrain))return true;
     if(kind==='salmo'){
-      const head=v=>normalizeReference(String(v).split(',')[0]);
+      const head=v=>normalizeReference(String(v).split(',')[0].split('(')[0]);
       const aVerses=String(actual).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
       const eVerses=String(expected).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
       // Algumas respostas oficiais da API identificam só o Salmo.
@@ -99,6 +102,11 @@
       label.textContent='Texto em português brasileiro — fonte digital externa';
     };
     renderMatch(matches[0]);
+    if(entry.item!=='salmo' &&
+       normalizeReference(matches[0].referencia)!==normalizeReference(entry.referencia)){
+      const note=createText('p','O serviço utiliza uma referência abreviada: confira o limite do versículo final na fonte brasileira antes de proclamar.','monthly-remote-status');
+      pane.prepend(note);
+    }
     if(entry.item==='salmo' && !String(matches[0].referencia).includes(',')) {
       const note=createText('p',
         'A fonte externa identifica apenas o número do salmo. Confira o recorte, refrão e estrofes com a liturgia brasileira desta celebração antes de proclamar.',
