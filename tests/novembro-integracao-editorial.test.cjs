@@ -37,6 +37,13 @@ assert.equal(missing.length,0,missing.join(', '));
 assert.equal(readings,96);assert.equal(units,288);
 assert.equal(studies['2025-11-29'].e.length,3);
 assert.equal(studies['2025-11-30'].s.length,3);
+assert.equal(Object.values(days).filter(rec=>rec.contentStatus.singleDateSourceRead).length,30);
+assert.equal(new Set(Object.values(days).map(rec=>rec.individualDateSource)).size,30);
+assert.equal(days['2025-11-02'].lectionaryChoices.first.length,7);
+assert.equal(days['2025-11-02'].lectionaryChoices.psalm.length,7);
+assert.equal(days['2025-11-02'].lectionaryChoices.second.length,15);
+assert.equal(days['2025-11-02'].lectionaryChoices.gospel.length,19);
+
 assert.equal(ctx.window.LCE_MONTH_2025_11.readings['2025-11-02'].options.length,2);
 const app=fs.readFileSync('app.js','utf8');
 const html=fs.readFileSync('index.html','utf8');
