@@ -18,8 +18,10 @@ jobs:
           node --check liturgia-diaria.js
           node --check app.js
           node --check liturgia-2025-11.js
+          node --check dicionario.js
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
           node tests/competencia-01.test.cjs
           node tests/calendario-ux.test.cjs
+          node tests/dicionario.test.cjs

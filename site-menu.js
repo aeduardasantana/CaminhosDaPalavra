@@ -8,7 +8,8 @@
   const isHome = /(?:^|\/)(?:index\.html)?$/.test(window.location.pathname);
   const current = /\/historia-da-salvacao\.html$/.test(window.location.pathname) ? 'historia' :
     /\/papas\.html$/.test(window.location.pathname) ? 'papas' :
-    /\/heresias\.html$/.test(window.location.pathname) ? 'heresias' : 'inicio';
+    /\/heresias\.html$/.test(window.location.pathname) ? 'heresias' :
+    /\/dicionario\.html$/.test(window.location.pathname) ? 'dicionario' : 'inicio';
 
   const items = [
     {group:'Sagrada Escritura',note:'Estudo e leitura', links:[
@@ -25,6 +26,7 @@
     ]},
     {group:'Vida litúrgica',note:'A celebração da Igreja',links:[
       {label:'Calendário litúrgico',section:'calendario',hash:'calendario-liturgico'},
+      {label:'Dicionário Bíblico, Histórico e Visual',url:'./dicionario.html',page:'dicionario'},
       {label:'Liturgia dominical e apoio em Libras',section:'liturgia',hash:'liturgia-e-libras'},
       {label:'Ritos da Santa Missa',section:'missal',hash:'ritos-da-missa'}
     ]}

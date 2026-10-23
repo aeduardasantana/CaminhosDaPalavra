@@ -148,13 +148,12 @@
     if(data?.dictionaryRefs?.length){
       const dic=(window.LCE_MONTH_2025_11||{}).dictionary||{};
       const sec=document.createElement('section');sec.className='daily-dictionary';wrap.appendChild(sec);
-      text(sec,'h4','Dicionário bíblico, histórico e visual — fichas preliminares');
+      text(sec,'h4','Entenda os conceitos desta celebração');
+      text(sec,'p','Consulte no Dicionário Bíblico, Histórico e Visual os contextos e as orientações preliminares para preparação da interpretação.','daily-validation');
+      const list=document.createElement('ul');list.className='daily-dictionary-links';sec.appendChild(list);
       data.dictionaryRefs.forEach(id=>{const entry=dic[id];if(!entry)return;
-        const article=document.createElement('article');article.className='daily-dictionary-entry';sec.appendChild(article);
-        text(article,'strong',entry.title+' · '+entry.dimension);
-        text(article,'p',entry.contexto);
-        text(article,'p','Orientação espacial para estudo: '+entry.espaco);
-        text(article,'small','Referências: '+entry.source+' · Revisão humana pendente.');
+        const item=document.createElement('li');list.appendChild(item);
+        link(item,entry.title+' ↗','./dicionario.html#'+encodeURIComponent(entry.id));
       });
     }
     const cate=document.createElement('section');cate.className='daily-catechesis';wrap.appendChild(cate);
