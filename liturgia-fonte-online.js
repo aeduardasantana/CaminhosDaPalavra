@@ -77,7 +77,24 @@
         if(record.refrao)parent.append(createText('p','R. '+record.refrao,'monthly-remote-refrain'));
       });
     }else{
-      parent.append(createText('p',record.texto,'monthly-remote-scripture'));
+      const body=String(record.texto||'');
+      // Separar visualmente versículos numerados sem reescrever a fonte recebida.
+      const marker='\u001f';
+      const prepared=body.replace(/(^|[\s.,;:!?“”])(\d{1,2})(?=[A-ZÀ-Ú])/g,
+        (match,before,n)=>before+marker+n+marker);
+      const chunks=prepared.split(marker);
+      if(chunks.length<3){
+        parent.append(createText('p',body,'monthly-remote-scripture'));
+      }else{
+        if(chunks[0].trim())parent.append(createText('p',chunks[0].trim(),'monthly-remote-intro'));
+        for(let i=1;i+1<chunks.length;i+=2){
+          const paragraph=document.createElement('p');
+          paragraph.className='monthly-remote-scripture monthly-remote-verse';
+          const number=createText('sup',chunks[i],'monthly-verse-number');
+          paragraph.append(number,document.createTextNode(chunks[i+1].trim()));
+          parent.append(paragraph);
+        }
+      }
     }
   }
   async function loadForEntry(entry,card) {
@@ -85,13 +102,13 @@
     const pane=card.querySelector('.original-text');
     const label=card.querySelector('.original-pane .pane-label');
     if(!pane||!label)return false;
-    const status=createText('p','Consultando o texto brasileiro completo da data…','monthly-remote-status');
-    pane.prepend(status);
+    const status=createText('p','Carregando leitura…','monthly-remote-status');
+    pane.replaceChildren(status);
     const data=await fetchDate(entry.data);
     if(!card.isConnected)return false;
     const matches=resolveReading(data,entry.data,entry.item,entry.referencia);
     if(!matches){
-      status.textContent='Não foi possível confirmar nesta consulta um texto brasileiro correspondente à referência. Utilize a fonte indicada abaixo.';
+      status.textContent='Leitura indisponível nesta consulta. Consulte a fonte em “Fonte e revisão”.';
       return false;
     }
     // Escolhas litúrgicas independentes nunca são concatenadas.
@@ -99,23 +116,20 @@
       const body=document.createElement('div');body.className='monthly-remote-text';
       appendReading(body,record,entry.item);
       pane.replaceChildren(body);
-      label.textContent='Texto em português brasileiro — fonte digital externa';
+      label.textContent='Texto litúrgico';
     };
     renderMatch(matches[0]);
-    if(entry.item!=='salmo' &&
+    const notes=card.querySelector('.reading-source-extra');
+    if(notes && entry.item!=='salmo' &&
        normalizeReference(matches[0].referencia)!==normalizeReference(entry.referencia)){
-      const note=createText('p','O serviço utiliza uma referência abreviada: confira o limite do versículo final na fonte brasileira antes de proclamar.','monthly-remote-status');
-      pane.prepend(note);
+      notes.append(createText('p','A fonte abrevia o recorte final desta leitura; confira os versículos antes da proclamação.'));
     }
-    if(entry.item==='salmo' && !String(matches[0].referencia).includes(',')) {
-      const note=createText('p',
-        'A fonte externa identifica apenas o número do salmo. Confira o recorte, refrão e estrofes com a liturgia brasileira desta celebração antes de proclamar.',
-        'monthly-remote-status');
-      pane.prepend(note);
+    if(notes && entry.item==='salmo' && !String(matches[0].referencia).includes(',')){
+      notes.append(createText('p','A fonte identifica o número do salmo, mas não discrimina o recorte da celebração. Confira os versículos e o refrão.'));
     }
     if(matches.length>1){
       const group=document.createElement('div');group.className='monthly-remote-options';
-      const note=createText('p','Foram identificadas alternativas. Escolha apenas a leitura da celebração que está sendo preparada.');
+      const note=createText('p','Selecione a leitura correspondente à celebração:');
       group.append(note);
       matches.forEach((record,i)=>{
         const button=createText('button','Opção '+(i+1)+' · '+record.referencia);
@@ -129,8 +143,9 @@
       });
       pane.prepend(group);
     }
+    // Procedência e status permanecem no campo recolhível "Fonte e revisão".
     const source=card.querySelector('.source-version');
-    if(source)source.textContent='Texto recuperado de serviço comunitário de liturgia brasileira; cotejo editorial com o Lecionário e validação da glosa pendentes.';
+    if(source)source.textContent='';
     card.dataset.dynamicBrazilianText='true';
     return true;
   }
