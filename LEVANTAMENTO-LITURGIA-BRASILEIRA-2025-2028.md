@@ -64,3 +64,8 @@ A base atual `liturgy-originals-a.js`, `liturgy-originals-b.js` e `liturgy-origi
 - Refrões e delimitações de salmos são dependentes da celebração e da edição.
 - Nem toda transposição de solenidade representa exceção local; muitas são parte do calendário brasileiro.
 - Reprodução editorial de textos litúrgicos depende de conferência de direitos. Link externo é alternativa temporária, não licença presumida.
+
+
+## Registro de andamento — competência 01/36 (23/10/2026)
+
+Novembro de 2025: **30/30 datas com cadastro provisório de referências**, sem homologação integral da redação brasileira. Foram encontrados dois casos de particular interesse: exceção nacional da CNBB para Todos os Santos/Fiéis Defuntos de 01–02/11 e prevalência da festa da Basílica de Latrão em 09/11. As referências de Finados possuem alternativas legítimas e não devem ser reduzidas a uma combinação única. O arquivo `liturgia-2025-11.js` preserva essas distinções. Permanecem **0/1.096 datas com textos brasileiros integralmente licenciados e homologados** e **1.066 datas sem cadastro mensal nesta migração**, sem confundir cadastro de referências com revisão integral.
