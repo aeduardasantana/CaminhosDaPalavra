@@ -22,6 +22,7 @@ jobs:
           node --check estudo-liturgico-2025-11-01a15.js
           node --check estudo-liturgico-2025-11-16a30.js
           node --check estudo-versiculos-2025-11.js
+          node --check liturgia-fonte-online.js
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
@@ -29,3 +30,12 @@ jobs:
           node tests/calendario-ux.test.cjs
           node tests/dicionario.test.cjs
           node tests/novembro-integracao-editorial.test.cjs
+          node tests/fonte-online.test.cjs
+      - name: Auditar cobertura em rede das 30 datas (não bloqueante)
+        continue-on-error: true
+        run: node tests/fonte-online-cobertura.cjs
+      - name: Diagnosticar serviço brasileiro externo (não bloqueante)
+        continue-on-error: true
+        run: |
+          node -e "async function run(){const u='https://liturgia.up.railway.app/v2/?dia=5&mes=11&ano=2025';try{const r=await fetch(u,{signal:AbortSignal.timeout(10000)});const d=r.ok?await r.json():{};const readings=d.leituras||{};console.log(JSON.stringify({http:r.status,date:d.data||null,origin:r.headers.get('access-control-allow-origin'),keys:Object.keys(readings),first:readings.primeiraLeitura?.[0]?.referencia||null,psalm:readings.salmo?.[0]?.referencia||null}));if(!r.ok)process.exitCode=2}catch(e){console.error('FONTE EXTERNA INDISPONIVEL',String(e));process.exitCode=2}}run()"
+
