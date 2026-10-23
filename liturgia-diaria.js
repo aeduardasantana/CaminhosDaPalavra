@@ -144,18 +144,7 @@
       });
       text(alternatives,'p','As alternativas apresentadas são exemplos rastreáveis, não um rol exaustivo das opções previstas pela CNBB.','daily-pending');
     }
-    if(data?.glosaBlocks?.length){
-      const glosa=document.createElement('section');glosa.className='daily-pairing';wrap.appendChild(glosa);
-      text(glosa,'h4','Roteiros visuais em estudo — referência × preparação de glosa');
-      text(glosa,'p','Coluna esquerda: referência e unidade narrativa (não transcrição do Lecionário). Coluna direita: proposta escrita para ensaio em Libras, não tradução, glosa integral nem validação por pessoa surda.','daily-pending');
-      const table=document.createElement('table');table.className='daily-pair-table';
-      const thead=document.createElement('thead');const tr=document.createElement('tr');text(tr,'th','Referência / unidade');text(tr,'th','Construção espacial e sequência');thead.appendChild(tr);table.appendChild(thead);
-      const tbody=document.createElement('tbody');table.appendChild(tbody);
-      data.glosaBlocks.forEach(b=>{const r=document.createElement('tr');const a=text(r,'td',b.passage);a.dataset.unit=b.id;const g=text(r,'td',b.proposal);g.dataset.status=b.status;tbody.appendChild(r);});
-      glosa.appendChild(table);
-      const print=document.createElement('button');print.type='button';print.className='secondary-button daily-print';print.textContent='Imprimir esta ficha / salvar em PDF';
-      print.addEventListener('click',()=>{document.body.classList.add('printing-nov-2025');const clear=()=>document.body.classList.remove('printing-nov-2025');window.addEventListener('afterprint',clear,{once:true});window.print();});glosa.appendChild(print);
-    }
+    // Roteiros de construção de glosas permanecem apenas no registro editorial mensal.
     if(data?.dictionaryRefs?.length){
       const dic=(window.LCE_MONTH_2025_11||{}).dictionary||{};
       const sec=document.createElement('section');sec.className='daily-dictionary';wrap.appendChild(sec);
