@@ -264,9 +264,10 @@ function monthlyStudyEntries(isoDate) {
       section:'REVISAO MENSAL — NOVEMBRO 2025',celebracao:month.label,item:kind,itemLabel:label,
       referencia:psalm?.reference||reference,
       editorialStudy:true,draftUnits:segments,partialBrazilianPsalm:psalm||null,
-      sourceVersion:'Síntese autoral vinculada a '+reference+' (não é transcrição da edição brasileira). 3 unidades de glosa em estudo; textos e validação humana ainda pendentes.',
-      sourceUrl:psalm?.source||month.source,
-      status:'Estudo visual preliminar · sem homologação integral',
+      salmoRefrainConfirmed:month.salmoRefrainConfirmed&&kind==='salmo'?month.salmoRefrainConfirmed:null,
+      sourceVersion:'Registro por data: texto integral da edição brasileira não incorporado. Roteiros anteriores arquivados como preparação preliminar, não glosa completa.',
+      sourceUrl:psalm?.source||month.individualDateSource||month.source,
+      status:'Texto integral e glosa ainda não concluídos',
       note:isoDate==='2025-11-02'?'Finados: seleção exemplificativa; outras opções legítimas previstas pela CNBB.':'',
       original:'Síntese editorial em preparação. Consulte o texto brasileiro completo na fonte.',
       glosa:segments.map(unit=>unit.glosaPreliminar).join('\n'),
@@ -502,24 +503,45 @@ function appendPsalmRefrain(container, refrain, alternative, compact = false) {
 
 // O registro brasileiro parcial nunca reutiliza automaticamente a glosa da edição portuguesa.
 // Correspondência ordinal explícita: cada resumo tem exatamente uma glosa de preparação.
+// Sem texto integral, não exibir paráfrases como se fossem versículos.
 function renderMonthlyStudy(entry, originalBox, glosaBox) {
-  const left=document.createElement('div');
-  const right=document.createElement('div');
-  left.className='psalm-sequence monthly-study-sequence';
-  right.className='psalm-sequence psalm-glosa-sequence monthly-study-sequence';
-  entry.draftUnits.forEach((unit,index)=>{
-    const number='UNIDADE '+(index+1)+' · '+entry.referencia;
-    for(const [container,body,isGlosa] of [[left,unit.sentido,false],[right,unit.glosaPreliminar,true]]){
-      const block=document.createElement('section');
-      block.className='psalm-stanza monthly-study-unit'+(isGlosa?' study-glosa':'');
-      block.dataset.unit=unit.id;
-      const heading=document.createElement('strong');heading.className='psalm-part-label';heading.textContent=number;
-      const content=document.createElement('div');content.className='psalm-part-text';content.textContent=body;
-      block.append(heading,content);container.append(block);
+  const notice=document.createElement('p');
+  notice.className='monthly-original-pending';
+  notice.textContent='O texto litúrgico brasileiro integral desta leitura ainda não foi incorporado ou cotejado versículo a versículo neste acervo. Consulte a edição brasileira pela fonte indicada abaixo. Não substituir os versículos por paráfrases.';
+  originalBox.replaceChildren(notice);
+  if (entry.salmoRefrainConfirmed) {
+    const refrain=document.createElement('p');
+    refrain.className='monthly-confirmed-refrain';
+    refrain.textContent='Refrão conferido: '+entry.salmoRefrainConfirmed;
+    originalBox.appendChild(refrain);
+    const missing=document.createElement('p');
+    missing.textContent='As três estrofes, os versículos e as repetições responsoriais não estão transcritos nesta página.';
+    originalBox.appendChild(missing);
+  }
+  const message=document.createElement('p');
+  message.className='monthly-original-pending';
+  message.textContent='A glosa integral depende da correspondência com os versículos brasileiros. Nenhuma tradução de Libras foi validada para esta leitura.';
+  glosaBox.replaceChildren(message);
+  if(entry.draftUnits.length){
+    const details=document.createElement('details');
+    details.className='monthly-editorial-details';
+    const summary=document.createElement('summary');
+    summary.textContent='Consultar anotações preliminares de construção visual (não são glosa integral)';
+    details.appendChild(summary);
+    const list=document.createElement('ol');
+    for(const unit of entry.draftUnits){
+      const li=document.createElement('li');
+      const context=document.createElement('p');
+      context.textContent=unit.sentido;
+      const draft=document.createElement('p');
+      draft.className='monthly-draft-note';
+      draft.textContent=unit.glosaPreliminar;
+      li.append(context,draft);
+      list.appendChild(li);
     }
-  });
-  originalBox.replaceChildren(left);
-  glosaBox.replaceChildren(right);
+    details.appendChild(list);
+    glosaBox.appendChild(details);
+  }
 }
 
 function renderPartialBrazilianPsalm(psalm, originalBox, glosaBox) {
@@ -915,7 +937,7 @@ function renderLiturgia() {
   if(date?.startsWith('2025-11-')){
     const caution=document.createElement('div');caution.className='monthly-reading-alert';
     caution.setAttribute('role','note');
-    caution.textContent='Novembro/2025: referências indexadas; sínteses e glosas autorais em elaboração por unidade. Os textos completos da edição brasileira e a validação humana em Libras ainda estão pendentes. Para proclamação, consulte o Lecionário brasileiro autorizado.';
+    caution.textContent='Novembro/2025: cadastro de referências e fontes brasileiras por data. Não confunda anotações editoriais com texto do Lecionário ou glosa completa. As leituras integrais e a validação humana em Libras continuam pendentes.';
     els.liturgyResults.appendChild(caution);
     if(date==='2025-11-02'){
       const options=document.createElement('p');options.className='monthly-reading-alert';
@@ -949,8 +971,8 @@ function renderLiturgia() {
     if(entry.editorialStudy){
       node.querySelector('.original-pane .pane-label').textContent = entry.partialBrazilianPsalm
         ? 'Trecho brasileiro conferido — texto parcial'
-        : 'Síntese editorial — não é o texto do Lecionário';
-      node.querySelector('.glosa-pane .pane-label').textContent = 'Glosa preliminar em estudo — não validada';
+        : 'Leitura brasileira — texto integral ainda não incorporado';
+      node.querySelector('.glosa-pane .pane-label').textContent = 'Glosa integral não concluída — anotações de estudo';
     }
     let parsedPsalm = null;
 
@@ -1017,7 +1039,7 @@ function renderLiturgia() {
     }
 
     const originalSourceLink = node.querySelector('.original-source-link');
-    if(entry.editorialStudy) originalSourceLink.textContent='Consultar índice/fonte brasileira da referência ↗';
+    if(entry.editorialStudy) originalSourceLink.textContent='Abrir a liturgia brasileira desta data na fonte ↗';
     if (entry.sourceUrl) {
       originalSourceLink.href = entry.sourceUrl;
       originalSourceLink.hidden = false;
@@ -1027,7 +1049,7 @@ function renderLiturgia() {
 
     els.liturgyResults.appendChild(node);
     const card = els.liturgyResults.lastElementChild;
-    if(entry.editorialStudy) card.dataset.editorialStudy='true';
+    if(entry.editorialStudy) {card.dataset.editorialStudy='true';card.dataset.completeText='false';}
     if (entry.data && entry.item) {
       const share = document.createElement('button');
       share.type = 'button';
