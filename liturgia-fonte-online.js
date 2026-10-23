@@ -11,7 +11,7 @@
   const normalizeReference=value=>String(value||'')
     .normalize('NFD').replace(/[\u0300-\u036f]/g,'').toLowerCase()
     .replace(/\(r\.?\s*[^)]*\)/g,'').replace(/\(forma\s+(?:longa|breve)\)/g,'')
-    .replace(/[^a-z0-9]/g,'');
+    .replace(/\(cantico\)/g,'').replace(/[^a-z0-9]/g,'').replace(/^1cor(?=\d)/,'1co');
   const kinds={'primeira-leitura':'primeiraLeitura','segunda-leitura':'segundaLeitura','salmo':'salmo','evangelho':'evangelho'};
   function normalizeDate(value){
     const m=String(value||'').match(/^(\d{1,2})\/(\d{1,2})\/(\d{4})$/);
