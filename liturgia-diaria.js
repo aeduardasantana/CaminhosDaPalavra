@@ -129,12 +129,12 @@
         text(readingsBox,'p','Referências provenientes do acervo dominical existente; conferência da edição brasileira ainda pendente.','daily-validation');
       }
       if(status.source)link(readingsBox,'Consultar fonte da seleção ↗',status.source);
-      if(status.notes.length){const notes=document.createElement('ul');notes.className='daily-notes';status.notes.forEach(n=>text(notes,'li',n));readingsBox.appendChild(notes);}
+      if(status.notes?.length){const notes=document.createElement('ul');notes.className='daily-notes';status.notes.forEach(n=>text(notes,'li',n));readingsBox.appendChild(notes);}
     }else{
       text(readingsBox,'p','As referências do Lecionário brasileiro para esta data ainda não foram conferidas. Não serão substituídas por leituras presumidas.','daily-pending');
       link(readingsBox,'Consultar o calendário brasileiro ↗',SOURCES.brasil(info.year));
     }
-    if(status.options.length){
+    if(status.options?.length){
       const alternatives=document.createElement('section');alternatives.className='daily-alternatives';wrap.appendChild(alternatives);
       text(alternatives,'h4','Leituras alternativas e normas de escolha');
       status.options.forEach(opt=>{
