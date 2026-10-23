@@ -7,6 +7,7 @@
     brasil: year => 'https://gcatholic.org/calendar/' + year + '/BR-pt'
   });
   const readings = Object.freeze({
+    ...((window.LCE_MONTH_2025_11 || {}).readings || {}),
     '2026-10-12': {
       label: 'Solenidade de Nossa Senhora da Conceição Aparecida',
       rank: 'Solenidade', color: 'branco',
@@ -52,6 +53,7 @@
   };
   const is = (name, patterns) => patterns.some(word => name.includes(word));
   function colorFor(info) {
+    if (readings[info.iso]?.color) return readings[info.iso].color;
     const name = info.celebration || '';
     if (name === 'Sábado Santo') return 'nenhum';
     if (is(name,['Domingo de Ramos','Sexta-feira da Paixão','Pentecostes'])) return 'vermelho';
@@ -63,6 +65,7 @@
     return 'verde';
   }
   function rankFor(info) {
+    if (readings[info.iso]?.rank) return readings[info.iso].rank;
     const name=info.celebration || '';
     if (is(name,['Natal do Senhor','Epifania do Senhor','Santa Maria, Mãe de Deus','Domingo da Páscoa','Ascensão do Senhor','Santíssima Trindade','Santíssimo Corpo','Nosso Senhor Jesus Cristo, Rei','Nossa Senhora da Conceição Aparecida','Assunção da','Todos os Santos','São Pedro e São Paulo','Anunciação do Senhor','Pentecostes'])) return 'Solenidade';
     if (is(name,['Batismo do Senhor','Sagrada Família'])) return 'Festa';
@@ -88,7 +91,7 @@
     parent.appendChild(s);return s;
   }
   function verifiedFor(info,entries) {
-    const d=readings[info.iso]; if(d) return {items:d.items,source:d.source,verified:true};
+    const d=readings[info.iso]; if(d) return {items:d.items,source:d.source,verified:!d.validation || d.validation==='referencias-cotejadas',validation:d.validation||'legado',notes:d.notes||[],options:d.options||[]};
     const seen = new Set();
     const items=(entries||[]).filter(x=>x&&x.referencia).map(x=>[x.itemLabel||x.item,x.referencia]).filter(pair=>{
       const k=pair.join('|');if(seen.has(k))return false;seen.add(k);return true;
@@ -116,11 +119,54 @@
       status.items.forEach(([label,ref])=>{
         text(ul,'dt',label);text(ul,'dd',ref);
       });readingsBox.appendChild(ul);
-      if(status.verified){text(readingsBox,'p','Referências conferidas para esta data em fonte brasileira consultável.','daily-validation');link(readingsBox,'Conferir as leituras na fonte ↗',status.source);}
-      else{text(readingsBox,'p','Referências provenientes do acervo dominical existente; conferência da edição brasileira ainda pendente.','daily-validation');}
+      if(status.validation==='referencias-cotejadas'){
+        text(readingsBox,'p','Referências cotejadas pontualmente com fonte brasileira. Redação do Lecionário, salmo completo e glosa ainda não homologados.','daily-validation');
+      }else if(status.validation){
+        text(readingsBox,'p','Levantamento provisório de referências. A conferência individual da edição brasileira ainda está pendente.','daily-validation');
+      }else if(status.verified){
+        text(readingsBox,'p','Referências conferidas para esta data em fonte brasileira consultável.','daily-validation');
+      }else{
+        text(readingsBox,'p','Referências provenientes do acervo dominical existente; conferência da edição brasileira ainda pendente.','daily-validation');
+      }
+      if(status.source)link(readingsBox,'Consultar fonte da seleção ↗',status.source);
+      if(status.notes.length){const notes=document.createElement('ul');notes.className='daily-notes';status.notes.forEach(n=>text(notes,'li',n));readingsBox.appendChild(notes);}
     }else{
       text(readingsBox,'p','As referências do Lecionário brasileiro para esta data ainda não foram conferidas. Não serão substituídas por leituras presumidas.','daily-pending');
       link(readingsBox,'Consultar o calendário brasileiro ↗',SOURCES.brasil(info.year));
+    }
+    if(status.options.length){
+      const alternatives=document.createElement('section');alternatives.className='daily-alternatives';wrap.appendChild(alternatives);
+      text(alternatives,'h4','Leituras alternativas e normas de escolha');
+      status.options.forEach(opt=>{
+        const group=document.createElement('div');group.className='daily-option';alternatives.appendChild(group);
+        text(group,'strong',opt.title);if(opt.items.length){const dl=document.createElement('dl');dl.className='daily-readings-list';group.appendChild(dl);opt.items.forEach(([l,r])=>{text(dl,'dt',l);text(dl,'dd',r);});}
+        if(opt.source)link(group,'Consultar a proveniência ↗',opt.source);
+      });
+      text(alternatives,'p','As alternativas apresentadas são exemplos rastreáveis, não um rol exaustivo das opções previstas pela CNBB.','daily-pending');
+    }
+    if(data?.glosaBlocks?.length){
+      const glosa=document.createElement('section');glosa.className='daily-pairing';wrap.appendChild(glosa);
+      text(glosa,'h4','Roteiros visuais em estudo — referência × preparação de glosa');
+      text(glosa,'p','Coluna esquerda: referência e unidade narrativa (não transcrição do Lecionário). Coluna direita: proposta escrita para ensaio em Libras, não tradução, glosa integral nem validação por pessoa surda.','daily-pending');
+      const table=document.createElement('table');table.className='daily-pair-table';
+      const thead=document.createElement('thead');const tr=document.createElement('tr');text(tr,'th','Referência / unidade');text(tr,'th','Construção espacial e sequência');thead.appendChild(tr);table.appendChild(thead);
+      const tbody=document.createElement('tbody');table.appendChild(tbody);
+      data.glosaBlocks.forEach(b=>{const r=document.createElement('tr');const a=text(r,'td',b.passage);a.dataset.unit=b.id;const g=text(r,'td',b.proposal);g.dataset.status=b.status;tbody.appendChild(r);});
+      glosa.appendChild(table);
+      const print=document.createElement('button');print.type='button';print.className='secondary-button daily-print';print.textContent='Imprimir esta ficha / salvar em PDF';
+      print.addEventListener('click',()=>window.print());glosa.appendChild(print);
+    }
+    if(data?.dictionaryRefs?.length){
+      const dic=(window.LCE_MONTH_2025_11||{}).dictionary||{};
+      const sec=document.createElement('section');sec.className='daily-dictionary';wrap.appendChild(sec);
+      text(sec,'h4','Dicionário bíblico, histórico e visual — fichas preliminares');
+      data.dictionaryRefs.forEach(id=>{const entry=dic[id];if(!entry)return;
+        const article=document.createElement('article');article.className='daily-dictionary-entry';sec.appendChild(article);
+        text(article,'strong',entry.title+' · '+entry.dimension);
+        text(article,'p',entry.contexto);
+        text(article,'p','Orientação espacial para estudo: '+entry.espaco);
+        text(article,'small','Referências: '+entry.source+' · Revisão humana pendente.');
+      });
     }
     const cate=document.createElement('section');cate.className='daily-catechesis';wrap.appendChild(cate);
     text(cate,'h4','Compreenda a celebração');

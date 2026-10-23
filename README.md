@@ -256,3 +256,10 @@ Nesta etapa foram preservados os 111 roteiros anteriores, elaborados 70 novos e 
 **Limite de validade:** cobertura editorial escrita não significa tradução pronta ou homologada em Libras. A Paixão segundo Marcos, em particular, segue como roteiro de cenas e precisa de comparação integral fala a fala, ensaio e validação humana. O texto-fonte provém de edição portuguesa e não está certificado como tradução oficial brasileira.
 
 Consulte [REVISAO-GLOSAS-ANO-B.md](./REVISAO-GLOSAS-ANO-B.md) e [AUDITORIA-GLOSAS-ANO-B-241.csv](./AUDITORIA-GLOSAS-ANO-B-241.csv). Os anos A e C, a Bíblia, o Plano de Leitura, os links e os demais módulos permanecem preservados.
+
+
+## Competência 01/36 — novembro de 2025 (23/10/2026)
+
+A camada `liturgia-2025-11.js` reúne as **30 datas** com referências de trabalho, classificações litúrgicas, fontes e ressalvas editoriais; inclui alternativas explícitas para Finados e roteiros visuais preliminares de 1, 2, 9, 16, 23 e 30 de novembro, além de verbetes do Dicionário Bíblico, Histórico e Visual. Não substitui a base dominical aprovada nem publica texto integral da edição brasileira. O calendário reconhece as decisões específicas da CNBB de 2025. O PDF disponível pelo diálogo de impressão desta ficha contém apenas referências e conteúdo autoral de preparação, **não a reprodução do Lecionário**.
+
+Consulte `RELATORIOS/2025-11.md` e `CONTROLE-36-COMPETENCIAS.csv`. Todas as glosas aguardam cotejo integral por unidade e validação humana especializada; a competência **permanece em revisão**, não concluída.

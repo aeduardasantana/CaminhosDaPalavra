@@ -17,5 +17,8 @@ jobs:
           node --check calendar.js
           node --check liturgia-diaria.js
           node --check app.js
+          node --check liturgia-2025-11.js
       - name: Regressões litúrgicas e rastreabilidade
-        run: node tests/liturgia-diaria.test.cjs
+        run: |
+          node tests/liturgia-diaria.test.cjs
+          node tests/competencia-01.test.cjs
