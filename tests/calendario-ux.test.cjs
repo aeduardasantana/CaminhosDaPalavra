@@ -1,0 +1,22 @@
+/* UX / competência 01: ação no contexto da leitura, parâmetros do calendário e ausência de CTA enganosa. */
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const source=fs.readFileSync('app.js','utf8');
+const style=fs.readFileSync('liturgia-diaria.css','utf8');
+const html=fs.readFileSync('index.html','utf8');
+assert.ok(source.includes("function restoreCalendarHash()"));
+assert.ok(source.includes("params.set('data', options.calendarDate)"));
+assert.ok(source.includes("params.set('mes', options.calendarMonth)"));
+assert.ok(source.includes("info.iso === day"));
+assert.ok(source.includes("section === 'calendario' && (!options.fromHistory || !restoreCalendarHash())"));
+assert.ok(source.includes("syncSectionUrl('calendario', {calendarDate:dayInfo.iso})"));
+assert.ok(source.includes("syncSectionUrl('calendario', {calendarMonth: els.calendarYear.value + '-' + month})"));
+assert.ok(source.includes("selectCalendarDate(litCalendar.infoForIso(localIsoToday()), {suppressUrl:true})"));
+assert.ok(source.includes("readingsBox.insertBefore(tools, readingsBox.children[1] || null)"));
+assert.ok(source.includes("const existing = contents.length > 0"));
+assert.ok(source.includes("const hasVisualDraft = Boolean(draft?.glosaBlocks?.length)"));
+assert.ok(!source.includes("els.calendarDetail.appendChild(button);\n  }\n\n  renderCalendar()"));
+assert.ok(style.includes(".calendar-reading-tools"));
+assert.ok(html.includes("app.js?v=20261023-ux2"));
+assert.ok(html.includes("liturgia-diaria.css?v=20261023-ux2"));
+console.log('OK: UX calendário, abertura contextual, rotas por data/mês e estados editoriais pendentes.');
