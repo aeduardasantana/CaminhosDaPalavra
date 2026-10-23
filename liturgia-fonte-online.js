@@ -21,13 +21,16 @@
     const a=normalizeReference(actual),e=normalizeReference(expected);
     if(!a||!e)return false;
     if(a===e)return true;
+    // A fonte pode abreviar um limite 16a/20a/14a como 16/20/14.
+    // Exibimos o texto com alerta, nunca como recorte homologado.
+    if(e.endsWith('a') && a===e.slice(0,-1))return true;
     // Um caso particular: refrão e indicação R. vêm após os versículos.
     // Não selecionar indiscriminadamente uma alternativa só pelo mesmo livro.
     const aWithoutRefrain=String(actual||'').replace(/\s*\(R\.[^)]+\)\s*$/i,'');
     const eWithoutRefrain=String(expected||'').replace(/\s*\(R\.[^)]+\)\s*$/i,'');
     if(normalizeReference(aWithoutRefrain)===normalizeReference(eWithoutRefrain))return true;
     if(kind==='salmo'){
-      const head=v=>normalizeReference(String(v).split(',')[0]);
+      const head=v=>normalizeReference(String(v).split(',')[0].split('(')[0]);
       const aVerses=String(actual).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
       const eVerses=String(expected).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
       // Algumas respostas oficiais da API identificam só o Salmo.
