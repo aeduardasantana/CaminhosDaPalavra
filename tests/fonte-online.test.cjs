@@ -7,6 +7,8 @@ assert.equal(a.normalizeDate('05/11/2025'),'2025-11-05');
 assert.equal(a.normalizeDate('04/11/2025'),'2025-11-04');
 assert.equal(a.normalizeReference('Rm 13, 8-10'),a.normalizeReference('Rm 13,8-10'));
 assert.equal(a.referenceMatches('Sl 111(112),1-2.4-5.9','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),true);
+assert.equal(a.referenceMatches('Sl 111(112)','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),true);
+assert.equal(a.referenceMatches('Sl 110(111)','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),false);
 assert.equal(a.referenceMatches('Rm 13,8-10','Rm 14,8-10','primeira-leitura'),false);
 const sample={data:'05/11/2025',leituras:{
  primeiraLeitura:[{referencia:'Rm 13, 8-10',texto:'Um texto brasileiro de demonstração para teste interno, sem publicar conteúdo litúrgico protegido.'}],

@@ -28,9 +28,11 @@
     if(normalizeReference(aWithoutRefrain)===normalizeReference(eWithoutRefrain))return true;
     if(kind==='salmo'){
       const head=v=>normalizeReference(String(v).split(',')[0]);
-      // Permite variação da numeração do Saltério somente quando o recorte coincidir.
-      const digits=v=>String(v).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
-      return head(actual)===head(expected)&&digits(actual)&&digits(actual)===digits(expected);
+      const aVerses=String(actual).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
+      const eVerses=String(expected).split(',').slice(1).join(',').replace(/\s*\(R\.[^)]+\)/i,'').replace(/[^0-9a-z]/gi,'');
+      // Algumas respostas oficiais da API identificam só o Salmo.
+      // Aceitar o mesmo salmo e informar explicitamente que o recorte não foi cotejado.
+      return head(actual)===head(expected) && (!aVerses || aVerses===eVerses);
     }
     return false;
   }
@@ -97,6 +99,12 @@
       label.textContent='Texto em português brasileiro — fonte digital externa';
     };
     renderMatch(matches[0]);
+    if(entry.item==='salmo' && !String(matches[0].referencia).includes(',')) {
+      const note=createText('p',
+        'A fonte externa identifica apenas o número do salmo. Confira o recorte, refrão e estrofes com a liturgia brasileira desta celebração antes de proclamar.',
+        'monthly-remote-status');
+      pane.prepend(note);
+    }
     if(matches.length>1){
       const group=document.createElement('div');group.className='monthly-remote-options';
       const note=createText('p','Foram identificadas alternativas. Escolha apenas a leitura da celebração que está sendo preparada.');
