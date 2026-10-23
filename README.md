@@ -271,3 +271,7 @@ Consulte `RELATORIOS/2025-11.md` e `CONTROLE-36-COMPETENCIAS.csv`. Todas as glos
 Os scripts `estudo-liturgico-2025-11-01a15.js` e `estudo-liturgico-2025-11-16a30.js` acrescentam **96 estudos por ocorrência**, organizados em **288 unidades de pareamento autoral** (síntese de conteúdo ↔ roteiro textual de glosa preliminar) para todos os dias de 01 a 30/11/2025. Na seção Liturgia + Libras, a seleção por data passa a priorizar essa camada sem modificar o repertório dominical legado. O PDF da ocorrência imprime os pares e identifica o caráter **não oficial** da síntese. **Nenhum texto brasileiro completo foi autorizado/homologado, nenhuma glosa está integralmente revisada e nenhuma validação humana em Libras foi efetuada.**
 
 O Dicionário associado ao mês contém **46 fichas preliminares**. Fontes e limites editoriais constam em `RELATORIOS/2025-11.md` e o estado administrativo continua `EM_REVISAO`.
+
+### Interface da Liturgia + Libras (novembro de 2025)
+
+Na competência 01/36, o comparativo prioriza **Texto litúrgico** e **Glosa de estudo**. A fonte, limites editoriais e notas linguísticas ficam em áreas recolhíveis. O material de glosa mantém status preliminar e não deve ser confundido com interpretação validada. PDFs não disponíveis não geram botões inativos; o arquivo de controle e os relatórios preservam todas as pendências.

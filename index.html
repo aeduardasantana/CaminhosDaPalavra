@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="./styles.css?v=20261012-papas-1" />
   <link rel="stylesheet" href="./missal.css?v=20261012-2" />
   <link rel="stylesheet" href="./site-menu.css?v=20261012-1" />
-  <link rel="stylesheet" href="./liturgia-diaria.css?v=20261023-online2" />
+  <link rel="stylesheet" href="./liturgia-diaria.css?v=20261023-leitura-limpa1" />
 </head>
 <body>
   <header class="site-header">
@@ -93,7 +93,7 @@
           <p class="eyebrow">Liturgia e Libras</p>
           <h2 id="busca-title">Texto litúrgico e glosa de apoio, no mesmo ponto de leitura</h2>
           <p class="supporting-text">Consulte a Liturgia da Palavra e utilize as glosas como instrumento escrito de preparação para a interpretação em Libras. Pesquise por passagem, referência bíblica, ano, item litúrgico ou data.</p>
-          <p class="missal-caution"><strong>Estado editorial:</strong> em novembro de 2025, as fontes brasileiras estão vinculadas por dia, mas os textos integrais e as glosas correspondentes ainda não foram concluídos. Os antigos resumos deixaram de ocupar o lugar da leitura; notas preparatórias estão disponíveis em área recolhida. A base dominical legada contém ainda textos de edição portuguesa. A validação humana em Libras continua pendente.</p>
+          <p class="liturgy-editorial-caption">Glosas de estudo em revisão humana. Confira as fontes quando necessário.</p>
         </div>
 
         <div class="search-grid">
@@ -421,7 +421,12 @@
             <div class="pane-label">Texto litúrgico · Lecionário</div>
             <div class="source-version"></div>
             <div class="text-content original-text"></div>
-            <a class="text-link original-source-link" href="#" target="_blank" rel="noopener" hidden>Abrir texto original na fonte</a>
+            <details class="reading-source-details">
+              <summary>Fonte e revisão</summary>
+              <a class="text-link original-source-link" href="#" target="_blank" rel="noopener" hidden>Consultar fonte brasileira</a>
+              <p class="reading-source-note">O texto digital requer cotejo com o Lecionário; a glosa permanece preliminar.</p>
+              <div class="reading-source-extra"></div>
+            </details>
           </section>
           <section class="text-pane glosa-pane">
             <div class="pane-label">Glosa</div>
@@ -440,7 +445,7 @@
   <script src="./estudo-liturgico-2025-11-01a15.js?v=20261023-1"></script>
   <script src="./estudo-liturgico-2025-11-16a30.js?v=20261023-1"></script>
   <script src="./estudo-versiculos-2025-11.js?v=20261023-1"></script>
-  <script src="./liturgia-fonte-online.js?v=20261023-2"></script>
+  <script src="./liturgia-fonte-online.js?v=20261023-leitura-limpa1"></script>
   <script src="./saints-data.js?v=20261012-1"></script>
   <script src="./glosa-psalms.js"></script>
   <script src="./glosa-gospels.js"></script>
@@ -467,10 +472,10 @@
   <script src="./glosas-revisadas-ano-b.js?v=20261011-2"></script>
   <script src="./glosas-revisadas-ano-c.js?v=20261011-1"></script>
   <script src="./missal-data.js?v=20261012-2"></script>
-  <script src="./app.js?v=20261023-online2"></script>
+  <script src="./app.js?v=20261023-leitura-limpa1"></script>
   <script src="./missal.js?v=20261012-2"></script>
   <script src="./reading-backup.js?v=20261010-2"></script>
-  <script src="./liturgy-pdf.js?v=20261023-correcao-br-1"></script>
+  <script src="./liturgy-pdf.js?v=20261023-leitura-limpa1"></script>
 <footer class="app-footer">
   <p>© 2026 Caminhos da Palavra. Todos os direitos reservados.</p>
   <a href="https://gebtecnologia.grupoeduardabispo.com.br/" target="_blank" rel="noopener noreferrer">Desenvolvido por Compass Rose Systems · GEB Tecnologia</a>

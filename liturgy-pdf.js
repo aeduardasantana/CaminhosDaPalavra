@@ -145,14 +145,9 @@
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'secondary-button lce-pdf-button';
-      if(article.dataset.editorialStudy==='true' && article.dataset.completeText!=='true'){
-        button.disabled=true;
-        button.textContent='PDF comparativo pendente de texto integral';
-        button.title='Não é possível emitir texto e glosa pareados sem o Lecionário brasileiro integral e a revisão da glosa.';
-      } else {
-        button.textContent='Gerar PDF comparativo';
-        button.addEventListener('click', () => exportItem(article));
-      }
+      if(article.dataset.editorialStudy==='true' && article.dataset.completeText!=='true')return;
+      button.textContent='Gerar PDF comparativo';
+      button.addEventListener('click', () => exportItem(article));
       wrap.append(button);
       panel.prepend(wrap);
     });
