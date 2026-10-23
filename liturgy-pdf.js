@@ -81,6 +81,7 @@
     const source = clean(article.querySelector('.source-version')?.textContent);
     const psalmHeading = clean(article.querySelector('.psalm-header')?.textContent);
     const isPsalm = Boolean(original?.querySelector('.psalm-sequence'));
+    const editorialStudy = article.dataset.editorialStudy === 'true';
     const left = blocksFor(original), right = blocksFor(glosa);
     const settings = document.createElement('dialog');
     settings.className = 'lce-pdf-dialog';
@@ -116,7 +117,7 @@
           <header class="mast"><small>Caminhos da Palavra · por Libras com Eduarda</small><h1>${escapeHTML(title)}</h1>
           ${reference ? `<div class="meta">${escapeHTML([context,meta,source].filter(Boolean).join(' · '))}</div>` : ''}
           ${psalmHeading ? `<p class="psalm-id">${escapeHTML(psalmHeading)}</p>` : ''}</header>
-          <table><thead><tr><th>Texto litúrgico</th><th>Glosa de apoio à Libras</th></tr></thead><tbody>${rows}</tbody></table>
+          <table><thead><tr><th>${editorialStudy?'Síntese editorial — não é texto do Lecionário':'Texto litúrgico'}</th><th>${editorialStudy?'Glosa preliminar — sem validação':'Glosa de apoio à Libras'}</th></tr></thead><tbody>${rows}</tbody></table>
           <p class="notice">Material de estudo. Glosas são instrumentos de preparação, não constituem Libras nem tradução oficial. Verifique a fonte e os direitos de reprodução do texto.</p>
           ${notes ? '<section class="notes"><h2>Anotações</h2><div class="line"></div><div class="line"></div><div class="line"></div></section>' : ''}
           <footer class="contact">Caminhos da Palavra · WhatsApp <a href="https://wa.me/5562992053534" target="_blank" rel="noopener">(62) 99205-3534</a></footer>

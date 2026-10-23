@@ -70,3 +70,12 @@
 .psalm-br-partial .psalm-part-label{display:block;font-size:.84rem;color:#5c4b2e;margin-bottom:6px}
 .psalm-br-partial .psalm-part-text{line-height:1.65}
 .psalm-br-partial .glosa-pending{background:#fbf8ef;border-left:3px solid #a47728}
+
+/* Competência 01/36: acesso diário e pares semânticos não confundidos com texto oficial. */
+.monthly-reading-alert{display:block;border-left:3px solid #a47c2d;background:#fbf5e9;color:#56472d;padding:12px 16px;margin:10px 0 16px;font-size:.9rem;line-height:1.55}
+.monthly-study-sequence{display:grid;gap:8px;align-content:start}
+.monthly-study-unit{border:1px solid #e2d7c7;background:white;padding:12px 14px;margin:0;line-height:1.6;min-width:0}
+.monthly-study-unit .psalm-part-label{display:block;font-size:.77rem;letter-spacing:.03em;color:#755a27;margin-bottom:6px}
+.monthly-study-unit .psalm-part-text{white-space:pre-line;overflow-wrap:anywhere}
+.monthly-study-unit.study-glosa{background:#fff8e9;border-left:3px solid #a57a2f;font-weight:650}
+@media (max-width:640px){.monthly-study-unit{padding:10px}.monthly-reading-alert{padding:10px 12px}}
