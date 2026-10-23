@@ -39,7 +39,14 @@
 .liturgical-year-bar strong {display:block}.liturgical-year-bar p {margin:4px 0;font-size:.83rem}
 .liturgical-year-bar label {display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-weight:750}
 .liturgical-year-bar select {max-width:250px}
-@media(max-width:680px) {.daily-catechesis{grid-template-columns:1fr}.daily-readings-list{grid-template-columns:1fr;gap:4px}.daily-readings-list dd{margin:0 0 8px}}
+/* Ação de consulta visível no fluxo das leituras; não após santos e fontes. */
+.calendar-reading-tools{display:flex;flex-wrap:wrap;align-items:center;gap:9px 12px;margin:11px 0 15px}
+.calendar-reading-tools button{font:inherit;font-weight:750;cursor:pointer;max-width:100%;min-height:44px;white-space:normal;padding:9px 13px;text-align:center}
+.calendar-reading-tools .primary-action{background:var(--deep);border:1px solid var(--deep);color:#fff}
+.calendar-reading-tools .primary-action:hover{filter:brightness(1.13)}
+.calendar-reading-tools .calendar-reading-notice{flex-basis:100%;font-size:.83rem;line-height:1.55;color:#635b50;margin:0}
+.daily-pairing:focus{outline:2px solid var(--accent,#9b6b18);outline-offset:5px}
+@media(max-width:680px) {.daily-catechesis{grid-template-columns:1fr}.daily-readings-list{grid-template-columns:1fr;gap:4px}.daily-readings-list dd{margin:0 0 8px}.calendar-reading-tools{align-items:stretch;flex-direction:column}.calendar-reading-tools button{width:100%}}
 @media(prefers-reduced-motion:reduce) {.calendar-day{transition:none}}
 
 /* Competência 01/36: alternativas, pareamento de estudo e vocabulário visual. */

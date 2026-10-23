@@ -963,6 +963,10 @@ function syncSectionUrl(section, options = {}) {
     params.set('data', options.liturgyDate);
     if (options.liturgyItem) params.set('item', options.liturgyItem);
   }
+  if (section === 'calendario') {
+    if (options.calendarDate) params.set('data', options.calendarDate);
+    else if (options.calendarMonth) params.set('mes', options.calendarMonth);
+  }
   const hash = '#' + SECTION_PATHS[section] + (params.size ? '?' + params.toString() : '');
   if (window.location.hash !== hash) {
     window.history.pushState({section}, '', hash);
@@ -990,7 +994,7 @@ function setSection(section, options = {}) {
   Object.entries(els.sections).forEach(([key, el]) => { el.hidden = key !== section; });
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
   if (section === 'liturgia') renderLiturgia();
-  if (section === 'calendario') renderCalendar();
+  if (section === 'calendario' && (!options.fromHistory || !restoreCalendarHash())) renderCalendar();
   if (section === 'biblia') renderBibleBooks();
   if (section === 'plano') renderPlan();
   if (options.scrollToResults && section === 'liturgia') {
@@ -1025,6 +1029,38 @@ function initCalendarControls() {
   els.calendarMonth.value = String(currentYear === initialYear ? now.getMonth() : 0);
 }
 
+// Aceita links compartilháveis por dia e por mês; rejeita datas inexistentes.
+function restoreCalendarHash() {
+  const params = new URLSearchParams(window.location.hash.split('?')[1] || '');
+  const day = params.get('data') || '';
+  const month = params.get('mes') || '';
+  if (/^\d{4}-\d{2}-\d{2}$/.test(day)) {
+    const info = litCalendar.infoForIso(day);
+    if (info.iso === day && info.year >= litCalendar.minYear && info.year <= litCalendar.maxYear) {
+      els.calendarYear.value = String(info.year);
+      els.calendarMonth.value = String(info.month);
+      selectCalendarDate(info, {suppressUrl:true});
+      return true;
+    }
+  }
+  if (/^\d{4}-(0[1-9]|1[0-2])$/.test(month)) {
+    const year = Number(month.slice(0,4)), number = Number(month.slice(5,7));
+    if (year >= litCalendar.minYear && year <= litCalendar.maxYear) {
+      els.calendarYear.value = String(year);
+      els.calendarMonth.value = String(number - 1);
+      selectedCalendarDate = null;
+      renderCalendar();
+      return true;
+    }
+  }
+  return false;
+}
+function updateCalendarMonthUrl() {
+  if (sectionFromUrl() === 'calendario') {
+    const month = String(Number(els.calendarMonth.value)+1).padStart(2,'0');
+    syncSectionUrl('calendario', {calendarMonth: els.calendarYear.value + '-' + month});
+  }
+}
 function contentForDate(isoDate) {
   return entriesForDate(isoDate);
 }
@@ -1037,13 +1073,65 @@ function openLiturgicalDate(iso) {
   setSection('liturgia', {scrollToResults: true, liturgyDate: iso});
 }
 
-function selectCalendarDate(dayInfo) {
+function selectCalendarDate(dayInfo, options = {}) {
   selectedCalendarDate = dayInfo.iso;
   const contents = contentForDate(dayInfo.iso);
-  const title = dayInfo.celebration || dayInfo.season;
+  if (!options.suppressUrl && sectionFromUrl() === 'calendario') {
+    syncSectionUrl('calendario', {calendarDate:dayInfo.iso});
+  }
 
   els.calendarDetail.replaceChildren();
   window.LCE_DAILY.renderDetail(els.calendarDetail, dayInfo, contents);
+
+  // A ação principal pertence à Liturgia da Palavra, não ao final da hagiografia.
+  const readingsBox = els.calendarDetail.querySelector('.daily-references');
+  if (readingsBox) {
+    const tools = document.createElement('div');
+    tools.className = 'calendar-reading-tools';
+    const existing = contents.length > 0;
+    const draft = window.LCE_DAILY.readings[dayInfo.iso];
+    const hasVisualDraft = Boolean(draft?.glosaBlocks?.length);
+    if (existing) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'primary-action calendar-action';
+      button.textContent = 'Abrir texto e glosa de apoio desta data';
+      button.setAttribute('aria-label','Abrir acervo de textos e glosas de apoio referente a ' + formatDate(dayInfo.iso));
+      button.addEventListener('click', () => openLiturgicalDate(dayInfo.iso));
+      tools.appendChild(button);
+      const note = document.createElement('p');
+      note.className = 'calendar-reading-notice';
+      note.textContent = 'Acervo dominical em revisão: confirme a edição brasileira antes de utilizar o texto na celebração. Glosas ainda não validadas em Libras.';
+      tools.appendChild(note);
+    } else if (!hasVisualDraft) {
+      const note = document.createElement('p');
+      note.className = 'calendar-reading-notice';
+      note.textContent = 'Texto integral e glosa comparativa ainda não cadastrados para esta data. Consulte as referências acima.';
+      tools.appendChild(note);
+    }
+    if (hasVisualDraft) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'secondary-button calendar-visual-action';
+      button.textContent = 'Ver roteiro visual preliminar nesta ficha';
+      button.addEventListener('click', () => {
+        const target = els.calendarDetail.querySelector('.daily-pairing');
+        if (target) {
+          target.setAttribute('tabindex','-1');
+          target.focus({preventScroll:true});
+          target.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'start'});
+        }
+      });
+      tools.appendChild(button);
+      if (!existing) {
+        const note = document.createElement('p');
+        note.className = 'calendar-reading-notice';
+        note.textContent = 'Roteiro de estudo em construção; não é glosa integral nem tradução validada em Libras.';
+        tools.appendChild(note);
+      }
+    }
+    readingsBox.insertBefore(tools, readingsBox.children[1] || null);
+  }
 
   // Memórias hagiográficas: não determinar a celebração principal por esta lista.
   const saintsSection = document.createElement('section');
@@ -1091,15 +1179,6 @@ function selectCalendarDate(dayInfo) {
   });
   saintsSection.appendChild(linkBox);
   els.calendarDetail.appendChild(saintsSection);
-
-  if (contents.length) {
-    const button = document.createElement('button');
-    button.type = 'button';
-    button.className = 'secondary-button calendar-action';
-    button.textContent = 'Abrir liturgia desta data';
-    button.addEventListener('click', () => openLiturgicalDate(dayInfo.iso));
-    els.calendarDetail.appendChild(button);
-  }
 
   renderCalendar();
 }
@@ -1176,6 +1255,7 @@ function moveCalendarMonth(delta) {
   els.calendarYear.value = String(year);
   els.calendarMonth.value = String(month);
   selectedCalendarDate = null;
+  updateCalendarMonthUrl();
   renderCalendar();
 }
 
@@ -1663,10 +1743,12 @@ document.querySelectorAll('[data-go]').forEach(btn => btn.addEventListener('clic
 
 els.calendarYear.addEventListener('change', () => {
   selectedCalendarDate = null;
+  updateCalendarMonthUrl();
   renderCalendar();
 });
 els.calendarMonth.addEventListener('change', () => {
   selectedCalendarDate = null;
+  updateCalendarMonthUrl();
   renderCalendar();
 });
 els.calendarPrev.addEventListener('click', () => moveCalendarMonth(-1));
@@ -1804,7 +1886,7 @@ els.resetPlan.addEventListener('click', () => {
 
 initCalendarControls();
 if (new Date().getFullYear() >= litCalendar.minYear && new Date().getFullYear() <= litCalendar.maxYear) {
-  selectCalendarDate(litCalendar.infoForIso(localIsoToday()));
+  selectCalendarDate(litCalendar.infoForIso(localIsoToday()), {suppressUrl:true});
 }
 const todayButton = document.querySelector('#calendarToday');
 if (todayButton) todayButton.addEventListener('click', () => {
