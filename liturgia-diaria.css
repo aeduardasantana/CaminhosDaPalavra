@@ -56,9 +56,9 @@
 .daily-print{margin:12px 0}
 @media(max-width:680px){.daily-pair-table th,.daily-pair-table td{padding:8px;font-size:.84rem}.daily-pair-table td:first-child{width:36%}}
 @media print {
-  body *{visibility:hidden!important}
-  #calendarDetail,#calendarDetail *{visibility:visible!important}
-  #calendarDetail{position:absolute;inset:0 auto auto 0;width:100%;max-width:100%;margin:0;padding:0}
+  body.printing-nov-2025 *{visibility:hidden!important}
+  body.printing-nov-2025 #calendarDetail,body.printing-nov-2025 #calendarDetail *{visibility:visible!important}
+  body.printing-nov-2025 #calendarDetail{position:absolute;inset:0 auto auto 0;width:100%;max-width:100%;margin:0;padding:0}
   .daily-print,.daily-source-link,.daily-footnote,.calendar-action{display:none!important}
   .daily-pair-table tr{break-inside:avoid}
   @page{size:A4;margin:12mm}
