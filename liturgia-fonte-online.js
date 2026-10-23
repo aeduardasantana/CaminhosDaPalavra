@@ -102,6 +102,11 @@
       label.textContent='Texto em português brasileiro — fonte digital externa';
     };
     renderMatch(matches[0]);
+    if(entry.item!=='salmo' &&
+       normalizeReference(matches[0].referencia)!==normalizeReference(entry.referencia)){
+      const note=createText('p','O serviço utiliza uma referência abreviada: confira o limite do versículo final na fonte brasileira antes de proclamar.','monthly-remote-status');
+      pane.prepend(note);
+    }
     if(entry.item==='salmo' && !String(matches[0].referencia).includes(',')) {
       const note=createText('p',
         'A fonte externa identifica apenas o número do salmo. Confira o recorte, refrão e estrofes com a liturgia brasileira desta celebração antes de proclamar.',

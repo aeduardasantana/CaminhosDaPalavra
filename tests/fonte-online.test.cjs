@@ -9,6 +9,11 @@ assert.equal(a.normalizeReference('Rm 13, 8-10'),a.normalizeReference('Rm 13,8-1
 assert.equal(a.referenceMatches('Sl 111(112),1-2.4-5.9','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),true);
 assert.equal(a.referenceMatches('Sl 111(112)','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),true);
 assert.equal(a.referenceMatches('Sl 110(111)','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),false);
+assert.equal(a.referenceMatches('Sl 45','Sl 45(46)','salmo'),true);
+assert.equal(a.referenceMatches('Dn 3','Dn 3 (cântico)','salmo'),true);
+assert.equal(a.referenceMatches('Lc 1,46-55','Lc 1,46-55 (cântico)','salmo'),true);
+assert.equal(a.referenceMatches('1Co 3,9c-11.16-17','1Cor 3,9c-11.16-17','segunda-leitura'),true);
+assert.equal(a.referenceMatches('Rm 13,11-14','Rm 13,11-14a','segunda-leitura'),true);
 assert.equal(a.referenceMatches('Rm 13,8-10','Rm 14,8-10','primeira-leitura'),false);
 const sample={data:'05/11/2025',leituras:{
  primeiraLeitura:[{referencia:'Rm 13, 8-10',texto:'Um texto brasileiro de demonstração para teste interno, sem publicar conteúdo litúrgico protegido.'}],
