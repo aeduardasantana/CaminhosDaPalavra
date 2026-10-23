@@ -36,7 +36,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
         "O índice mensal secundário apresenta numeração de salmo divergente; o cotejo individual indica Sl 23(24), não Sl 24(25).",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/01-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [
@@ -71,8 +72,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/01-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/01-11-2025"
     },
     "2025-11-02": {
       "label": "Comemoração de Todos os Fiéis Defuntos",
@@ -106,7 +110,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
         "A CNBB autoriza escolha entre três formulários e outras leituras do Lecionário Dominical ou subsídios diocesanos; exemplos abaixo não são lista exaustiva.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.pocketterco.com.br/index.php/liturgia/02/11/2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [
         {
@@ -172,10 +177,73 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 12,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.pocketterco.com.br/index.php/liturgia/02/11/2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.pocketterco.com.br/index.php/liturgia/02/11/2025",
+      "lectionaryChoices": {
+        "status": "catálogo secundário de opções, não combinação obrigatória",
+        "source": "https://www.pocketterco.com.br/index.php/liturgia/02/11/2025",
+        "first": [
+          "2Mc 12,43-46",
+          "Jó 19,1.23-27a",
+          "Sb 3,1-9 (ou 3,1-6.9)",
+          "Sb 4,7-15",
+          "Is 25,6a.7-9",
+          "Lm 3,17-26",
+          "Dn 12,1-3"
+        ],
+        "psalm": [
+          "Sl 102(103)",
+          "Sl 26(27)",
+          "Sl 114(116A) e 115(116B)",
+          "Sl 22(23) (R. 1)",
+          "Sl 22(23) (R. 4a)",
+          "Sl 24(25)",
+          "Sl 41(42) e 42(43)"
+        ],
+        "second": [
+          "Rm 5,5-11",
+          "Rm 5,17-21",
+          "Rm 6,3-9 (ou 3-4.8-9)",
+          "Rm 8,14-23",
+          "Rm 8,31b-35.37-39",
+          "Rm 14,7-9.10c-12",
+          "1Cor 15,20-24a.25-28 (ou 20-23)",
+          "1Cor 15,51-57",
+          "2Cor 4,14–5,1",
+          "2Cor 5,1.6-10",
+          "Fl 3,20-21",
+          "1Ts 4,13-18",
+          "2Tm 2,8-13",
+          "1Jo 3,1-2",
+          "1Jo 3,14-16"
+        ],
+        "gospel": [
+          "Mt 5,1-12a",
+          "Mt 11,25-30",
+          "Mt 25,1-13",
+          "Mt 25,31-46",
+          "Mc 15,33-39;16,1-6 (ou 15,33-39)",
+          "Lc 7,11-17",
+          "Lc 12,35-40",
+          "Lc 23,33.39-43",
+          "Lc 23,44-46.50.52-53;24,16a (ou forma breve)",
+          "Lc 24,13-35 (ou forma breve)",
+          "Jo 5,24-29",
+          "Jo 6,37-40",
+          "Jo 6,51-58",
+          "Jo 11,17-27 (ou 21-27)",
+          "Jo 11,32-45",
+          "Jo 12,23-28 (ou 23-26)",
+          "Jo 14,1-6",
+          "Jo 17,24-26",
+          "Jo 19,17-18.25-39"
+        ]
       }
     },
     "2025-11-03": {
@@ -205,7 +273,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.vaticannews.va/pt/palavra-do-dia/2025/11/03.html (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -217,11 +286,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.vaticannews.va/pt/palavra-do-dia/2025/11/03.html",
+        "sourceScope": "Vatican News: leitura e Evangelho; salmo conferido apenas no índice mensal"
+      },
+      "individualDateSource": "https://www.vaticannews.va/pt/palavra-do-dia/2025/11/03.html"
     },
     "2025-11-04": {
       "label": "São Carlos Borromeu, bispo",
@@ -250,7 +322,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/04-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -265,8 +338,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/04-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/04-11-2025"
     },
     "2025-11-05": {
       "label": "Quarta-feira da 31ª semana do Tempo Comum",
@@ -295,7 +371,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/05-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -308,8 +385,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/05-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/05-11-2025"
     },
     "2025-11-06": {
       "label": "Quinta-feira da 31ª semana do Tempo Comum",
@@ -338,7 +418,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-06-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -349,11 +430,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-06-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-06-novembro"
     },
     "2025-11-07": {
       "label": "Sexta-feira da 31ª semana do Tempo Comum",
@@ -382,7 +466,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-07-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -393,11 +478,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-07-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-07-novembro"
     },
     "2025-11-08": {
       "label": "Sábado da 31ª semana do Tempo Comum",
@@ -426,7 +514,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/08-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -440,8 +529,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/08-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/08-11-2025"
     },
     "2025-11-09": {
       "label": "Dedicação da Basílica de Latrão",
@@ -475,7 +567,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
         "No domingo, esta festa precede o 32º Domingo do Tempo Comum; a lista de suas leituras ainda requer cotejo CNBB item a item.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://diocesedeformosa.com.br/homilias/dedicacao-da-basilica-do-latrao/ (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [
@@ -512,11 +605,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 12,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://diocesedeformosa.com.br/homilias/dedicacao-da-basilica-do-latrao/",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://diocesedeformosa.com.br/homilias/dedicacao-da-basilica-do-latrao/"
     },
     "2025-11-10": {
       "label": "São Leão Magno, papa e doutor da Igreja",
@@ -545,7 +641,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-10-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -555,11 +652,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-10-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-10-novembro"
     },
     "2025-11-11": {
       "label": "São Martinho de Tours, bispo",
@@ -588,7 +688,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-11-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -598,11 +699,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-11-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-11-novembro"
     },
     "2025-11-12": {
       "label": "São Josafá, bispo e mártir",
@@ -631,7 +735,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/12-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -646,8 +751,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/12-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/12-11-2025"
     },
     "2025-11-13": {
       "label": "Quinta-feira da 32ª semana do Tempo Comum",
@@ -676,7 +784,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-13-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -687,11 +796,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-13-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-13-novembro"
     },
     "2025-11-14": {
       "label": "Sexta-feira da 32ª semana do Tempo Comum",
@@ -720,7 +832,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-14-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -730,11 +843,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-14-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-14-novembro"
     },
     "2025-11-15": {
       "label": "Sábado da 32ª semana do Tempo Comum",
@@ -763,7 +879,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/15-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -776,8 +893,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/15-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/15-11-2025"
     },
     "2025-11-16": {
       "label": "33º Domingo do Tempo Comum",
@@ -810,7 +930,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/16-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [
@@ -845,8 +966,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/16-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/16-11-2025"
     },
     "2025-11-17": {
       "label": "Santa Isabel da Hungria, religiosa",
@@ -875,7 +999,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld17-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -888,11 +1013,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld17-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld17-novembro"
     },
     "2025-11-18": {
       "label": "Terça-feira da 33ª semana do Tempo Comum",
@@ -921,7 +1049,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/18-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -937,8 +1066,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/18-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/18-11-2025"
     },
     "2025-11-19": {
       "label": "Santos Roque González, Afonso Rodríguez e João de Castillo, mártires",
@@ -967,7 +1099,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/19-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -983,8 +1116,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/19-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/19-11-2025"
     },
     "2025-11-20": {
       "label": "Quinta-feira da 33ª semana do Tempo Comum",
@@ -1013,7 +1149,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-20-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1024,11 +1161,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-20-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-20-novembro"
     },
     "2025-11-21": {
       "label": "Apresentação da Bem-aventurada Virgem Maria",
@@ -1057,7 +1197,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/21-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1071,8 +1212,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/21-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/21-11-2025"
     },
     "2025-11-22": {
       "label": "Santa Cecília, virgem e mártir",
@@ -1101,7 +1245,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/22-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1117,8 +1262,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/22-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/22-11-2025"
     },
     "2025-11-23": {
       "label": "Nosso Senhor Jesus Cristo, Rei do Universo",
@@ -1151,7 +1299,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/23-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [
@@ -1191,8 +1340,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/23-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/23-11-2025"
     },
     "2025-11-24": {
       "label": "Santos André Dũng-Lạc e companheiros, mártires",
@@ -1221,7 +1373,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-24-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1233,11 +1386,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-24-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-24-novembro"
     },
     "2025-11-25": {
       "label": "Terça-feira da 34ª semana do Tempo Comum",
@@ -1266,7 +1422,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-25-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1278,11 +1435,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-25-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-25-novembro"
     },
     "2025-11-26": {
       "label": "Quarta-feira da 34ª semana do Tempo Comum",
@@ -1311,7 +1471,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-26-novembro (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1323,11 +1484,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "contentStatus": {
         "meaningUnitsDrafted": 9,
         "sourceIndexChecked": true,
-        "singleDateSourceRead": false,
+        "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-26-novembro",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-26-novembro"
     },
     "2025-11-27": {
       "label": "Quinta-feira da 34ª semana do Tempo Comum",
@@ -1356,7 +1520,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/27-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1372,8 +1537,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/27-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/27-11-2025"
     },
     "2025-11-28": {
       "label": "Sexta-feira da 34ª semana do Tempo Comum",
@@ -1402,7 +1570,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/28-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1417,8 +1586,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/28-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/28-11-2025"
     },
     "2025-11-29": {
       "label": "Sábado da 34ª semana do Tempo Comum",
@@ -1447,7 +1619,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/29-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -1462,8 +1635,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/29-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/29-11-2025"
     },
     "2025-11-30": {
       "label": "1º Domingo do Advento",
@@ -1498,7 +1674,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
         "A forma breve Rm 13,11-14a deve ser cotejada com a edição e a indicação litúrgica exata antes de homologar.",
         "Conferido o refrão brasileiro e os versículos 1–2 do Sl 121(122); estrofes restantes e validação especializada pendentes. Não confundir com texto português europeu do acervo do Ano A.",
-        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/30-11-2025 (referências; redação brasileira integral e licença não homologadas)."
       ],
       "options": [],
       "glosaBlocks": [
@@ -1567,8 +1744,11 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "singleDateSourceRead": true,
         "fullBrazilianTextChecked": false,
         "completeGlosaDraft": false,
-        "specializedLibrasValidation": false
-      }
+        "specializedLibrasValidation": false,
+        "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/30-11-2025",
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+      },
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/30-11-2025"
     }
   },
   "dictionary": {
