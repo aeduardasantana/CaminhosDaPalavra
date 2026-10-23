@@ -1066,7 +1066,11 @@ function renderLiturgia() {
 
     els.liturgyResults.appendChild(node);
     const card = els.liturgyResults.lastElementChild;
-    if(entry.editorialStudy) {card.dataset.editorialStudy='true';card.dataset.completeText='false';}
+    if(entry.editorialStudy) {
+      card.dataset.editorialStudy='true';
+      card.dataset.completeText='false';
+      if(window.LCE_FONTE_ONLINE)window.LCE_FONTE_ONLINE.loadForEntry(entry,card);
+    }
     if (entry.data && entry.item) {
       const share = document.createElement('button');
       share.type = 'button';

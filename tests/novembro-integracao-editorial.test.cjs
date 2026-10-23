@@ -59,6 +59,7 @@ assert.ok(html.includes('estudo-liturgico-2025-11-16a30.js'));
 assert.ok(pdf.includes("button.disabled=true"));
 assert.ok(app.includes("function renderMonthlyStudy(entry, originalBox, glosaBox)"));
 assert.ok(app.includes("originalBox.replaceChildren(notice)"));
+assert.ok(app.includes('LCE_FONTE_ONLINE.loadForEntry(entry,card)'));
 assert.ok(app.includes("monthly-editorial-details"));
 assert.ok(html.includes('min="2025-11-01" max="2028-10-31"'));
 assert.equal(days["2025-11-05"].items[1][1],"Sl 111(112),1-2.4-5.9 (R. 5a)");

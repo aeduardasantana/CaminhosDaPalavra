@@ -22,6 +22,7 @@ jobs:
           node --check estudo-liturgico-2025-11-01a15.js
           node --check estudo-liturgico-2025-11-16a30.js
           node --check estudo-versiculos-2025-11.js
+          node --check liturgia-fonte-online.js
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
@@ -29,3 +30,4 @@ jobs:
           node tests/calendario-ux.test.cjs
           node tests/dicionario.test.cjs
           node tests/novembro-integracao-editorial.test.cjs
+          node tests/fonte-online.test.cjs
