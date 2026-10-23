@@ -14,9 +14,14 @@ assert.ok(source.includes("syncSectionUrl('calendario', {calendarMonth: els.cale
 assert.ok(source.includes("selectCalendarDate(litCalendar.infoForIso(localIsoToday()), {suppressUrl:true})"));
 assert.ok(source.includes("readingsBox.insertBefore(tools, readingsBox.children[1] || null)"));
 assert.ok(source.includes("const existing = contents.length > 0"));
-assert.ok(source.includes("const hasVisualDraft = Boolean(draft?.glosaBlocks?.length)"));
+assert.ok(!source.includes("const hasVisualDraft = Boolean(draft?.glosaBlocks?.length)"));
+assert.ok(source.includes("Abrir Liturgia + Libras desta data"));
 assert.ok(!source.includes("els.calendarDetail.appendChild(button);\n  }\n\n  renderCalendar()"));
 assert.ok(style.includes(".calendar-reading-tools"));
-assert.ok(html.includes("app.js?v=20261023-ux2"));
-assert.ok(html.includes("liturgia-diaria.css?v=20261023-ux2"));
-console.log('OK: UX calendário, abertura contextual, rotas por data/mês e estados editoriais pendentes.');
+assert.ok(html.includes("app.js?v=20261023-salmo2"));
+assert.ok(html.includes("liturgia-diaria.css?v=20261023-ux4"));
+const daily = fs.readFileSync('liturgia-diaria.js','utf8');
+assert.ok(!daily.includes('Roteiros visuais em estudo — referência × preparação de glosa'));
+assert.ok(!daily.includes('if(data?.glosaBlocks?.length)'));
+assert.ok(source.includes('function renderPartialBrazilianPsalm'));
+console.log('OK: calendário sem glosa duplicada, rota dedicada e salmo brasileiro parcial.');
