@@ -7,7 +7,7 @@ const calendar=fs.readFileSync('liturgia-diaria.js','utf8');
 const home=fs.readFileSync('index.html','utf8');
 const ctx={window:{}};vm.runInNewContext(fs.readFileSync('liturgia-2025-11.js','utf8'),ctx);
 const data=ctx.window.LCE_MONTH_2025_11;
-assert.equal(Object.keys(data.dictionary).length,12);
+assert.ok(Object.keys(data.dictionary).length>=46);
 assert.equal(Object.keys(data.readings).length,30);
 for(const [id,entry] of Object.entries(data.dictionary)){assert.equal(id,entry.id);assert.ok(entry.title);assert.ok(entry.contexto);assert.ok(entry.espaco);assert.ok(entry.source);}
 for(const rec of Object.values(data.readings)){for(const key of rec.dictionaryRefs){assert.ok(data.dictionary[key],'Missing definition: '+key);}}

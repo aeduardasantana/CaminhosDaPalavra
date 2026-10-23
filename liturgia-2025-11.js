@@ -35,7 +35,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "O índice mensal secundário apresenta numeração de salmo divergente; o cotejo individual indica Sl 23(24), não Sl 24(25)."
+        "O índice mensal secundário apresenta numeração de salmo divergente; o cotejo individual indica Sl 23(24), não Sl 24(25).",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [
@@ -60,8 +61,18 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       ],
       "dictionaryRefs": [
         "todos-santos",
-        "salmo-cantico"
-      ]
+        "salmo-cantico",
+        "selo-apocalipse",
+        "bem-aventurancas"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-02": {
       "label": "Comemoração de Todos os Fiéis Defuntos",
@@ -94,7 +105,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "A CNBB autoriza escolha entre três formulários e outras leituras do Lecionário Dominical ou subsídios diocesanos; exemplos abaixo não são lista exaustiva."
+        "A CNBB autoriza escolha entre três formulários e outras leituras do Lecionário Dominical ou subsídios diocesanos; exemplos abaixo não são lista exaustiva.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [
         {
@@ -153,8 +165,18 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       ],
       "dictionaryRefs": [
         "fieis-defuntos",
-        "salmo-cantico"
-      ]
+        "salmo-cantico",
+        "ressurreicao",
+        "vigilancia"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-03": {
       "label": "Segunda-feira da 31ª semana do Tempo Comum",
@@ -182,11 +204,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "paulo-comunidades",
+        "misericordia",
+        "hospitalidade"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-04": {
       "label": "São Carlos Borromeu, bispo",
@@ -214,11 +249,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "paulo-comunidades",
+        "corpo-cristo",
+        "hospitalidade"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-05": {
       "label": "Quarta-feira da 31ª semana do Tempo Comum",
@@ -246,11 +294,22 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "paulo-comunidades"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-06": {
       "label": "Quinta-feira da 31ª semana do Tempo Comum",
@@ -278,11 +337,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "ovelha-perdida",
+        "moeda-perdida"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-07": {
       "label": "Sexta-feira da 31ª semana do Tempo Comum",
@@ -310,11 +381,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "paulo-comunidades",
+        "administrador"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-08": {
       "label": "Sábado da 31ª semana do Tempo Comum",
@@ -342,11 +425,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "paulo-comunidades",
+        "administrador"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-09": {
       "label": "Dedicação da Basílica de Latrão",
@@ -379,7 +474,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
-        "No domingo, esta festa precede o 32º Domingo do Tempo Comum; a lista de suas leituras ainda requer cotejo CNBB item a item."
+        "No domingo, esta festa precede o 32º Domingo do Tempo Comum; a lista de suas leituras ainda requer cotejo CNBB item a item.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [
@@ -410,8 +506,17 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       ],
       "dictionaryRefs": [
         "basilica-latrao",
-        "templo-jerusalem"
-      ]
+        "templo-jerusalem",
+        "templo-segundo"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-10": {
       "label": "São Leão Magno, papa e doutor da Igreja",
@@ -439,11 +544,22 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "sabedoria-personificada"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-11": {
       "label": "São Martinho de Tours, bispo",
@@ -471,11 +587,22 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "ressurreicao"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-12": {
       "label": "São Josafá, bispo e mártir",
@@ -503,11 +630,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "justica-reis",
+        "lepra-biblica",
+        "samaria"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-13": {
       "label": "Quinta-feira da 32ª semana do Tempo Comum",
@@ -535,11 +675,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "sabedoria-personificada",
+        "fariseus"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-14": {
       "label": "Sexta-feira da 32ª semana do Tempo Comum",
@@ -567,11 +719,22 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "vigilancia"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-15": {
       "label": "Sábado da 32ª semana do Tempo Comum",
@@ -599,11 +762,22 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "viuva"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-16": {
       "label": "33º Domingo do Tempo Comum",
@@ -635,7 +809,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa."
+        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [
@@ -659,8 +834,19 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         }
       ],
       "dictionaryRefs": [
-        "ano-liturgico"
-      ]
+        "ano-liturgico",
+        "paulo-comunidades",
+        "vigilancia",
+        "templo-segundo"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-17": {
       "label": "Santa Isabel da Hungria, religiosa",
@@ -688,11 +874,25 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "lei-mosaica",
+        "helenismo",
+        "antioco-iv",
+        "jerico"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-18": {
       "label": "Terça-feira da 33ª semana do Tempo Comum",
@@ -720,11 +920,25 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "eleazar",
+        "zaqueu",
+        "jerico",
+        "lei-mosaica"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-19": {
       "label": "Santos Roque González, Afonso Rodríguez e João de Castillo, mártires",
@@ -752,13 +966,25 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
       "dictionaryRefs": [
-        "macabeus"
-      ]
+        "macabeus",
+        "lei-mosaica",
+        "antioco-iv",
+        "minas-parabola"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-20": {
       "label": "Quinta-feira da 33ª semana do Tempo Comum",
@@ -786,11 +1012,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "lei-mosaica",
+        "templo-segundo"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-21": {
       "label": "Apresentação da Bem-aventurada Virgem Maria",
@@ -818,13 +1056,23 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa."
+        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
       "dictionaryRefs": [
-        "salmo-cantico"
-      ]
+        "salmo-cantico",
+        "hospitalidade"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-22": {
       "label": "Santa Cecília, virgem e mártir",
@@ -852,11 +1100,25 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "saduceus",
+        "levirato",
+        "ressurreicao",
+        "antioco-iv"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-23": {
       "label": "Nosso Senhor Jesus Cristo, Rei do Universo",
@@ -888,7 +1150,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa."
+        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [
@@ -919,8 +1182,17 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       ],
       "dictionaryRefs": [
         "hebron",
-        "trono-davi"
-      ]
+        "trono-davi",
+        "ressurreicao"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-24": {
       "label": "Santos André Dũng-Lạc e companheiros, mártires",
@@ -948,11 +1220,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "viuva",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-25": {
       "label": "Terça-feira da 34ª semana do Tempo Comum",
@@ -980,11 +1265,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "nabucodonosor",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-26": {
       "label": "Quarta-feira da 34ª semana do Tempo Comum",
@@ -1012,11 +1310,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "baltazar",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": false,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-27": {
       "label": "Quinta-feira da 34ª semana do Tempo Comum",
@@ -1044,11 +1355,25 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "cova-leoes",
+        "filho-homem",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-28": {
       "label": "Sexta-feira da 34ª semana do Tempo Comum",
@@ -1076,11 +1401,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa."
+        "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "filho-homem",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-29": {
       "label": "Sábado da 34ª semana do Tempo Comum",
@@ -1108,11 +1446,24 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "glosaReviewed": false,
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
-        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa."
+        "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [],
-      "dictionaryRefs": []
+      "dictionaryRefs": [
+        "daniel-exilio",
+        "filho-homem",
+        "cantico-daniel"
+      ],
+      "contentStatus": {
+        "meaningUnitsDrafted": 9,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
+      }
     },
     "2025-11-30": {
       "label": "1º Domingo do Advento",
@@ -1146,7 +1497,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
         "A forma breve Rm 13,11-14a deve ser cotejada com a edição e a indicação litúrgica exata antes de homologar.",
-        "Conferido o refrão brasileiro e os versículos 1–2 do Sl 121(122); estrofes restantes e validação especializada pendentes. Não confundir com texto português europeu do acervo do Ano A."
+        "Conferido o refrão brasileiro e os versículos 1–2 do Sl 121(122); estrofes restantes e validação especializada pendentes. Não confundir com texto português europeu do acervo do Ano A.",
+        "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada."
       ],
       "options": [],
       "glosaBlocks": [
@@ -1192,7 +1544,10 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "arado-foice",
         "diluvio-noe",
         "moagem",
-        "salmo-cantico"
+        "salmo-cantico",
+        "advento",
+        "filho-homem",
+        "vigilancia"
       ],
       "salmoResponsorial": {
         "reference": "Sl 121(122), 1-2.4-5.6-7.8-9 (R. cf. 1)",
@@ -1205,6 +1560,14 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "complete": false,
         "textLicensed": false,
         "humanLibrasValidated": false
+      },
+      "contentStatus": {
+        "meaningUnitsDrafted": 12,
+        "sourceIndexChecked": true,
+        "singleDateSourceRead": true,
+        "fullBrazilianTextChecked": false,
+        "completeGlosaDraft": false,
+        "specializedLibrasValidation": false
       }
     }
   },
@@ -1316,6 +1679,312 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "espaco": "Alternar papel de salmista e assembleia; delimitar estrofes e repetições sem inventar refrão.",
       "source": "Lc 1,46-55; Dn 3; Ordo Lectionum Missae",
       "review": "preliminar; validação histórica e Libras pendentes"
+    },
+    "selo-apocalipse": {
+      "id": "selo-apocalipse",
+      "title": "Selo de Deus no Apocalipse",
+      "dimension": "biblico-simbolico",
+      "contexto": "Na visão de Ap 7, o selo identifica os servos do Deus vivo; os números e imagens integram linguagem apocalíptica, não uma contagem censitária atual.",
+      "espaco": "Marcar narrador João, anjos e povo em posições estáveis; separar símbolo de ação literal.",
+      "source": "Ap 7,2-14",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "bem-aventurancas": {
+      "id": "bem-aventurancas",
+      "title": "Bem-aventuranças",
+      "dimension": "teologico-cultural",
+      "contexto": "Ensinamentos de Jesus em Mt 5 que associam situações humanas e escolhas éticas à promessa do Reino; não são nove slogans isolados.",
+      "espaco": "Cada bem-aventurança: condição presente → promessa correspondente, mantendo o sujeito.",
+      "source": "Mt 5,1-12a",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "ressurreicao": {
+      "id": "ressurreicao",
+      "title": "Ressurreição dos mortos",
+      "dimension": "teologico-temporal",
+      "contexto": "No Novo Testamento, ressurreição não é somente sobrevivência da memória: remete à ação de Deus e à vitória de Cristo sobre a morte.",
+      "espaco": "Distinguir morte presente, esperança futura e ressurreição de Cristo; não datar acontecimentos.",
+      "source": "1Cor 15,20-28; Lc 20,27-40",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "vigilancia": {
+      "id": "vigilancia",
+      "title": "Vigilância escatológica",
+      "dimension": "temporal-teologico",
+      "contexto": "Nas parábolas de Jesus, estar preparado não significa adivinhar calendários, mas viver responsabilidade e fidelidade.",
+      "espaco": "Marcar cenas hipotéticas dentro do discurso de Jesus; voltar ao locutor após cada comparação.",
+      "source": "Lc 12,35-40; Mt 24,37-44",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "hospitalidade": {
+      "id": "hospitalidade",
+      "title": "Hospitalidade e mesa",
+      "dimension": "economico-cultural",
+      "contexto": "Na sociedade mediterrânea antiga, convite e refeição também exprimiam prestígio e reciprocidade; Lc 14 questiona convidar somente quem retribui.",
+      "espaco": "Estabelecer anfitrião, convidados iniciais e novos convidados sem estigmatizar pessoas pobres.",
+      "source": "Lc 14,12-24",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "paulo-comunidades": {
+      "id": "paulo-comunidades",
+      "title": "Paulo e as comunidades cristãs",
+      "dimension": "historico-social",
+      "contexto": "As cartas de Paulo se dirigem a comunidades concretas com questões de convivência, culto, trabalho e dons; não são falas de Jesus no Evangelho.",
+      "espaco": "Fixar Paulo como autor e destinatários em outro espaço; evitar trocar sua voz com a dos evangelistas.",
+      "source": "Rm 11–16; 2Ts 3,7-12",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "corpo-cristo": {
+      "id": "corpo-cristo",
+      "title": "Corpo de Cristo e dons",
+      "dimension": "teologico-social",
+      "contexto": "Rm 12 descreve a comunidade como corpo com membros e serviços diferentes: metáfora de cooperação, não anatomia de Cristo.",
+      "espaco": "Mostrar membros em posições distintas conectados por serviço; não desenhar corpo literal como Igreja.",
+      "source": "Rm 12,5-16a",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "ovelha-perdida": {
+      "id": "ovelha-perdida",
+      "title": "Ovelha perdida",
+      "dimension": "agricola-cultural",
+      "contexto": "A criação de rebanhos de ovelhas integra o universo rural do Evangelho; a busca da ovelha ilustra o cuidado e a alegria da reconciliação.",
+      "espaco": "Pastor, rebanho e ovelha afastada; ao fim retornar ao ensinamento de Jesus.",
+      "source": "Lc 15,1-7",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "moeda-perdida": {
+      "id": "moeda-perdida",
+      "title": "Moeda perdida e economia doméstica",
+      "dimension": "economico-cultural",
+      "contexto": "A procura de uma moeda na casa representa perda real de recurso doméstico e alegria ao recuperá-lo; a parábola aplica-se à conversão.",
+      "espaco": "Delimitar casa e mulher, ação de procurar e encontro da moeda; não confundir com as duas moedas da viúva.",
+      "source": "Lc 15,8-10",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "administrador": {
+      "id": "administrador",
+      "title": "Administrador e dívidas",
+      "dimension": "economico-social",
+      "contexto": "A parábola de Lc 16 usa credores, contratos e gestão de bens para ensinar prudência; a menção à astúcia não legitima desonestidade.",
+      "espaco": "Separar proprietário, administrador e devedores; marcar que Jesus comenta uma parábola.",
+      "source": "Lc 16,1-15",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "fariseus": {
+      "id": "fariseus",
+      "title": "Fariseus",
+      "dimension": "historico-religioso",
+      "contexto": "Grupo judaico do Segundo Templo associado ao estudo e à interpretação da Lei; nos Evangelhos há diferentes encontros com Jesus, não um retrato de todo o judaísmo.",
+      "espaco": "Não usar sinal estereotipado para judeus; marcar interlocutores específicos em cada cena.",
+      "source": "Lc 15,1-2; Lc 17,20-25",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "templo-segundo": {
+      "id": "templo-segundo",
+      "title": "Templo de Jerusalém no tempo de Jesus",
+      "dimension": "historico-politico",
+      "contexto": "O Templo era centro de culto judaico em Jerusalém no período do Segundo Templo, distinto da Basílica de Latrão em Roma.",
+      "espaco": "Separar o edifício histórico em Jerusalém da metáfora do corpo de Cristo em Jo 2.",
+      "source": "Jo 2,13-22; Lc 21,5-6",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "sabedoria-personificada": {
+      "id": "sabedoria-personificada",
+      "title": "Sabedoria personificada",
+      "dimension": "literario-teologico",
+      "contexto": "Sb 7 descreve a Sabedoria por múltiplos atributos poéticos; a personificação não requer representá-la como divindade concorrente.",
+      "espaco": "Usar marcador de linguagem poética, distinguir atributo da personagem narrativa.",
+      "source": "Sb 7,22–8,1",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "justica-reis": {
+      "id": "justica-reis",
+      "title": "Responsabilidade dos governantes",
+      "dimension": "historico-politico",
+      "contexto": "O livro da Sabedoria dirige advertência aos reis: o exercício do poder é julgado pela justiça praticada, sobretudo com os frágeis.",
+      "espaco": "Separar narrador, governantes e pobres; não identificar diretamente com autoridade moderna específica.",
+      "source": "Sb 6,1-11; Sl 81(82)",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "lepra-biblica": {
+      "id": "lepra-biblica",
+      "title": "Lepra no contexto bíblico",
+      "dimension": "historico-cultural",
+      "contexto": "Nos Evangelhos, a designação tradicional reúne condições cutâneas e implicações sociais e rituais; não corresponde automaticamente ao diagnóstico médico moderno de hanseníase.",
+      "espaco": "Não representar pessoas por sinal depreciativo; marcar distância na cena sem naturalizar exclusão.",
+      "source": "Lc 17,11-19",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "samaria": {
+      "id": "samaria",
+      "title": "Samaria e samaritano",
+      "dimension": "geografico-religioso",
+      "contexto": "Samaria era região associada a comunidades samaritanas e relações complexas com judeus; em Lc 17 a pessoa que agradece é identificada como samaritana.",
+      "espaco": "Indicar Samaria e Galileia no percurso, sem usar o mesmo referente para povo e região.",
+      "source": "Lc 17,11-19",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "misericordia": {
+      "id": "misericordia",
+      "title": "Misericórdia",
+      "dimension": "teologico-social",
+      "contexto": "Nos textos de Romanos e Lucas, misericórdia reúne compaixão e ação favorável; não se reduz a sentimento privado.",
+      "espaco": "Distinguir quem pede, quem age e a transformação vivida pela pessoa.",
+      "source": "Rm 11,29-36; Lc 17,11-19",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "viuva": {
+      "id": "viuva",
+      "title": "Viúvas no mundo bíblico",
+      "dimension": "historico-economico",
+      "contexto": "A ausência do marido podia produzir vulnerabilidade social e econômica; as parábolas e narrativas exigem atenção à agência dessas mulheres.",
+      "espaco": "Fixar a viúva como sujeito do pedido e da oferta, não como figura passiva sem voz.",
+      "source": "Lc 18,1-8; Lc 21,1-4",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "lei-mosaica": {
+      "id": "lei-mosaica",
+      "title": "Lei de Moisés e fidelidade",
+      "dimension": "historico-religioso",
+      "contexto": "A Lei judaica estrutura decisões religiosas narradas em Macabeus; perseguição política e resistência devem ser compreendidas no contexto helenístico.",
+      "espaco": "Diferenciar narrador, povo judaico e governante estrangeiro; não extrapolar para conflito atual.",
+      "source": "1Mc 1–2; 2Mc 6–7",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "antioco-iv": {
+      "id": "antioco-iv",
+      "title": "Antíoco IV Epifânio",
+      "dimension": "historico-politico",
+      "contexto": "Monarca selêucida do século II a.C. associado às perseguições religiosas narradas nos livros dos Macabeus; não se confunde com reis babilônicos do livro de Daniel.",
+      "espaco": "Separar mapa Judeia sob domínio selêucida de cenários babilônicos de Daniel.",
+      "source": "1Mc 1,10-64; 2Mc 6–7",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "helenismo": {
+      "id": "helenismo",
+      "title": "Helenismo na Judeia",
+      "dimension": "historico-cultural",
+      "contexto": "Conjunto variado de influências políticas e culturais gregas no Mediterrâneo oriental; os conflitos macabeus envolveram poder, costumes e culto.",
+      "espaco": "Não representar gregos e judeus como grupos homogêneos nem sugerir causalidade única.",
+      "source": "1Mc 1,10-15",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "eleazar": {
+      "id": "eleazar",
+      "title": "Eleazar e testemunho de consciência",
+      "dimension": "historico-religioso",
+      "contexto": "O ancião Eleazar recusa simular adesão à imposição alimentar para não dar exemplo enganoso aos jovens.",
+      "espaco": "Estabelecer Eleazar, agentes de coerção e jovens referidos; não glorificar o sofrimento.",
+      "source": "2Mc 6,18-31",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "zaqueu": {
+      "id": "zaqueu",
+      "title": "Zaqueu e arrecadação de impostos",
+      "dimension": "historico-economico",
+      "contexto": "Zaqueu aparece em Jericó como chefe dos cobradores de impostos; sua conversão inclui restituição concreta aos prejudicados.",
+      "espaco": "Jericó, árvore, Jesus, multidão e casa; ressaltar mudança econômica e social.",
+      "source": "Lc 19,1-10",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "jerico": {
+      "id": "jerico",
+      "title": "Jericó",
+      "dimension": "geografico",
+      "contexto": "Cidade no vale do Jordão, cenário dos encontros de Jesus com um homem cego e com Zaqueu.",
+      "espaco": "Usar lugar fixo no mapa e distinguir as duas narrativas.",
+      "source": "Lc 18,35-43; Lc 19,1-10",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "minas-parabola": {
+      "id": "minas-parabola",
+      "title": "Minas e prestação de contas",
+      "dimension": "economico-politico",
+      "contexto": "A parábola de Lc 19 usa unidade de dinheiro e autoridade régia para falar sobre responsabilidade; não é idêntica à parábola dos talentos.",
+      "espaco": "Separar dinheiro entregue, ações de cada servo e retorno do personagem nobre.",
+      "source": "Lc 19,11-28",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "saduceus": {
+      "id": "saduceus",
+      "title": "Saduceus e ressurreição",
+      "dimension": "historico-religioso",
+      "contexto": "Grupo judaico da época do Segundo Templo que, no debate narrado em Lc 20, não aceita a ressurreição; a controvérsia é interna ao contexto judaico.",
+      "espaco": "Separar pergunta hipotética dos saduceus e resposta de Jesus; evitar generalizar a todos os judeus.",
+      "source": "Lc 20,27-40",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "levirato": {
+      "id": "levirato",
+      "title": "Levirato e parentesco",
+      "dimension": "historico-cultural",
+      "contexto": "Prática ligada à continuidade familiar e à responsabilidade pelo nome do falecido, usada como hipótese pelos interlocutores de Jesus.",
+      "espaco": "Sete irmãos e uma mulher pertencem à hipótese, não a um casamento contemporâneo real.",
+      "source": "Lc 20,27-40; Dt 25,5-10",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "daniel-exilio": {
+      "id": "daniel-exilio",
+      "title": "Daniel e a corte babilônica",
+      "dimension": "historico-politico",
+      "contexto": "O livro de Daniel situa narrativas e visões entre exílio, poder régio e fidelidade ao Deus de Israel; cada episódio usa personagens e formas literárias distintas.",
+      "espaco": "Mapear corte, rei, Daniel e companheiros, distinguindo visões de acontecimentos narrados.",
+      "source": "Dn 1–7",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "nabucodonosor": {
+      "id": "nabucodonosor",
+      "title": "Nabucodonosor e o sonho dos reinos",
+      "dimension": "historico-literario",
+      "contexto": "O governante babilônico da narrativa de Dn 2 tem um sonho simbólico de reinos, interpretado por Daniel.",
+      "espaco": "Representar sonho da estátua num espaço secundário; retornar a Daniel intérprete.",
+      "source": "Dn 2,31-45",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "baltazar": {
+      "id": "baltazar",
+      "title": "Baltazar e a escrita na parede",
+      "dimension": "historico-literario",
+      "contexto": "Dn 5 narra a festa de Baltazar com vasos sagrados e a inscrição misteriosa que Daniel interpreta como juízo do poder.",
+      "espaco": "Separar objetos do Templo, banquete, escrita simbólica e discurso de Daniel.",
+      "source": "Dn 5,1-28",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "cova-leoes": {
+      "id": "cova-leoes",
+      "title": "Cova dos leões",
+      "dimension": "historico-narrativo",
+      "contexto": "A narrativa de Dn 6 apresenta decreto político, oração de Daniel, punição e livramento divino; não é roteiro de prova da proteção física hoje.",
+      "espaco": "Delimitar cova, leões, rei e Daniel; distinguir narrador e fala dos personagens.",
+      "source": "Dn 6,12-28",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "filho-homem": {
+      "id": "filho-homem",
+      "title": "Filho do Homem",
+      "dimension": "biblico-teologico",
+      "contexto": "Expressão usada em visões de Daniel e no discurso de Jesus; interpretar segundo o contexto de cada passagem, não automaticamente como uma mesma cena histórica.",
+      "espaco": "Marcar visão de Dn 7 e ensinamento de Lc 21 em quadros diferentes.",
+      "source": "Dn 7,13-14; Lc 21,27",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "advento": {
+      "id": "advento",
+      "title": "Advento",
+      "dimension": "liturgico-temporal",
+      "contexto": "Tempo litúrgico de preparação e expectativa que inicia o novo ano litúrgico no primeiro domingo do Advento.",
+      "espaco": "Diferenciar ano civil de ano litúrgico, e preparação de previsão cronológica.",
+      "source": "Is 2,1-5; Mt 24,37-44",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
+    },
+    "cantico-daniel": {
+      "id": "cantico-daniel",
+      "title": "Cântico de Daniel 3",
+      "dimension": "liturgico-poetico",
+      "contexto": "Trechos do cântico de Dn 3 são usados como resposta litúrgica em vários dias de novembro; não são salmos do Saltério.",
+      "espaco": "Separar salmista/assembleia e imagens da criação, mantendo refrão em cada ocorrência após conferência.",
+      "source": "Dn 3; liturgia 24–29/11/2025",
+      "review": "preliminar — pesquisa histórica e validação humana em Libras pendentes"
     }
   }
 });
