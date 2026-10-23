@@ -31,6 +31,7 @@ jobs:
           node tests/dicionario.test.cjs
           node tests/novembro-integracao-editorial.test.cjs
           node tests/fonte-online.test.cjs
+          node tests/leitura-limpa-ux.test.cjs
       - name: Auditar cobertura em rede das 30 datas (não bloqueante)
         continue-on-error: true
         run: node tests/fonte-online-cobertura.cjs
