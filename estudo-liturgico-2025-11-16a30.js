@@ -150,7 +150,7 @@ window.LCE_ESTUDO_NOV_2025=Object.assign(window.LCE_ESTUDO_NOV_2025||{},{
       {
         "id": "2025-11-18-p-2",
         "sentido": "Reconhece que Deus o sustenta quando outros falham",
-        "glosaPreliminar": "DEUS MEU APOIO"
+        "glosaPreliminar": "(ORANTE SOB AMEAÇA) DEUS MEU APOIO / OUTROS FALHAR, DEUS NÃO ABANDONAR"
       },
       {
         "id": "2025-11-18-p-3",
