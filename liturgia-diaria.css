@@ -167,3 +167,33 @@
 @media print{
   .reading-source-details,.monthly-editorial-details,.accordion-panel>.share-liturgy-link{display:none!important}
 }
+
+/* Notas fora da comparação: ocupam largura integral, sem esticar apenas a glosa. */
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes{
+  border-top:1px solid #e7ded0;
+  padding:0 26px;
+  background:#fffdf8;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes .monthly-editorial-details{
+  border:0;margin:0;padding:0;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes summary{
+  display:list-item;list-style:disclosure-closed;
+  font-weight:650;font-size:.85rem;
+  padding:13px 4px;color:#715a33;
+  cursor:pointer;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes details[open] summary{list-style:disclosure-open}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 28px;margin:0;padding:0 0 14px 20px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li{
+  break-inside:avoid;padding:8px 0 9px;border-bottom:1px solid #e9e1d4;
+  line-height:1.6;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .liturgy-study-notes{padding:0 16px}
+  .accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{grid-template-columns:1fr}
+}
+@media print{.liturgy-study-notes{display:none!important}}

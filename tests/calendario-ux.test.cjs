@@ -18,8 +18,8 @@ assert.ok(!source.includes("const hasVisualDraft = Boolean(draft?.glosaBlocks?.l
 assert.ok(source.includes("Abrir Liturgia + Libras desta data"));
 assert.ok(!source.includes("els.calendarDetail.appendChild(button);\n  }\n\n  renderCalendar()"));
 assert.ok(style.includes(".calendar-reading-tools"));
-assert.ok(html.includes("app.js?v=20261023-leitura-limpa1"));
-assert.ok(html.includes("liturgia-diaria.css?v=20261023-leitura-limpa1"));
+assert.ok(html.includes("app.js?v=20261023-notas-gerais1"));
+assert.ok(html.includes("liturgia-diaria.css?v=20261023-notas-gerais1"));
 const daily = fs.readFileSync('liturgia-diaria.js','utf8');
 assert.ok(!daily.includes('Roteiros visuais em estudo — referência × preparação de glosa'));
 assert.ok(!daily.includes('if(data?.glosaBlocks?.length)'));

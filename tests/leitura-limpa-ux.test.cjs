@@ -15,6 +15,11 @@ assert.ok(app.includes("card.querySelector('.accordion-panel')?.appendChild(shar
 assert.ok(!app.includes('Novembro/2025: cadastro de referências e fontes brasileiras por data.'));
 assert.ok(app.includes('monthly-glosa-list'));
 assert.ok(app.includes("summary.textContent='Notas de interpretação'"));
+assert.ok(app.includes("const studyNotes=card.querySelector('.glosa-text > .monthly-editorial-details')"));
+assert.ok(app.includes("comparison.after(aside)"));
+assert.ok(app.includes("studyNotes.open=false"));
+assert.ok(css.includes(".liturgy-study-notes ol"));
+assert.ok(css.includes("grid-template-columns:repeat(2,minmax(0,1fr))"));
 assert.ok(app.includes("originalBox.replaceChildren(pending)"));
 assert.ok(!app.includes("glosa integral depende da correspondência com os versículos"));
 assert.ok(online.includes('pane.replaceChildren(status)'));

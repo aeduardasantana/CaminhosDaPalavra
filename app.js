@@ -1061,6 +1061,17 @@ function renderLiturgia() {
     if(entry.editorialStudy) {
       card.dataset.editorialStudy='true';
       card.dataset.completeText='false';
+      // Notas de interpretação são opcionais e não alongam a coluna direita.
+      const comparison=card.querySelector('.parallel-view');
+      const studyNotes=card.querySelector('.glosa-text > .monthly-editorial-details');
+      if(comparison && studyNotes){
+        const aside=document.createElement('aside');
+        aside.className='liturgy-study-notes';
+        aside.setAttribute('aria-label','Notas de interpretação');
+        studyNotes.open=false;
+        aside.appendChild(studyNotes);
+        comparison.after(aside);
+      }
       if(window.LCE_FONTE_ONLINE)window.LCE_FONTE_ONLINE.loadForEntry(entry,card);
     }
     if (entry.data && entry.item) {
