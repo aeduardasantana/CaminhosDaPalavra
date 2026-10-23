@@ -1125,7 +1125,7 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         ],
         [
           "Salmo responsorial",
-          "Sl 121(122)"
+          "Sl 121(122), 1-2.4-5.6-7.8-9 (R. cf. 1)"
         ],
         [
           "Segunda leitura",
@@ -1145,7 +1145,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       "notes": [
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Cotejo pontual com edição publicada por Padre Paulo Ricardo (leituras atribuídas à CNBB); exige homologação editorial completa.",
-        "A forma breve Rm 13,11-14a deve ser cotejada com a edição e a indicação litúrgica exata antes de homologar."
+        "A forma breve Rm 13,11-14a deve ser cotejada com a edição e a indicação litúrgica exata antes de homologar.",
+        "Conferido o refrão brasileiro e os versículos 1–2 do Sl 121(122); estrofes restantes e validação especializada pendentes. Não confundir com texto português europeu do acervo do Ano A."
       ],
       "options": [],
       "glosaBlocks": [
@@ -1192,7 +1193,19 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "diluvio-noe",
         "moagem",
         "salmo-cantico"
-      ]
+      ],
+      "salmoResponsorial": {
+        "reference": "Sl 121(122), 1-2.4-5.6-7.8-9 (R. cf. 1)",
+        "refrain": "Que alegria, quando me disseram: “Vamos à casa do Senhor!”",
+        "firstStanza": "Que alegria, quando ouvi que me disseram: “Vamos à casa do Senhor!” E agora nossos pés já se detêm, Jerusalém, em tuas portas.",
+        "source": "https://liturgia.cancaonova.com/pb/liturgia/1o-domingo-advento-domingo-2/",
+        "comparisonSource": "https://www.cnbbne5.org/post/roteiro-para-celebra%C3%A7%C3%A3o-da-palavra-1%C2%BA-domingo-do-advento-1",
+        "referenceConfirmed": true,
+        "isExcerpt": true,
+        "complete": false,
+        "textLicensed": false,
+        "humanLibrasValidated": false
+      }
     }
   },
   "dictionary": {
