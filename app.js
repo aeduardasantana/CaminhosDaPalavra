@@ -263,7 +263,7 @@ function monthlyStudyEntries(isoDate) {
       data:isoDate,ano:cycle,tempo:litCalendar.infoForIso(isoDate).season,
       section:'REVISAO MENSAL — NOVEMBRO 2025',celebracao:month.label,item:kind,itemLabel:label,
       referencia:psalm?.reference||reference,
-      editorialStudy:true,draftUnits:segments,partialBrazilianPsalm:psalm||null,
+      editorialStudy:true,draftUnits:segments,verseUnits:window.LCE_ESTUDO_VERSICULAR_2025_11?.[isoDate]?.[shortKind]||[],partialBrazilianPsalm:psalm||null,
       salmoRefrainConfirmed:month.salmoRefrainConfirmed&&kind==='salmo'?month.salmoRefrainConfirmed:null,
       sourceVersion:'Registro por data: texto integral da edição brasileira não incorporado. Roteiros anteriores arquivados como preparação preliminar, não glosa completa.',
       sourceUrl:psalm?.source||month.individualDateSource||month.source,
@@ -522,6 +522,23 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
   message.className='monthly-original-pending';
   message.textContent='A glosa integral depende da correspondência com os versículos brasileiros. Nenhuma tradução de Libras foi validada para esta leitura.';
   glosaBox.replaceChildren(message);
+  if(entry.verseUnits?.length){
+    const verseDetails=document.createElement('details');
+    verseDetails.className='monthly-editorial-details';
+    const verseSummary=document.createElement('summary');
+    verseSummary.textContent='Preparação por versículos — rascunho para revisão humana';
+    verseDetails.appendChild(verseSummary);
+    const ol=document.createElement('ol');
+    for(const unit of entry.verseUnits){
+      const li=document.createElement('li');
+      const heading=document.createElement('strong');heading.textContent=unit.ref;
+      const meaning=document.createElement('p');meaning.textContent='Sentido: '+unit.sentido;
+      const draft=document.createElement('p');draft.className='monthly-draft-note';draft.textContent=unit.glosa;
+      const setting=document.createElement('p');setting.textContent='Espaço/referentes: '+unit.espaco;
+      li.append(heading,meaning,draft,setting);ol.appendChild(li);
+    }
+    verseDetails.appendChild(ol);glosaBox.appendChild(verseDetails);
+  }
   if(entry.draftUnits.length){
     const details=document.createElement('details');
     details.className='monthly-editorial-details';

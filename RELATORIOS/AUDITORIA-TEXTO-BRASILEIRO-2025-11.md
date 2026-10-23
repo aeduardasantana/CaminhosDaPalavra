@@ -31,3 +31,7 @@ Os arquivos dominicais do usuário no Drive e a base `liturgy-originals-a/b/c.js
 - **Competência 01/36 permanece EM_REVISAO.**
 
 O conteúdo completo e as glosas integrais exigem incorporação por leitura de fonte brasileira textualmente autorizada e cotejo real de cada versículo, inclusive as 3 estrofes e refrão do salmo de 05/11. Qualquer avanço deve alterar o campo da ocorrência verificada e não os 96 registros indistintamente.
+
+### Preparação versicular — 05/11/2025
+
+Elaborado o rascunho de glosa por unidade referenciada para Rm 13,8-10 (3 itens), Sl 111(112),1-2.4-5.9 com refrão (7 itens) e Lc 14,25-33 (8 itens), num total de **18 unidades de estudo versicular**. A redação do Lecionário brasileiro ainda não está reproduzida nem cotejada por unidade na interface; a glosa continua preliminar e não validada. As unidades estão em `estudo-versiculos-2025-11.js` e aparecem apenas em seção editorial recolhida.
