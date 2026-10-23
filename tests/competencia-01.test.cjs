@@ -16,6 +16,16 @@ assert.equal(layer.readings['2025-11-02'].options.length,2);
 assert.equal(layer.readings['2025-11-01'].items[1][1],'Sl 23(24)');
 assert.ok(Object.keys(layer.dictionary).length>=10);
 assert.ok(layer.readings['2025-11-30'].glosaBlocks.every(b=>b.status==='roteiro-contextual-preliminar'));
+const psalm=layer.readings['2025-11-30'].salmoResponsorial;
+assert.equal(psalm.reference,'Sl 121(122), 1-2.4-5.6-7.8-9 (R. cf. 1)');
+assert.ok(psalm.refrain.startsWith('Que alegria, quando me disseram'));
+assert.ok(psalm.firstStanza.includes('E agora nossos pés já se detêm'));
+assert.equal(psalm.complete,false);
+assert.equal(psalm.textLicensed,false);
+assert.equal(psalm.humanLibrasValidated,false);
+assert.equal(layer.readings['2025-11-30'].items[1][1],psalm.reference);
+assert.equal(typeof layer.readings['2025-11-02'].salmoResponsorial,'undefined');
+
 assert.ok(fs.readFileSync('index.html','utf8').includes('./liturgia-2025-11.js'));
 assert.ok(!fs.readFileSync('index.html','utf8').includes('liturgy-originals-br-licensed.js'));
 console.log('OK: competência 01/36 — 30 datas, fontes, exceções e pendências editoriais preservadas.');

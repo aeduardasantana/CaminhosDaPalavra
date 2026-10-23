@@ -257,7 +257,20 @@ function entriesForDate(isoDate) {
       entry.item === item.type &&
       entry.referencia === item.reference
     );
-    return Object.assign({}, base || {}, {data: isoDate});
+    const occurrence = Object.assign({}, base || {}, {data: isoDate});
+    const month = isoDate === '2025-11-30' ? window.LCE_MONTH_2025_11?.readings?.[isoDate] : null;
+    if (month && item.type === 'salmo' && month.salmoResponsorial) {
+      const psalm = month.salmoResponsorial;
+      return Object.assign(occurrence, {
+        referencia: psalm.reference,
+        partialBrazilianPsalm: psalm,
+        status: 'Refrão e primeira estrofe brasileiros conferidos; restante e Libras pendentes',
+        sourceVersion: 'Trecho brasileiro desta ocorrência: refrão e vv. 1–2. Estrofes restantes não reproduzidas; glosa não validada.',
+        sourceUrl: psalm.source,
+        glosa: 'Preparação e validação da glosa desta ocorrência pendentes.'
+      });
+    }
+    return occurrence;
   }));
 }
 
@@ -468,6 +481,38 @@ function appendPsalmRefrain(container, refrain, alternative, compact = false) {
   }
 
   container.appendChild(box);
+}
+
+// O registro brasileiro parcial nunca reutiliza automaticamente a glosa da edição portuguesa.
+function renderPartialBrazilianPsalm(psalm, originalBox, glosaBox) {
+  const originals = document.createElement('div');
+  const glosas = document.createElement('div');
+  originals.className = 'psalm-sequence psalm-br-partial';
+  glosas.className = 'psalm-sequence psalm-glosa-sequence psalm-br-partial';
+  const units = [
+    ['REFRÃO · cf. v. 1', psalm.refrain, 'Glosa do refrão não revisada.'],
+    ['ESTROFE 1 · vv. 1–2', psalm.firstStanza, 'Glosa dos vv. 1–2 ainda pendente de construção, ensaio e validação em Libras.'],
+    ['REFRÃO · REPETIR', psalm.refrain, 'Repetição do refrão ainda pendente de glosa validada.'],
+    ['ESTROFES 2–4 · vv. 4–9',
+      'Texto brasileiro das demais estrofes ainda não incorporado por ausência de autorização editorial de reprodução. Consulte a fonte brasileira indicada.',
+      'Correspondência textual e glosas das estrofes 2–4 pendentes.']
+  ];
+  for (const [title, textOriginal, textGlosa] of units) {
+    for (const [container, content, pending] of [[originals,textOriginal,false],[glosas,textGlosa,true]]) {
+      const section = document.createElement('section');
+      section.className = 'psalm-stanza' + (pending ? ' glosa-pending' : '');
+      const label = document.createElement('strong');
+      label.className = 'psalm-part-label';
+      label.textContent = title;
+      const line = document.createElement('div');
+      line.className = 'psalm-part-text';
+      line.textContent = content;
+      section.append(label,line);
+      container.appendChild(section);
+    }
+  }
+  originalBox.replaceChildren(originals);
+  glosaBox.replaceChildren(glosas);
 }
 
 function formatPsalmOriginal(text, cycle) {
@@ -854,7 +899,9 @@ function renderLiturgia() {
     const glosaTextBox = node.querySelector('.glosa-text');
     let parsedPsalm = null;
 
-    if (entry.item === 'salmo') {
+    if (entry.item === 'salmo' && entry.partialBrazilianPsalm) {
+      renderPartialBrazilianPsalm(entry.partialBrazilianPsalm, originalTextBox, glosaTextBox);
+    } else if (entry.item === 'salmo') {
       originalTextBox.replaceChildren();
       const formattedPsalm = formatPsalmOriginal(entry.original, entry.ano);
       parsedPsalm = formattedPsalm.parsed;
@@ -1090,45 +1137,24 @@ function selectCalendarDate(dayInfo, options = {}) {
     tools.className = 'calendar-reading-tools';
     const existing = contents.length > 0;
     const draft = window.LCE_DAILY.readings[dayInfo.iso];
-    const hasVisualDraft = Boolean(draft?.glosaBlocks?.length);
+    // Roteiros de revisão são dados internos, não uma segunda interface de glosa.
     if (existing) {
       const button = document.createElement('button');
       button.type = 'button';
       button.className = 'primary-action calendar-action';
-      button.textContent = 'Abrir texto e glosa de apoio desta data';
-      button.setAttribute('aria-label','Abrir acervo de textos e glosas de apoio referente a ' + formatDate(dayInfo.iso));
+      button.textContent = 'Abrir Liturgia + Libras desta data';
+      button.setAttribute('aria-label', 'Abrir leituras e glosas de apoio relativas a ' + formatDate(dayInfo.iso));
       button.addEventListener('click', () => openLiturgicalDate(dayInfo.iso));
       tools.appendChild(button);
       const note = document.createElement('p');
       note.className = 'calendar-reading-notice';
-      note.textContent = 'Acervo dominical em revisão: confirme a edição brasileira antes de utilizar o texto na celebração. Glosas ainda não validadas em Libras.';
+      note.textContent = 'Consulte o texto e a glosa de apoio na página especializada; a validação humana em Libras permanece pendente.';
       tools.appendChild(note);
-    } else if (!hasVisualDraft) {
+    } else {
       const note = document.createElement('p');
       note.className = 'calendar-reading-notice';
-      note.textContent = 'Texto integral e glosa comparativa ainda não cadastrados para esta data. Consulte as referências acima.';
+      note.textContent = 'A liturgia comparativa desta data ainda não está cadastrada. As referências aparecem acima.';
       tools.appendChild(note);
-    }
-    if (hasVisualDraft) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'secondary-button calendar-visual-action';
-      button.textContent = 'Ver roteiro visual preliminar nesta ficha';
-      button.addEventListener('click', () => {
-        const target = els.calendarDetail.querySelector('.daily-pairing');
-        if (target) {
-          target.setAttribute('tabindex','-1');
-          target.focus({preventScroll:true});
-          target.scrollIntoView({behavior: window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',block:'start'});
-        }
-      });
-      tools.appendChild(button);
-      if (!existing) {
-        const note = document.createElement('p');
-        note.className = 'calendar-reading-notice';
-        note.textContent = 'Roteiro de estudo em construção; não é glosa integral nem tradução validada em Libras.';
-        tools.appendChild(note);
-      }
     }
     readingsBox.insertBefore(tools, readingsBox.children[1] || null);
   }
