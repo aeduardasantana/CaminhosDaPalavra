@@ -74,7 +74,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/01-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/01-11-2025"
     },
@@ -182,7 +183,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.pocketterco.com.br/index.php/liturgia/02/11/2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.pocketterco.com.br/index.php/liturgia/02/11/2025",
       "lectionaryChoices": {
@@ -291,7 +293,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.vaticannews.va/pt/palavra-do-dia/2025/11/03.html",
-        "sourceScope": "Vatican News: leitura e Evangelho; salmo conferido apenas no índice mensal"
+        "sourceScope": "Vatican News: leitura e Evangelho; salmo conferido apenas no índice mensal",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.vaticannews.va/pt/palavra-do-dia/2025/11/03.html"
     },
@@ -340,7 +343,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/04-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/04-11-2025"
     },
@@ -355,7 +359,7 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         ],
         [
           "Salmo responsorial",
-          "Sl 111(112)"
+          "Sl 111(112),1-2.4-5.9 (R. 5a)"
         ],
         [
           "Evangelho",
@@ -364,7 +368,7 @@ window.LCE_MONTH_2025_11 = Object.freeze({
       ],
       "source": "https://www.hojeediadeliturgia.com.br/2025/09/liturgia-novembro-2025.html",
       "calendarSource": "https://gcatholic.org/calendar/2025/BR-pt",
-      "validation": "indice-provisorio",
+      "validation": "referencias-e-refrao-salmo-cotejados-05-11-2025",
       "textLicensed": false,
       "librasValidated": false,
       "glosaReviewed": false,
@@ -372,7 +376,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "Levantamento de referências — sem transcrição do Lecionário brasileiro e sem glosa validada.",
         "Índice mensal secundário cotejado com calendário brasileiro; ainda falta leitura individual da fonte normativa.",
         "Estudo editorial por unidade disponível na página Liturgia + Libras. Não é transcrição nem glosa validada.",
-        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/05-11-2025 (referências; redação brasileira integral e licença não homologadas)."
+        "Página específica desta data consultada: https://padrepauloricardo.org/liturgia/05-11-2025 (referências; redação brasileira integral e licença não homologadas).",
+        "05/11: referência responsorial completa e refrão cotejados com as publicações brasileiras Padre Paulo Ricardo e Canção Nova; estrofes integrais e glosas permanecem não incorporadas e não homologadas."
       ],
       "options": [],
       "glosaBlocks": [],
@@ -387,9 +392,12 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/05-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
-      "individualDateSource": "https://padrepauloricardo.org/liturgia/05-11-2025"
+      "individualDateSource": "https://padrepauloricardo.org/liturgia/05-11-2025",
+      "salmoRefrainConfirmed": "Feliz quem tem piedade e empresta!",
+      "salmoRefrainSource": "https://liturgia.cancaonova.com/pb/liturgia/31a-semana-tempo-comum-quarta-feira-8/"
     },
     "2025-11-06": {
       "label": "Quinta-feira da 31ª semana do Tempo Comum",
@@ -435,7 +443,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-06-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-06-novembro"
     },
@@ -483,7 +492,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-07-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-07-novembro"
     },
@@ -531,7 +541,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/08-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/08-11-2025"
     },
@@ -610,7 +621,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://diocesedeformosa.com.br/homilias/dedicacao-da-basilica-do-latrao/",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://diocesedeformosa.com.br/homilias/dedicacao-da-basilica-do-latrao/"
     },
@@ -657,7 +669,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-10-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-10-novembro"
     },
@@ -704,7 +717,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-11-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-11-novembro"
     },
@@ -753,7 +767,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/12-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/12-11-2025"
     },
@@ -801,7 +816,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-13-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-13-novembro"
     },
@@ -848,7 +864,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-14-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-14-novembro"
     },
@@ -895,7 +912,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/15-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/15-11-2025"
     },
@@ -968,7 +986,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/16-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/16-11-2025"
     },
@@ -1018,7 +1037,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld17-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld17-novembro"
     },
@@ -1068,7 +1088,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/18-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/18-11-2025"
     },
@@ -1118,7 +1139,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/19-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/19-11-2025"
     },
@@ -1166,7 +1188,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-20-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-20-novembro"
     },
@@ -1214,7 +1237,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/21-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/21-11-2025"
     },
@@ -1264,7 +1288,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/22-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/22-11-2025"
     },
@@ -1342,7 +1367,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/23-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/23-11-2025"
     },
@@ -1391,7 +1417,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-24-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-24-novembro"
     },
@@ -1440,7 +1467,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-25-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-25-novembro"
     },
@@ -1489,7 +1517,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-26-novembro",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://www.tercodoshomensspsp.com.br/liturgia/Liturgia-Diaria/ld-26-novembro"
     },
@@ -1539,7 +1568,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/27-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/27-11-2025"
     },
@@ -1588,7 +1618,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/28-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/28-11-2025"
     },
@@ -1637,7 +1668,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/29-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/29-11-2025"
     },
@@ -1746,7 +1778,8 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         "completeGlosaDraft": false,
         "specializedLibrasValidation": false,
         "sourceDocumentUrl": "https://padrepauloricardo.org/liturgia/30-11-2025",
-        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado"
+        "sourceScope": "Página de data / índices de leituras; texto completo brasileiro ainda não homologado",
+        "userFacingPublication": "somente-referencias-e-fonte-brasileira"
       },
       "individualDateSource": "https://padrepauloricardo.org/liturgia/30-11-2025"
     }

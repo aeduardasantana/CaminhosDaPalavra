@@ -79,3 +79,13 @@
 .monthly-study-unit .psalm-part-text{white-space:pre-line;overflow-wrap:anywhere}
 .monthly-study-unit.study-glosa{background:#fff8e9;border-left:3px solid #a57a2f;font-weight:650}
 @media (max-width:640px){.monthly-study-unit{padding:10px}.monthly-reading-alert{padding:10px 12px}}
+
+/* A revisão exige a leitura real: sínteses anteriores só aparecem em notas recolhidas. */
+.monthly-original-pending{border-left:3px solid #ac8240;background:#fbf7ef;padding:12px 14px;line-height:1.7;color:#5a4b39}
+.monthly-confirmed-refrain{font-weight:750;color:#47361c;border:1px solid #d4c5a5;padding:12px;background:#fff}
+.monthly-editorial-details{border-top:1px solid #d9c8aa;margin-top:18px;padding-top:11px}
+.monthly-editorial-details summary{cursor:pointer;font-weight:700;line-height:1.5;color:#765115}
+.monthly-editorial-details ol{padding-left:22px}.monthly-editorial-details li{padding:8px 0;border-bottom:1px solid #ece2cf}
+.monthly-editorial-details li p{font-size:.9rem;line-height:1.6;margin:4px 0}
+.monthly-draft-note{font-weight:700;overflow-wrap:anywhere}
+.lce-pdf-button:disabled{cursor:not-allowed;opacity:.65}
