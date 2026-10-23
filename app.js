@@ -504,59 +504,54 @@ function appendPsalmRefrain(container, refrain, alternative, compact = false) {
 // O registro brasileiro parcial nunca reutiliza automaticamente a glosa da edição portuguesa.
 // Correspondência ordinal explícita: cada resumo tem exatamente uma glosa de preparação.
 // Sem texto integral, não exibir paráfrases como se fossem versículos.
+// Conteúdo principal: glosa de estudo visível, notas editoriais sob demanda.
 function renderMonthlyStudy(entry, originalBox, glosaBox) {
-  const notice=document.createElement('p');
-  notice.className='monthly-original-pending';
-  notice.textContent='O texto litúrgico brasileiro integral desta leitura ainda não foi incorporado ou cotejado versículo a versículo neste acervo. Consulte a edição brasileira pela fonte indicada abaixo. Não substituir os versículos por paráfrases.';
-  originalBox.replaceChildren(notice);
-  if (entry.salmoRefrainConfirmed) {
-    const refrain=document.createElement('p');
-    refrain.className='monthly-confirmed-refrain';
-    refrain.textContent='Refrão conferido: '+entry.salmoRefrainConfirmed;
-    originalBox.appendChild(refrain);
-    const missing=document.createElement('p');
-    missing.textContent='As três estrofes, os versículos e as repetições responsoriais não estão transcritos nesta página.';
-    originalBox.appendChild(missing);
-  }
-  const message=document.createElement('p');
-  message.className='monthly-original-pending';
-  message.textContent='A glosa integral depende da correspondência com os versículos brasileiros. Nenhuma tradução de Libras foi validada para esta leitura.';
-  glosaBox.replaceChildren(message);
-  if(entry.verseUnits?.length){
-    const verseDetails=document.createElement('details');
-    verseDetails.className='monthly-editorial-details';
-    const verseSummary=document.createElement('summary');
-    verseSummary.textContent='Preparação por versículos — rascunho para revisão humana';
-    verseDetails.appendChild(verseSummary);
-    const ol=document.createElement('ol');
-    for(const unit of entry.verseUnits){
-      const li=document.createElement('li');
-      const heading=document.createElement('strong');heading.textContent=unit.ref;
-      const meaning=document.createElement('p');meaning.textContent='Sentido: '+unit.sentido;
-      const draft=document.createElement('p');draft.className='monthly-draft-note';draft.textContent=unit.glosa;
-      const setting=document.createElement('p');setting.textContent='Espaço/referentes: '+unit.espaco;
-      li.append(heading,meaning,draft,setting);ol.appendChild(li);
-    }
-    verseDetails.appendChild(ol);glosaBox.appendChild(verseDetails);
-  }
-  if(entry.draftUnits.length){
+  const pending=document.createElement('p');
+  pending.className='monthly-original-pending';
+  pending.textContent='Carregando a leitura brasileira…';
+  originalBox.replaceChildren(pending);
+
+  glosaBox.replaceChildren();
+  const units=entry.verseUnits?.length
+    ? entry.verseUnits.map(unit=>({reference:unit.ref,draft:unit.glosa,meaning:unit.sentido,space:unit.espaco}))
+    : (entry.draftUnits||[]).map((unit,index)=>({reference:'Trecho '+(index+1),draft:unit.glosaPreliminar,meaning:unit.sentido,space:''}));
+  const list=document.createElement('div');
+  list.className='monthly-glosa-list';
+  units.forEach(unit=>{
+    const section=document.createElement('section');
+    section.className='monthly-glosa-unit';
+    const title=document.createElement('span');
+    title.className='monthly-glosa-reference';
+    title.textContent=unit.reference;
+    const text=document.createElement('p');
+    text.className='monthly-glosa-draft';
+    text.textContent=unit.draft;
+    section.append(title,text);
+    list.appendChild(section);
+  });
+  glosaBox.appendChild(list);
+  if(units.length){
     const details=document.createElement('details');
     details.className='monthly-editorial-details';
     const summary=document.createElement('summary');
-    summary.textContent='Consultar anotações preliminares de construção visual (não são glosa integral)';
+    summary.textContent='Notas de interpretação';
     details.appendChild(summary);
-    const list=document.createElement('ol');
-    for(const unit of entry.draftUnits){
+    const ol=document.createElement('ol');
+    for(const unit of units){
       const li=document.createElement('li');
-      const context=document.createElement('p');
-      context.textContent=unit.sentido;
-      const draft=document.createElement('p');
-      draft.className='monthly-draft-note';
-      draft.textContent=unit.glosaPreliminar;
-      li.append(context,draft);
-      list.appendChild(li);
+      const heading=document.createElement('strong');
+      heading.textContent=unit.reference;
+      const sense=document.createElement('p');
+      sense.textContent=unit.meaning;
+      li.append(heading,sense);
+      if(unit.space){
+        const note=document.createElement('p');
+        note.textContent=unit.space;
+        li.appendChild(note);
+      }
+      ol.appendChild(li);
     }
-    details.appendChild(list);
+    details.appendChild(ol);
     glosaBox.appendChild(details);
   }
 }
@@ -951,16 +946,11 @@ function renderLiturgia() {
     .sort((a,b) => (a.data || '').localeCompare(b.data || '') || (itemOrder[a.item] || 99) - (itemOrder[b.item] || 99));
 
   els.liturgyResults.replaceChildren();
-  if(date?.startsWith('2025-11-')){
-    const caution=document.createElement('div');caution.className='monthly-reading-alert';
-    caution.setAttribute('role','note');
-    caution.textContent='Novembro/2025: cadastro de referências e fontes brasileiras por data. Não confunda anotações editoriais com texto do Lecionário ou glosa completa. As leituras integrais e a validação humana em Libras continuam pendentes.';
-    els.liturgyResults.appendChild(caution);
-    if(date==='2025-11-02'){
-      const options=document.createElement('p');options.className='monthly-reading-alert';
-      options.textContent='Fiéis Defuntos: a CNBB admite três formulários e outras leituras. Esta é apenas uma seleção de estudo, não obrigatória para todas as Missas.';
-      els.liturgyResults.appendChild(options);
-    }
+  if(date==='2025-11-02'){
+    const note=document.createElement('p');
+    note.className='monthly-selection-note';
+    note.textContent='Finados possui diferentes formulários e leituras; confira a seleção da celebração.';
+    els.liturgyResults.appendChild(note);
   }
   els.resultCount.textContent = filtered.length + ' ' + (filtered.length === 1 ? 'resultado' : 'resultados');
 
@@ -979,23 +969,25 @@ function renderLiturgia() {
     const trigger = node.querySelector('.accordion-trigger');
 
     node.querySelector('.card-kicker').textContent = 'Ano ' + entry.ano + ' · ' + entry.itemLabel;
-    node.querySelector('.card-title').textContent = entry.celebracao + ' — ' + entry.referencia;
-    node.querySelector('.card-meta').textContent = [formatDate(entry.data), entry.tempo, entry.note].filter(Boolean).join(' · ');
-    node.querySelector('.status-pill').textContent = entry.status;
-    node.querySelector('.source-version').textContent = entry.sourceVersion || '';
+    node.querySelector('.card-title').textContent = entry.editorialStudy
+      ? entry.referencia : entry.celebracao + ' — ' + entry.referencia;
+    node.querySelector('.card-meta').textContent = entry.editorialStudy
+      ? [formatDate(entry.data),entry.celebracao].filter(Boolean).join(' · ')
+      : [formatDate(entry.data),entry.tempo,entry.note].filter(Boolean).join(' · ');
+    const statusPill=node.querySelector('.status-pill');
+    statusPill.textContent=entry.editorialStudy?'Em estudo':entry.status;
+    statusPill.title=entry.status;
+    node.querySelector('.source-version').textContent = entry.editorialStudy?'':(entry.sourceVersion||'');
     const originalTextBox = node.querySelector('.original-text');
     const glosaTextBox = node.querySelector('.glosa-text');
     if(entry.editorialStudy){
-      node.querySelector('.original-pane .pane-label').textContent = entry.partialBrazilianPsalm
-        ? 'Trecho brasileiro conferido — texto parcial'
-        : 'Leitura brasileira — texto integral ainda não incorporado';
-      node.querySelector('.glosa-pane .pane-label').textContent = 'Glosa integral não concluída — anotações de estudo';
+      node.querySelector('.original-pane .pane-label').textContent='Texto litúrgico';
+      node.querySelector('.glosa-pane .pane-label').textContent='Glosa de estudo';
+      node.querySelector('.glosa-pane .pane-label').title='Preparação preliminar, não validada em Libras';
     }
     let parsedPsalm = null;
 
-    if (entry.editorialStudy && entry.partialBrazilianPsalm) {
-      renderPartialBrazilianPsalm(entry.partialBrazilianPsalm, originalTextBox, glosaTextBox);
-    } else if (entry.editorialStudy) {
+    if (entry.editorialStudy) {
       renderMonthlyStudy(entry, originalTextBox, glosaTextBox);
     } else if (entry.item === 'salmo' && entry.partialBrazilianPsalm) {
       renderPartialBrazilianPsalm(entry.partialBrazilianPsalm, originalTextBox, glosaTextBox);
@@ -1056,7 +1048,7 @@ function renderLiturgia() {
     }
 
     const originalSourceLink = node.querySelector('.original-source-link');
-    if(entry.editorialStudy) originalSourceLink.textContent='Abrir a liturgia brasileira desta data na fonte ↗';
+    if(entry.editorialStudy) originalSourceLink.textContent='Consultar fonte brasileira ↗';
     if (entry.sourceUrl) {
       originalSourceLink.href = entry.sourceUrl;
       originalSourceLink.hidden = false;
@@ -1075,7 +1067,7 @@ function renderLiturgia() {
       const share = document.createElement('button');
       share.type = 'button';
       share.className = 'secondary-button share-liturgy-link';
-      share.textContent = 'Copiar link desta leitura';
+      share.textContent = 'Copiar link';
       share.setAttribute('aria-label', 'Copiar link direto para ' + entry.itemLabel + ', ' + formatDate(entry.data));
       share.addEventListener('click', async () => {
         const params = new URLSearchParams({data:entry.data,item:entry.item});
@@ -1087,7 +1079,7 @@ function renderLiturgia() {
           window.prompt('Copie o link desta leitura:', url);
         }
       });
-      card.querySelector('.accordion-panel')?.prepend(share);
+      card.querySelector('.accordion-panel')?.appendChild(share);
     }
     bindAccordion(card.querySelector('.accordion-trigger'));
   });
