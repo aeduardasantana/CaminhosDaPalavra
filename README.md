@@ -260,6 +260,8 @@ Consulte [REVISAO-GLOSAS-ANO-B.md](./REVISAO-GLOSAS-ANO-B.md) e [AUDITORIA-GLOSA
 
 ## Competência 01/36 — novembro de 2025 (23/10/2026)
 
+O **Dicionário Bíblico, Histórico e Visual** tem página própria em `dicionario.html` (URL pública `/dicionario.html`) e link no menu *Vida litúrgica*. Sua primeira entrega apresenta **12 fichas preliminares** da competência 01/36, com busca, filtro por dimensão, proveniência documental e vínculos por data. Fichas são materiais editoriais de estudo, não sinais oficiais nem glosas validadas. A navegação do calendário aponta para as fichas canônicas, evitando duplicar o texto. Fonte inicial: `liturgia-2025-11.js`; o módulo permite agregar bases de outras competências, sem alterá-las automaticamente.
+
 A camada `liturgia-2025-11.js` reúne as **30 datas** com referências de trabalho, classificações litúrgicas, fontes e ressalvas editoriais; inclui alternativas explícitas para Finados e roteiros visuais preliminares de 1, 2, 9, 16, 23 e 30 de novembro, além de verbetes do Dicionário Bíblico, Histórico e Visual. Não substitui a base dominical aprovada nem publica texto integral da edição brasileira. O calendário reconhece as decisões específicas da CNBB de 2025. O PDF disponível pelo diálogo de impressão desta ficha contém apenas referências e conteúdo autoral de preparação, **não a reprodução do Lecionário**.
 
 Consulte `RELATORIOS/2025-11.md` e `CONTROLE-36-COMPETENCIAS.csv`. Todas as glosas aguardam cotejo integral por unidade e validação humana especializada; a competência **permanece em revisão**, não concluída.
