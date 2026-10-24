@@ -275,3 +275,7 @@ O Dicionário associado ao mês contém **46 fichas preliminares**. Fontes e lim
 ### Interface da Liturgia + Libras (novembro de 2025)
 
 Na competência 01/36, o comparativo prioriza **Texto litúrgico** e **Glosa de estudo**. A fonte, limites editoriais e notas linguísticas ficam em áreas recolhíveis. O material de glosa mantém status preliminar e não deve ser confundido com interpretação validada. PDFs não disponíveis não geram botões inativos; o arquivo de controle e os relatórios preservam todas as pendências.
+
+### Salmos responsoriais na Liturgia + Libras
+
+Refrão em destaque **uma vez**, com indicação "Repetir após cada estrofe". Versos divididos em quadros com referências extraídas da ocorrência local somente quando a segmentação da fonte digital coincide. Em glosas versiculares com referências suficientes, agrupamento correspondente de cada estrofe; sem correspondência comprovável, não são atribuídos números por suposição.

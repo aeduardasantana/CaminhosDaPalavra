@@ -262,3 +262,59 @@
 @media print{
   .monthly-glosa-direction{background:#edf2f6!important;color:#394f60!important}
 }
+
+/* Salmo responsorial: refrão único e estrofes com referências verificáveis.
+   Mantém a estrutura responsorial pela instrução 'repetir após cada estrofe'. */
+.accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box{
+  padding:14px 16px;
+  background:#f8f1e4;
+  border:1px solid #d8c39c;
+  border-left:4px solid #a27827;
+  border-radius:6px;
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-box-label{
+  display:block;margin:0 0 9px;
+  color:#725015;font-size:.83rem;font-weight:800;
+  line-height:1.4;letter-spacing:.01em;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box .monthly-remote-refrain{
+  background:transparent;border:0;
+  padding:0;margin:0 0 6px;
+  color:#2f281e;font-size:1rem;line-height:1.6;font-weight:760;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-repeat-note{
+  display:block;font-size:.78rem;line-height:1.45;
+  color:#746449;font-weight:550;margin:9px 0 0;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanzas{
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:12px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanza{
+  padding:15px 16px;margin:0;
+  background:#fff;border:1px solid #e3d8c7;
+  border-radius:6px;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanza .monthly-remote-stanza{
+  margin:0;line-height:1.75;font-size:1rem;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse{
+  padding:8px 0;border-bottom:1px solid #e5dfd6;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse:first-of-type{padding-top:0}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse:last-child{border-bottom:0;padding-bottom:0}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse .monthly-glosa-reference{
+  font-size:.74rem;margin:0 0 6px;color:#6a593c;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-study .monthly-psalm-stanza{background:#fffcf6}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-study .monthly-psalm-refrain-box{
+  background:#f8f1e4;
+}
+@media(max-width:680px){
+  .accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box,
+  .accordion-item[data-editorial-study="true"] .monthly-psalm-stanza{padding:12px}
+}
+@media print{
+  .monthly-psalm-refrain-box,.monthly-psalm-stanza{break-inside:avoid}
+}

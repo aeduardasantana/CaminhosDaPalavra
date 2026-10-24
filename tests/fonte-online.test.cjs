@@ -4,6 +4,18 @@ const ctx={window:{}};
 vm.runInNewContext(fs.readFileSync('liturgia-fonte-online.js','utf8'),ctx);
 const a=ctx.window.LCE_FONTE_ONLINE;
 assert.equal(a.normalizeDate('05/11/2025'),'2025-11-05');
+const groups=a.parsePsalmRanges('Sl 111(112),1-2.4-5.9 (R. 5a)');
+assert.equal(groups.length,3);
+assert.equal(groups[0].label,'vv. 1–2');
+assert.equal(groups[1].label,'vv. 4–5');
+assert.equal(groups[2].label,'v. 9');
+assert.equal(a.psalmStanzaLabels('Sl 111(112),1-2.4-5.9 (R. 5a)',3).join(' | '),
+  'Estrofe 1 · vv. 1–2 | Estrofe 2 · vv. 4–5 | Estrofe 3 · v. 9');
+assert.equal(a.psalmStanzaLabels('Sl 111(112),1-2.4-5.9 (R. 5a)',2).join(' | '),
+  'Estrofe 1 | Estrofe 2');
+assert.equal(a.parsePsalmRanges('Sl 111(112)').length,0);
+assert.equal(a.parsePsalmRanges('Sl 121(122), 1-2.4-5.6-7.8-9 (R. cf. 1)').length,4);
+assert.equal(a.parsePsalmRanges('Dn 3 (cântico)').length,0);
 assert.equal(a.normalizeDate('04/11/2025'),'2025-11-04');
 assert.equal(a.normalizeReference('Rm 13, 8-10'),a.normalizeReference('Rm 13,8-10'));
 assert.equal(a.referenceMatches('Sl 111(112),1-2.4-5.9','Sl 111(112),1-2.4-5.9 (R. 5a)','salmo'),true);
@@ -28,5 +40,5 @@ assert.equal(a.resolveReading(sample,'2025-11-05','segunda-leitura','Rm 13,8-10'
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8');
 assert.ok(app.includes('LCE_FONTE_ONLINE.loadForEntry(entry,card)'));
 assert.ok(html.indexOf('liturgia-fonte-online.js')<html.indexOf('./app.js?v='));
-assert.ok(html.includes('liturgia-fonte-online.js?v=20261023-leitura-limpa1'));
+assert.ok(html.includes('liturgia-fonte-online.js?v=20261024-salmos-caixas1'));
 console.log('OK: leitura externa só é exibida quando data e referência coincidem; opções independentes e fallback.');
