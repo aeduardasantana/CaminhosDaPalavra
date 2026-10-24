@@ -1,0 +1,287 @@
+{
+  "period": "2025-11",
+  "importedAt": "2026-10-24T02:28:10.431Z",
+  "source": "https://liturgia.up.railway.app/v2/",
+  "days": [
+    {
+      "date": "2025-11-01",
+      "celebration": "Todos os Santos",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-02",
+      "celebration": "Comemoração de Todos os Fiéis Defuntos",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-03",
+      "celebration": "Segunda-feira da 31ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-04",
+      "celebration": "São Carlos Borromeu, bispo",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-05",
+      "celebration": "Quarta-feira da 31ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-06",
+      "celebration": "Quinta-feira da 31ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-07",
+      "celebration": "Sexta-feira da 31ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-08",
+      "celebration": "Sábado da 31ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-09",
+      "celebration": "Dedicação da Basílica de Latrão",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-10",
+      "celebration": "São Leão Magno, papa e doutor da Igreja",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-11",
+      "celebration": "São Martinho de Tours, bispo",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-12",
+      "celebration": "São Josafá, bispo e mártir",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-13",
+      "celebration": "Quinta-feira da 32ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-14",
+      "celebration": "Sexta-feira da 32ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-15",
+      "celebration": "Sábado da 32ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-16",
+      "celebration": "33º Domingo do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-17",
+      "celebration": "Santa Isabel da Hungria, religiosa",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-18",
+      "celebration": "Terça-feira da 33ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-19",
+      "celebration": "Santos Roque González, Afonso Rodríguez e João de Castillo, mártires",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-20",
+      "celebration": "Quinta-feira da 33ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-21",
+      "celebration": "Apresentação da Bem-aventurada Virgem Maria",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-22",
+      "celebration": "Santa Cecília, virgem e mártir",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-23",
+      "celebration": "Nosso Senhor Jesus Cristo, Rei do Universo",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-24",
+      "celebration": "Santos André Dũng-Lạc e companheiros, mártires",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-25",
+      "celebration": "Terça-feira da 34ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-26",
+      "celebration": "Quarta-feira da 34ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-27",
+      "celebration": "Quinta-feira da 34ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-28",
+      "celebration": "Sexta-feira da 34ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-29",
+      "celebration": "Sábado da 34ª semana do Tempo Comum",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "evangelho"
+      ]
+    },
+    {
+      "date": "2025-11-30",
+      "celebration": "1º Domingo do Advento",
+      "items": [
+        "primeira-leitura",
+        "salmo",
+        "segunda-leitura",
+        "evangelho"
+      ]
+    }
+  ],
+  "occurrences": 96,
+  "uniqueTexts": 96,
+  "associationKeys": 65,
+  "note": "Dados arquivados localmente. Associação do calendário separada; textos e glosas não homologados automaticamente."
+}
