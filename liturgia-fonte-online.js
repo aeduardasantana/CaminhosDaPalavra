@@ -67,15 +67,53 @@
     node.textContent=content;
     return node;
   }
-  function appendReading(parent,record,item) {
+  // Rótulos das estrofes vêm da referência local, não da simples ordem da API.
+  // Se o número de estrofes não coincidir, a referência não é atribuída por suposição.
+  function parsePsalmRanges(reference) {
+    const ref=String(reference||'').replace(/\s*\(R\.[^)]*\)\s*$/i,'').trim();
+    const comma=ref.indexOf(',');
+    if(comma<0)return [];
+    const part=ref.slice(comma+1).trim();
+    const fragments=part.split('.').map(s=>s.trim()).filter(Boolean);
+    if(!fragments.length||fragments.some(s=>!/^\d+[a-z]*(?:\s*-\s*\d+[a-z]*)?$/i.test(s)))return [];
+    return fragments.map(fragment=>{
+      const ends=fragment.split('-').map(v=>v.trim());
+      const lo=parseInt(ends[0],10),hi=parseInt(ends.at(-1),10);
+      if(!Number.isFinite(lo)||!Number.isFinite(hi)||hi<lo)return null;
+      const suffix=ends[0]===ends.at(-1)?'v. ':'vv. ';
+      const pretty=fragment.replace(/\s*-\s*/g,'–');
+      return {raw:fragment,start:lo,end:hi,label:suffix+pretty};
+    }).filter(Boolean);
+  }
+  function psalmStanzaLabels(reference,numberOfStanzas){
+    const ranges=parsePsalmRanges(reference);
+    if(ranges.length===numberOfStanzas)
+      return ranges.map((r,i)=>'Estrofe '+(i+1)+' · '+r.label);
+    return Array.from({length:numberOfStanzas},(_,i)=>'Estrofe '+(i+1));
+  }
+  function appendReading(parent,record,item,reference) {
     if(record.titulo)parent.append(createText('strong',record.titulo,'monthly-remote-title'));
     if(item==='salmo'){
-      if(record.refrao)parent.append(createText('p','R. '+record.refrao,'monthly-remote-refrain'));
+      const refrain=String(record.refrao||'').trim();
+      if(refrain){
+        const box=document.createElement('section');
+        box.className='monthly-psalm-refrain-box';
+        box.append(createText('span','Refrão','monthly-psalm-box-label'));
+        box.append(createText('p','R. '+refrain,'monthly-remote-refrain'));
+        box.append(createText('small','Repetir após cada estrofe','monthly-psalm-repeat-note'));
+        parent.append(box);
+      }
       const verses=String(record.texto||'').split(/\n+/).map(s=>s.trim()).filter(Boolean);
+      const labels=psalmStanzaLabels(reference||record.referencia,verses.length);
+      const container=document.createElement('div');container.className='monthly-psalm-stanzas';
       verses.forEach((stanza,i)=>{
-        parent.append(createText('p',stanza,'monthly-remote-stanza'));
-        if(record.refrao)parent.append(createText('p','R. '+record.refrao,'monthly-remote-refrain'));
+        const box=document.createElement('section');
+        box.className='monthly-psalm-stanza';
+        box.append(createText('h4',labels[i],'monthly-psalm-box-label'));
+        box.append(createText('p',stanza,'monthly-remote-stanza'));
+        container.append(box);
       });
+      parent.append(container);
     }else{
       const body=String(record.texto||'');
       // Separar visualmente versículos numerados sem reescrever a fonte recebida.
@@ -114,7 +152,7 @@
     // Escolhas litúrgicas independentes nunca são concatenadas.
     const renderMatch=record=>{
       const body=document.createElement('div');body.className='monthly-remote-text';
-      appendReading(body,record,entry.item);
+      appendReading(body,record,entry.item,entry.referencia);
       pane.replaceChildren(body);
       label.textContent='Texto litúrgico';
     };
@@ -149,5 +187,5 @@
     card.dataset.dynamicBrazilianText='true';
     return true;
   }
-  root.LCE_FONTE_ONLINE={normalizeReference,normalizeDate,referenceMatches,resolveReading,fetchDate,loadForEntry};
+  root.LCE_FONTE_ONLINE={normalizeReference,normalizeDate,referenceMatches,resolveReading,fetchDate,loadForEntry,parsePsalmRanges,psalmStanzaLabels};
 })(window);

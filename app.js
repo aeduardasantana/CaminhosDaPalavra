@@ -547,6 +547,63 @@ function appendGlossWithDirections(container,raw) {
   }
 }
 
+// Nos salmos com estudo versicular, a glosa acompanha a mesma divisão das estrofes.
+function groupPsalmVerseDrafts(entry) {
+  if(entry.item!=='salmo'||!entry.verseUnits?.length)return null;
+  const ranges=window.LCE_FONTE_ONLINE?.parsePsalmRanges(entry.referencia)||[];
+  if(!ranges.length)return null;
+  const refrain=entry.verseUnits.find(u=>/^R\./i.test(u.ref) && !/repeti/i.test(u.ref));
+  const verseUnits=entry.verseUnits.filter(u=>!/^R\./i.test(u.ref));
+  const getVerse=u=>{
+    const m=String(u.ref||'').match(/,\s*(\d+)[a-z]*\s*$/i);
+    return m?Number(m[1]):null;
+  };
+  const groups=ranges.map(range=>({
+    label:range.label,
+    units:verseUnits.filter(u=>getVerse(u)!==null&&getVerse(u)>=range.start&&getVerse(u)<=range.end)
+  }));
+  if(groups.some(g=>!g.units.length))return null;
+  if(groups.reduce((n,g)=>n+g.units.length,0)!==verseUnits.length)return null;
+  return {refrain,groups};
+}
+
+function renderPsalmStudyGlosa(glosaBox,entry) {
+  const data=groupPsalmVerseDrafts(entry);
+  if(!data)return false;
+  const container=document.createElement('div');
+  container.className='monthly-psalm-study';
+  if(data.refrain){
+    const box=document.createElement('section');box.className='monthly-psalm-refrain-box';
+    const label=document.createElement('span');label.className='monthly-psalm-box-label';
+    label.textContent='Glosa do refrão';
+    const text=document.createElement('div');text.className='monthly-glosa-draft';
+    appendGlossWithDirections(text,data.refrain.glosa);
+    const note=document.createElement('small');note.className='monthly-psalm-repeat-note';
+    note.textContent='Repetir após cada estrofe';
+    box.append(label,text,note);container.append(box);
+  }
+  const stanzas=document.createElement('div');stanzas.className='monthly-psalm-stanzas';
+  data.groups.forEach((group,i)=>{
+    const box=document.createElement('section');box.className='monthly-psalm-stanza';
+    const heading=document.createElement('h4');heading.className='monthly-psalm-box-label';
+    heading.textContent='Estrofe '+(i+1)+' · '+group.label;
+    box.append(heading);
+    group.units.forEach(unit=>{
+      const segment=document.createElement('div');segment.className='monthly-psalm-glosa-verse';
+      const label=document.createElement('span');label.className='monthly-glosa-reference';
+      const m=String(unit.ref).match(/,\s*(\d+[a-z]*)\s*$/i);
+      label.textContent=m?'v. '+m[1]:unit.ref;
+      const text=document.createElement('div');text.className='monthly-glosa-draft';
+      appendGlossWithDirections(text,unit.glosa);
+      segment.append(label,text);box.append(segment);
+    });
+    stanzas.append(box);
+  });
+  container.append(stanzas);
+  glosaBox.append(container);
+  return true;
+}
+
 function renderMonthlyStudy(entry, originalBox, glosaBox) {
   const pending=document.createElement('p');
   pending.className='monthly-original-pending';
@@ -575,7 +632,7 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     section.append(title,text);
     list.appendChild(section);
   });
-  glosaBox.appendChild(list);
+  if(!renderPsalmStudyGlosa(glosaBox,entry)) glosaBox.appendChild(list);
   if(units.length){
     const details=document.createElement('details');
     details.className='monthly-editorial-details';
@@ -587,7 +644,7 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     explanation.textContent='Material de estudo: sentido da passagem e organização espacial. Não é conteúdo para sinalizar.';
     details.appendChild(explanation);
     const ol=document.createElement('ol');
-    for(const unit of units){
+    for(const unit of units.filter(u=>entry.item!=='salmo'||!/^R\.\s*\(repeti/i.test(u.reference))){
       const li=document.createElement('li');
       const heading=document.createElement('strong');
       heading.textContent=unit.reference;
