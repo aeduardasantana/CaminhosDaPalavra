@@ -35,5 +35,6 @@ const online=fs.readFileSync('liturgia-fonte-local.js','utf8');
 assert.ok(online.includes("box.append(createText('p','R. '+refrain"));
 assert.ok(online.includes("Repetir após cada estrofe"));
 assert.ok(!online.includes("verses.forEach((stanza,i)=>{\n        parent.append(createText('p',stanza"));
-assert.ok(app.includes("if(!renderPsalmStudyGlosa(glosaBox,entry)) glosaBox.appendChild(list)"));
+assert.ok(app.includes("if(!renderPsalmStudyGlosa(glosaBox,entry))"));
+assert.ok(app.includes("if(units.length) glosaBox.appendChild(list)"));
 console.log('OK: refrão único, 3 quadros vv.1–2/vv.4–5/v.9, glosa agrupada sem referência inventada.');
