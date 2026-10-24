@@ -1,8 +1,8 @@
 /* Testes offline de integridade da API brasileira. Nenhum texto externo é armazenado no GitHub. */
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 const ctx={window:{}};
-vm.runInNewContext(fs.readFileSync('liturgia-fonte-online.js','utf8'),ctx);
-const a=ctx.window.LCE_FONTE_ONLINE;
+vm.runInNewContext(fs.readFileSync('liturgia-fonte-local.js','utf8'),ctx);
+const a=ctx.window.LCE_FONTE_LOCAL;
 assert.equal(a.normalizeDate('05/11/2025'),'2025-11-05');
 const groups=a.parsePsalmRanges('Sl 111(112),1-2.4-5.9 (R. 5a)');
 assert.equal(groups.length,3);
@@ -38,7 +38,7 @@ assert.equal(a.resolveReading(sample,'2025-11-04','salmo','Sl 111(112),1-2.4-5.9
 assert.equal(a.resolveReading(sample,'2025-11-05','evangelho','Mt 14,25-33'),null);
 assert.equal(a.resolveReading(sample,'2025-11-05','segunda-leitura','Rm 13,8-10'),null);
 const app=fs.readFileSync('app.js','utf8'),html=fs.readFileSync('index.html','utf8');
-assert.ok(app.includes('LCE_FONTE_ONLINE.loadForEntry(entry,card)'));
-assert.ok(html.indexOf('liturgia-fonte-online.js')<html.indexOf('./app.js?v='));
-assert.ok(html.includes('liturgia-fonte-online.js?v=20261024-salmos-caixas1'));
+assert.ok(app.includes('LCE_FONTE_LOCAL.loadForEntry(entry,card)'));
+assert.ok(html.indexOf('liturgia-fonte-local.js')<html.indexOf('./app.js?v='));
+assert.ok(html.includes('liturgia-fonte-local.js?v=20261024-local1'));
 console.log('OK: leitura externa só é exibida quando data e referência coincidem; opções independentes e fallback.');

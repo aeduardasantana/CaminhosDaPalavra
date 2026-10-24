@@ -1,7 +1,7 @@
 /* Diagnóstico de 30 dias (apenas referências, sem copiar textos). */
 const fs=require('node:fs'),vm=require('node:vm');
-const ctx={window:{},console};for(const file of ['liturgia-2025-11.js','liturgia-fonte-online.js'])vm.runInNewContext(fs.readFileSync(file,'utf8'),ctx);
-const days=ctx.window.LCE_MONTH_2025_11.readings,api=ctx.window.LCE_FONTE_ONLINE;
+const ctx={window:{},console};for(const file of ['liturgia-2025-11.js','liturgia-fonte-local.js'])vm.runInNewContext(fs.readFileSync(file,'utf8'),ctx);
+const days=ctx.window.LCE_MONTH_2025_11.readings,api=ctx.window.LCE_FONTE_LOCAL;
 const kinds={'Primeira leitura':'primeira-leitura','Segunda leitura':'segunda-leitura','Salmo responsorial':'salmo','Cântico responsorial':'salmo','Evangelho':'evangelho'};
 const result={days:0,daySuccess:0,items:0,matched:0,missing:[],failed:[]};
 (async()=>{

@@ -553,7 +553,7 @@ function appendGlossWithDirections(container,raw) {
 // Nos salmos com estudo versicular, a glosa acompanha a mesma divisão das estrofes.
 function groupPsalmVerseDrafts(entry) {
   if(entry.item!=='salmo'||!entry.verseUnits?.length)return null;
-  const ranges=window.LCE_FONTE_ONLINE?.parsePsalmRanges(entry.referencia)||[];
+  const ranges=window.LCE_FONTE_LOCAL?.parsePsalmRanges(entry.referencia)||[];
   if(!ranges.length)return null;
   const refrain=entry.verseUnits.find(u=>/^R\./i.test(u.ref) && !/repeti/i.test(u.ref));
   const verseUnits=entry.verseUnits.filter(u=>!/^R\./i.test(u.ref));
@@ -1242,7 +1242,7 @@ function renderLiturgia() {
         aside.appendChild(studyNotes);
         comparison.after(aside);
       }
-      if(window.LCE_FONTE_ONLINE)window.LCE_FONTE_ONLINE.loadForEntry(entry,card);
+      if(window.LCE_FONTE_LOCAL)window.LCE_FONTE_LOCAL.loadForEntry(entry,card);
     }
     if (entry.data && entry.item) {
       const share = document.createElement('button');
