@@ -197,3 +197,68 @@
   .accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{grid-template-columns:1fr}
 }
 @media print{.liturgy-study-notes{display:none!important}}
+
+/* Separação semântica do material de estudo: sinalização ≠ instrução ≠ análise. */
+.accordion-item[data-editorial-study="true"] .monthly-glosa-legend {
+  color:#65707b;font-size:.77rem;font-weight:550;line-height:1.5;
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-draft{
+  display:flex;flex-direction:column;align-items:flex-start;
+  gap:7px;margin:0;font-size:1rem;line-height:1.65;font-weight:500;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-signs{
+  display:block;width:100%;
+  font-size:1rem;font-weight:780;line-height:1.65;
+  color:#332719;white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction{
+  display:block;align-self:stretch;
+  padding:8px 11px;background:#edf2f6;
+  border-left:3px solid #8da3b8;border-radius:3px;
+  color:#425768;font-size:.79rem;line-height:1.55;
+  font-style:normal;font-weight:430;letter-spacing:0;
+  white-space:normal;overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction-label{
+  display:block;margin-bottom:2px;
+  font-size:.7rem;line-height:1.4;font-weight:760;
+  color:#425d73;letter-spacing:.015em;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction-text{
+  display:block;font-weight:450;line-height:1.5;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes{
+  background:#f1f4f6;border-top:2px solid #cbd4dc;
+  color:#344453;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes summary{
+  color:#304b60;font-weight:760;font-size:.9rem;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes .monthly-analysis-intro{
+  color:#465967;font-size:.82rem;line-height:1.55;
+  margin:0 0 8px;padding:0 4px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{
+  padding-bottom:18px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li{
+  border-bottom:1px solid #d1dae1;
+  color:#344553;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li>strong{
+  display:block;font-size:.84rem;margin-bottom:5px;color:#2c455b;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li p{
+  color:#344553;font-size:.85rem;line-height:1.6;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li p strong{
+  font-weight:740;color:#344e62;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .monthly-glosa-direction{font-size:.83rem}
+  .accordion-item[data-editorial-study="true"] .monthly-glosa-signs{font-size:1rem}
+}
+@media print{
+  .monthly-glosa-direction{background:#edf2f6!important;color:#394f60!important}
+}

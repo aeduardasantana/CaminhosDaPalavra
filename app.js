@@ -505,6 +505,48 @@ function appendPsalmRefrain(container, refrain, alternative, compact = false) {
 // Correspondência ordinal explícita: cada resumo tem exatamente uma glosa de preparação.
 // Sem texto integral, não exibir paráfrases como se fossem versículos.
 // Conteúdo principal: glosa de estudo visível, notas editoriais sob demanda.
+// Mantém o rascunho intacto e separa instruções parentéticas das palavras da glosa.
+function splitGlossStudyText(raw) {
+  const parts=[];
+  const source=String(raw??'');
+  let buffer='',depth=0;
+  const add=(kind,text)=>{if(text.trim())parts.push({kind,text:text.trim()});};
+  for(const char of source){
+    if(char==='('){
+      if(depth===0){add('gloss',buffer);buffer='';depth=1;}
+      else{depth++;buffer+='(';}
+    }else if(char===')' && depth>0){
+      if(depth===1){add('direction',buffer);buffer='';depth=0;}
+      else{depth--;buffer+=')';}
+    }else{buffer+=char;}
+  }
+  if(depth>0) add('gloss','('+buffer);
+  else add('gloss',buffer);
+  return parts;
+}
+
+function appendGlossWithDirections(container,raw) {
+  for(const part of splitGlossStudyText(raw)){
+    if(part.kind==='direction'){
+      const direction=document.createElement('span');
+      direction.className='monthly-glosa-direction';
+      const label=document.createElement('span');
+      label.className='monthly-glosa-direction-label';
+      label.textContent='Orientação · não sinalizar literalmente';
+      const instructions=document.createElement('span');
+      instructions.className='monthly-glosa-direction-text';
+      instructions.textContent=part.text;
+      direction.append(label,instructions);
+      container.appendChild(direction);
+    }else{
+      const signs=document.createElement('span');
+      signs.className='monthly-glosa-signs';
+      signs.textContent=part.text;
+      container.appendChild(signs);
+    }
+  }
+}
+
 function renderMonthlyStudy(entry, originalBox, glosaBox) {
   const pending=document.createElement('p');
   pending.className='monthly-original-pending';
@@ -515,6 +557,10 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
   const units=entry.verseUnits?.length
     ? entry.verseUnits.map(unit=>({reference:unit.ref,draft:unit.glosa,meaning:unit.sentido,space:unit.espaco}))
     : (entry.draftUnits||[]).map((unit,index)=>({reference:'Trecho '+(index+1),draft:unit.glosaPreliminar,meaning:unit.sentido,space:''}));
+  const key=document.createElement('p');
+  key.className='monthly-glosa-legend';
+  key.textContent='Glosa em destaque · orientações em cinza';
+  glosaBox.appendChild(key);
   const list=document.createElement('div');
   list.className='monthly-glosa-list';
   units.forEach(unit=>{
@@ -523,9 +569,9 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     const title=document.createElement('span');
     title.className='monthly-glosa-reference';
     title.textContent=unit.reference;
-    const text=document.createElement('p');
+    const text=document.createElement('div');
     text.className='monthly-glosa-draft';
-    text.textContent=unit.draft;
+    appendGlossWithDirections(text,unit.draft);
     section.append(title,text);
     list.appendChild(section);
   });
@@ -534,19 +580,29 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     const details=document.createElement('details');
     details.className='monthly-editorial-details';
     const summary=document.createElement('summary');
-    summary.textContent='Notas de interpretação';
+    summary.textContent='Análise do texto (não é glosa)';
     details.appendChild(summary);
+    const explanation=document.createElement('p');
+    explanation.className='monthly-analysis-intro';
+    explanation.textContent='Material de estudo: sentido da passagem e organização espacial. Não é conteúdo para sinalizar.';
+    details.appendChild(explanation);
     const ol=document.createElement('ol');
     for(const unit of units){
       const li=document.createElement('li');
       const heading=document.createElement('strong');
       heading.textContent=unit.reference;
       const sense=document.createElement('p');
-      sense.textContent=unit.meaning;
+      sense.className='monthly-analysis-sense';
+      const senseLabel=document.createElement('strong');
+      senseLabel.textContent='Sentido do trecho: ';
+      sense.append(senseLabel,document.createTextNode(unit.meaning));
       li.append(heading,sense);
       if(unit.space){
         const note=document.createElement('p');
-        note.textContent=unit.space;
+        note.className='monthly-analysis-space';
+        const spaceLabel=document.createElement('strong');
+        spaceLabel.textContent='Referentes e espaço: ';
+        note.append(spaceLabel,document.createTextNode(unit.space));
         li.appendChild(note);
       }
       ol.appendChild(li);
@@ -1067,7 +1123,7 @@ function renderLiturgia() {
       if(comparison && studyNotes){
         const aside=document.createElement('aside');
         aside.className='liturgy-study-notes';
-        aside.setAttribute('aria-label','Notas de interpretação');
+        aside.setAttribute('aria-label','Análise do texto, material de estudo que não é glosa');
         studyNotes.open=false;
         aside.appendChild(studyNotes);
         comparison.after(aside);
