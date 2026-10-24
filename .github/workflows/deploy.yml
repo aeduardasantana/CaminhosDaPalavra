@@ -6,6 +6,9 @@ on:
       - main
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   deploy:
     name: Deploy
@@ -13,6 +16,22 @@ jobs:
 
     steps:
       - uses: actions/checkout@v7
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Importar liturgia brasileira somente se ainda não estiver salva
+        run: |
+          node scripts/importar-liturgia-br.mjs
+          node scripts/importar-liturgia-br.mjs --check
+          if ! git diff --quiet -- liturgia-br-acervo.js RELATORIOS/IMPORTACAO-LOCAL-2025-11.json; then
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add liturgia-br-acervo.js RELATORIOS/IMPORTACAO-LOCAL-2025-11.json
+            git commit -m "data: importar uma vez 30 dias da liturgia brasileira de novembro 2025"
+            git push origin HEAD:main
+          fi
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0

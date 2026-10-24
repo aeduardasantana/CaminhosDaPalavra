@@ -1,9 +1,9 @@
 /* Responsório agrupado: refrão único, estrofes por referência, glosa alinhada. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const apiContext={window:{}};
-vm.runInNewContext(fs.readFileSync('liturgia-fonte-online.js','utf8'),apiContext);
-const api=apiContext.window.LCE_FONTE_ONLINE;
-const studyContext={window:{LCE_FONTE_ONLINE:api}};
+vm.runInNewContext(fs.readFileSync('liturgia-fonte-local.js','utf8'),apiContext);
+const api=apiContext.window.LCE_FONTE_LOCAL;
+const studyContext={window:{LCE_FONTE_LOCAL:api}};
 vm.runInNewContext(fs.readFileSync('estudo-versiculos-2025-11.js','utf8'),studyContext);
 const units=studyContext.window.LCE_ESTUDO_VERSICULAR_2025_11['2025-11-05'].p;
 const app=fs.readFileSync('app.js','utf8');
@@ -31,7 +31,7 @@ const other=vm.runInNewContext(helper+
     item:'salmo',referencia:'Sl 111(112),1-2.4-5.9 (R. 5a)',verseUnits:units.slice(0,3)
   })+')',studyContext);
 assert.equal(other,null,'Não atribuir referências sem cobertura das estrofes');
-const online=fs.readFileSync('liturgia-fonte-online.js','utf8');
+const online=fs.readFileSync('liturgia-fonte-local.js','utf8');
 assert.ok(online.includes("box.append(createText('p','R. '+refrain"));
 assert.ok(online.includes("Repetir após cada estrofe"));
 assert.ok(!online.includes("verses.forEach((stanza,i)=>{\n        parent.append(createText('p',stanza"));

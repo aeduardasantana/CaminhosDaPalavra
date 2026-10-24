@@ -2,7 +2,7 @@
 const fs=require('node:fs'),assert=require('node:assert/strict');
 const html=fs.readFileSync('index.html','utf8');
 const app=fs.readFileSync('app.js','utf8');
-const online=fs.readFileSync('liturgia-fonte-online.js','utf8');
+const online=fs.readFileSync('liturgia-fonte-local.js','utf8');
 const pdf=fs.readFileSync('liturgy-pdf.js','utf8');
 const css=fs.readFileSync('liturgia-diaria.css','utf8');
 assert.ok(html.includes('<details class="reading-source-details">'));
