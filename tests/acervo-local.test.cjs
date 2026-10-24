@@ -27,7 +27,9 @@ context.window.LCE_BR_ACERVO=fake;
   // O ano civil 2027 pertence ao mesmo ciclo I nas férias do Tempo Comum.
   assert.equal(context.window.LCE_CALENDAR.weekdayLectionaryCycle(new Date('2027-11-03T12:00:00Z')),'I');
   const repeat=await local.fetchDate('2027-11-03');
-  if(repeat)assert.ok(repeat.leituras.evangelho);
+  assert.ok(repeat?.leituras?.primeiraLeitura,'Ciclo I de 2027 reutiliza primeira leitura de 2025');
+  assert.ok(repeat?.leituras?.salmo,'Ciclo I de 2027 reutiliza salmo de 2025');
+  assert.ok(repeat?.leituras?.evangelho,'Evangelho ferial é anual');
   // Nenhuma data inexistente é preenchida por suposição.
   assert.equal(await local.fetchDate('1980-01-01'),null);
   assert.equal(await local.fetchDate('2026-11-05')?.then(v=>v?.leituras?.primeiraLeitura?.[0]?.texto||null),null);

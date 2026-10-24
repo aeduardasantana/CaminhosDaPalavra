@@ -130,6 +130,8 @@
     if (year === 2025 && sameDay(date, utcDate(2025, 10, 1))) return "Todos os Santos";
     if (year === 2025 && sameDay(date, utcDate(2025, 10, 2))) return "Comemoração de Todos os Fiéis Defuntos";
     if (year === 2025 && sameDay(date, utcDate(2025, 10, 9))) return "Dedicação da Basílica de Latrão";
+    if (sameDay(date, utcDate(year, 10, 2))) return "Comemoração de Todos os Fiéis Defuntos";
+    if (sameDay(date, utcDate(year, 10, 9))) return "Dedicação da Basílica de Latrão";
     if (sameDay(date, utcDate(year, 0, 1))) return "Santa Maria, Mãe de Deus";
     if (sameDay(date, utcDate(year, 9, 12))) return "Nossa Senhora da Conceição Aparecida"; // Solenidade no Brasil.
     // Solenidades observadas no domingo no calendário brasileiro.

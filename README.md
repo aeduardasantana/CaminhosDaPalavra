@@ -283,3 +283,7 @@ Refrão em destaque **uma vez**, com indicação "Repetir após cada estrofe". V
 ### Respostas da assembleia e ciclo ferial
 
 O comparativo registra o diálogo litúrgico após primeira/segunda leituras e após Evangelho (sem duplicá-lo após salmos/cânticos). O ciclo ferial **I/II** considera o ano civil ímpar/par no Tempo Comum, independentemente do ciclo dominical **A/B/C**; a seleção individual da celebração prevalece sobre qualquer regra geral.
+
+### Associação do acervo local a outros anos
+
+O mesmo texto importado pode servir a datas com semana, dia e ciclo litúrgico equivalentes, sem novas buscas. No Tempo Comum, primeira leitura e salmo seguem I/II, Evangelho é anual; domingos seguem A/B/C. Celebrações próprias prevalecem. Não se considera completa uma missa com leituras parcialmente cobertas. As glosas seguem marcadas como preliminares.
