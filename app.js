@@ -278,9 +278,63 @@ function monthlyStudyEntries(isoDate) {
     };
   });
 }
+// Reaproveita um texto salvo em outras datas quando o ciclo litúrgico coincidir.
+function associatedStudyEntries(isoDate) {
+  const archive=window.LCE_BR_ACERVO,library=window.LCE_FONTE_LOCAL;
+  if(!archive?.complete||!library)return null;
+  const mapped=library.associatedDate(isoDate);
+  if(!mapped?.leituras)return null;
+  const kinds=[
+    ['primeiraLeitura','primeira-leitura','Primeira leitura','f'],
+    ['salmo','salmo','Salmo responsorial','p'],
+    ['segundaLeitura','segunda-leitura','Segunda leitura','s'],
+    ['evangelho','evangelho','Evangelho','e']
+  ];
+  const present=kinds.filter(([field])=>mapped.leituras[field]?.length);
+  const info=litCalendar.infoForIso(isoDate);
+  if(info.weekday!==0 && info.season==='Tempo Comum' &&
+    !['primeiraLeitura','salmo','evangelho'].every(key=>present.some(([f])=>f===key)))return null;
+  if(info.weekday===0 && present.length<3)return null;
+  if(!present.length)return null;
+  const sourceFor=(kind,row)=>{
+    for(const [day,entry] of Object.entries(archive.dates)){
+      for(const id of entry.byKind?.[kind]||[]){
+        const old=archive.texts[id];
+        if(old?.reference===row.referencia && old?.text===row.texto)return day;
+      }
+    }
+    return null;
+  };
+  const items=[];
+  for(const [field,kind,title,short] of present){
+    for(const row of mapped.leituras[field]){
+      const sourceDate=sourceFor(kind,row);
+      const month=window.LCE_MONTH_2025_11?.readings?.[sourceDate];
+      const drafts=window.LCE_ESTUDO_NOV_2025?.[sourceDate]?.[short]||[];
+      const verses=window.LCE_ESTUDO_VERSICULAR_2025_11?.[sourceDate]?.[short]||[];
+      items.push({
+        id:'acervo-br-'+isoDate+'-'+kind+'-'+items.length,
+        data:isoDate,ano:info.cycle,tempo:info.season,
+        rank:info.weekday===0?'Domingo':'Féria',ferialCycle:info.ferialCycle,
+        section:'ACERVO BRASILEIRO LOCAL',
+        celebracao:info.celebration||'Féria do Tempo Comum',
+        item:kind,itemLabel:title,referencia:row.referencia,
+        editorialStudy:true,draftUnits:drafts,verseUnits:verses,partialBrazilianPsalm:null,
+        sourceVersion:'',sourceUrl:month?.individualDateSource||month?.source||'',
+        status:'Texto local importado · glosa em revisão',note:'',
+        glosa:drafts.map(x=>x.glosaPreliminar).join('\n'),
+        keywords:[title,row.referencia,isoDate,sourceDate||'']
+      });
+    }
+  }
+  return items;
+}
+
 function entriesForDate(isoDate) {
   const month = monthlyStudyEntries(isoDate);
   if (month) return month;
+  const linked = associatedStudyEntries(isoDate);
+  if (linked?.length) return linked;
   const records = recordForDate(isoDate);
   return records.flatMap(record => recordItems(record).map(item => {
     const base = allLiturgyEntries.find(entry =>
@@ -681,7 +735,15 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     section.append(title,text);
     list.appendChild(section);
   });
-  if(!renderPsalmStudyGlosa(glosaBox,entry)) glosaBox.appendChild(list);
+  if(!renderPsalmStudyGlosa(glosaBox,entry)){
+    if(units.length) glosaBox.appendChild(list);
+    else {
+      const notice=document.createElement('p');
+      notice.className='monthly-glosa-legend';
+      notice.textContent='Glosa ainda não elaborada para esta leitura.';
+      glosaBox.appendChild(notice);
+    }
+  }
   if(units.length){
     const details=document.createElement('details');
     details.className='monthly-editorial-details';

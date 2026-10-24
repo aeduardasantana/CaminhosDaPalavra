@@ -11,6 +11,8 @@ assert.equal(cal.infoForIso('2025-11-09').celebration,'Dedicação da Basílica 
 assert.equal(daily.colorFor(cal.infoForIso('2025-11-02')),'roxo');
 assert.equal(daily.colorFor(cal.infoForIso('2025-11-12')),'vermelho');
 assert.equal(cal.infoForIso('2025-11-29').cycle,'C');
+assert.equal(cal.infoForIso('2027-11-02').celebration,'Comemoração de Todos os Fiéis Defuntos');
+assert.equal(cal.infoForIso('2027-11-09').celebration,'Dedicação da Basílica de Latrão');
 assert.equal(cal.infoForIso('2025-11-03').ferialCycle,'I');
 assert.equal(cal.infoForIso('2025-11-05').ferialCycle,'I');
 assert.equal(cal.infoForIso('2025-11-30').ferialCycle,null);

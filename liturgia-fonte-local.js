@@ -54,6 +54,7 @@
       const day=new Date(date+'T12:00:00Z'),offset=(day.getUTCDay()+7)%7;
       const sunday=new Date(day.getTime()-offset*86400000);
       let celebration=root.LCE_CALENDAR.majorCelebration(sunday);
+      if(celebration==='Nosso Senhor Jesus Cristo, Rei do Universo')return 34;
       if(!/^\d+º Domingo do Tempo Comum$/.test(celebration)){
         const nextSunday=new Date(sunday.getTime()+7*86400000);
         const next=root.LCE_CALENDAR.majorCelebration(nextSunday);
@@ -187,7 +188,7 @@
     }
   }
   async function loadForEntry(entry,card) {
-    if(!entry?.editorialStudy||!card||!entry.data?.startsWith('2025-11-'))return false;
+    if(!entry?.editorialStudy||!card)return false;
     const pane=card.querySelector('.original-text');
     const label=card.querySelector('.original-pane .pane-label');
     if(!pane||!label)return false;
