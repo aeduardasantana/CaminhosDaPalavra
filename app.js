@@ -252,7 +252,8 @@ function monthlyStudyEntries(isoDate) {
   const month = window.LCE_MONTH_2025_11?.readings?.[isoDate];
   const review = window.LCE_ESTUDO_NOV_2025?.[isoDate];
   if (!month || !review) return null;
-  const cycle = litCalendar.infoForIso(isoDate).cycle;
+  const dayInfo = litCalendar.infoForIso(isoDate);
+  const cycle = dayInfo.cycle;
   const types = {'Primeira leitura':['f','primeira-leitura'],'Segunda leitura':['s','segunda-leitura'],'Salmo responsorial':['p','salmo'],'Cântico responsorial':['p','salmo'],'Evangelho':['e','evangelho']};
   return month.items.map(([label,reference],index)=>{
     const [shortKind,kind] = types[label] || [];
@@ -260,7 +261,9 @@ function monthlyStudyEntries(isoDate) {
     const psalm = isoDate === '2025-11-30' && kind === 'salmo' ? month.salmoResponsorial : null;
     return {
       id:'estudo-2025-11-'+isoDate+'-'+kind,
-      data:isoDate,ano:cycle,tempo:litCalendar.infoForIso(isoDate).season,
+      data:isoDate,ano:cycle,tempo:dayInfo.season,
+      rank:month.rank,
+      ferialCycle:month.rank==='Féria' ? dayInfo.ferialCycle : null,
       section:'REVISAO MENSAL — NOVEMBRO 2025',celebracao:month.label,item:kind,itemLabel:label,
       referencia:psalm?.reference||reference,
       editorialStudy:true,draftUnits:segments,verseUnits:window.LCE_ESTUDO_VERSICULAR_2025_11?.[isoDate]?.[shortKind]||[],partialBrazilianPsalm:psalm||null,
@@ -602,6 +605,52 @@ function renderPsalmStudyGlosa(glosaBox,entry) {
   container.append(stanzas);
   glosaBox.append(container);
   return true;
+}
+
+// Diálogo ao fim da proclamação: duas falas com papéis distintos.
+function appendLiturgicalAcclamation(entry,node){
+  const dialogue=window.LCE_ACLAMACOES?.forItem(entry.item);
+  if(!dialogue)return;
+  const originalPane=node.querySelector('.original-pane');
+  const glossPane=node.querySelector('.glosa-pane');
+  const textAnchor=node.querySelector('.original-text');
+  const glossAnchor=node.querySelector('.glosa-text');
+  if(!originalPane||!glossPane||!textAnchor||!glossAnchor)return;
+  const source=document.createElement('section');
+  source.className='liturgical-dialogue';
+  source.setAttribute('aria-label','Aclamação ao final da leitura');
+  const title=document.createElement('span');
+  title.className='liturgical-dialogue-title';
+  title.textContent='Ao final da leitura';
+  source.append(title);
+  for(const [who,phrase] of [[dialogue.minister,dialogue.proclamation],['Assembleia',dialogue.response]]){
+    const line=document.createElement('p');
+    line.className='liturgical-dialogue-line';
+    const role=document.createElement('strong');
+    role.textContent=who+': ';
+    line.append(role,document.createTextNode(phrase));
+    source.append(line);
+  }
+  textAnchor.after(source);
+  const study=document.createElement('section');
+  study.className='liturgical-dialogue liturgical-dialogue-study';
+  study.setAttribute('aria-label','Preparação de glosa para o diálogo litúrgico');
+  const heading=document.createElement('span');
+  heading.className='liturgical-dialogue-title';
+  heading.textContent='Resposta da assembleia · glosa em estudo';
+  study.append(heading);
+  for(const [who,words] of [[dialogue.minister,dialogue.proclamationStudy],['Assembleia',dialogue.responseStudy]]){
+    const line=document.createElement('p');
+    line.className='liturgical-dialogue-line';
+    const role=document.createElement('strong');
+    role.textContent=who+': ';
+    line.append(role,document.createTextNode(words));
+    study.append(line);
+  }
+  const caution=document.createElement('small');
+  caution.textContent='Roteiro preliminar, não validado em Libras.';
+  study.append(caution);
+  glossAnchor.after(study);
 }
 
 function renderMonthlyStudy(entry, originalBox, glosaBox) {
@@ -1081,7 +1130,12 @@ function renderLiturgia() {
     const node = els.template.content.cloneNode(true);
     const trigger = node.querySelector('.accordion-trigger');
 
-    node.querySelector('.card-kicker').textContent = 'Ano ' + entry.ano + ' · ' + entry.itemLabel;
+    const cycleLabel=entry.ferialCycle
+      ? 'Ferial '+entry.ferialCycle
+      : entry.editorialStudy && entry.rank && !['Domingo','Solenidade'].includes(entry.rank)
+        ? entry.rank
+        : 'Ano '+entry.ano;
+    node.querySelector('.card-kicker').textContent = cycleLabel+' · '+entry.itemLabel;
     node.querySelector('.card-title').textContent = entry.editorialStudy
       ? entry.referencia : entry.celebracao + ' — ' + entry.referencia;
     node.querySelector('.card-meta').textContent = entry.editorialStudy
@@ -1159,6 +1213,9 @@ function renderLiturgia() {
         }
       }
     }
+
+    // Não aplicar aos salmos nem aos cânticos: neles a resposta é o refrão.
+    appendLiturgicalAcclamation(entry,node);
 
     const originalSourceLink = node.querySelector('.original-source-link');
     if(entry.editorialStudy) originalSourceLink.textContent='Consultar fonte brasileira ↗';

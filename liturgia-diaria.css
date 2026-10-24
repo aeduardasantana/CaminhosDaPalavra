@@ -318,3 +318,28 @@
 @media print{
   .monthly-psalm-refrain-box,.monthly-psalm-stanza{break-inside:avoid}
 }
+
+/* Aclamações: palavras do leitor e resposta da assembleia sem confundir com versículos. */
+.liturgical-dialogue{
+  margin:20px 0 0;padding:13px 16px;background:#f9f5eb;
+  border:1px solid #ded3bd;border-left:3px solid #a67c31;
+  border-radius:5px;line-height:1.55;color:#3a3021;
+}
+.liturgical-dialogue-title{
+  display:block;margin:0 0 9px;font-size:.76rem;
+  line-height:1.4;font-weight:750;color:#715329;
+}
+.liturgical-dialogue-line{
+  margin:5px 0;font-size:.95rem;line-height:1.5;
+}
+.liturgical-dialogue-line strong{
+  font-weight:750;color:#51412a;
+}
+.liturgical-dialogue-study{
+  background:#edf2f6;border-color:#c6d3de;
+  border-left-color:#829cb3;color:#354b5e;
+}
+.liturgical-dialogue-study .liturgical-dialogue-title,
+.liturgical-dialogue-study .liturgical-dialogue-line strong{color:#34516c}
+.liturgical-dialogue-study small{display:block;margin-top:9px;font-size:.76rem;color:#597082}
+@media(max-width:650px){.liturgical-dialogue{margin-top:16px;padding:12px}}

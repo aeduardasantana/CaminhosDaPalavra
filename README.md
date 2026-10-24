@@ -279,3 +279,7 @@ Na competência 01/36, o comparativo prioriza **Texto litúrgico** e **Glosa de 
 ### Salmos responsoriais na Liturgia + Libras
 
 Refrão em destaque **uma vez**, com indicação "Repetir após cada estrofe". Versos divididos em quadros com referências extraídas da ocorrência local somente quando a segmentação da fonte digital coincide. Em glosas versiculares com referências suficientes, agrupamento correspondente de cada estrofe; sem correspondência comprovável, não são atribuídos números por suposição.
+
+### Respostas da assembleia e ciclo ferial
+
+O comparativo registra o diálogo litúrgico após primeira/segunda leituras e após Evangelho (sem duplicá-lo após salmos/cânticos). O ciclo ferial **I/II** considera o ano civil ímpar/par no Tempo Comum, independentemente do ciclo dominical **A/B/C**; a seleção individual da celebração prevalece sobre qualquer regra geral.
