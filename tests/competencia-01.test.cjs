@@ -11,6 +11,17 @@ assert.equal(cal.infoForIso('2025-11-09').celebration,'Dedicação da Basílica 
 assert.equal(daily.colorFor(cal.infoForIso('2025-11-02')),'roxo');
 assert.equal(daily.colorFor(cal.infoForIso('2025-11-12')),'vermelho');
 assert.equal(cal.infoForIso('2025-11-29').cycle,'C');
+assert.equal(cal.infoForIso('2025-11-03').ferialCycle,'I');
+assert.equal(cal.infoForIso('2025-11-05').ferialCycle,'I');
+assert.equal(cal.infoForIso('2025-11-30').ferialCycle,null);
+assert.equal(cal.infoForIso('2025-11-30').cycle,'A');
+assert.equal(cal.weekdayLectionaryCycle(new Date('2026-02-02T12:00:00Z')),'II');
+assert.equal(cal.weekdayLectionaryCycle(new Date('2027-02-02T12:00:00Z')),'I');
+assert.equal(cal.weekdayLectionaryCycle(new Date('2028-02-02T12:00:00Z')),'II');
+assert.equal(cal.infoForIso('2026-02-03').ferialCycle,'II');
+assert.equal(cal.infoForIso('2027-02-03').ferialCycle,'I');
+assert.equal(cal.infoForIso('2028-02-03').ferialCycle,'II');
+assert.equal(cal.infoForIso('2026-03-16').ferialCycle,null); // Quaresma tem seleção própria
 assert.equal(cal.infoForIso('2025-11-30').cycle,'A');
 assert.equal(layer.readings['2025-11-02'].options.length,2);
 assert.equal(layer.readings['2025-11-01'].items[1][1],'Sl 23(24)');

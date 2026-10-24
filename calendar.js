@@ -65,6 +65,11 @@
     return cycles[((startYear - 2025) % 3 + 3) % 3];
   }
 
+  function weekdayLectionaryCycle(date) {
+    // Ciclo bienal do Lecionário ferial: I = ano civil ímpar, II = ano civil par.
+    return date.getUTCFullYear() % 2 === 0 ? 'II' : 'I';
+  }
+
   function seasonFor(date) {
     const year = date.getUTCFullYear();
     const easter = easterSunday(year);
@@ -191,6 +196,10 @@
       day: date.getUTCDate(),
       weekday: date.getUTCDay(),
       cycle: liturgicalCycle(date),
+      // Apenas dias úteis do Tempo Comum recebem indicador ferial.
+      // Memórias/festas podem ter leitura própria, verificada separadamente.
+      ferialCycle: date.getUTCDay() !== 0 && seasonFor(date) === 'Tempo Comum'
+        ? weekdayLectionaryCycle(date) : null,
       season: seasonFor(date),
       celebration: majorCelebration(date)
     };
@@ -214,6 +223,7 @@
     easterSunday,
     adventStart,
     liturgicalCycle,
+    weekdayLectionaryCycle,
     seasonFor,
     majorCelebration,
     infoForIso,
