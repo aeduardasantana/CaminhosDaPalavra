@@ -38,6 +38,7 @@ jobs:
           node tests/fonte-online.test.cjs
           node tests/acervo-local.test.cjs
           node tests/edicoes-liturgicas.test.cjs
+          node tests/edicoes-manifest.test.cjs
           node tests/leitura-limpa-ux.test.cjs
           node tests/glosa-orientacoes-ux.test.cjs
           node tests/salmos-quadros.test.cjs
