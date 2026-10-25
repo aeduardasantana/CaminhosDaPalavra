@@ -33,7 +33,7 @@ assert.ok(app.includes("els.editionChoices.forEach(choice=>choice.addEventListen
 assert.ok(app.includes("same?.querySelector('.accordion-trigger')?.click()"));
 const impl=fs.readFileSync('liturgia-edicoes.js','utf8');
 assert.ok(impl.includes('record.gloss?.textId!==record.id'));
-assert.ok(impl.includes('setUnavailable(text,gloss)'));
+assert.ok(impl.includes('unavailable(text,gloss)'));
 assert.ok(impl.includes('if(oldNotes)oldNotes.hidden=true'));
 assert.ok(impl.includes('if(oldSource)oldSource.hidden=true'));
 const real=fs.readFileSync('liturgia-br-acervo.js','utf8');
