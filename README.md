@@ -287,3 +287,7 @@ O comparativo registra o diálogo litúrgico após primeira/segunda leituras e a
 ### Associação do acervo local a outros anos
 
 O mesmo texto importado pode servir a datas com semana, dia e ciclo litúrgico equivalentes, sem novas buscas. No Tempo Comum, primeira leitura e salmo seguem I/II, Evangelho é anual; domingos seguem A/B/C. Celebrações próprias prevalecem. Não se considera completa uma missa com leituras parcialmente cobertas. As glosas seguem marcadas como preliminares.
+
+### Alternância CNBB / Bíblia Ave-Maria (Comando 0)
+
+Na Liturgia + Libras, o seletor aplica CNBB ou Bíblia Ave-Maria às primeiras e segundas leituras e ao Evangelho. Texto e glosa são vinculados à mesma edição; salmos sempre CNBB. `liturgia-ave-maria-acervo.js` contém um acervo separado ainda vazio, e a ausência de texto/glosa é informada sem substituir pela redação CNBB. O corpus brasileiro existente é proveniente de API comunitária e continua pendente de cotejo direto com o Lecionário CNBB. Veja RELATORIOS/COMANDO-0-EDICOES.md.

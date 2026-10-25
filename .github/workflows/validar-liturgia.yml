@@ -25,6 +25,8 @@ jobs:
           node --check estudo-versiculos-2025-11.js
           node --check liturgia-fonte-local.js
           node --check liturgia-br-acervo.js
+          node --check liturgia-ave-maria-acervo.js
+          node --check liturgia-edicoes.js
           node --check scripts/importar-liturgia-br.mjs
       - name: Regressões litúrgicas e rastreabilidade
         run: |
@@ -35,6 +37,7 @@ jobs:
           node tests/novembro-integracao-editorial.test.cjs
           node tests/fonte-online.test.cjs
           node tests/acervo-local.test.cjs
+          node tests/edicoes-liturgicas.test.cjs
           node tests/leitura-limpa-ux.test.cjs
           node tests/glosa-orientacoes-ux.test.cjs
           node tests/salmos-quadros.test.cjs
