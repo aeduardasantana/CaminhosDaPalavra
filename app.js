@@ -18,6 +18,7 @@ const els = {
   date: document.querySelector('#dateFilter'),
   year: document.querySelector('#yearFilter'),
   item: document.querySelector('#itemFilter'),
+  editionChoices: [...document.querySelectorAll('input[name="liturgyEdition"]')],
   clear: document.querySelector('#clearFilters'),
   liturgyResults: document.querySelector('#liturgyResults'),
   resultCount: document.querySelector('#resultCount'),
@@ -1149,6 +1150,7 @@ function splitYearBAlternativeReading(entry) {
   return null;
 }
 
+function selectedLiturgyEdition(){return els.editionChoices.find(x=>x.checked)?.value==='AVM'?'AVM':'CNBB';}
 function renderLiturgia() {
   const q = normalize(els.query.value);
   const date = els.date.value;
@@ -1290,6 +1292,7 @@ function renderLiturgia() {
 
     els.liturgyResults.appendChild(node);
     const card = els.liturgyResults.lastElementChild;
+    card.dataset.entryId=entry.id||[entry.data,entry.item,entry.referencia].join('|');
     if(entry.editorialStudy) {
       card.dataset.editorialStudy='true';
       card.dataset.completeText='false';
@@ -1304,8 +1307,11 @@ function renderLiturgia() {
         aside.appendChild(studyNotes);
         comparison.after(aside);
       }
-      if(window.LCE_FONTE_LOCAL)window.LCE_FONTE_LOCAL.loadForEntry(entry,card);
+      if(window.LCE_EDICOES)window.LCE_EDICOES.apply(entry,card,selectedLiturgyEdition());
+      else if(window.LCE_FONTE_LOCAL)window.LCE_FONTE_LOCAL.loadForEntry(entry,card);
     }
+    if(!entry.editorialStudy && window.LCE_EDICOES)
+      window.LCE_EDICOES.apply(entry,card,selectedLiturgyEdition());
     if (entry.data && entry.item) {
       const share = document.createElement('button');
       share.type = 'button';
@@ -2103,6 +2109,16 @@ els.clear.addEventListener('click', () => {
 window.addEventListener('popstate', () => setSection(sectionFromUrl(), {fromHistory:true}));
 window.addEventListener('hashchange', () => setSection(sectionFromUrl(), {fromHistory:true}));
 
+els.editionChoices.forEach(choice=>choice.addEventListener('change',()=>{
+  const id=[...els.liturgyResults.querySelectorAll('.accordion-item')]
+    .find(card=>card.querySelector('.accordion-trigger')?.getAttribute('aria-expanded')==='true')?.dataset.entryId;
+  renderLiturgia();
+  if(id){
+    const same=[...els.liturgyResults.querySelectorAll('.accordion-item')]
+      .find(card=>card.dataset.entryId===id);
+    same?.querySelector('.accordion-trigger')?.click();
+  }
+}));
 els.navButtons.forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.section)));
 document.querySelectorAll('[data-go]').forEach(btn => btn.addEventListener('click', () => setSection(btn.dataset.go)));
 
