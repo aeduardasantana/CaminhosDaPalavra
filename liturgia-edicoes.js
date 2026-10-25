@@ -45,7 +45,12 @@
  }
  function apply(entry,card,choice){
    const edition=editionFor(entry.item,choice);
-   if(edition==='AVM')return showAve(entry,card);
+   if(edition==='AVM'){
+     // Não exportar um PDF de 'texto e glosa' contendo apenas avisos ou texto incompleto.
+     card.dataset.editorialStudy='true';
+     card.dataset.completeText='false';
+     return showAve(entry,card);
+   }
    card.dataset.edition=entry.editorialStudy?'CNBB':'LEGADO';
    if(!entry.editorialStudy){
      card.querySelector('.original-pane .pane-label').textContent='Texto legado · edição não cotejada como CNBB';
