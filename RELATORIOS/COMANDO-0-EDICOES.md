@@ -17,3 +17,6 @@ Teste automatizado de separação dos registros e troca foi adicionado. A verifi
 - Glosas integrais e revisão linguística específicas para cada tradução.
 - Validação humana especializada em Libras e testes do PDF final com pares completos.
 A competência 01/36 continua EM REVISÃO; não confundir Comando 0 técnico com conclusão editorial do mês.
+
+## Matriz por ocorrência
+Arquivo STATUS-EDICOES-2025-11.csv cadastra 96 ocorrências, incluindo 30 salmos/cânticos, com colunas separadas de origem, cotejo CNBB, glosa CNBB, texto Ave-Maria, glosa Ave-Maria e validação humana. Não se usa o status único “pronto” para todos os dados da data. Verificação automática da contagem e do salmo exclusivamente CNBB.
