@@ -54,6 +54,8 @@ const browserContext={window:{LCE_AVE_MARIA_ACERVO:{edition:'AVM',texts:{},dates
 vm.runInNewContext(fs.readFileSync('liturgia-edicoes.js','utf8'),browserContext);
 browserContext.window.LCE_EDICOES.apply({...passages[0],editorialStudy:true},card,'AVM');
 assert.equal(card.dataset.edition,'AVM');
+assert.equal(card.dataset.editorialStudy,'true');
+assert.equal(card.dataset.completeText,'false');
 assert.ok(view['.original-text'].children[0].textContent.includes('ainda não incorporado'));
 assert.ok(view['.glosa-text'].children[0].textContent.includes('ainda não elaborada'));
 assert.equal(view['.liturgy-study-notes'].hidden,true);
