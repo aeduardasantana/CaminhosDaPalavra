@@ -38,4 +38,34 @@ assert.ok(impl.includes('if(oldNotes)oldNotes.hidden=true'));
 assert.ok(impl.includes('if(oldSource)oldSource.hidden=true'));
 const real=fs.readFileSync('liturgia-br-acervo.js','utf8');
 assert.ok(real.includes('window.LCE_BR_ACERVO'));
-console.log('OK: alternância sem misturar texto/glosa; ausência Ave-Maria identificada; salmos sempre CNBB.');
+// Exercitar o renderizador, não apenas o nome das funções.
+class FakeElement {
+  constructor(tag='div'){this.tagName=tag;this.children=[];this.dataset={};this.textContent='';this.hidden=false;}
+  replaceChildren(...args){this.children=args;}
+  append(...args){this.children.push(...args);}
+}
+const view={};
+const selectors=['.original-text','.glosa-text','.original-pane .pane-label','.glosa-pane .pane-label',
+ '.liturgy-study-notes','.original-source-link','.reading-source-note','.status-pill'];
+for(const name of selectors)view[name]=new FakeElement();
+const card={dataset:{},querySelector:name=>view[name]||null};
+const browserContext={window:{LCE_AVE_MARIA_ACERVO:{edition:'AVM',texts:{},dates:{}}},
+ document:{createElement:tag=>new FakeElement(tag)}};
+vm.runInNewContext(fs.readFileSync('liturgia-edicoes.js','utf8'),browserContext);
+browserContext.window.LCE_EDICOES.apply({...passages[0],editorialStudy:true},card,'AVM');
+assert.equal(card.dataset.edition,'AVM');
+assert.ok(view['.original-text'].children[0].textContent.includes('ainda não incorporado'));
+assert.ok(view['.glosa-text'].children[0].textContent.includes('ainda não elaborada'));
+assert.equal(view['.liturgy-study-notes'].hidden,true);
+browserContext.window.LCE_AVE_MARIA_ACERVO=corpus;
+browserContext.window.LCE_EDICOES.apply({...passages[0],editorialStudy:true},card,'AVM');
+assert.equal(view['.original-text'].children[0].textContent,example.text);
+assert.equal(view['.glosa-text'].children[0].children.at(-1).textContent,'TESTE / GLOSA');
+let cnbbCalls=0;
+browserContext.window.LCE_FONTE_LOCAL={loadForEntry:()=>{cnbbCalls++}};
+browserContext.window.LCE_EDICOES.apply({...passages[3],editorialStudy:true},card,'AVM');
+assert.equal(card.dataset.edition,'CNBB');
+assert.equal(cnbbCalls,1,'O salmo continua CNBB, inclusive quando Ave-Maria foi escolhida');
+assert.equal(view['.original-pane .pane-label'].textContent,'Salmo · CNBB (em cotejo)');
+console.log('OK: alternância real de textos e glosas, salmo fixo e lacuna Ave-Maria independente.');
+
