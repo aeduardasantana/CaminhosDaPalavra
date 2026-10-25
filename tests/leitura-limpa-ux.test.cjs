@@ -28,7 +28,7 @@ assert.ok(css.includes("grid-template-columns:repeat(2,minmax(0,1fr))"));
 assert.ok(app.includes("originalBox.replaceChildren(pending)"));
 assert.ok(!app.includes("glosa integral depende da correspondência com os versículos"));
 assert.ok(online.includes('pane.replaceChildren(status)'));
-assert.ok(online.includes("label.textContent='Texto litúrgico'"));
+assert.ok(online.includes("label.textContent='Texto · CNBB (cotejo pendente)'"));
 assert.ok(online.includes("card.querySelector('.reading-source-extra')"));
 assert.ok(online.includes('monthly-remote-verse'));
 assert.ok(!online.includes("source.textContent='Texto recuperado de serviço comunitário"));

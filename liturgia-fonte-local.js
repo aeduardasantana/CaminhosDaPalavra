@@ -206,7 +206,7 @@
       const body=document.createElement('div');body.className='monthly-remote-text';
       appendReading(body,record,entry.item,entry.referencia);
       pane.replaceChildren(body);
-      label.textContent='Texto litúrgico';
+      label.textContent='Texto · CNBB (cotejo pendente)';
     };
     renderMatch(matches[0]);
     const notes=card.querySelector('.reading-source-extra');
