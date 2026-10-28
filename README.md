@@ -319,3 +319,7 @@ Para incorporar uma versão **Ave-Maria distinta e autorizada**, a rotina `node 
 ### Visualização paralela sincronizada
 
 Para leituras com glosa preliminar referenciada por versículos, o texto e a glosa correspondente aparecem na mesma linha horizontal (colunas CNBB/AVM e glosa), com divisórias discretas. No celular, cada trecho apresenta texto e, logo abaixo, a glosa. Salmos são alinhados por refrão único e estrofes. O pareamento depende de correspondência completa de referências: se uma fonte omitir ou acrescentar versículos sem glosa, o leitor mantém o layout original e não inventa alinhamento. Sínteses temáticas não são apresentadas como glosas integrais. As versões CNBB e Ave-Maria continuam isoladas, com salmo sempre CNBB.
+
+### Comparação por pares horizontais (layout 28/10/2026)
+
+O leitor mantém duas colunas no computador, com unidades sincronizadas por versículo ou estrofe quando os IDs e marcadores do texto local comprovam a correspondência; no celular cada par é empilhado. A apresentação não fragmenta leitura sem glosa suficiente. Salmos usam refrão único e instrução de repetição; seleções CNBB/Ave-Maria seguem separadas. Ver `RELATORIOS/PARALELO-VISUAL-2026-10-28.md`.
