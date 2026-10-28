@@ -26,6 +26,7 @@ jobs:
           node --check estudo-liturgico-2025-11-16a30.js
           node --check estudo-versiculos-2025-11.js
           node --check liturgia-fonte-local.js
+          node --check liturgia-paralelo.js
           node --check liturgia-br-acervo.js
           node --check liturgia-ave-maria-acervo.js
           node --check liturgia-edicoes.js
@@ -54,5 +55,6 @@ jobs:
           node tests/leitura-limpa-ux.test.cjs
           node tests/glosa-orientacoes-ux.test.cjs
           node tests/salmos-quadros.test.cjs
+          node tests/paralelo-alinhado.test.cjs
           node tests/aclamacoes-ferial.test.cjs
 
