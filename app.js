@@ -1,6 +1,7 @@
 const data = window.LCE_DATA;
 const bible = window.LCE_BIBLE;
 const theology = window.CDP_THEOLOGY || {chapters: {}};
+const publicationControl = window.CDP_PUBLICATION_CONTROL || {failClosed:true, chapters:{}};
 const litCalendar = window.LCE_CALENDAR;
 const saintsArchive = window.LCE_SAINTS || {highlights: {}};
 const lectionary = window.LCE_LECTIONARY || {records: []};
@@ -1681,6 +1682,104 @@ function theologyForChapter(bookId, chapter) {
   return theology.chapters?.[bookId + ':' + chapter] || null;
 }
 
+function publicationStateForChapter(record) {
+  if (!record?.cpId) return {publicAuthorized:false, reviewStatus:'Não informado', authorizationReason:'Registro sem CP-ID.'};
+  const state = publicationControl.chapters?.[record.cpId];
+  if (!state) {
+    return {
+      publicAuthorized: false,
+      reviewStatus: 'Não informado',
+      internalDecision: '',
+      authorizationReason: 'Sem autorização explícita no controle de publicação.'
+    };
+  }
+  return state;
+}
+
+function renderLockedChapter(book, chapter, record, state, options = {}) {
+  els.bibleChapterPanel.classList.remove('empty-state');
+  els.bibleChapterPanel.replaceChildren();
+  selectedBookId = book.id;
+  renderBibleBooks();
+
+  if (!options.suppressUrl) syncBibleChapterUrl(book.id, chapter);
+
+  document.title = record.reference + ' — Caminhos da Palavra';
+
+  const header = document.createElement('div');
+  header.className = 'chapter-experience-header';
+
+  const copy = document.createElement('div');
+  const eyebrow = document.createElement('p');
+  eyebrow.className = 'eyebrow';
+  eyebrow.textContent = book.testament === 'AT' ? 'Antigo Testamento' : 'Novo Testamento';
+  const title = document.createElement('h3');
+  title.textContent = record.reference;
+  const lead = document.createElement('p');
+  lead.className = 'chapter-experience-theme';
+  lead.textContent = 'A estrutura de estudo deste capítulo já está integrada ao Caminhos da Palavra.';
+  copy.append(eyebrow, title, lead);
+
+  const badge = document.createElement('span');
+  badge.className = 'chapter-preview-badge';
+  badge.textContent = record.cpId;
+  header.append(copy, badge);
+
+  const notice = document.createElement('section');
+  notice.className = 'chapter-publication-lock';
+  const lockTitle = document.createElement('h4');
+  lockTitle.textContent = 'Conteúdo teológico em revisão';
+  const lockText = document.createElement('p');
+  lockText.textContent = 'Os campos de tema, História da Salvação, relação com Cristo, conexões bíblicas, Catecismo e Rosário estão preservados na matriz, mas ainda não foram autorizados para exibição pública.';
+  const status = document.createElement('p');
+  status.className = 'chapter-lock-status';
+  status.textContent = 'Status da revisão eclesial: ' + (state.reviewStatus || 'Não informado') + '.';
+  notice.append(lockTitle, lockText, status);
+
+  const actions = document.createElement('div');
+  actions.className = 'chapter-experience-actions';
+  const read = document.createElement('a');
+  read.className = 'primary-link';
+  read.href = record.bibleUrl || chapterUrl(book.id, chapter);
+  read.target = '_blank';
+  read.rel = 'noopener';
+  read.textContent = 'Ler ' + record.reference + ' na Bíblia Ave-Maria';
+
+  const back = document.createElement('button');
+  back.type = 'button';
+  back.className = 'secondary-button';
+  back.textContent = 'Voltar aos capítulos';
+  back.addEventListener('click', () => {
+    syncBibleChapterUrl('', '', {replace:true});
+    document.title = 'Bíblia — Caminhos da Palavra';
+    renderBibleChapters(book);
+  });
+  actions.append(read, back);
+
+  const safeMeta = document.createElement('details');
+  safeMeta.className = 'chapter-methodology-details';
+  const summary = document.createElement('summary');
+  summary.textContent = 'Status editorial';
+  const content = document.createElement('div');
+  content.className = 'chapter-methodology-content';
+  const items = [
+    ['ID', record.cpId],
+    ['Versão da matriz', record.matrixVersion || theology.methodologyVersion],
+    ['Revisão eclesial', state.reviewStatus || 'Não informado'],
+    ['Autorização pública', 'Não autorizada']
+  ];
+  items.forEach(([label,value]) => {
+    const p = document.createElement('p');
+    const strong = document.createElement('strong');
+    strong.textContent = label + ': ';
+    p.append(strong, document.createTextNode(value));
+    content.appendChild(p);
+  });
+  safeMeta.append(summary, content);
+
+  els.bibleChapterPanel.append(header, notice, actions, safeMeta);
+}
+
 function bibleChapterParams() {
   const rawParams = window.location.hash.split('?')[1] || '';
   const params = new URLSearchParams(rawParams);
@@ -1730,6 +1829,12 @@ function meaningful(value, fallback = 'Nenhuma relação específica foi identif
 }
 
 function renderTheologyCard(book, chapter, record, options = {}) {
+  const publicationState = publicationStateForChapter(record);
+  if (!publicationState.publicAuthorized) {
+    renderLockedChapter(book, chapter, record, publicationState, options);
+    return;
+  }
+
   els.bibleChapterPanel.classList.remove('empty-state');
   els.bibleChapterPanel.replaceChildren();
   selectedBookId = book.id;
@@ -1959,10 +2064,13 @@ function renderBibleChapters(book) {
     const record = theologyForChapter(book.id, chapter);
     const button = document.createElement('button');
     button.type = 'button';
-    button.className = 'chapter-link' + (record ? ' chapter-link-enriched' : '');
+    const publicationState = record ? publicationStateForChapter(record) : null;
+    button.className = 'chapter-link' + (record && publicationState.publicAuthorized ? ' chapter-link-enriched' : '') + (record && !publicationState.publicAuthorized ? ' chapter-link-review' : '');
     button.textContent = String(chapter);
     button.setAttribute('aria-label', record
-      ? 'Abrir experiência de ' + book.name + ' capítulo ' + chapter
+      ? (publicationState.publicAuthorized
+          ? 'Abrir experiência de ' + book.name + ' capítulo ' + chapter
+          : 'Abrir ' + book.name + ' capítulo ' + chapter + ' — conteúdo teológico em revisão')
       : 'Abrir ' + book.name + ' capítulo ' + chapter + ' na Bíblia Ave-Maria');
 
     if (record) {
