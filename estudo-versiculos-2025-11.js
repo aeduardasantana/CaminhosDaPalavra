@@ -25,7 +25,7 @@ window.LCE_ESTUDO_VERSICULAR_2025_11 = {
       {
         "ref": "R. (cf. Sl 111(112),5a)",
         "sentido": "A assembleia reconhece a felicidade da pessoa generosa que empresta.",
-        "glosa": "(ASSEMBLEIA RESPONDE SALMISTA) PESSOA MISERICORDIOSA / EMPRESTAR AJUDAR / FELIZ! (REFRÃO DE ESTUDO).",
+        "glosa": "(ASSEMBLEIA RESPONDE SALMISTA) PESSOA MISERICORDIOSA / EMPRESTAR AJUDAR / FELIZ!",
         "espaco": "Identificar SALMISTA e ASSEMBLEIA como papéis diferentes; refrão retorna a cada estrofe."
       },
       {

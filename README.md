@@ -291,3 +291,9 @@ O mesmo texto importado pode servir a datas com semana, dia e ciclo litúrgico e
 ### Alternância CNBB / Bíblia Ave-Maria (Comando 0)
 
 Na Liturgia + Libras, o seletor aplica CNBB ou Bíblia Ave-Maria às primeiras e segundas leituras e ao Evangelho. Texto e glosa são vinculados à mesma edição; salmos sempre CNBB. `liturgia-ave-maria-acervo.js` contém um acervo separado ainda vazio, e a ausência de texto/glosa é informada sem substituir pela redação CNBB. O corpus brasileiro existente é proveniente de API comunitária e continua pendente de cotejo direto com o Lecionário CNBB. Veja RELATORIOS/COMANDO-0-EDICOES.md.
+
+### Competência 01/36 — revisão em execução
+
+O acervo local mantém 96 ocorrências em novembro/2025; foram auditados 288 rascunhos de síntese temática, três leituras com 18 unidades de glosa preliminar por versículo (05/11) e 93 leituras que **ainda não têm glosa integral**. As páginas distinguem essas situações explicitamente; relatório por ocorrência em `RELATORIOS/COBERTURA-GLOSA-2025-11.csv`.
+
+Para incorporar uma versão **Ave-Maria distinta e autorizada**, a rotina `node scripts/importar-ave-maria.mjs --input arquivo.json` importa em `liturgia-ave-maria-acervo.js` uma vez por texto/recorte e vincula glosas ao ID textual. Exige no lote `edition: AVM`, `period: 2025-11`, `sourceEdition`, `publicationAuthorization`, e `entries` com `date`, `kind`, `reference`, `text` e `gloss.segments` opcional. Rejeita salmo, recorte divergente, duplicidade e texto vazio; não pesquisa nem copia automaticamente uma tradução sob direitos de terceiros. Testes usam apenas textos fictícios. Ver `RELATORIOS/REVISAO-COMPETENCIA-01.md`.
