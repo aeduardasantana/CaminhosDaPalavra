@@ -28,6 +28,7 @@ jobs:
           node --check liturgia-ave-maria-acervo.js
           node --check liturgia-edicoes.js
           node --check scripts/importar-liturgia-br.mjs
+          node --check scripts/importar-ave-maria.mjs
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
@@ -39,6 +40,8 @@ jobs:
           node tests/acervo-local.test.cjs
           node tests/edicoes-liturgicas.test.cjs
           node tests/edicoes-manifest.test.cjs
+          node tests/importador-ave-maria.test.cjs
+          node tests/cobertura-glosa-novembro.test.cjs
           node tests/leitura-limpa-ux.test.cjs
           node tests/glosa-orientacoes-ux.test.cjs
           node tests/salmos-quadros.test.cjs
