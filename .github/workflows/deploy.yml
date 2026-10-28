@@ -36,7 +36,9 @@ jobs:
       - name: Validar Mapa Bíblico Mestre antes do deploy
         run: |
           node --check theology-data.js
+          node --check publication-control.js
           node scripts/validate-theology-data.mjs
+          node scripts/validate-publication-control.mjs
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
