@@ -17,22 +17,22 @@ for(const [date,day] of Object.entries(dates)){
   const verseList=verses[date]?.[key]||[];
   unitCount+=units.length;
   if(verseList.length){perVerse++;verseUnitCount+=verseList.length;}
-  else{summary++;assert.equal(units.length,3);}
+  else{summary++;assert.equal(units.length,6);}
  }
 }
 assert.equal(total,96);
-assert.equal(summary,93);
-assert.equal(perVerse,3);
+assert.equal(summary,90);
+assert.equal(perVerse,6);
 assert.equal(unitCount,288);
-assert.equal(verseUnitCount,18);
+assert.equal(verseUnitCount,39);
 const csv=fs.readFileSync('RELATORIOS/COBERTURA-GLOSA-2025-11.csv','utf8').trim().split('\n');
 assert.equal(csv.length,97);
-assert.equal(csv.filter(x=>x.includes('"GLOSA_VERSICULAR_PRELIMINAR"')).length,3);
-assert.equal(csv.filter(x=>x.includes('"SINTESE_TEMATICA_NAO_INTEGRAL"')).length,93);
+assert.equal(csv.filter(x=>x.includes('"GLOSA_VERSICULAR_PRELIMINAR"')).length,6);
+assert.equal(csv.filter(x=>x.includes('"SINTESE_TEMATICA_NAO_INTEGRAL"')).length,90);
 const editorial=fs.readFileSync('RELATORIOS/STATUS-EDICOES-2025-11.csv','utf8').trim().split('\n');
 assert.equal(editorial.length,97);
-assert.equal(editorial.filter(x=>x.includes('"GLOSA_VERSICULAR_PRELIMINAR"')).length,3);
-assert.equal(editorial.filter(x=>x.includes('"SINTESE_TEMATICA_NAO_INTEGRAL"')).length,93);
+assert.equal(editorial.filter(x=>x.includes('"GLOSA_VERSICULAR_PRELIMINAR"')).length,6);
+assert.equal(editorial.filter(x=>x.includes('"SINTESE_TEMATICA_NAO_INTEGRAL"')).length,90);
 assert.ok(!verses['2025-11-05'].p[0].glosa.includes('REFRÃO DE ESTUDO'));
 const app=fs.readFileSync('app.js','utf8');
 assert.ok(app.includes("SINTESE_TEMATICA"));
