@@ -170,7 +170,7 @@
     if(currentReader&&currentReader!==reader)currentReader.close();
     if(!reader.open){lastFocus=document.activeElement;}
     if(reader.__stage&&reader.__stage!==node)restore(reader.__stage);
-    content.append(node);
+    content.replaceChildren(node);
     reader.__stage=node;
     node.open=true;
     reader.dataset.index=String(index);
