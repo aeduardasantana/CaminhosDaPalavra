@@ -9,7 +9,7 @@ assert.ok(html.includes('<details class="reading-source-details">'));
 assert.ok(html.includes('Fonte e revisão'));
 assert.ok(html.includes('Glosas de estudo em revisão humana'));
 assert.ok(!html.includes('<strong>Estado editorial:</strong>'));
-assert.ok(app.includes("statusPill.textContent=entry.editorialStudy?'Em estudo':entry.status"));
+assert.ok(app.includes("statusPill.textContent=entry.editorialStudy?(entry.verseUnits?.length?'Glosa por trechos':'Síntese pendente'):entry.status"));
 assert.ok(app.includes("share.textContent = 'Copiar link'"));
 assert.ok(app.includes("card.querySelector('.accordion-panel')?.appendChild(share)"));
 assert.ok(!app.includes('Novembro/2025: cadastro de referências e fontes brasileiras por data.'));
