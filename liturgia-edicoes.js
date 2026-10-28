@@ -12,8 +12,37 @@
        typeof item.text==='string'&&item.text.trim().length>0);
  }
  const element=(tag,text,cls)=>{const e=document.createElement(tag);e.textContent=text;if(cls)e.className=cls;return e;};
- function unavailable(textPane,glossPane){
-   textPane.replaceChildren(element('p','Texto da Bíblia Ave-Maria ainda não incorporado para esta leitura.','liturgia-edicao-pendente'));
+ const avmBooks={
+  Gn:'GEN',Ex:'EXO',Lv:'LEV',Nm:'NUM',Dt:'DEU',Js:'JOS',Jz:'JDG',Rt:'RUT',
+  '1Sm':'1SA','2Sm':'2SA','1Rs':'1KI','2Rs':'2KI','1Cr':'1CH','2Cr':'2CH',
+  Esd:'EZR',Ne:'NEH',Tb:'TOB',Jt:'JDT',Est:'EST','1Mc':'1MA','2Mc':'2MA',
+  Jó:'JOB',Sl:'PSA',Pr:'PRO',Ecl:'ECC',Ct:'SNG',Sb:'WIS',Eclo:'SIR',EcloS:'SIR',
+  Is:'ISA',Jr:'JER',Lm:'LAM',Ez:'EZK',Dn:'DAN',Os:'HOS',Jl:'JOL',Am:'AMO',
+  Ab:'OBA',Jn:'JON',Mq:'MIC',Na:'NAM',Hab:'HAB',Sf:'ZEP',Ag:'HAG',Zc:'ZEC',Ml:'MAL',
+  Mt:'MAT',Mc:'MRK',Lc:'LUK',Jo:'JHN',At:'ACT',Rm:'ROM',
+  '1Cor':'1CO','2Cor':'2CO','1Co':'1CO','2Co':'2CO',Gl:'GAL',Ef:'EPH',
+  Fl:'PHP',Fp:'PHP',Cl:'COL','1Ts':'1TH','2Ts':'2TH','1Tm':'1TI','2Tm':'2TI',
+  Tt:'TIT',Fm:'PHM',Hb:'HEB',Tg:'JAS','1Pd':'1PE','2Pd':'2PE',
+  '1Pe':'1PE','2Pe':'2PE','1Jo':'1JN','2Jo':'2JN','3Jo':'3JN',Jd:'JUD',Ap:'REV'
+ };
+ function avmUrl(reference){
+   const match=String(reference||'').trim().match(/^((?:[1-3]\\s*)?[A-Za-zÀ-ÿ]+)\\s+(\\d+)/);
+   if(!match)return 'https://www.bible.com/pt/versions/4542';
+   const key=match[1].replace(/\\s+/g,'');
+   const book=avmBooks[key]||avmBooks[Object.keys(avmBooks).find(k=>norm(k)===norm(key))];
+   return book?'https://www.bible.com/pt/bible/4542/'+book+'.'+Number(match[2])+'.AVM':
+     'https://www.bible.com/pt/versions/4542';
+ }
+ function attachReference(pane,entry){
+   const box=document.createElement('div');box.className='liturgia-edicao-pendente';
+   box.append(element('strong','Bíblia Sagrada Ave-Maria — '+entry.referencia));
+   box.append(element('p','A referência da leitura está organizada nesta edição. Consulte o texto original no editor autorizado enquanto a incorporação integral ao acervo estiver pendente.'));
+   const a=document.createElement('a');a.href=avmUrl(entry.referencia);
+   a.target='_blank';a.rel='noopener noreferrer';a.textContent='Ler na Bíblia Ave-Maria ↗';
+   box.append(a);pane.replaceChildren(box);
+ }
+ function unavailable(textPane,glossPane,entry){
+   attachReference(textPane,entry);
    glossPane.replaceChildren(element('p','Glosa correspondente à Bíblia Ave-Maria ainda não elaborada.','liturgia-edicao-pendente'));
  }
  function showAve(entry,card){
@@ -27,7 +56,7 @@
    const sourceNote=card.querySelector('.reading-source-note');
    if(sourceNote)sourceNote.textContent='Edição Ave-Maria; revisão de texto e glosa independentes da CNBB.';
    const records=aveReadings(entry);
-   if(!records.length){unavailable(text,gloss);return;}
+   if(!records.length){unavailable(text,gloss,entry);return;}
    const record=records[0];
    text.replaceChildren(element('p',record.text,'liturgia-ave-maria-texto'));
    if(record.gloss?.textId!==record.id||!Array.isArray(record.gloss.segments)||!record.gloss.segments.length){
