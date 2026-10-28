@@ -80,7 +80,7 @@
  .cj-station-copy { padding:8px; }
  .cj-station-pin { width:48px; height:48px; }
 }
-@media(max-width:690px){
+@media(max-width:960px){
  .cj-enhanced .history-hero { padding:18px 20px; }
  .cj-enhanced .history-hero .eyebrow { font-size:.65rem; }
  .cj-enhanced .hs-pathway-tab { min-height:auto; }
@@ -110,3 +110,15 @@
  .cj-reader-nav button { padding:10px 9px; font-size:.75rem; }
 }
 @media(prefers-reduced-motion:reduce){.cj-station-pin,.cj-station-copy{transition:none;} .cj-reader::backdrop{backdrop-filter:none;}}
+
+/* Layout seguro para marcos: cartões abaixo da linha superior e acima da inferior. */
+@media(min-width:961px){
+  .cj-route { height:720px; overflow:hidden; }
+  .cj-map-station { width:min(18%,244px); }
+  .cj-map-station[data-row="top"] { transform:translate(-50%,-26px); flex-direction:column; }
+  .cj-map-station[data-row="bottom"] { transform:translate(-50%,calc(-100% + 26px)); flex-direction:column-reverse; }
+  .cj-station-copy { box-sizing:border-box; min-height:130px; width:100%; }
+  .cj-station-copy strong { font-size:clamp(.85rem,1.05vw,1.02rem); line-height:1.3; }
+  .cj-station-copy small { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; line-height:1.45; }
+}
+.cj-enhanced #eixo-historia,.cj-enhanced #eixo-pessoa,.cj-map-shell { scroll-margin-top:120px; }
