@@ -184,5 +184,38 @@
     glossText.setAttribute('aria-hidden','true');
     return true;
   }
-  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,applyLegacyPsalm,reset});
+  // Leituras legadas: só criar pares quando existe correspondência 1:1
+  // verificável entre linhas de origem e unidades da glosa. Não dividir
+  // arbitrariamente o texto para simular equivalência linguística.
+  function applyLegacyReading(card){
+    const parallel=card?.querySelector('.parallel-view');
+    if(!parallel||parallel.hasAttribute('data-aligned'))return false;
+    const original=parallel.querySelector('.original-pane .original-text');
+    const gloss=parallel.querySelector('.glosa-pane .glosa-text');
+    if(!original||!gloss)return false;
+    const source=original.textContent||'';
+    const lines=source.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+    const glossLines=[...gloss.children].filter(x=>x.classList.contains('glosa-line'));
+    const notes=[...gloss.children].filter(x=>x.classList.contains('visual-note'));
+    // Não adivinhar a segmentação quando a transcrição não traz quebras.
+    if(lines.length<2||lines.length!==glossLines.length||notes.length)return false;
+    const rows=el('div',undefined,'lce-parallel-rows lce-legacy-reading-rows');
+    rows.setAttribute('aria-label','Leitura e glosa organizadas por unidades correspondentes do acervo legado');
+    lines.forEach((line,i)=>{
+      const row=el('section',undefined,'lce-parallel-row');
+      const left=el('div',undefined,'lce-parallel-original');
+      const right=el('div',undefined,'lce-parallel-glosa');
+      left.append(el('p',line,'lce-parallel-text'));
+      const draft=el('div',undefined,'monthly-glosa-draft');
+      const sign=el('span',glossLines[i].textContent,'monthly-glosa-signs');
+      draft.append(sign);right.append(draft);
+      row.append(left,right);rows.append(row);
+    });
+    parallel.append(rows);
+    parallel.setAttribute('data-aligned','true');
+    original.setAttribute('aria-hidden','true');
+    gloss.setAttribute('aria-hidden','true');
+    return true;
+  }
+  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,applyLegacyPsalm,applyLegacyReading,reset});
 })(window);
