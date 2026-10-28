@@ -1361,6 +1361,10 @@ function syncSectionUrl(section, options = {}) {
     if (options.calendarDate) params.set('data', options.calendarDate);
     else if (options.calendarMonth) params.set('mes', options.calendarMonth);
   }
+  if (section === 'biblia' && options.bookId && options.chapter) {
+    params.set('livro', options.bookId);
+    params.set('capitulo', String(options.chapter));
+  }
   const hash = '#' + SECTION_PATHS[section] + (params.size ? '?' + params.toString() : '');
   if (window.location.hash !== hash) {
     window.history.pushState({section}, '', hash);
@@ -1389,7 +1393,10 @@ function setSection(section, options = {}) {
   els.navButtons.forEach(btn => btn.classList.toggle('is-active', btn.dataset.section === section));
   if (section === 'liturgia') renderLiturgia();
   if (section === 'calendario' && (!options.fromHistory || !restoreCalendarHash())) renderCalendar();
-  if (section === 'biblia') renderBibleBooks();
+  if (section === 'biblia') {
+    renderBibleBooks();
+    if (options.fromHistory) restoreBibleChapterFromUrl();
+  }
   if (section === 'plano') renderPlan();
   if (options.scrollToResults && section === 'liturgia') {
     // Only scroll after the destination is made visible and its cards are rendered.
@@ -1674,61 +1681,181 @@ function theologyForChapter(bookId, chapter) {
   return theology.chapters?.[bookId + ':' + chapter] || null;
 }
 
-function renderTheologyCard(book, chapter, record) {
+function bibleChapterParams() {
+  const rawParams = window.location.hash.split('?')[1] || '';
+  const params = new URLSearchParams(rawParams);
+  const bookId = params.get('livro') || '';
+  const chapter = Number(params.get('capitulo') || 0);
+  return {bookId, chapter};
+}
+
+function syncBibleChapterUrl(bookId, chapter, options = {}) {
+  const params = new URLSearchParams();
+  if (bookId && chapter) {
+    params.set('livro', bookId);
+    params.set('capitulo', String(chapter));
+  }
+  const hash = '#biblia' + (params.size ? '?' + params.toString() : '');
+  if (window.location.hash !== hash) {
+    const method = options.replace ? 'replaceState' : 'pushState';
+    window.history[method]({section:'biblia', bookId, chapter}, '', hash);
+  }
+}
+
+function chapterSequenceIndex(bookId, chapter) {
+  let index = 0;
+  for (const book of bible.books) {
+    for (let n = 1; n <= book.chapters; n++, index++) {
+      if (book.id === bookId && n === chapter) return index;
+    }
+  }
+  return -1;
+}
+
+function chapterAtSequenceIndex(targetIndex) {
+  if (targetIndex < 0) return null;
+  let index = 0;
+  for (const book of bible.books) {
+    for (let chapter = 1; chapter <= book.chapters; chapter++, index++) {
+      if (index === targetIndex) return {book, chapter};
+    }
+  }
+  return null;
+}
+
+function meaningful(value, fallback = 'Nenhuma relação específica foi identificada nesta revisão.') {
+  const text = String(value || '').trim();
+  if (!text || text === '—' || /^não identificado nesta revisão$/i.test(text)) return fallback;
+  return text;
+}
+
+function renderTheologyCard(book, chapter, record, options = {}) {
   els.bibleChapterPanel.classList.remove('empty-state');
   els.bibleChapterPanel.replaceChildren();
+  selectedBookId = book.id;
+  renderBibleBooks();
+
+  if (!options.suppressUrl) syncBibleChapterUrl(book.id, chapter);
+
+  document.title = record.reference + ' — Caminhos da Palavra';
 
   const header = document.createElement('div');
   header.className = 'chapter-experience-header';
-  header.innerHTML =
-    '<div><p class="eyebrow">Nova experiência · prévia</p>' +
-    '<h3>' + record.reference + '</h3>' +
-    '<p class="chapter-experience-theme">' + record.mainTheme + '</p></div>' +
-    '<span class="chapter-preview-badge">Mapa Bíblico Mestre</span>';
+
+  const headerCopy = document.createElement('div');
+  const eyebrow = document.createElement('p');
+  eyebrow.className = 'eyebrow';
+  eyebrow.textContent = book.testament === 'AT' ? 'Antigo Testamento · Mapa Bíblico Mestre' : 'Novo Testamento · Mapa Bíblico Mestre';
+  const title = document.createElement('h3');
+  title.textContent = record.reference;
+  const theme = document.createElement('p');
+  theme.className = 'chapter-experience-theme';
+  theme.textContent = meaningful(record.mainTheme, 'Tema principal ainda não identificado nesta revisão.');
+  headerCopy.append(eyebrow, title, theme);
+
+  const badge = document.createElement('span');
+  badge.className = 'chapter-preview-badge';
+  badge.textContent = record.cpId;
+  header.append(headerCopy, badge);
 
   const notice = document.createElement('div');
   notice.className = 'chapter-review-notice';
-  notice.innerHTML =
-    '<strong>Conteúdo em etapa de revisão eclesial</strong>' +
-    '<p>Esta prévia apresenta dados do Mapa Bíblico Mestre ' + theology.methodologyVersion +
-    '. A revisão metodológica está concluída, mas a revisão eclesial externa ainda não equivale a conteúdo oficialmente aprovado pela Igreja.</p>';
+  const noticeTitle = document.createElement('strong');
+  noticeTitle.textContent = 'Mapa Teológico 1.5 · revisão eclesial externa pendente';
+  const noticeText = document.createElement('p');
+  noticeText.textContent = 'Esta página reproduz e organiza dados registrados na matriz. Ela não acrescenta novas inferências teológicas e não deve ser apresentada como pronunciamento oficial da Igreja.';
+  notice.append(noticeTitle, noticeText);
 
   const grid = document.createElement('div');
   grid.className = 'chapter-experience-grid';
 
   const cards = [
-    ['Na História da Salvação', record.salvationHistory + ' · ' + record.narrativePeriod],
-    ['Cristo neste capítulo', record.christRelation],
-    ['Veja também na Escritura', record.biblicalConnections],
-    ['Catecismo da Igreja Católica', record.cic.references + ' — ' + record.cic.scope],
-    ['Aliança / marco', record.covenant],
-    ['Rosário', record.rosary.mystery + '. ' + record.rosary.nature]
+    {
+      title: 'Tema do capítulo',
+      body: meaningful(record.mainTheme, 'Tema principal ainda não identificado nesta revisão.'),
+      meta: record.themeScope
+    },
+    {
+      title: 'Na História da Salvação',
+      body: [meaningful(record.salvationHistory, ''), meaningful(record.narrativePeriod, '')].filter(Boolean).join(' · ') || 'Etapa não identificada nesta revisão.'
+    },
+    {
+      title: 'Cristo neste capítulo',
+      body: meaningful(record.christRelation)
+    },
+    {
+      title: 'Conexões AT ↔ NT',
+      body: meaningful(record.biblicalConnections),
+      meta: [record.connectionClass ? 'Classe ' + record.connectionClass : '', record.sourceScope].filter(Boolean).join(' · ')
+    },
+    {
+      title: 'Catecismo da Igreja Católica',
+      body: meaningful(record.cic?.references, 'Nenhuma referência específica do CIC foi identificada nesta revisão.'),
+      meta: record.cic?.scope
+    },
+    {
+      title: 'Rosário',
+      body: meaningful(record.rosary?.mystery),
+      meta: record.rosary?.nature
+    }
   ];
 
-  cards.forEach(([title, body]) => {
+  cards.forEach(item => {
     const card = document.createElement('article');
     card.className = 'chapter-experience-card';
     const h4 = document.createElement('h4');
-    h4.textContent = title;
+    h4.textContent = item.title;
     const p = document.createElement('p');
-    p.textContent = body;
+    p.textContent = item.body;
     card.append(h4, p);
+    if (item.meta) {
+      const small = document.createElement('small');
+      small.className = 'chapter-experience-meta';
+      small.textContent = item.meta;
+      card.appendChild(small);
+    }
     grid.appendChild(card);
+  });
+
+  const context = document.createElement('div');
+  context.className = 'chapter-context-strip';
+  const contextItems = [
+    ['Aliança / marco', meaningful(record.covenant, 'Não identificado nesta revisão.')],
+    ['Temas secundários', meaningful(record.secondaryThemes, 'Não identificados nesta revisão.')]
+  ];
+  contextItems.forEach(([label, value]) => {
+    const item = document.createElement('div');
+    const strong = document.createElement('strong');
+    strong.textContent = label;
+    const p = document.createElement('p');
+    p.textContent = value;
+    item.append(strong,p);
+    context.appendChild(item);
   });
 
   const meta = document.createElement('details');
   meta.className = 'chapter-methodology-details';
   const summary = document.createElement('summary');
-  summary.textContent = 'Como esta relação foi classificada';
+  summary.textContent = 'Rastreabilidade e classificação';
   const content = document.createElement('div');
   content.className = 'chapter-methodology-content';
-  content.innerHTML =
-    '<p><strong>ID:</strong> ' + record.cpId + '</p>' +
-    '<p><strong>Classe:</strong> ' + record.connectionClass + '</p>' +
-    '<p><strong>Fonte:</strong> ' + record.sourceType + '</p>' +
-    '<p><strong>Escopo:</strong> ' + record.sourceScope + '</p>' +
-    '<p><strong>Confiabilidade:</strong> ' + record.confidence + '</p>' +
-    '<p><strong>Status da matriz:</strong> ' + record.matrixStatus + '</p>';
+
+  const metadata = [
+    ['ID', record.cpId],
+    ['Versão da matriz', record.matrixVersion || theology.methodologyVersion],
+    ['Classe', record.connectionClass || '—'],
+    ['Tipo de fonte', record.sourceType || 'Não informado'],
+    ['Escopo da fonte', record.sourceScope || 'Não informado'],
+    ['Confiabilidade', record.confidence || 'Não informada'],
+    ['Status da matriz', record.matrixStatus || 'Não informado']
+  ];
+  metadata.forEach(([label,value]) => {
+    const p = document.createElement('p');
+    const strong = document.createElement('strong');
+    strong.textContent = label + ': ';
+    p.append(strong, document.createTextNode(value));
+    content.appendChild(p);
+  });
   meta.append(summary, content);
 
   const actions = document.createElement('div');
@@ -1741,54 +1868,109 @@ function renderTheologyCard(book, chapter, record) {
   read.rel = 'noopener';
   read.textContent = 'Ler ' + record.reference + ' na Bíblia Ave-Maria';
 
-  const cic = document.createElement('a');
-  cic.className = 'secondary-link';
-  cic.href = record.cic.url;
-  cic.target = '_blank';
-  cic.rel = 'noopener';
-  cic.textContent = 'Abrir Catecismo';
+  if (record.cic?.url && record.cic?.references && !/^não identificado/i.test(record.cic.references)) {
+    const cic = document.createElement('a');
+    cic.className = 'secondary-link';
+    cic.href = record.cic.url;
+    cic.target = '_blank';
+    cic.rel = 'noopener';
+    cic.textContent = 'Abrir Catecismo';
+    actions.append(read, cic);
+  } else {
+    actions.append(read);
+  }
 
-  const back = document.createElement('button');
-  back.type = 'button';
-  back.className = 'secondary-button';
-  back.textContent = 'Voltar aos capítulos';
-  back.addEventListener('click', () => renderBibleChapters(book));
+  const share = document.createElement('button');
+  share.type = 'button';
+  share.className = 'secondary-button';
+  share.textContent = 'Copiar link do capítulo';
+  share.addEventListener('click', async () => {
+    const url = window.location.origin + window.location.pathname + '#biblia?livro=' + encodeURIComponent(book.id) + '&capitulo=' + chapter;
+    try {
+      await navigator.clipboard.writeText(url);
+      share.textContent = 'Link copiado';
+    } catch {
+      window.prompt('Copie o link deste capítulo:', url);
+    }
+  });
+  actions.appendChild(share);
 
-  actions.append(read, cic, back);
-  els.bibleChapterPanel.append(header, notice, grid, meta, actions);
+  const chapterIndex = chapterSequenceIndex(book.id, chapter);
+  const previous = chapterAtSequenceIndex(chapterIndex - 1);
+  const next = chapterAtSequenceIndex(chapterIndex + 1);
+  const nav = document.createElement('nav');
+  nav.className = 'chapter-sequence-nav';
+  nav.setAttribute('aria-label', 'Navegação entre capítulos');
+
+  if (previous) {
+    const prev = document.createElement('button');
+    prev.type = 'button';
+    prev.className = 'secondary-button';
+    prev.textContent = '← ' + previous.book.name + ' ' + previous.chapter;
+    prev.addEventListener('click', () => {
+      const rec = theologyForChapter(previous.book.id, previous.chapter);
+      if (rec) renderTheologyCard(previous.book, previous.chapter, rec);
+    });
+    nav.appendChild(prev);
+  } else {
+    nav.appendChild(document.createElement('span'));
+  }
+
+  const all = document.createElement('button');
+  all.type = 'button';
+  all.className = 'secondary-button';
+  all.textContent = 'Todos os capítulos';
+  all.addEventListener('click', () => {
+    syncBibleChapterUrl('', '', {replace:true});
+    document.title = 'Bíblia — Caminhos da Palavra';
+    renderBibleChapters(book);
+  });
+  nav.appendChild(all);
+
+  if (next) {
+    const nxt = document.createElement('button');
+    nxt.type = 'button';
+    nxt.className = 'secondary-button';
+    nxt.textContent = next.book.name + ' ' + next.chapter + ' →';
+    nxt.addEventListener('click', () => {
+      const rec = theologyForChapter(next.book.id, next.chapter);
+      if (rec) renderTheologyCard(next.book, next.chapter, rec);
+    });
+    nav.appendChild(nxt);
+  } else {
+    nav.appendChild(document.createElement('span'));
+  }
+
+  els.bibleChapterPanel.append(header, notice, grid, context, meta, actions, nav);
 }
 
 function renderBibleChapters(book) {
+  selectedBookId = book.id;
   els.bibleChapterPanel.classList.remove('empty-state');
   els.bibleChapterPanel.innerHTML =
     '<p class="eyebrow">' + (book.testament === 'AT' ? 'Antigo Testamento' : 'Novo Testamento') + '</p>' +
     '<h3>' + book.name + '</h3>' +
-    '<p class="supporting-text compact">Escolha um capítulo. Quando já houver conteúdo integrado ao Mapa Bíblico Mestre, ele abre primeiro a nova experiência; nos demais casos, a leitura continua na Bíblia Ave-Maria.</p>';
+    '<p class="supporting-text compact">Escolha um capítulo para abrir a experiência enriquecida do Mapa Bíblico Mestre. O texto bíblico integral continua na Bíblia Ave-Maria.</p>';
 
   const grid = document.createElement('div');
   grid.className = 'chapter-grid';
 
   for (let chapter = 1; chapter <= book.chapters; chapter++) {
     const record = theologyForChapter(book.id, chapter);
+    const button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'chapter-link' + (record ? ' chapter-link-enriched' : '');
+    button.textContent = String(chapter);
+    button.setAttribute('aria-label', record
+      ? 'Abrir experiência de ' + book.name + ' capítulo ' + chapter
+      : 'Abrir ' + book.name + ' capítulo ' + chapter + ' na Bíblia Ave-Maria');
 
     if (record) {
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'chapter-link chapter-link-enriched';
-      button.innerHTML = '<span>' + chapter + '</span><small>Novo</small>';
-      button.setAttribute('aria-label', 'Abrir nova experiência de ' + book.name + ' capítulo ' + chapter);
       button.addEventListener('click', () => renderTheologyCard(book, chapter, record));
-      grid.appendChild(button);
     } else {
-      const link = document.createElement('a');
-      link.className = 'chapter-link';
-      link.href = chapterUrl(book.id, chapter);
-      link.target = '_blank';
-      link.rel = 'noopener';
-      link.textContent = String(chapter);
-      link.setAttribute('aria-label', 'Abrir ' + book.name + ' capítulo ' + chapter + ' na Bíblia Ave-Maria');
-      grid.appendChild(link);
+      button.addEventListener('click', () => window.open(chapterUrl(book.id, chapter), '_blank', 'noopener'));
     }
+    grid.appendChild(button);
   }
 
   els.bibleChapterPanel.appendChild(grid);
@@ -1801,6 +1983,19 @@ function renderBibleChapters(book) {
   audio.textContent = 'Ouvir versão em áudio';
   audio.style.marginTop = '16px';
   els.bibleChapterPanel.appendChild(audio);
+}
+
+function restoreBibleChapterFromUrl() {
+  const {bookId, chapter} = bibleChapterParams();
+  if (!bookId || !chapter) return false;
+  const book = bookById(bookId);
+  if (!book || chapter < 1 || chapter > book.chapters) return false;
+  const record = theologyForChapter(bookId, chapter);
+  if (!record) return false;
+  selectedBookId = bookId;
+  renderBibleBooks();
+  renderTheologyCard(book, chapter, record, {suppressUrl:true});
+  return true;
 }
 
 /* Plano de leitura da Bíblia */
