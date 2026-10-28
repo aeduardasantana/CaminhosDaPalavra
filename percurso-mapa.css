@@ -122,3 +122,22 @@
   .cj-station-copy small { display:-webkit-box; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; line-height:1.45; }
 }
 .cj-enhanced #eixo-historia,.cj-enhanced #eixo-pessoa,.cj-map-shell { scroll-margin-top:120px; }
+
+/* Marcos leves: o conteúdo fica no painel de leitura, não em cartões sobre a trilha. */
+@media(min-width:961px){
+  .cj-route { height:610px; }
+  .cj-map-station { width:min(17%,220px); }
+  .cj-station-copy {
+    min-height:0; padding:7px 5px 5px; background:transparent;
+    border:0; box-shadow:none; width:100%; border-radius:8px;
+  }
+  .cj-station-copy strong {
+    color:#3d2e1d; font-size:clamp(.94rem,1.18vw,1.11rem);
+    line-height:1.27; text-shadow:0 1px 1px #fffaf1;
+  }
+  .cj-station-copy small { display:none; }
+  .cj-map-station:hover .cj-station-copy,
+  .cj-map-station:focus-visible .cj-station-copy {
+    background:rgba(255,251,240,.86); box-shadow:none; border:0;
+  }
+}
