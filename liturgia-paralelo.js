@@ -49,7 +49,7 @@
     if(!ranges.length||ranges.length!==stanzas.length)return null;
     const relevant=units.filter(u=>!/^R\./i.test(u.ref));
     const refrain=units.find(u=>/^R\./i.test(u.ref)&&!/repeti/i.test(u.ref));
-    if(!relevant.length||!refrain||!String(record.refrao??record.refrain||'').trim())return null;
+    if(!relevant.length||!refrain||!String(record.refrao??record.refrain??'').trim())return null;
     const groups=ranges.map(range=>relevant.filter(u=>{
       const r=refRange(u.ref);return r&&r.from>=range.start&&r.to<=range.end;
     }));
