@@ -1329,7 +1329,7 @@ function renderLiturgia() {
     if(!entry.editorialStudy && entry.item==='salmo' && parsedPsalm && window.LCE_PARALELO)
       window.LCE_PARALELO.applyLegacyPsalm(card,parsedPsalm);
     if(!entry.editorialStudy && ['primeira-leitura','segunda-leitura','evangelho'].includes(entry.item) && window.LCE_PARALELO)
-      window.LCE_PARALELO.applyLegacyReading(card);
+      (window.LCE_PARALELO.applyCuratedReading(card,entry.referencia) || window.LCE_PARALELO.applyLegacyReading(card));
     bindAccordion(card.querySelector('.accordion-trigger'));
   });
 }
