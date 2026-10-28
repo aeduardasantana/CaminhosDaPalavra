@@ -9,7 +9,8 @@ const head=csv[0];assert.ok(head.includes('"ave_maria_texto"'));assert.ok(head.i
 for(const line of csv.slice(1)){
  assert.ok(line.includes('"API_COMUNITARIA_LOCAL"'));
  assert.ok(line.includes('"PENDENTE_COTEJO_CNBB"'));
- assert.ok(line.includes('"GLOSA_PRELIMINAR"'));
+ assert.ok(line.includes('"SINTESE_TEMATICA_NAO_INTEGRAL"')||
+           line.includes('"GLOSA_VERSICULAR_PRELIMINAR"'));
  assert.ok(line.includes('"NAO_REALIZADA"'));
  if(line.includes('"salmo"')){
   assert.ok(line.includes('"NAO_APLICAVEL_SALMO_CNBB"'));
