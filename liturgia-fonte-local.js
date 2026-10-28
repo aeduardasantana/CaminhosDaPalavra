@@ -208,6 +208,8 @@
       appendReading(body,record,entry.item,entry.referencia);
       pane.replaceChildren(body);
       label.textContent='Texto · CNBB (cotejo pendente)';
+      if(card.dataset.edition==='CNBB' && root.LCE_PARALELO && entry.verseUnits?.length)
+        root.LCE_PARALELO.apply(entry,card,record);
       // Variantes litúrgicas continuam independentes da divisão por trechos.
       if(matches.length===1 && root.LCE_PARALELO)
         root.LCE_PARALELO.apply(entry,card,record);

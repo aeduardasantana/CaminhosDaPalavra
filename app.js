@@ -835,6 +835,9 @@ function formatPsalmOriginal(text, cycle) {
   const sequence = document.createElement('div');
   sequence.className = 'psalm-sequence';
   appendPsalmRefrain(sequence, parsed.refrain, parsed.alternative);
+  sequence.querySelector('.psalm-refrain')?.appendChild(
+    Object.assign(document.createElement('small'),{className:'lce-refrain-instruction',textContent:'Repetir após cada estrofe'})
+  );
 
   parsed.stanzas.forEach((stanza, index) => {
     const block = document.createElement('section');
@@ -850,7 +853,6 @@ function formatPsalmOriginal(text, cycle) {
 
     block.append(label, body);
     sequence.appendChild(block);
-    appendPsalmRefrain(sequence, parsed.refrain, parsed.alternative, true);
   });
 
   frag.appendChild(sequence);
@@ -977,6 +979,7 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverri
     alt.textContent = 'OU — GLOSA: ' + alternativeRefrain;
     refrainBox.appendChild(alt);
   }
+  refrainBox.appendChild(Object.assign(document.createElement('small'),{className:'lce-refrain-instruction',textContent:'Repetir após cada estrofe'}));
   wrapper.appendChild(refrainBox);
 
   parsedOriginal.stanzas.forEach((_, index) => {
@@ -1014,16 +1017,6 @@ function formatPsalmGlosa(text, parsedOriginal, contextual = null, refrainOverri
 
     wrapper.appendChild(block);
 
-    const repeat = document.createElement('div');
-    repeat.className = 'psalm-refrain glosa-refrain is-repeat';
-    const repeatLabel = document.createElement('strong');
-    repeatLabel.className = 'psalm-part-label';
-    repeatLabel.textContent = 'REFRÃO — REPETIR';
-    const repeatText = document.createElement('div');
-    repeatText.className = 'psalm-part-text';
-    repeatText.textContent = refrain || 'Glosa do refrão ainda precisa ser estruturada.';
-    repeat.append(repeatLabel, repeatText);
-    wrapper.appendChild(repeat);
   });
 
   frag.appendChild(wrapper);
@@ -1333,6 +1326,8 @@ function renderLiturgia() {
       });
       card.querySelector('.accordion-panel')?.appendChild(share);
     }
+    if(!entry.editorialStudy && entry.item==='salmo' && parsedPsalm && window.LCE_PARALELO)
+      window.LCE_PARALELO.applyLegacyPsalm(card,parsedPsalm);
     bindAccordion(card.querySelector('.accordion-trigger'));
   });
 }
