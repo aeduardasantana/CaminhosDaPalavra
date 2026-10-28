@@ -42,6 +42,12 @@
    }
    const badge=card.querySelector('.status-pill');
    if(badge)badge.textContent=record.gloss?.textId===record.id?'Em revisão':'Glosa pendente';
+   // Pareamento Ave-Maria somente se o arquivo registrar referências de
+   // CADA glosa; nunca inventar o alinhamento a partir de sua ordem.
+   if(record.gloss?.textId===record.id && root.LCE_PARALELO &&
+      record.gloss.segments.every(u=>typeof u.ref==='string'&&u.ref.trim()))
+     root.LCE_PARALELO.apply(entry,card,{texto:record.text,titulo:record.title||''},
+       record.gloss.segments.map(u=>({ref:u.ref,glosa:u.text,espaco:u.orientation||''})));
  }
  function apply(entry,card,choice){
    const edition=editionFor(entry.item,choice);

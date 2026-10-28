@@ -203,10 +203,14 @@
     }
     // Escolhas litúrgicas independentes nunca são concatenadas.
     const renderMatch=record=>{
+      if(root.LCE_PARALELO)root.LCE_PARALELO.reset(card);
       const body=document.createElement('div');body.className='monthly-remote-text';
       appendReading(body,record,entry.item,entry.referencia);
       pane.replaceChildren(body);
       label.textContent='Texto · CNBB (cotejo pendente)';
+      // Variantes litúrgicas continuam independentes da divisão por trechos.
+      if(matches.length===1 && root.LCE_PARALELO)
+        root.LCE_PARALELO.apply(entry,card,record);
     };
     renderMatch(matches[0]);
     const notes=card.querySelector('.reading-source-extra');

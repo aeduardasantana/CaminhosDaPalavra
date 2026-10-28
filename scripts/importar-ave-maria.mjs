@@ -36,7 +36,7 @@ for(const item of incoming.entries){
  if(item.gloss){
   if(!Array.isArray(item.gloss.segments)||!item.gloss.segments.length||
       item.gloss.segments.some(x=>typeof x.text!=='string'||!x.text.trim()))throw Error('Glosa inválida: '+occurrence);
-  rec.gloss={textId:id,segments:item.gloss.segments.map(x=>({text:x.text,orientation:x.orientation||''})),status:'PRELIMINAR_NAO_VALIDADA'};
+  rec.gloss={textId:id,segments:item.gloss.segments.map(x=>({text:x.text,orientation:x.orientation||'',ref:x.ref||''})),status:'PRELIMINAR_NAO_VALIDADA'};
  }
  if(corpus.texts[id]){
   if(corpus.texts[id].edition!=='AVM'||corpus.texts[id].text!==text)throw Error('Conflito de texto: '+id);
