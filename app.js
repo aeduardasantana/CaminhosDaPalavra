@@ -1,5 +1,6 @@
 const data = window.LCE_DATA;
-const bible = window.LCE_BIBLE;\nconst theology = window.CDP_THEOLOGY || {chapters: {}};
+const bible = window.LCE_BIBLE;
+const theology = window.CDP_THEOLOGY || {chapters: {}};
 const litCalendar = window.LCE_CALENDAR;
 const saintsArchive = window.LCE_SAINTS || {highlights: {}};
 const lectionary = window.LCE_LECTIONARY || {records: []};
