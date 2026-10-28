@@ -1468,3 +1468,36 @@ select,
   .chapter-sequence-nav { grid-template-columns: 1fr; }
   .chapter-sequence-nav > * { width: 100%; justify-self: stretch !important; }
 }
+
+
+/* BLOCO 16 — expansão controlada */
+.chapter-link-review {
+  border-style: dashed;
+  background: #faf8f2;
+  color: var(--muted);
+}
+.chapter-link-review:hover {
+  border-color: #b9aa8d;
+  background: #f7f3ea;
+}
+.chapter-publication-lock {
+  margin: 16px 0;
+  padding: 18px 20px;
+  border: 1px solid #d7c9aa;
+  border-left: 4px solid #a98b4c;
+  border-radius: 10px 14px 14px 10px;
+  background: #fcfaf5;
+}
+.chapter-publication-lock h4 {
+  margin: 0 0 8px;
+  color: var(--deep);
+}
+.chapter-publication-lock p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  line-height: 1.55;
+}
+.chapter-lock-status {
+  font-size: .82rem;
+  font-weight: 750;
+}
