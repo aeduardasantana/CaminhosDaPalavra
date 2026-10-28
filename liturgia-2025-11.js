@@ -410,7 +410,7 @@ window.LCE_MONTH_2025_11 = Object.freeze({
         ],
         [
           "Salmo responsorial",
-          "Sl 26(27)"
+          "Sl 26(27),1.4.13-14 (R. 13)"
         ],
         [
           "Evangelho",

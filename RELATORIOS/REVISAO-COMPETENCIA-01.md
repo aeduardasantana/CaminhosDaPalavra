@@ -22,3 +22,9 @@ Os 93 rascunhos temáticos são agora identificados como **“Rascunho temático
 5. Registrar avaliação humana especializada independentemente da publicação técnica.
 
 O relatório CSV `COBERTURA-GLOSA-2025-11.csv` identifica cada uma das 96 ocorrências e as lacunas por edição. Isso é uma etapa concreta de auditoria, **não a conclusão editorial do mês**.
+
+## Avanço de preparação por versículo — 06/11/2025
+
+Primeira leitura Rm 14,7–12: 6 unidades por versículo; salmo Sl 26(27),1.4.13–14: um refrão e 4 versículos, com 3 estrofes, glosa da assembleia identificada; Evangelho Lc 15,1–10: 10 unidades, com locutores e cenas distintos. Total novo: 21 unidades, com orientação espacial separada. São rascunhos autorais de preparação, não validação humana em Libras.
+
+Cobertura acumulada: 6 ocorrências com glosa versicular preliminar (05 e 06/11), 90 com apenas sínteses temáticas; 39 unidades de estudo versicular. Texto CNBB ainda demanda cotejo integral; Ave-Maria permanece sem textos importados. A referência do salmo 06/11 foi detalhada com a divisão de versículos para que a interface identifique estrofes corretamente.
