@@ -33,6 +33,11 @@ jobs:
             git push origin HEAD:main
           fi
 
+      - name: Validar Mapa Bíblico Mestre antes do deploy
+        run: |
+          node --check theology-data.js
+          node scripts/validate-theology-data.mjs
+
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
