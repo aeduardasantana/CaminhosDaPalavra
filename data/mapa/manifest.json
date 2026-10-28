@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetVersion": "teologico-1.5-snapshot-2026-10-28",
+  "methodologyVersion": "Teológico 1.5",
+  "sourceSpreadsheetId": "1BLqxiBfOp0RAQ3SV_kuTG-oyEnN-M1gyJE22_6TEnXo",
+  "sourceSheet": "Mapa Bíblico Mestre",
+  "sourceRange": "A1:AC1340",
+  "recordCount": 1334,
+  "uniqueCpIds": 1334,
+  "uniqueChapterKeys": 1334,
+  "firstCpId": "CP-0001",
+  "lastCpId": "CP-1334",
+  "reviewState": "Metodologia fechada; revisão eclesial externa pendente",
+  "publicLayer": "Snapshot controlado; não sincroniza automaticamente com alterações futuras da matriz",
+  "generatedAt": "2026-10-28",
+  "validation": {
+    "ok": true,
+    "errors": []
+  }
+}
