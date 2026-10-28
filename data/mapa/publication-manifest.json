@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0.0",
+  "datasetVersion": "publication-control-2026-10-28",
+  "sourceSpreadsheetId": "1BLqxiBfOp0RAQ3SV_kuTG-oyEnN-M1gyJE22_6TEnXo",
+  "sourceSheet": "Controle — Revisão Eclesial",
+  "failClosed": true,
+  "rule": {
+    "reviewStatusesAllowed": [
+      "Aprovado",
+      "Aprovado sem ressalvas",
+      "Aprovado com ajustes concluídos"
+    ],
+    "internalDecisionsAllowed": [
+      "Publicar",
+      "Aprovado para publicação",
+      "Publicado"
+    ],
+    "adjustmentRule": "Se houver ajuste solicitado, deve existir registro de ajuste executado."
+  },
+  "counts": {
+    "total": 1334,
+    "authorized": 0,
+    "blocked": 1334,
+    "statuses": {
+      "Não enviado": 1334
+    },
+    "decisions": {
+      "(vazio)": 1334
+    }
+  }
+}
