@@ -40,10 +40,10 @@
     el.textContent = str;
     return el;
   };
-  const coords8 = [[12,24],[37,24],[62,24],[87,24],[87,74],[62,74],[37,74],[12,74]];
-  const coords5 = [[17,24],[50,24],[83,24],[83,74],[50,74]];
-  const path8 = 'M144 144 L444 144 L744 144 L1044 144 Q1130 144 1130 224 L1130 360 Q1130 444 1044 444 L744 444 L444 444 L144 444';
-  const path5 = 'M204 144 L600 144 L996 144 Q1100 144 1100 254 L1100 350 Q1100 444 996 444 L600 444';
+  const coords8 = [[12,18],[37,18],[62,18],[87,18],[87,82],[62,82],[37,82],[12,82]];
+  const coords5 = [[17,18],[50,18],[83,18],[83,82],[50,82]];
+  const path8 = 'M144 108 L444 108 L744 108 L1044 108 Q1130 108 1130 200 L1130 395 Q1130 492 1044 492 L744 492 L444 492 L144 492';
+  const path5 = 'M204 108 L600 108 L996 108 Q1100 108 1100 200 L1100 393 Q1100 492 996 492 L600 492';
 
   function makeMap(def) {
     const pane = find(def.pane);
@@ -85,9 +85,10 @@
       btn.style.top=positions[i][1]+'%';
       btn.setAttribute('aria-label','Abrir etapa '+(i+1)+': '+name);
       btn.dataset.station=String(i);
+      btn.dataset.row=i<(personal?3:4)?'top':'bottom';
       const pin=text('span','cj-station-pin',String(i+1).padStart(2,'0'));
       const copy=text('span','cj-station-copy','');
-      copy.append(text('strong','',name),text('small','', description.length>125?description.slice(0,122).trim()+'…':description));
+      copy.append(text('strong','',name),text('small','', description.length>105?description.slice(0,102).trim()+'…':description));
       btn.append(pin,copy);
       btn.addEventListener('click',()=>openStation(def.pane,i));
       route.append(btn);
@@ -271,5 +272,15 @@
   window.addEventListener('hashchange',()=>{const id=decodeURIComponent(location.hash.slice(1));if(id)navigate(id);});
   window.addEventListener('popstate',()=>{const id=decodeURIComponent(location.hash.slice(1));if(id)navigate(id);else if(currentReader)currentReader.close();});
   const initial=decodeURIComponent(location.hash.slice(1));
-  if(initial)requestAnimationFrame(()=>navigate(initial));
+  if(initial==='eixo-historia'||initial==='eixo-pessoa'){
+    switchAxis(initial);
+    const align=()=>{
+      const map=states.get(initial)?.pane.querySelector('.cj-map-shell');
+      if(map)map.scrollIntoView({block:'start',behavior:'auto'});
+    };
+    requestAnimationFrame(()=>requestAnimationFrame(align));
+    window.addEventListener('load',align,{once:true});
+  }else if(initial){
+    requestAnimationFrame(()=>navigate(initial));
+  }
 })();
