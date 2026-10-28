@@ -94,6 +94,49 @@
     original.querySelector('.original-text')?.removeAttribute('aria-hidden');
     glosa.querySelector('.glosa-text')?.removeAttribute('aria-hidden');
   }
+  // Estrofes do legado só são emparelhadas se a segmentação do acervo
+  // está declarada conferida e ambos os lados têm igual quantidade.
+  function applyLegacyPsalm(card,parsed){
+    if(!parsed?.structureVerified)return false;
+    const parallel=card?.querySelector('.parallel-view');
+    const original=parallel?.querySelector('.original-text');
+    const gloss=parallel?.querySelector('.glosa-text');
+    const leftSeq=original?.querySelector('.psalm-sequence');
+    const rightSeq=gloss?.querySelector('.psalm-sequence');
+    if(!leftSeq||!rightSeq)return false;
+    const ls=[...leftSeq.querySelectorAll(':scope > .psalm-stanza')];
+    const rs=[...rightSeq.querySelectorAll(':scope > .psalm-stanza')];
+    if(!ls.length||ls.length!==rs.length||rs.some(n=>n.querySelector('.psalm-glosa-missing')))return false;
+    const lr=leftSeq.querySelector(':scope > .psalm-refrain:not(.is-repeat)');
+    const rr=rightSeq.querySelector(':scope > .psalm-refrain:not(.is-repeat)');
+    if(!lr||!rr)return false;
+    const rows=el('div',undefined,'lce-parallel-rows lce-legacy-psalm-rows');
+    const origHeader=original.querySelector('.psalm-header');
+    for(let i=-1;i<ls.length;i++){
+      const row=el('section',undefined,'lce-parallel-row');
+      const left=el('div',undefined,'lce-parallel-original');
+      const right=el('div',undefined,'lce-parallel-glosa');
+      if(i===-1){
+        if(origHeader)left.append(origHeader.cloneNode(true));
+        left.append(lr.cloneNode(true));right.append(rr.cloneNode(true));
+      }else{
+        left.append(ls[i].cloneNode(true));right.append(rs[i].cloneNode(true));
+      }
+      row.append(left,right);rows.append(row);
+    }
+    const footer=el('div',undefined,'lce-parallel-footer');
+    const left=el('div',undefined,'lce-parallel-footer-original');
+    const right=el('div',undefined,'lce-parallel-footer-glosa');
+    for(const selector of ['.reading-source-details']){
+      const part=parallel.querySelector('.original-pane '+selector);if(part)left.append(part);
+    }
+    footer.append(left,right);
+    parallel.append(rows,footer);
+    parallel.setAttribute('data-aligned','true');
+    original.setAttribute('aria-hidden','true');gloss.setAttribute('aria-hidden','true');
+    return true;
+  }
+
   function apply(entry,card,record,units=entry?.verseUnits){
     if(!card?.querySelector)return false;
     reset(card);
@@ -141,5 +184,5 @@
     glossText.setAttribute('aria-hidden','true');
     return true;
   }
-  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,reset});
+  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,applyLegacyPsalm,reset});
 })(window);

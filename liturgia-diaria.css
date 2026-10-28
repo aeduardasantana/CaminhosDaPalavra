@@ -455,3 +455,62 @@
   .lce-parallel-row{break-inside:avoid}
   .lce-parallel-rows{page-break-inside:auto}
 }
+
+
+/* Paralelo aprovado: dois cabeçalhos, um bloco horizontal por unidade comum.
+   Os pares têm um único limite de linha; conteúdo original preservado em nós ocultos. */
+.parallel-view[data-aligned="true"]{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#fff
+}
+.parallel-view[data-aligned="true"]>.original-pane,
+.parallel-view[data-aligned="true"]>.glosa-pane{
+  padding:17px 24px 7px;min-width:0;border-bottom:1px solid #ddd6c8
+}
+.parallel-view[data-aligned="true"]>.glosa-pane{border-left:1px solid #ddd6c8}
+.parallel-view[data-aligned="true"]>.original-pane .original-text,
+.parallel-view[data-aligned="true"]>.glosa-pane .glosa-text{display:none!important}
+.parallel-view[data-aligned="true"]>.original-pane .source-version{display:none}
+.parallel-view[data-aligned="true"] .pane-label{margin:0 0 9px}
+.lce-parallel-rows{grid-column:1/-1;min-width:0}
+.lce-parallel-row{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  border-bottom:1px solid #e0d8cc;break-inside:avoid
+}
+.lce-parallel-row:nth-child(even){background:#faf8f4}
+.lce-parallel-row:last-child{border-bottom:0}
+.lce-parallel-original,.lce-parallel-glosa{min-width:0;padding:17px 24px 19px;overflow-wrap:anywhere}
+.lce-parallel-glosa{border-left:1px solid #ded8cd;background:rgba(246,241,231,.23)}
+.lce-parallel-reference{display:block;color:#85611f;font-size:.81rem;font-weight:800;margin-bottom:10px}
+.lce-parallel-title{display:block;line-height:1.5;margin-bottom:10px;font-size:.91rem}
+.lce-parallel-text{font-size:1.02rem;line-height:1.78;white-space:pre-line;margin:0}
+.lce-parallel-glosa .monthly-glosa-draft{margin:0 0 9px;gap:6px}
+.lce-parallel-glosa .monthly-glosa-signs{font-weight:760}
+.lce-parallel-mobile-label{display:none}
+.lce-parallel-unit-reference{display:block;color:#775d37;font-size:.8rem;font-weight:650;margin:7px 0 5px}
+.lce-parallel-repeat,.lce-refrain-instruction{display:block;margin-top:9px;font-size:.79rem;color:#75644b;font-weight:600}
+.lce-parallel-footer{display:grid;grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #e0d8cc}
+.lce-parallel-footer-original,.lce-parallel-footer-glosa{min-width:0;padding:14px 24px}
+.lce-parallel-footer-glosa{background:rgba(246,241,231,.23);border-left:1px solid #ded8cd}
+.lce-parallel-footer .liturgical-dialogue{margin:0 0 12px}
+.lce-legacy-psalm-rows .psalm-refrain,.lce-legacy-psalm-rows .psalm-stanza{
+ border:0;box-shadow:none;margin:0;padding:0;background:transparent
+}
+.lce-legacy-psalm-rows .psalm-header{margin-bottom:12px}
+.lce-legacy-psalm-rows .psalm-part-text{white-space:pre-line}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"],
+  .parallel-view[data-aligned="true"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .parallel-view[data-aligned="true"]>.original-pane,
+  .parallel-view[data-aligned="true"]>.glosa-pane{padding:12px 10px 7px}
+  .lce-parallel-row{grid-template-columns:minmax(0,1fr)}
+  .lce-parallel-original,.lce-parallel-glosa{padding:13px 15px}
+  .lce-parallel-glosa{border-left:0;border-top:1px dashed #ded3c1}
+  .lce-parallel-mobile-label{display:block;margin:0 0 7px;color:#7c5a23;font-size:.75rem;font-weight:800}
+  .lce-parallel-footer{grid-template-columns:minmax(0,1fr)}
+  .lce-parallel-footer-original,.lce-parallel-footer-glosa{padding:12px 15px}
+  .lce-parallel-footer-glosa{border-left:0;border-top:1px solid #ded8cd}
+}
+@media print{
+  .lce-parallel-row{break-inside:avoid}
+  .lce-parallel-original,.lce-parallel-glosa{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
