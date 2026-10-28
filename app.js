@@ -260,6 +260,7 @@ function monthlyStudyEntries(isoDate) {
     const [shortKind,kind] = types[label] || [];
     const segments=review[shortKind] || [];
     const psalm = isoDate === '2025-11-30' && kind === 'salmo' ? month.salmoResponsorial : null;
+    const verseUnits=window.LCE_ESTUDO_VERSICULAR_2025_11?.[isoDate]?.[shortKind]||[];
     return {
       id:'estudo-2025-11-'+isoDate+'-'+kind,
       data:isoDate,ano:cycle,tempo:dayInfo.season,
@@ -267,7 +268,7 @@ function monthlyStudyEntries(isoDate) {
       ferialCycle:month.rank==='Féria' ? dayInfo.ferialCycle : null,
       section:'REVISAO MENSAL — NOVEMBRO 2025',celebracao:month.label,item:kind,itemLabel:label,
       referencia:psalm?.reference||reference,
-      editorialStudy:true,draftUnits:segments,verseUnits:window.LCE_ESTUDO_VERSICULAR_2025_11?.[isoDate]?.[shortKind]||[],partialBrazilianPsalm:psalm||null,
+      editorialStudy:true,draftUnits:segments,verseUnits,glossCoverage:verseUnits.length?'VERSICULAR_PRELIMINAR':'SINTESE_TEMATICA',partialBrazilianPsalm:psalm||null,
       salmoRefrainConfirmed:month.salmoRefrainConfirmed&&kind==='salmo'?month.salmoRefrainConfirmed:null,
       sourceVersion:'Registro por data: texto integral da edição brasileira não incorporado. Roteiros anteriores arquivados como preparação preliminar, não glosa completa.',
       sourceUrl:psalm?.source||month.individualDateSource||month.source,
@@ -320,7 +321,7 @@ function associatedStudyEntries(isoDate) {
         section:'ACERVO BRASILEIRO LOCAL',
         celebracao:info.celebration||'Féria do Tempo Comum',
         item:kind,itemLabel:title,referencia:row.referencia,
-        editorialStudy:true,draftUnits:drafts,verseUnits:verses,partialBrazilianPsalm:null,
+        editorialStudy:true,draftUnits:drafts,verseUnits:verses,glossCoverage:verses.length?'VERSICULAR_PRELIMINAR':'SINTESE_TEMATICA',partialBrazilianPsalm:null,
         sourceVersion:'',sourceUrl:month?.individualDateSource||month?.source||'',
         status:'Texto local importado · glosa em revisão',note:'',
         glosa:drafts.map(x=>x.glosaPreliminar).join('\n'),
@@ -720,7 +721,7 @@ function renderMonthlyStudy(entry, originalBox, glosaBox) {
     : (entry.draftUnits||[]).map((unit,index)=>({reference:'Trecho '+(index+1),draft:unit.glosaPreliminar,meaning:unit.sentido,space:''}));
   const key=document.createElement('p');
   key.className='monthly-glosa-legend';
-  key.textContent='Glosa em destaque · orientações em cinza';
+  key.textContent=entry.verseUnits?.length?'Glosa por versículos · preliminar · orientações em cinza':'Síntese temática preliminar — NÃO substitui a glosa integral';
   glosaBox.appendChild(key);
   const list=document.createElement('div');
   list.className='monthly-glosa-list';
@@ -1206,14 +1207,14 @@ function renderLiturgia() {
       ? [formatDate(entry.data),entry.celebracao].filter(Boolean).join(' · ')
       : [formatDate(entry.data),entry.tempo,entry.note].filter(Boolean).join(' · ');
     const statusPill=node.querySelector('.status-pill');
-    statusPill.textContent=entry.editorialStudy?'Em estudo':entry.status;
+    statusPill.textContent=entry.editorialStudy?(entry.verseUnits?.length?'Glosa por trechos':'Síntese pendente'):entry.status;
     statusPill.title=entry.status;
     node.querySelector('.source-version').textContent = entry.editorialStudy?'':(entry.sourceVersion||'');
     const originalTextBox = node.querySelector('.original-text');
     const glosaTextBox = node.querySelector('.glosa-text');
     if(entry.editorialStudy){
       node.querySelector('.original-pane .pane-label').textContent='Texto litúrgico';
-      node.querySelector('.glosa-pane .pane-label').textContent='Glosa de estudo';
+      node.querySelector('.glosa-pane .pane-label').textContent=entry.verseUnits?.length?'Glosa preliminar por versículos':'Rascunho temático · glosa integral pendente';
       node.querySelector('.glosa-pane .pane-label').title='Preparação preliminar, não validada em Libras';
     }
     let parsedPsalm = null;
