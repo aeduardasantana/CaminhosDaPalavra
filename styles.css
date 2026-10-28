@@ -1306,3 +1306,113 @@ select,
   color: var(--ink);
   border-color: #b7ad9b;
 }
+
+
+/* Nova experiência bíblica — piloto João 6 */
+.chapter-link-enriched {
+  border-color: #c9a95f;
+  background: #fff8e8;
+  color: var(--deep);
+  cursor: pointer;
+}
+.chapter-link-enriched small {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: .58rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+.chapter-experience-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 18px;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.chapter-experience-header h3 {
+  margin: 2px 0 6px;
+  font-size: clamp(1.6rem, 3vw, 2.25rem);
+}
+.chapter-experience-theme {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
+.chapter-preview-badge {
+  flex: 0 0 auto;
+  padding: 7px 10px;
+  border: 1px solid #d5ba7f;
+  border-radius: 999px;
+  background: #fff8e8;
+  color: var(--deep);
+  font-size: .72rem;
+  font-weight: 800;
+}
+.chapter-review-notice {
+  margin-bottom: 16px;
+  padding: 14px 16px;
+  border-left: 4px solid #c39b43;
+  border-radius: 8px 12px 12px 8px;
+  background: #fff9ec;
+}
+.chapter-review-notice p {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.55;
+}
+.chapter-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+}
+.chapter-experience-card {
+  padding: 15px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--surface-soft);
+}
+.chapter-experience-card h4 {
+  margin: 0 0 7px;
+  color: var(--deep);
+  font-size: .88rem;
+}
+.chapter-experience-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.55;
+}
+.chapter-methodology-details {
+  margin-top: 12px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+  overflow: hidden;
+}
+.chapter-methodology-details summary {
+  padding: 12px 14px;
+  cursor: pointer;
+  font-weight: 800;
+}
+.chapter-methodology-content {
+  padding: 0 14px 12px;
+}
+.chapter-methodology-content p {
+  margin: 5px 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+.chapter-experience-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 16px;
+}
+@media (max-width: 680px) {
+  .chapter-experience-header { flex-direction: column; }
+  .chapter-experience-grid { grid-template-columns: 1fr; }
+  .chapter-experience-actions > * { width: 100%; }
+}
