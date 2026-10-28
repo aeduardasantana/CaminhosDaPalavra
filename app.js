@@ -1,5 +1,5 @@
 const data = window.LCE_DATA;
-const bible = window.LCE_BIBLE;
+const bible = window.LCE_BIBLE;\nconst theology = window.CDP_THEOLOGY || {chapters: {}};
 const litCalendar = window.LCE_CALENDAR;
 const saintsArchive = window.LCE_SAINTS || {highlights: {}};
 const lectionary = window.LCE_LECTIONARY || {records: []};
@@ -1668,25 +1668,125 @@ function renderBibleBooks() {
   }
 }
 
+function theologyForChapter(bookId, chapter) {
+  return theology.chapters?.[bookId + ':' + chapter] || null;
+}
+
+function renderTheologyCard(book, chapter, record) {
+  els.bibleChapterPanel.classList.remove('empty-state');
+  els.bibleChapterPanel.replaceChildren();
+
+  const header = document.createElement('div');
+  header.className = 'chapter-experience-header';
+  header.innerHTML =
+    '<div><p class="eyebrow">Nova experiência · prévia</p>' +
+    '<h3>' + record.reference + '</h3>' +
+    '<p class="chapter-experience-theme">' + record.mainTheme + '</p></div>' +
+    '<span class="chapter-preview-badge">Mapa Bíblico Mestre</span>';
+
+  const notice = document.createElement('div');
+  notice.className = 'chapter-review-notice';
+  notice.innerHTML =
+    '<strong>Conteúdo em etapa de revisão eclesial</strong>' +
+    '<p>Esta prévia apresenta dados do Mapa Bíblico Mestre ' + theology.methodologyVersion +
+    '. A revisão metodológica está concluída, mas a revisão eclesial externa ainda não equivale a conteúdo oficialmente aprovado pela Igreja.</p>';
+
+  const grid = document.createElement('div');
+  grid.className = 'chapter-experience-grid';
+
+  const cards = [
+    ['Na História da Salvação', record.salvationHistory + ' · ' + record.narrativePeriod],
+    ['Cristo neste capítulo', record.christRelation],
+    ['Veja também na Escritura', record.biblicalConnections],
+    ['Catecismo da Igreja Católica', record.cic.references + ' — ' + record.cic.scope],
+    ['Aliança / marco', record.covenant],
+    ['Rosário', record.rosary.mystery + '. ' + record.rosary.nature]
+  ];
+
+  cards.forEach(([title, body]) => {
+    const card = document.createElement('article');
+    card.className = 'chapter-experience-card';
+    const h4 = document.createElement('h4');
+    h4.textContent = title;
+    const p = document.createElement('p');
+    p.textContent = body;
+    card.append(h4, p);
+    grid.appendChild(card);
+  });
+
+  const meta = document.createElement('details');
+  meta.className = 'chapter-methodology-details';
+  const summary = document.createElement('summary');
+  summary.textContent = 'Como esta relação foi classificada';
+  const content = document.createElement('div');
+  content.className = 'chapter-methodology-content';
+  content.innerHTML =
+    '<p><strong>ID:</strong> ' + record.cpId + '</p>' +
+    '<p><strong>Classe:</strong> ' + record.connectionClass + '</p>' +
+    '<p><strong>Fonte:</strong> ' + record.sourceType + '</p>' +
+    '<p><strong>Escopo:</strong> ' + record.sourceScope + '</p>' +
+    '<p><strong>Confiabilidade:</strong> ' + record.confidence + '</p>' +
+    '<p><strong>Status da matriz:</strong> ' + record.matrixStatus + '</p>';
+  meta.append(summary, content);
+
+  const actions = document.createElement('div');
+  actions.className = 'chapter-experience-actions';
+
+  const read = document.createElement('a');
+  read.className = 'primary-link';
+  read.href = record.bibleUrl || chapterUrl(book.id, chapter);
+  read.target = '_blank';
+  read.rel = 'noopener';
+  read.textContent = 'Ler ' + record.reference + ' na Bíblia Ave-Maria';
+
+  const cic = document.createElement('a');
+  cic.className = 'secondary-link';
+  cic.href = record.cic.url;
+  cic.target = '_blank';
+  cic.rel = 'noopener';
+  cic.textContent = 'Abrir Catecismo';
+
+  const back = document.createElement('button');
+  back.type = 'button';
+  back.className = 'secondary-button';
+  back.textContent = 'Voltar aos capítulos';
+  back.addEventListener('click', () => renderBibleChapters(book));
+
+  actions.append(read, cic, back);
+  els.bibleChapterPanel.append(header, notice, grid, meta, actions);
+}
+
 function renderBibleChapters(book) {
   els.bibleChapterPanel.classList.remove('empty-state');
   els.bibleChapterPanel.innerHTML =
     '<p class="eyebrow">' + (book.testament === 'AT' ? 'Antigo Testamento' : 'Novo Testamento') + '</p>' +
     '<h3>' + book.name + '</h3>' +
-    '<p class="supporting-text compact">Escolha um capítulo. A leitura abre na Bíblia Ave-Maria licenciada pela Editora Ave-Maria na YouVersion.</p>';
+    '<p class="supporting-text compact">Escolha um capítulo. Quando já houver conteúdo integrado ao Mapa Bíblico Mestre, ele abre primeiro a nova experiência; nos demais casos, a leitura continua na Bíblia Ave-Maria.</p>';
 
   const grid = document.createElement('div');
   grid.className = 'chapter-grid';
 
   for (let chapter = 1; chapter <= book.chapters; chapter++) {
-    const link = document.createElement('a');
-    link.className = 'chapter-link';
-    link.href = chapterUrl(book.id, chapter);
-    link.target = '_blank';
-    link.rel = 'noopener';
-    link.textContent = String(chapter);
-    link.setAttribute('aria-label', 'Abrir ' + book.name + ' capítulo ' + chapter + ' na Bíblia Ave-Maria');
-    grid.appendChild(link);
+    const record = theologyForChapter(book.id, chapter);
+
+    if (record) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'chapter-link chapter-link-enriched';
+      button.innerHTML = '<span>' + chapter + '</span><small>Novo</small>';
+      button.setAttribute('aria-label', 'Abrir nova experiência de ' + book.name + ' capítulo ' + chapter);
+      button.addEventListener('click', () => renderTheologyCard(book, chapter, record));
+      grid.appendChild(button);
+    } else {
+      const link = document.createElement('a');
+      link.className = 'chapter-link';
+      link.href = chapterUrl(book.id, chapter);
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = String(chapter);
+      link.setAttribute('aria-label', 'Abrir ' + book.name + ' capítulo ' + chapter + ' na Bíblia Ave-Maria');
+      grid.appendChild(link);
+    }
   }
 
   els.bibleChapterPanel.appendChild(grid);
