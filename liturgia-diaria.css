@@ -357,3 +357,101 @@
 .liturgia-ave-maria-glosa{padding:10px 0;border-bottom:1px solid #e3d8cd}
 .liturgy-study-notes[hidden]{display:none!important}
 @media(max-width:680px){.liturgia-edition-choice{padding:11px;gap:10px}}
+
+/* Leitura paralela sincronizada: cada trecho mantém lado a lado texto e glosa.
+   Linhas sutis, sem cartões coloridos excessivos; responsivo por trecho. */
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-items:start;column-gap:0;
+}
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.text-pane{
+  min-width:0;align-self:stretch;padding:22px 27px 13px;
+  border-bottom:1px solid #e6ded1;
+}
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.glosa-pane{
+  border-left:1px solid #e6ded1;
+}
+.parallel-view[data-aligned="true"] .original-pane .original-text,
+.parallel-view[data-aligned="true"] .glosa-pane .glosa-text{display:none!important}
+.accordion-item[data-editorial-study="true"] .lce-parallel-rows{
+  grid-column:1/-1;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-row{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  border-bottom:1px solid #e3ded7;break-inside:avoid;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-row:nth-child(even){background:#f8f8f7}
+.accordion-item[data-editorial-study="true"] .lce-parallel-original,
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+  min-width:0;padding:18px 27px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa{border-left:1px solid #e6ded1}
+.accordion-item[data-editorial-study="true"] .lce-parallel-reference{
+  display:block;font-size:.83rem;font-weight:760;color:#76541f;margin:0 0 9px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-title{
+  display:block;color:#372e20;font-weight:700;margin:0 0 8px;line-height:1.5;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-text{
+  margin:0;font-size:1rem;line-height:1.75;color:#2e2a24;white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa .monthly-glosa-draft{margin:0 0 8px}
+.accordion-item[data-editorial-study="true"] .lce-parallel-unit-reference{
+  display:block;margin:8px 0 6px;color:#6e5c42;font-size:.77rem;font-weight:690;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-mobile-label{display:none}
+.accordion-item[data-editorial-study="true"] .lce-parallel-repeat{
+  display:block;color:#746449;font-size:.8rem;line-height:1.5;margin-top:8px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer{
+  grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-original,
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+  padding:18px 27px;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+  border-left:1px solid #e6ded1;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer .liturgical-dialogue{
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer .reading-source-details{
+  margin-top:8px;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  }
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.text-pane{
+    padding:14px 13px 11px!important;font-size:.86rem;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-row{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-original,
+  .accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+    padding:15px 17px;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+    border-left:0;border-top:1px dashed #e0d7ca;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-mobile-label{
+    display:block;font-size:.74rem;color:#76541f;font-weight:760;margin:0 0 8px;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-original,
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+    padding:15px 17px;border-left:0;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+    border-top:1px solid #e6ded1;
+  }
+}
+@media print{
+  .lce-parallel-row{break-inside:avoid}
+  .lce-parallel-rows{page-break-inside:auto}
+}

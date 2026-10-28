@@ -315,3 +315,7 @@ O acervo local mantém 96 ocorrências em novembro/2025; foram auditados 288 ras
 Para incorporar uma versão **Ave-Maria distinta e autorizada**, a rotina `node scripts/importar-ave-maria.mjs --input arquivo.json` importa em `liturgia-ave-maria-acervo.js` uma vez por texto/recorte e vincula glosas ao ID textual. Exige no lote `edition: AVM`, `period: 2025-11`, `sourceEdition`, `publicationAuthorization`, e `entries` com `date`, `kind`, `reference`, `text` e `gloss.segments` opcional. Rejeita salmo, recorte divergente, duplicidade e texto vazio; não pesquisa nem copia automaticamente uma tradução sob direitos de terceiros. Testes usam apenas textos fictícios. Ver `RELATORIOS/REVISAO-COMPETENCIA-01.md`.
 
 - 06/11/2025: preparação por versículos acrescentada à primeira leitura (6), ao salmo (5 contando o refrão) e ao Evangelho (10). São glosas PRELIMINARES, ainda não validadas por pessoa surda/intérprete.
+
+### Visualização paralela sincronizada
+
+Para leituras com glosa preliminar referenciada por versículos, o texto e a glosa correspondente aparecem na mesma linha horizontal (colunas CNBB/AVM e glosa), com divisórias discretas. No celular, cada trecho apresenta texto e, logo abaixo, a glosa. Salmos são alinhados por refrão único e estrofes. O pareamento depende de correspondência completa de referências: se uma fonte omitir ou acrescentar versículos sem glosa, o leitor mantém o layout original e não inventa alinhamento. Sínteses temáticas não são apresentadas como glosas integrais. As versões CNBB e Ave-Maria continuam isoladas, com salmo sempre CNBB.
