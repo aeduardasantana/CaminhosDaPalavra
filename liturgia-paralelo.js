@@ -184,6 +184,62 @@
     glossText.setAttribute('aria-hidden','true');
     return true;
   }
+
+  // Correspondência editorial explícita: Is 5,1-7 (27º Domingo A).
+  // Os marcadores vêm dos textos existentes e nunca geram texto litúrgico novo.
+  const curatedReadings={
+    'Is 5,1-7':[
+      ['Vou cantar, em nome do meu amigo,','EU CANTAR SOBRE MEU-AMIGO'],
+      ['E agora, habitantes de Jerusalém','(MUDANÇA DE PAPEL: DONO'],
+      ['Agora vos direi o que vou fazer','(FOCO: julgamento da vinha)'],
+      ['A vinha do Senhor do Universo é a casa de Israel','(RETOMADA SIMBÓLICA)']
+    ]
+  };
+  function applyCuratedReading(card,reference){
+    const groups=curatedReadings[String(reference||'').trim()];
+    if(!groups)return false;
+    const parallel=card?.querySelector('.parallel-view');
+    if(!parallel||parallel.hasAttribute('data-aligned'))return false;
+    const original=parallel.querySelector('.original-pane .original-text');
+    const gloss=parallel.querySelector('.glosa-pane .glosa-text');
+    if(!original||!gloss)return false;
+    const source=original.textContent||'';
+    const originalLines=source.split('\n');
+    const glossLines=[...gloss.children].map(e=>e.textContent||'');
+    const oi=groups.map(([a])=>originalLines.findIndex(v=>v.trim().startsWith(a)));
+    const gi=groups.map(([,b])=>glossLines.findIndex(v=>v.trim().startsWith(b)));
+    if(oi.some((v,i)=>v<0||(i>0&&v<=oi[i-1])) ||
+       gi.some((v,i)=>v<0||(i>0&&v<=gi[i-1])))return false;
+    const rows=el('div',undefined,'lce-parallel-rows lce-curated-reading-rows');
+    rows.setAttribute('aria-label','Leitura e glosa em trechos correspondentes, organização editorial de estudo');
+    groups.forEach((_,i)=>{
+      const from=oi[i],to=i+1<oi.length?oi[i+1]:originalLines.length;
+      const start=gi[i],end=i+1<gi.length?gi[i+1]:glossLines.length;
+      const row=el('section',undefined,'lce-parallel-row');
+      const left=el('div',undefined,'lce-parallel-original');
+      const right=el('div',undefined,'lce-parallel-glosa');
+      const lines=(i===0?originalLines.slice(0,to):originalLines.slice(from,to));
+      left.append(el('span','Trecho '+(i+1),'lce-parallel-reference'));
+      left.append(el('p',lines.join('\n').trim(),'lce-parallel-text'));
+      right.append(el('span','Glosa · trecho '+(i+1),'lce-parallel-reference'));
+      const block=el('div',undefined,'monthly-glosa-draft');
+      glossLines.slice(start,end).forEach(line=>{
+        const raw=line.trim();if(!raw)return;
+        const note=raw.startsWith('(')&&raw.endsWith(')');
+        if(note){
+          const box=el('span',undefined,'monthly-glosa-direction');
+          box.append(el('span','Orientação · não sinalizar literalmente','monthly-glosa-direction-label'));
+          box.append(el('span',raw.slice(1,-1),'monthly-glosa-direction-text'));
+          block.append(box);
+        }else block.append(el('span',raw,'monthly-glosa-signs'));
+      });
+      right.append(block);row.append(left,right);rows.append(row);
+    });
+    parallel.append(rows);
+    parallel.setAttribute('data-aligned','true');
+    original.setAttribute('aria-hidden','true');gloss.setAttribute('aria-hidden','true');
+    return true;
+  }
   // Leituras legadas: só criar pares quando existe correspondência 1:1
   // verificável entre linhas de origem e unidades da glosa. Não dividir
   // arbitrariamente o texto para simular equivalência linguística.
@@ -217,5 +273,5 @@
     gloss.setAttribute('aria-hidden','true');
     return true;
   }
-  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,applyLegacyPsalm,applyLegacyReading,reset});
+  root.LCE_PARALELO=Object.freeze({refRange,numberedVerses,planVerses,planPsalm,makePlan,apply,applyLegacyPsalm,applyLegacyReading,applyCuratedReading,reset});
 })(window);
