@@ -19,6 +19,7 @@ jobs:
           node --check liturgia-diaria.js
           node --check app.js
           node --check theology-data.js
+          node --check publication-control.js
           node --check liturgia-2025-11.js
           node --check dicionario.js
           node --check estudo-liturgico-2025-11-01a15.js
@@ -33,6 +34,7 @@ jobs:
       - name: Validar Mapa Bíblico Mestre
         run: |
           node scripts/validate-theology-data.mjs
+          node scripts/validate-publication-control.mjs
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
