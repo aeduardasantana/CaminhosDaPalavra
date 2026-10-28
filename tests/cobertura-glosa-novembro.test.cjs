@@ -1,4 +1,4 @@
-/* Auditoria real: 96 ocorrências, 93 sínteses e 3 glosas versiculares rascunhadas. */
+/* Auditoria real: 96 ocorrências, 90 sínteses e 6 glosas versiculares rascunhadas. */
 const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const context={window:{}};
 for(const p of ['liturgia-2025-11.js','estudo-liturgico-2025-11-01a15.js',
@@ -17,7 +17,7 @@ for(const [date,day] of Object.entries(dates)){
   const verseList=verses[date]?.[key]||[];
   unitCount+=units.length;
   if(verseList.length){perVerse++;verseUnitCount+=verseList.length;}
-  else{summary++;assert.equal(units.length,6);}
+  else{summary++;assert.equal(units.length,3);}
  }
 }
 assert.equal(total,96);
@@ -37,4 +37,4 @@ assert.ok(!verses['2025-11-05'].p[0].glosa.includes('REFRÃO DE ESTUDO'));
 const app=fs.readFileSync('app.js','utf8');
 assert.ok(app.includes("SINTESE_TEMATICA"));
 assert.ok(app.includes('Rascunho temático · glosa integral pendente'));
-console.log('OK: 30 dias/96 ocorrências/288 sínteses, 3 estudos versiculares e 93 sínteses não integrais.');
+console.log('OK: 30 dias/96 ocorrências/288 unidades de síntese, 6 estudos versiculares e 90 sínteses não integrais.');
