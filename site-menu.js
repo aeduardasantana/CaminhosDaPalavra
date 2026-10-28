@@ -14,7 +14,7 @@
   const items = [
     {group:'Sagrada Escritura',note:'Estudo e leitura', links:[
       {label:'Bíblia Sagrada',section:'biblia',hash:'biblia'},
-      {label:'História da Salvação e Vida Cristã',url:'./historia-da-salvacao.html',page:'historia'},
+      {label:'Mapa da História da Salvação',url:'./historia-da-salvacao.html',page:'historia'},
       {label:'Plano de leitura bíblica',section:'plano',hash:'plano-de-leitura'}
     ]},
     {group:'Sagrada Tradição',note:'A fé transmitida pela Igreja',links:[
