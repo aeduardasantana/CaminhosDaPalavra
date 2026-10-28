@@ -56,6 +56,22 @@ A regra de publicação é **não inventar dados**. Todo dado factual deve possu
 
 Na relação dos papas, os 267 registros são apresentados com campos de nome de nascimento e datas transcritos da [tabela da Santa Sé](https://www.vatican.va/content/vatican/pt/holy-father.html), preservando lacunas, datas alternativas e formas originais. O arquivo de apoio é `vatican-pontificates-raw.js`. Em 12/10/2026, a tabela fornecia 134 campos de nome de nascimento e deixava 133 em branco. A qualidade factual dos demais módulos necessita conferências próprias, que não devem ser confundidas com a conferência desta lista.
 
+## Mapa da Jornada — nova experiência de leitura (28/10/2026)
+
+A interface de `historia-da-salvacao.html` passou de índice lateral/cartões aninhados para **mapa simbólico navegável**. O endereço não mudou.
+
+- **Mapa A:** oito estações conectadas por um traçado sinuoso, com início na Criação e conclusão na consumação. A estação da Igreja mantém a relação dos 267 papas e sua pesquisa histórica.
+- **Mapa B:** cinco estações no caminho da vida cristã, cobrindo 19 módulos na ordem pedagógica prevista (criaturas, alma e espírito, graça, sacramentos, virtudes, *sensus fidei*, Novíssimos).
+- **Seleção:** cada marco do mapa é um botão de acesso a um painel de leitura com assunto, narrativa integral, referências bíblicas e documentais. O painel permite voltar ao mapa e passar à etapa anterior ou seguinte.
+- **Acesso direto:** âncoras legadas como `#maria`, `#sucessao-pontificia` e `#b18` identificam e abrem automaticamente a estação e o tema. O legado `papas.html` mantém o redirecionamento existente.
+- **Visual responsivo:** caminho sinuoso sobre fundo de pergaminho no desktop; trilha vertical de marcos alternados no celular. O mapa é simbólico, não territorial nem uma cronologia com datas artificialmente inferidas.
+- **Acessibilidade e continuidade:** botões/diálogo nativos, foco e tecla Escape, painel com navegação anterior/próxima, suporte à redução de movimento; se o script do mapa não executar, a página original permanece acessível com seus painéis.
+- **Preservação:** o código antigo dos capítulos não foi apagado ou copiado com divergências; `percurso-mapa.js` apenas reutiliza o conteúdo existente no painel de leitura. `percurso-mapa.css` contém somente a nova camada visual.
+- **Limites de teste:** conferência de números, scripts, referências internas e deploy não substitui inspeção visual em navegador e no celular. A aprovação eclesial é independente do design.
+
+Referência de arquitetura, criada no Google Drive antes da alteração:
+https://docs.google.com/document/d/1laOluDr3sPMMek2EH0k0NxcicSRvndNzh7BkXVP_y20/edit
+
 ## Dois eixos em uma página — HS-2026-10-12.4
 
 A página canônica `historia-da-salvacao.html` reúne **duas perspectivas complementares da única salvação em Cristo**, com controle por abas acessível a teclado e links profundos:
