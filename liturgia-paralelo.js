@@ -214,7 +214,7 @@
     rows.setAttribute('aria-label','Leitura e glosa em trechos correspondentes, organização editorial de estudo');
     groups.forEach((_,i)=>{
       const from=oi[i],to=i+1<oi.length?oi[i+1]:originalLines.length;
-      const start=gi[i],end=i+1<gi.length?gi[i+1]:glossLines.length;
+      const start=i===0?0:gi[i],end=i+1<gi.length?gi[i+1]:glossLines.length;
       const row=el('section',undefined,'lce-parallel-row');
       const left=el('div',undefined,'lce-parallel-original');
       const right=el('div',undefined,'lce-parallel-glosa');
