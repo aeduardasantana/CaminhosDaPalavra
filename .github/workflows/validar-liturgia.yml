@@ -1,9 +1,12 @@
 name: Validar calendário litúrgico
+
 on:
-  push:
-    branches: [main]
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
+
 jobs:
   verificar:
     runs-on: ubuntu-24.04
@@ -11,7 +14,7 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
       - name: Verificar sintaxe JavaScript
         run: |
           node --check calendar.js
@@ -32,10 +35,13 @@ jobs:
           node --check liturgia-edicoes.js
           node --check scripts/importar-liturgia-br.mjs
           node --check scripts/importar-ave-maria.mjs
-      - name: Validar Mapa Bíblico Mestre
+          node --check scripts/preparar-publicacao.mjs
+      - name: Validar Mapa Bíblico Mestre e controle editorial
         run: |
           node scripts/validate-theology-data.mjs
           node scripts/validate-publication-control.mjs
+      - name: Validar pacote público sem enviar ao FTP
+        run: node scripts/preparar-publicacao.mjs --check
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
@@ -56,4 +62,4 @@ jobs:
           node tests/salmos-quadros.test.cjs
           node tests/paralelo-alinhado.test.cjs
           node tests/aclamacoes-ferial.test.cjs
-
+          node tests/publicacao-segura.test.cjs
