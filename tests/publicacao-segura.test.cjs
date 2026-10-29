@@ -26,9 +26,16 @@ function listFiles(dir, prefix = '') {
   });
 }
 
+function parseAssignedJson(source, globalName) {
+  const match = source.match(new RegExp('window\\.' + globalName + '\\s*=\\s*([\\s\\S]*);\\s*$'));
+  assert.ok(match, globalName + ' não encontrado no pacote');
+  return JSON.parse(match[1]);
+}
+
 try {
   const checkOutput = run(['--check']);
   assert.match(checkOutput, /Pacote público validado/);
+  assert.match(checkOutput, /mantidos bloqueados com metadados mínimos/);
 
   const buildOutput = run(['--output', output]);
   assert.match(buildOutput, /Pacote público criado/);
@@ -41,7 +48,9 @@ try {
     'app.js',
     'styles.css',
     'dados/heresias-controversias.json',
-    'liturgia-paralelo.js'
+    'liturgia-paralelo.js',
+    'theology-data.js',
+    'publication-control.js'
   ]) {
     assert.ok(fileSet.has(required), 'Arquivo público esperado ausente: ' + required);
   }
@@ -64,7 +73,37 @@ try {
   assert.ok(files.every(file => /\.(html|css|js|json|svg|png|jpe?g|webp|gif|ico|avif|woff2?|ttf|otf|webmanifest|xml)$/i.test(file)),
     'O pacote contém uma extensão não permitida.');
 
-  console.log('Pacote público seguro validado:', files.length, 'arquivos; nenhum arquivo interno de auditoria foi incluído.');
+  const publicTheology = parseAssignedJson(
+    fs.readFileSync(path.join(output, 'theology-data.js'), 'utf8'),
+    'CDP_THEOLOGY'
+  );
+  const publicControl = parseAssignedJson(
+    fs.readFileSync(path.join(output, 'publication-control.js'), 'utf8'),
+    'CDP_PUBLICATION_CONTROL'
+  );
+  assert.equal(Object.keys(publicTheology.chapters).length, 1334);
+  assert.equal(Object.keys(publicControl.chapters).length, 1334);
+  assert.equal(publicControl.failClosed, true);
+
+  for (const [chapterKey, record] of Object.entries(publicTheology.chapters)) {
+    const state = publicControl.chapters[record.cpId];
+    assert.ok(state, 'Estado público ausente para ' + chapterKey);
+    if (!state.publicAuthorized) {
+      assert.ok(Object.keys(record).every(key =>
+        ['cpId', 'bookId', 'chapter', 'reference', 'bibleUrl', 'matrixVersion'].includes(key)
+      ), 'Conteúdo não autorizado foi incluído no pacote: ' + chapterKey);
+      assert.equal(state.reviewStatus, 'Não autorizado para exibição pública');
+    } else {
+      assert.deepEqual(Object.keys(state), ['publicAuthorized']);
+    }
+  }
+
+  const serializedControl = fs.readFileSync(path.join(output, 'publication-control.js'), 'utf8');
+  assert.ok(!serializedControl.includes('sourceSpreadsheetId'), 'ID da planilha de controle foi publicado.');
+  assert.ok(!serializedControl.includes('reviewer'), 'Metadados internos de revisão foram publicados.');
+  assert.ok(!serializedControl.includes('Não enviado'), 'Status interno de revisão foi publicado.');
+
+  console.log('Pacote público seguro validado:', files.length, 'arquivos; dados de capítulos não autorizados foram reduzidos a metadados.');
 } finally {
   fs.rmSync(tempRoot, { recursive: true, force: true });
 }

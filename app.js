@@ -1730,7 +1730,7 @@ function renderLockedChapter(book, chapter, record, state, options = {}) {
   lockText.textContent = 'Os campos de tema, História da Salvação, relação com Cristo, conexões bíblicas, Catecismo e Rosário estão preservados na matriz, mas ainda não foram autorizados para exibição pública.';
   const status = document.createElement('p');
   status.className = 'chapter-lock-status';
-  status.textContent = 'Status da revisão eclesial: ' + (state.reviewStatus || 'Não informado') + '.';
+  status.textContent = 'Situação de publicação: ' + (state.reviewStatus || 'Não autorizado para exibição pública') + '.';
   notice.append(lockTitle, lockText, status);
 
   const actions = document.createElement('div');
@@ -1762,7 +1762,7 @@ function renderLockedChapter(book, chapter, record, state, options = {}) {
   const items = [
     ['ID', record.cpId],
     ['Versão da matriz', record.matrixVersion || theology.methodologyVersion],
-    ['Revisão eclesial', state.reviewStatus || 'Não informado'],
+    ['Situação de publicação', state.reviewStatus || 'Não autorizado para exibição pública'],
     ['Autorização pública', 'Não autorizada']
   ];
   items.forEach(([label,value]) => {
