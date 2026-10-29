@@ -69,7 +69,7 @@ window.LCE_BR_ACERVO={
       "sourceReference": "Lc 12,35-40",
       "text": "Naquele tempo, disse Jesus a seus discípulos: Que vossos rins estejam cingidos e as lâmpadas acesas. Sede como homens que estão esperando seu senhor voltar de uma festa de casamento, para lhe abrir, imediatamente, a porta, logo que ele chegar e bater. Felizes os empregados que o senhor encontrar acordados quando chegar. Em verdade eu vos digo: Ele mesmo vai cingir-se, fazê-los sentar-se à mesa e, passando, os servirá. E caso ele chegue à meia-noite ou às três da madrugada, felizes serão, se assim os encontrar! Mas ficai certos: se o dono da casa soubesse a hora em que o ladrão iria chegar, não deixaria que arrombasse a sua casa. Vós também, ficai preparados! Porque o Filho do Homem vai chegar na hora em que menos o esperardes.",
       "refrain": "",
-      "title": "Proclamação do Evangelho de Jesus Cristo segundo Mateus"
+      "title": "Proclamação do Evangelho de Jesus Cristo segundo Lucas"
     },
     "lbr-6c8352303241a6ead5cafc6d": {
       "kind": "primeira-leitura",
