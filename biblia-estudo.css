@@ -1,0 +1,87 @@
+/* Área de estudo bíblico: não altera o sistema litúrgico ou o plano existente. */
+.study-shell{padding-top:24px;padding-bottom:56px}
+.study-breadcrumb{font-size:.88rem;margin-bottom:18px;color:var(--muted);display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.study-breadcrumb a:hover{text-decoration:underline}
+.study-hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.8fr);gap:26px;align-items:center;padding:32px;border-radius:18px;background:#fff9ec;border:1px solid #e7d7b8;margin-bottom:22px}
+.study-hero h2{font-size:clamp(2rem,4vw,3.1rem);margin:3px 0 12px;color:#292319}
+.study-hero p{max-width:740px;margin:0;color:#514a3c;line-height:1.65}
+.study-edition{background:#fff;padding:20px;border:1px solid #e2d7c6;border-radius:14px;display:grid;gap:4px}
+.study-edition-label{color:#805e24;text-transform:uppercase;letter-spacing:.09em;font-size:.72rem;font-weight:750}
+.study-edition strong{font-size:1.15rem}
+.study-edition span:not(.study-edition-label){color:#655c51;font-size:.92rem}
+.study-edition small{color:#726a60;font-size:.79rem}
+.study-shell .card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px;box-shadow:0 6px 20px rgba(50,40,24,.035)}
+.study-search{margin-bottom:20px}
+.study-search-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:10px;align-items:end}
+.study-search-row label{grid-column:1 / -1;font-weight:700}
+.study-search input,.study-search select,.study-picker input,.study-picker select,.study-catalog input,.study-catalog select,.study-note-pane textarea{width:100%;min-width:0;border-radius:9px;border:1px solid #bfb5a6;padding:10px 12px;background:#fff;color:#25221e;outline-offset:2px}
+.study-search-row button{min-height:44px}
+.study-search-row input{min-height:44px}
+.study-help{font-size:.84rem;color:#625b51;line-height:1.55;margin:10px 0 0}
+.study-text-search{margin-top:17px;padding-top:15px;border-top:1px dashed #d7d0c3;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px}
+.study-text-search label{grid-column:1/-1;font-weight:700}
+.study-text-search p,.study-text-search #studyTextResults{grid-column:1/-1}
+.study-text-search input:disabled,.study-text-search button:disabled{opacity:.65;cursor:not-allowed}
+#studyFeedback{margin:9px 0 0;font-weight:650;color:#835013;min-height:1rem}
+.study-layout{display:grid;grid-template-columns:minmax(245px,280px) minmax(0,1fr);gap:20px;align-items:start}
+.study-catalog{position:sticky;top:108px;max-height:calc(100dvh - 124px);overflow-y:auto}
+.study-catalog h3{font-size:1.08rem;margin-bottom:15px}
+.study-catalog-filters{display:grid;gap:8px;margin-bottom:16px}
+.study-catalog-filters label{font-size:.86rem;font-weight:650}
+.study-book-list{display:grid;gap:13px}
+.study-group{border-top:1px solid #ede7db;padding-top:9px}
+.study-group h4{font-size:.78rem;color:#67502c;text-transform:uppercase;letter-spacing:.04em;margin:0 0 7px}
+.study-group button{display:flex;align-items:center;justify-content:space-between;width:100%;text-align:left;border:1px solid transparent;border-radius:8px;background:transparent;padding:8px 9px;color:#40392c;gap:10px}
+.study-group button:hover,.study-group button:focus-visible{background:#f8f1e5;border-color:#e9d9b6}
+.study-group button[aria-current="true"]{background:#f2e5c9;border-color:#d1b783;color:#48340f;font-weight:750}
+.study-group button small{color:#736a5e;white-space:nowrap}
+.study-main{display:grid;gap:16px;min-width:0}
+.study-picker-grid{display:grid;grid-template-columns:minmax(150px,1.5fr) minmax(110px,.8fr) minmax(108px,.8fr) minmax(108px,.8fr);gap:10px;margin-top:15px}
+.study-picker-grid label{font-size:.86rem;font-weight:650;display:grid;gap:6px;align-content:start}
+.study-selection{border-top:1px solid #e6decf;margin-top:19px;padding-top:18px;display:flex;justify-content:space-between;align-items:center;gap:14px;flex-wrap:wrap}
+.study-selection>div:first-child{display:grid;gap:4px}
+#studyCurrentReference{font-size:1.5rem;color:#32291a}
+#studyCurrentEdition{font-size:.82rem;color:#6d6559}
+.study-selection-actions{display:flex;gap:7px;align-items:center;flex-wrap:wrap}
+.study-selection-actions a,.study-selection-actions button{font-size:.84rem;padding:9px 12px}
+.study-plan-strip{display:flex;align-items:center;justify-content:space-between;gap:14px;background:#f6f3ec;padding:14px;border-radius:10px;margin-top:18px;flex-wrap:wrap}
+.study-plan-strip p{font-size:.86rem;margin:3px 0 0;color:#60574b}
+.study-plan-strip>a{text-decoration:underline;color:#70501c;font-size:.86rem}
+.study-plan-check{display:inline-flex;align-items:center;gap:7px;font-size:.86rem;cursor:pointer}
+.study-plan-check input{width:18px;height:18px}
+.study-content-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;align-items:start}
+.study-content-grid h3{font-size:1.11rem;margin-bottom:5px}
+.study-pane-meta{font-size:.81rem;color:#675f54;margin-bottom:15px}
+.study-pane{min-height:220px}
+.study-text-pane{border-top:4px solid #7a6742!important}
+.study-editorial-pane{border-top:4px solid #b29a75!important}
+.study-note-pane{border-top:4px solid #637b68!important}
+.study-glosa-pane{border-top:4px solid #af8a32!important}
+.study-not-licensed{border:1px dashed #d5c6ac;border-radius:10px;padding:16px;background:#fcf9f1}
+.study-not-licensed strong{display:block;color:#55421d;margin-bottom:7px}
+.study-not-licensed p{margin:0 0 12px}
+.study-not-licensed a{text-decoration:underline}
+.study-verse-row{padding:10px 0;border-bottom:1px solid #eee7da;line-height:1.7;white-space:pre-wrap}
+.study-verse-row b{color:#835b20;margin-right:9px}
+.study-note-pane label{display:block;margin:3px 0 8px;font-size:.89rem;font-weight:650}
+.study-note-pane textarea{resize:vertical;min-height:124px}
+.study-note-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+.study-note-pane details{margin-top:18px}
+.study-note-pane summary{font-weight:700;cursor:pointer}
+.study-marked-list{display:grid;gap:7px;margin-top:10px}
+.study-marked-list button{border:1px solid #d4c8b8;background:#faf8f4;text-align:left;border-radius:8px;padding:8px 10px}
+#studyNoteStatus{font-size:.85rem;color:#4b694a;min-height:1rem;margin:8px 0}
+.study-glosa-item{border:1px solid #e6d9b9;border-radius:10px;padding:12px;margin:10px 0;background:#fffdf8}
+.study-glosa-item summary{font-size:.88rem;cursor:pointer;font-weight:700;line-height:1.5}
+.study-glosa-item small{display:block;color:#705f41;margin:7px 0}
+.study-glosa-item pre{white-space:pre-wrap;overflow-wrap:anywhere;font-family:inherit;font-size:.9rem;line-height:1.65;margin:10px 0 0;color:#3a352b}
+.study-empty{color:#746c5f;font-size:.9rem}
+.study-results{display:grid;gap:7px}
+.study-results button{border:1px solid #ded3c2;padding:8px;text-align:left;border-radius:8px;background:#fff}
+.study-results button:hover{background:#f8f0e0}
+.study-shell button:focus-visible,.study-shell a:focus-visible,.study-shell input:focus-visible,.study-shell textarea:focus-visible,.study-shell select:focus-visible{outline:3px solid #8c6b28;outline-offset:3px}
+@media(max-width:1020px){.study-layout{grid-template-columns:240px minmax(0,1fr)}.study-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:790px){.study-layout{grid-template-columns:1fr}.study-catalog{position:static;max-height:none}.study-book-list{max-height:300px;overflow:auto;padding-right:8px}.study-hero{grid-template-columns:1fr;padding:22px}.study-content-grid{grid-template-columns:1fr}}
+@media(max-width:480px){.study-shell{padding-top:16px}.study-shell .card{padding:15px}.study-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.study-search-row{grid-template-columns:1fr}.study-text-search{grid-template-columns:1fr}.study-selection-actions>a,.study-selection-actions>button{flex:1;text-align:center}.study-selection-actions{width:100%}.study-plan-strip{align-items:flex-start}.study-hero h2{font-size:1.9rem}}
+@media(prefers-reduced-motion:reduce){.study-shell *{scroll-behavior:auto;transition:none!important}}
+@media print{.site-header,.study-catalog,.study-search,.study-note-actions,.study-selection-actions,.study-plan-strip{display:none!important}.study-layout,.study-content-grid,.study-hero{display:block!important}.study-shell{width:100%!important}.study-pane{break-inside:avoid}.study-note-pane textarea{border:0}}

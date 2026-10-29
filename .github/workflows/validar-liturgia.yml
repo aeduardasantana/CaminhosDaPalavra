@@ -29,6 +29,8 @@ jobs:
           node --check aclamacoes.js
           node --check liturgia-diaria.js
           node --check app.js
+          node --check biblia-estudo-core.js
+          node --check biblia-estudo.js
           node --check theology-data.js
           node --check publication-control.js
           node --check liturgia-2025-11.js
@@ -72,3 +74,4 @@ jobs:
           node tests/paralelo-alinhado.test.cjs
           node tests/aclamacoes-ferial.test.cjs
           node tests/publicacao-segura.test.cjs
+          node tests/biblia-estudo.test.cjs

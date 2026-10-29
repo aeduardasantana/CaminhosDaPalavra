@@ -1648,6 +1648,10 @@ function chapterUrl(bookId, chapter) {
   return bible.readBase + bookId + '.' + chapter + '.AVM';
 }
 
+function studyChapterUrl(bookId, chapter) {
+  return './biblia-estudo.html?livro=' + encodeURIComponent(bookId) + '&capitulo=' + chapter;
+}
+
 function renderBibleBooks() {
   const q = normalize(els.bibleQuery.value);
   const testament = els.bibleTestament.value;
@@ -1751,7 +1755,11 @@ function renderLockedChapter(book, chapter, record, state, options = {}) {
     document.title = 'Bíblia — Caminhos da Palavra';
     renderBibleChapters(book);
   });
-  actions.append(read, back);
+  const study = document.createElement('a');
+  study.className = 'secondary-link';
+  study.href = studyChapterUrl(book.id, chapter);
+  study.textContent = 'Estudar e anotar este capítulo';
+  actions.append(read, study, back);
 
   const safeMeta = document.createElement('details');
   safeMeta.className = 'chapter-methodology-details';
@@ -1996,6 +2004,11 @@ function renderTheologyCard(book, chapter, record, options = {}) {
     }
   });
   actions.appendChild(share);
+  const study = document.createElement('a');
+  study.className = 'secondary-link';
+  study.href = studyChapterUrl(book.id, chapter);
+  study.textContent = 'Estudar e anotar este capítulo';
+  actions.appendChild(study);
 
   const chapterIndex = chapterSequenceIndex(book.id, chapter);
   const previous = chapterAtSequenceIndex(chapterIndex - 1);
@@ -2324,7 +2337,10 @@ function createReadingDetail(step, progress) {
     setChapterCompletion(step, checkbox.checked, progress);
     renderPlan();
   });
-  article.append(label, link);
+  const studyLink = document.createElement('a');
+  studyLink.href = studyChapterUrl(step.bookId, step.chapter);
+  studyLink.textContent = 'Estudar e anotar';
+  article.append(label, link, studyLink);
   return article;
 }
 
