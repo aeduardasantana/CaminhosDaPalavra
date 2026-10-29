@@ -89,7 +89,7 @@ assert.ok(html.includes('name="viewport"'));
 assert.ok(css.includes('@media(max-width:480px)'),'Layout pequeno não contemplado');
 assert.ok(index.includes('href="./biblia-estudo.html"'));
 assert.ok(app.includes('studyChapterUrl(step.bookId, step.chapter)'),'Plano não conecta estudo');
-assert.ok(script.includes("const PLAN_KEY='lce-bible365-plan-v1'"),'Plano deve compartilhar armazenamento');
+assert.match(script,/PLAN_KEY\s*=\s*['"]lce-bible365-plan-v1['"]/,'Plano deve compartilhar armazenamento');
 assert.ok(script.includes('textContent'),'Campos devem usar texto e não HTML da pessoa usuária');
 assert.ok(!html.includes('liturgia-br-acervo.js'),'Texto CNBB não deve ser carregado como texto Ave-Maria');
 assert.ok(!html.includes('liturgia-ave-maria-acervo.js'),'Acervo litúrgico não é a Bíblia para estudo');
