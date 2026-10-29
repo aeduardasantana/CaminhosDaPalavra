@@ -1,6 +1,7 @@
 name: Validar e publicar Caminhos da Palavra
 
 on:
+  pull_request:
   push:
     branches: [main]
   workflow_dispatch:
@@ -15,7 +16,7 @@ permissions:
   contents: read
 
 concurrency:
-  group: caminhos-da-palavra-\${{ github.ref }}
+  group: caminhos-da-palavra-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -104,10 +105,10 @@ jobs:
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
-          host: \${{ secrets.HOST }}
-          user: \${{ secrets.USER }}
-          password: \${{ secrets.PASS }}
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
           forceSsl: "true"
           localDir: "./dist/"
           remoteDir: "./public_html/caminhosdapalavra/"
-          options: \${{ github.event_name == 'workflow_dispatch' && inputs.limpar_arquivos_remotos && '--delete' || '' }}
+          options: ${{ github.event_name == 'workflow_dispatch' && inputs.limpar_arquivos_remotos && '--delete' || '' }}
