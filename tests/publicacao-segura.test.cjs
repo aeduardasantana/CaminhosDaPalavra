@@ -33,6 +33,30 @@ function parseAssignedJson(source, globalName) {
 }
 
 try {
+  const cleanupPlanResult = spawnSync('python3', [
+    path.join(root, 'scripts', 'limpar-artefatos-ftp.py'),
+    '--dry-run'
+  ], { cwd: root, encoding: 'utf8' });
+  assert.equal(cleanupPlanResult.status, 0, cleanupPlanResult.stderr || cleanupPlanResult.stdout);
+  const cleanupPlan = JSON.parse(cleanupPlanResult.stdout);
+  const cleanupPaths = new Set(cleanupPlan.paths);
+  for (const internal of [
+    'README.md',
+    'scripts/preparar-publicacao.mjs',
+    'tests/publicacao-segura.test.cjs',
+    'data/mapa/publication-manifest.json'
+  ]) {
+    assert.ok(cleanupPaths.has(internal), 'Artefato interno não consta na limpeza seletiva: ' + internal);
+  }
+  for (const publicFile of [
+    'index.html',
+    'app.js',
+    'styles.css',
+    'dados/heresias-controversias.json'
+  ]) {
+    assert.ok(!cleanupPaths.has(publicFile), 'Arquivo público foi marcado para remoção: ' + publicFile);
+  }
+
   const checkOutput = run(['--check']);
   assert.match(checkOutput, /Pacote público validado/);
   assert.match(checkOutput, /mantidos bloqueados com metadados mínimos/);

@@ -5,12 +5,6 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
-    inputs:
-      limpar_arquivos_remotos:
-        description: "Excluir do FTP os arquivos que não existirem no pacote público. Marque somente se a pasta remota for exclusiva deste site."
-        required: true
-        type: boolean
-        default: false
 
 permissions:
   contents: read
@@ -52,6 +46,7 @@ jobs:
           node --check scripts/importar-liturgia-br.mjs
           node --check scripts/importar-ave-maria.mjs
           node --check scripts/preparar-publicacao.mjs
+          python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
 
       - name: Validar Mapa Bíblico Mestre e controle editorial
         run: |
@@ -102,6 +97,13 @@ jobs:
           echo "Arquivos preparados para publicação:"
           find dist -type f -print | sort
 
+      - name: Limpar artefatos internos antigos sem excluir arquivos desconhecidos
+        env:
+          FTP_HOST: ${{ secrets.HOST }}
+          FTP_USER: ${{ secrets.USER }}
+          FTP_PASS: ${{ secrets.PASS }}
+        run: python3 scripts/limpar-artefatos-ftp.py
+
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
@@ -111,4 +113,3 @@ jobs:
           forceSsl: "true"
           localDir: "./dist/"
           remoteDir: "./public_html/caminhosdapalavra/"
-          options: ${{ github.event_name == 'workflow_dispatch' && inputs.limpar_arquivos_remotos && '--delete' || '' }}
