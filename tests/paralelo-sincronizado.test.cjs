@@ -47,7 +47,7 @@ const css=fs.readFileSync('liturgia-diaria.css','utf8');
 const html=fs.readFileSync('index.html','utf8');
 assert.ok(local.includes("root.LCE_PARALELO.apply(entry,card,record)"));
 assert.ok(editions.includes("root.LCE_PARALELO.apply(entry,card,"));
-assert.ok(html.includes('liturgia-paralelo.js?v=20261028-sync1'));
+assert.ok(html.includes('liturgia-paralelo.js?v=20261028-leituras2'));
 assert.ok(css.includes('.lce-parallel-row'));
 assert.ok(css.includes('grid-template-columns:minmax(0,1fr) minmax(0,1fr)'));
 assert.ok(css.includes('grid-template-columns:minmax(0,1fr);'));

@@ -1,44 +1,118 @@
-name: Deploy via ftp
+name: Validar e publicar Caminhos da Palavra
 
 on:
+  pull_request:
   push:
-    branches:
-      - main
+    branches: [main]
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
+
+concurrency:
+  group: caminhos-da-palavra-${{ github.ref }}
+  cancel-in-progress: false
 
 jobs:
-  deploy:
-    name: Deploy
+  validar:
+    name: Validar código, conteúdo e pacote público
     runs-on: ubuntu-24.04
-
+    timeout-minutes: 15
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@v4
 
       - uses: actions/setup-node@v4
         with:
-          node-version: '22'
+          node-version: "22"
 
-      - name: Importar liturgia brasileira somente se ainda não estiver salva
+      - name: Verificar sintaxe JavaScript
         run: |
-          node scripts/importar-liturgia-br.mjs
-          node scripts/importar-liturgia-br.mjs --check
-          if ! git diff --quiet -- liturgia-br-acervo.js RELATORIOS/IMPORTACAO-LOCAL-2025-11.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add liturgia-br-acervo.js RELATORIOS/IMPORTACAO-LOCAL-2025-11.json
-            git commit -m "data: importar uma vez 30 dias da liturgia brasileira de novembro 2025"
-            git push origin HEAD:main
-          fi
+          node --check calendar.js
+          node --check lectionary-data.js
+          node --check glosa-psalms.js
+          node --check glosa-gospels.js
+          node --check glosa-new-testament.js
+          node --check glosa-old-testament.js
+          node --check glosas-revisadas-ano-a.js
+          node --check glosas-revisadas-ano-b.js
+          node --check glosas-revisadas-ano-c.js
 
-      - name: Validar Mapa Bíblico Mestre antes do deploy
-        run: |
+          node --check aclamacoes.js
+          node --check liturgia-diaria.js
+          node --check app.js
           node --check theology-data.js
           node --check publication-control.js
+          node --check liturgia-2025-11.js
+          node --check dicionario.js
+          node --check estudo-liturgico-2025-11-01a15.js
+          node --check estudo-liturgico-2025-11-16a30.js
+          node --check estudo-versiculos-2025-11.js
+          node --check liturgia-fonte-local.js
+          node --check liturgia-paralelo.js
+          node --check liturgia-br-acervo.js
+          node --check liturgia-ave-maria-acervo.js
+          node --check liturgia-edicoes.js
+          node --check scripts/importar-liturgia-br.mjs
+          node --check scripts/importar-ave-maria.mjs
+          node --check scripts/preparar-publicacao.mjs
+          python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
+
+      - name: Validar Mapa Bíblico Mestre e controle editorial
+        run: |
           node scripts/validate-theology-data.mjs
           node scripts/validate-publication-control.mjs
+
+      - name: Validar pacote público sem enviar ao FTP
+        run: node scripts/preparar-publicacao.mjs --check
+
+      - name: Regressões litúrgicas e rastreabilidade
+        run: |
+          node tests/liturgia-diaria.test.cjs
+          node tests/integridade-editorial.test.cjs
+          node tests/competencia-01.test.cjs
+          node tests/calendario-ux.test.cjs
+          node tests/dicionario.test.cjs
+          node tests/novembro-integracao-editorial.test.cjs
+          node tests/fonte-online.test.cjs
+          node tests/acervo-local.test.cjs
+          node tests/edicoes-liturgicas.test.cjs
+          node tests/edicoes-manifest.test.cjs
+          node tests/importador-ave-maria.test.cjs
+          node tests/cobertura-glosa-novembro.test.cjs
+          node tests/glosa-2025-11-06.test.cjs
+          node tests/paralelo-sincronizado.test.cjs
+          node tests/leitura-limpa-ux.test.cjs
+          node tests/glosa-orientacoes-ux.test.cjs
+          node tests/salmos-quadros.test.cjs
+          node tests/paralelo-alinhado.test.cjs
+          node tests/aclamacoes-ferial.test.cjs
+          node tests/publicacao-segura.test.cjs
+
+  publicar:
+    name: Publicar pacote aprovado via FTP
+    needs: validar
+    if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && github.ref == 'refs/heads/main')
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Montar somente os arquivos públicos do site
+        run: |
+          node scripts/preparar-publicacao.mjs
+          echo "Arquivos preparados para publicação:"
+          find dist -type f -print | sort
+
+      - name: Limpar artefatos internos antigos sem excluir arquivos desconhecidos
+        env:
+          FTP_HOST: ${{ secrets.HOST }}
+          FTP_USER: ${{ secrets.USER }}
+          FTP_PASS: ${{ secrets.PASS }}
+        run: python3 scripts/limpar-artefatos-ftp.py
 
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
@@ -46,5 +120,6 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          localDir: "./"
+          forceSsl: "true"
+          localDir: "./dist/"
           remoteDir: "./public_html/caminhosdapalavra/"

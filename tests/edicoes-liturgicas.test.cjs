@@ -33,7 +33,7 @@ assert.ok(app.includes("els.editionChoices.forEach(choice=>choice.addEventListen
 assert.ok(app.includes("same?.querySelector('.accordion-trigger')?.click()"));
 const impl=fs.readFileSync('liturgia-edicoes.js','utf8');
 assert.ok(impl.includes('record.gloss?.textId!==record.id'));
-assert.ok(impl.includes('unavailable(text,gloss)'));
+assert.ok(impl.includes('unavailable(text,gloss,entry)'));
 assert.ok(impl.includes('if(oldNotes)oldNotes.hidden=true'));
 assert.ok(impl.includes('if(oldSource)oldSource.hidden=true'));
 const real=fs.readFileSync('liturgia-br-acervo.js','utf8');
@@ -56,7 +56,7 @@ browserContext.window.LCE_EDICOES.apply({...passages[0],editorialStudy:true},car
 assert.equal(card.dataset.edition,'AVM');
 assert.equal(card.dataset.editorialStudy,'true');
 assert.equal(card.dataset.completeText,'false');
-assert.ok(view['.original-text'].children[0].textContent.includes('ainda não incorporado'));
+assert.ok(view['.original-text'].children[0].children.some(child=>child.textContent.includes('incorporação integral ao acervo estiver pendente')));
 assert.ok(view['.glosa-text'].children[0].textContent.includes('ainda não elaborada'));
 assert.equal(view['.liturgy-study-notes'].hidden,true);
 browserContext.window.LCE_AVE_MARIA_ACERVO=corpus;
