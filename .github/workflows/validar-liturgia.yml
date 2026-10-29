@@ -17,6 +17,15 @@ jobs:
       - name: Verificar sintaxe JavaScript
         run: |
           node --check calendar.js
+          node --check lectionary-data.js
+          node --check glosa-psalms.js
+          node --check glosa-gospels.js
+          node --check glosa-new-testament.js
+          node --check glosa-old-testament.js
+          node --check glosas-revisadas-ano-a.js
+          node --check glosas-revisadas-ano-b.js
+          node --check glosas-revisadas-ano-c.js
+
           node --check aclamacoes.js
           node --check liturgia-diaria.js
           node --check app.js
@@ -44,6 +53,7 @@ jobs:
       - name: Regressões litúrgicas e rastreabilidade
         run: |
           node tests/liturgia-diaria.test.cjs
+          node tests/integridade-editorial.test.cjs
           node tests/competencia-01.test.cjs
           node tests/calendario-ux.test.cjs
           node tests/dicionario.test.cjs
