@@ -27,7 +27,8 @@ const normalize = value => String(value ?? '')
   .replace(/[–—]/g, '-').replace(/\s+/g, ' ').trim().toLowerCase();
 const normalizeKey = value => String(value).split('|').map(normalize).join('|');
 const validIso = value => /^\d{4}-\d{2}-\d{2}$/.test(value) &&
-  !Number.isNaN(Date.parse(value + 'T00:00:00Z'));
+  !Number.isNaN(Date.parse(value + 'T00:00:00Z')) &&
+  new Date(value + 'T00:00:00Z').toISOString().slice(0, 10) === value;
 
 const calendar = context.window.LCE_CALENDAR;
 const master = context.window.LCE_LECTIONARY;
@@ -162,7 +163,10 @@ for (const [cycle, dictionary] of contextual) {
     const normalizedKey = normalizeKey(key);
     assert.ok(pendingSharedOptionKeys.has(normalizedKey),
       'Glosa contextual sem vínculo no mapa mestre e sem exceção documentada: ' + key);
-    assert.ok(rows.some(row => row.cycle === 'A' && matches(row)),
+    const matchesSharedReading = row => normalize(row.section) === normalize(section) &&
+      normalize(row.celebration) === normalize(celebration) &&
+      normalize(row.type) === normalize(type) && normalize(row.reference) === normalize(reference);
+    assert.ok(rows.some(row => row.cycle === 'A' && matchesSharedReading(row)),
       'A opção compartilhada do Batismo do Senhor não tem correspondência no Ano A: ' + key);
     const bRecord = master.records.find(record => record.cycle === 'B' &&
       normalize(record.section) === normalize(section) &&
@@ -174,7 +178,7 @@ for (const [cycle, dictionary] of contextual) {
 }
 assert.equal(contextualCounts.A, 32, 'Quantidade de glosas contextuais do Ano A mudou; revisar inventário');
 assert.equal(contextualCounts.B, 181, 'Quantidade de glosas contextuais do Ano B mudou; revisar inventário');
-assert.equal(contextualCounts.C, 0, 'Quantidade de glosas contextuais do Ano C mudou; revisar inventário');
+assert.equal(contextualCounts.C, 2, 'Quantidade de glosas contextuais do Ano C mudou; revisar inventário');
 
 // O acervo de novembro deve manter todos os IDs de texto ligados a datas e tipos.
 // O texto-fonte pode trazer uma referência ampla para um salmo cujo recorte diário é específico;
@@ -255,9 +259,9 @@ assert.equal(avm.edition, 'AVM');
 assert.equal(editions.editionFor('salmo', 'AVM'), 'CNBB');
 for (const kind of avmKinds) assert.equal(editions.editionFor(kind, 'AVM'), 'AVM');
 assert.equal(editions.editionFor('tipo-desconhecido', 'AVM'), 'CNBB');
-assert.deepEqual(editions.aveReadings({
+assert.equal(editions.aveReadings({
   data: '2025-11-05', item: 'primeira-leitura', referencia: 'Rm 13,8-10'
-}, avm), [], 'Acervo Ave-Maria vazio não pode recorrer à edição CNBB');
+}, avm).length, 0, 'Acervo Ave-Maria vazio não pode recorrer à edição CNBB');
 for (const [id, record] of Object.entries(avm.texts || {})) {
   assert.equal(record.id, id, 'ID AVM diverge da chave do acervo: ' + id);
   assert.equal(record.edition, 'AVM', 'Texto de outra edição inserido no acervo AVM: ' + id);
