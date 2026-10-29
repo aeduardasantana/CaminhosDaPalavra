@@ -30,7 +30,6 @@ jobs:
           node --check liturgia-br-acervo.js
           node --check liturgia-ave-maria-acervo.js
           node --check liturgia-edicoes.js
-          node --check liturgia-paralelo.js
           node --check scripts/importar-liturgia-br.mjs
           node --check scripts/importar-ave-maria.mjs
       - name: Validar Mapa Bíblico Mestre
