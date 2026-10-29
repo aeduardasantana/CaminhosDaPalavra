@@ -56,7 +56,7 @@ browserContext.window.LCE_EDICOES.apply({...passages[0],editorialStudy:true},car
 assert.equal(card.dataset.edition,'AVM');
 assert.equal(card.dataset.editorialStudy,'true');
 assert.equal(card.dataset.completeText,'false');
-assert.ok(view['.original-text'].children[0].textContent.includes('ainda não incorporado'));
+assert.ok(view['.original-text'].children[0].textContent.includes('incorporação integral ao acervo estiver pendente'));
 assert.ok(view['.glosa-text'].children[0].textContent.includes('ainda não elaborada'));
 assert.equal(view['.liturgy-study-notes'].hidden,true);
 browserContext.window.LCE_AVE_MARIA_ACERVO=corpus;
