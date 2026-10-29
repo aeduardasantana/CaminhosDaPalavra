@@ -14,6 +14,7 @@
   const items = [
     {group:'Sagrada Escritura',note:'Estudo e leitura', links:[
       {label:'Bíblia Sagrada',section:'biblia',hash:'biblia'},
+      {label:'Bíblia para estudo · Ave-Maria',url:'./biblia-estudo.html'},
       {label:'Mapa da História da Salvação',url:'./historia-da-salvacao.html',page:'historia'},
       {label:'Plano de leitura bíblica',section:'plano',hash:'plano-de-leitura'}
     ]},
