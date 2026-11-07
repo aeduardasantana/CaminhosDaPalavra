@@ -27,13 +27,13 @@
       <div>
         <p class="eyebrow">Sagrada Escritura · 73 livros</p>
         <h2 id="study-main-title">Bíblia para estudo</h2>
-        <p>Escolha livro, capítulo e versículos, organize suas marcações e consulte as referências do plano de leitura. A redação integral da Bíblia Ave-Maria é acessada na fonte autorizada.</p>
+        <p>Escolha livro, capítulo e versículos, organize suas marcações e consulte as referências do plano de leitura. Este leitor pertence ao Caminhos da Palavra. A reprodução integral da tradução Ave-Maria será ativada após licença da editora.</p>
       </div>
       <div class="study-edition" aria-label="Edição de referência">
         <span class="study-edition-label">Edição de referência</span>
         <strong>Bíblia Sagrada — Ave-Maria</strong>
         <span>2ª edição · arquivo de estudos recebido</span>
-        <small>O link externo é uma edição disponibilizada pela plataforma de leitura e pode ter metadados próprios.</small>
+        <small>Leitor, anotações e navegação próprios do projeto; direitos de reprodução da tradução reservados.</small>
       </div>
     </section>
 
@@ -43,7 +43,7 @@
         <input id="studyReferenceInput" type="search" autocomplete="off" maxlength="110" placeholder="Ex.: Jo 3,16-18 · Gn 1 · 1Cor 13,4-7">
         <button class="primary-action" type="submit">Ir à referência</button>
       </form>
-      <p class="study-help">A busca verifica livro, capítulo e existência dos versículos na estrutura do JSON Ave-Maria incorporado. A redação integral continua disponível somente na fonte autorizada.</p>
+      <p class="study-help">A busca verifica livro, capítulo e existência dos versículos na estrutura do JSON Ave-Maria incorporado. A referência é validada aqui. O texto integral será exibido neste leitor quando houver autorização específica de reprodução.</p>
       <div class="study-text-search">
         <label for="studyTextQuery">Busca textual na edição Ave-Maria</label>
         <input id="studyTextQuery" type="search" placeholder="Indisponível sem texto autorizado" disabled>
@@ -95,7 +95,7 @@
               <span id="studyCurrentEdition">Bíblia Sagrada — Ave-Maria · 2ª edição</span>
             </div>
             <div class="study-selection-actions">
-              <a id="studyOpenSource" class="primary-link" href="https://www.bible.com/pt/versions/4542" rel="noopener noreferrer" target="_blank">Ler na fonte autorizada</a>
+              <a id="studyOpenSource" class="primary-link" href="#studyVerseText">Ir ao texto neste site</a>
               <button id="studyCopyReference" type="button" class="secondary-button">Copiar referência</button>
               <button id="studyBookmark" type="button" class="secondary-button" aria-pressed="false">Marcar passagem</button>
             </div>
@@ -111,7 +111,12 @@
           <article class="card study-pane study-text-pane" aria-labelledby="study-text-title">
             <h3 id="study-text-title">Texto bíblico — Ave-Maria</h3>
             <p class="study-pane-meta">Redação original da edição, condicionada à permissão de reprodução.</p>
-            <div id="studyVerseText" aria-live="polite"></div>
+            <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
+            <div class="study-selection-actions" role="group" aria-label="Leitura em voz alta">
+              <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir versículos disponíveis</button>
+              <button id="studyStopAloud" class="secondary-button" type="button" disabled>Parar leitura</button>
+            </div>
+            <p class="study-help">A leitura em voz alta utiliza a voz do navegador quando houver texto licenciado. Não substitui audiodescrição de vídeos.</p>
           </article>
           <article class="card study-pane study-editorial-pane" aria-labelledby="study-editorial-title">
             <h3 id="study-editorial-title">Introduções e comentários editoriais</h3>
