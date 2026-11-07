@@ -1651,7 +1651,7 @@ function bookById(id) {
 }
 
 function chapterUrl(bookId, chapter) {
-  return bible.readBase + bookId + '.' + chapter + '.AVM';
+  return studyChapterUrl(bookId,chapter);
 }
 
 function studyChapterUrl(bookId, chapter) {
@@ -1747,9 +1747,7 @@ function renderLockedChapter(book, chapter, record, state, options = {}) {
   actions.className = 'chapter-experience-actions';
   const read = document.createElement('a');
   read.className = 'primary-link';
-  read.href = record.bibleUrl || chapterUrl(book.id, chapter);
-  read.target = '_blank';
-  read.rel = 'noopener';
+  read.href = chapterUrl(book.id, chapter);
   read.textContent = 'Ler ' + record.reference + ' na Bíblia Ave-Maria';
 
   const back = document.createElement('button');
@@ -1877,11 +1875,11 @@ function renderTheologyCard(book, chapter, record, options = {}) {
   const notice = document.createElement('div');
   notice.className = 'chapter-review-notice';
   const noticeTitle = document.createElement('strong');
-  noticeTitle.textContent = 'Mapa Teológico 1.5 · publicação autorizada pela titular';
+  noticeTitle.textContent = 'Mapa Teológico 1.5 · estudo autoral publicado';
   const noticeText = document.createElement('p');
   noticeText.textContent = String(record.confidence||'').startsWith('Pendente')
-    ? 'Pesquisa autoral disponibilizada pela titular. Este capítulo tem tema e contexto registrados, mas relações específicas ainda podem estar pendentes de documentação. A revisão eclesial externa não foi concluída; este conteúdo não é pronunciamento oficial da Igreja.'
-    : 'Pesquisa autoral disponibilizada pela titular. As referências e relações seguem a classificação e o grau de confiança da matriz. A revisão eclesial externa não foi concluída; este conteúdo não é pronunciamento oficial da Igreja.';
+    ? 'Estudo autoral desta versão. Tema e contexto registrados; algumas relações específicas ainda não foram documentadas. O estudo não representa pronunciamento oficial da Igreja.'
+    : 'Estudo autoral desta versão. Referências e relações seguem a classificação e a confiabilidade registradas na matriz; não representam pronunciamentos oficiais da Igreja.';
   notice.append(noticeTitle, noticeText);
 
   const grid = document.createElement('div');
@@ -1981,9 +1979,7 @@ function renderTheologyCard(book, chapter, record, options = {}) {
 
   const read = document.createElement('a');
   read.className = 'primary-link';
-  read.href = record.bibleUrl || chapterUrl(book.id, chapter);
-  read.target = '_blank';
-  read.rel = 'noopener';
+  read.href = chapterUrl(book.id, chapter);
   read.textContent = 'Ler ' + record.reference + ' na Bíblia Ave-Maria';
 
   if (record.cic?.url && record.cic?.references && !/^não identificado/i.test(record.cic.references)) {
@@ -2073,7 +2069,7 @@ function renderBibleChapters(book) {
   els.bibleChapterPanel.innerHTML =
     '<p class="eyebrow">' + (book.testament === 'AT' ? 'Antigo Testamento' : 'Novo Testamento') + '</p>' +
     '<h3>' + book.name + '</h3>' +
-    '<p class="supporting-text compact">Escolha um capítulo para abrir a experiência enriquecida do Mapa Bíblico Mestre. O texto bíblico integral continua na Bíblia Ave-Maria.</p>';
+    '<p class="supporting-text compact">Escolha um capítulo do Mapa Bíblico Mestre. O leitor bíblico é interno; a reprodução da tradução Ave-Maria depende de licença da editora.</p>';
 
   const grid = document.createElement('div');
   grid.className = 'chapter-grid';
@@ -2094,7 +2090,7 @@ function renderBibleChapters(book) {
     if (record) {
       button.addEventListener('click', () => renderTheologyCard(book, chapter, record));
     } else {
-      button.addEventListener('click', () => window.open(chapterUrl(book.id, chapter), '_blank', 'noopener'));
+      button.addEventListener('click', () => window.location.assign(chapterUrl(book.id, chapter)));
     }
     grid.appendChild(button);
   }
@@ -2103,10 +2099,8 @@ function renderBibleChapters(book) {
 
   const audio = document.createElement('a');
   audio.className = 'secondary-link';
-  audio.href = bible.audioUrl;
-  audio.target = '_blank';
-  audio.rel = 'noopener';
-  audio.textContent = 'Ouvir versão em áudio';
+  audio.href = chapterUrl(book.id, 1);
+  audio.textContent = 'Abrir leitor acessível deste livro';
   audio.style.marginTop = '16px';
   els.bibleChapterPanel.appendChild(audio);
 }
@@ -2323,7 +2317,7 @@ function renderBibleTransversalSearch() {
     empty.className='empty-state bible-search-empty';
     empty.textContent = type === 'reference'
       ? 'Tente o nome do livro, abreviação ou número do capítulo.'
-      : 'Nenhum conteúdo autorizado corresponde à busca. Campos em revisão permanecem fora do índice público.';
+      : 'Nenhum conteúdo da matriz corresponde aos filtros informados.';
     els.bibleTransversalResults.appendChild(empty);
     return;
   }
@@ -2352,7 +2346,7 @@ function renderBibleTransversalSearch() {
     if (state.publicAuthorized && matchedFields.length) {
       snippet.textContent=searchSnippet(record,matchedFields);
     } else if (structuralMatch) {
-      snippet.textContent='Capítulo localizado no corpus. A leitura integral está disponível na Bíblia Ave-Maria.';
+      snippet.textContent='Referência localizada. Abra o leitor interno; a publicação do texto integral depende de licença de reprodução.';
     } else {
       snippet.textContent='Conteúdo teológico ainda não autorizado para exibição pública.';
     }
@@ -2380,10 +2374,8 @@ function renderBibleTransversalSearch() {
 
     const read=document.createElement('a');
     read.className='secondary-link';
-    read.href=record.bibleUrl || chapterUrl(book.id,record.chapter);
-    read.target='_blank';
-    read.rel='noopener';
-    read.textContent='Ler Bíblia Ave-Maria';
+    read.href=chapterUrl(book.id,record.chapter);
+    read.textContent='Abrir leitor bíblico interno';
 
     actions.append(open,read);
     card.append(main,actions);
