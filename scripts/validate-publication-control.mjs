@@ -35,7 +35,7 @@ for(const [cpId,state] of entries){
     && allowedDecision.has(state.internalDecision)
     && (!state.adjustmentRequired || state.adjustmentExecuted);
   const ownerAuthorized=ownerApprovalValid&&state.ownerApprovalId===approval.id;
-  const expected=reviewed||ownerAuthorized;
+  const expected=ownerAuthorized;
   if(Boolean(state.publicAuthorized)!==expected){
     errors.push('autorização inconsistente '+cpId);
   }
