@@ -86,7 +86,8 @@ try {
     'dados/heresias-controversias.json',
     'liturgia-paralelo.js',
     'theology-data.js',
-    'publication-control.js'
+    'publication-control.js',
+    'verse-index.js'
   ]) {
     assert.ok(fileSet.has(required), 'Arquivo público esperado ausente: ' + required);
   }
@@ -136,6 +137,16 @@ try {
     }
   }
 
+  const verseIndex = parseAssignedJson(
+    fs.readFileSync(path.join(output, 'verse-index.js'), 'utf8'), 'CDP_VERSE_INDEX'
+  );
+  assert.equal(verseIndex.counts.books,73);
+  assert.equal(verseIndex.counts.chapters,1334);
+  assert.equal(verseIndex.counts.verses,35450);
+  assert.equal(verseIndex.books.GEN[0],31);
+  const serializedIndex=fs.readFileSync(path.join(output,'verse-index.js'),'utf8');
+  assert.ok(!serializedIndex.includes('"texto"'),'Redação bíblica foi publicada no índice.');
+  assert.ok(!serializedIndex.includes('"text"'),'Índice contém texto bíblico.');
   const serializedControl = fs.readFileSync(path.join(output, 'publication-control.js'), 'utf8');
   assert.ok(!serializedControl.includes('sourceSpreadsheetId'), 'ID da planilha de controle foi publicado.');
   assert.ok(!serializedControl.includes('reviewer'), 'Metadados internos de revisão foram publicados.');

@@ -57,6 +57,7 @@ jobs:
           node --check scripts/importar-liturgia-br.mjs
           node --check scripts/importar-ave-maria.mjs
           node --check scripts/preparar-publicacao.mjs
+          node --check scripts/gerar-indice-versiculos.mjs
           python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
 
       - name: Validar Mapa Bíblico Mestre e controle editorial
@@ -64,6 +65,7 @@ jobs:
           node scripts/validate-theology-data.mjs
           node scripts/validate-publication-control.mjs
           node scripts/validate-bible-search.mjs
+          node scripts/gerar-indice-versiculos.mjs
 
       - name: Validar pacote público sem enviar ao FTP
         run: node scripts/preparar-publicacao.mjs --check

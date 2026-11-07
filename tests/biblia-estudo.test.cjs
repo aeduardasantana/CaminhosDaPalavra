@@ -2,12 +2,16 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const vm=require('node:vm');
 const path=require('node:path');
+const {execFileSync}=require('node:child_process');
 const root=path.resolve(__dirname,'..');
 const core=require(path.join(root,'biblia-estudo-core.js'));
 const scope={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'bible-data.js'),'utf8'),scope);
 const bible=scope.window.LCE_BIBLE;
 const books=core.catalog(bible);
+const verseIndex=JSON.parse(execFileSync(process.execPath,
+  ['scripts/gerar-indice-versiculos.mjs','--json'],{cwd:root,encoding:'utf8'}));
+assert.equal(core.validateVerseIndex(verseIndex,books),true);
 const total=books.reduce((sum,book)=>sum+book.chapters,0);
 assert.equal(books.length,73,'73 livros obrigatórios');
 assert.equal(total,1334,'1.334 capítulos esperados');
@@ -20,7 +24,7 @@ assert.deepEqual(books.map(book=>book.canonOrder),Array.from({length:73},(_,i)=>
 assert.equal(core.EDITION.id,'AVM-ESTUDOS-2');
 
 function ref(input,id,ch,start=null,end=null){
-  const got=core.parseReference(input,books);
+  const got=core.parseReference(input,books,verseIndex);
   assert.equal(got.error,undefined,input+' => '+got.error);
   assert.equal(got.book.id,id,input);
   assert.equal(got.chapter,ch,input);
@@ -35,11 +39,22 @@ ref('1 Coríntios 13,4','1CO',13,4,4);
 ref('Tobias 4','TOB',4);
 ref('Salmos 150','PSA',150);
 ref('Mt 28','MAT',28);
-assert.match(core.parseReference('Jn 444',books).error,/Capítulo/);
-assert.match(core.parseReference('Jo 3,18-16',books).error,/Intervalo/);
-assert.match(core.parseReference('Não é livro 1',books).error,/Livro/);
-assert.match(core.parseReference('Gn 1,1-200',books).error,/Intervalo/);
-assert.match(core.parseReference('Jo 3,17-17',books).key,/JHN:3:17/);
+assert.match(core.parseReference('Jn 444',books,verseIndex).error,/Capítulo/);
+assert.match(core.parseReference('Jo 3,18-16',books,verseIndex).error,/Intervalo/);
+assert.match(core.parseReference('Não é livro 1',books,verseIndex).error,/Livro/);
+assert.match(core.parseReference('Gn 1,1-200',books,verseIndex).error,/Intervalo/);
+assert.match(core.parseReference('Jo 3,17-17',books,verseIndex).key,/JHN:3:17/);
+assert.equal(core.verseCount(verseIndex,'GEN',1),31,'Gênesis 1 = 31 versículos');
+assert.equal(core.verseCount(verseIndex,'GEN',2),25,'Gênesis 2 = 25 versículos');
+ref('Gn 1,31','GEN',1,31,31);
+assert.match(core.parseReference('Gn 1,32',books,verseIndex).error,/1 a 31/);
+assert.match(core.parseReference('Gn 2,26',books,verseIndex).error,/1 a 25/);
+assert.match(core.parseReference('Jo 3,16',books).error,/Índice/,'falha fechada sem índice');
+assert.equal(core.parseReference('Gn 1',books).chapter,1,'capítulos continuam navegáveis sem índice');
+assert.match(core.validateVerseRange(verseIndex,'GEN',1,20,32),/1 a 31/);
+assert.equal(core.validateVerseRange(verseIndex,'GEN',1,30,31),null);
+assert.equal(core.validateVerseRange(verseIndex,'GEN',1,31,30).includes('inválido'),true);
+assert.throws(()=>core.validateVerseIndex({...verseIndex,counts:{...verseIndex.counts,verses:1}},books));
 
 const plan=core.planDays(bible);
 assert.equal(plan.days.length,365);
@@ -66,11 +81,11 @@ const payload={editionId:core.EDITION.id,authorizedForWeb:true,permissionReferen
   chapters:{'JHN:3':{verses:[{verse:16,text:'Exemplo autoral permitido',sourcePage:120,publicAuthorized:true},
     {verse:17,text:'Não autorizado',sourcePage:120,publicAuthorized:false},
     {verse:18,text:'Página não registrada',publicAuthorized:true}]}}};
-assert.deepEqual(core.authorizedVerses(null,'JHN',3),[]);
-assert.deepEqual(core.authorizedVerses({...payload,authorizedForWeb:false},'JHN',3),[]);
-assert.deepEqual(core.authorizedVerses({...payload,permissionReference:''},'JHN',3),[]);
-assert.deepEqual(core.authorizedVerses({...payload,editionId:'CNBB'},'JHN',3),[]);
-assert.equal(core.authorizedVerses(payload,'JHN',3).length,1,'somente versículos explicitamente autorizados');
+assert.deepEqual(core.authorizedVerses(null,'JHN',3,verseIndex),[]);
+assert.deepEqual(core.authorizedVerses({...payload,authorizedForWeb:false},'JHN',3,verseIndex),[]);
+assert.deepEqual(core.authorizedVerses({...payload,permissionReference:''},'JHN',3,verseIndex),[]);
+assert.deepEqual(core.authorizedVerses({...payload,editionId:'CNBB'},'JHN',3,verseIndex),[]);
+assert.equal(core.authorizedVerses(payload,'JHN',3,verseIndex).length,1,'somente versículos explicitamente autorizados');
 
 const html=fs.readFileSync(path.join(root,'biblia-estudo.html'),'utf8');
 const script=fs.readFileSync(path.join(root,'biblia-estudo.js'),'utf8');
@@ -82,6 +97,10 @@ for(const id of ['studyBookSelect','studyChapterSelect','studyVerseStart','study
   assert.ok(html.includes('id="'+id+'"'),'Controle obrigatório ausente '+id);
 }
 assert.ok(html.includes('biblia-estudo-core.js'));
+assert.ok(html.includes('verse-index.js'));
+assert.ok(script.includes('C.validateVerseRange'));
+assert.ok(script.includes('C.validateVerseIndex'));
+assert.ok(!html.includes('max="176"'));
 assert.ok(html.includes('biblia-estudo.js'));
 assert.ok(html.includes('glosa-gospels.js'));
 assert.ok(html.includes('site-menu.js'));

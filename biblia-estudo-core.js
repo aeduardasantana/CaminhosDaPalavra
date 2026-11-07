@@ -81,7 +81,47 @@
     const candidates=books.filter(book=>aliasesFor(book).includes(value));
     return candidates.length===1?candidates[0]:null;
   }
-  function parseReference(input, books) {
+  function verseCount(index, bookId, chapter) {
+    if(!index||index.schemaVersion!==1||!Number.isInteger(chapter)||chapter<1)return null;
+    const chapters=index.books?.[bookId];
+    const count=Array.isArray(chapters)?chapters[chapter-1]:null;
+    return Number.isInteger(count)&&count>0?count:null;
+  }
+  function validateVerseIndex(index, books) {
+    if(!index||index.schemaVersion!==1||!index.books||!Array.isArray(books)||
+       books.length!==73||index.counts?.books!==73||
+       index.counts?.chapters!==1334||index.counts?.verses!==35450) {
+      throw new Error('Índice de versículos ausente ou com versão/cobertura incorreta.');
+    }
+    const expectedIds=new Set(books.map(b=>b.id));
+    if(Object.keys(index.books).length!==73||
+       Object.keys(index.books).some(id=>!expectedIds.has(id))) {
+      throw new Error('Livros inconsistentes no índice de versículos.');
+    }
+    let chapters=0,verses=0;
+    books.forEach(book=>{
+      const counts=index.books[book.id];
+      if(!Array.isArray(counts)||counts.length!==book.chapters||
+         counts.some(count=>!Number.isInteger(count)||count<1)){
+        throw new Error('Capítulos/versículos inconsistentes no índice: '+book.id);
+      }
+      chapters+=counts.length;
+      verses+=counts.reduce((a,b)=>a+b,0);
+    });
+    if(chapters!==1334||verses!==35450){
+      throw new Error('Totais inconsistentes no índice de versículos.');
+    }
+    return true;
+  }
+  function validateVerseRange(index,bookId,chapter,start,end=start) {
+    if(start===null&&end===null)return null;
+    const max=verseCount(index,bookId,chapter);
+    if(max===null)return 'Índice de versículos indisponível para este livro e capítulo.';
+    if(!Number.isInteger(start)||!Number.isInteger(end)||start<1||end<start||end>max)
+      return 'Intervalo de versículos inválido: '+bookId+' '+chapter+' possui versículos de 1 a '+max+'.';
+    return null;
+  }
+  function parseReference(input, books, verseIndex) {
     const raw=String(input||'').trim().replace(/[–—]/g,'-');
     if(raw.length>110)return {error:'Referência muito longa.'};
     const found=raw.match(/^(.+?)\s+(\d{1,3})(?:\s*[,.:]\s*(\d{1,3})(?:\s*-\s*(\d{1,3}))?)?\s*$/);
@@ -90,8 +130,8 @@
     if(!book)return {error:'Livro não identificado no catálogo católico.'};
     const chapter=Number(found[2]),start=found[3]?Number(found[3]):null,end=found[4]?Number(found[4]):start;
     if(!Number.isInteger(chapter)||chapter<1||chapter>book.chapters)return {error:'Capítulo fora do intervalo cadastrado para este livro.'};
-    if(start!==null&&(start<1||start>176||end<start||end>176))
-      return {error:'Intervalo de versículos inválido; a numeração exata deve ser conferida na fonte.'};
+    const error=validateVerseRange(verseIndex,book.id,chapter,start,end);
+    if(error)return {error};
     return {book,chapter,start,end,key:referenceKey(book.id,chapter,start,end)};
   }
   function referenceKey(bookId,chapter,start=null,end=null) {
@@ -143,14 +183,15 @@
     }));
     return out;
   }
-  function authorizedVerses(payload,bookId,chapter) {
+  function authorizedVerses(payload,bookId,chapter,verseIndex) {
     if(!payload||payload.editionId!==EDITION.id||payload.authorizedForWeb!==true||
       typeof payload.permissionReference!=='string'||!payload.permissionReference.trim())return [];
     const list=payload.chapters?.[referenceKey(bookId,chapter)]?.verses;
-    if(!Array.isArray(list))return [];
-    return list.filter(item=>item&&Number.isInteger(item.verse)&&item.verse>0&&item.verse<=176&&
+    const max=verseCount(verseIndex,bookId,chapter);
+    if(!Array.isArray(list)||max===null)return [];
+    return list.filter(item=>item&&Number.isInteger(item.verse)&&item.verse>0&&item.verse<=max&&
       item.publicAuthorized===true&&typeof item.text==='string'&&item.text.trim()&&
       typeof item.sourcePage==='number'&&item.sourcePage>0).sort((a,b)=>a.verse-b.verse);
   }
-  return Object.freeze({EDITION,GROUPS,ABBR,fold,catalog,findBook,parseReference,referenceKey,formatReference,uniqueSteps,planDays,matchesChapterReference,collectGlosas,authorizedVerses});
+  return Object.freeze({EDITION,GROUPS,ABBR,fold,catalog,findBook,verseCount,validateVerseIndex,validateVerseRange,parseReference,referenceKey,formatReference,uniqueSteps,planDays,matchesChapterReference,collectGlosas,authorizedVerses});
 });

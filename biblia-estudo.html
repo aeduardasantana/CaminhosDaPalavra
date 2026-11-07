@@ -43,7 +43,7 @@
         <input id="studyReferenceInput" type="search" autocomplete="off" maxlength="110" placeholder="Ex.: Jo 3,16-18 · Gn 1 · 1Cor 13,4-7">
         <button class="primary-action" type="submit">Ir à referência</button>
       </form>
-      <p class="study-help">A busca por referência utiliza o catálogo de 73 livros. Intervalos de versículos são referências de estudo; a existência e a redação de cada versículo devem ser conferidas na fonte.</p>
+      <p class="study-help">A busca verifica livro, capítulo e existência dos versículos na estrutura do JSON Ave-Maria incorporado. A redação integral continua disponível somente na fonte autorizada.</p>
       <div class="study-text-search">
         <label for="studyTextQuery">Busca textual na edição Ave-Maria</label>
         <input id="studyTextQuery" type="search" placeholder="Indisponível sem texto autorizado" disabled>
@@ -82,13 +82,13 @@
               <select id="studyChapterSelect" aria-label="Capítulo bíblico"></select>
             </label>
             <label>Versículo inicial (opcional)
-              <input id="studyVerseStart" type="number" min="1" max="176" step="1" inputmode="numeric" placeholder="Início">
+              <input id="studyVerseStart" type="number" min="1" step="1" inputmode="numeric" placeholder="Início">
             </label>
             <label>Versículo final (opcional)
-              <input id="studyVerseEnd" type="number" min="1" max="176" step="1" inputmode="numeric" placeholder="Fim">
+              <input id="studyVerseEnd" type="number" min="1" step="1" inputmode="numeric" placeholder="Fim">
             </label>
           </div>
-          <p class="study-help">Sem numeração de versículos confirmada no acervo local, a faixa informada não comprova a existência desses versículos.</p>
+          <p id="studyVerseLimit" class="study-help" role="status">Verificando a contagem exata de versículos deste capítulo…</p>
           <div class="study-selection">
             <div>
               <strong id="studyCurrentReference">Selecione uma referência</strong>
@@ -145,6 +145,7 @@
   </main>
   <footer class="app-footer"><p>© 2026 Caminhos da Palavra. Todos os direitos reservados.</p><a href="./index.html#inicio">Voltar ao início</a></footer>
   <script src="./bible-data.js"></script>
+  <script src="./verse-index.js?v=20261107-17b"></script>
   <script src="./glosa-psalms.js"></script>
   <script src="./glosa-gospels.js"></script>
   <script src="./glosa-new-testament.js"></script>
@@ -152,7 +153,7 @@
   <script src="./glosas-revisadas-ano-a.js"></script>
   <script src="./glosas-revisadas-ano-b.js"></script>
   <script src="./glosas-revisadas-ano-c.js"></script>
-  <script src="./biblia-estudo-core.js?v=20261029-1"></script>
-  <script src="./biblia-estudo.js?v=20261029-1"></script>
+  <script src="./biblia-estudo-core.js?v=20261107-17b"></script>
+  <script src="./biblia-estudo.js?v=20261107-17b"></script>
 </body>
 </html>

@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
+import { buildVerseIndex } from './gerar-indice-versiculos.mjs';
 
 const root = process.cwd();
 const publicExtensions = new Set([
@@ -128,12 +129,15 @@ if (invalidIncluded.length) {
 }
 
 const editorialPayloads = createPublicEditorialPayloads();
+const verseIndex = buildVerseIndex();
+if(publicFiles.includes('verse-index.js'))throw new Error('Índice gerado não deve ser um arquivo-fonte publicado.');
 
 if (process.argv.includes('--check')) {
   console.log(
-    'Pacote público validado:', publicFiles.length, 'arquivos;',
+    'Pacote público validado:', publicFiles.length+1, 'arquivos;',
     editorialPayloads.authorizedCount, 'capítulos autorizados;',
-    editorialPayloads.blockedCount, 'mantidos bloqueados com metadados mínimos.'
+    editorialPayloads.blockedCount, 'mantidos bloqueados com metadados mínimos;',
+    verseIndex.counts.verses, 'versículos com contagem por capítulo validada.'
   );
   process.exit(0);
 }
@@ -185,13 +189,19 @@ try {
     }
     fs.copyFileSync(source, destination);
   }
+  fs.writeFileSync(
+    path.join(outputDir,'verse-index.js'),
+    'window.CDP_VERSE_INDEX = '+JSON.stringify(verseIndex)+';\n',
+    'utf8'
+  );
 } catch (error) {
   fs.rmSync(outputDir, { recursive: true, force: true });
   throw error;
 }
 
 console.log(
-  'Pacote público criado:', publicFiles.length, 'arquivos em', outputDir + ';',
+  'Pacote público criado:', publicFiles.length+1, 'arquivos em', outputDir + ';',
   editorialPayloads.authorizedCount, 'capítulos autorizados;',
-  editorialPayloads.blockedCount, 'capítulos com conteúdo restrito.'
+  editorialPayloads.blockedCount, 'capítulos com conteúdo restrito;',
+  verseIndex.counts.verses, 'versículos validados sem textos publicados.'
 );

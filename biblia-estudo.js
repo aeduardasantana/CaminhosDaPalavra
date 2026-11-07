@@ -7,10 +7,14 @@
   let books,plan;
   try{books=C.catalog(bible);plan=C.planDays(bible);}
   catch(error){document.querySelector('#studyFeedback').textContent='Erro de integridade do catálogo: '+error.message;return;}
+  const verseIndex=window.CDP_VERSE_INDEX;
+  let verseIndexReady=false, verseIndexError='';
+  try{verseIndexReady=C.validateVerseIndex(verseIndex,books);}
+  catch(error){verseIndexError=error.message;console.error('Índice bíblico:',error);}
   const $=id=>document.getElementById(id);
   const ui={
     bookFilter:$('studyBookFilter'),testament:$('studyTestamentFilter'),list:$('studyBookList'),
-    book:$('studyBookSelect'),chapter:$('studyChapterSelect'),start:$('studyVerseStart'),end:$('studyVerseEnd'),
+    book:$('studyBookSelect'),chapter:$('studyChapterSelect'),start:$('studyVerseStart'),end:$('studyVerseEnd'),limit:$('studyVerseLimit'),
     form:$('studyReferenceForm'),query:$('studyReferenceInput'),feedback:$('studyFeedback'),
     selected:$('studyCurrentReference'),edition:$('studyCurrentEdition'),source:$('studyOpenSource'),
     copy:$('studyCopyReference'),bookmark:$('studyBookmark'),bookmarks:$('studyBookmarksList'),
@@ -55,16 +59,14 @@
     const startRaw=ui.start.value.trim(),endRaw=ui.end.value.trim();
     const start=startRaw?Number(startRaw):null,end=endRaw?Number(endRaw):start;
     if(endRaw&&!startRaw)return {error:'Informe o versículo inicial antes do final.'};
-    if(start!==null&&(!Number.isInteger(start)||start<1||start>176||!Number.isInteger(end)||end<start||end>176))
-      return {error:'Faixa de versículos inválida. Confirme a numeração na edição.'};
-    return {start,end};
+    const error=C.validateVerseRange(verseIndex,ui.book.value,Number(ui.chapter.value),start,end);
+    return error?{error}:{start,end};
   }
   function select(bookId,chapter,start=null,end=null,{replace=false}={}){
     const book=books.find(b=>b.id===bookId);
     if(!book||!Number.isInteger(chapter)||chapter<1||chapter>book.chapters){feedback('Livro ou capítulo não encontrado.');return false;}
-    if(start!==null&&(!Number.isInteger(start)||start<1||start>176||!Number.isInteger(end)||end<start||end>176)){
-      feedback('Faixa de versículos fora do intervalo de entrada permitido.');return false;
-    }
+    const error=C.validateVerseRange(verseIndex,book.id,chapter,start,end);
+    if(error){feedback(error);return false;}
     active={book,chapter,start,end,key:C.referenceKey(book.id,chapter,start,end)};
     render();syncUrl(replace);feedback('');return true;
   }
@@ -101,13 +103,22 @@
     ui.chapter.replaceChildren();
     for(let n=1;n<=active.book.chapters;n++){const option=make('option','',String(n));option.value=String(n);ui.chapter.appendChild(option);}
     ui.chapter.value=String(active.chapter);
+    const count=verseIndexReady?C.verseCount(verseIndex,active.book.id,active.chapter):null;
+    for(const field of [ui.start,ui.end]){
+      field.disabled=count===null;
+      if(count!==null)field.max=String(count);
+      else field.removeAttribute('max');
+    }
+    ui.limit.textContent=count===null
+      ? 'Índice de versículos indisponível nesta sessão; navegação por capítulo preservada.'
+      : 'Capítulo com '+count+' versículo(s) registrado(s) na fonte JSON incorporada. Intervalos acima desse limite não são aceitos.';
     ui.start.value=active.start===null?'':String(active.start);
     ui.end.value=active.start===null||active.end===active.start?'':String(active.end);
   }
   function renderText(){
     ui.text.replaceChildren();
     const payload=window.CDP_AVM_PUBLIC_DATA;
-    const allowed=C.authorizedVerses(payload,active.book.id,active.chapter);
+    const allowed=C.authorizedVerses(payload,active.book.id,active.chapter,verseIndex);
     const selected=allowed.filter(item=>active.start===null||(item.verse>=active.start&&item.verse<=active.end));
     if(selected.length){
       selected.forEach(item=>{
@@ -188,13 +199,13 @@
     select(ui.book.value,selected,verse.start,verse.end);
   }
   ui.book.addEventListener('change',()=>select(ui.book.value,1));
-  ui.chapter.addEventListener('change',resolveInputs);
+  ui.chapter.addEventListener('change',()=>select(ui.book.value,Number(ui.chapter.value)));
   ui.start.addEventListener('change',resolveInputs);
   ui.end.addEventListener('change',resolveInputs);
   ui.bookFilter.addEventListener('input',renderBooks);
   ui.testament.addEventListener('change',renderBooks);
   ui.form.addEventListener('submit',event=>{
-    event.preventDefault();const parsed=C.parseReference(ui.query.value,books);
+    event.preventDefault();const parsed=C.parseReference(ui.query.value,books,verseIndex);
     if(parsed.error){feedback(parsed.error);return;}
     select(parsed.book.id,parsed.chapter,parsed.start,parsed.end);
   });
@@ -236,7 +247,7 @@
     for(const key of Object.keys(data.chapters||{})){
       const match=key.match(/^([A-Z0-9]+):(\d+)$/);if(!match)continue;
       const book=books.find(b=>b.id===match[1]);if(!book)continue;
-      C.authorizedVerses(data,book.id,Number(match[2])).forEach(v=>result.push({book,chapter:Number(match[2]),verse:v.verse,text:v.text}));
+      C.authorizedVerses(data,book.id,Number(match[2]),verseIndex).forEach(v=>result.push({book,chapter:Number(match[2]),verse:v.verse,text:v.text}));
     }
     return result;
   }
@@ -262,10 +273,18 @@
     const book=books.find(b=>b.id===p.get('livro')),chapter=Number(p.get('capitulo')||1);
     const v=(p.get('versiculo')||'').match(/^(\d{1,3})(?:-(\d{1,3}))?$/);
     if(book&&Number.isInteger(chapter)&&chapter>=1&&chapter<=book.chapters){
-      select(book.id,chapter,v?Number(v[1]):null,v?Number(v[2]||v[1]):null,{replace:true});
+      const requested=p.get('versiculo')||'';
+      const error=requested&&!v
+        ? 'Intervalo de versículos inválido no link direto.'
+        : C.validateVerseRange(verseIndex,book.id,chapter,v?Number(v[1]):null,v?Number(v[2]||v[1]):null);
+      if(error){
+        select(book.id,chapter,null,null,{replace:true});
+        feedback(error+' Foi aberto apenas o capítulo.');
+      }else select(book.id,chapter,v?Number(v[1]):null,v?Number(v[2]||v[1]):null,{replace:true});
     }else select(books[0].id,1,null,null,{replace:true});
   }
   window.addEventListener('popstate',restoreUrl);
   window.addEventListener('storage',event=>{if(event.key===PLAN_KEY)renderPlan();});
   fillBookSelect();restoreUrl();
+  if(!verseIndexReady)feedback('Aviso: '+verseIndexError+' Navegação por versículos desativada até o índice ser restaurado.');
 })();
