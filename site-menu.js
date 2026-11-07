@@ -6,7 +6,8 @@
   const host = document.querySelector('.site-nav-host');
   if (!host) return;
   const isHome = /(?:^|\/)(?:index\.html)?$/.test(window.location.pathname);
-  const current = /\/historia-da-salvacao\.html$/.test(window.location.pathname) ? 'historia' :
+  const current = /\/acessibilidade\.html$/.test(window.location.pathname) ? 'acessibilidade' :
+    /\/historia-da-salvacao\.html$/.test(window.location.pathname) ? 'historia' :
     /\/papas\.html$/.test(window.location.pathname) ? 'papas' :
     /\/heresias\.html$/.test(window.location.pathname) ? 'heresias' :
     /\/dicionario\.html$/.test(window.location.pathname) ? 'dicionario' : 'inicio';
@@ -24,6 +25,9 @@
     ]},
     {group:'Magistério',note:'Doutrina e pronunciamentos oficiais',links:[
       {label:'Heresias e condenações doutrinais',url:'./heresias.html',page:'heresias'}
+    ]},
+    {group:'Acessibilidade',note:'Leitura e orientação',links:[
+      {label:'VLibras e audiodescrição',url:'./acessibilidade.html',page:'acessibilidade'}
     ]},
     {group:'Vida litúrgica',note:'A celebração da Igreja',links:[
       {label:'Calendário litúrgico',section:'calendario',hash:'calendario-liturgico'},
@@ -109,7 +113,7 @@
   });
   window.addEventListener('popstate',()=>closeMenu({restoreFocus:false}));
   // VLibras é uma ferramenta transversal de acessibilidade. Não cria glosas.
-  // O script oficial é carregado uma única vez, nas três páginas do acervo.
+  // O script oficial é carregado uma única vez em cada página do acervo.
   if(!document.querySelector('[vw]')){
     const widgetRoot=document.createElement('div');
     widgetRoot.className='enabled';
