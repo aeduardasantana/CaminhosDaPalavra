@@ -1,0 +1,87 @@
+name: Copiar fonte Biblia Ave-Maria JSON para estudo
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/copiar-biblia-ave-maria-json.yml
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  copiar:
+    name: Transferir arquivos originais e conferir integridade
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - name: Obter repositorio
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+
+      - name: Copiar arquivos JSON sem alteracao
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p data/biblia-ave-maria
+          curl --fail --location --silent --show-error --retry 3 \
+            'https://raw.githubusercontent.com/fidalgobr/bibliaAveMariaJSON/main/bibliaAveMaria.json' \
+            --output data/biblia-ave-maria/bibliaAveMaria.json
+          curl --fail --location --silent --show-error --retry 3 \
+            'https://raw.githubusercontent.com/fidalgobr/bibliaAveMariaJSON/main/bibliaAveMariaRAW.json' \
+            --output data/biblia-ave-maria/bibliaAveMariaRAW.json
+          test "$(git hash-object data/biblia-ave-maria/bibliaAveMaria.json)" = 4b18758111c97c16c1e0d26f7d61e39bec20a765
+          test "$(git hash-object data/biblia-ave-maria/bibliaAveMariaRAW.json)" = 2277c2509c8a1f73e5537a3b8f7bc26edf20fd82
+
+      - name: Validar estrutura e equivalencia
+        shell: bash
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const assert = require('node:assert/strict');
+          const folder = 'data/biblia-ave-maria/';
+          const primary = JSON.parse(fs.readFileSync(folder + 'bibliaAveMaria.json', 'utf8'));
+          const raw = JSON.parse(fs.readFileSync(folder + 'bibliaAveMariaRAW.json', 'utf8'));
+          assert.deepStrictEqual(primary, raw, 'Os dois arquivos precisam representar os mesmos dados');
+          const count = key => {
+            const books = primary[key];
+            assert(Array.isArray(books), 'Testamento ausente: ' + key);
+            let chapters=0,verses=0;
+            for (const book of books) {
+              assert(book.nome && Array.isArray(book.capitulos));
+              book.capitulos.forEach((chapter, i) => {
+                assert.equal(Number(chapter.capitulo), i+1, 'Capitulo desordenado: ' + book.nome);
+                const seen = new Set();
+                chapter.versiculos.forEach((v, j) => {
+                  assert.equal(Number(v.versiculo),j+1,'Versiculo desordenado: '+book.nome);
+                  assert(typeof v.texto==='string' && v.texto.trim(), 'Versiculo vazio: '+book.nome);
+                  seen.add(v.versiculo);
+                });
+                assert.equal(seen.size, chapter.versiculos.length);
+                assert(chapter.versiculos.length>0);
+                verses += chapter.versiculos.length;
+              });
+              chapters += book.capitulos.length;
+            }
+            return [books.length,chapters,verses];
+          };
+          assert.deepStrictEqual(count('antigoTestamento'), [46,1074,27498]);
+          assert.deepStrictEqual(count('novoTestamento'), [27,260,7952]);
+          console.log('Integridade confirmada: 73 livros, 1334 capitulos, 35450 versiculos.');
+          NODE
+
+      - name: Gravar copia na branch main
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add data/biblia-ave-maria/bibliaAveMaria.json data/biblia-ave-maria/bibliaAveMariaRAW.json
+          if git diff --cached --quiet; then
+            echo 'Arquivos ja estao identicos aos da fonte.'
+          else
+            git commit -m 'data: copiar arquivos originais Biblia Ave-Maria JSON para estudo'
+            git push origin HEAD:main
+          fi
