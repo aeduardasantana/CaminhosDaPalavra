@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Recursos de acessibilidade do Caminhos da Palavra: VLibras, descrição do ambiente e leitura em voz alta.">
+  <title>Acessibilidade — Caminhos da Palavra</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./site-menu.css">
+  <style>
+    .access-main{max-width:920px;margin:36px auto 72px}
+    .access-main section{padding:24px 0;border-bottom:1px solid #c9bfaf}
+    .access-main h2,.access-main h3{margin:12px 0}
+    .access-actions{display:flex;flex-wrap:wrap;gap:12px;margin:18px 0}
+    .access-explanation{max-width:78ch;line-height:1.7}
+    .access-main button:focus-visible,.access-main a:focus-visible{outline:3px solid #394c0b;outline-offset:4px}
+  </style>
+</head>
+<body>
+<a href="#conteudo-principal">Ir para o conteúdo principal</a>
+<header class="site-header"><div class="shell header-inner">
+  <div class="brand-block"><h1><a href="./index.html#inicio">Caminhos da Palavra</a></h1></div>
+  <nav class="site-nav-host" aria-label="Menu principal"></nav>
+</div></header>
+<script src="./site-menu.js"></script>
+<main id="conteudo-principal" class="shell access-main">
+  <p class="eyebrow">Acessibilidade integrada</p>
+  <h2>Recursos de acessibilidade</h2>
+  <p class="access-explanation">A leitura e a orientação no Caminhos da Palavra acontecem no próprio site. Utilize o teclado, o leitor de tela do dispositivo, o VLibras e os recursos de narração conforme sua necessidade.</p>
+  <section aria-labelledby="access-description-title">
+    <h3 id="access-description-title">Descrição do ambiente — narração opcional</h3>
+    <p id="accessNarration" class="access-explanation">O Caminhos da Palavra tem um cabeçalho com o nome do projeto e o botão Explorar o acervo. Esse menu organiza cinco áreas: Sagrada Escritura, Sagrada Tradição, Magistério, Acessibilidade e Vida Litúrgica. Na Bíblia, a pessoa escolhe livro, capítulo e versículos. Os estudos teológicos são organizados em temas e referências. O leitor bíblico também possui marcações, anotações pessoais e o plano de leitura. A navegação pode ser feita por teclado; títulos e rótulos identificam os controles.</p>
+    <div class="access-actions" role="group" aria-label="Controles de descrição narrada">
+      <button id="accessPlay" type="button" class="primary-action">Ouvir descrição do ambiente</button>
+      <button id="accessStop" type="button" class="secondary-button" disabled>Parar narração</button>
+    </div>
+    <p id="accessStatus" role="status" aria-live="polite">Narração disponibilizada pela voz do navegador, quando suportada.</p>
+  </section>
+  <section aria-labelledby="access-libras-title">
+    <h3 id="access-libras-title">VLibras</h3>
+    <p class="access-explanation">O botão flutuante do VLibras permite consultar uma tradução automática de textos em português para Libras por avatar. É um recurso complementar: não substitui intérprete humano nem garante tradução litúrgica ou teológica adequada.</p>
+    <p>O widget já faz parte do site. A pessoa visitante não precisa instalá-lo.</p>
+  </section>
+  <section aria-labelledby="access-read-title">
+    <h3 id="access-read-title">Leitura bíblica em voz alta</h3>
+    <p class="access-explanation">O leitor interno possui controles para ler em voz alta os versículos disponibilizados com autorização de reprodução. A leitura utiliza a síntese de fala do navegador. Catálogo, navegação e anotações continuam disponíveis antes da liberação do texto integral da tradução.</p>
+    <a href="./biblia-estudo.html" class="primary-link">Abrir leitor bíblico interno</a>
+  </section>
+  <section aria-labelledby="access-media-title">
+    <h3 id="access-media-title">Imagens e vídeos</h3>
+    <p class="access-explanation">Imagens informativas precisam de descrição textual adequada. Vídeos com informação visual importante precisam de audiodescrição sincronizada produzida especificamente para cada mídia. A narração desta página descreve a interface e não substitui uma faixa de audiodescrição dos vídeos.</p>
+  </section>
+</main>
+<footer class="app-footer"><p>© 2026 Caminhos da Palavra.</p><a href="./index.html#inicio">Voltar ao início</a></footer>
+<script src="./acessibilidade.js"></script>
+</body>
+</html>
