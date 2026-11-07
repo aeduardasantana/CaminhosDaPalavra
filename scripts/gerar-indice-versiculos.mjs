@@ -35,17 +35,27 @@ export function buildVerseIndex() {
        catalogBooks.length!==section.expected) {
       throw new Error('Quantidade de livros divergente: '+section.key);
     }
-    sourceBooks.forEach((original,pos)=>{
-      const expected=catalogBooks[pos];
-      const actualName=normalizeName(original.nome), expectedName=normalizeName(expected.name);
-      // Correspondência canônica por posição, conferida por nome e número de capítulos.
-      const nameCompatible=actualName===expectedName ||
-        (actualName.length>=3&&expectedName.length>=3&&
-          (actualName.includes(expectedName)||expectedName.includes(actualName)));
-      if(!nameCompatible) {
-        throw new Error('Livro divergente na ordem '+section.key+' #'+(pos+1)+
-          ': fonte='+original.nome+'; catálogo='+expected.name);
+    const used=new Set();
+    catalogBooks.forEach(expected=>{
+      const wanted=normalizeName(expected.name);
+      const exact=sourceBooks.filter(book=>normalizeName(book.nome)===wanted&&!used.has(book));
+      let matched=exact;
+      if(!matched.length) {
+        const prefix=s=>s.match(/^([123])(?:\s|$)/)?.[1]||'0';
+        matched=sourceBooks.filter(book=>{
+          if(used.has(book))return false;
+          const candidate=normalizeName(book.nome);
+          return prefix(candidate)===prefix(wanted)&&candidate.length>=3&&wanted.length>=3&&
+            (candidate.includes(wanted)||wanted.includes(candidate));
+        });
       }
+      if(matched.length!==1) {
+        throw new Error('Correspondência bíblica ausente ou ambígua para '+expected.id+
+          ' ('+expected.name+'); candidatos: '+JSON.stringify(matched.map(x=>x.nome))+
+          '; fontes disponíveis: '+JSON.stringify(sourceBooks.filter(x=>!used.has(x)).map(x=>x.nome)));
+      }
+      const original=matched[0];
+      used.add(original);
       if(!Array.isArray(original.capitulos)||original.capitulos.length!==expected.chapters) {
         throw new Error('Capítulos divergentes em '+expected.id+' ('+original.nome+').');
       }
@@ -69,6 +79,9 @@ export function buildVerseIndex() {
       books[expected.id]=counts;
       bookCount++;
     });
+    if(used.size!==sourceBooks.length) {
+      throw new Error('Existem livros não vinculados na fonte '+section.key);
+    }
   }
   if(bookCount!==73||chapterCount!==1334||verseCount!==35450 ||
      Object.keys(books).length!==73) {
