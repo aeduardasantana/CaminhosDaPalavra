@@ -73,13 +73,13 @@ function createPublicEditorialPayloads() {
       && allowedDecision.has(state?.internalDecision)
       && (!state?.adjustmentRequired || state.adjustmentExecuted);
     const ownerApproved=ownerValid&&state?.ownerApprovalId===owner.id;
-    const authorized = state?.publicAuthorized === true && (ecclesialApproved || ownerApproved);
+    const authorized = state?.publicAuthorized === true && ownerApproved;
 
     if (authorized) {
       publicChapters[chapterKey] = record;
       publicControlChapters[record.cpId] = {
         publicAuthorized: true,
-        authorizationBasis: ownerApproved ? 'titular' : 'revisao-eclesial'
+        authorizationBasis: 'titular'
       };
       authorizedCount++;
       continue;
