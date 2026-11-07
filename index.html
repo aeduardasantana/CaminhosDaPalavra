@@ -293,6 +293,38 @@
         <a class="secondary-link" href="https://www.bible.com/pt/audio-bible-app-versions/4542-avm-b%C3%ADblia-sagrada-ave-maria" target="_blank" rel="noopener">Ouvir Bíblia Ave-Maria</a>
       </div>
 
+      <section class="bible-transversal-search" aria-labelledby="bibleTransversalTitle">
+        <div class="bible-transversal-heading">
+          <div>
+            <p class="eyebrow">Busca transversal</p>
+            <h3 id="bibleTransversalTitle">Encontre capítulos e caminhos de estudo</h3>
+            <p class="supporting-text compact">Pesquise por livro, capítulo ou, quando o conteúdo estiver autorizado, por tema, relação com Cristo, Catecismo, Rosário e conexões bíblicas.</p>
+          </div>
+        </div>
+        <div class="bible-transversal-controls">
+          <label class="field field-search">
+            <span>Buscar</span>
+            <input id="bibleTransversalQuery" type="search" placeholder="Ex.: João 6, Eucaristia, CIC 1335, Rosário" autocomplete="off" />
+          </label>
+          <label class="field">
+            <span>Onde buscar</span>
+            <select id="bibleTransversalType">
+              <option value="all">Tudo</option>
+              <option value="reference">Livro e capítulo</option>
+              <option value="theme">Tema</option>
+              <option value="christ">Cristo</option>
+              <option value="cic">Catecismo</option>
+              <option value="rosary">Rosário</option>
+              <option value="connections">Conexões bíblicas</option>
+            </select>
+          </label>
+          <button id="bibleTransversalClear" class="secondary-button" type="button">Limpar</button>
+        </div>
+        <p class="bible-search-governance">A busca teológica respeita o controle de publicação: campos ainda não autorizados não são indexados nem exibidos ao público.</p>
+        <p id="bibleTransversalCount" class="result-count" aria-live="polite"></p>
+        <div id="bibleTransversalResults" class="bible-transversal-results"></div>
+      </section>
+
       <div class="bible-browser">
         <div class="bible-filter-row">
           <label class="field">
