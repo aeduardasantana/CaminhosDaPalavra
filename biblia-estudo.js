@@ -22,7 +22,8 @@
     text:$('studyVerseText'),editorial:$('studyEditorialContent'),glosas:$('studyGlosaContent'),
     note:$('studyPersonalNote'),saveNote:$('studySaveNote'),export:$('studyExportNotes'),
     noteStatus:$('studyNoteStatus'),textQuery:$('studyTextQuery'),textButton:$('studyTextButton'),
-    textStatus:$('studyTextStatus'),textResults:$('studyTextResults')
+    textStatus:$('studyTextStatus'),textResults:$('studyTextResults'),
+    readAloud:$('studyReadAloud'),stopAloud:$('studyStopAloud')
   };
   const NOTES_KEY='cdp-avm-study-notes-v1',PLAN_KEY='lce-bible365-plan-v1',JOURNEY_KEY='lce-bible365-journey-start-v1';
   const VALID_KEY=/^[A-Z0-9]{2,4}:\d{1,3}(?::\d{1,3}(?:-\d{1,3})?)?$/;
@@ -43,7 +44,8 @@
   const readProgress=()=>{try{const found=JSON.parse(localStorage.getItem(PLAN_KEY)||'[]');return new Set(Array.isArray(found)?found:[]);}catch{return new Set();}};
   const writeProgress=values=>{try{localStorage.setItem(PLAN_KEY,JSON.stringify([...values]));return true;}catch{return false;}};
   let active={book:books[0],chapter:1,start:null,end:null,key:C.referenceKey(books[0].id,1)};
-  const externalUrl=(book,chapter)=>bible.readBase+encodeURIComponent(book.id)+'.'+chapter+'.AVM';
+  const speechAvailable=typeof window.speechSynthesis!=='undefined' && typeof window.SpeechSynthesisUtterance==='function';
+  let speechText='';
   const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=String(text);return node;};
   const feedback=(text)=>{ui.feedback.textContent=text||'';};
   const linkTo=part=>'./biblia-estudo.html?livro='+encodeURIComponent(part.book.id)+'&capitulo='+part.chapter+
@@ -115,28 +117,35 @@
     ui.start.value=active.start===null?'':String(active.start);
     ui.end.value=active.start===null||active.end===active.start?'':String(active.end);
   }
+  function stopSpeech(){
+    if(speechAvailable)window.speechSynthesis.cancel();
+    ui.stopAloud.disabled=true;
+  }
   function renderText(){
+    stopSpeech();
     ui.text.replaceChildren();
     const payload=window.CDP_AVM_PUBLIC_DATA;
     const allowed=C.authorizedVerses(payload,active.book.id,active.chapter,verseIndex);
     const selected=allowed.filter(item=>active.start===null||(item.verse>=active.start&&item.verse<=active.end));
+    speechText=selected.map(item=>'Versículo '+item.verse+'. '+item.text).join(' ');
+    ui.readAloud.disabled=!speechAvailable||!speechText;
     if(selected.length){
       selected.forEach(item=>{
         const row=make('p','study-verse-row');row.append(make('b','',item.verse),document.createTextNode(item.text));ui.text.appendChild(row);
       });
-      ui.text.appendChild(make('p','study-help','Trechos com autorização registrada para publicação; confira a página da edição para notas e variantes.'));
+      ui.text.appendChild(make('p','study-help','Trechos autorizados para publicação; comentários e notas da edição são controlados separadamente.'));
     }else{
       const box=make('div','study-not-licensed');
       box.append(make('strong','','Texto integral indisponível nesta plataforma'),
         make('p','','A referência e as suas anotações estão disponíveis aqui. A transcrição da tradução Ave-Maria depende de autorização específica. Nenhum versículo foi reconstruído ou substituído por outra edição.'));
-      const a=make('a','','Abrir o capítulo na Bíblia Ave-Maria');a.href=externalUrl(active.book,active.chapter);a.target='_blank';a.rel='noopener noreferrer';
-      box.appendChild(a);ui.text.appendChild(box);
+      box.appendChild(make('p','study-help','A leitura bíblica permanecerá dentro do site; a publicação do texto integral depende de licença da tradução.'));
+      ui.text.appendChild(box);
     }
   }
   function renderEditorial(){
     ui.editorial.replaceChildren();
     ui.editorial.appendChild(make('p','','Introduções, títulos, comentários e notas da edição de estudos estão catalogados separadamente do texto bíblico na preparação técnica. Não há material editorial autorizado para exibição pública vinculado a esta referência.'));
-    ui.editorial.appendChild(make('p','study-help','Isso não impede suas anotações próprias nem o acesso ao exemplar na fonte licenciada.'));
+    ui.editorial.appendChild(make('p','study-help','Isso não impede suas anotações próprias no leitor interno.'));
   }
   function renderGlosas(){
     ui.glosas.replaceChildren();
@@ -189,7 +198,7 @@
     renderBooks();renderChapters();
     ui.selected.textContent=C.formatReference(active.book,active.chapter,active.start,active.end);
     ui.edition.textContent=C.EDITION.label+' · '+C.EDITION.edition;
-    ui.source.href=externalUrl(active.book,active.chapter);
+    ui.source.href='#studyVerseText';
     ui.query.value=C.formatReference(active.book,active.chapter,active.start,active.end);
     renderText();renderEditorial();renderNotes();renderGlosas();renderPlan();
   }
@@ -209,6 +218,19 @@
     if(parsed.error){feedback(parsed.error);return;}
     select(parsed.book.id,parsed.chapter,parsed.start,parsed.end);
   });
+  ui.readAloud.addEventListener('click',()=>{
+    if(!speechAvailable||!speechText)return;
+    stopSpeech();
+    const utterance=new window.SpeechSynthesisUtterance(speechText);
+    utterance.lang='pt-BR';
+    utterance.rate=0.92;
+    utterance.onend=()=>{ui.stopAloud.disabled=true;};
+    utterance.onerror=()=>{ui.stopAloud.disabled=true;feedback('A leitura por voz não está disponível neste navegador.');};
+    ui.stopAloud.disabled=false;
+    window.speechSynthesis.speak(utterance);
+  });
+  ui.stopAloud.addEventListener('click',stopSpeech);
+  window.addEventListener('pagehide',stopSpeech);
   ui.copy.addEventListener('click',async()=>{
     const txt=ui.selected.textContent;
     try{await navigator.clipboard.writeText(txt);feedback('Referência copiada.');}catch{window.prompt('Copie a referência:',txt);}
