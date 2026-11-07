@@ -1877,9 +1877,11 @@ function renderTheologyCard(book, chapter, record, options = {}) {
   const notice = document.createElement('div');
   notice.className = 'chapter-review-notice';
   const noticeTitle = document.createElement('strong');
-  noticeTitle.textContent = 'Mapa Teológico 1.5 · revisão eclesial externa pendente';
+  noticeTitle.textContent = 'Mapa Teológico 1.5 · publicação autorizada pela titular';
   const noticeText = document.createElement('p');
-  noticeText.textContent = 'Esta página reproduz e organiza dados registrados na matriz. Ela não acrescenta novas inferências teológicas e não deve ser apresentada como pronunciamento oficial da Igreja.';
+  noticeText.textContent = String(record.confidence||'').startsWith('Pendente')
+    ? 'Pesquisa autoral disponibilizada pela titular. Este capítulo tem tema e contexto registrados, mas relações específicas ainda podem estar pendentes de documentação. A revisão eclesial externa não foi concluída; este conteúdo não é pronunciamento oficial da Igreja.'
+    : 'Pesquisa autoral disponibilizada pela titular. As referências e relações seguem a classificação e o grau de confiança da matriz. A revisão eclesial externa não foi concluída; este conteúdo não é pronunciamento oficial da Igreja.';
   notice.append(noticeTitle, noticeText);
 
   const grid = document.createElement('div');

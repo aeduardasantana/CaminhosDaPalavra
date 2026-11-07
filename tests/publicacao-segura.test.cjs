@@ -123,6 +123,18 @@ try {
   assert.equal(Object.keys(publicTheology.chapters).length, 1334);
   assert.equal(Object.keys(publicControl.chapters).length, 1334);
   assert.equal(publicControl.failClosed, true);
+  assert.equal(Object.values(publicControl.chapters).filter(s=>s.publicAuthorized).length,1334,
+    'Autorização da titular não foi aplicada ao snapshot aprovado.');
+  assert.equal(publicTheology.chapters['GEN:1'].mainTheme,'Criação');
+  assert.match(publicTheology.chapters['GEN:13'].confidence,/Pendente/,
+    'O estado da pesquisa parcial deve permanecer visível e não ser transformado em revisão concluída.');
+  const originalControl=parseAssignedJson(
+    fs.readFileSync(path.join(root,'publication-control.js'),'utf8'),'CDP_PUBLICATION_CONTROL');
+  assert.equal(originalControl.counts.authorizedByOwner,1334);
+  assert.equal(originalControl.counts.approvedByEcclesialReview,0);
+  assert.equal(originalControl.chapters['CP-0001'].reviewStatus,'Não enviado');
+  assert.equal(originalControl.chapters['CP-0001'].internalDecision,'');
+  assert.equal(originalControl.ownerAuthorization.licensedBibleTextAuthorized,false);
 
   for (const [chapterKey, record] of Object.entries(publicTheology.chapters)) {
     const state = publicControl.chapters[record.cpId];
@@ -133,7 +145,8 @@ try {
       ), 'Conteúdo não autorizado foi incluído no pacote: ' + chapterKey);
       assert.equal(state.reviewStatus, 'Não autorizado para exibição pública');
     } else {
-      assert.deepEqual(Object.keys(state), ['publicAuthorized']);
+      assert.deepEqual(Object.keys(state), ['publicAuthorized','authorizationBasis']);
+      assert.equal(state.authorizationBasis,'titular');
     }
   }
 

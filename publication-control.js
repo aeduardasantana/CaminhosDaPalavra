@@ -22,14 +22,16 @@ window.CDP_PUBLICATION_CONTROL = {
   },
   "counts": {
     "total": 1334,
-    "authorized": 0,
-    "blocked": 1334,
+    "authorized": 1334,
+    "blocked": 0,
     "statuses": {
       "Não enviado": 1334
     },
     "decisions": {
       "(vazio)": 1334
-    }
+    },
+    "authorizedByOwner": 1334,
+    "approvedByEcclesialReview": 0
   },
   "chapters": {
     "CP-0001": {
@@ -40,8 +42,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0002": {
       "reviewStatus": "Não enviado",
@@ -51,8 +54,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0003": {
       "reviewStatus": "Não enviado",
@@ -62,8 +66,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0004": {
       "reviewStatus": "Não enviado",
@@ -73,8 +78,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0005": {
       "reviewStatus": "Não enviado",
@@ -84,8 +90,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0006": {
       "reviewStatus": "Não enviado",
@@ -95,8 +102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0007": {
       "reviewStatus": "Não enviado",
@@ -106,8 +114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0008": {
       "reviewStatus": "Não enviado",
@@ -117,8 +126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0009": {
       "reviewStatus": "Não enviado",
@@ -128,8 +138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0010": {
       "reviewStatus": "Não enviado",
@@ -139,8 +150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0011": {
       "reviewStatus": "Não enviado",
@@ -150,8 +162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0012": {
       "reviewStatus": "Não enviado",
@@ -161,8 +174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0013": {
       "reviewStatus": "Não enviado",
@@ -172,8 +186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0014": {
       "reviewStatus": "Não enviado",
@@ -183,8 +198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0015": {
       "reviewStatus": "Não enviado",
@@ -194,8 +210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0016": {
       "reviewStatus": "Não enviado",
@@ -205,8 +222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0017": {
       "reviewStatus": "Não enviado",
@@ -216,8 +234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0018": {
       "reviewStatus": "Não enviado",
@@ -227,8 +246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0019": {
       "reviewStatus": "Não enviado",
@@ -238,8 +258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0020": {
       "reviewStatus": "Não enviado",
@@ -249,8 +270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0021": {
       "reviewStatus": "Não enviado",
@@ -260,8 +282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0022": {
       "reviewStatus": "Não enviado",
@@ -271,8 +294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0023": {
       "reviewStatus": "Não enviado",
@@ -282,8 +306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0024": {
       "reviewStatus": "Não enviado",
@@ -293,8 +318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0025": {
       "reviewStatus": "Não enviado",
@@ -304,8 +330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0026": {
       "reviewStatus": "Não enviado",
@@ -315,8 +342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0027": {
       "reviewStatus": "Não enviado",
@@ -326,8 +354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0028": {
       "reviewStatus": "Não enviado",
@@ -337,8 +366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0029": {
       "reviewStatus": "Não enviado",
@@ -348,8 +378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0030": {
       "reviewStatus": "Não enviado",
@@ -359,8 +390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0031": {
       "reviewStatus": "Não enviado",
@@ -370,8 +402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0032": {
       "reviewStatus": "Não enviado",
@@ -381,8 +414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0033": {
       "reviewStatus": "Não enviado",
@@ -392,8 +426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0034": {
       "reviewStatus": "Não enviado",
@@ -403,8 +438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0035": {
       "reviewStatus": "Não enviado",
@@ -414,8 +450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0036": {
       "reviewStatus": "Não enviado",
@@ -425,8 +462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0037": {
       "reviewStatus": "Não enviado",
@@ -436,8 +474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0038": {
       "reviewStatus": "Não enviado",
@@ -447,8 +486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0039": {
       "reviewStatus": "Não enviado",
@@ -458,8 +498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0040": {
       "reviewStatus": "Não enviado",
@@ -469,8 +510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0041": {
       "reviewStatus": "Não enviado",
@@ -480,8 +522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0042": {
       "reviewStatus": "Não enviado",
@@ -491,8 +534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0043": {
       "reviewStatus": "Não enviado",
@@ -502,8 +546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0044": {
       "reviewStatus": "Não enviado",
@@ -513,8 +558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0045": {
       "reviewStatus": "Não enviado",
@@ -524,8 +570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0046": {
       "reviewStatus": "Não enviado",
@@ -535,8 +582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0047": {
       "reviewStatus": "Não enviado",
@@ -546,8 +594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0048": {
       "reviewStatus": "Não enviado",
@@ -557,8 +606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0049": {
       "reviewStatus": "Não enviado",
@@ -568,8 +618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0050": {
       "reviewStatus": "Não enviado",
@@ -579,8 +630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0051": {
       "reviewStatus": "Não enviado",
@@ -590,8 +642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0052": {
       "reviewStatus": "Não enviado",
@@ -601,8 +654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0053": {
       "reviewStatus": "Não enviado",
@@ -612,8 +666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0054": {
       "reviewStatus": "Não enviado",
@@ -623,8 +678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0055": {
       "reviewStatus": "Não enviado",
@@ -634,8 +690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0056": {
       "reviewStatus": "Não enviado",
@@ -645,8 +702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0057": {
       "reviewStatus": "Não enviado",
@@ -656,8 +714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0058": {
       "reviewStatus": "Não enviado",
@@ -667,8 +726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0059": {
       "reviewStatus": "Não enviado",
@@ -678,8 +738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0060": {
       "reviewStatus": "Não enviado",
@@ -689,8 +750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0061": {
       "reviewStatus": "Não enviado",
@@ -700,8 +762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0062": {
       "reviewStatus": "Não enviado",
@@ -711,8 +774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0063": {
       "reviewStatus": "Não enviado",
@@ -722,8 +786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0064": {
       "reviewStatus": "Não enviado",
@@ -733,8 +798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0065": {
       "reviewStatus": "Não enviado",
@@ -744,8 +810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0066": {
       "reviewStatus": "Não enviado",
@@ -755,8 +822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0067": {
       "reviewStatus": "Não enviado",
@@ -766,8 +834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0068": {
       "reviewStatus": "Não enviado",
@@ -777,8 +846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0069": {
       "reviewStatus": "Não enviado",
@@ -788,8 +858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0070": {
       "reviewStatus": "Não enviado",
@@ -799,8 +870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0071": {
       "reviewStatus": "Não enviado",
@@ -810,8 +882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0072": {
       "reviewStatus": "Não enviado",
@@ -821,8 +894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0073": {
       "reviewStatus": "Não enviado",
@@ -832,8 +906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0074": {
       "reviewStatus": "Não enviado",
@@ -843,8 +918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0075": {
       "reviewStatus": "Não enviado",
@@ -854,8 +930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0076": {
       "reviewStatus": "Não enviado",
@@ -865,8 +942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0077": {
       "reviewStatus": "Não enviado",
@@ -876,8 +954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0078": {
       "reviewStatus": "Não enviado",
@@ -887,8 +966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0079": {
       "reviewStatus": "Não enviado",
@@ -898,8 +978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0080": {
       "reviewStatus": "Não enviado",
@@ -909,8 +990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0081": {
       "reviewStatus": "Não enviado",
@@ -920,8 +1002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0082": {
       "reviewStatus": "Não enviado",
@@ -931,8 +1014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0083": {
       "reviewStatus": "Não enviado",
@@ -942,8 +1026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0084": {
       "reviewStatus": "Não enviado",
@@ -953,8 +1038,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0085": {
       "reviewStatus": "Não enviado",
@@ -964,8 +1050,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0086": {
       "reviewStatus": "Não enviado",
@@ -975,8 +1062,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0087": {
       "reviewStatus": "Não enviado",
@@ -986,8 +1074,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0088": {
       "reviewStatus": "Não enviado",
@@ -997,8 +1086,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0089": {
       "reviewStatus": "Não enviado",
@@ -1008,8 +1098,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0090": {
       "reviewStatus": "Não enviado",
@@ -1019,8 +1110,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0091": {
       "reviewStatus": "Não enviado",
@@ -1030,8 +1122,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0092": {
       "reviewStatus": "Não enviado",
@@ -1041,8 +1134,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0093": {
       "reviewStatus": "Não enviado",
@@ -1052,8 +1146,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0094": {
       "reviewStatus": "Não enviado",
@@ -1063,8 +1158,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0095": {
       "reviewStatus": "Não enviado",
@@ -1074,8 +1170,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0096": {
       "reviewStatus": "Não enviado",
@@ -1085,8 +1182,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0097": {
       "reviewStatus": "Não enviado",
@@ -1096,8 +1194,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0098": {
       "reviewStatus": "Não enviado",
@@ -1107,8 +1206,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0099": {
       "reviewStatus": "Não enviado",
@@ -1118,8 +1218,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0100": {
       "reviewStatus": "Não enviado",
@@ -1129,8 +1230,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0101": {
       "reviewStatus": "Não enviado",
@@ -1140,8 +1242,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0102": {
       "reviewStatus": "Não enviado",
@@ -1151,8 +1254,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0103": {
       "reviewStatus": "Não enviado",
@@ -1162,8 +1266,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0104": {
       "reviewStatus": "Não enviado",
@@ -1173,8 +1278,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0105": {
       "reviewStatus": "Não enviado",
@@ -1184,8 +1290,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0106": {
       "reviewStatus": "Não enviado",
@@ -1195,8 +1302,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0107": {
       "reviewStatus": "Não enviado",
@@ -1206,8 +1314,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0108": {
       "reviewStatus": "Não enviado",
@@ -1217,8 +1326,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0109": {
       "reviewStatus": "Não enviado",
@@ -1228,8 +1338,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0110": {
       "reviewStatus": "Não enviado",
@@ -1239,8 +1350,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0111": {
       "reviewStatus": "Não enviado",
@@ -1250,8 +1362,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0112": {
       "reviewStatus": "Não enviado",
@@ -1261,8 +1374,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0113": {
       "reviewStatus": "Não enviado",
@@ -1272,8 +1386,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0114": {
       "reviewStatus": "Não enviado",
@@ -1283,8 +1398,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0115": {
       "reviewStatus": "Não enviado",
@@ -1294,8 +1410,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0116": {
       "reviewStatus": "Não enviado",
@@ -1305,8 +1422,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0117": {
       "reviewStatus": "Não enviado",
@@ -1316,8 +1434,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0118": {
       "reviewStatus": "Não enviado",
@@ -1327,8 +1446,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0119": {
       "reviewStatus": "Não enviado",
@@ -1338,8 +1458,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0120": {
       "reviewStatus": "Não enviado",
@@ -1349,8 +1470,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0121": {
       "reviewStatus": "Não enviado",
@@ -1360,8 +1482,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0122": {
       "reviewStatus": "Não enviado",
@@ -1371,8 +1494,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0123": {
       "reviewStatus": "Não enviado",
@@ -1382,8 +1506,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0124": {
       "reviewStatus": "Não enviado",
@@ -1393,8 +1518,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0125": {
       "reviewStatus": "Não enviado",
@@ -1404,8 +1530,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0126": {
       "reviewStatus": "Não enviado",
@@ -1415,8 +1542,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0127": {
       "reviewStatus": "Não enviado",
@@ -1426,8 +1554,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0128": {
       "reviewStatus": "Não enviado",
@@ -1437,8 +1566,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0129": {
       "reviewStatus": "Não enviado",
@@ -1448,8 +1578,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0130": {
       "reviewStatus": "Não enviado",
@@ -1459,8 +1590,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0131": {
       "reviewStatus": "Não enviado",
@@ -1470,8 +1602,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0132": {
       "reviewStatus": "Não enviado",
@@ -1481,8 +1614,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0133": {
       "reviewStatus": "Não enviado",
@@ -1492,8 +1626,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0134": {
       "reviewStatus": "Não enviado",
@@ -1503,8 +1638,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0135": {
       "reviewStatus": "Não enviado",
@@ -1514,8 +1650,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0136": {
       "reviewStatus": "Não enviado",
@@ -1525,8 +1662,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0137": {
       "reviewStatus": "Não enviado",
@@ -1536,8 +1674,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0138": {
       "reviewStatus": "Não enviado",
@@ -1547,8 +1686,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0139": {
       "reviewStatus": "Não enviado",
@@ -1558,8 +1698,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0140": {
       "reviewStatus": "Não enviado",
@@ -1569,8 +1710,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0141": {
       "reviewStatus": "Não enviado",
@@ -1580,8 +1722,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0142": {
       "reviewStatus": "Não enviado",
@@ -1591,8 +1734,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0143": {
       "reviewStatus": "Não enviado",
@@ -1602,8 +1746,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0144": {
       "reviewStatus": "Não enviado",
@@ -1613,8 +1758,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0145": {
       "reviewStatus": "Não enviado",
@@ -1624,8 +1770,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0146": {
       "reviewStatus": "Não enviado",
@@ -1635,8 +1782,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0147": {
       "reviewStatus": "Não enviado",
@@ -1646,8 +1794,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0148": {
       "reviewStatus": "Não enviado",
@@ -1657,8 +1806,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0149": {
       "reviewStatus": "Não enviado",
@@ -1668,8 +1818,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0150": {
       "reviewStatus": "Não enviado",
@@ -1679,8 +1830,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0151": {
       "reviewStatus": "Não enviado",
@@ -1690,8 +1842,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0152": {
       "reviewStatus": "Não enviado",
@@ -1701,8 +1854,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0153": {
       "reviewStatus": "Não enviado",
@@ -1712,8 +1866,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0154": {
       "reviewStatus": "Não enviado",
@@ -1723,8 +1878,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0155": {
       "reviewStatus": "Não enviado",
@@ -1734,8 +1890,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0156": {
       "reviewStatus": "Não enviado",
@@ -1745,8 +1902,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0157": {
       "reviewStatus": "Não enviado",
@@ -1756,8 +1914,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0158": {
       "reviewStatus": "Não enviado",
@@ -1767,8 +1926,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0159": {
       "reviewStatus": "Não enviado",
@@ -1778,8 +1938,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0160": {
       "reviewStatus": "Não enviado",
@@ -1789,8 +1950,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0161": {
       "reviewStatus": "Não enviado",
@@ -1800,8 +1962,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0162": {
       "reviewStatus": "Não enviado",
@@ -1811,8 +1974,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0163": {
       "reviewStatus": "Não enviado",
@@ -1822,8 +1986,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0164": {
       "reviewStatus": "Não enviado",
@@ -1833,8 +1998,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0165": {
       "reviewStatus": "Não enviado",
@@ -1844,8 +2010,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0166": {
       "reviewStatus": "Não enviado",
@@ -1855,8 +2022,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0167": {
       "reviewStatus": "Não enviado",
@@ -1866,8 +2034,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0168": {
       "reviewStatus": "Não enviado",
@@ -1877,8 +2046,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0169": {
       "reviewStatus": "Não enviado",
@@ -1888,8 +2058,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0170": {
       "reviewStatus": "Não enviado",
@@ -1899,8 +2070,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0171": {
       "reviewStatus": "Não enviado",
@@ -1910,8 +2082,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0172": {
       "reviewStatus": "Não enviado",
@@ -1921,8 +2094,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0173": {
       "reviewStatus": "Não enviado",
@@ -1932,8 +2106,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0174": {
       "reviewStatus": "Não enviado",
@@ -1943,8 +2118,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0175": {
       "reviewStatus": "Não enviado",
@@ -1954,8 +2130,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0176": {
       "reviewStatus": "Não enviado",
@@ -1965,8 +2142,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0177": {
       "reviewStatus": "Não enviado",
@@ -1976,8 +2154,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0178": {
       "reviewStatus": "Não enviado",
@@ -1987,8 +2166,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0179": {
       "reviewStatus": "Não enviado",
@@ -1998,8 +2178,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0180": {
       "reviewStatus": "Não enviado",
@@ -2009,8 +2190,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0181": {
       "reviewStatus": "Não enviado",
@@ -2020,8 +2202,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0182": {
       "reviewStatus": "Não enviado",
@@ -2031,8 +2214,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0183": {
       "reviewStatus": "Não enviado",
@@ -2042,8 +2226,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0184": {
       "reviewStatus": "Não enviado",
@@ -2053,8 +2238,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0185": {
       "reviewStatus": "Não enviado",
@@ -2064,8 +2250,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0186": {
       "reviewStatus": "Não enviado",
@@ -2075,8 +2262,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0187": {
       "reviewStatus": "Não enviado",
@@ -2086,8 +2274,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0188": {
       "reviewStatus": "Não enviado",
@@ -2097,8 +2286,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0189": {
       "reviewStatus": "Não enviado",
@@ -2108,8 +2298,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0190": {
       "reviewStatus": "Não enviado",
@@ -2119,8 +2310,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0191": {
       "reviewStatus": "Não enviado",
@@ -2130,8 +2322,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0192": {
       "reviewStatus": "Não enviado",
@@ -2141,8 +2334,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0193": {
       "reviewStatus": "Não enviado",
@@ -2152,8 +2346,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0194": {
       "reviewStatus": "Não enviado",
@@ -2163,8 +2358,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0195": {
       "reviewStatus": "Não enviado",
@@ -2174,8 +2370,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0196": {
       "reviewStatus": "Não enviado",
@@ -2185,8 +2382,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0197": {
       "reviewStatus": "Não enviado",
@@ -2196,8 +2394,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0198": {
       "reviewStatus": "Não enviado",
@@ -2207,8 +2406,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0199": {
       "reviewStatus": "Não enviado",
@@ -2218,8 +2418,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0200": {
       "reviewStatus": "Não enviado",
@@ -2229,8 +2430,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0201": {
       "reviewStatus": "Não enviado",
@@ -2240,8 +2442,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0202": {
       "reviewStatus": "Não enviado",
@@ -2251,8 +2454,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0203": {
       "reviewStatus": "Não enviado",
@@ -2262,8 +2466,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0204": {
       "reviewStatus": "Não enviado",
@@ -2273,8 +2478,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0205": {
       "reviewStatus": "Não enviado",
@@ -2284,8 +2490,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0206": {
       "reviewStatus": "Não enviado",
@@ -2295,8 +2502,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0207": {
       "reviewStatus": "Não enviado",
@@ -2306,8 +2514,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0208": {
       "reviewStatus": "Não enviado",
@@ -2317,8 +2526,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0209": {
       "reviewStatus": "Não enviado",
@@ -2328,8 +2538,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0210": {
       "reviewStatus": "Não enviado",
@@ -2339,8 +2550,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0211": {
       "reviewStatus": "Não enviado",
@@ -2350,8 +2562,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0212": {
       "reviewStatus": "Não enviado",
@@ -2361,8 +2574,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0213": {
       "reviewStatus": "Não enviado",
@@ -2372,8 +2586,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0214": {
       "reviewStatus": "Não enviado",
@@ -2383,8 +2598,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0215": {
       "reviewStatus": "Não enviado",
@@ -2394,8 +2610,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0216": {
       "reviewStatus": "Não enviado",
@@ -2405,8 +2622,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0217": {
       "reviewStatus": "Não enviado",
@@ -2416,8 +2634,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0218": {
       "reviewStatus": "Não enviado",
@@ -2427,8 +2646,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0219": {
       "reviewStatus": "Não enviado",
@@ -2438,8 +2658,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0220": {
       "reviewStatus": "Não enviado",
@@ -2449,8 +2670,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0221": {
       "reviewStatus": "Não enviado",
@@ -2460,8 +2682,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0222": {
       "reviewStatus": "Não enviado",
@@ -2471,8 +2694,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0223": {
       "reviewStatus": "Não enviado",
@@ -2482,8 +2706,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0224": {
       "reviewStatus": "Não enviado",
@@ -2493,8 +2718,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0225": {
       "reviewStatus": "Não enviado",
@@ -2504,8 +2730,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0226": {
       "reviewStatus": "Não enviado",
@@ -2515,8 +2742,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0227": {
       "reviewStatus": "Não enviado",
@@ -2526,8 +2754,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0228": {
       "reviewStatus": "Não enviado",
@@ -2537,8 +2766,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0229": {
       "reviewStatus": "Não enviado",
@@ -2548,8 +2778,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0230": {
       "reviewStatus": "Não enviado",
@@ -2559,8 +2790,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0231": {
       "reviewStatus": "Não enviado",
@@ -2570,8 +2802,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0232": {
       "reviewStatus": "Não enviado",
@@ -2581,8 +2814,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0233": {
       "reviewStatus": "Não enviado",
@@ -2592,8 +2826,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0234": {
       "reviewStatus": "Não enviado",
@@ -2603,8 +2838,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0235": {
       "reviewStatus": "Não enviado",
@@ -2614,8 +2850,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0236": {
       "reviewStatus": "Não enviado",
@@ -2625,8 +2862,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0237": {
       "reviewStatus": "Não enviado",
@@ -2636,8 +2874,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0238": {
       "reviewStatus": "Não enviado",
@@ -2647,8 +2886,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0239": {
       "reviewStatus": "Não enviado",
@@ -2658,8 +2898,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0240": {
       "reviewStatus": "Não enviado",
@@ -2669,8 +2910,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0241": {
       "reviewStatus": "Não enviado",
@@ -2680,8 +2922,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0242": {
       "reviewStatus": "Não enviado",
@@ -2691,8 +2934,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0243": {
       "reviewStatus": "Não enviado",
@@ -2702,8 +2946,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0244": {
       "reviewStatus": "Não enviado",
@@ -2713,8 +2958,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0245": {
       "reviewStatus": "Não enviado",
@@ -2724,8 +2970,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0246": {
       "reviewStatus": "Não enviado",
@@ -2735,8 +2982,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0247": {
       "reviewStatus": "Não enviado",
@@ -2746,8 +2994,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0248": {
       "reviewStatus": "Não enviado",
@@ -2757,8 +3006,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0249": {
       "reviewStatus": "Não enviado",
@@ -2768,8 +3018,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0250": {
       "reviewStatus": "Não enviado",
@@ -2779,8 +3030,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0251": {
       "reviewStatus": "Não enviado",
@@ -2790,8 +3042,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0252": {
       "reviewStatus": "Não enviado",
@@ -2801,8 +3054,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0253": {
       "reviewStatus": "Não enviado",
@@ -2812,8 +3066,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0254": {
       "reviewStatus": "Não enviado",
@@ -2823,8 +3078,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0255": {
       "reviewStatus": "Não enviado",
@@ -2834,8 +3090,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0256": {
       "reviewStatus": "Não enviado",
@@ -2845,8 +3102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0257": {
       "reviewStatus": "Não enviado",
@@ -2856,8 +3114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0258": {
       "reviewStatus": "Não enviado",
@@ -2867,8 +3126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0259": {
       "reviewStatus": "Não enviado",
@@ -2878,8 +3138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0260": {
       "reviewStatus": "Não enviado",
@@ -2889,8 +3150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0261": {
       "reviewStatus": "Não enviado",
@@ -2900,8 +3162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0262": {
       "reviewStatus": "Não enviado",
@@ -2911,8 +3174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0263": {
       "reviewStatus": "Não enviado",
@@ -2922,8 +3186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0264": {
       "reviewStatus": "Não enviado",
@@ -2933,8 +3198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0265": {
       "reviewStatus": "Não enviado",
@@ -2944,8 +3210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0266": {
       "reviewStatus": "Não enviado",
@@ -2955,8 +3222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0267": {
       "reviewStatus": "Não enviado",
@@ -2966,8 +3234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0268": {
       "reviewStatus": "Não enviado",
@@ -2977,8 +3246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0269": {
       "reviewStatus": "Não enviado",
@@ -2988,8 +3258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0270": {
       "reviewStatus": "Não enviado",
@@ -2999,8 +3270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0271": {
       "reviewStatus": "Não enviado",
@@ -3010,8 +3282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0272": {
       "reviewStatus": "Não enviado",
@@ -3021,8 +3294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0273": {
       "reviewStatus": "Não enviado",
@@ -3032,8 +3306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0274": {
       "reviewStatus": "Não enviado",
@@ -3043,8 +3318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0275": {
       "reviewStatus": "Não enviado",
@@ -3054,8 +3330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0276": {
       "reviewStatus": "Não enviado",
@@ -3065,8 +3342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0277": {
       "reviewStatus": "Não enviado",
@@ -3076,8 +3354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0278": {
       "reviewStatus": "Não enviado",
@@ -3087,8 +3366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0279": {
       "reviewStatus": "Não enviado",
@@ -3098,8 +3378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0280": {
       "reviewStatus": "Não enviado",
@@ -3109,8 +3390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0281": {
       "reviewStatus": "Não enviado",
@@ -3120,8 +3402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0282": {
       "reviewStatus": "Não enviado",
@@ -3131,8 +3414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0283": {
       "reviewStatus": "Não enviado",
@@ -3142,8 +3426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0284": {
       "reviewStatus": "Não enviado",
@@ -3153,8 +3438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0285": {
       "reviewStatus": "Não enviado",
@@ -3164,8 +3450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0286": {
       "reviewStatus": "Não enviado",
@@ -3175,8 +3462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0287": {
       "reviewStatus": "Não enviado",
@@ -3186,8 +3474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0288": {
       "reviewStatus": "Não enviado",
@@ -3197,8 +3486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0289": {
       "reviewStatus": "Não enviado",
@@ -3208,8 +3498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0290": {
       "reviewStatus": "Não enviado",
@@ -3219,8 +3510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0291": {
       "reviewStatus": "Não enviado",
@@ -3230,8 +3522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0292": {
       "reviewStatus": "Não enviado",
@@ -3241,8 +3534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0293": {
       "reviewStatus": "Não enviado",
@@ -3252,8 +3546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0294": {
       "reviewStatus": "Não enviado",
@@ -3263,8 +3558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0295": {
       "reviewStatus": "Não enviado",
@@ -3274,8 +3570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0296": {
       "reviewStatus": "Não enviado",
@@ -3285,8 +3582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0297": {
       "reviewStatus": "Não enviado",
@@ -3296,8 +3594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0298": {
       "reviewStatus": "Não enviado",
@@ -3307,8 +3606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0299": {
       "reviewStatus": "Não enviado",
@@ -3318,8 +3618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0300": {
       "reviewStatus": "Não enviado",
@@ -3329,8 +3630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0301": {
       "reviewStatus": "Não enviado",
@@ -3340,8 +3642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0302": {
       "reviewStatus": "Não enviado",
@@ -3351,8 +3654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0303": {
       "reviewStatus": "Não enviado",
@@ -3362,8 +3666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0304": {
       "reviewStatus": "Não enviado",
@@ -3373,8 +3678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0305": {
       "reviewStatus": "Não enviado",
@@ -3384,8 +3690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0306": {
       "reviewStatus": "Não enviado",
@@ -3395,8 +3702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0307": {
       "reviewStatus": "Não enviado",
@@ -3406,8 +3714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0308": {
       "reviewStatus": "Não enviado",
@@ -3417,8 +3726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0309": {
       "reviewStatus": "Não enviado",
@@ -3428,8 +3738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0310": {
       "reviewStatus": "Não enviado",
@@ -3439,8 +3750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0311": {
       "reviewStatus": "Não enviado",
@@ -3450,8 +3762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0312": {
       "reviewStatus": "Não enviado",
@@ -3461,8 +3774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0313": {
       "reviewStatus": "Não enviado",
@@ -3472,8 +3786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0314": {
       "reviewStatus": "Não enviado",
@@ -3483,8 +3798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0315": {
       "reviewStatus": "Não enviado",
@@ -3494,8 +3810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0316": {
       "reviewStatus": "Não enviado",
@@ -3505,8 +3822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0317": {
       "reviewStatus": "Não enviado",
@@ -3516,8 +3834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0318": {
       "reviewStatus": "Não enviado",
@@ -3527,8 +3846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0319": {
       "reviewStatus": "Não enviado",
@@ -3538,8 +3858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0320": {
       "reviewStatus": "Não enviado",
@@ -3549,8 +3870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0321": {
       "reviewStatus": "Não enviado",
@@ -3560,8 +3882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0322": {
       "reviewStatus": "Não enviado",
@@ -3571,8 +3894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0323": {
       "reviewStatus": "Não enviado",
@@ -3582,8 +3906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0324": {
       "reviewStatus": "Não enviado",
@@ -3593,8 +3918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0325": {
       "reviewStatus": "Não enviado",
@@ -3604,8 +3930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0326": {
       "reviewStatus": "Não enviado",
@@ -3615,8 +3942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0327": {
       "reviewStatus": "Não enviado",
@@ -3626,8 +3954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0328": {
       "reviewStatus": "Não enviado",
@@ -3637,8 +3966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0329": {
       "reviewStatus": "Não enviado",
@@ -3648,8 +3978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0330": {
       "reviewStatus": "Não enviado",
@@ -3659,8 +3990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0331": {
       "reviewStatus": "Não enviado",
@@ -3670,8 +4002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0332": {
       "reviewStatus": "Não enviado",
@@ -3681,8 +4014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0333": {
       "reviewStatus": "Não enviado",
@@ -3692,8 +4026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0334": {
       "reviewStatus": "Não enviado",
@@ -3703,8 +4038,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0335": {
       "reviewStatus": "Não enviado",
@@ -3714,8 +4050,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0336": {
       "reviewStatus": "Não enviado",
@@ -3725,8 +4062,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0337": {
       "reviewStatus": "Não enviado",
@@ -3736,8 +4074,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0338": {
       "reviewStatus": "Não enviado",
@@ -3747,8 +4086,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0339": {
       "reviewStatus": "Não enviado",
@@ -3758,8 +4098,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0340": {
       "reviewStatus": "Não enviado",
@@ -3769,8 +4110,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0341": {
       "reviewStatus": "Não enviado",
@@ -3780,8 +4122,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0342": {
       "reviewStatus": "Não enviado",
@@ -3791,8 +4134,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0343": {
       "reviewStatus": "Não enviado",
@@ -3802,8 +4146,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0344": {
       "reviewStatus": "Não enviado",
@@ -3813,8 +4158,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0345": {
       "reviewStatus": "Não enviado",
@@ -3824,8 +4170,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0346": {
       "reviewStatus": "Não enviado",
@@ -3835,8 +4182,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0347": {
       "reviewStatus": "Não enviado",
@@ -3846,8 +4194,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0348": {
       "reviewStatus": "Não enviado",
@@ -3857,8 +4206,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0349": {
       "reviewStatus": "Não enviado",
@@ -3868,8 +4218,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0350": {
       "reviewStatus": "Não enviado",
@@ -3879,8 +4230,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0351": {
       "reviewStatus": "Não enviado",
@@ -3890,8 +4242,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0352": {
       "reviewStatus": "Não enviado",
@@ -3901,8 +4254,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0353": {
       "reviewStatus": "Não enviado",
@@ -3912,8 +4266,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0354": {
       "reviewStatus": "Não enviado",
@@ -3923,8 +4278,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0355": {
       "reviewStatus": "Não enviado",
@@ -3934,8 +4290,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0356": {
       "reviewStatus": "Não enviado",
@@ -3945,8 +4302,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0357": {
       "reviewStatus": "Não enviado",
@@ -3956,8 +4314,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0358": {
       "reviewStatus": "Não enviado",
@@ -3967,8 +4326,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0359": {
       "reviewStatus": "Não enviado",
@@ -3978,8 +4338,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0360": {
       "reviewStatus": "Não enviado",
@@ -3989,8 +4350,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0361": {
       "reviewStatus": "Não enviado",
@@ -4000,8 +4362,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0362": {
       "reviewStatus": "Não enviado",
@@ -4011,8 +4374,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0363": {
       "reviewStatus": "Não enviado",
@@ -4022,8 +4386,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0364": {
       "reviewStatus": "Não enviado",
@@ -4033,8 +4398,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0365": {
       "reviewStatus": "Não enviado",
@@ -4044,8 +4410,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0366": {
       "reviewStatus": "Não enviado",
@@ -4055,8 +4422,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0367": {
       "reviewStatus": "Não enviado",
@@ -4066,8 +4434,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0368": {
       "reviewStatus": "Não enviado",
@@ -4077,8 +4446,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0369": {
       "reviewStatus": "Não enviado",
@@ -4088,8 +4458,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0370": {
       "reviewStatus": "Não enviado",
@@ -4099,8 +4470,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0371": {
       "reviewStatus": "Não enviado",
@@ -4110,8 +4482,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0372": {
       "reviewStatus": "Não enviado",
@@ -4121,8 +4494,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0373": {
       "reviewStatus": "Não enviado",
@@ -4132,8 +4506,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0374": {
       "reviewStatus": "Não enviado",
@@ -4143,8 +4518,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0375": {
       "reviewStatus": "Não enviado",
@@ -4154,8 +4530,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0376": {
       "reviewStatus": "Não enviado",
@@ -4165,8 +4542,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0377": {
       "reviewStatus": "Não enviado",
@@ -4176,8 +4554,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0378": {
       "reviewStatus": "Não enviado",
@@ -4187,8 +4566,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0379": {
       "reviewStatus": "Não enviado",
@@ -4198,8 +4578,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0380": {
       "reviewStatus": "Não enviado",
@@ -4209,8 +4590,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0381": {
       "reviewStatus": "Não enviado",
@@ -4220,8 +4602,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0382": {
       "reviewStatus": "Não enviado",
@@ -4231,8 +4614,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0383": {
       "reviewStatus": "Não enviado",
@@ -4242,8 +4626,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0384": {
       "reviewStatus": "Não enviado",
@@ -4253,8 +4638,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0385": {
       "reviewStatus": "Não enviado",
@@ -4264,8 +4650,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0386": {
       "reviewStatus": "Não enviado",
@@ -4275,8 +4662,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0387": {
       "reviewStatus": "Não enviado",
@@ -4286,8 +4674,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0388": {
       "reviewStatus": "Não enviado",
@@ -4297,8 +4686,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0389": {
       "reviewStatus": "Não enviado",
@@ -4308,8 +4698,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0390": {
       "reviewStatus": "Não enviado",
@@ -4319,8 +4710,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0391": {
       "reviewStatus": "Não enviado",
@@ -4330,8 +4722,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0392": {
       "reviewStatus": "Não enviado",
@@ -4341,8 +4734,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0393": {
       "reviewStatus": "Não enviado",
@@ -4352,8 +4746,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0394": {
       "reviewStatus": "Não enviado",
@@ -4363,8 +4758,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0395": {
       "reviewStatus": "Não enviado",
@@ -4374,8 +4770,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0396": {
       "reviewStatus": "Não enviado",
@@ -4385,8 +4782,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0397": {
       "reviewStatus": "Não enviado",
@@ -4396,8 +4794,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0398": {
       "reviewStatus": "Não enviado",
@@ -4407,8 +4806,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0399": {
       "reviewStatus": "Não enviado",
@@ -4418,8 +4818,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0400": {
       "reviewStatus": "Não enviado",
@@ -4429,8 +4830,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0401": {
       "reviewStatus": "Não enviado",
@@ -4440,8 +4842,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0402": {
       "reviewStatus": "Não enviado",
@@ -4451,8 +4854,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0403": {
       "reviewStatus": "Não enviado",
@@ -4462,8 +4866,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0404": {
       "reviewStatus": "Não enviado",
@@ -4473,8 +4878,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0405": {
       "reviewStatus": "Não enviado",
@@ -4484,8 +4890,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0406": {
       "reviewStatus": "Não enviado",
@@ -4495,8 +4902,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0407": {
       "reviewStatus": "Não enviado",
@@ -4506,8 +4914,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0408": {
       "reviewStatus": "Não enviado",
@@ -4517,8 +4926,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0409": {
       "reviewStatus": "Não enviado",
@@ -4528,8 +4938,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0410": {
       "reviewStatus": "Não enviado",
@@ -4539,8 +4950,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0411": {
       "reviewStatus": "Não enviado",
@@ -4550,8 +4962,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0412": {
       "reviewStatus": "Não enviado",
@@ -4561,8 +4974,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0413": {
       "reviewStatus": "Não enviado",
@@ -4572,8 +4986,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0414": {
       "reviewStatus": "Não enviado",
@@ -4583,8 +4998,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0415": {
       "reviewStatus": "Não enviado",
@@ -4594,8 +5010,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0416": {
       "reviewStatus": "Não enviado",
@@ -4605,8 +5022,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0417": {
       "reviewStatus": "Não enviado",
@@ -4616,8 +5034,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0418": {
       "reviewStatus": "Não enviado",
@@ -4627,8 +5046,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0419": {
       "reviewStatus": "Não enviado",
@@ -4638,8 +5058,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0420": {
       "reviewStatus": "Não enviado",
@@ -4649,8 +5070,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0421": {
       "reviewStatus": "Não enviado",
@@ -4660,8 +5082,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0422": {
       "reviewStatus": "Não enviado",
@@ -4671,8 +5094,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0423": {
       "reviewStatus": "Não enviado",
@@ -4682,8 +5106,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0424": {
       "reviewStatus": "Não enviado",
@@ -4693,8 +5118,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0425": {
       "reviewStatus": "Não enviado",
@@ -4704,8 +5130,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0426": {
       "reviewStatus": "Não enviado",
@@ -4715,8 +5142,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0427": {
       "reviewStatus": "Não enviado",
@@ -4726,8 +5154,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0428": {
       "reviewStatus": "Não enviado",
@@ -4737,8 +5166,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0429": {
       "reviewStatus": "Não enviado",
@@ -4748,8 +5178,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0430": {
       "reviewStatus": "Não enviado",
@@ -4759,8 +5190,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0431": {
       "reviewStatus": "Não enviado",
@@ -4770,8 +5202,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0432": {
       "reviewStatus": "Não enviado",
@@ -4781,8 +5214,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0433": {
       "reviewStatus": "Não enviado",
@@ -4792,8 +5226,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0434": {
       "reviewStatus": "Não enviado",
@@ -4803,8 +5238,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0435": {
       "reviewStatus": "Não enviado",
@@ -4814,8 +5250,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0436": {
       "reviewStatus": "Não enviado",
@@ -4825,8 +5262,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0437": {
       "reviewStatus": "Não enviado",
@@ -4836,8 +5274,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0438": {
       "reviewStatus": "Não enviado",
@@ -4847,8 +5286,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0439": {
       "reviewStatus": "Não enviado",
@@ -4858,8 +5298,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0440": {
       "reviewStatus": "Não enviado",
@@ -4869,8 +5310,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0441": {
       "reviewStatus": "Não enviado",
@@ -4880,8 +5322,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0442": {
       "reviewStatus": "Não enviado",
@@ -4891,8 +5334,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0443": {
       "reviewStatus": "Não enviado",
@@ -4902,8 +5346,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0444": {
       "reviewStatus": "Não enviado",
@@ -4913,8 +5358,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0445": {
       "reviewStatus": "Não enviado",
@@ -4924,8 +5370,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0446": {
       "reviewStatus": "Não enviado",
@@ -4935,8 +5382,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0447": {
       "reviewStatus": "Não enviado",
@@ -4946,8 +5394,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0448": {
       "reviewStatus": "Não enviado",
@@ -4957,8 +5406,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0449": {
       "reviewStatus": "Não enviado",
@@ -4968,8 +5418,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0450": {
       "reviewStatus": "Não enviado",
@@ -4979,8 +5430,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0451": {
       "reviewStatus": "Não enviado",
@@ -4990,8 +5442,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0452": {
       "reviewStatus": "Não enviado",
@@ -5001,8 +5454,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0453": {
       "reviewStatus": "Não enviado",
@@ -5012,8 +5466,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0454": {
       "reviewStatus": "Não enviado",
@@ -5023,8 +5478,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0455": {
       "reviewStatus": "Não enviado",
@@ -5034,8 +5490,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0456": {
       "reviewStatus": "Não enviado",
@@ -5045,8 +5502,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0457": {
       "reviewStatus": "Não enviado",
@@ -5056,8 +5514,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0458": {
       "reviewStatus": "Não enviado",
@@ -5067,8 +5526,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0459": {
       "reviewStatus": "Não enviado",
@@ -5078,8 +5538,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0460": {
       "reviewStatus": "Não enviado",
@@ -5089,8 +5550,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0461": {
       "reviewStatus": "Não enviado",
@@ -5100,8 +5562,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0462": {
       "reviewStatus": "Não enviado",
@@ -5111,8 +5574,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0463": {
       "reviewStatus": "Não enviado",
@@ -5122,8 +5586,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0464": {
       "reviewStatus": "Não enviado",
@@ -5133,8 +5598,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0465": {
       "reviewStatus": "Não enviado",
@@ -5144,8 +5610,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0466": {
       "reviewStatus": "Não enviado",
@@ -5155,8 +5622,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0467": {
       "reviewStatus": "Não enviado",
@@ -5166,8 +5634,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0468": {
       "reviewStatus": "Não enviado",
@@ -5177,8 +5646,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0469": {
       "reviewStatus": "Não enviado",
@@ -5188,8 +5658,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0470": {
       "reviewStatus": "Não enviado",
@@ -5199,8 +5670,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0471": {
       "reviewStatus": "Não enviado",
@@ -5210,8 +5682,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0472": {
       "reviewStatus": "Não enviado",
@@ -5221,8 +5694,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0473": {
       "reviewStatus": "Não enviado",
@@ -5232,8 +5706,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0474": {
       "reviewStatus": "Não enviado",
@@ -5243,8 +5718,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0475": {
       "reviewStatus": "Não enviado",
@@ -5254,8 +5730,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0476": {
       "reviewStatus": "Não enviado",
@@ -5265,8 +5742,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0477": {
       "reviewStatus": "Não enviado",
@@ -5276,8 +5754,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0478": {
       "reviewStatus": "Não enviado",
@@ -5287,8 +5766,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0479": {
       "reviewStatus": "Não enviado",
@@ -5298,8 +5778,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0480": {
       "reviewStatus": "Não enviado",
@@ -5309,8 +5790,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0481": {
       "reviewStatus": "Não enviado",
@@ -5320,8 +5802,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0482": {
       "reviewStatus": "Não enviado",
@@ -5331,8 +5814,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0483": {
       "reviewStatus": "Não enviado",
@@ -5342,8 +5826,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0484": {
       "reviewStatus": "Não enviado",
@@ -5353,8 +5838,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0485": {
       "reviewStatus": "Não enviado",
@@ -5364,8 +5850,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0486": {
       "reviewStatus": "Não enviado",
@@ -5375,8 +5862,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0487": {
       "reviewStatus": "Não enviado",
@@ -5386,8 +5874,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0488": {
       "reviewStatus": "Não enviado",
@@ -5397,8 +5886,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0489": {
       "reviewStatus": "Não enviado",
@@ -5408,8 +5898,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0490": {
       "reviewStatus": "Não enviado",
@@ -5419,8 +5910,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0491": {
       "reviewStatus": "Não enviado",
@@ -5430,8 +5922,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0492": {
       "reviewStatus": "Não enviado",
@@ -5441,8 +5934,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0493": {
       "reviewStatus": "Não enviado",
@@ -5452,8 +5946,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0494": {
       "reviewStatus": "Não enviado",
@@ -5463,8 +5958,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0495": {
       "reviewStatus": "Não enviado",
@@ -5474,8 +5970,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0496": {
       "reviewStatus": "Não enviado",
@@ -5485,8 +5982,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0497": {
       "reviewStatus": "Não enviado",
@@ -5496,8 +5994,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0498": {
       "reviewStatus": "Não enviado",
@@ -5507,8 +6006,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0499": {
       "reviewStatus": "Não enviado",
@@ -5518,8 +6018,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0500": {
       "reviewStatus": "Não enviado",
@@ -5529,8 +6030,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0501": {
       "reviewStatus": "Não enviado",
@@ -5540,8 +6042,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0502": {
       "reviewStatus": "Não enviado",
@@ -5551,8 +6054,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0503": {
       "reviewStatus": "Não enviado",
@@ -5562,8 +6066,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0504": {
       "reviewStatus": "Não enviado",
@@ -5573,8 +6078,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0505": {
       "reviewStatus": "Não enviado",
@@ -5584,8 +6090,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0506": {
       "reviewStatus": "Não enviado",
@@ -5595,8 +6102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0507": {
       "reviewStatus": "Não enviado",
@@ -5606,8 +6114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0508": {
       "reviewStatus": "Não enviado",
@@ -5617,8 +6126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0509": {
       "reviewStatus": "Não enviado",
@@ -5628,8 +6138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0510": {
       "reviewStatus": "Não enviado",
@@ -5639,8 +6150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0511": {
       "reviewStatus": "Não enviado",
@@ -5650,8 +6162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0512": {
       "reviewStatus": "Não enviado",
@@ -5661,8 +6174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0513": {
       "reviewStatus": "Não enviado",
@@ -5672,8 +6186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0514": {
       "reviewStatus": "Não enviado",
@@ -5683,8 +6198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0515": {
       "reviewStatus": "Não enviado",
@@ -5694,8 +6210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0516": {
       "reviewStatus": "Não enviado",
@@ -5705,8 +6222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0517": {
       "reviewStatus": "Não enviado",
@@ -5716,8 +6234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0518": {
       "reviewStatus": "Não enviado",
@@ -5727,8 +6246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0519": {
       "reviewStatus": "Não enviado",
@@ -5738,8 +6258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0520": {
       "reviewStatus": "Não enviado",
@@ -5749,8 +6270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0521": {
       "reviewStatus": "Não enviado",
@@ -5760,8 +6282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0522": {
       "reviewStatus": "Não enviado",
@@ -5771,8 +6294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0523": {
       "reviewStatus": "Não enviado",
@@ -5782,8 +6306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0524": {
       "reviewStatus": "Não enviado",
@@ -5793,8 +6318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0525": {
       "reviewStatus": "Não enviado",
@@ -5804,8 +6330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0526": {
       "reviewStatus": "Não enviado",
@@ -5815,8 +6342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0527": {
       "reviewStatus": "Não enviado",
@@ -5826,8 +6354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0528": {
       "reviewStatus": "Não enviado",
@@ -5837,8 +6366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0529": {
       "reviewStatus": "Não enviado",
@@ -5848,8 +6378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0530": {
       "reviewStatus": "Não enviado",
@@ -5859,8 +6390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0531": {
       "reviewStatus": "Não enviado",
@@ -5870,8 +6402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0532": {
       "reviewStatus": "Não enviado",
@@ -5881,8 +6414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0533": {
       "reviewStatus": "Não enviado",
@@ -5892,8 +6426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0534": {
       "reviewStatus": "Não enviado",
@@ -5903,8 +6438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0535": {
       "reviewStatus": "Não enviado",
@@ -5914,8 +6450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0536": {
       "reviewStatus": "Não enviado",
@@ -5925,8 +6462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0537": {
       "reviewStatus": "Não enviado",
@@ -5936,8 +6474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0538": {
       "reviewStatus": "Não enviado",
@@ -5947,8 +6486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0539": {
       "reviewStatus": "Não enviado",
@@ -5958,8 +6498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0540": {
       "reviewStatus": "Não enviado",
@@ -5969,8 +6510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0541": {
       "reviewStatus": "Não enviado",
@@ -5980,8 +6522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0542": {
       "reviewStatus": "Não enviado",
@@ -5991,8 +6534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0543": {
       "reviewStatus": "Não enviado",
@@ -6002,8 +6546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0544": {
       "reviewStatus": "Não enviado",
@@ -6013,8 +6558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0545": {
       "reviewStatus": "Não enviado",
@@ -6024,8 +6570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0546": {
       "reviewStatus": "Não enviado",
@@ -6035,8 +6582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0547": {
       "reviewStatus": "Não enviado",
@@ -6046,8 +6594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0548": {
       "reviewStatus": "Não enviado",
@@ -6057,8 +6606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0549": {
       "reviewStatus": "Não enviado",
@@ -6068,8 +6618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0550": {
       "reviewStatus": "Não enviado",
@@ -6079,8 +6630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0551": {
       "reviewStatus": "Não enviado",
@@ -6090,8 +6642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0552": {
       "reviewStatus": "Não enviado",
@@ -6101,8 +6654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0553": {
       "reviewStatus": "Não enviado",
@@ -6112,8 +6666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0554": {
       "reviewStatus": "Não enviado",
@@ -6123,8 +6678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0555": {
       "reviewStatus": "Não enviado",
@@ -6134,8 +6690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0556": {
       "reviewStatus": "Não enviado",
@@ -6145,8 +6702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0557": {
       "reviewStatus": "Não enviado",
@@ -6156,8 +6714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0558": {
       "reviewStatus": "Não enviado",
@@ -6167,8 +6726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0559": {
       "reviewStatus": "Não enviado",
@@ -6178,8 +6738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0560": {
       "reviewStatus": "Não enviado",
@@ -6189,8 +6750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0561": {
       "reviewStatus": "Não enviado",
@@ -6200,8 +6762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0562": {
       "reviewStatus": "Não enviado",
@@ -6211,8 +6774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0563": {
       "reviewStatus": "Não enviado",
@@ -6222,8 +6786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0564": {
       "reviewStatus": "Não enviado",
@@ -6233,8 +6798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0565": {
       "reviewStatus": "Não enviado",
@@ -6244,8 +6810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0566": {
       "reviewStatus": "Não enviado",
@@ -6255,8 +6822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0567": {
       "reviewStatus": "Não enviado",
@@ -6266,8 +6834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0568": {
       "reviewStatus": "Não enviado",
@@ -6277,8 +6846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0569": {
       "reviewStatus": "Não enviado",
@@ -6288,8 +6858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0570": {
       "reviewStatus": "Não enviado",
@@ -6299,8 +6870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0571": {
       "reviewStatus": "Não enviado",
@@ -6310,8 +6882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0572": {
       "reviewStatus": "Não enviado",
@@ -6321,8 +6894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0573": {
       "reviewStatus": "Não enviado",
@@ -6332,8 +6906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0574": {
       "reviewStatus": "Não enviado",
@@ -6343,8 +6918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0575": {
       "reviewStatus": "Não enviado",
@@ -6354,8 +6930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0576": {
       "reviewStatus": "Não enviado",
@@ -6365,8 +6942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0577": {
       "reviewStatus": "Não enviado",
@@ -6376,8 +6954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0578": {
       "reviewStatus": "Não enviado",
@@ -6387,8 +6966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0579": {
       "reviewStatus": "Não enviado",
@@ -6398,8 +6978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0580": {
       "reviewStatus": "Não enviado",
@@ -6409,8 +6990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0581": {
       "reviewStatus": "Não enviado",
@@ -6420,8 +7002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0582": {
       "reviewStatus": "Não enviado",
@@ -6431,8 +7014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0583": {
       "reviewStatus": "Não enviado",
@@ -6442,8 +7026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0584": {
       "reviewStatus": "Não enviado",
@@ -6453,8 +7038,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0585": {
       "reviewStatus": "Não enviado",
@@ -6464,8 +7050,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0586": {
       "reviewStatus": "Não enviado",
@@ -6475,8 +7062,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0587": {
       "reviewStatus": "Não enviado",
@@ -6486,8 +7074,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0588": {
       "reviewStatus": "Não enviado",
@@ -6497,8 +7086,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0589": {
       "reviewStatus": "Não enviado",
@@ -6508,8 +7098,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0590": {
       "reviewStatus": "Não enviado",
@@ -6519,8 +7110,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0591": {
       "reviewStatus": "Não enviado",
@@ -6530,8 +7122,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0592": {
       "reviewStatus": "Não enviado",
@@ -6541,8 +7134,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0593": {
       "reviewStatus": "Não enviado",
@@ -6552,8 +7146,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0594": {
       "reviewStatus": "Não enviado",
@@ -6563,8 +7158,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0595": {
       "reviewStatus": "Não enviado",
@@ -6574,8 +7170,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0596": {
       "reviewStatus": "Não enviado",
@@ -6585,8 +7182,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0597": {
       "reviewStatus": "Não enviado",
@@ -6596,8 +7194,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0598": {
       "reviewStatus": "Não enviado",
@@ -6607,8 +7206,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0599": {
       "reviewStatus": "Não enviado",
@@ -6618,8 +7218,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0600": {
       "reviewStatus": "Não enviado",
@@ -6629,8 +7230,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0601": {
       "reviewStatus": "Não enviado",
@@ -6640,8 +7242,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0602": {
       "reviewStatus": "Não enviado",
@@ -6651,8 +7254,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0603": {
       "reviewStatus": "Não enviado",
@@ -6662,8 +7266,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0604": {
       "reviewStatus": "Não enviado",
@@ -6673,8 +7278,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0605": {
       "reviewStatus": "Não enviado",
@@ -6684,8 +7290,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0606": {
       "reviewStatus": "Não enviado",
@@ -6695,8 +7302,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0607": {
       "reviewStatus": "Não enviado",
@@ -6706,8 +7314,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0608": {
       "reviewStatus": "Não enviado",
@@ -6717,8 +7326,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0609": {
       "reviewStatus": "Não enviado",
@@ -6728,8 +7338,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0610": {
       "reviewStatus": "Não enviado",
@@ -6739,8 +7350,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0611": {
       "reviewStatus": "Não enviado",
@@ -6750,8 +7362,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0612": {
       "reviewStatus": "Não enviado",
@@ -6761,8 +7374,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0613": {
       "reviewStatus": "Não enviado",
@@ -6772,8 +7386,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0614": {
       "reviewStatus": "Não enviado",
@@ -6783,8 +7398,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0615": {
       "reviewStatus": "Não enviado",
@@ -6794,8 +7410,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0616": {
       "reviewStatus": "Não enviado",
@@ -6805,8 +7422,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0617": {
       "reviewStatus": "Não enviado",
@@ -6816,8 +7434,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0618": {
       "reviewStatus": "Não enviado",
@@ -6827,8 +7446,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0619": {
       "reviewStatus": "Não enviado",
@@ -6838,8 +7458,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0620": {
       "reviewStatus": "Não enviado",
@@ -6849,8 +7470,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0621": {
       "reviewStatus": "Não enviado",
@@ -6860,8 +7482,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0622": {
       "reviewStatus": "Não enviado",
@@ -6871,8 +7494,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0623": {
       "reviewStatus": "Não enviado",
@@ -6882,8 +7506,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0624": {
       "reviewStatus": "Não enviado",
@@ -6893,8 +7518,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0625": {
       "reviewStatus": "Não enviado",
@@ -6904,8 +7530,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0626": {
       "reviewStatus": "Não enviado",
@@ -6915,8 +7542,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0627": {
       "reviewStatus": "Não enviado",
@@ -6926,8 +7554,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0628": {
       "reviewStatus": "Não enviado",
@@ -6937,8 +7566,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0629": {
       "reviewStatus": "Não enviado",
@@ -6948,8 +7578,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0630": {
       "reviewStatus": "Não enviado",
@@ -6959,8 +7590,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0631": {
       "reviewStatus": "Não enviado",
@@ -6970,8 +7602,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0632": {
       "reviewStatus": "Não enviado",
@@ -6981,8 +7614,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0633": {
       "reviewStatus": "Não enviado",
@@ -6992,8 +7626,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0634": {
       "reviewStatus": "Não enviado",
@@ -7003,8 +7638,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0635": {
       "reviewStatus": "Não enviado",
@@ -7014,8 +7650,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0636": {
       "reviewStatus": "Não enviado",
@@ -7025,8 +7662,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0637": {
       "reviewStatus": "Não enviado",
@@ -7036,8 +7674,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0638": {
       "reviewStatus": "Não enviado",
@@ -7047,8 +7686,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0639": {
       "reviewStatus": "Não enviado",
@@ -7058,8 +7698,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0640": {
       "reviewStatus": "Não enviado",
@@ -7069,8 +7710,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0641": {
       "reviewStatus": "Não enviado",
@@ -7080,8 +7722,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0642": {
       "reviewStatus": "Não enviado",
@@ -7091,8 +7734,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0643": {
       "reviewStatus": "Não enviado",
@@ -7102,8 +7746,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0644": {
       "reviewStatus": "Não enviado",
@@ -7113,8 +7758,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0645": {
       "reviewStatus": "Não enviado",
@@ -7124,8 +7770,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0646": {
       "reviewStatus": "Não enviado",
@@ -7135,8 +7782,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0647": {
       "reviewStatus": "Não enviado",
@@ -7146,8 +7794,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0648": {
       "reviewStatus": "Não enviado",
@@ -7157,8 +7806,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0649": {
       "reviewStatus": "Não enviado",
@@ -7168,8 +7818,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0650": {
       "reviewStatus": "Não enviado",
@@ -7179,8 +7830,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0651": {
       "reviewStatus": "Não enviado",
@@ -7190,8 +7842,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0652": {
       "reviewStatus": "Não enviado",
@@ -7201,8 +7854,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0653": {
       "reviewStatus": "Não enviado",
@@ -7212,8 +7866,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0654": {
       "reviewStatus": "Não enviado",
@@ -7223,8 +7878,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0655": {
       "reviewStatus": "Não enviado",
@@ -7234,8 +7890,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0656": {
       "reviewStatus": "Não enviado",
@@ -7245,8 +7902,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0657": {
       "reviewStatus": "Não enviado",
@@ -7256,8 +7914,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0658": {
       "reviewStatus": "Não enviado",
@@ -7267,8 +7926,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0659": {
       "reviewStatus": "Não enviado",
@@ -7278,8 +7938,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0660": {
       "reviewStatus": "Não enviado",
@@ -7289,8 +7950,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0661": {
       "reviewStatus": "Não enviado",
@@ -7300,8 +7962,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0662": {
       "reviewStatus": "Não enviado",
@@ -7311,8 +7974,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0663": {
       "reviewStatus": "Não enviado",
@@ -7322,8 +7986,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0664": {
       "reviewStatus": "Não enviado",
@@ -7333,8 +7998,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0665": {
       "reviewStatus": "Não enviado",
@@ -7344,8 +8010,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0666": {
       "reviewStatus": "Não enviado",
@@ -7355,8 +8022,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0667": {
       "reviewStatus": "Não enviado",
@@ -7366,8 +8034,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0668": {
       "reviewStatus": "Não enviado",
@@ -7377,8 +8046,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0669": {
       "reviewStatus": "Não enviado",
@@ -7388,8 +8058,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0670": {
       "reviewStatus": "Não enviado",
@@ -7399,8 +8070,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0671": {
       "reviewStatus": "Não enviado",
@@ -7410,8 +8082,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0672": {
       "reviewStatus": "Não enviado",
@@ -7421,8 +8094,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0673": {
       "reviewStatus": "Não enviado",
@@ -7432,8 +8106,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0674": {
       "reviewStatus": "Não enviado",
@@ -7443,8 +8118,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0675": {
       "reviewStatus": "Não enviado",
@@ -7454,8 +8130,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0676": {
       "reviewStatus": "Não enviado",
@@ -7465,8 +8142,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0677": {
       "reviewStatus": "Não enviado",
@@ -7476,8 +8154,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0678": {
       "reviewStatus": "Não enviado",
@@ -7487,8 +8166,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0679": {
       "reviewStatus": "Não enviado",
@@ -7498,8 +8178,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0680": {
       "reviewStatus": "Não enviado",
@@ -7509,8 +8190,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0681": {
       "reviewStatus": "Não enviado",
@@ -7520,8 +8202,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0682": {
       "reviewStatus": "Não enviado",
@@ -7531,8 +8214,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0683": {
       "reviewStatus": "Não enviado",
@@ -7542,8 +8226,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0684": {
       "reviewStatus": "Não enviado",
@@ -7553,8 +8238,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0685": {
       "reviewStatus": "Não enviado",
@@ -7564,8 +8250,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0686": {
       "reviewStatus": "Não enviado",
@@ -7575,8 +8262,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0687": {
       "reviewStatus": "Não enviado",
@@ -7586,8 +8274,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0688": {
       "reviewStatus": "Não enviado",
@@ -7597,8 +8286,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0689": {
       "reviewStatus": "Não enviado",
@@ -7608,8 +8298,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0690": {
       "reviewStatus": "Não enviado",
@@ -7619,8 +8310,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0691": {
       "reviewStatus": "Não enviado",
@@ -7630,8 +8322,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0692": {
       "reviewStatus": "Não enviado",
@@ -7641,8 +8334,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0693": {
       "reviewStatus": "Não enviado",
@@ -7652,8 +8346,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0694": {
       "reviewStatus": "Não enviado",
@@ -7663,8 +8358,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0695": {
       "reviewStatus": "Não enviado",
@@ -7674,8 +8370,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0696": {
       "reviewStatus": "Não enviado",
@@ -7685,8 +8382,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0697": {
       "reviewStatus": "Não enviado",
@@ -7696,8 +8394,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0698": {
       "reviewStatus": "Não enviado",
@@ -7707,8 +8406,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0699": {
       "reviewStatus": "Não enviado",
@@ -7718,8 +8418,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0700": {
       "reviewStatus": "Não enviado",
@@ -7729,8 +8430,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0701": {
       "reviewStatus": "Não enviado",
@@ -7740,8 +8442,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0702": {
       "reviewStatus": "Não enviado",
@@ -7751,8 +8454,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0703": {
       "reviewStatus": "Não enviado",
@@ -7762,8 +8466,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0704": {
       "reviewStatus": "Não enviado",
@@ -7773,8 +8478,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0705": {
       "reviewStatus": "Não enviado",
@@ -7784,8 +8490,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0706": {
       "reviewStatus": "Não enviado",
@@ -7795,8 +8502,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0707": {
       "reviewStatus": "Não enviado",
@@ -7806,8 +8514,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0708": {
       "reviewStatus": "Não enviado",
@@ -7817,8 +8526,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0709": {
       "reviewStatus": "Não enviado",
@@ -7828,8 +8538,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0710": {
       "reviewStatus": "Não enviado",
@@ -7839,8 +8550,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0711": {
       "reviewStatus": "Não enviado",
@@ -7850,8 +8562,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0712": {
       "reviewStatus": "Não enviado",
@@ -7861,8 +8574,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0713": {
       "reviewStatus": "Não enviado",
@@ -7872,8 +8586,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0714": {
       "reviewStatus": "Não enviado",
@@ -7883,8 +8598,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0715": {
       "reviewStatus": "Não enviado",
@@ -7894,8 +8610,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0716": {
       "reviewStatus": "Não enviado",
@@ -7905,8 +8622,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0717": {
       "reviewStatus": "Não enviado",
@@ -7916,8 +8634,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0718": {
       "reviewStatus": "Não enviado",
@@ -7927,8 +8646,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0719": {
       "reviewStatus": "Não enviado",
@@ -7938,8 +8658,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0720": {
       "reviewStatus": "Não enviado",
@@ -7949,8 +8670,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0721": {
       "reviewStatus": "Não enviado",
@@ -7960,8 +8682,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0722": {
       "reviewStatus": "Não enviado",
@@ -7971,8 +8694,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0723": {
       "reviewStatus": "Não enviado",
@@ -7982,8 +8706,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0724": {
       "reviewStatus": "Não enviado",
@@ -7993,8 +8718,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0725": {
       "reviewStatus": "Não enviado",
@@ -8004,8 +8730,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0726": {
       "reviewStatus": "Não enviado",
@@ -8015,8 +8742,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0727": {
       "reviewStatus": "Não enviado",
@@ -8026,8 +8754,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0728": {
       "reviewStatus": "Não enviado",
@@ -8037,8 +8766,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0729": {
       "reviewStatus": "Não enviado",
@@ -8048,8 +8778,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0730": {
       "reviewStatus": "Não enviado",
@@ -8059,8 +8790,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0731": {
       "reviewStatus": "Não enviado",
@@ -8070,8 +8802,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0732": {
       "reviewStatus": "Não enviado",
@@ -8081,8 +8814,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0733": {
       "reviewStatus": "Não enviado",
@@ -8092,8 +8826,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0734": {
       "reviewStatus": "Não enviado",
@@ -8103,8 +8838,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0735": {
       "reviewStatus": "Não enviado",
@@ -8114,8 +8850,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0736": {
       "reviewStatus": "Não enviado",
@@ -8125,8 +8862,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0737": {
       "reviewStatus": "Não enviado",
@@ -8136,8 +8874,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0738": {
       "reviewStatus": "Não enviado",
@@ -8147,8 +8886,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0739": {
       "reviewStatus": "Não enviado",
@@ -8158,8 +8898,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0740": {
       "reviewStatus": "Não enviado",
@@ -8169,8 +8910,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0741": {
       "reviewStatus": "Não enviado",
@@ -8180,8 +8922,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0742": {
       "reviewStatus": "Não enviado",
@@ -8191,8 +8934,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0743": {
       "reviewStatus": "Não enviado",
@@ -8202,8 +8946,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0744": {
       "reviewStatus": "Não enviado",
@@ -8213,8 +8958,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0745": {
       "reviewStatus": "Não enviado",
@@ -8224,8 +8970,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0746": {
       "reviewStatus": "Não enviado",
@@ -8235,8 +8982,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0747": {
       "reviewStatus": "Não enviado",
@@ -8246,8 +8994,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0748": {
       "reviewStatus": "Não enviado",
@@ -8257,8 +9006,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0749": {
       "reviewStatus": "Não enviado",
@@ -8268,8 +9018,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0750": {
       "reviewStatus": "Não enviado",
@@ -8279,8 +9030,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0751": {
       "reviewStatus": "Não enviado",
@@ -8290,8 +9042,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0752": {
       "reviewStatus": "Não enviado",
@@ -8301,8 +9054,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0753": {
       "reviewStatus": "Não enviado",
@@ -8312,8 +9066,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0754": {
       "reviewStatus": "Não enviado",
@@ -8323,8 +9078,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0755": {
       "reviewStatus": "Não enviado",
@@ -8334,8 +9090,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0756": {
       "reviewStatus": "Não enviado",
@@ -8345,8 +9102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0757": {
       "reviewStatus": "Não enviado",
@@ -8356,8 +9114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0758": {
       "reviewStatus": "Não enviado",
@@ -8367,8 +9126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0759": {
       "reviewStatus": "Não enviado",
@@ -8378,8 +9138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0760": {
       "reviewStatus": "Não enviado",
@@ -8389,8 +9150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0761": {
       "reviewStatus": "Não enviado",
@@ -8400,8 +9162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0762": {
       "reviewStatus": "Não enviado",
@@ -8411,8 +9174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0763": {
       "reviewStatus": "Não enviado",
@@ -8422,8 +9186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0764": {
       "reviewStatus": "Não enviado",
@@ -8433,8 +9198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0765": {
       "reviewStatus": "Não enviado",
@@ -8444,8 +9210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0766": {
       "reviewStatus": "Não enviado",
@@ -8455,8 +9222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0767": {
       "reviewStatus": "Não enviado",
@@ -8466,8 +9234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0768": {
       "reviewStatus": "Não enviado",
@@ -8477,8 +9246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0769": {
       "reviewStatus": "Não enviado",
@@ -8488,8 +9258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0770": {
       "reviewStatus": "Não enviado",
@@ -8499,8 +9270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0771": {
       "reviewStatus": "Não enviado",
@@ -8510,8 +9282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0772": {
       "reviewStatus": "Não enviado",
@@ -8521,8 +9294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0773": {
       "reviewStatus": "Não enviado",
@@ -8532,8 +9306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0774": {
       "reviewStatus": "Não enviado",
@@ -8543,8 +9318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0775": {
       "reviewStatus": "Não enviado",
@@ -8554,8 +9330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0776": {
       "reviewStatus": "Não enviado",
@@ -8565,8 +9342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0777": {
       "reviewStatus": "Não enviado",
@@ -8576,8 +9354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0778": {
       "reviewStatus": "Não enviado",
@@ -8587,8 +9366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0779": {
       "reviewStatus": "Não enviado",
@@ -8598,8 +9378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0780": {
       "reviewStatus": "Não enviado",
@@ -8609,8 +9390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0781": {
       "reviewStatus": "Não enviado",
@@ -8620,8 +9402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0782": {
       "reviewStatus": "Não enviado",
@@ -8631,8 +9414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0783": {
       "reviewStatus": "Não enviado",
@@ -8642,8 +9426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0784": {
       "reviewStatus": "Não enviado",
@@ -8653,8 +9438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0785": {
       "reviewStatus": "Não enviado",
@@ -8664,8 +9450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0786": {
       "reviewStatus": "Não enviado",
@@ -8675,8 +9462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0787": {
       "reviewStatus": "Não enviado",
@@ -8686,8 +9474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0788": {
       "reviewStatus": "Não enviado",
@@ -8697,8 +9486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0789": {
       "reviewStatus": "Não enviado",
@@ -8708,8 +9498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0790": {
       "reviewStatus": "Não enviado",
@@ -8719,8 +9510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0791": {
       "reviewStatus": "Não enviado",
@@ -8730,8 +9522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0792": {
       "reviewStatus": "Não enviado",
@@ -8741,8 +9534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0793": {
       "reviewStatus": "Não enviado",
@@ -8752,8 +9546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0794": {
       "reviewStatus": "Não enviado",
@@ -8763,8 +9558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0795": {
       "reviewStatus": "Não enviado",
@@ -8774,8 +9570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0796": {
       "reviewStatus": "Não enviado",
@@ -8785,8 +9582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0797": {
       "reviewStatus": "Não enviado",
@@ -8796,8 +9594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0798": {
       "reviewStatus": "Não enviado",
@@ -8807,8 +9606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0799": {
       "reviewStatus": "Não enviado",
@@ -8818,8 +9618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0800": {
       "reviewStatus": "Não enviado",
@@ -8829,8 +9630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0801": {
       "reviewStatus": "Não enviado",
@@ -8840,8 +9642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0802": {
       "reviewStatus": "Não enviado",
@@ -8851,8 +9654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0803": {
       "reviewStatus": "Não enviado",
@@ -8862,8 +9666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0804": {
       "reviewStatus": "Não enviado",
@@ -8873,8 +9678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0805": {
       "reviewStatus": "Não enviado",
@@ -8884,8 +9690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0806": {
       "reviewStatus": "Não enviado",
@@ -8895,8 +9702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0807": {
       "reviewStatus": "Não enviado",
@@ -8906,8 +9714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0808": {
       "reviewStatus": "Não enviado",
@@ -8917,8 +9726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0809": {
       "reviewStatus": "Não enviado",
@@ -8928,8 +9738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0810": {
       "reviewStatus": "Não enviado",
@@ -8939,8 +9750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0811": {
       "reviewStatus": "Não enviado",
@@ -8950,8 +9762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0812": {
       "reviewStatus": "Não enviado",
@@ -8961,8 +9774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0813": {
       "reviewStatus": "Não enviado",
@@ -8972,8 +9786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0814": {
       "reviewStatus": "Não enviado",
@@ -8983,8 +9798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0815": {
       "reviewStatus": "Não enviado",
@@ -8994,8 +9810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0816": {
       "reviewStatus": "Não enviado",
@@ -9005,8 +9822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0817": {
       "reviewStatus": "Não enviado",
@@ -9016,8 +9834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0818": {
       "reviewStatus": "Não enviado",
@@ -9027,8 +9846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0819": {
       "reviewStatus": "Não enviado",
@@ -9038,8 +9858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0820": {
       "reviewStatus": "Não enviado",
@@ -9049,8 +9870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0821": {
       "reviewStatus": "Não enviado",
@@ -9060,8 +9882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0822": {
       "reviewStatus": "Não enviado",
@@ -9071,8 +9894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0823": {
       "reviewStatus": "Não enviado",
@@ -9082,8 +9906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0824": {
       "reviewStatus": "Não enviado",
@@ -9093,8 +9918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0825": {
       "reviewStatus": "Não enviado",
@@ -9104,8 +9930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0826": {
       "reviewStatus": "Não enviado",
@@ -9115,8 +9942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0827": {
       "reviewStatus": "Não enviado",
@@ -9126,8 +9954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0828": {
       "reviewStatus": "Não enviado",
@@ -9137,8 +9966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0829": {
       "reviewStatus": "Não enviado",
@@ -9148,8 +9978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0830": {
       "reviewStatus": "Não enviado",
@@ -9159,8 +9990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0831": {
       "reviewStatus": "Não enviado",
@@ -9170,8 +10002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0832": {
       "reviewStatus": "Não enviado",
@@ -9181,8 +10014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0833": {
       "reviewStatus": "Não enviado",
@@ -9192,8 +10026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0834": {
       "reviewStatus": "Não enviado",
@@ -9203,8 +10038,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0835": {
       "reviewStatus": "Não enviado",
@@ -9214,8 +10050,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0836": {
       "reviewStatus": "Não enviado",
@@ -9225,8 +10062,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0837": {
       "reviewStatus": "Não enviado",
@@ -9236,8 +10074,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0838": {
       "reviewStatus": "Não enviado",
@@ -9247,8 +10086,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0839": {
       "reviewStatus": "Não enviado",
@@ -9258,8 +10098,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0840": {
       "reviewStatus": "Não enviado",
@@ -9269,8 +10110,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0841": {
       "reviewStatus": "Não enviado",
@@ -9280,8 +10122,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0842": {
       "reviewStatus": "Não enviado",
@@ -9291,8 +10134,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0843": {
       "reviewStatus": "Não enviado",
@@ -9302,8 +10146,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0844": {
       "reviewStatus": "Não enviado",
@@ -9313,8 +10158,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0845": {
       "reviewStatus": "Não enviado",
@@ -9324,8 +10170,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0846": {
       "reviewStatus": "Não enviado",
@@ -9335,8 +10182,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0847": {
       "reviewStatus": "Não enviado",
@@ -9346,8 +10194,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0848": {
       "reviewStatus": "Não enviado",
@@ -9357,8 +10206,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0849": {
       "reviewStatus": "Não enviado",
@@ -9368,8 +10218,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0850": {
       "reviewStatus": "Não enviado",
@@ -9379,8 +10230,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0851": {
       "reviewStatus": "Não enviado",
@@ -9390,8 +10242,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0852": {
       "reviewStatus": "Não enviado",
@@ -9401,8 +10254,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0853": {
       "reviewStatus": "Não enviado",
@@ -9412,8 +10266,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0854": {
       "reviewStatus": "Não enviado",
@@ -9423,8 +10278,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0855": {
       "reviewStatus": "Não enviado",
@@ -9434,8 +10290,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0856": {
       "reviewStatus": "Não enviado",
@@ -9445,8 +10302,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0857": {
       "reviewStatus": "Não enviado",
@@ -9456,8 +10314,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0858": {
       "reviewStatus": "Não enviado",
@@ -9467,8 +10326,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0859": {
       "reviewStatus": "Não enviado",
@@ -9478,8 +10338,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0860": {
       "reviewStatus": "Não enviado",
@@ -9489,8 +10350,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0861": {
       "reviewStatus": "Não enviado",
@@ -9500,8 +10362,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0862": {
       "reviewStatus": "Não enviado",
@@ -9511,8 +10374,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0863": {
       "reviewStatus": "Não enviado",
@@ -9522,8 +10386,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0864": {
       "reviewStatus": "Não enviado",
@@ -9533,8 +10398,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0865": {
       "reviewStatus": "Não enviado",
@@ -9544,8 +10410,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0866": {
       "reviewStatus": "Não enviado",
@@ -9555,8 +10422,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0867": {
       "reviewStatus": "Não enviado",
@@ -9566,8 +10434,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0868": {
       "reviewStatus": "Não enviado",
@@ -9577,8 +10446,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0869": {
       "reviewStatus": "Não enviado",
@@ -9588,8 +10458,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0870": {
       "reviewStatus": "Não enviado",
@@ -9599,8 +10470,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0871": {
       "reviewStatus": "Não enviado",
@@ -9610,8 +10482,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0872": {
       "reviewStatus": "Não enviado",
@@ -9621,8 +10494,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0873": {
       "reviewStatus": "Não enviado",
@@ -9632,8 +10506,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0874": {
       "reviewStatus": "Não enviado",
@@ -9643,8 +10518,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0875": {
       "reviewStatus": "Não enviado",
@@ -9654,8 +10530,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0876": {
       "reviewStatus": "Não enviado",
@@ -9665,8 +10542,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0877": {
       "reviewStatus": "Não enviado",
@@ -9676,8 +10554,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0878": {
       "reviewStatus": "Não enviado",
@@ -9687,8 +10566,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0879": {
       "reviewStatus": "Não enviado",
@@ -9698,8 +10578,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0880": {
       "reviewStatus": "Não enviado",
@@ -9709,8 +10590,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0881": {
       "reviewStatus": "Não enviado",
@@ -9720,8 +10602,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0882": {
       "reviewStatus": "Não enviado",
@@ -9731,8 +10614,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0883": {
       "reviewStatus": "Não enviado",
@@ -9742,8 +10626,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0884": {
       "reviewStatus": "Não enviado",
@@ -9753,8 +10638,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0885": {
       "reviewStatus": "Não enviado",
@@ -9764,8 +10650,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0886": {
       "reviewStatus": "Não enviado",
@@ -9775,8 +10662,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0887": {
       "reviewStatus": "Não enviado",
@@ -9786,8 +10674,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0888": {
       "reviewStatus": "Não enviado",
@@ -9797,8 +10686,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0889": {
       "reviewStatus": "Não enviado",
@@ -9808,8 +10698,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0890": {
       "reviewStatus": "Não enviado",
@@ -9819,8 +10710,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0891": {
       "reviewStatus": "Não enviado",
@@ -9830,8 +10722,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0892": {
       "reviewStatus": "Não enviado",
@@ -9841,8 +10734,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0893": {
       "reviewStatus": "Não enviado",
@@ -9852,8 +10746,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0894": {
       "reviewStatus": "Não enviado",
@@ -9863,8 +10758,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0895": {
       "reviewStatus": "Não enviado",
@@ -9874,8 +10770,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0896": {
       "reviewStatus": "Não enviado",
@@ -9885,8 +10782,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0897": {
       "reviewStatus": "Não enviado",
@@ -9896,8 +10794,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0898": {
       "reviewStatus": "Não enviado",
@@ -9907,8 +10806,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0899": {
       "reviewStatus": "Não enviado",
@@ -9918,8 +10818,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0900": {
       "reviewStatus": "Não enviado",
@@ -9929,8 +10830,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0901": {
       "reviewStatus": "Não enviado",
@@ -9940,8 +10842,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0902": {
       "reviewStatus": "Não enviado",
@@ -9951,8 +10854,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0903": {
       "reviewStatus": "Não enviado",
@@ -9962,8 +10866,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0904": {
       "reviewStatus": "Não enviado",
@@ -9973,8 +10878,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0905": {
       "reviewStatus": "Não enviado",
@@ -9984,8 +10890,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0906": {
       "reviewStatus": "Não enviado",
@@ -9995,8 +10902,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0907": {
       "reviewStatus": "Não enviado",
@@ -10006,8 +10914,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0908": {
       "reviewStatus": "Não enviado",
@@ -10017,8 +10926,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0909": {
       "reviewStatus": "Não enviado",
@@ -10028,8 +10938,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0910": {
       "reviewStatus": "Não enviado",
@@ -10039,8 +10950,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0911": {
       "reviewStatus": "Não enviado",
@@ -10050,8 +10962,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0912": {
       "reviewStatus": "Não enviado",
@@ -10061,8 +10974,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0913": {
       "reviewStatus": "Não enviado",
@@ -10072,8 +10986,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0914": {
       "reviewStatus": "Não enviado",
@@ -10083,8 +10998,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0915": {
       "reviewStatus": "Não enviado",
@@ -10094,8 +11010,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0916": {
       "reviewStatus": "Não enviado",
@@ -10105,8 +11022,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0917": {
       "reviewStatus": "Não enviado",
@@ -10116,8 +11034,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0918": {
       "reviewStatus": "Não enviado",
@@ -10127,8 +11046,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0919": {
       "reviewStatus": "Não enviado",
@@ -10138,8 +11058,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0920": {
       "reviewStatus": "Não enviado",
@@ -10149,8 +11070,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0921": {
       "reviewStatus": "Não enviado",
@@ -10160,8 +11082,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0922": {
       "reviewStatus": "Não enviado",
@@ -10171,8 +11094,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0923": {
       "reviewStatus": "Não enviado",
@@ -10182,8 +11106,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0924": {
       "reviewStatus": "Não enviado",
@@ -10193,8 +11118,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0925": {
       "reviewStatus": "Não enviado",
@@ -10204,8 +11130,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0926": {
       "reviewStatus": "Não enviado",
@@ -10215,8 +11142,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0927": {
       "reviewStatus": "Não enviado",
@@ -10226,8 +11154,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0928": {
       "reviewStatus": "Não enviado",
@@ -10237,8 +11166,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0929": {
       "reviewStatus": "Não enviado",
@@ -10248,8 +11178,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0930": {
       "reviewStatus": "Não enviado",
@@ -10259,8 +11190,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0931": {
       "reviewStatus": "Não enviado",
@@ -10270,8 +11202,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0932": {
       "reviewStatus": "Não enviado",
@@ -10281,8 +11214,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0933": {
       "reviewStatus": "Não enviado",
@@ -10292,8 +11226,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0934": {
       "reviewStatus": "Não enviado",
@@ -10303,8 +11238,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0935": {
       "reviewStatus": "Não enviado",
@@ -10314,8 +11250,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0936": {
       "reviewStatus": "Não enviado",
@@ -10325,8 +11262,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0937": {
       "reviewStatus": "Não enviado",
@@ -10336,8 +11274,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0938": {
       "reviewStatus": "Não enviado",
@@ -10347,8 +11286,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0939": {
       "reviewStatus": "Não enviado",
@@ -10358,8 +11298,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0940": {
       "reviewStatus": "Não enviado",
@@ -10369,8 +11310,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0941": {
       "reviewStatus": "Não enviado",
@@ -10380,8 +11322,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0942": {
       "reviewStatus": "Não enviado",
@@ -10391,8 +11334,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0943": {
       "reviewStatus": "Não enviado",
@@ -10402,8 +11346,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0944": {
       "reviewStatus": "Não enviado",
@@ -10413,8 +11358,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0945": {
       "reviewStatus": "Não enviado",
@@ -10424,8 +11370,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0946": {
       "reviewStatus": "Não enviado",
@@ -10435,8 +11382,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0947": {
       "reviewStatus": "Não enviado",
@@ -10446,8 +11394,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0948": {
       "reviewStatus": "Não enviado",
@@ -10457,8 +11406,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0949": {
       "reviewStatus": "Não enviado",
@@ -10468,8 +11418,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0950": {
       "reviewStatus": "Não enviado",
@@ -10479,8 +11430,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0951": {
       "reviewStatus": "Não enviado",
@@ -10490,8 +11442,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0952": {
       "reviewStatus": "Não enviado",
@@ -10501,8 +11454,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0953": {
       "reviewStatus": "Não enviado",
@@ -10512,8 +11466,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0954": {
       "reviewStatus": "Não enviado",
@@ -10523,8 +11478,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0955": {
       "reviewStatus": "Não enviado",
@@ -10534,8 +11490,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0956": {
       "reviewStatus": "Não enviado",
@@ -10545,8 +11502,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0957": {
       "reviewStatus": "Não enviado",
@@ -10556,8 +11514,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0958": {
       "reviewStatus": "Não enviado",
@@ -10567,8 +11526,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0959": {
       "reviewStatus": "Não enviado",
@@ -10578,8 +11538,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0960": {
       "reviewStatus": "Não enviado",
@@ -10589,8 +11550,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0961": {
       "reviewStatus": "Não enviado",
@@ -10600,8 +11562,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0962": {
       "reviewStatus": "Não enviado",
@@ -10611,8 +11574,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0963": {
       "reviewStatus": "Não enviado",
@@ -10622,8 +11586,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0964": {
       "reviewStatus": "Não enviado",
@@ -10633,8 +11598,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0965": {
       "reviewStatus": "Não enviado",
@@ -10644,8 +11610,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0966": {
       "reviewStatus": "Não enviado",
@@ -10655,8 +11622,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0967": {
       "reviewStatus": "Não enviado",
@@ -10666,8 +11634,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0968": {
       "reviewStatus": "Não enviado",
@@ -10677,8 +11646,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0969": {
       "reviewStatus": "Não enviado",
@@ -10688,8 +11658,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0970": {
       "reviewStatus": "Não enviado",
@@ -10699,8 +11670,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0971": {
       "reviewStatus": "Não enviado",
@@ -10710,8 +11682,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0972": {
       "reviewStatus": "Não enviado",
@@ -10721,8 +11694,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0973": {
       "reviewStatus": "Não enviado",
@@ -10732,8 +11706,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0974": {
       "reviewStatus": "Não enviado",
@@ -10743,8 +11718,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0975": {
       "reviewStatus": "Não enviado",
@@ -10754,8 +11730,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0976": {
       "reviewStatus": "Não enviado",
@@ -10765,8 +11742,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0977": {
       "reviewStatus": "Não enviado",
@@ -10776,8 +11754,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0978": {
       "reviewStatus": "Não enviado",
@@ -10787,8 +11766,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0979": {
       "reviewStatus": "Não enviado",
@@ -10798,8 +11778,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0980": {
       "reviewStatus": "Não enviado",
@@ -10809,8 +11790,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0981": {
       "reviewStatus": "Não enviado",
@@ -10820,8 +11802,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0982": {
       "reviewStatus": "Não enviado",
@@ -10831,8 +11814,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0983": {
       "reviewStatus": "Não enviado",
@@ -10842,8 +11826,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0984": {
       "reviewStatus": "Não enviado",
@@ -10853,8 +11838,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0985": {
       "reviewStatus": "Não enviado",
@@ -10864,8 +11850,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0986": {
       "reviewStatus": "Não enviado",
@@ -10875,8 +11862,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0987": {
       "reviewStatus": "Não enviado",
@@ -10886,8 +11874,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0988": {
       "reviewStatus": "Não enviado",
@@ -10897,8 +11886,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0989": {
       "reviewStatus": "Não enviado",
@@ -10908,8 +11898,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0990": {
       "reviewStatus": "Não enviado",
@@ -10919,8 +11910,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0991": {
       "reviewStatus": "Não enviado",
@@ -10930,8 +11922,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0992": {
       "reviewStatus": "Não enviado",
@@ -10941,8 +11934,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0993": {
       "reviewStatus": "Não enviado",
@@ -10952,8 +11946,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0994": {
       "reviewStatus": "Não enviado",
@@ -10963,8 +11958,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0995": {
       "reviewStatus": "Não enviado",
@@ -10974,8 +11970,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0996": {
       "reviewStatus": "Não enviado",
@@ -10985,8 +11982,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0997": {
       "reviewStatus": "Não enviado",
@@ -10996,8 +11994,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0998": {
       "reviewStatus": "Não enviado",
@@ -11007,8 +12006,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-0999": {
       "reviewStatus": "Não enviado",
@@ -11018,8 +12018,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1000": {
       "reviewStatus": "Não enviado",
@@ -11029,8 +12030,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1001": {
       "reviewStatus": "Não enviado",
@@ -11040,8 +12042,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1002": {
       "reviewStatus": "Não enviado",
@@ -11051,8 +12054,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1003": {
       "reviewStatus": "Não enviado",
@@ -11062,8 +12066,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1004": {
       "reviewStatus": "Não enviado",
@@ -11073,8 +12078,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1005": {
       "reviewStatus": "Não enviado",
@@ -11084,8 +12090,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1006": {
       "reviewStatus": "Não enviado",
@@ -11095,8 +12102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1007": {
       "reviewStatus": "Não enviado",
@@ -11106,8 +12114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1008": {
       "reviewStatus": "Não enviado",
@@ -11117,8 +12126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1009": {
       "reviewStatus": "Não enviado",
@@ -11128,8 +12138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1010": {
       "reviewStatus": "Não enviado",
@@ -11139,8 +12150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1011": {
       "reviewStatus": "Não enviado",
@@ -11150,8 +12162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1012": {
       "reviewStatus": "Não enviado",
@@ -11161,8 +12174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1013": {
       "reviewStatus": "Não enviado",
@@ -11172,8 +12186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1014": {
       "reviewStatus": "Não enviado",
@@ -11183,8 +12198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1015": {
       "reviewStatus": "Não enviado",
@@ -11194,8 +12210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1016": {
       "reviewStatus": "Não enviado",
@@ -11205,8 +12222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1017": {
       "reviewStatus": "Não enviado",
@@ -11216,8 +12234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1018": {
       "reviewStatus": "Não enviado",
@@ -11227,8 +12246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1019": {
       "reviewStatus": "Não enviado",
@@ -11238,8 +12258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1020": {
       "reviewStatus": "Não enviado",
@@ -11249,8 +12270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1021": {
       "reviewStatus": "Não enviado",
@@ -11260,8 +12282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1022": {
       "reviewStatus": "Não enviado",
@@ -11271,8 +12294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1023": {
       "reviewStatus": "Não enviado",
@@ -11282,8 +12306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1024": {
       "reviewStatus": "Não enviado",
@@ -11293,8 +12318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1025": {
       "reviewStatus": "Não enviado",
@@ -11304,8 +12330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1026": {
       "reviewStatus": "Não enviado",
@@ -11315,8 +12342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1027": {
       "reviewStatus": "Não enviado",
@@ -11326,8 +12354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1028": {
       "reviewStatus": "Não enviado",
@@ -11337,8 +12366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1029": {
       "reviewStatus": "Não enviado",
@@ -11348,8 +12378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1030": {
       "reviewStatus": "Não enviado",
@@ -11359,8 +12390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1031": {
       "reviewStatus": "Não enviado",
@@ -11370,8 +12402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1032": {
       "reviewStatus": "Não enviado",
@@ -11381,8 +12414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1033": {
       "reviewStatus": "Não enviado",
@@ -11392,8 +12426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1034": {
       "reviewStatus": "Não enviado",
@@ -11403,8 +12438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1035": {
       "reviewStatus": "Não enviado",
@@ -11414,8 +12450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1036": {
       "reviewStatus": "Não enviado",
@@ -11425,8 +12462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1037": {
       "reviewStatus": "Não enviado",
@@ -11436,8 +12474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1038": {
       "reviewStatus": "Não enviado",
@@ -11447,8 +12486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1039": {
       "reviewStatus": "Não enviado",
@@ -11458,8 +12498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1040": {
       "reviewStatus": "Não enviado",
@@ -11469,8 +12510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1041": {
       "reviewStatus": "Não enviado",
@@ -11480,8 +12522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1042": {
       "reviewStatus": "Não enviado",
@@ -11491,8 +12534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1043": {
       "reviewStatus": "Não enviado",
@@ -11502,8 +12546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1044": {
       "reviewStatus": "Não enviado",
@@ -11513,8 +12558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1045": {
       "reviewStatus": "Não enviado",
@@ -11524,8 +12570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1046": {
       "reviewStatus": "Não enviado",
@@ -11535,8 +12582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1047": {
       "reviewStatus": "Não enviado",
@@ -11546,8 +12594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1048": {
       "reviewStatus": "Não enviado",
@@ -11557,8 +12606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1049": {
       "reviewStatus": "Não enviado",
@@ -11568,8 +12618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1050": {
       "reviewStatus": "Não enviado",
@@ -11579,8 +12630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1051": {
       "reviewStatus": "Não enviado",
@@ -11590,8 +12642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1052": {
       "reviewStatus": "Não enviado",
@@ -11601,8 +12654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1053": {
       "reviewStatus": "Não enviado",
@@ -11612,8 +12666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1054": {
       "reviewStatus": "Não enviado",
@@ -11623,8 +12678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1055": {
       "reviewStatus": "Não enviado",
@@ -11634,8 +12690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1056": {
       "reviewStatus": "Não enviado",
@@ -11645,8 +12702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1057": {
       "reviewStatus": "Não enviado",
@@ -11656,8 +12714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1058": {
       "reviewStatus": "Não enviado",
@@ -11667,8 +12726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1059": {
       "reviewStatus": "Não enviado",
@@ -11678,8 +12738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1060": {
       "reviewStatus": "Não enviado",
@@ -11689,8 +12750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1061": {
       "reviewStatus": "Não enviado",
@@ -11700,8 +12762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1062": {
       "reviewStatus": "Não enviado",
@@ -11711,8 +12774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1063": {
       "reviewStatus": "Não enviado",
@@ -11722,8 +12786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1064": {
       "reviewStatus": "Não enviado",
@@ -11733,8 +12798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1065": {
       "reviewStatus": "Não enviado",
@@ -11744,8 +12810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1066": {
       "reviewStatus": "Não enviado",
@@ -11755,8 +12822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1067": {
       "reviewStatus": "Não enviado",
@@ -11766,8 +12834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1068": {
       "reviewStatus": "Não enviado",
@@ -11777,8 +12846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1069": {
       "reviewStatus": "Não enviado",
@@ -11788,8 +12858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1070": {
       "reviewStatus": "Não enviado",
@@ -11799,8 +12870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1071": {
       "reviewStatus": "Não enviado",
@@ -11810,8 +12882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1072": {
       "reviewStatus": "Não enviado",
@@ -11821,8 +12894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1073": {
       "reviewStatus": "Não enviado",
@@ -11832,8 +12906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1074": {
       "reviewStatus": "Não enviado",
@@ -11843,8 +12918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1075": {
       "reviewStatus": "Não enviado",
@@ -11854,8 +12930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1076": {
       "reviewStatus": "Não enviado",
@@ -11865,8 +12942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1077": {
       "reviewStatus": "Não enviado",
@@ -11876,8 +12954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1078": {
       "reviewStatus": "Não enviado",
@@ -11887,8 +12966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1079": {
       "reviewStatus": "Não enviado",
@@ -11898,8 +12978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1080": {
       "reviewStatus": "Não enviado",
@@ -11909,8 +12990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1081": {
       "reviewStatus": "Não enviado",
@@ -11920,8 +13002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1082": {
       "reviewStatus": "Não enviado",
@@ -11931,8 +13014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1083": {
       "reviewStatus": "Não enviado",
@@ -11942,8 +13026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1084": {
       "reviewStatus": "Não enviado",
@@ -11953,8 +13038,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1085": {
       "reviewStatus": "Não enviado",
@@ -11964,8 +13050,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1086": {
       "reviewStatus": "Não enviado",
@@ -11975,8 +13062,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1087": {
       "reviewStatus": "Não enviado",
@@ -11986,8 +13074,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1088": {
       "reviewStatus": "Não enviado",
@@ -11997,8 +13086,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1089": {
       "reviewStatus": "Não enviado",
@@ -12008,8 +13098,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1090": {
       "reviewStatus": "Não enviado",
@@ -12019,8 +13110,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1091": {
       "reviewStatus": "Não enviado",
@@ -12030,8 +13122,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1092": {
       "reviewStatus": "Não enviado",
@@ -12041,8 +13134,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1093": {
       "reviewStatus": "Não enviado",
@@ -12052,8 +13146,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1094": {
       "reviewStatus": "Não enviado",
@@ -12063,8 +13158,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1095": {
       "reviewStatus": "Não enviado",
@@ -12074,8 +13170,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1096": {
       "reviewStatus": "Não enviado",
@@ -12085,8 +13182,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1097": {
       "reviewStatus": "Não enviado",
@@ -12096,8 +13194,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1098": {
       "reviewStatus": "Não enviado",
@@ -12107,8 +13206,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1099": {
       "reviewStatus": "Não enviado",
@@ -12118,8 +13218,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1100": {
       "reviewStatus": "Não enviado",
@@ -12129,8 +13230,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1101": {
       "reviewStatus": "Não enviado",
@@ -12140,8 +13242,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1102": {
       "reviewStatus": "Não enviado",
@@ -12151,8 +13254,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1103": {
       "reviewStatus": "Não enviado",
@@ -12162,8 +13266,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1104": {
       "reviewStatus": "Não enviado",
@@ -12173,8 +13278,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1105": {
       "reviewStatus": "Não enviado",
@@ -12184,8 +13290,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1106": {
       "reviewStatus": "Não enviado",
@@ -12195,8 +13302,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1107": {
       "reviewStatus": "Não enviado",
@@ -12206,8 +13314,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1108": {
       "reviewStatus": "Não enviado",
@@ -12217,8 +13326,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1109": {
       "reviewStatus": "Não enviado",
@@ -12228,8 +13338,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1110": {
       "reviewStatus": "Não enviado",
@@ -12239,8 +13350,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1111": {
       "reviewStatus": "Não enviado",
@@ -12250,8 +13362,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1112": {
       "reviewStatus": "Não enviado",
@@ -12261,8 +13374,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1113": {
       "reviewStatus": "Não enviado",
@@ -12272,8 +13386,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1114": {
       "reviewStatus": "Não enviado",
@@ -12283,8 +13398,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1115": {
       "reviewStatus": "Não enviado",
@@ -12294,8 +13410,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1116": {
       "reviewStatus": "Não enviado",
@@ -12305,8 +13422,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1117": {
       "reviewStatus": "Não enviado",
@@ -12316,8 +13434,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1118": {
       "reviewStatus": "Não enviado",
@@ -12327,8 +13446,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1119": {
       "reviewStatus": "Não enviado",
@@ -12338,8 +13458,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1120": {
       "reviewStatus": "Não enviado",
@@ -12349,8 +13470,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1121": {
       "reviewStatus": "Não enviado",
@@ -12360,8 +13482,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1122": {
       "reviewStatus": "Não enviado",
@@ -12371,8 +13494,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1123": {
       "reviewStatus": "Não enviado",
@@ -12382,8 +13506,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1124": {
       "reviewStatus": "Não enviado",
@@ -12393,8 +13518,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1125": {
       "reviewStatus": "Não enviado",
@@ -12404,8 +13530,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1126": {
       "reviewStatus": "Não enviado",
@@ -12415,8 +13542,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1127": {
       "reviewStatus": "Não enviado",
@@ -12426,8 +13554,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1128": {
       "reviewStatus": "Não enviado",
@@ -12437,8 +13566,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1129": {
       "reviewStatus": "Não enviado",
@@ -12448,8 +13578,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1130": {
       "reviewStatus": "Não enviado",
@@ -12459,8 +13590,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1131": {
       "reviewStatus": "Não enviado",
@@ -12470,8 +13602,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1132": {
       "reviewStatus": "Não enviado",
@@ -12481,8 +13614,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1133": {
       "reviewStatus": "Não enviado",
@@ -12492,8 +13626,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1134": {
       "reviewStatus": "Não enviado",
@@ -12503,8 +13638,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1135": {
       "reviewStatus": "Não enviado",
@@ -12514,8 +13650,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1136": {
       "reviewStatus": "Não enviado",
@@ -12525,8 +13662,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1137": {
       "reviewStatus": "Não enviado",
@@ -12536,8 +13674,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1138": {
       "reviewStatus": "Não enviado",
@@ -12547,8 +13686,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1139": {
       "reviewStatus": "Não enviado",
@@ -12558,8 +13698,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1140": {
       "reviewStatus": "Não enviado",
@@ -12569,8 +13710,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1141": {
       "reviewStatus": "Não enviado",
@@ -12580,8 +13722,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1142": {
       "reviewStatus": "Não enviado",
@@ -12591,8 +13734,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1143": {
       "reviewStatus": "Não enviado",
@@ -12602,8 +13746,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1144": {
       "reviewStatus": "Não enviado",
@@ -12613,8 +13758,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1145": {
       "reviewStatus": "Não enviado",
@@ -12624,8 +13770,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1146": {
       "reviewStatus": "Não enviado",
@@ -12635,8 +13782,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1147": {
       "reviewStatus": "Não enviado",
@@ -12646,8 +13794,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1148": {
       "reviewStatus": "Não enviado",
@@ -12657,8 +13806,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1149": {
       "reviewStatus": "Não enviado",
@@ -12668,8 +13818,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1150": {
       "reviewStatus": "Não enviado",
@@ -12679,8 +13830,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1151": {
       "reviewStatus": "Não enviado",
@@ -12690,8 +13842,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1152": {
       "reviewStatus": "Não enviado",
@@ -12701,8 +13854,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1153": {
       "reviewStatus": "Não enviado",
@@ -12712,8 +13866,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1154": {
       "reviewStatus": "Não enviado",
@@ -12723,8 +13878,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1155": {
       "reviewStatus": "Não enviado",
@@ -12734,8 +13890,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1156": {
       "reviewStatus": "Não enviado",
@@ -12745,8 +13902,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1157": {
       "reviewStatus": "Não enviado",
@@ -12756,8 +13914,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1158": {
       "reviewStatus": "Não enviado",
@@ -12767,8 +13926,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1159": {
       "reviewStatus": "Não enviado",
@@ -12778,8 +13938,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1160": {
       "reviewStatus": "Não enviado",
@@ -12789,8 +13950,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1161": {
       "reviewStatus": "Não enviado",
@@ -12800,8 +13962,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1162": {
       "reviewStatus": "Não enviado",
@@ -12811,8 +13974,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1163": {
       "reviewStatus": "Não enviado",
@@ -12822,8 +13986,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1164": {
       "reviewStatus": "Não enviado",
@@ -12833,8 +13998,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1165": {
       "reviewStatus": "Não enviado",
@@ -12844,8 +14010,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1166": {
       "reviewStatus": "Não enviado",
@@ -12855,8 +14022,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1167": {
       "reviewStatus": "Não enviado",
@@ -12866,8 +14034,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1168": {
       "reviewStatus": "Não enviado",
@@ -12877,8 +14046,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1169": {
       "reviewStatus": "Não enviado",
@@ -12888,8 +14058,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1170": {
       "reviewStatus": "Não enviado",
@@ -12899,8 +14070,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1171": {
       "reviewStatus": "Não enviado",
@@ -12910,8 +14082,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1172": {
       "reviewStatus": "Não enviado",
@@ -12921,8 +14094,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1173": {
       "reviewStatus": "Não enviado",
@@ -12932,8 +14106,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1174": {
       "reviewStatus": "Não enviado",
@@ -12943,8 +14118,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1175": {
       "reviewStatus": "Não enviado",
@@ -12954,8 +14130,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1176": {
       "reviewStatus": "Não enviado",
@@ -12965,8 +14142,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1177": {
       "reviewStatus": "Não enviado",
@@ -12976,8 +14154,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1178": {
       "reviewStatus": "Não enviado",
@@ -12987,8 +14166,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1179": {
       "reviewStatus": "Não enviado",
@@ -12998,8 +14178,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1180": {
       "reviewStatus": "Não enviado",
@@ -13009,8 +14190,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1181": {
       "reviewStatus": "Não enviado",
@@ -13020,8 +14202,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1182": {
       "reviewStatus": "Não enviado",
@@ -13031,8 +14214,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1183": {
       "reviewStatus": "Não enviado",
@@ -13042,8 +14226,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1184": {
       "reviewStatus": "Não enviado",
@@ -13053,8 +14238,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1185": {
       "reviewStatus": "Não enviado",
@@ -13064,8 +14250,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1186": {
       "reviewStatus": "Não enviado",
@@ -13075,8 +14262,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1187": {
       "reviewStatus": "Não enviado",
@@ -13086,8 +14274,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1188": {
       "reviewStatus": "Não enviado",
@@ -13097,8 +14286,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1189": {
       "reviewStatus": "Não enviado",
@@ -13108,8 +14298,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1190": {
       "reviewStatus": "Não enviado",
@@ -13119,8 +14310,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1191": {
       "reviewStatus": "Não enviado",
@@ -13130,8 +14322,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1192": {
       "reviewStatus": "Não enviado",
@@ -13141,8 +14334,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1193": {
       "reviewStatus": "Não enviado",
@@ -13152,8 +14346,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1194": {
       "reviewStatus": "Não enviado",
@@ -13163,8 +14358,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1195": {
       "reviewStatus": "Não enviado",
@@ -13174,8 +14370,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1196": {
       "reviewStatus": "Não enviado",
@@ -13185,8 +14382,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1197": {
       "reviewStatus": "Não enviado",
@@ -13196,8 +14394,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1198": {
       "reviewStatus": "Não enviado",
@@ -13207,8 +14406,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1199": {
       "reviewStatus": "Não enviado",
@@ -13218,8 +14418,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1200": {
       "reviewStatus": "Não enviado",
@@ -13229,8 +14430,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1201": {
       "reviewStatus": "Não enviado",
@@ -13240,8 +14442,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1202": {
       "reviewStatus": "Não enviado",
@@ -13251,8 +14454,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1203": {
       "reviewStatus": "Não enviado",
@@ -13262,8 +14466,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1204": {
       "reviewStatus": "Não enviado",
@@ -13273,8 +14478,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1205": {
       "reviewStatus": "Não enviado",
@@ -13284,8 +14490,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1206": {
       "reviewStatus": "Não enviado",
@@ -13295,8 +14502,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1207": {
       "reviewStatus": "Não enviado",
@@ -13306,8 +14514,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1208": {
       "reviewStatus": "Não enviado",
@@ -13317,8 +14526,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1209": {
       "reviewStatus": "Não enviado",
@@ -13328,8 +14538,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1210": {
       "reviewStatus": "Não enviado",
@@ -13339,8 +14550,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1211": {
       "reviewStatus": "Não enviado",
@@ -13350,8 +14562,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1212": {
       "reviewStatus": "Não enviado",
@@ -13361,8 +14574,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1213": {
       "reviewStatus": "Não enviado",
@@ -13372,8 +14586,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1214": {
       "reviewStatus": "Não enviado",
@@ -13383,8 +14598,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1215": {
       "reviewStatus": "Não enviado",
@@ -13394,8 +14610,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1216": {
       "reviewStatus": "Não enviado",
@@ -13405,8 +14622,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1217": {
       "reviewStatus": "Não enviado",
@@ -13416,8 +14634,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1218": {
       "reviewStatus": "Não enviado",
@@ -13427,8 +14646,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1219": {
       "reviewStatus": "Não enviado",
@@ -13438,8 +14658,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1220": {
       "reviewStatus": "Não enviado",
@@ -13449,8 +14670,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1221": {
       "reviewStatus": "Não enviado",
@@ -13460,8 +14682,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1222": {
       "reviewStatus": "Não enviado",
@@ -13471,8 +14694,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1223": {
       "reviewStatus": "Não enviado",
@@ -13482,8 +14706,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1224": {
       "reviewStatus": "Não enviado",
@@ -13493,8 +14718,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1225": {
       "reviewStatus": "Não enviado",
@@ -13504,8 +14730,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1226": {
       "reviewStatus": "Não enviado",
@@ -13515,8 +14742,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1227": {
       "reviewStatus": "Não enviado",
@@ -13526,8 +14754,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1228": {
       "reviewStatus": "Não enviado",
@@ -13537,8 +14766,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1229": {
       "reviewStatus": "Não enviado",
@@ -13548,8 +14778,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1230": {
       "reviewStatus": "Não enviado",
@@ -13559,8 +14790,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1231": {
       "reviewStatus": "Não enviado",
@@ -13570,8 +14802,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1232": {
       "reviewStatus": "Não enviado",
@@ -13581,8 +14814,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1233": {
       "reviewStatus": "Não enviado",
@@ -13592,8 +14826,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1234": {
       "reviewStatus": "Não enviado",
@@ -13603,8 +14838,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1235": {
       "reviewStatus": "Não enviado",
@@ -13614,8 +14850,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1236": {
       "reviewStatus": "Não enviado",
@@ -13625,8 +14862,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1237": {
       "reviewStatus": "Não enviado",
@@ -13636,8 +14874,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1238": {
       "reviewStatus": "Não enviado",
@@ -13647,8 +14886,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1239": {
       "reviewStatus": "Não enviado",
@@ -13658,8 +14898,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1240": {
       "reviewStatus": "Não enviado",
@@ -13669,8 +14910,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1241": {
       "reviewStatus": "Não enviado",
@@ -13680,8 +14922,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1242": {
       "reviewStatus": "Não enviado",
@@ -13691,8 +14934,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1243": {
       "reviewStatus": "Não enviado",
@@ -13702,8 +14946,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1244": {
       "reviewStatus": "Não enviado",
@@ -13713,8 +14958,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1245": {
       "reviewStatus": "Não enviado",
@@ -13724,8 +14970,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1246": {
       "reviewStatus": "Não enviado",
@@ -13735,8 +14982,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1247": {
       "reviewStatus": "Não enviado",
@@ -13746,8 +14994,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1248": {
       "reviewStatus": "Não enviado",
@@ -13757,8 +15006,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1249": {
       "reviewStatus": "Não enviado",
@@ -13768,8 +15018,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1250": {
       "reviewStatus": "Não enviado",
@@ -13779,8 +15030,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1251": {
       "reviewStatus": "Não enviado",
@@ -13790,8 +15042,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1252": {
       "reviewStatus": "Não enviado",
@@ -13801,8 +15054,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1253": {
       "reviewStatus": "Não enviado",
@@ -13812,8 +15066,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1254": {
       "reviewStatus": "Não enviado",
@@ -13823,8 +15078,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1255": {
       "reviewStatus": "Não enviado",
@@ -13834,8 +15090,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1256": {
       "reviewStatus": "Não enviado",
@@ -13845,8 +15102,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1257": {
       "reviewStatus": "Não enviado",
@@ -13856,8 +15114,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1258": {
       "reviewStatus": "Não enviado",
@@ -13867,8 +15126,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1259": {
       "reviewStatus": "Não enviado",
@@ -13878,8 +15138,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1260": {
       "reviewStatus": "Não enviado",
@@ -13889,8 +15150,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1261": {
       "reviewStatus": "Não enviado",
@@ -13900,8 +15162,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1262": {
       "reviewStatus": "Não enviado",
@@ -13911,8 +15174,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1263": {
       "reviewStatus": "Não enviado",
@@ -13922,8 +15186,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1264": {
       "reviewStatus": "Não enviado",
@@ -13933,8 +15198,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1265": {
       "reviewStatus": "Não enviado",
@@ -13944,8 +15210,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1266": {
       "reviewStatus": "Não enviado",
@@ -13955,8 +15222,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1267": {
       "reviewStatus": "Não enviado",
@@ -13966,8 +15234,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1268": {
       "reviewStatus": "Não enviado",
@@ -13977,8 +15246,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1269": {
       "reviewStatus": "Não enviado",
@@ -13988,8 +15258,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1270": {
       "reviewStatus": "Não enviado",
@@ -13999,8 +15270,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1271": {
       "reviewStatus": "Não enviado",
@@ -14010,8 +15282,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1272": {
       "reviewStatus": "Não enviado",
@@ -14021,8 +15294,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1273": {
       "reviewStatus": "Não enviado",
@@ -14032,8 +15306,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1274": {
       "reviewStatus": "Não enviado",
@@ -14043,8 +15318,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1275": {
       "reviewStatus": "Não enviado",
@@ -14054,8 +15330,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1276": {
       "reviewStatus": "Não enviado",
@@ -14065,8 +15342,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1277": {
       "reviewStatus": "Não enviado",
@@ -14076,8 +15354,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1278": {
       "reviewStatus": "Não enviado",
@@ -14087,8 +15366,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1279": {
       "reviewStatus": "Não enviado",
@@ -14098,8 +15378,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1280": {
       "reviewStatus": "Não enviado",
@@ -14109,8 +15390,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1281": {
       "reviewStatus": "Não enviado",
@@ -14120,8 +15402,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1282": {
       "reviewStatus": "Não enviado",
@@ -14131,8 +15414,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1283": {
       "reviewStatus": "Não enviado",
@@ -14142,8 +15426,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1284": {
       "reviewStatus": "Não enviado",
@@ -14153,8 +15438,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1285": {
       "reviewStatus": "Não enviado",
@@ -14164,8 +15450,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1286": {
       "reviewStatus": "Não enviado",
@@ -14175,8 +15462,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1287": {
       "reviewStatus": "Não enviado",
@@ -14186,8 +15474,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1288": {
       "reviewStatus": "Não enviado",
@@ -14197,8 +15486,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1289": {
       "reviewStatus": "Não enviado",
@@ -14208,8 +15498,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1290": {
       "reviewStatus": "Não enviado",
@@ -14219,8 +15510,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1291": {
       "reviewStatus": "Não enviado",
@@ -14230,8 +15522,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1292": {
       "reviewStatus": "Não enviado",
@@ -14241,8 +15534,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1293": {
       "reviewStatus": "Não enviado",
@@ -14252,8 +15546,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1294": {
       "reviewStatus": "Não enviado",
@@ -14263,8 +15558,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1295": {
       "reviewStatus": "Não enviado",
@@ -14274,8 +15570,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1296": {
       "reviewStatus": "Não enviado",
@@ -14285,8 +15582,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1297": {
       "reviewStatus": "Não enviado",
@@ -14296,8 +15594,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1298": {
       "reviewStatus": "Não enviado",
@@ -14307,8 +15606,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1299": {
       "reviewStatus": "Não enviado",
@@ -14318,8 +15618,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1300": {
       "reviewStatus": "Não enviado",
@@ -14329,8 +15630,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1301": {
       "reviewStatus": "Não enviado",
@@ -14340,8 +15642,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1302": {
       "reviewStatus": "Não enviado",
@@ -14351,8 +15654,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1303": {
       "reviewStatus": "Não enviado",
@@ -14362,8 +15666,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1304": {
       "reviewStatus": "Não enviado",
@@ -14373,8 +15678,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1305": {
       "reviewStatus": "Não enviado",
@@ -14384,8 +15690,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1306": {
       "reviewStatus": "Não enviado",
@@ -14395,8 +15702,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1307": {
       "reviewStatus": "Não enviado",
@@ -14406,8 +15714,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1308": {
       "reviewStatus": "Não enviado",
@@ -14417,8 +15726,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1309": {
       "reviewStatus": "Não enviado",
@@ -14428,8 +15738,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1310": {
       "reviewStatus": "Não enviado",
@@ -14439,8 +15750,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1311": {
       "reviewStatus": "Não enviado",
@@ -14450,8 +15762,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1312": {
       "reviewStatus": "Não enviado",
@@ -14461,8 +15774,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1313": {
       "reviewStatus": "Não enviado",
@@ -14472,8 +15786,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1314": {
       "reviewStatus": "Não enviado",
@@ -14483,8 +15798,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1315": {
       "reviewStatus": "Não enviado",
@@ -14494,8 +15810,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1316": {
       "reviewStatus": "Não enviado",
@@ -14505,8 +15822,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1317": {
       "reviewStatus": "Não enviado",
@@ -14516,8 +15834,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1318": {
       "reviewStatus": "Não enviado",
@@ -14527,8 +15846,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1319": {
       "reviewStatus": "Não enviado",
@@ -14538,8 +15858,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1320": {
       "reviewStatus": "Não enviado",
@@ -14549,8 +15870,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1321": {
       "reviewStatus": "Não enviado",
@@ -14560,8 +15882,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1322": {
       "reviewStatus": "Não enviado",
@@ -14571,8 +15894,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1323": {
       "reviewStatus": "Não enviado",
@@ -14582,8 +15906,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1324": {
       "reviewStatus": "Não enviado",
@@ -14593,8 +15918,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1325": {
       "reviewStatus": "Não enviado",
@@ -14604,8 +15930,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1326": {
       "reviewStatus": "Não enviado",
@@ -14615,8 +15942,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1327": {
       "reviewStatus": "Não enviado",
@@ -14626,8 +15954,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1328": {
       "reviewStatus": "Não enviado",
@@ -14637,8 +15966,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1329": {
       "reviewStatus": "Não enviado",
@@ -14648,8 +15978,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1330": {
       "reviewStatus": "Não enviado",
@@ -14659,8 +15990,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1331": {
       "reviewStatus": "Não enviado",
@@ -14670,8 +16002,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1332": {
       "reviewStatus": "Não enviado",
@@ -14681,8 +16014,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1333": {
       "reviewStatus": "Não enviado",
@@ -14692,8 +16026,9 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     },
     "CP-1334": {
       "reviewStatus": "Não enviado",
@@ -14703,8 +16038,24 @@ window.CDP_PUBLICATION_CONTROL = {
       "adjustmentRequired": false,
       "adjustmentExecuted": false,
       "resultingVersion": "",
-      "publicAuthorized": false,
-      "authorizationReason": "Conteúdo teológico não autorizado para exibição pública."
+      "publicAuthorized": true,
+      "authorizationReason": "Autorização expressa da titular para publicação do conteúdo teológico autoral. Revisão eclesial externa pendente.",
+      "ownerApprovalId": "AUT-TITULAR-CDP-2026-11-07-001"
     }
+  },
+  "ownerAuthorization": {
+    "id": "AUT-TITULAR-CDP-2026-11-07-001",
+    "recordedDate": "2026-11-07",
+    "authority": "Titular do projeto — autorização expressa na conversa GEB Tecnologia",
+    "decision": "Autorizar publicação pública do conteúdo teológico e editorial autoral registrado",
+    "authorizedForPublicWeb": true,
+    "authorizedSnapshotVersion": "teologico-1.5-snapshot-2026-10-28",
+    "authorizedSourceBlobSha": "e172c49628dbfec9316d3cf76efd0a170745c627",
+    "authorizedChapterCount": 1334,
+    "sourceSpreadsheetId": "1BLqxiBfOp0RAQ3SV_kuTG-oyEnN-M1gyJE22_6TEnXo",
+    "sourceSheet": "Autorizações — Titular",
+    "externalEcclesialReview": "Pendente — não implica aprovação eclesial",
+    "licensedBibleTextAuthorized": false,
+    "futureRevisionsAutomaticallyAuthorized": false
   }
 };

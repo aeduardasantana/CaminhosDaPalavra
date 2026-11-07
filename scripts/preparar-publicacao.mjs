@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { buildVerseIndex } from './gerar-indice-versiculos.mjs';
+import crypto from 'node:crypto';
 
 const root = process.cwd();
 const publicExtensions = new Set([
@@ -49,20 +50,37 @@ function createPublicEditorialPayloads() {
 
   const allowedReview = new Set(control.rule?.reviewStatusesAllowed || []);
   const allowedDecision = new Set(control.rule?.internalDecisionsAllowed || []);
+  const owner = control.ownerAuthorization;
+  let ownerValid=false;
+  if(owner){
+    const theologyFile=fs.readFileSync(path.join(root,'theology-data.js'));
+    const gitBlob=crypto.createHash('sha1').update('blob '+theologyFile.length+'\0').update(theologyFile).digest('hex');
+    ownerValid=owner.authorizedForPublicWeb===true
+      && owner.licensedBibleTextAuthorized===false
+      && owner.futureRevisionsAutomaticallyAuthorized===false
+      && owner.authorizedSourceBlobSha===gitBlob
+      && owner.authorizedSnapshotVersion===theology.manifest?.datasetVersion
+      && owner.authorizedChapterCount===1334;
+    if(!ownerValid)throw new Error('Autorização da titular não válida para este snapshot; publicação bloqueada.');
+  }
   const publicChapters = {};
   const publicControlChapters = {};
   let authorizedCount = 0;
 
   for (const [chapterKey, record] of Object.entries(theology.chapters || {})) {
     const state = control.chapters?.[record.cpId];
-    const authorized = state?.publicAuthorized === true
-      && allowedReview.has(state.reviewStatus)
-      && allowedDecision.has(state.internalDecision)
-      && (!state.adjustmentRequired || state.adjustmentExecuted);
+    const ecclesialApproved = allowedReview.has(state?.reviewStatus)
+      && allowedDecision.has(state?.internalDecision)
+      && (!state?.adjustmentRequired || state.adjustmentExecuted);
+    const ownerApproved=ownerValid&&state?.ownerApprovalId===owner.id;
+    const authorized = state?.publicAuthorized === true && (ecclesialApproved || ownerApproved);
 
     if (authorized) {
       publicChapters[chapterKey] = record;
-      publicControlChapters[record.cpId] = { publicAuthorized: true };
+      publicControlChapters[record.cpId] = {
+        publicAuthorized: true,
+        authorizationBasis: ownerApproved ? 'titular' : 'revisao-eclesial'
+      };
       authorizedCount++;
       continue;
     }
