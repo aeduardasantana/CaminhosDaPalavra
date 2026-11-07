@@ -16,8 +16,8 @@ A pasta de trabalho informada para arquivamento privado é https://drive.google.
 - O botão "Capítulo concluído" utiliza o mesmo armazenamento do plano atual, `lce-bible365-plan-v1`, com indexação idêntica dos 365 dias; o primeiro registro usa `lce-bible365-journey-start-v1`.
 - Links para esta área inseridos na Bíblia principal, no menu, nas experiências de capítulos e nos itens do plano.
 
-## Publicação e permissões
-Nenhum texto bíblico completo da Ave-Maria, nota editorial da edição ou PDF foi adicionado ao repositório ou ao FTP. A publicação atual utiliza **somente referências, metadados bibliográficos, navegação, conteúdo produzido pelo estudante e glosas preliminares já pertencentes ao repositório**. O acesso à redação completa redireciona para a fonte autorizada.
+## Fonte JSON armazenada e publicação
+Os arquivos integrais `bibliaAveMaria.json` e `bibliaAveMariaRAW.json` foram copiados para `data/biblia-ave-maria/` com hashes idênticos aos da fonte `fidalgobr/bibliaAveMariaJSON`. A pasta `data/` é excluída do pacote FTP por `scripts/preparar-publicacao.mjs`, e os JSONs ainda não estão conectados à interface pública. A página atual continua utilizando referências, metadados bibliográficos, navegação, conteúdo produzido pelo estudante e glosas preliminares já pertencentes ao repositório. Para o histórico técnico, ver `docs/FONTE-BIBLIA-AVE-MARIA-JSON.md`.
 
 A área de pesquisa textual permanece desabilitada sem um conjunto público de versículos autorizado. O núcleo oferece um contrato preparado para futuro arquivo `window.CDP_AVM_PUBLIC_DATA`; **não criar o arquivo nem adicioná-lo ao HTML enquanto não houver documento de permissão aplicável à publicação no domínio**.
 
@@ -51,8 +51,8 @@ Procedimento de auditoria visual após deploy:
 7. Testar telas de 320 px, 768 px e desktop, navegação por teclado e foco visível.
 
 ## Limites conhecidos
-- Livro e capítulos estão cobertos integralmente, mas **não há cadastro validado de total de versículos por capítulo**.
-- A busca textual da edição está desativada por ausência de conjunto autorizado.
+- O JSON original armazenado contém os versículos, mas a interface de estudo ainda não foi conectada à nova fonte.
+- A busca textual na interface de estudo permanece desativada até a integração dos dados e da política editorial de exibição.
 - Notas editoriais da edição estão identificadas na modelagem privada, mas não são servidas publicamente.
 - O armazenamento é local ao navegador: exportar arquivo antes de trocar de aparelho ou limpar os dados.
 - O plano de leitura permanece independente de uma data de início escolhida para impressão e não foi recalculado.
