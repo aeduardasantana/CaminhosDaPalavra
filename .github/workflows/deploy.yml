@@ -111,7 +111,7 @@ jobs:
           echo "Arquivos preparados para publicação:"
           find dist -type f -print | sort
 
-      - name: Limpar artefatos internos antigos sem excluir arquivos desconhecidos
+      - name: Remover apenas os dois JSONs bíblicos expostos na raiz FTP
         env:
           FTP_HOST: ${{ secrets.HOST }}
           FTP_USER: ${{ secrets.USER }}
@@ -127,3 +127,10 @@ jobs:
           forceSsl: "false"
           localDir: "./dist/"
           remoteDir: "./public_html/caminhosdapalavra/"
+
+      - name: Confirmar que os JSONs bíblicos não estão na raiz FTP
+        env:
+          FTP_HOST: ${{ secrets.HOST }}
+          FTP_USER: ${{ secrets.USER }}
+          FTP_PASS: ${{ secrets.PASS }}
+        run: python3 scripts/limpar-artefatos-ftp.py --verify-only

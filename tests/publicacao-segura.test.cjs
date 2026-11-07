@@ -39,14 +39,20 @@ try {
   ], { cwd: root, encoding: 'utf8' });
   assert.equal(cleanupPlanResult.status, 0, cleanupPlanResult.stderr || cleanupPlanResult.stdout);
   const cleanupPlan = JSON.parse(cleanupPlanResult.stdout);
+  assert.deepEqual(
+    cleanupPlan.paths,
+    ['bibliaAveMaria.json', 'bibliaAveMariaRAW.json'],
+    'A limpeza do P1 deve restringir-se aos dois JSONs da raiz FTP'
+  );
   const cleanupPaths = new Set(cleanupPlan.paths);
-  for (const internal of [
+  for (const forbidden of [
     'README.md',
     'scripts/preparar-publicacao.mjs',
     'tests/publicacao-segura.test.cjs',
     'data/mapa/publication-manifest.json'
   ]) {
-    assert.ok(cleanupPaths.has(internal), 'Artefato interno não consta na limpeza seletiva: ' + internal);
+    assert.ok(!cleanupPaths.has(forbidden),
+      'A limpeza do P1 não pode remover arquivos adicionais: ' + forbidden);
   }
   for (const publicFile of [
     'index.html',
@@ -55,6 +61,12 @@ try {
     'dados/heresias-controversias.json'
   ]) {
     assert.ok(!cleanupPaths.has(publicFile), 'Arquivo público foi marcado para remoção: ' + publicFile);
+  }
+
+  for (const file of ['bibliaAveMaria.json', 'bibliaAveMariaRAW.json']) {
+    assert.ok(fs.existsSync(path.join(root, file)), 'Arquivo original ausente: ' + file);
+    assert.ok(fs.existsSync(path.join(root, 'data', 'biblia-ave-maria', file)),
+      'Cópia interna ausente: ' + file);
   }
 
   const checkOutput = run(['--check']);
@@ -82,6 +94,8 @@ try {
   for (const forbidden of [
     'README.md',
     'CNAME',
+    'bibliaAveMaria.json',
+    'bibliaAveMariaRAW.json',
     'AUDITORIA-GLOSAS-ANO-A-241.csv',
     'scripts/validate-publication-control.mjs',
     'tests/publicacao-segura.test.cjs',

@@ -17,7 +17,7 @@ const excludedPrefixes = [
   'data/',
   'dist/'
 ];
-const excludedFiles = new Set(['CNAME']);
+const excludedFiles = new Set(['CNAME', 'bibliaAveMaria.json', 'bibliaAveMariaRAW.json']);
 
 function isPublicWebFile(file) {
   if (!file || file.startsWith('/') || file.split('/').includes('..')) return false;
