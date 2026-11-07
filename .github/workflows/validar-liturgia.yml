@@ -50,6 +50,7 @@ jobs:
         run: |
           node scripts/validate-theology-data.mjs
           node scripts/validate-publication-control.mjs
+          node scripts/validate-bible-search.mjs
       - name: Validar pacote público sem enviar ao FTP
         run: node scripts/preparar-publicacao.mjs --check
       - name: Regressões litúrgicas e rastreabilidade
