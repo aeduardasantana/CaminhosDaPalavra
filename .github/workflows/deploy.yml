@@ -124,6 +124,6 @@ jobs:
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
-          forceSsl: "true"
+          forceSsl: "false"
           localDir: "./dist/"
           remoteDir: "./public_html/caminhosdapalavra/"
