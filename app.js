@@ -46,6 +46,11 @@ const els = {
   bibleTestament: document.querySelector('#bibleTestament'),
   bibleBooks: document.querySelector('#bibleBooks'),
   bibleChapterPanel: document.querySelector('#bibleChapterPanel'),
+  bibleTransversalQuery: document.querySelector('#bibleTransversalQuery'),
+  bibleTransversalType: document.querySelector('#bibleTransversalType'),
+  bibleTransversalClear: document.querySelector('#bibleTransversalClear'),
+  bibleTransversalCount: document.querySelector('#bibleTransversalCount'),
+  bibleTransversalResults: document.querySelector('#bibleTransversalResults'),
 
   planStartDate: document.querySelector('#planStartDate'),
   printPlan: document.querySelector('#printPlan'),
@@ -1393,6 +1398,7 @@ function setSection(section, options = {}) {
   if (section === 'calendario' && (!options.fromHistory || !restoreCalendarHash())) renderCalendar();
   if (section === 'biblia') {
     renderBibleBooks();
+    renderBibleTransversalSearch();
     if (options.fromHistory) restoreBibleChapterFromUrl();
   }
   if (section === 'plano') renderPlan();
@@ -2116,6 +2122,230 @@ function restoreBibleChapterFromUrl() {
   return true;
 }
 
+
+const BIBLE_BOOK_ALIASES = Object.freeze({
+  GEN:['genesis','gn','gen'], EXO:['exodo','ex','exo'], LEV:['levitico','lv','lev'], NUM:['numeros','nm','num'],
+  DEU:['deuteronomio','dt','deu'], JOS:['josue','js','jos'], JDG:['juizes','jz','jdg'], RUT:['rute','rt','rut'],
+  '1SA':['1 samuel','i samuel','1sm','1 sa'], '2SA':['2 samuel','ii samuel','2sm','2 sa'],
+  '1KI':['1 reis','i reis','1rs','1 ki'], '2KI':['2 reis','ii reis','2rs','2 ki'],
+  '1CH':['1 cronicas','i cronicas','1cr','1 ch'], '2CH':['2 cronicas','ii cronicas','2cr','2 ch'],
+  EZR:['esdras','esd','ezr'], NEH:['neemias','ne','neh'], TOB:['tobias','tb','tob'], JDT:['judite','jd','jdt'],
+  EST:['ester','est'], '1MA':['1 macabeus','i macabeus','1mc','1 ma'], '2MA':['2 macabeus','ii macabeus','2mc','2 ma'],
+  JOB:['jo','job'], PSA:['salmos','salmo','sl','psa'], PRO:['proverbios','pr','pro'], ECC:['eclesiastes','ecl','ecc'],
+  SNG:['cantico dos canticos','canticos','ct','sng'], WIS:['sabedoria','sb','wis'], SIR:['eclesiastico','siracida','eclo','sir'],
+  ISA:['isaias','is','isa'], JER:['jeremias','jr','jer'], LAM:['lamentacoes','lm','lam'], BAR:['baruc','br','bar'],
+  EZK:['ezequiel','ez','ezk'], DAN:['daniel','dn','dan'], HOS:['oseias','os','hos'], JOL:['joel','jl','jol'],
+  AMO:['amos','am','amo'], OBA:['abdias','ab','oba'], JON:['jonas','jn','jon'], MIC:['miqueias','mq','mic'],
+  NAM:['naum','na','nam'], HAB:['habacuc','hc','hab'], ZEP:['sofonias','sf','zep'], HAG:['ageu','ag','hag'],
+  ZEC:['zacarias','zc','zec'], MAL:['malaquias','ml','mal'], MAT:['sao mateus','mateus','mt','mat'],
+  MRK:['sao marcos','marcos','mc','mrk'], LUK:['sao lucas','lucas','lc','luk'], JHN:['sao joao','joao','jo','jhn'],
+  ACT:['atos dos apostolos','atos','at','act'], ROM:['romanos','rm','rom'], '1CO':['1 corintios','i corintios','1cor','1 co'],
+  '2CO':['2 corintios','ii corintios','2cor','2 co'], GAL:['galatas','gl','gal'], EPH:['efesios','ef','eph'],
+  PHP:['filipenses','fl','php'], COL:['colossenses','cl','col'], '1TH':['1 tessalonicenses','i tessalonicenses','1ts','1 th'],
+  '2TH':['2 tessalonicenses','ii tessalonicenses','2ts','2 th'], '1TI':['1 timoteo','i timoteo','1tm','1 ti'],
+  '2TI':['2 timoteo','ii timoteo','2tm','2 ti'], TIT:['tito','tt','tit'], PHM:['filemon','fm','phm'],
+  HEB:['hebreus','hb','heb'], JAS:['sao tiago','tiago','tg','jas'], '1PE':['1 sao pedro','1 pedro','1pd','1 pe'],
+  '2PE':['2 sao pedro','2 pedro','2pd','2 pe'], '1JN':['1 sao joao','1 joao','1jo','1 jn'],
+  '2JN':['2 sao joao','2 joao','2jo','2 jn'], '3JN':['3 sao joao','3 joao','3jo','3 jn'],
+  JUD:['sao judas','judas','jd','jud'], REV:['apocalipse','ap','rev']
+});
+
+function bibleAliasTokens(book) {
+  return [...new Set([
+    book.id,
+    book.name,
+    ...(BIBLE_BOOK_ALIASES[book.id] || [])
+  ].map(normalize).filter(Boolean))];
+}
+
+function referenceQueryMatch(record, query) {
+  const q = normalize(query);
+  if (!q) return {match:false, score:0};
+  const book = bookById(record.bookId);
+  if (!book) return {match:false, score:0};
+
+  const aliases = bibleAliasTokens(book);
+  const direct = normalize(record.reference);
+  if (q === direct || q === normalize(book.name + ' ' + record.chapter) || q === normalize(record.bookId + ' ' + record.chapter)) {
+    return {match:true,score:100};
+  }
+
+  for (const alias of aliases) {
+    if (q === alias + ' ' + record.chapter || q === alias + record.chapter) return {match:true,score:98};
+  }
+
+  if (direct.includes(q)) return {match:true,score:80};
+  if (aliases.some(alias => alias.includes(q) || q.includes(alias))) return {match:true,score:55};
+  if (String(record.chapter) === q) return {match:true,score:15};
+  return {match:false,score:0};
+}
+
+function searchFieldValues(record) {
+  return {
+    theme: [record.mainTheme, record.secondaryThemes],
+    christ: [record.christRelation],
+    cic: [record.cic?.references, record.cic?.scope],
+    rosary: [record.rosary?.mystery, record.rosary?.nature],
+    connections: [record.biblicalConnections]
+  };
+}
+
+function theologicalMatch(record, query, type) {
+  const state = publicationStateForChapter(record);
+  if (!state.publicAuthorized) return {match:false,score:0,matchedFields:[]};
+
+  const q = normalize(query);
+  const fields = searchFieldValues(record);
+  const targetTypes = type === 'all'
+    ? ['theme','christ','cic','rosary','connections']
+    : [type];
+
+  const matchedFields=[];
+  let score=0;
+  for (const key of targetTypes) {
+    const hay = normalize((fields[key] || []).filter(Boolean).join(' '));
+    if (!hay) continue;
+    if (hay === q) { matchedFields.push(key); score=Math.max(score,95); }
+    else if (hay.includes(q)) { matchedFields.push(key); score=Math.max(score,75); }
+    else {
+      const words=q.split(/\s+/).filter(w=>w.length>2);
+      if (words.length && words.every(w=>hay.includes(w))) {
+        matchedFields.push(key); score=Math.max(score,60);
+      }
+    }
+  }
+  return {match:matchedFields.length>0,score,matchedFields};
+}
+
+function searchBibleTransversal(query, type='all') {
+  const q=String(query||'').trim();
+  if (!q) return [];
+
+  const results=[];
+  for (const record of Object.values(theology.chapters || {})) {
+    let reference={match:false,score:0};
+    let theological={match:false,score:0,matchedFields:[]};
+
+    if (type === 'all' || type === 'reference') reference=referenceQueryMatch(record,q);
+    if (type !== 'reference') theological=theologicalMatch(record,q,type);
+
+    if (!reference.match && !theological.match) continue;
+
+    const state=publicationStateForChapter(record);
+    results.push({
+      record,
+      state,
+      score:Math.max(reference.score,theological.score)+(state.publicAuthorized?2:0),
+      matchedFields:theological.matchedFields,
+      structuralMatch:reference.match
+    });
+  }
+
+  return results
+    .sort((a,b)=>b.score-a.score || a.record.cpId.localeCompare(b.record.cpId))
+    .slice(0,80);
+}
+
+const SEARCH_FIELD_LABELS = Object.freeze({
+  theme:'Tema',
+  christ:'Cristo',
+  cic:'Catecismo',
+  rosary:'Rosário',
+  connections:'Conexões'
+});
+
+function searchSnippet(record, matchedFields) {
+  for (const field of matchedFields) {
+    if (field==='theme') return meaningful(record.mainTheme,'');
+    if (field==='christ') return meaningful(record.christRelation,'');
+    if (field==='cic') return meaningful(record.cic?.references,'');
+    if (field==='rosary') return meaningful(record.rosary?.mystery,'');
+    if (field==='connections') return meaningful(record.biblicalConnections,'');
+  }
+  return '';
+}
+
+function renderBibleTransversalSearch() {
+  if (!els.bibleTransversalResults || !els.bibleTransversalCount) return;
+  const query=els.bibleTransversalQuery?.value || '';
+  const type=els.bibleTransversalType?.value || 'all';
+  els.bibleTransversalResults.replaceChildren();
+
+  if (!query.trim()) {
+    els.bibleTransversalCount.textContent='';
+    return;
+  }
+
+  const results=searchBibleTransversal(query,type);
+  els.bibleTransversalCount.textContent = results.length
+    ? results.length + (results.length===1?' resultado':' resultados') + (results.length===80?' (primeiros 80)':'')
+    : 'Nenhum resultado público encontrado.';
+
+  if (!results.length) {
+    const empty=document.createElement('div');
+    empty.className='empty-state bible-search-empty';
+    empty.textContent = type === 'reference'
+      ? 'Tente o nome do livro, abreviação ou número do capítulo.'
+      : 'Nenhum conteúdo autorizado corresponde à busca. Campos em revisão permanecem fora do índice público.';
+    els.bibleTransversalResults.appendChild(empty);
+    return;
+  }
+
+  results.forEach(({record,state,matchedFields,structuralMatch})=>{
+    const book=bookById(record.bookId);
+    if(!book) return;
+
+    const card=document.createElement('article');
+    card.className='bible-search-result' + (state.publicAuthorized?' is-authorized':' is-review');
+
+    const main=document.createElement('div');
+    const meta=document.createElement('p');
+    meta.className='eyebrow';
+    meta.textContent = state.publicAuthorized
+      ? [record.cpId,...matchedFields.map(f=>SEARCH_FIELD_LABELS[f])].filter(Boolean).join(' · ')
+      : record.cpId + ' · conteúdo teológico em revisão';
+
+    const title=document.createElement('h4');
+    title.textContent=record.reference;
+
+    const snippet=document.createElement('p');
+    snippet.className='bible-search-snippet';
+    if (state.publicAuthorized && matchedFields.length) {
+      snippet.textContent=searchSnippet(record,matchedFields);
+    } else if (structuralMatch) {
+      snippet.textContent='Capítulo localizado no corpus. A leitura integral está disponível na Bíblia Ave-Maria.';
+    } else {
+      snippet.textContent='Conteúdo teológico ainda não autorizado para exibição pública.';
+    }
+    main.append(meta,title,snippet);
+
+    const actions=document.createElement('div');
+    actions.className='bible-search-result-actions';
+
+    const open=document.createElement('button');
+    open.type='button';
+    open.className='secondary-button';
+    open.textContent=state.publicAuthorized?'Abrir estudo':'Abrir capítulo';
+    open.addEventListener('click',()=>{
+      selectedBookId=book.id;
+      renderBibleBooks();
+      renderTheologyCard(book,record.chapter,record);
+      els.bibleChapterPanel.scrollIntoView({behavior:window.matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth',block:'start'});
+    });
+
+    const read=document.createElement('a');
+    read.className='secondary-link';
+    read.href=record.bibleUrl || chapterUrl(book.id,record.chapter);
+    read.target='_blank';
+    read.rel='noopener';
+    read.textContent='Ler Bíblia Ave-Maria';
+
+    actions.append(open,read);
+    card.append(main,actions);
+    els.bibleTransversalResults.appendChild(card);
+  });
+}
+
 /* Plano de leitura da Bíblia */
 const PLAN_STORAGE_KEY = 'lce-bible365-plan-v1';
 const START_STORAGE_KEY = 'lce-bible365-start-v1';
@@ -2561,6 +2791,19 @@ if (litYearSelect) litYearSelect.addEventListener('change',()=>{
 });
 
 [els.bibleQuery, els.bibleTestament].forEach(el => el.addEventListener('input', renderBibleBooks));
+
+if (els.bibleTransversalQuery && els.bibleTransversalType) {
+  els.bibleTransversalQuery.addEventListener('input', renderBibleTransversalSearch);
+  els.bibleTransversalType.addEventListener('change', renderBibleTransversalSearch);
+}
+if (els.bibleTransversalClear) {
+  els.bibleTransversalClear.addEventListener('click', () => {
+    els.bibleTransversalQuery.value='';
+    els.bibleTransversalType.value='all';
+    renderBibleTransversalSearch();
+    els.bibleTransversalQuery.focus();
+  });
+}
 
 const storedStart = localStorage.getItem(START_STORAGE_KEY) || localStorage.getItem(LEGACY_START_STORAGE_KEY);
 if (storedStart) {
