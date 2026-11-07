@@ -117,10 +117,11 @@ def connect_ftp():
     parsed = urlparse(raw_host if "://" in raw_host else "ftp://" + raw_host)
     if not parsed.hostname:
         raise RuntimeError("FTP_HOST não contém um host válido.")
-    ftp = ftplib.FTP_TLS(timeout=30)
+    # A hospedagem atual responde em FTP comum e rejeita AUTH TLS.
+    # A conexão segue o mesmo protocolo usado pelo deploy oficial da Locaweb.
+    ftp = ftplib.FTP(timeout=30)
     ftp.connect(parsed.hostname, parsed.port or 21)
     ftp.login(username, password)
-    ftp.prot_p()
     return ftp
 
 
