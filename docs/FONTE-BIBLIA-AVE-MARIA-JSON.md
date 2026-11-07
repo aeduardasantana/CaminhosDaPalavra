@@ -1,35 +1,38 @@
-# Fonte externa — Bíblia Ave-Maria em JSON
+# Fonte da Bíblia Ave-Maria em JSON — registro de cópia
 
-**Registro:** 07/11/2026  
-**Estado:** fonte identificada e auditoria estrutural informada; cópia integral não incorporada por ausência de autorização documental de redistribuição.
+**Atualização:** 07/11/2026  
+**Estado:** os dois arquivos originais foram copiados para o repositório CaminhosDaPalavra, na pasta `data/biblia-ave-maria/`, para preparação do conteúdo de estudo.
 
-## Proveniência
+## Origem e rastreabilidade
 
-- Repositório de origem: https://github.com/fidalgobr/bibliaAveMariaJSON
-- Ramificação consultada: `main`
-- Arquivo principal: `bibliaAveMaria.json` — SHA Git blob `4b18758111c97c16c1e0d26f7d61e39bec20a765` — 6.618.747 bytes
-- Arquivo alternativo: `bibliaAveMariaRAW.json` — SHA Git blob `2277c2509c8a1f73e5537a3b8f7bc26edf20fd82` — 5.442.856 bytes
-- README: https://github.com/fidalgobr/bibliaAveMariaJSON/blob/main/README.md
-- A listagem consultada não apresenta arquivo LICENSE nem termo expresso de autorização de reprodução da edição bíblica.
+- Origem: https://github.com/fidalgobr/bibliaAveMariaJSON
+- Arquivo: `data/biblia-ave-maria/bibliaAveMaria.json`
+  - Git blob SHA: `4b18758111c97c16c1e0d26f7d61e39bec20a765`
+  - Tamanho: 6.618.747 bytes
+- Arquivo: `data/biblia-ave-maria/bibliaAveMariaRAW.json`
+  - Git blob SHA: `2277c2509c8a1f73e5537a3b8f7bc26edf20fd82`
+  - Tamanho: 5.442.856 bytes
+- Procedimento de cópia e conferência: `.github/workflows/copiar-biblia-ave-maria-json.yml`.
+- Os hashes verificados no destino correspondem aos arquivos de origem consultados.
 
-## Resultado da auditoria fornecida pela responsável
+## Contagens da base
 
-| Recorte | Livros | Capítulos | Versículos |
+| Testamento | Livros | Capítulos | Versículos |
 | --- | ---: | ---: | ---: |
-| Antigo Testamento | 46 | 1.074 | 27.498 |
-| Novo Testamento | 27 | 260 | 7.952 |
-| Total | 73 | 1.334 | 35.450 |
+| Antigo | 46 | 1.074 | 27.498 |
+| Novo | 27 | 260 | 7.952 |
+| **Total** | **73** | **1.334** | **35.450** |
 
-Segundo o relatório de auditoria fornecido, os JSONs não apresentam capítulos vazios, lacunas ou duplicações na sequência de versículos nem textos vazios. Os dois formatos foram relatados como semanticamente equivalentes. **Este registro preserva os resultados informados; não representa uma nova auditoria integral dos versículos.** Não houve cotejo textual com a edição impressa.
+A rotina de importação confere ambas as versões do JSON, sequências de capítulos e versículos, ausência de texto vazio e hashes dos arquivos.
 
-## Limites de uso
+## Integração com o projeto
 
-1. A publicação pública do repositório de origem **não equivale** à concessão de licença sobre o texto bíblico.
-2. Não copiar os arquivos integrais para este repositório público, publicá-los no site ou distribuí-los no deploy sem documentação de autorização compatível com o uso pretendido.
-3. Não confundir a tradução Ave-Maria com a redação litúrgica oficial do Lecionário brasileiro.
-4. Não substituir ou reaproveitar automaticamente as glosas litúrgicas para a tradução Ave-Maria.
-5. Manter íntegros os dados, scripts e acervos litúrgicos existentes.
+- **Situação:** arquivos copiados para armazenamento no repositório; a interface de estudo ainda não os carrega automaticamente.
+- **Deploy:** a pasta `data/` está excluída pelo script `scripts/preparar-publicacao.mjs`. Os arquivos não entram no pacote FTP da Locaweb.
+- **Independência editorial:** nenhum arquivo de liturgia, glosa, Lecionário ou plano de leitura foi substituído.
+- **Próximos trabalhos técnicos:** indexação por livro, capítulo e versículo; navegação no módulo de estudo; pesquisa e sincronização com anotações, mantendo separadas a redação Ave-Maria, a redação litúrgica e as glosas.
+- **Decisões editoriais e condições de uso/publicação:** responsabilidade da titular do projeto; a cópia técnica não altera automaticamente a política de exibição do site.
 
-## Próxima etapa condicionada
+## Identificação da fonte
 
-Verificar a titularidade e obter autorização expressa de reprodução digital e redistribuição para a edição e os dados em questão, ou selecionar uma tradução cujo regime de licença permita o uso. Depois, registrar a autorização, incorporar a base de modo isolado, validar hashes e contagens, testar a navegação e revisar a integração editorial antes de liberar o deploy.
+A integridade estrutural e a identidade binária dos arquivos não comprovam, por si, cotejo textual com uma edição impressa; tal confronto permanece uma verificação editorial distinta.
