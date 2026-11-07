@@ -1501,3 +1501,73 @@ select,
   font-size: .82rem;
   font-weight: 750;
 }
+
+
+/* BLOCO 17 — busca transversal */
+.bible-transversal-search {
+  margin: 0 0 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--surface-soft);
+}
+.bible-transversal-heading h3 {
+  margin: 2px 0 6px;
+}
+.bible-transversal-controls {
+  display: grid;
+  grid-template-columns: minmax(0,2fr) minmax(180px,.8fr) auto;
+  gap: 10px;
+  align-items: end;
+  margin-top: 14px;
+}
+.bible-search-governance {
+  margin: 10px 0 0;
+  color: var(--muted);
+  font-size: .78rem;
+  line-height: 1.45;
+}
+.bible-transversal-results {
+  display: grid;
+  gap: 10px;
+  margin-top: 12px;
+}
+.bible-search-result {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto;
+  gap: 14px;
+  align-items: center;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+.bible-search-result.is-review {
+  background: #fcfaf5;
+  border-style: dashed;
+}
+.bible-search-result h4 {
+  margin: 2px 0 5px;
+  color: var(--deep);
+}
+.bible-search-snippet {
+  margin: 0;
+  color: var(--muted);
+  font-size: .86rem;
+  line-height: 1.5;
+}
+.bible-search-result-actions {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.bible-search-empty {
+  padding: 14px 0 0;
+}
+@media (max-width: 760px) {
+  .bible-transversal-controls { grid-template-columns: 1fr; }
+  .bible-search-result { grid-template-columns: 1fr; }
+  .bible-search-result-actions { justify-content: stretch; }
+  .bible-search-result-actions > * { width: 100%; }
+}
