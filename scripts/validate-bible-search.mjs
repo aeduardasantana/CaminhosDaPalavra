@@ -28,6 +28,9 @@ if(!app.includes("type === 'reference'")) errors.push('filtro livro/capítulo au
 for(const field of ["theme","christ","cic","rosary","connections"]){
   if(!app.includes(field+":")) errors.push('campo de busca ausente: '+field);
 }
+if(!app.includes('parseDetailedBibleReference(query,type)'))errors.push('busca exata de versículos ausente');
+if(!app.includes('core.validateVerseIndex(window.CDP_VERSE_INDEX,catalog)'))errors.push('índice de versículos não é validado');
+if(!app.includes('window.location.assign(studyChapterUrl(book.id,record.chapter)'))errors.push('link profundo para versículos ausente');
 if(!app.includes('renderTheologyCard(book,record.chapter,record)')) errors.push('resultado não navega para capítulo');
 if(authorized.length!==(publication.counts?.authorized??authorized.length)) errors.push('contagem de autorizados divergente');
 

@@ -2217,9 +2217,35 @@ function theologicalMatch(record, query, type) {
   return {match:matchedFields.length>0,score,matchedFields};
 }
 
+function parseDetailedBibleReference(query,type) {
+  if(type!=='all'&&type!=='reference')return null;
+  const q=String(query||'').trim();
+  // A sintaxe com versículos tem tratamento exato; não se reduz a uma busca pelo nome do livro.
+  if(!/[,.:]\s*\d{1,3}(?:\s*-\s*\d{1,3})?\s*$/.test(q))return null;
+  const core=window.CDP_BIBLE_STUDY_CORE;
+  if(!core)return {error:'Verificador de versículos indisponível.'};
+  try {
+    const catalog=core.catalog(bible);
+    core.validateVerseIndex(window.CDP_VERSE_INDEX,catalog);
+    return core.parseReference(q,catalog,window.CDP_VERSE_INDEX);
+  } catch {
+    return {error:'Índice de versículos indisponível nesta sessão.'};
+  }
+}
+
 function searchBibleTransversal(query, type='all') {
   const q=String(query||'').trim();
   if (!q) return [];
+
+  const exact=parseDetailedBibleReference(q,type);
+  if(exact){
+    if(exact.error)return [];
+    const record=theologyForChapter(exact.book.id,exact.chapter);
+    if(!record)return [];
+    const state=publicationStateForChapter(record);
+    return [{record,state,score:110,matchedFields:[],structuralMatch:true,
+      verseRange:{start:exact.start,end:exact.end}}];
+  }
 
   const results=[];
   for (const record of Object.values(theology.chapters || {})) {
@@ -2276,7 +2302,16 @@ function renderBibleTransversalSearch() {
     return;
   }
 
+  const exact=parseDetailedBibleReference(query,type);
   const results=searchBibleTransversal(query,type);
+  if(exact?.error){
+    els.bibleTransversalCount.textContent=exact.error;
+    const warning=document.createElement('p');
+    warning.className='empty-state bible-search-empty';
+    warning.textContent='Corrija o livro, capítulo ou intervalo de versículos e pesquise novamente.';
+    els.bibleTransversalResults.appendChild(warning);
+    return;
+  }
   els.bibleTransversalCount.textContent = results.length
     ? results.length + (results.length===1?' resultado':' resultados') + (results.length===80?' (primeiros 80)':'')
     : 'Nenhum resultado público encontrado.';
@@ -2291,7 +2326,7 @@ function renderBibleTransversalSearch() {
     return;
   }
 
-  results.forEach(({record,state,matchedFields,structuralMatch})=>{
+  results.forEach(({record,state,matchedFields,structuralMatch,verseRange})=>{
     const book=bookById(record.bookId);
     if(!book) return;
 
@@ -2306,7 +2341,9 @@ function renderBibleTransversalSearch() {
       : record.cpId + ' · conteúdo teológico em revisão';
 
     const title=document.createElement('h4');
-    title.textContent=record.reference;
+    title.textContent=verseRange
+      ? window.CDP_BIBLE_STUDY_CORE.formatReference(book,record.chapter,verseRange.start,verseRange.end)
+      : record.reference;
 
     const snippet=document.createElement('p');
     snippet.className='bible-search-snippet';
@@ -2325,8 +2362,14 @@ function renderBibleTransversalSearch() {
     const open=document.createElement('button');
     open.type='button';
     open.className='secondary-button';
-    open.textContent=state.publicAuthorized?'Abrir estudo':'Abrir capítulo';
+    open.textContent=verseRange?'Estudar versículos':
+      (state.publicAuthorized?'Abrir estudo':'Abrir capítulo');
     open.addEventListener('click',()=>{
+      if(verseRange){
+        const fragment=verseRange.start+(verseRange.end!==verseRange.start?'-'+verseRange.end:'');
+        window.location.assign(studyChapterUrl(book.id,record.chapter)+'&versiculo='+fragment);
+        return;
+      }
       selectedBookId=book.id;
       renderBibleBooks();
       renderTheologyCard(book,record.chapter,record);
