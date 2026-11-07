@@ -1,0 +1,24 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const read=path=>fs.readFileSync(path,'utf8');
+const page=read('acessibilidade.html'),access=read('acessibilidade.js');
+const menu=read('site-menu.js'),study=read('biblia-estudo.html');
+const home=read('index.html'),app=read('app.js');
+const control=read('scripts/preparar-publicacao.mjs');
+for(const id of ['accessNarration','accessPlay','accessStop'])
+  assert.ok(page.includes('id="'+id+'"'),'Acessibilidade: campo ausente '+id);
+assert.match(page,/site-menu\.js/);
+assert.match(access,/speechSynthesis/);
+assert.match(menu,/vlibras\.gov\.br\/app\/vlibras-plugin\.js/);
+assert.match(menu,/acessibilidade\.html/);
+assert.match(study,/studyReadAloud/);
+assert.match(study,/studyStopAloud/);
+assert.ok(!study.includes('https://www.bible.com/pt/versions/4542'));
+assert.ok(!home.includes('href="https://www.bible.com/pt/versions/4542"'));
+assert.ok(!app.includes('read.href=record.bibleUrl'));
+assert.ok(!app.includes('read.href = record.bibleUrl'));
+assert.ok(app.includes('return studyChapterUrl(bookId,chapter);'));
+assert.ok(!app.includes('A revisão eclesial externa não foi concluída'));
+assert.ok(control.includes('const authorized = state?.publicAuthorized === true && ownerApproved;'));
+assert.ok(page.includes('audiodescrição sincronizada'));
+console.log('Leitor interno, VLibras, narração e independência eclesial: contratos aprovados.');
