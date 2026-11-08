@@ -7,7 +7,7 @@
   <title>Bíblia para estudo — Caminhos da Palavra</title>
   <link rel="stylesheet" href="./styles.css?v=20261029">
   <link rel="stylesheet" href="./site-menu.css?v=20261029">
-  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-mapa1">
+  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-notas1">
 </head>
 <body>
   <header class="site-header">
@@ -140,6 +140,12 @@
             <h3 id="study-text-title">Texto bíblico — Ave-Maria</h3>
             <p class="study-pane-meta">Bíblia Sagrada Ave-Maria · leitura pública integral no Caminhos da Palavra.</p>
             <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
+            <aside id="studyFootnotes" class="study-footnotes" aria-labelledby="studyFootnotesTitle">
+              <h4 id="studyFootnotesTitle">Notas e referências da leitura</h4>
+              <p id="studyFootnotesStatus" class="study-help" role="status" aria-live="polite">Carregando as referências vinculadas ao trecho...</p>
+              <div id="studyFootnotesList"></div>
+              <div id="studyChapterReferences"></div>
+            </aside>
             <div class="study-selection-actions" role="group" aria-label="Leitura em voz alta">
               <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir capítulo ou passagem</button>
               <button id="studyStopAloud" class="secondary-button" type="button" disabled>Parar leitura</button>
@@ -177,6 +183,17 @@
     </div>
   </main>
   <footer class="app-footer"><p>© 2026 Caminhos da Palavra. Todos os direitos reservados.</p><a href="./index.html#inicio">Voltar ao início</a></footer>
+  <dialog id="studyFootnoteDialog" class="study-footnote-dialog" aria-labelledby="studyFootnoteDialogTitle">
+    <div class="study-footnote-dialog-head">
+      <div>
+        <p class="eyebrow">Nota contextual da Bíblia</p>
+        <h3 id="studyFootnoteDialogTitle"></h3>
+      </div>
+      <button id="studyFootnoteDialogClose" type="button" class="secondary-button">Fechar</button>
+    </div>
+    <p id="studyFootnoteDialogScope" class="study-footnote-dialog-scope"></p>
+    <div id="studyFootnoteDialogBody"></div>
+  </dialog>
   <script src="./bible-data.js"></script>
   <script src="./verse-index.js?v=20261107-17b"></script>
   <script src="./glosa-psalms.js"></script>
@@ -187,8 +204,9 @@
   <script src="./glosas-revisadas-ano-b.js"></script>
   <script src="./glosas-revisadas-ano-c.js"></script>
   <script src="./biblia-estudo-core.js?v=20261107-17b"></script>
+  <script src="./vinculos-estudo-core.js?v=20261108-notas1"></script>
   <script src="./theology-data.js?v=20261108-estudo1"></script>
   <script src="./publication-control.js?v=20261108-estudo1"></script>
-  <script src="./biblia-estudo.js?v=20261108-mapa1"></script>
+  <script src="./biblia-estudo.js?v=20261108-notas1"></script>
 </body>
 </html>
