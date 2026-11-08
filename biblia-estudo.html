@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Bíblia para estudo — referência por livro, capítulo e versículos, notas pessoais e glosas preliminares no Caminhos da Palavra.">
+  <meta name="description" content="Bíblia Sagrada Ave-Maria integral para leitura pública por livro, capítulo e versículo, com busca, áudio, anotações e recursos acessíveis.">
   <title>Bíblia para estudo — Caminhos da Palavra</title>
   <link rel="stylesheet" href="./styles.css?v=20261029">
   <link rel="stylesheet" href="./site-menu.css?v=20261029">
@@ -27,13 +27,13 @@
       <div>
         <p class="eyebrow">Sagrada Escritura · 73 livros</p>
         <h2 id="study-main-title">Bíblia para estudo</h2>
-        <p>Escolha livro, capítulo e versículos, organize suas marcações e consulte as referências do plano de leitura. Este leitor pertence ao Caminhos da Palavra. A reprodução integral da tradução Ave-Maria será ativada após licença da editora.</p>
+        <p>Leia a Bíblia Sagrada Ave-Maria integralmente neste site. Navegue pelos livros, capítulos e versículos, pesquise o texto, escute a leitura e organize suas anotações e o plano de 365 dias.</p>
       </div>
       <div class="study-edition" aria-label="Edição de referência">
         <span class="study-edition-label">Edição de referência</span>
         <strong>Bíblia Sagrada — Ave-Maria</strong>
         <span>2ª edição · arquivo de estudos recebido</span>
-        <small>Leitor, anotações e navegação próprios do projeto; direitos de reprodução da tradução reservados.</small>
+        <small>Texto da edição Ave-Maria. Direitos da tradução: Editora Ave-Maria. Plataforma de leitura: Caminhos da Palavra.</small>
       </div>
     </section>
 
@@ -43,12 +43,12 @@
         <input id="studyReferenceInput" type="search" autocomplete="off" maxlength="110" placeholder="Ex.: Jo 3,16-18 · Gn 1 · 1Cor 13,4-7">
         <button class="primary-action" type="submit">Ir à referência</button>
       </form>
-      <p class="study-help">A busca verifica livro, capítulo e existência dos versículos na estrutura do JSON Ave-Maria incorporado. A referência é validada aqui. O texto integral será exibido neste leitor quando houver autorização específica de reprodução.</p>
+      <p class="study-help">Pesquise uma referência exata ou escolha o livro e o capítulo. A leitura é apresentada integralmente nesta página, sem abrir uma plataforma externa.</p>
       <div class="study-text-search">
         <label for="studyTextQuery">Busca textual na edição Ave-Maria</label>
-        <input id="studyTextQuery" type="search" placeholder="Indisponível sem texto autorizado" disabled>
-        <button id="studyTextButton" class="secondary-button" type="button" disabled>Buscar texto</button>
-        <p id="studyTextStatus" class="study-help">A pesquisa textual será habilitada somente se houver material com autorização explícita para exibição pública.</p>
+        <input id="studyTextQuery" type="search" placeholder="Ex.: amor, misericórdia, esperança">
+        <button id="studyTextButton" class="secondary-button" type="button">Buscar texto</button>
+        <p id="studyTextStatus" class="study-help">Pesquise palavras e expressões em todos os 73 livros da Bíblia Ave-Maria.</p>
         <div id="studyTextResults" aria-live="polite"></div>
       </div>
       <p id="studyFeedback" role="status" aria-live="polite"></p>
@@ -89,6 +89,10 @@
             </label>
           </div>
           <p id="studyVerseLimit" class="study-help" role="status">Verificando a contagem exata de versículos deste capítulo…</p>
+          <div class="study-selection-actions" role="group" aria-label="Navegação entre capítulos">
+            <button id="studyPrevChapter" class="secondary-button" type="button">Capítulo anterior</button>
+            <button id="studyNextChapter" class="secondary-button" type="button">Próximo capítulo</button>
+          </div>
           <div class="study-selection">
             <div>
               <strong id="studyCurrentReference">Selecione uma referência</strong>
@@ -110,19 +114,19 @@
         <section class="study-content-grid" aria-label="Materiais separados por natureza">
           <article class="card study-pane study-text-pane" aria-labelledby="study-text-title">
             <h3 id="study-text-title">Texto bíblico — Ave-Maria</h3>
-            <p class="study-pane-meta">Redação original da edição, condicionada à permissão de reprodução.</p>
+            <p class="study-pane-meta">Bíblia Sagrada Ave-Maria · leitura pública integral no Caminhos da Palavra.</p>
             <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
             <div class="study-selection-actions" role="group" aria-label="Leitura em voz alta">
-              <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir versículos disponíveis</button>
+              <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir capítulo ou passagem</button>
               <button id="studyStopAloud" class="secondary-button" type="button" disabled>Parar leitura</button>
             </div>
-            <p class="study-help">A leitura em voz alta utiliza a voz do navegador quando houver texto licenciado. Não substitui audiodescrição de vídeos.</p>
+            <p class="study-help">Leitura em voz alta pelo navegador, com controles para iniciar e interromper. Não substitui audiodescrição sincronizada de vídeos.</p>
           </article>
           <article class="card study-pane study-editorial-pane" aria-labelledby="study-editorial-title">
             <h3 id="study-editorial-title">Introduções e comentários editoriais</h3>
             <p class="study-pane-meta">Materiais próprios da edição, separados dos versículos.</p>
             <div id="studyEditorialContent">
-              <p>A edição de estudos possui material editorial identificado no PDF recebido. Introduções, títulos e notas ainda não foram importados para exibição pública com autorização de reprodução.</p>
+              <p>Os versículos estão disponíveis na íntegra; introduções e comentários específicos da edição de estudos são mantidos em módulo separado.</p>
             </div>
           </article>
           <article class="card study-pane study-note-pane" aria-labelledby="study-note-title">
@@ -159,6 +163,6 @@
   <script src="./glosas-revisadas-ano-b.js"></script>
   <script src="./glosas-revisadas-ano-c.js"></script>
   <script src="./biblia-estudo-core.js?v=20261107-17b"></script>
-  <script src="./biblia-estudo.js?v=20261107-17b-acesso1"></script>
+  <script src="./biblia-estudo.js?v=20261107-publica1"></script>
 </body>
 </html>

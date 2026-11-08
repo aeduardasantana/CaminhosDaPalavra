@@ -157,6 +157,31 @@ try {
   assert.equal(verseIndex.counts.chapters,1334);
   assert.equal(verseIndex.counts.verses,35450);
   assert.equal(verseIndex.books.GEN[0],31);
+  const distributedBible=files.filter(file=>/^dados\/biblia-ave-maria\/[A-Z0-9]{3}\.json$/.test(file));
+  assert.equal(distributedBible.length,73,'Os 73 livros precisam constar no pacote público.');
+  let distributedVerses=0,distributedChapters=0;
+  for(const [bookId,counts] of Object.entries(verseIndex.books)){
+    const file='dados/biblia-ave-maria/'+bookId+'.json';
+    assert.ok(fileSet.has(file),'Livro bíblico ausente: '+bookId);
+    const payload=JSON.parse(fs.readFileSync(path.join(output,file),'utf8'));
+    assert.equal(payload.schemaVersion,1);
+    assert.equal(payload.editionId,'AVM-ESTUDOS-2');
+    assert.equal(payload.bookId,bookId);
+    assert.equal(payload.chapters.length,counts.length);
+    for(let ch=0;ch<counts.length;ch++){
+      const chapter=payload.chapters[ch];
+      assert.equal(chapter.chapter,ch+1);
+      assert.equal(chapter.verses.length,counts[ch]);
+      for(let v=0;v<counts[ch];v++){
+        assert.equal(chapter.verses[v].verse,v+1);
+        assert.ok(typeof chapter.verses[v].text==='string'&&chapter.verses[v].text.trim());
+        distributedVerses++;
+      }
+      distributedChapters++;
+    }
+  }
+  assert.equal(distributedChapters,1334);
+  assert.equal(distributedVerses,35450);
   const serializedIndex=fs.readFileSync(path.join(output,'verse-index.js'),'utf8');
   assert.ok(!serializedIndex.includes('"texto"'),'Redação bíblica foi publicada no índice.');
   assert.ok(!serializedIndex.includes('"text"'),'Índice contém texto bíblico.');
@@ -165,7 +190,7 @@ try {
   assert.ok(!serializedControl.includes('reviewer'), 'Metadados internos de revisão foram publicados.');
   assert.ok(!serializedControl.includes('Não enviado'), 'Status interno de revisão foi publicado.');
 
-  console.log('Pacote público seguro validado:', files.length, 'arquivos; dados de capítulos não autorizados foram reduzidos a metadados.');
+  console.log('Pacote público completo validado:', files.length, 'arquivos; 73 livros, 1334 capítulos, 35450 versículos Ave-Maria publicados e Mapa Teológico preservado.');
 } finally {
   fs.rmSync(tempRoot, { recursive: true, force: true });
 }

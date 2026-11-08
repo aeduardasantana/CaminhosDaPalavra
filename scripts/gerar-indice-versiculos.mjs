@@ -16,7 +16,7 @@ function normalizeName(input) {
     .replace(/[^a-z0-9]+/g,' ').trim();
 }
 
-export function buildVerseIndex() {
+export function buildVerseIndex({includeText=false}={}) {
   const sandbox={window:{}};
   vm.runInNewContext(fs.readFileSync(path.join(root,'bible-data.js'),'utf8'),sandbox);
   const catalog=sandbox.window.LCE_BIBLE?.books;
@@ -27,6 +27,7 @@ export function buildVerseIndex() {
     {key:'novoTestamento',testament:'NT',expected:27}
   ];
   const books=Object.create(null);
+  const publicBooks=includeText?Object.create(null):null;
   let bookCount=0,chapterCount=0,verseCount=0;
   for(const section of sections) {
     const sourceBooks=source[section.key];
@@ -77,6 +78,18 @@ export function buildVerseIndex() {
       });
       if(books[expected.id]) throw new Error('Livro duplicado: '+expected.id);
       books[expected.id]=counts;
+      if(includeText){
+        publicBooks[expected.id]={
+          schemaVersion:1,
+          editionId:'AVM-ESTUDOS-2',
+          bookId:expected.id,
+          bookName:expected.name,
+          chapters:original.capitulos.map(ch=>({
+            chapter:Number(ch.capitulo),
+            verses:ch.versiculos.map(v=>({verse:Number(v.versiculo),text:v.texto}))
+          }))
+        };
+      }
       bookCount++;
     });
     if(used.size!==sourceBooks.length) {
@@ -88,7 +101,7 @@ export function buildVerseIndex() {
     throw new Error('Cobertura bíblica divergente: '+JSON.stringify({bookCount,chapterCount,verseCount}));
   }
   return {schemaVersion:1,source:'biblia-ave-maria-json-local',sourceStructure:'versiculos-numerados-em-sequencia',
-    counts:{books:bookCount,chapters:chapterCount,verses:verseCount},books};
+    counts:{books:bookCount,chapters:chapterCount,verses:verseCount},books,...(includeText?{publicBooks}:{})};
 }
 
 if(process.argv[1]&&path.resolve(process.argv[1])===fileURLToPath(import.meta.url)) {
