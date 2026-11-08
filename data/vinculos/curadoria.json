@@ -1,0 +1,6 @@
+{
+  "schemaVersion": 1,
+  "description": "Curadoria explícita para vínculos específicos entre versículos, passagens e palavras/expressões. Não inferir relações a partir de textos de capítulos.",
+  "observations": [],
+  "lexicalAnchors": []
+}
