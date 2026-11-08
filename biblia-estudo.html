@@ -7,7 +7,7 @@
   <title>Bíblia para estudo — Caminhos da Palavra</title>
   <link rel="stylesheet" href="./styles.css?v=20261029">
   <link rel="stylesheet" href="./site-menu.css?v=20261029">
-  <link rel="stylesheet" href="./biblia-estudo.css?v=20261029-1">
+  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-mapa1">
 </head>
 <body>
   <header class="site-header">
@@ -111,8 +111,32 @@
           </div>
         </section>
 
+        <nav class="study-context-links" aria-label="Ir para uma parte deste capítulo">
+          <a href="#studyTheologySection">Estudo do capítulo</a>
+          <a href="#studyTextPane">Texto bíblico</a>
+          <a href="#studyNotesPane">Anotações pessoais</a>
+          <a href="#studyGlosaPane">Glosas de apoio</a>
+        </nav>
+        <section class="card study-theology-pane" id="studyTheologySection" aria-labelledby="study-theology-title">
+          <div class="study-theology-heading">
+            <div>
+              <p class="eyebrow">Mapa Bíblico Mestre · Teológico 1.5</p>
+              <h3 id="study-theology-title">Estudo deste capítulo</h3>
+              <p class="study-pane-meta">Campos autorais do Mapa Bíblico Mestre, associados ao livro e capítulo selecionados.</p>
+            </div>
+            <span class="study-theology-id" id="studyTheologyId"></span>
+          </div>
+          <p id="studyTheologyStatus" class="study-help" role="status" aria-live="polite"></p>
+          <div id="studyTheologyFields" class="study-theology-fields"></div>
+          <details class="study-theology-method">
+            <summary>Ver classificação, fontes e rastreabilidade da matriz</summary>
+            <dl id="studyTheologyTrace" class="study-theology-trace"></dl>
+          </details>
+          <p class="study-help">Os registros permanecem conforme a pesquisa Teológico 1.5. “Não identificado nesta revisão” e “Pendente” indicam o estado documentado da pesquisa, não uma avaliação episcopal da versão atual.</p>
+        </section>
+
         <section class="study-content-grid" aria-label="Materiais separados por natureza">
-          <article class="card study-pane study-text-pane" aria-labelledby="study-text-title">
+          <article class="card study-pane study-text-pane" id="studyTextPane" aria-labelledby="study-text-title">
             <h3 id="study-text-title">Texto bíblico — Ave-Maria</h3>
             <p class="study-pane-meta">Bíblia Sagrada Ave-Maria · leitura pública integral no Caminhos da Palavra.</p>
             <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
@@ -129,7 +153,7 @@
               <p>Os versículos estão disponíveis na íntegra; introduções e comentários específicos da edição de estudos são mantidos em módulo separado.</p>
             </div>
           </article>
-          <article class="card study-pane study-note-pane" aria-labelledby="study-note-title">
+          <article class="card study-pane study-note-pane" id="studyNotesPane" aria-labelledby="study-note-title">
             <h3 id="study-note-title">Minhas marcações e anotações</h3>
             <p class="study-pane-meta">Conteúdo pessoal gravado somente neste navegador.</p>
             <label for="studyPersonalNote">Anotação para a referência selecionada</label>
@@ -142,7 +166,7 @@
             <details><summary>Minhas passagens marcadas</summary><div id="studyBookmarksList"></div></details>
             <p class="study-help">As notas não são enviadas ao GEB nem ao GitHub. Exporte cópias para evitar perda de dados se limpar o navegador.</p>
           </article>
-          <article class="card study-pane study-glosa-pane" aria-labelledby="study-glosa-title">
+          <article class="card study-pane study-glosa-pane" id="studyGlosaPane" aria-labelledby="study-glosa-title">
             <h3 id="study-glosa-title">Glosas para Libras — apoio de estudo</h3>
             <p class="study-pane-meta">Glosas autorais preliminares por referência, vinculadas ao repertório litúrgico. Não são tradução certificada para Libras nem redação da Bíblia Ave-Maria.</p>
             <div id="studyGlosaContent"></div>
@@ -163,6 +187,8 @@
   <script src="./glosas-revisadas-ano-b.js"></script>
   <script src="./glosas-revisadas-ano-c.js"></script>
   <script src="./biblia-estudo-core.js?v=20261107-17b"></script>
-  <script src="./biblia-estudo.js?v=20261107-publica1"></script>
+  <script src="./theology-data.js?v=20261108-estudo1"></script>
+  <script src="./publication-control.js?v=20261108-estudo1"></script>
+  <script src="./biblia-estudo.js?v=20261108-mapa1"></script>
 </body>
 </html>

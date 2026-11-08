@@ -85,3 +85,44 @@
 @media(max-width:480px){.study-shell{padding-top:16px}.study-shell .card{padding:15px}.study-picker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.study-search-row{grid-template-columns:1fr}.study-text-search{grid-template-columns:1fr}.study-selection-actions>a,.study-selection-actions>button{flex:1;text-align:center}.study-selection-actions{width:100%}.study-plan-strip{align-items:flex-start}.study-hero h2{font-size:1.9rem}}
 @media(prefers-reduced-motion:reduce){.study-shell *{scroll-behavior:auto;transition:none!important}}
 @media print{.site-header,.study-catalog,.study-search,.study-note-actions,.study-selection-actions,.study-plan-strip{display:none!important}.study-layout,.study-content-grid,.study-hero{display:block!important}.study-shell{width:100%!important}.study-pane{break-inside:avoid}.study-note-pane textarea{border:0}}
+
+/* Mapa Bíblico Mestre 1.5: a matriz aparece na mesma página do leitor. */
+.study-context-links{display:flex;flex-wrap:wrap;gap:9px;margin:0}
+.study-context-links a{display:inline-block;border:1px solid #d4c5aa;padding:10px 12px;
+  background:#fffdf8;color:#59411c;border-radius:7px;font-size:.87rem;font-weight:650}
+.study-context-links a:hover,.study-context-links a:focus-visible{background:#f4ead7}
+.study-theology-pane{border-top:4px solid #826226!important}
+.study-theology-heading{display:flex;justify-content:space-between;align-items:start;flex-wrap:wrap;gap:12px}
+.study-theology-heading h3{margin:4px 0 6px;font-size:1.25rem}
+.study-theology-id{font-size:.77rem;font-weight:700;color:#67563b;letter-spacing:.03em}
+.study-theology-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:17px}
+.study-theology-field{padding:14px;border:1px solid #e2d8c6;background:#fffdf9;min-width:0}
+.study-theology-field h4{font-size:.93rem;font-weight:750;color:#5e471f;margin:0 0 8px}
+.study-theology-field>p{line-height:1.6;font-size:.96rem;overflow-wrap:anywhere;margin:0}
+.study-theology-field .study-theology-scope{margin-top:9px;border-top:1px solid #ece2d3;padding-top:8px;
+  font-size:.82rem;color:#6a5e4a}
+.study-theology-scope strong{font-weight:750}
+.study-theology-related{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}
+.study-related-link{display:inline-block;border:1px solid #d3bc8b;padding:7px 10px;margin-top:8px;
+  color:#59411c;text-decoration:none;font-weight:650;font-size:.82rem;overflow-wrap:anywhere}
+.study-related-link:hover{text-decoration:underline;background:#f6ebd5}
+.study-theology-method{margin-top:17px;padding:13px;border:1px solid #ddd3c1;background:#fcfaf6}
+.study-theology-method summary{cursor:pointer;font-weight:750;color:#4f3e21}
+.study-theology-trace{display:grid;grid-template-columns:minmax(180px,1fr) minmax(0,2fr);
+  margin:14px 0 0;gap:0}
+.study-theology-trace dt,.study-theology-trace dd{margin:0;padding:8px 9px;border-bottom:1px solid #e9e0d2;
+  overflow-wrap:anywhere;font-size:.83rem;line-height:1.5}
+.study-theology-trace dt{font-weight:750;color:#655230}
+.study-theology-trace dd{color:#51483a}
+.study-text-pane{grid-column:1/-1}
+@media(max-width:790px){
+  .study-theology-fields{grid-template-columns:1fr}
+  .study-theology-field{padding:12px}
+}
+@media(max-width:480px){
+  .study-context-links{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  .study-context-links a{text-align:center;padding:9px 7px}
+  .study-theology-trace{grid-template-columns:1fr}
+  .study-theology-trace dt{padding-bottom:3px;border-bottom:0}
+  .study-theology-trace dd{padding-top:0}
+}

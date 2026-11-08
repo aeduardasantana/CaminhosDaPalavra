@@ -24,7 +24,9 @@
     noteStatus:$('studyNoteStatus'),textQuery:$('studyTextQuery'),textButton:$('studyTextButton'),
     textStatus:$('studyTextStatus'),textResults:$('studyTextResults'),
     readAloud:$('studyReadAloud'),stopAloud:$('studyStopAloud'),
-    prevChapter:$('studyPrevChapter'),nextChapter:$('studyNextChapter')
+    prevChapter:$('studyPrevChapter'),nextChapter:$('studyNextChapter'),
+    theologyFields:$('studyTheologyFields'),theologyTrace:$('studyTheologyTrace'),
+    theologyStatus:$('studyTheologyStatus'),theologyId:$('studyTheologyId')
   };
   const NOTES_KEY='cdp-avm-study-notes-v1',PLAN_KEY='lce-bible365-plan-v1',JOURNEY_KEY='lce-bible365-journey-start-v1';
   const VALID_KEY=/^[A-Z0-9]{2,4}:\d{1,3}(?::\d{1,3}(?:-\d{1,3})?)?$/;
@@ -114,7 +116,13 @@
   function renderChapters(){
     ui.book.value=active.book.id;
     ui.chapter.replaceChildren();
-    for(let n=1;n<=active.book.chapters;n++){const option=make('option','',String(n));option.value=String(n);ui.chapter.appendChild(option);}
+    for(let n=1;n<=active.book.chapters;n++){
+      const total=verseIndexReady?C.verseCount(verseIndex,active.book.id,n):null;
+      const label=total===null?String(n):n+' · '+total+' versículos';
+      const option=make('option','',label);
+      option.value=String(n);
+      ui.chapter.appendChild(option);
+    }
     ui.chapter.value=String(active.chapter);
     const count=verseIndexReady?C.verseCount(verseIndex,active.book.id,active.chapter):null;
     for(const field of [ui.start,ui.end]){
@@ -194,6 +202,100 @@
     ui.editorial.appendChild(make('p','','Introduções, títulos, comentários e notas da edição de estudos estão catalogados separadamente do texto bíblico na preparação técnica. Não há material editorial autorizado para exibição pública vinculado a esta referência.'));
     ui.editorial.appendChild(make('p','study-help','Isso não impede suas anotações próprias no leitor interno.'));
   }
+  // O painel reproduz o snapshot público já autorizado do Mapa Bíblico Mestre.
+  // Não completa por inferência os campos ausentes e não usa o parecer episcopal futuro.
+  function renderTheology(){
+    const chapterKey=active.book.id+':'+active.chapter;
+    const record=window.CDP_THEOLOGY?.chapters?.[chapterKey]||null;
+    const control=record?.cpId
+      ? window.CDP_PUBLICATION_CONTROL?.chapters?.[record.cpId] : null;
+    ui.theologyFields.replaceChildren();
+    ui.theologyTrace.replaceChildren();
+    ui.theologyId.textContent=record?.cpId||'';
+    if(!record||control?.publicAuthorized!==true){
+      ui.theologyStatus.textContent='Não há registro autoral autorizado para este capítulo no pacote público atual.';
+      return;
+    }
+    ui.theologyStatus.textContent=(record.reference||active.book.name+' '+active.chapter)+
+      ' · '+(record.matrixVersion||'Mapa Teológico 1.5');
+    const fieldText=value=>{
+      const normalized=String(value??'').trim();
+      return normalized||'Sem registro neste campo da matriz.';
+    };
+    const cards=[
+      {title:'Tema principal',body:record.mainTheme,detail:record.themeScope},
+      {title:'Temas secundários',body:record.secondaryThemes,detail:record.secondaryThemesScope},
+      {title:'História da Salvação / etapa',body:record.salvationHistory},
+      {title:'Cenário / período narrativo',body:record.narrativePeriod},
+      {title:'Aliança / marco',body:record.covenant},
+      {title:'Relação com Cristo',body:record.christRelation},
+      {title:'Conexões bíblicas',body:record.biblicalConnections},
+      {title:'Mistério do Rosário',body:record.rosary?.mystery,detail:record.rosary?.nature,
+        detailLabel:'Natureza da relação'},
+      {title:'Catecismo da Igreja Católica (CIC)',body:record.cic?.references,
+        detail:record.cic?.scope,detailLabel:'Escopo da referência',sourceUrl:record.cic?.url},
+      {title:'São Pio X',body:record.piusX?.references,
+        detail:record.piusX?.scope,detailLabel:'Escopo da referência'}
+    ];
+    for(const item of cards){
+      const card=make('article','study-theology-field');
+      const title=make('h4','',item.title);
+      const value=make('p','',fieldText(item.body));
+      card.append(title,value);
+      if(item.detail){
+        const scope=make('p','study-theology-scope');
+        scope.append(make('strong','',item.detailLabel||'Escopo do campo'),
+          document.createTextNode(': '+fieldText(item.detail)));
+        card.appendChild(scope);
+      }
+      if(item.title==='Conexões bíblicas'&&record.biblicalConnections){
+        const links=make('nav','study-theology-related');
+        links.setAttribute('aria-label','Abrir referências bíblicas relacionadas neste leitor');
+        const seen=new Set();
+        for(const raw of String(record.biblicalConnections).split(';').slice(0,24)){
+          const reference=raw.trim();
+          if(!reference||seen.has(reference))continue;
+          seen.add(reference);
+          const parsed=C.parseReference(reference,books,verseIndex);
+          if(parsed.error||!parsed.book||!parsed.chapter)continue;
+          const href=linkTo({book:parsed.book,chapter:parsed.chapter,
+            start:parsed.start??null,end:parsed.end??null});
+          const link=make('a','study-related-link','Ler '+reference);
+          link.href=href;
+          links.appendChild(link);
+        }
+        if(links.childElementCount)card.appendChild(links);
+      }
+      if(item.sourceUrl&&/^https:\/\/(?:www\.)?vatican\.va\//i.test(item.sourceUrl)){
+        const link=make('a','study-related-link','Consultar a referência do CIC no Vaticano');
+        link.href=item.sourceUrl;
+        link.target='_blank';
+        link.rel='noopener noreferrer';
+        card.appendChild(link);
+      }
+      ui.theologyFields.appendChild(card);
+    }
+    const trace=[
+      ['ID',record.cpId],
+      ['Testamento',record.testament],
+      ['Conjunto literário',record.literaryGroup],
+      ['Livro',record.book],
+      ['Capítulo',record.chapter],
+      ['Referência bíblica',record.reference],
+      ['Bíblia URL registrada na matriz (histórico, não é o leitor)',record.bibleUrl],
+      ['Classe A/B/C/D',record.connectionClass],
+      ['Status da pesquisa',record.matrixStatus],
+      ['Versão da matriz',record.matrixVersion],
+      ['Tipo de fonte da conexão / relação cristológica',record.sourceType],
+      ['Escopo / especificidade da fonte',record.sourceScope],
+      ['Nível de confiabilidade',record.confidence]
+    ];
+    for(const [label,value] of trace){
+      const term=make('dt','',label);
+      const description=make('dd','',fieldText(value));
+      ui.theologyTrace.append(term,description);
+    }
+  }
   function renderGlosas(){
     ui.glosas.replaceChildren();
     const contextual={A:window.LCE_GLOSSA_ANO_A_REVISADA||{},B:window.LCE_GLOSSA_ANO_B_REVISADA||{},C:window.LCE_GLOSSA_ANO_C_REVISADA||{}};
@@ -247,7 +349,7 @@
     ui.edition.textContent=C.EDITION.label+' · '+C.EDITION.edition;
     ui.source.href='#studyVerseText';
     ui.query.value=C.formatReference(active.book,active.chapter,active.start,active.end);
-    renderText();renderEditorial();renderNotes();renderGlosas();renderPlan();
+    renderText();renderTheology();renderEditorial();renderNotes();renderGlosas();renderPlan();
   }
   function resolveInputs(){
     const selected=Number(ui.chapter.value);const verse=parsedFields();
