@@ -307,7 +307,7 @@
       for(const item of selected){
         const row=make('p','study-verse-row');
         row.id='versiculo-'+item.verse;
-        row.append(make('b','',item.verse+' '),document.createTextNode(item.text));
+        row.append(make('b','',item.verse+' '));
         for(const note of plan.markers[item.verse]||[]){
           const marker=make('button','study-footnote-marker',String(note.number));
           marker.type='button';
@@ -320,6 +320,7 @@
           marker.addEventListener('click',()=>openFootnote(note.link,linksResult.index,note.number,marker));
           row.appendChild(marker);
         }
+        row.appendChild(document.createTextNode(' '+item.text));
         ui.text.appendChild(row);
       }
       if(linksResult.index)renderFootnotes(plan,linksResult.index);
