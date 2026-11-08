@@ -240,3 +240,16 @@
   .study-context-tabs,.study-search-more,.study-edition-details{display:none}
   .study-doctrine-details[open]{display:block}
 }
+
+/* Cabeçalho da página de leitura sem duas faixas verticais no celular. */
+@media(max-width:790px){
+  body.study-page .site-header .header-inner{
+    flex-direction:row!important;flex-wrap:nowrap!important;align-items:center;
+    justify-content:space-between;min-height:60px;gap:8px;padding-block:8px
+  }
+  body.study-page .site-header .brand-block{flex:1 1 auto;min-width:0}
+  body.study-page .site-header .brand-block h1{font-size:clamp(.95rem,3.4vw,1.14rem);line-height:1.1}
+  body.study-page .site-menu-trigger{white-space:nowrap;font-size:.73rem;
+    min-height:38px;padding:8px 10px;gap:5px}
+  body.study-page .site-menu-symbol{font-size:1.05rem}
+}
