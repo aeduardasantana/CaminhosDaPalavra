@@ -2,6 +2,7 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { execFileSync } from 'node:child_process';
 import { buildVerseIndex } from './gerar-indice-versiculos.mjs';
+import { fromRepository as buildStudyLinks } from './gerar-vinculos-estudo.mjs';
 import crypto from 'node:crypto';
 
 const root = process.cwd();
@@ -149,6 +150,7 @@ if (invalidIncluded.length) {
 const editorialPayloads = createPublicEditorialPayloads();
 const {publicBooks,...verseIndex}=buildVerseIndex({includeText:true});
 const bibleBookIds=Object.keys(publicBooks);
+const studyLinks=buildStudyLinks(editorialPayloads.theology,editorialPayloads.control,verseIndex);
 if(bibleBookIds.length!==73)throw new Error('Publicação bíblica incompleta: número de livros inválido.');
 const biblePublicCount=bibleBookIds.reduce((total,id)=>total+
   publicBooks[id].chapters.reduce((sum,ch)=>sum+ch.verses.length,0),0);
@@ -157,10 +159,11 @@ if(publicFiles.includes('verse-index.js'))throw new Error('Índice gerado não d
 
 if (process.argv.includes('--check')) {
   console.log(
-    'Pacote público validado:', publicFiles.length+1+bibleBookIds.length, 'arquivos;',
+    'Pacote público validado:', publicFiles.length+2+bibleBookIds.length, 'arquivos;',
     editorialPayloads.authorizedCount, 'capítulos autorizados;',
     editorialPayloads.blockedCount, 'mantidos bloqueados com metadados mínimos;',
-    verseIndex.counts.verses, 'versículos com contagem por capítulo validada.'
+    verseIndex.counts.verses, 'versículos com contagem por capítulo validada;',
+    studyLinks.counts.contextualDictionaryLinks, 'vínculos documentais com verbetes.'
   );
   process.exit(0);
 }
@@ -217,6 +220,8 @@ try {
     'window.CDP_VERSE_INDEX = '+JSON.stringify(verseIndex)+';\n',
     'utf8'
   );
+  const studyIndexPath=path.join(outputDir,'dados','vinculos-estudo.json');
+  fs.writeFileSync(studyIndexPath,JSON.stringify(studyLinks),'utf8');
   const bibleOutput=path.join(outputDir,'dados','biblia-ave-maria');
   fs.mkdirSync(bibleOutput,{recursive:true});
   for(const bookId of bibleBookIds){
@@ -229,8 +234,9 @@ try {
 }
 
 console.log(
-  'Pacote público criado:', publicFiles.length+1+bibleBookIds.length, 'arquivos em', outputDir + ';',
+  'Pacote público criado:', publicFiles.length+2+bibleBookIds.length, 'arquivos em', outputDir + ';',
   editorialPayloads.authorizedCount, 'capítulos autorizados;',
   editorialPayloads.blockedCount, 'capítulos com conteúdo restrito;',
-  biblePublicCount, 'versículos da Bíblia Ave-Maria publicados em 73 arquivos por livro.'
+  biblePublicCount, 'versículos da Bíblia Ave-Maria publicados em 73 arquivos por livro;',
+  studyLinks.counts.contextualDictionaryLinks, 'vínculos com verbetes rastreados.'
 );
