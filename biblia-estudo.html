@@ -7,7 +7,7 @@
   <title>Bíblia para estudo — Caminhos da Palavra</title>
   <link rel="stylesheet" href="./styles.css?v=20261029">
   <link rel="stylesheet" href="./site-menu.css?v=20261029">
-  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-notas1">
+  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-doutrina1">
 </head>
 <body>
   <header class="site-header">
@@ -23,18 +23,16 @@
       <a href="./index.html#biblia">Bíblia Sagrada</a><span aria-hidden="true"> / </span>
       <strong>Bíblia para estudo</strong>
     </nav>
-    <section class="study-hero" aria-labelledby="study-main-title">
+    <section class="study-hero study-hero-compact" aria-labelledby="study-main-title">
       <div>
-        <p class="eyebrow">Sagrada Escritura · 73 livros</p>
-        <h2 id="study-main-title">Bíblia para estudo</h2>
-        <p>Leia a Bíblia Sagrada Ave-Maria integralmente neste site. Navegue pelos livros, capítulos e versículos, pesquise o texto, escute a leitura e organize suas anotações e o plano de 365 dias.</p>
+        <p class="eyebrow">Sagrada Escritura · Doutrina católica</p>
+        <h2 id="study-main-title">Ler e aprofundar a fé</h2>
+        <p>Palavra de Deus, Catecismo da Igreja Católica e São Pio X.</p>
       </div>
-      <div class="study-edition" aria-label="Edição de referência">
-        <span class="study-edition-label">Edição de referência</span>
-        <strong>Bíblia Sagrada — Ave-Maria</strong>
-        <span>2ª edição · arquivo de estudos recebido</span>
-        <small>Texto da edição Ave-Maria. Direitos da tradução: Editora Ave-Maria. Plataforma de leitura: Caminhos da Palavra.</small>
-      </div>
+      <details class="study-edition-details">
+        <summary>Sobre a edição bíblica</summary>
+        <p>Bíblia Sagrada Ave-Maria, 2ª edição. Direitos da tradução: Editora Ave-Maria. Leitura no Caminhos da Palavra.</p>
+      </details>
     </section>
 
     <section class="study-search card" aria-label="Pesquisa por referência">
@@ -43,20 +41,24 @@
         <input id="studyReferenceInput" type="search" autocomplete="off" maxlength="110" placeholder="Ex.: Jo 3,16-18 · Gn 1 · 1Cor 13,4-7">
         <button class="primary-action" type="submit">Ir à referência</button>
       </form>
-      <p class="study-help">Pesquise uma referência exata ou escolha o livro e o capítulo. A leitura é apresentada integralmente nesta página, sem abrir uma plataforma externa.</p>
-      <div class="study-text-search">
-        <label for="studyTextQuery">Busca textual na edição Ave-Maria</label>
+      
+      <details class="study-search-more">
+        <summary>Buscar palavras na Bíblia</summary>
+        <div class="study-text-search">
+        <label for="studyTextQuery">Palavra ou expressão</label>
         <input id="studyTextQuery" type="search" placeholder="Ex.: amor, misericórdia, esperança">
         <button id="studyTextButton" class="secondary-button" type="button">Buscar texto</button>
-        <p id="studyTextStatus" class="study-help">Pesquise palavras e expressões em todos os 73 livros da Bíblia Ave-Maria.</p>
+        <p id="studyTextStatus" class="study-help"></p>
         <div id="studyTextResults" aria-live="polite"></div>
-      </div>
+        </div>
+      </details>
       <p id="studyFeedback" role="status" aria-live="polite"></p>
     </section>
 
     <div class="study-layout">
       <aside class="study-catalog card" aria-labelledby="study-catalog-title">
-        <h3 id="study-catalog-title">Livros da Bíblia Católica</h3>
+        <details id="studyCatalogDisclosure" open>
+        <summary id="study-catalog-title">Escolher outro livro</summary>
         <div class="study-catalog-filters">
           <label for="studyBookFilter">Filtrar livro</label>
           <input id="studyBookFilter" type="search" placeholder="Nome ou abreviatura">
@@ -68,12 +70,12 @@
           </select>
         </div>
         <div id="studyBookList" class="study-book-list" aria-label="Catálogo de 73 livros"></div>
+        </details>
       </aside>
 
       <div class="study-main">
         <section class="card study-picker" aria-labelledby="study-chapter-title">
-          <p class="eyebrow">Navegação bíblica</p>
-          <h3 id="study-chapter-title">Livro, capítulo e versículos</h3>
+          <h3 id="study-chapter-title">Escolher a passagem</h3>
           <div class="study-picker-grid">
             <label>Livro
               <select id="studyBookSelect" aria-label="Livro bíblico"></select>
@@ -81,14 +83,14 @@
             <label>Capítulo
               <select id="studyChapterSelect" aria-label="Capítulo bíblico"></select>
             </label>
-            <label>Versículo inicial (opcional)
+            <label>Do versículo
               <input id="studyVerseStart" type="number" min="1" step="1" inputmode="numeric" placeholder="Início">
             </label>
-            <label>Versículo final (opcional)
+            <label>Até o versículo
               <input id="studyVerseEnd" type="number" min="1" step="1" inputmode="numeric" placeholder="Fim">
             </label>
           </div>
-          <p id="studyVerseLimit" class="study-help" role="status">Verificando a contagem exata de versículos deste capítulo…</p>
+          <p id="studyVerseLimit" class="study-help" role="status"></p>
           <div class="study-selection-actions" role="group" aria-label="Navegação entre capítulos">
             <button id="studyPrevChapter" class="secondary-button" type="button">Capítulo anterior</button>
             <button id="studyNextChapter" class="secondary-button" type="button">Próximo capítulo</button>
@@ -99,7 +101,7 @@
               <span id="studyCurrentEdition">Bíblia Sagrada — Ave-Maria · 2ª edição</span>
             </div>
             <div class="study-selection-actions">
-              <a id="studyOpenSource" class="primary-link" href="#studyVerseText">Ir ao texto neste site</a>
+              <a id="studyOpenSource" class="primary-link" href="#studyVerseText">Ler a passagem</a>
               <button id="studyCopyReference" type="button" class="secondary-button">Copiar referência</button>
               <button id="studyBookmark" type="button" class="secondary-button" aria-pressed="false">Marcar passagem</button>
             </div>
@@ -111,34 +113,18 @@
           </div>
         </section>
 
-        <nav class="study-context-links" aria-label="Ir para uma parte deste capítulo">
-          <a href="#studyTheologySection">Estudo do capítulo</a>
-          <a href="#studyTextPane">Texto bíblico</a>
-          <a href="#studyNotesPane">Anotações pessoais</a>
-          <a href="#studyGlosaPane">Glosas de apoio</a>
+        <nav class="study-context-links study-context-tabs" aria-label="Leitura e formação">
+          <a href="#studyTextPane">Bíblia</a>
+          <a href="#studyCicPane">CIC</a>
+          <a href="#studyPiusPane">São Pio X</a>
+          <a href="#studyTheologySection">Aprofundar</a>
+          <a href="#studyNotesPane">Minhas notas</a>
         </nav>
-        <section class="card study-theology-pane" id="studyTheologySection" aria-labelledby="study-theology-title">
-          <div class="study-theology-heading">
-            <div>
-              <p class="eyebrow">Mapa Bíblico Mestre · Teológico 1.5</p>
-              <h3 id="study-theology-title">Estudo deste capítulo</h3>
-              <p class="study-pane-meta">Campos autorais do Mapa Bíblico Mestre, associados ao livro e capítulo selecionados.</p>
-            </div>
-            <span class="study-theology-id" id="studyTheologyId"></span>
-          </div>
-          <p id="studyTheologyStatus" class="study-help" role="status" aria-live="polite"></p>
-          <div id="studyTheologyFields" class="study-theology-fields"></div>
-          <details class="study-theology-method">
-            <summary>Ver classificação, fontes e rastreabilidade da matriz</summary>
-            <dl id="studyTheologyTrace" class="study-theology-trace"></dl>
-          </details>
-          <p class="study-help">Os registros permanecem conforme a pesquisa Teológico 1.5. “Não identificado nesta revisão” e “Pendente” indicam o estado documentado da pesquisa, não uma avaliação episcopal da versão atual.</p>
-        </section>
 
-        <section class="study-content-grid" aria-label="Materiais separados por natureza">
+        <section class="study-content-grid" aria-label="Leitura bíblica e formação na fé">
           <article class="card study-pane study-text-pane" id="studyTextPane" aria-labelledby="study-text-title">
-            <h3 id="study-text-title">Texto bíblico — Ave-Maria</h3>
-            <p class="study-pane-meta">Bíblia Sagrada Ave-Maria · leitura pública integral no Caminhos da Palavra.</p>
+            <h3 id="study-text-title">Bíblia Sagrada Ave-Maria</h3>
+            <p class="study-pane-meta" id="studyReadingReference">Selecione o capítulo ou os versículos para ler.</p>
             <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
             <aside id="studyFootnotes" class="study-footnotes" aria-labelledby="studyFootnotesTitle">
               <h4 id="studyFootnotesTitle">Notas e referências da leitura</h4>
@@ -150,18 +136,51 @@
               <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir capítulo ou passagem</button>
               <button id="studyStopAloud" class="secondary-button" type="button" disabled>Parar leitura</button>
             </div>
-            <p class="study-help">Leitura em voz alta pelo navegador, com controles para iniciar e interromper. Não substitui audiodescrição sincronizada de vídeos.</p>
+            
           </article>
-          <article class="card study-pane study-editorial-pane" aria-labelledby="study-editorial-title">
-            <h3 id="study-editorial-title">Introduções e comentários editoriais</h3>
-            <p class="study-pane-meta">Materiais próprios da edição, separados dos versículos.</p>
-            <div id="studyEditorialContent">
-              <p>Os versículos estão disponíveis na íntegra; introduções e comentários específicos da edição de estudos são mantidos em módulo separado.</p>
+          <article class="card study-pane study-doctrine-pane" id="studyCicPane" aria-labelledby="study-cic-title">
+            <p class="eyebrow">Doutrina católica · depois do Concílio Vaticano II</p>
+            <h3 id="study-cic-title">Catecismo da Igreja Católica</h3>
+            <p id="studyCicReferences" class="study-doctrine-reference" aria-live="polite"></p>
+            <details class="study-doctrine-details">
+              <summary>Ver contexto da referência</summary>
+              <div id="studyCicScope"></div>
+              <p class="study-doctrine-note">Referências do Mapa Bíblico Mestre. O texto integral do catecismo ainda não está incorporado ao acervo local.</p>
+            </details>
+          </article>
+          <article class="card study-pane study-doctrine-pane" id="studyPiusPane" aria-labelledby="study-pius-title">
+            <p class="eyebrow">Doutrina cristã · Catecismo Maior</p>
+            <h3 id="study-pius-title">Catecismo de São Pio X</h3>
+            <p id="studyPiusSummary" class="study-doctrine-reference" aria-live="polite"></p>
+            <details class="study-doctrine-details">
+              <summary>Ver referência e contexto</summary>
+              <p id="studyPiusReferences"></p>
+              <div id="studyPiusScope"></div>
+              <p class="study-doctrine-note">Referências do Mapa Bíblico Mestre. O texto integral da edição do catecismo ainda não está incorporado ao acervo local.</p>
+            </details>
+          </article>
+          <section class="card study-theology-pane" id="studyTheologySection" aria-labelledby="study-theology-title">
+            <div class="study-theology-heading">
+              <div>
+                <p class="eyebrow">Mapa Bíblico Mestre · estudo do capítulo</p>
+                <h3 id="study-theology-title">Compreender a Palavra</h3>
+              </div>
+              <span class="study-theology-id" id="studyTheologyId"></span>
             </div>
-          </article>
+            <div id="studyThemeTags" class="study-theme-tags" aria-label="Temas e contexto bíblico"></div>
+            <details class="study-theology-study">
+              <summary>Ver temas, conexões e explicações</summary>
+              <div id="studyTheologyFields" class="study-theology-fields"></div>
+            </details>
+            <details class="study-theology-method">
+              <summary>Fontes e critérios da pesquisa</summary>
+              <p id="studyTheologyStatus" class="study-help" role="status"></p>
+              <dl id="studyTheologyTrace" class="study-theology-trace"></dl>
+            </details>
+          </section>
           <article class="card study-pane study-note-pane" id="studyNotesPane" aria-labelledby="study-note-title">
             <h3 id="study-note-title">Minhas marcações e anotações</h3>
-            <p class="study-pane-meta">Conteúdo pessoal gravado somente neste navegador.</p>
+            
             <label for="studyPersonalNote">Anotação para a referência selecionada</label>
             <textarea id="studyPersonalNote" maxlength="5000" rows="6" placeholder="Registre suas observações de estudo…"></textarea>
             <div class="study-note-actions">
@@ -170,14 +189,15 @@
             </div>
             <p id="studyNoteStatus" aria-live="polite"></p>
             <details><summary>Minhas passagens marcadas</summary><div id="studyBookmarksList"></div></details>
-            <p class="study-help">As notas não são enviadas ao GEB nem ao GitHub. Exporte cópias para evitar perda de dados se limpar o navegador.</p>
+            <details class="study-privacy"><summary>Privacidade das anotações</summary><p>Suas anotações ficam neste navegador. Exporte cópias antes de limpar os dados.</p></details>
           </article>
-          <article class="card study-pane study-glosa-pane" id="studyGlosaPane" aria-labelledby="study-glosa-title">
-            <h3 id="study-glosa-title">Glosas para Libras — apoio de estudo</h3>
-            <p class="study-pane-meta">Glosas autorais preliminares por referência, vinculadas ao repertório litúrgico. Não são tradução certificada para Libras nem redação da Bíblia Ave-Maria.</p>
+          <details class="card study-appendix">
+            <summary>Glosas para Libras — material de apoio</summary>
+            <div class="study-appendix-body">
             <div id="studyGlosaContent"></div>
-            <p><a href="./index.html#liturgia-e-libras">Consultar o repertório litúrgico e as glosas</a></p>
-          </article>
+            <p><a href="./index.html#liturgia-e-libras">Consultar repertório litúrgico</a></p>
+            </div>
+          </details>
         </section>
       </div>
     </div>
@@ -207,6 +227,6 @@
   <script src="./vinculos-estudo-core.js?v=20261108-notas1"></script>
   <script src="./theology-data.js?v=20261108-estudo1"></script>
   <script src="./publication-control.js?v=20261108-estudo1"></script>
-  <script src="./biblia-estudo.js?v=20261108-notas1"></script>
+  <script src="./biblia-estudo.js?v=20261108-doutrina1"></script>
 </body>
 </html>
