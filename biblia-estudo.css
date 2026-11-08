@@ -126,3 +126,47 @@
   .study-theology-trace dt{padding-bottom:3px;border-bottom:0}
   .study-theology-trace dd{padding-top:0}
 }
+
+/* Notas e referências: um marcador na passagem, sem repetição por versículo. */
+.study-footnotes{margin-top:28px;padding-top:18px;border-top:2px solid #d9c9a8;scroll-margin-top:18px}
+.study-footnotes h4{font-size:1rem;margin:0 0 8px;color:#493616}
+.study-footnote-list{margin:13px 0 0;padding-left:29px;display:grid;gap:9px}
+.study-footnote-entry{padding:3px 0 8px;border-bottom:1px solid #eee4d4;line-height:1.5}
+.study-footnote-entry::marker{font-weight:750;color:#77561c}
+.study-footnote-link{border:0;border-bottom:1px dotted #a58e64;background:transparent;color:#634719;
+  padding:4px 1px;text-align:left;font:inherit;line-height:1.5;cursor:pointer}
+.study-footnote-link:hover,.study-footnote-link:focus-visible{background:#f8f1e4;text-decoration:underline}
+.study-footnote-marker{position:relative;display:inline-flex;align-items:center;justify-content:center;
+  min-width:25px;min-height:25px;padding:1px 5px;margin:0 3px 0 5px;vertical-align:super;
+  font-size:.68rem;font-weight:800;line-height:1;border-radius:50%;border:1px solid #a38b5d;
+  background:#fff6dd;color:#4d370e;cursor:pointer;white-space:nowrap}
+.study-footnote-marker-verse{background:#735322;border-color:#735322;color:#fff}
+.study-footnote-marker-passage{background:#fffdf7;border-style:dashed}
+.study-footnote-marker:hover,.study-footnote-marker:focus-visible{outline:2px solid #6a4f21;outline-offset:2px}
+.study-footnotes-general{margin-top:16px;padding:10px 12px;background:#faf7ef;border:1px solid #e9dfcb}
+.study-footnotes-general summary{cursor:pointer;font-weight:700;font-size:.87rem;color:#57401b}
+.study-footnote-general-list{padding-left:21px;line-height:1.5}
+.study-footnote-dialog{box-sizing:border-box;max-width:min(620px,calc(100% - 32px));width:100%;
+  max-height:min(78dvh,720px);padding:22px;border:1px solid #ae9772;border-radius:12px;
+  background:#fffdfa;color:#29231c;box-shadow:0 25px 70px rgba(24,20,13,.28);overflow-y:auto}
+.study-footnote-dialog::backdrop{background:rgba(23,20,16,.55)}
+.study-footnote-dialog-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px}
+.study-footnote-dialog-head h3{margin:0;color:#30251a}
+.study-footnote-dialog-scope{color:#66533b;border-bottom:1px solid #e7d8c0;
+  padding-bottom:14px;margin:12px 0}
+.study-footnote-dialog-body,.study-footnote-dialog p{line-height:1.6}
+.study-footnote-kind{font-weight:750;color:#76571d}
+.study-footnote-source{font-size:.83rem;color:#655847}
+.study-footnote-extra{padding:10px;border:1px solid #e7dcc9;margin:12px 0}
+.study-footnote-extra summary{cursor:pointer;font-weight:700}
+@media(max-width:790px){
+  .study-footnote-dialog{margin:auto 0 0;max-width:100vw;width:100%;max-height:79dvh;
+    border-radius:14px 14px 0 0;position:fixed;inset:auto 0 0;padding:22px 18px 28px}
+  .study-footnote-marker{min-width:29px;min-height:29px}
+}
+@media print{
+  .study-footnote-marker{border:0;background:transparent;color:#000;min-width:0;min-height:0;
+    padding:0 2px;font-size:.7rem}
+  .study-footnote-dialog{display:none!important}
+  .study-footnotes-general[open]{display:block}
+}
