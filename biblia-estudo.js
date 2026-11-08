@@ -1,4 +1,4 @@
-/* Caminhos da Palavra — Bíblia para estudo (somente metadados e dados autorizados).
+/* Caminhos da Palavra — Bíblia integral Ave-Maria no leitor interno.
  * Glosas preliminares e progresso existentes não são alterados. */
 (() => {
   'use strict';
@@ -46,6 +46,8 @@
   let active={book:books[0],chapter:1,start:null,end:null,key:C.referenceKey(books[0].id,1)};
   const speechAvailable=typeof window.speechSynthesis!=='undefined' && typeof window.SpeechSynthesisUtterance==='function';
   let speechText='';
+  const bookCache=new Map();
+  let renderTextSequence=0;
   const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=String(text);return node;};
   const feedback=(text)=>{ui.feedback.textContent=text||'';};
   const linkTo=part=>'./biblia-estudo.html?livro='+encodeURIComponent(part.book.id)+'&capitulo='+part.chapter+
@@ -121,25 +123,59 @@
     if(speechAvailable)window.speechSynthesis.cancel();
     ui.stopAloud.disabled=true;
   }
-  function renderText(){
+  function loadPublicBook(book){
+    if(!bookCache.has(book.id)){
+      const url='./dados/biblia-ave-maria/'+encodeURIComponent(book.id)+'.json';
+      const promise=fetch(url).then(async response=>{
+        if(!response.ok)throw new Error('HTTP '+response.status+' ao carregar '+book.name);
+        const data=await response.json();
+        if(data.schemaVersion!==1||data.editionId!==C.EDITION.id||
+           data.bookId!==book.id||!Array.isArray(data.chapters)||
+           data.chapters.length!==book.chapters)
+          throw new Error('Arquivo do livro '+book.name+' não corresponde ao catálogo.');
+        for(let n=1;n<=book.chapters;n++){
+          const chapter=data.chapters[n-1],count=C.verseCount(verseIndex,book.id,n);
+          if(chapter?.chapter!==n||!Array.isArray(chapter.verses)||chapter.verses.length!==count)
+            throw new Error('Contagem inconsistente em '+book.name+' '+n+'.');
+          for(let v=1;v<=count;v++){
+            const item=chapter.verses[v-1];
+            if(item?.verse!==v||typeof item.text!=='string'||!item.text.trim())
+              throw new Error('Versículo inválido em '+book.name+' '+n+','+v+'.');
+          }
+        }
+        return data;
+      }).catch(error=>{bookCache.delete(book.id);throw error;});
+      bookCache.set(book.id,promise);
+    }
+    return bookCache.get(book.id);
+  }
+  async function renderText(){
+    const sequence=++renderTextSequence;
+    const current={...active};
     stopSpeech();
-    ui.text.replaceChildren();
-    const payload=window.CDP_AVM_PUBLIC_DATA;
-    const allowed=C.authorizedVerses(payload,active.book.id,active.chapter,verseIndex);
-    const selected=allowed.filter(item=>active.start===null||(item.verse>=active.start&&item.verse<=active.end));
-    speechText=selected.map(item=>'Versículo '+item.verse+'. '+item.text).join(' ');
-    ui.readAloud.disabled=!speechAvailable||!speechText;
-    if(selected.length){
-      selected.forEach(item=>{
-        const row=make('p','study-verse-row');row.append(make('b','',item.verse),document.createTextNode(item.text));ui.text.appendChild(row);
-      });
-      ui.text.appendChild(make('p','study-help','Trechos autorizados para publicação; comentários e notas da edição são controlados separadamente.'));
-    }else{
-      const box=make('div','study-not-licensed');
-      box.append(make('strong','','Texto integral indisponível nesta plataforma'),
-        make('p','','A referência e as suas anotações estão disponíveis aqui. A transcrição da tradução Ave-Maria depende de autorização específica. Nenhum versículo foi reconstruído ou substituído por outra edição.'));
-      box.appendChild(make('p','study-help','A leitura bíblica permanecerá dentro do site; a publicação do texto integral depende de licença da tradução.'));
-      ui.text.appendChild(box);
+    speechText='';
+    ui.readAloud.disabled=true;
+    ui.text.replaceChildren(make('p','study-help','Carregando '+current.book.name+' '+current.chapter+' no leitor interno…'));
+    try{
+      const content=await loadPublicBook(current.book);
+      if(sequence!==renderTextSequence)return;
+      const all=content.chapters[current.chapter-1].verses;
+      const selected=all.filter(item=>current.start===null||
+        (item.verse>=current.start&&item.verse<=current.end));
+      ui.text.replaceChildren();
+      for(const item of selected){
+        const row=make('p','study-verse-row');
+        row.id='versiculo-'+item.verse;
+        row.append(make('b','',item.verse+' '),document.createTextNode(item.text));
+        ui.text.appendChild(row);
+      }
+      speechText=selected.map(item=>'Versículo '+item.verse+'. '+item.text).join(' ');
+      ui.readAloud.disabled=!speechAvailable||!speechText;
+      if(!selected.length)ui.text.appendChild(make('p','study-help','Não há versículos neste intervalo.'));
+    }catch(error){
+      if(sequence!==renderTextSequence)return;
+      ui.text.replaceChildren(make('p','study-empty','Não foi possível carregar o texto deste livro. '+error.message));
+      ui.readAloud.disabled=true;
     }
   }
   function renderEditorial(){
@@ -261,35 +297,50 @@
     if(!writeProgress(progress)){ui.planComplete.checked=!ui.planComplete.checked;feedback('Não foi possível salvar o progresso neste navegador.');}
     else feedback('Progresso atualizado no plano de 365 dias.');
   });
-  function authorizedTextIndex(){
-    const data=window.CDP_AVM_PUBLIC_DATA;
-    if(!data||data.editionId!==C.EDITION.id||data.authorizedForWeb!==true||
-      !data.permissionReference)return [];
-    const result=[];
-    for(const key of Object.keys(data.chapters||{})){
-      const match=key.match(/^([A-Z0-9]+):(\d+)$/);if(!match)continue;
-      const book=books.find(b=>b.id===match[1]);if(!book)continue;
-      C.authorizedVerses(data,book.id,Number(match[2]),verseIndex).forEach(v=>result.push({book,chapter:Number(match[2]),verse:v.verse,text:v.text}));
+  ui.textQuery.disabled=false;
+  ui.textButton.disabled=false;
+  ui.textQuery.placeholder='Digite uma palavra ou expressão da Bíblia';
+  ui.textStatus.textContent='Busca textual nos 73 livros da Bíblia Ave-Maria disponíveis neste site.';
+  let searchSequence=0;
+  async function searchBibleText(){
+    const sequence=++searchSequence,query=C.fold(ui.textQuery.value);
+    ui.textResults.replaceChildren();
+    if(query.length<3){
+      ui.textResults.appendChild(make('p','study-help','Informe pelo menos três caracteres.'));
+      return;
     }
-    return result;
+    ui.textButton.disabled=true;
+    let matches=0,failures=0;
+    const results=make('div','study-results');
+    ui.textResults.appendChild(results);
+    for(let i=0;i<books.length;i+=4){
+      const batch=await Promise.allSettled(books.slice(i,i+4).map(book=>loadPublicBook(book)));
+      if(sequence!==searchSequence)return;
+      for(let j=0;j<batch.length;j++){
+        const entry=batch[j],book=books[i+j];
+        if(entry.status!=='fulfilled'){failures++;continue;}
+        for(const chapter of entry.value.chapters)for(const item of chapter.verses){
+          if(!C.fold(item.text).includes(query))continue;
+          matches++;
+          if(matches>50)continue;
+          const button=make('button','',C.formatReference(book,chapter.chapter,item.verse,item.verse)+' · '+item.text.slice(0,130));
+          button.type='button';
+          button.addEventListener('click',()=>select(book.id,chapter.chapter,item.verse,item.verse));
+          results.appendChild(button);
+        }
+      }
+      ui.textStatus.textContent='Pesquisando: '+Math.min(i+4,books.length)+' de '+books.length+' livros…';
+    }
+    ui.textStatus.textContent=matches+' versículo(s) encontrado(s) em 73 livros'+
+      (failures?' ('+failures+' livro(s) indisponível(is); tente novamente).':'.')+
+      (matches>50?' Mostrando os primeiros 50.':'');
+    if(!matches)results.appendChild(make('p','study-help','Nenhuma ocorrência encontrada.'));
+    ui.textButton.disabled=false;
   }
-  const searchable=authorizedTextIndex();
-  if(searchable.length){
-    ui.textQuery.disabled=false;ui.textButton.disabled=false;ui.textQuery.placeholder='Buscar somente nos textos autorizados';
-    ui.textStatus.textContent=searchable.length+' versículo(s) autorizado(s) disponível(is) para pesquisa textual.';
-    ui.textButton.addEventListener('click',()=>{
-      const query=C.fold(ui.textQuery.value);ui.textResults.replaceChildren();
-      if(query.length<3){ui.textResults.appendChild(make('p','study-help','Informe pelo menos três caracteres.'));return;}
-      const matches=searchable.filter(row=>C.fold(row.text).includes(query)).slice(0,30);
-      const box=make('div','study-results');
-      matches.forEach(row=>{
-        const button=make('button','',C.formatReference(row.book,row.chapter,row.verse,row.verse)+' · '+row.text.slice(0,130));
-        button.type='button';button.addEventListener('click',()=>select(row.book.id,row.chapter,row.verse,row.verse));
-        box.appendChild(button);
-      });if(!matches.length)box.appendChild(make('p','study-help','Nenhum resultado nos trechos autorizados.'));
-      ui.textResults.appendChild(box);
-    });
-  }
+  ui.textButton.addEventListener('click',searchBibleText);
+  ui.textQuery.addEventListener('keydown',event=>{
+    if(event.key==='Enter'){event.preventDefault();searchBibleText();}
+  });
   function restoreUrl(){
     const url=new URL(window.location.href),p=url.searchParams;
     const book=books.find(b=>b.id===p.get('livro')),chapter=Number(p.get('capitulo')||1);
