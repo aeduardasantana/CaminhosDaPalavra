@@ -26,7 +26,11 @@
     readAloud:$('studyReadAloud'),stopAloud:$('studyStopAloud'),
     prevChapter:$('studyPrevChapter'),nextChapter:$('studyNextChapter'),
     theologyFields:$('studyTheologyFields'),theologyTrace:$('studyTheologyTrace'),
-    theologyStatus:$('studyTheologyStatus'),theologyId:$('studyTheologyId')
+    theologyStatus:$('studyTheologyStatus'),theologyId:$('studyTheologyId'),
+    footnoteStatus:$('studyFootnotesStatus'),footnoteList:$('studyFootnotesList'),
+    chapterReferences:$('studyChapterReferences'),footnoteDialog:$('studyFootnoteDialog'),
+    footnoteDialogTitle:$('studyFootnoteDialogTitle'),footnoteDialogScope:$('studyFootnoteDialogScope'),
+    footnoteDialogBody:$('studyFootnoteDialogBody'),footnoteDialogClose:$('studyFootnoteDialogClose')
   };
   const NOTES_KEY='cdp-avm-study-notes-v1',PLAN_KEY='lce-bible365-plan-v1',JOURNEY_KEY='lce-bible365-journey-start-v1';
   const VALID_KEY=/^[A-Z0-9]{2,4}:\d{1,3}(?::\d{1,3}(?:-\d{1,3})?)?$/;
@@ -50,6 +54,23 @@
   const speechAvailable=typeof window.speechSynthesis!=='undefined' && typeof window.SpeechSynthesisUtterance==='function';
   let speechText='';
   const bookCache=new Map();
+  const linkCore=window.CDP_STUDY_LINKS_CORE;
+  let studyLinksPromise=null,footnoteReturnFocus=null;
+  function loadStudyLinks(){
+    if(!linkCore)return Promise.reject(new Error('Módulo de vínculos não carregado.'));
+    if(!studyLinksPromise){
+      studyLinksPromise=fetch('./dados/vinculos-estudo.json').then(async response=>{
+        if(!response.ok)throw new Error('Índice contextual indisponível (HTTP '+response.status+').');
+        const data=await response.json();
+        if(data?.schemaVersion!==1||data?.counts?.books!==73||
+           data?.counts?.chapters!==1334||data?.counts?.verses!==35450||
+           !data?.chapters||!data?.links||!data?.dictionary)
+          throw new Error('Índice contextual incompatível com a Bíblia.');
+        return data;
+      }).catch(error=>{studyLinksPromise=null;throw error;});
+    }
+    return studyLinksPromise;
+  }
   let renderTextSequence=0;
   const make=(tag,className,text)=>{const node=document.createElement(tag);if(className)node.className=className;if(text!==undefined)node.textContent=String(text);return node;};
   const feedback=(text)=>{ui.feedback.textContent=text||'';};
@@ -168,26 +189,141 @@
     }
     return bookCache.get(book.id);
   }
+  function linkTitle(link,index){
+    return link.kind==='dictionary-context'
+      ? index.dictionary?.[link.dictionaryId]?.title||'Verbete do dicionário'
+      : link.title||'Observação de estudo';
+  }
+  function linkKind(link){
+    return link.kind==='dictionary-context'
+      ? 'Referência contextual do Dicionário Bíblico' : 'Observação autoral de estudo';
+  }
+  function linkScope(link){
+    if(link.scope==='verse')return 'Versículo específico';
+    if(link.scope==='passage'||link.scope==='cross_chapter_passage')return 'Passagem de vários versículos';
+    return 'Referência geral do capítulo';
+  }
+  function closeFootnote(){
+    if(ui.footnoteDialog.open)ui.footnoteDialog.close();
+  }
+  function openFootnote(link,index,number,trigger){
+    footnoteReturnFocus=trigger;
+    ui.footnoteDialogTitle.textContent=(number?'Nota '+number+' · ':'')+linkTitle(link,index);
+    ui.footnoteDialogScope.textContent=linkScope(link)+' · '+(link.sourceReference||'Referência registrada na matriz');
+    ui.footnoteDialogBody.replaceChildren();
+    const scope=make('p','study-footnote-kind',linkKind(link));
+    ui.footnoteDialogBody.appendChild(scope);
+    if(link.kind==='dictionary-context'){
+      const item=index.dictionary?.[link.dictionaryId];
+      if(item){
+        ui.footnoteDialogBody.appendChild(make('p','',item.context||'Sem explicação contextual cadastrada.'));
+        if(item.visualPreparation){
+          const details=make('details','study-footnote-extra');
+          details.append(make('summary','','Preparação visual em Libras'),
+            make('p','',item.visualPreparation));
+          ui.footnoteDialogBody.appendChild(details);
+        }
+        if(item.source)ui.footnoteDialogBody.appendChild(make('p','study-footnote-source','Referência documental: '+item.source));
+        if(item.review)ui.footnoteDialogBody.appendChild(make('p','study-footnote-source','Situação do verbete: '+item.review));
+        const a=make('a','study-related-link','Consultar ficha completa no dicionário');
+        a.href='./dicionario.html#'+encodeURIComponent(link.dictionaryId);
+        ui.footnoteDialogBody.appendChild(a);
+      }else{
+        ui.footnoteDialogBody.appendChild(make('p','study-help','Verbete não encontrado neste índice.'));
+      }
+    }else{
+      ui.footnoteDialogBody.appendChild(make('p','',link.content||'Sem explicação cadastrada.'));
+      if(link.provenance)ui.footnoteDialogBody.appendChild(make('p','study-footnote-source','Fonte: '+link.provenance));
+    }
+    if(typeof ui.footnoteDialog.showModal==='function')ui.footnoteDialog.showModal();
+    else ui.footnoteDialog.setAttribute('open','');
+  }
+  function renderFootnotes(plan,index){
+    ui.footnoteList.replaceChildren();
+    ui.chapterReferences.replaceChildren();
+    const count=plan.notes.length;
+    ui.footnoteStatus.textContent=count
+      ? count+' nota(s) e referência(s) vinculada(s) ao trecho. O número junto ao versículo abre esta ficha.'
+      : 'Não há notas específicas de versículo ou passagem cadastradas para este trecho.';
+    if(count){
+      const list=make('ol','study-footnote-list');
+      for(const note of plan.notes){
+        const li=make('li','study-footnote-entry');
+        li.value=note.number;
+        const button=make('button','study-footnote-link',
+          (note.link.sourceReference||'Referência contextual')+' — '+linkTitle(note.link,index));
+        button.type='button';
+        button.setAttribute('aria-label','Abrir nota '+note.number+': '+linkScope(note.link)+
+          ', '+(note.link.sourceReference||'')+', '+linkTitle(note.link,index));
+        button.addEventListener('click',()=>openFootnote(note.link,index,note.number,button));
+        li.appendChild(button);
+        list.appendChild(li);
+      }
+      ui.footnoteList.appendChild(list);
+    }
+    if(plan.chapterReferences.length){
+      const details=make('details','study-footnotes-general');
+      details.appendChild(make('summary','',
+        'Referências gerais do capítulo ('+plan.chapterReferences.length+')'));
+      const list=make('ul','study-footnote-general-list');
+      for(const link of plan.chapterReferences){
+        const li=make('li');
+        const button=make('button','study-footnote-link',
+          (link.sourceReference||'Capítulo')+' — '+linkTitle(link,index));
+        button.type='button';
+        button.setAttribute('aria-label','Abrir referência geral do capítulo: '+linkTitle(link,index));
+        button.addEventListener('click',()=>openFootnote(link,index,null,button));
+        li.appendChild(button);list.appendChild(li);
+      }
+      details.appendChild(list);ui.chapterReferences.appendChild(details);
+    }
+  }
   async function renderText(){
     const sequence=++renderTextSequence;
     const current={...active};
+    closeFootnote();
     stopSpeech();
     speechText='';
     ui.readAloud.disabled=true;
+    ui.footnoteStatus.textContent='Carregando referências do trecho…';
+    ui.footnoteList.replaceChildren();
+    ui.chapterReferences.replaceChildren();
     ui.text.replaceChildren(make('p','study-help','Carregando '+current.book.name+' '+current.chapter+' no leitor interno…'));
     try{
-      const content=await loadPublicBook(current.book);
+      // A leitura bíblica não falha se a rede de notas ficar temporariamente indisponível.
+      const [content,linksResult]=await Promise.all([
+        loadPublicBook(current.book),
+        loadStudyLinks().then(index=>({index})).catch(error=>({error}))
+      ]);
       if(sequence!==renderTextSequence)return;
       const all=content.chapters[current.chapter-1].verses;
       const selected=all.filter(item=>current.start===null||
         (item.verse>=current.start&&item.verse<=current.end));
+      const plan=linksResult.index
+        ? linkCore.readingFootnotes(linksResult.index,current.book.id,current.chapter,
+          current.start,current.end)
+        : {markers:{},notes:[],chapterReferences:[]};
       ui.text.replaceChildren();
       for(const item of selected){
         const row=make('p','study-verse-row');
         row.id='versiculo-'+item.verse;
         row.append(make('b','',item.verse+' '),document.createTextNode(item.text));
+        for(const note of plan.markers[item.verse]||[]){
+          const marker=make('button','study-footnote-marker',String(note.number));
+          marker.type='button';
+          marker.classList.add(note.scope==='verse'?'study-footnote-marker-verse':'study-footnote-marker-passage');
+          marker.setAttribute('aria-label','Abrir nota '+note.number+
+            (note.scope==='verse'?' deste versículo':' da passagem '+
+              (note.link.sourceReference||''))+
+            ': '+linkTitle(note.link,linksResult.index));
+          marker.title='Nota '+note.number+' · '+linkScope(note.link);
+          marker.addEventListener('click',()=>openFootnote(note.link,linksResult.index,note.number,marker));
+          row.appendChild(marker);
+        }
         ui.text.appendChild(row);
       }
+      if(linksResult.index)renderFootnotes(plan,linksResult.index);
+      else ui.footnoteStatus.textContent='Referências contextuais temporariamente indisponíveis. A leitura bíblica continua disponível.';
       speechText=selected.map(item=>'Versículo '+item.verse+'. '+item.text).join(' ');
       ui.readAloud.disabled=!speechAvailable||!speechText;
       if(!selected.length)ui.text.appendChild(make('p','study-help','Não há versículos neste intervalo.'));
@@ -195,6 +331,7 @@
       if(sequence!==renderTextSequence)return;
       ui.text.replaceChildren(make('p','study-empty','Não foi possível carregar o texto deste livro. '+error.message));
       ui.readAloud.disabled=true;
+      ui.footnoteStatus.textContent='As referências ficam disponíveis após o carregamento da leitura.';
     }
   }
   function renderEditorial(){
@@ -379,6 +516,8 @@
     window.speechSynthesis.speak(utterance);
   });
   ui.stopAloud.addEventListener('click',stopSpeech);
+  ui.footnoteDialogClose.addEventListener('click',closeFootnote);
+  ui.footnoteDialog.addEventListener('close',()=>{const target=footnoteReturnFocus;footnoteReturnFocus=null;if(target?.isConnected)target.focus();});
   window.addEventListener('pagehide',stopSpeech);
   ui.prevChapter.addEventListener('click',()=>{
     const previous=adjacentChapter(-1);
