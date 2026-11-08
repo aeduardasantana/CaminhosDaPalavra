@@ -170,3 +170,86 @@
   .study-footnote-dialog{display:none!important}
   .study-footnotes-general[open]{display:block}
 }
+
+/* Leitura bíblica e formação cristã: hierarquia revisada, sem textos institucionais longos. */
+.study-hero-compact{grid-template-columns:minmax(0,1fr) auto;gap:18px;padding:20px 25px;
+  align-items:center;background:#fffaf0;border-radius:8px;margin-bottom:15px}
+.study-hero-compact h2{font-size:clamp(1.5rem,3vw,2rem);margin:3px 0 5px}
+.study-hero-compact p:not(.eyebrow){font-size:.93rem;line-height:1.5}
+.study-edition-details{max-width:290px;font-size:.79rem;color:#5c4c35}
+.study-edition-details summary{cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.study-edition-details p{margin-top:8px!important}
+.study-search-more{margin-top:10px;border-top:1px solid #ece1cf;padding-top:9px}
+.study-search-more>summary{cursor:pointer;font-size:.88rem;font-weight:650;color:#5e451e}
+.study-search-more .study-text-search{margin-top:14px}
+.study-catalog{position:static;max-height:none;overflow:visible}
+.study-catalog summary{cursor:pointer;font-weight:750;color:#4d381c;line-height:1.5;list-style-position:inside}
+.study-catalog .study-catalog-filters{margin-top:14px}
+.study-context-tabs{flex-wrap:wrap;gap:7px;margin:2px 0}
+.study-context-tabs a{padding:10px 13px;background:#fff;border:1px solid #d2c4ad;border-radius:5px;
+  font-weight:750;font-size:.84rem}
+.study-context-tabs a:hover,.study-context-tabs a:focus-visible{background:#f6efe2;text-decoration:underline}
+.study-content-grid{gap:14px}
+.study-content-grid > .study-pane{min-height:0}
+.study-text-pane,.study-theology-pane,.study-note-pane,.study-appendix{grid-column:1/-1}
+.study-text-pane{border-top:3px solid #81622b!important}
+.study-doctrine-pane{border-top:3px solid #d4c19c!important;background:#fffefb}
+.study-doctrine-pane .eyebrow{font-size:.69rem;color:#7b5a23;margin:0 0 5px}
+.study-doctrine-pane h3{font-size:1.1rem;margin:0 0 11px;line-height:1.35}
+.study-doctrine-reference{font-size:1rem;color:#34291a;line-height:1.6;margin:0}
+.study-doctrine-details{margin-top:13px;padding-top:10px;border-top:1px solid #eadfce;color:#514733}
+.study-doctrine-details>summary{cursor:pointer;font-size:.84rem;font-weight:750;color:#694b1f}
+.study-doctrine-details p{font-size:.85rem;line-height:1.65;overflow-wrap:anywhere}
+.study-doctrine-note{margin-top:9px;color:#6b6154;font-size:.77rem!important}
+.study-theology-pane{border-top:3px solid #bba579!important}
+.study-theology-pane h3{font-size:1.15rem}
+.study-theology-id{font-size:.65rem;color:#766957}
+.study-theme-tags{display:flex;flex-wrap:wrap;gap:7px;margin:12px 0 5px}
+.study-theme-chip{background:#f8f1e3;border:1px solid #d6c49e;padding:6px 10px;
+  font-size:.8rem;color:#524022;font-weight:650;max-width:100%;overflow-wrap:anywhere}
+.study-theology-study{margin-top:12px;padding:12px;border:1px solid #e8ddc9}
+.study-theology-study>summary{cursor:pointer;color:#59421a;font-weight:750;font-size:.9rem}
+.study-theology-study .study-theology-fields{margin-top:14px}
+.study-theology-field{background:#fff}
+.study-appendix{border:1px solid #ded3c1;padding:18px;background:#fffefa}
+.study-appendix summary{cursor:pointer;font-weight:750;color:#554020;font-size:.9rem}
+.study-appendix-body{margin-top:14px}
+.study-privacy{margin-top:12px}
+.study-privacy summary{cursor:pointer;font-size:.8rem}
+.study-study-aux{font-size:.8rem}
+@media(max-width:790px){
+  .study-hero-compact{grid-template-columns:1fr;padding:16px 18px}
+  .study-layout>.study-main{order:1}
+  .study-layout>.study-catalog{order:2}
+  .study-layout{gap:12px}
+  .study-content-grid{grid-template-columns:1fr;gap:12px}
+  .study-context-tabs{display:flex;overflow-x:auto;flex-wrap:nowrap;max-width:100%;padding-bottom:5px;scrollbar-width:thin}
+  .study-context-tabs a{flex:0 0 auto;min-width:0}
+  .study-picker{padding:15px}
+  .study-theme-chip{font-size:.76rem}
+}
+@media(max-width:480px){
+  .study-hero-compact .eyebrow{font-size:.65rem}
+  .study-hero-compact h2{font-size:1.45rem;line-height:1.25}
+  .study-context-tabs{display:flex;grid-template-columns:none;gap:5px}
+  .study-context-tabs a{padding:9px 11px;font-size:.82rem}
+  .study-text-pane h3,.study-doctrine-pane h3{font-size:1.07rem}
+  .study-theology-study,.study-theology-method{padding:10px}
+}
+@media print{
+  .study-context-tabs,.study-search-more,.study-edition-details{display:none}
+  .study-doctrine-details[open]{display:block}
+}
+
+/* Cabeçalho da página de leitura sem duas faixas verticais no celular. */
+@media(max-width:790px){
+  body.study-page .site-header .header-inner{
+    flex-direction:row!important;flex-wrap:nowrap!important;align-items:center;
+    justify-content:space-between;min-height:60px;gap:8px;padding-block:8px
+  }
+  body.study-page .site-header .brand-block{flex:1 1 auto;min-width:0}
+  body.study-page .site-header .brand-block h1{font-size:clamp(.95rem,3.4vw,1.14rem);line-height:1.1}
+  body.study-page .site-menu-trigger{white-space:nowrap;font-size:.73rem;
+    min-height:38px;padding:8px 10px;gap:5px}
+  body.study-page .site-menu-symbol{font-size:1.05rem}
+}

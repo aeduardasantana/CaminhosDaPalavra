@@ -30,7 +30,11 @@
     footnoteStatus:$('studyFootnotesStatus'),footnoteList:$('studyFootnotesList'),
     chapterReferences:$('studyChapterReferences'),footnoteDialog:$('studyFootnoteDialog'),
     footnoteDialogTitle:$('studyFootnoteDialogTitle'),footnoteDialogScope:$('studyFootnoteDialogScope'),
-    footnoteDialogBody:$('studyFootnoteDialogBody'),footnoteDialogClose:$('studyFootnoteDialogClose')
+    footnoteDialogBody:$('studyFootnoteDialogBody'),footnoteDialogClose:$('studyFootnoteDialogClose'),
+    themeTags:$('studyThemeTags'),
+    cicReferences:$('studyCicReferences'),cicScope:$('studyCicScope'),
+    piusSummary:$('studyPiusSummary'),piusReferences:$('studyPiusReferences'),
+    piusScope:$('studyPiusScope'),readingReference:$('studyReadingReference')
   };
   const NOTES_KEY='cdp-avm-study-notes-v1',PLAN_KEY='lce-bible365-plan-v1',JOURNEY_KEY='lce-bible365-journey-start-v1';
   const VALID_KEY=/^[A-Z0-9]{2,4}:\d{1,3}(?::\d{1,3}(?:-\d{1,3})?)?$/;
@@ -281,6 +285,7 @@
   async function renderText(){
     const sequence=++renderTextSequence;
     const current={...active};
+    ui.readingReference.textContent=C.formatReference(current.book,current.chapter,current.start,current.end);
     closeFootnote();
     stopSpeech();
     speechText='';
@@ -335,10 +340,33 @@
       ui.footnoteStatus.textContent='As referências ficam disponíveis após o carregamento da leitura.';
     }
   }
-  function renderEditorial(){
-    ui.editorial.replaceChildren();
-    ui.editorial.appendChild(make('p','','Introduções, títulos, comentários e notas da edição de estudos estão catalogados separadamente do texto bíblico na preparação técnica. Não há material editorial autorizado para exibição pública vinculado a esta referência.'));
-    ui.editorial.appendChild(make('p','study-help','Isso não impede suas anotações próprias no leitor interno.'));
+  function renderDoctrine(){
+    const chapterKey=active.book.id+':'+active.chapter;
+    const record=window.CDP_THEOLOGY?.chapters?.[chapterKey]||null;
+    const permitted=record?.cpId&&
+      window.CDP_PUBLICATION_CONTROL?.chapters?.[record.cpId]?.publicAuthorized===true;
+    if(!permitted){
+      ui.cicReferences.textContent='Nenhuma referência disponível para este capítulo.';
+      ui.cicScope.textContent='';
+      ui.piusSummary.textContent='Nenhuma referência disponível para este capítulo.';
+      ui.piusReferences.textContent='';
+      ui.piusScope.textContent='';
+      return;
+    }
+    const text=value=>String(value||'').trim();
+    ui.cicReferences.textContent=text(record.cic?.references)||
+      'Sem parágrafos do Catecismo identificados neste capítulo.';
+    ui.cicScope.textContent=text(record.cic?.scope)||
+      'Escopo da referência ainda não documentado.';
+    const pius=text(record.piusX?.references);
+    const broad=pius.startsWith('[Contexto do livro/bloco]')||
+      /contexto do livro\/bloco/i.test(text(record.piusX?.scope));
+    ui.piusSummary.textContent=!pius?'Sem correspondência registrada neste capítulo.'
+      :broad?'Referência geral do livro ou conjunto de capítulos.':
+      pius.length>125?pius.slice(0,122).trimEnd()+'…':pius;
+    ui.piusReferences.textContent=pius||'Nenhuma referência específica registrada.';
+    ui.piusScope.textContent=text(record.piusX?.scope)||
+      'Escopo da referência ainda não documentado.';
   }
   // O painel reproduz o snapshot público já autorizado do Mapa Bíblico Mestre.
   // Não completa por inferência os campos ausentes e não usa o parecer episcopal futuro.
@@ -349,6 +377,7 @@
       ? window.CDP_PUBLICATION_CONTROL?.chapters?.[record.cpId] : null;
     ui.theologyFields.replaceChildren();
     ui.theologyTrace.replaceChildren();
+    ui.themeTags.replaceChildren();
     ui.theologyId.textContent=record?.cpId||'';
     if(!record||control?.publicAuthorized!==true){
       ui.theologyStatus.textContent='Não há registro autoral autorizado para este capítulo no pacote público atual.';
@@ -356,6 +385,18 @@
     }
     ui.theologyStatus.textContent=(record.reference||active.book.name+' '+active.chapter)+
       ' · '+(record.matrixVersion||'Mapa Teológico 1.5');
+    const tagValues=[
+      record.mainTheme,
+      record.salvationHistory,
+      record.covenant
+    ].map(value=>String(value||'').trim()).filter(value=>
+      value&&value!=='—'&&!/^(?:não identificado|não identificad[oa]|sem registro)/i.test(value));
+    ui.themeTags.replaceChildren();
+    for(const value of [...new Set(tagValues)]){
+      const chip=make('span','study-theme-chip',value);
+      ui.themeTags.appendChild(chip);
+    }
+
     const fieldText=value=>{
       const normalized=String(value??'').trim();
       return normalized||'Sem registro neste campo da matriz.';
@@ -370,10 +411,6 @@
       {title:'Conexões bíblicas',body:record.biblicalConnections},
       {title:'Mistério do Rosário',body:record.rosary?.mystery,detail:record.rosary?.nature,
         detailLabel:'Natureza da relação'},
-      {title:'Catecismo da Igreja Católica (CIC)',body:record.cic?.references,
-        detail:record.cic?.scope,detailLabel:'Escopo da referência',sourceUrl:record.cic?.url},
-      {title:'São Pio X',body:record.piusX?.references,
-        detail:record.piusX?.scope,detailLabel:'Escopo da referência'}
     ];
     for(const item of cards){
       const card=make('article','study-theology-field');
@@ -404,13 +441,6 @@
         }
         if(links.childElementCount)card.appendChild(links);
       }
-      if(item.sourceUrl&&/^https:\/\/(?:www\.)?vatican\.va\//i.test(item.sourceUrl)){
-        const link=make('a','study-related-link','Consultar a referência do CIC no Vaticano');
-        link.href=item.sourceUrl;
-        link.target='_blank';
-        link.rel='noopener noreferrer';
-        card.appendChild(link);
-      }
       ui.theologyFields.appendChild(card);
     }
     const trace=[
@@ -426,6 +456,7 @@
       ['Versão da matriz',record.matrixVersion],
       ['Tipo de fonte da conexão / relação cristológica',record.sourceType],
       ['Escopo / especificidade da fonte',record.sourceScope],
+      ['Fonte cadastrada para o CIC',record.cic?.url],
       ['Nível de confiabilidade',record.confidence]
     ];
     for(const [label,value] of trace){
@@ -471,14 +502,14 @@
     const marked=state.bookmarks.includes(active.key);
     ui.bookmark.textContent=marked?'Remover marcação':'Marcar passagem';
     ui.bookmark.setAttribute('aria-pressed',String(marked));
-    ui.noteStatus.textContent=storageReady?'Suas anotações permanecem neste navegador.':'Armazenamento local indisponível nesta sessão.';
+    ui.noteStatus.textContent=storageReady?'':'Anotações indisponíveis neste dispositivo.';
     renderBookmarks();
   }
   function renderPlan(){
     const day=plan.index.get(C.referenceKey(active.book.id,active.chapter));
     const progress=readProgress(),complete=progress.has(C.referenceKey(active.book.id,active.chapter));
     ui.planDay.textContent=day?'Dia '+day+' do plano de 365 dias':'Capítulo fora do plano';
-    ui.planText.textContent='Uma única marcação por capítulo. Seu progresso é compartilhado com o plano já existente no Caminhos da Palavra.';
+    ui.planText.textContent='Acompanhe sua leitura diária.';
     ui.planComplete.checked=complete;ui.planComplete.disabled=!day;
   }
   function render(){
@@ -487,13 +518,16 @@
     ui.edition.textContent=C.EDITION.label+' · '+C.EDITION.edition;
     ui.source.href='#studyVerseText';
     ui.query.value=C.formatReference(active.book,active.chapter,active.start,active.end);
-    renderText();renderTheology();renderEditorial();renderNotes();renderGlosas();renderPlan();
+    renderText();renderTheology();renderDoctrine();renderNotes();renderGlosas();renderPlan();
   }
   function resolveInputs(){
     const selected=Number(ui.chapter.value);const verse=parsedFields();
     if(verse.error){feedback(verse.error);return;}
     select(ui.book.value,selected,verse.start,verse.end);
   }
+  const catalogDisclosure=$('studyCatalogDisclosure');
+  if(catalogDisclosure&&window.matchMedia?.('(max-width:790px)').matches)
+    catalogDisclosure.open=false;
   ui.book.addEventListener('change',()=>select(ui.book.value,1));
   ui.chapter.addEventListener('change',()=>select(ui.book.value,Number(ui.chapter.value)));
   ui.start.addEventListener('change',resolveInputs);

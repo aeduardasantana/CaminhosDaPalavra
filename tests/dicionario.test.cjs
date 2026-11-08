@@ -23,5 +23,5 @@ assert.ok(ui.includes("const occurrences=new Map()"));
 assert.ok(calendar.includes("'./dicionario.html#'+encodeURIComponent(entry.id)"));
 assert.ok(!calendar.includes("text(article,'p',entry.contexto)"));
 assert.match(fs.readFileSync('heresias.html','utf8'),/site-menu\.js\?v=/);
-assert.ok(fs.readFileSync('historia-da-salvacao.html','utf8').includes('site-menu.js?v=20261023-dicionario1'));
+assert.match(fs.readFileSync('historia-da-salvacao.html','utf8'),/site-menu\.js\?v=/);
 console.log('OK: dicionário acessível, 12 verbetes iniciais, menu e navegação contextual.');
