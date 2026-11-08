@@ -170,6 +170,31 @@ assert.ok(script.includes('closeFootnote();'),'A mudança de leitura deve fechar
 assert.ok(css.includes('.study-footnote-dialog::backdrop'));
 assert.ok(css.includes('@media(max-width:790px)'),'Painel móvel não previsto.');
 
+
+const inlineDocIds=['studyCicPane','studyPiusPane','studyCicReferences','studyCicScope',
+  'studyPiusSummary','studyPiusReferences','studyPiusScope','studyThemeTags'];
+for(const id of inlineDocIds)
+  assert.ok(html.includes('id="'+id+'"'),'Consulta doutrinal na página ausente: '+id);
+assert.ok(html.indexOf('id="studyTextPane"')<html.indexOf('id="studyCicPane"'),
+  'A Bíblia deve anteceder o Catecismo no celular.');
+assert.ok(html.indexOf('id="studyCicPane"')<html.indexOf('id="studyPiusPane"'),
+  'O Catecismo e São Pio X precisam de áreas distintas.');
+assert.ok(html.indexOf('id="studyPiusPane"')<html.indexOf('id="studyTheologySection"'),
+  'Cartões teológicos não devem anteceder a leitura.');
+assert.ok(html.includes('href="#studyCicPane"')&&html.includes('href="#studyPiusPane"'),
+  'O acesso aos catecismos deve permanecer dentro da página.');
+assert.ok(script.includes('renderDoctrine();'),'As referências devem acompanhar a passagem selecionada.');
+assert.ok(script.includes('ui.cicReferences.textContent='));
+assert.ok(script.includes('ui.piusReferences.textContent='));
+assert.ok(!html.includes('id="studyEditorialContent"'),'Textos técnicos vazios não são necessários na leitura.');
+assert.ok(!script.includes('renderEditorial();'),'Não renderizar introdução editorial sem conteúdo.');
+assert.ok(html.includes('id="studyCatalogDisclosure"'),'Catálogo móvel precisa ser recolhível.');
+assert.ok(script.includes('catalogDisclosure.open=false'),'Catálogo deve iniciar fechado no celular.');
+assert.ok(css.includes('.study-layout>.study-main{order:1}'),'No celular a leitura deve aparecer antes do catálogo.');
+const menu=fs.readFileSync(path.join(root,'site-menu.js'),'utf8');
+assert.ok(menu.includes("./biblia-estudo.html#studyCicPane"));
+assert.ok(menu.includes("./biblia-estudo.html#studyPiusPane"));
+
 assert.ok(html.includes('biblia-estudo.js'));
 assert.ok(html.includes('glosa-gospels.js'));
 assert.ok(html.includes('site-menu.js'));
