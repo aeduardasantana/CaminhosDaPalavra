@@ -59,6 +59,8 @@ jobs:
           node --check scripts/importar-ave-maria.mjs
           node --check scripts/preparar-publicacao.mjs
           node --check scripts/gerar-indice-versiculos.mjs
+          node --check scripts/gerar-vinculos-estudo.mjs
+          node --check vinculos-estudo-core.js
           python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
 
       - name: Validar Mapa Bíblico Mestre e controle editorial
@@ -94,6 +96,7 @@ jobs:
           node tests/aclamacoes-ferial.test.cjs
           node tests/publicacao-segura.test.cjs
           node tests/biblia-estudo.test.cjs
+          node tests/vinculos-estudo.test.mjs
           node tests/acessibilidade-integracao.test.cjs
 
   publicar:
