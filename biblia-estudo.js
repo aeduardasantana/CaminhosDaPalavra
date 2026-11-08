@@ -456,6 +456,7 @@
       ['Versão da matriz',record.matrixVersion],
       ['Tipo de fonte da conexão / relação cristológica',record.sourceType],
       ['Escopo / especificidade da fonte',record.sourceScope],
+      ['Fonte cadastrada para o CIC',record.cic?.url],
       ['Nível de confiabilidade',record.confidence]
     ];
     for(const [label,value] of trace){
