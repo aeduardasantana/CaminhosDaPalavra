@@ -147,6 +147,29 @@ assert.equal(Object.keys(sourceMatrix.window.CDP_THEOLOGY.chapters).length,1334)
 assert.equal(sourceMatrix.window.CDP_THEOLOGY.chapters['GEN:1'].mainTheme,'Criação');
 assert.match(sourceMatrix.window.CDP_THEOLOGY.chapters['GEN:13'].confidence,/Pendente/);
 
+
+for(const id of [
+  'studyFootnotes','studyFootnotesStatus','studyFootnotesList','studyChapterReferences',
+  'studyFootnoteDialog','studyFootnoteDialogTitle','studyFootnoteDialogScope',
+  'studyFootnoteDialogBody','studyFootnoteDialogClose'
+]){
+  assert.ok(html.includes('id="'+id+'"'),'Rodapé ou diálogo ausente: '+id);
+}
+assert.ok(html.includes('vinculos-estudo-core.js'),'Núcleo de vínculos não carregado.');
+assert.ok(script.includes('dados/vinculos-estudo.json'),'Índice documental não carregado.');
+assert.ok(script.includes('linkCore.readingFootnotes('),'Versículos devem utilizar marcadores da fonte.');
+assert.ok(script.includes("plan.markers[item.verse]"),'Marcador não ancorado no número do versículo.');
+assert.ok(script.includes('study-footnote-marker-verse'));
+assert.ok(script.includes('study-footnote-marker-passage'));
+assert.ok(script.includes('renderFootnotes(plan,linksResult.index)'));
+assert.ok(script.includes('study-footnote-list'));
+assert.ok(script.includes('study-footnotes-general'));
+assert.ok(script.includes('showModal'),'Painel de leitura deve ter abertura acessível.');
+assert.ok(script.includes("link.scope==='verse'"),'Escopo pontual deve ser distinguido da passagem.');
+assert.ok(script.includes('closeFootnote();'),'A mudança de leitura deve fechar a nota aberta.');
+assert.ok(css.includes('.study-footnote-dialog::backdrop'));
+assert.ok(css.includes('@media(max-width:790px)'),'Painel móvel não previsto.');
+
 assert.ok(html.includes('biblia-estudo.js'));
 assert.ok(html.includes('glosa-gospels.js'));
 assert.ok(html.includes('site-menu.js'));

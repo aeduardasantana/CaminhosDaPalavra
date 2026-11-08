@@ -65,3 +65,15 @@ As funções públicas de consulta `vinculos-estudo-core.js` disponibilizam `for
 - **Pendente:** conservar literalmente o registro da pesquisa. Nunca inventar explicação, contexto ou link.
 
 **Estado deste trabalho:** consolidações e contrato de dados, sem redesenhar automaticamente a interface ou afirmar que existem observações individuais para todos os versículos.
+
+## Revisão UX — notas no rodapé da leitura (08/11/2026)
+
+A referência editorial é a Bíblia impressa: os versículos têm numeração própria e as notas são identificadas por **marcadores numéricos independentes**, que dão acesso às referências do rodapé. Não confundir número do versículo com número da nota.
+
+- **Nota de versículo específico:** marcador junto ao número do versículo a que a observação se refere; no rodapé aparece `N. Referência bíblica — título`. A nota só é exibida quando a fonte do vínculo informa o versículo exato.
+- **Nota de passagem:** **um único marcador** junto ao primeiro versículo visível da passagem associada, mesmo quando a pessoa está lendo vários versículos. No rodapé a referência integral do intervalo é mantida. Se a seleção inicia no meio do intervalo, o marcador aparece no primeiro versículo selecionado que esteja dentro do escopo; não é uma nova afirmação de referência individual.
+- **Referência de capítulo / conjunto de capítulos:** fica em seção separada “Referências gerais do capítulo” e **não** cria ícones ao lado dos seus versículos.
+- **Consulta:** tocar no marcador ou na referência numerada do rodapé abre a mesma ficha contextual, com escopo, verbete, fonte e eventual link para o dicionário. No celular a janela aparece na parte inferior; em telas amplas pode ser modal central. Fechar retorna o foco ao elemento ativado, preservando o capítulo, o intervalo e a rolagem de leitura.
+- **Fonte de dados:** `vinculos-estudo-core.js`, `dados/vinculos-estudo.json`. Verbetes associados documentalmente a uma passagem não são apresentados como comentário exegético próprio de cada versículo. Observações individuais e termos clicáveis só surgem com registros de curadoria específicos.
+- **Acessibilidade:** cada marcador informa por `aria-label` seu número, abrangência e título; a leitura em voz alta utiliza só o texto bíblico, sem inserir notas na locução automaticamente.
+- **Sem conteúdo:** nenhum marcador enganoso quando a matriz não fornece relação contextual; informação geral do capítulo permanece em seu painel independente.

@@ -68,6 +68,47 @@ for(const link of Object.values(links.links)){
 }
 for(const liturgy of links.liturgicalLinks)
   assert.ok(links.dictionary[liturgy.dictionaryId],'Vínculo litúrgico deve apontar para verbete real.');
+
+// Contrato de navegação em notas impressas: uma marca por vínculo e passagem,
+// nunca a mesma nota copiada para todos os versículos da sua abrangência.
+const notesJohn=core.readingFootnotes(links,'JHN',2,13,22);
+assert.ok(notesJohn.notes.some(note=>note.link.dictionaryId==='templo-jerusalem'));
+const templeNote=notesJohn.notes.find(note=>note.link.dictionaryId==='templo-jerusalem');
+assert.equal(templeNote.anchorVerse,13);
+assert.equal(templeNote.scope,'passage');
+assert.ok(notesJohn.markers[13].some(note=>note.id===templeNote.id));
+assert.ok(!(notesJohn.markers[14]||[]).some(note=>note.id===templeNote.id));
+const selectedMiddle=core.readingFootnotes(links,'JHN',2,14,18);
+assert.ok(selectedMiddle.notes.some(note=>note.link.dictionaryId==='templo-jerusalem'));
+assert.equal(selectedMiddle.notes.find(note=>note.id===templeNote.id).anchorVerse,14);
+assert.ok(Object.keys(core.readingFootnotes(links,'JHN',1).markers)
+  .every(n=>Number.isInteger(Number(n))));
+const synthetic={
+  chapters:{'JHN:2':{verseCount:25,linkIds:['v','p','c']}},
+  links:{
+    v:{id:'v',kind:'observation',scope:'verse',
+      target:{bookId:'JHN',startChapter:2,endChapter:2,startVerse:17,endVerse:17},
+      title:'Versículo específico'},
+    p:{id:'p',kind:'dictionary-context',scope:'passage',
+      target:{bookId:'JHN',startChapter:2,endChapter:2,startVerse:13,endVerse:22},
+      sourceReference:'Jo 2,13-22'},
+    c:{id:'c',kind:'dictionary-context',scope:'chapter',
+      target:{bookId:'JHN',startChapter:2,endChapter:2}}
+  }
+};
+const plan=core.readingFootnotes(synthetic,'JHN',2,13,22);
+assert.equal(plan.notes.length,2);
+assert.deepEqual(plan.notes.map(note=>note.anchorVerse),[13,17]);
+assert.equal(plan.notes[0].scope,'passage');
+assert.equal(plan.notes[1].scope,'verse');
+assert.equal(plan.chapterReferences.length,1);
+assert.ok(!plan.markers[14],'Nota da passagem não deve se repetir no versículo 14.');
+assert.ok(!plan.markers[18],'Nota da passagem não deve se repetir no versículo 18.');
+assert.equal(core.readingFootnotes(synthetic,'JHN',2,1,12).notes.length,0);
+assert.equal(core.readingFootnotes(synthetic,'JHN',2,17,17).notes.length,2);
+assert.equal(core.readingFootnotes(synthetic,'JHN',2,17,17).notes[0].anchorVerse,17);
+assert.equal(core.readingFootnotes(synthetic,'JHN',2,17,17).chapterReferences.length,1);
+
 const sample=JSON.stringify(links);
 assert.ok(!sample.includes('versiculos:'));
 console.log('Vínculos documentais consolidados: '+links.counts.chapters+' capítulos, '+
