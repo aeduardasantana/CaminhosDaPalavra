@@ -147,12 +147,17 @@ if (invalidIncluded.length) {
 }
 
 const editorialPayloads = createPublicEditorialPayloads();
-const verseIndex = buildVerseIndex();
+const {publicBooks,...verseIndex}=buildVerseIndex({includeText:true});
+const bibleBookIds=Object.keys(publicBooks);
+if(bibleBookIds.length!==73)throw new Error('Publicação bíblica incompleta: número de livros inválido.');
+const biblePublicCount=bibleBookIds.reduce((total,id)=>total+
+  publicBooks[id].chapters.reduce((sum,ch)=>sum+ch.verses.length,0),0);
+if(biblePublicCount!==verseIndex.counts.verses)throw new Error('Publicação bíblica incompleta: número de versículos inválido.');
 if(publicFiles.includes('verse-index.js'))throw new Error('Índice gerado não deve ser um arquivo-fonte publicado.');
 
 if (process.argv.includes('--check')) {
   console.log(
-    'Pacote público validado:', publicFiles.length+1, 'arquivos;',
+    'Pacote público validado:', publicFiles.length+1+bibleBookIds.length, 'arquivos;'
     editorialPayloads.authorizedCount, 'capítulos autorizados;',
     editorialPayloads.blockedCount, 'mantidos bloqueados com metadados mínimos;',
     verseIndex.counts.verses, 'versículos com contagem por capítulo validada.'
@@ -212,14 +217,20 @@ try {
     'window.CDP_VERSE_INDEX = '+JSON.stringify(verseIndex)+';\n',
     'utf8'
   );
+  const bibleOutput=path.join(outputDir,'dados','biblia-ave-maria');
+  fs.mkdirSync(bibleOutput,{recursive:true});
+  for(const bookId of bibleBookIds){
+    if(!/^[A-Z0-9]{3}$/.test(bookId))throw new Error('ID bíblico inválido: '+bookId);
+    fs.writeFileSync(path.join(bibleOutput,bookId+'.json'),JSON.stringify(publicBooks[bookId]),'utf8');
+  }
 } catch (error) {
   fs.rmSync(outputDir, { recursive: true, force: true });
   throw error;
 }
 
 console.log(
-  'Pacote público criado:', publicFiles.length+1, 'arquivos em', outputDir + ';',
+  'Pacote público criado:', publicFiles.length+1+bibleBookIds.length, 'arquivos em', outputDir + ';',
   editorialPayloads.authorizedCount, 'capítulos autorizados;',
   editorialPayloads.blockedCount, 'capítulos com conteúdo restrito;',
-  verseIndex.counts.verses, 'versículos validados sem textos publicados.'
+  biblePublicCount, 'versículos da Bíblia Ave-Maria publicados em 73 arquivos por livro.'
 );
