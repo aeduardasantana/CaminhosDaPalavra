@@ -23,7 +23,8 @@
     note:$('studyPersonalNote'),saveNote:$('studySaveNote'),export:$('studyExportNotes'),
     noteStatus:$('studyNoteStatus'),textQuery:$('studyTextQuery'),textButton:$('studyTextButton'),
     textStatus:$('studyTextStatus'),textResults:$('studyTextResults'),
-    readAloud:$('studyReadAloud'),stopAloud:$('studyStopAloud')
+    readAloud:$('studyReadAloud'),stopAloud:$('studyStopAloud'),
+    prevChapter:$('studyPrevChapter'),nextChapter:$('studyNextChapter')
   };
   const NOTES_KEY='cdp-avm-study-notes-v1',PLAN_KEY='lce-bible365-plan-v1',JOURNEY_KEY='lce-bible365-journey-start-v1';
   const VALID_KEY=/^[A-Z0-9]{2,4}:\d{1,3}(?::\d{1,3}(?:-\d{1,3})?)?$/;
@@ -102,6 +103,14 @@
     });
     if(!found)ui.list.appendChild(make('p','study-empty','Nenhum livro corresponde ao filtro.'));
   }
+  function adjacentChapter(direction){
+    const nextChapter=active.chapter+direction;
+    if(nextChapter>=1&&nextChapter<=active.book.chapters)
+      return {bookId:active.book.id,chapter:nextChapter};
+    const current=books.findIndex(book=>book.id===active.book.id),nextBook=books[current+direction];
+    if(!nextBook)return null;
+    return {bookId:nextBook.id,chapter:direction>0?1:nextBook.chapters};
+  }
   function renderChapters(){
     ui.book.value=active.book.id;
     ui.chapter.replaceChildren();
@@ -118,6 +127,8 @@
       : 'Capítulo com '+count+' versículo(s) registrado(s) na fonte JSON incorporada. Intervalos acima desse limite não são aceitos.';
     ui.start.value=active.start===null?'':String(active.start);
     ui.end.value=active.start===null||active.end===active.start?'':String(active.end);
+    ui.prevChapter.disabled=!adjacentChapter(-1);
+    ui.nextChapter.disabled=!adjacentChapter(1);
   }
   function stopSpeech(){
     if(speechAvailable)window.speechSynthesis.cancel();
@@ -267,6 +278,14 @@
   });
   ui.stopAloud.addEventListener('click',stopSpeech);
   window.addEventListener('pagehide',stopSpeech);
+  ui.prevChapter.addEventListener('click',()=>{
+    const previous=adjacentChapter(-1);
+    if(previous)select(previous.bookId,previous.chapter);
+  });
+  ui.nextChapter.addEventListener('click',()=>{
+    const next=adjacentChapter(1);
+    if(next)select(next.bookId,next.chapter);
+  });
   ui.copy.addEventListener('click',async()=>{
     const txt=ui.selected.textContent;
     try{await navigator.clipboard.writeText(txt);feedback('Referência copiada.');}catch{window.prompt('Copie a referência:',txt);}
