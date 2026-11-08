@@ -23,7 +23,9 @@
       {label:'Vida cristã · sacramentos e virtudes',url:'./historia-da-salvacao.html#eixo-pessoa',page:'historia'},
       {label:'Os 267 Papas · Sucessão Apostólica',url:'./historia-da-salvacao.html#sucessao-pontificia',page:'papas'}
     ]},
-    {group:'Magistério',note:'Doutrina e pronunciamentos oficiais',links:[
+    {group:'Magistério',note:'Aprender e viver a fé',links:[
+      {label:'Catecismo da Igreja Católica',url:'./biblia-estudo.html#studyCicPane'},
+      {label:'Catecismo de São Pio X',url:'./biblia-estudo.html#studyPiusPane'},
       {label:'Heresias e condenações doutrinais',url:'./heresias.html',page:'heresias'}
     ]},
     {group:'Acessibilidade',note:'Leitura e orientação',links:[
