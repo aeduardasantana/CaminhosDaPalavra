@@ -117,6 +117,36 @@ assert.ok(index.includes('href="./acessibilidade.html"'));
 assert.ok(!index.includes('https://www.bible.com/pt/versions/4542'));
 assert.ok(app.includes('return studyChapterUrl(bookId,chapter);'));
 assert.ok(!app.includes('record.bibleUrl || chapterUrl'));
+
+assert.ok(html.includes('id="studyTheologySection"'),'A área do estudo não está no leitor.');
+assert.ok(html.includes('id="studyTheologyFields"'));
+assert.ok(html.includes('id="studyTheologyTrace"'));
+assert.ok(html.includes('href="#studyTheologySection"'),'Navegação ao estudo não existe.');
+assert.ok(html.includes('theology-data.js'),'A matriz autoral pública não foi carregada.');
+assert.ok(html.includes('publication-control.js'),'A autorização do conteúdo não foi carregada.');
+assert.ok(script.includes('renderText();renderTheology();'),'O estudo precisa acompanhar o capítulo selecionado.');
+assert.ok(script.includes('control?.publicAuthorized!==true'),'O painel deve respeitar a autorização da titular.');
+assert.ok(script.includes("n+' · '+total+' versículos"),'O seletor deve indicar a contagem por capítulo.');
+for(const field of [
+  'record.cpId','record.testament','record.literaryGroup','record.book','record.chapter',
+  'record.reference','record.bibleUrl','record.salvationHistory','record.narrativePeriod',
+  'record.mainTheme','record.secondaryThemes','record.covenant','record.rosary?.mystery',
+  'record.christRelation','record.biblicalConnections','record.connectionClass',
+  'record.cic?.references','record.cic?.url','record.piusX?.references',
+  'record.matrixStatus','record.matrixVersion','record.sourceType','record.sourceScope',
+  'record.confidence','record.rosary?.nature','record.themeScope',
+  'record.secondaryThemesScope','record.cic?.scope','record.piusX?.scope'
+]){
+  assert.ok(script.includes(field),'Campo da matriz não representado na página: '+field);
+}
+assert.ok(script.includes('C.parseReference(reference,books,verseIndex)'),'Conexões bíblicas precisam funcionar dentro do leitor.');
+assert.ok(!script.includes('renderTheology()||'),'Estudo não pode ser omitido por condições de navegação.');
+const sourceMatrix={window:{}};
+vm.runInNewContext(fs.readFileSync(path.join(root,'theology-data.js'),'utf8'),sourceMatrix);
+assert.equal(Object.keys(sourceMatrix.window.CDP_THEOLOGY.chapters).length,1334);
+assert.equal(sourceMatrix.window.CDP_THEOLOGY.chapters['GEN:1'].mainTheme,'Criação');
+assert.match(sourceMatrix.window.CDP_THEOLOGY.chapters['GEN:13'].confidence,/Pendente/);
+
 assert.ok(html.includes('biblia-estudo.js'));
 assert.ok(html.includes('glosa-gospels.js'));
 assert.ok(html.includes('site-menu.js'));
