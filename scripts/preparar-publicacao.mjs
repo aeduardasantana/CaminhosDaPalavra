@@ -157,7 +157,7 @@ if(publicFiles.includes('verse-index.js'))throw new Error('Índice gerado não d
 
 if (process.argv.includes('--check')) {
   console.log(
-    'Pacote público validado:', publicFiles.length+1+bibleBookIds.length, 'arquivos;'
+    'Pacote público validado:', publicFiles.length+1+bibleBookIds.length, 'arquivos;',
     editorialPayloads.authorizedCount, 'capítulos autorizados;',
     editorialPayloads.blockedCount, 'mantidos bloqueados com metadados mínimos;',
     verseIndex.counts.verses, 'versículos com contagem por capítulo validada.'
