@@ -87,7 +87,9 @@ try {
     'liturgia-paralelo.js',
     'theology-data.js',
     'publication-control.js',
-    'verse-index.js'
+    'verse-index.js',
+    'vinculos-estudo-core.js',
+    'dados/vinculos-estudo.json'
   ]) {
     assert.ok(fileSet.has(required), 'Arquivo público esperado ausente: ' + required);
   }
@@ -157,6 +159,14 @@ try {
   assert.equal(verseIndex.counts.chapters,1334);
   assert.equal(verseIndex.counts.verses,35450);
   assert.equal(verseIndex.books.GEN[0],31);
+  const linkIndex=JSON.parse(fs.readFileSync(path.join(output,'dados/vinculos-estudo.json'),'utf8'));
+  assert.equal(linkIndex.counts.chapters,1334);
+  assert.equal(linkIndex.counts.verses,35450);
+  assert.equal(linkIndex.counts.dictionaryEntries,46);
+  assert.equal(linkIndex.counts.verifiedLexicalAnchors,0);
+  assert.ok(linkIndex.counts.contextualDictionaryLinks>20);
+  assert.ok(linkIndex.chapters['JHN:2'].linkIds.some(id=>
+    linkIndex.links[id]?.dictionaryId==='templo-jerusalem'));
   const distributedBible=files.filter(file=>/^dados\/biblia-ave-maria\/[A-Z0-9]{3}\.json$/.test(file));
   assert.equal(distributedBible.length,73,'Os 73 livros precisam constar no pacote público.');
   let distributedVerses=0,distributedChapters=0;
