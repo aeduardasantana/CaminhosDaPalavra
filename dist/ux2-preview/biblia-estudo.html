@@ -1,0 +1,234 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Bíblia Sagrada Ave-Maria integral para leitura pública por livro, capítulo e versículo, com busca, áudio, anotações e recursos acessíveis.">
+  <title>Bíblia para estudo — Caminhos da Palavra</title>
+  <link rel="stylesheet" href="./styles.css?v=20261029">
+  <link rel="stylesheet" href="./site-menu.css?v=20261029">
+  <link rel="stylesheet" href="./biblia-estudo.css?v=20261108-doutrina1">
+  <link rel="stylesheet" href="./ux2.css?v=20261108-2">
+</head>
+<body class="study-page">
+  <header class="site-header">
+    <div class="shell header-inner">
+      <div class="brand-block"><h1><a href="./index.html#inicio">Caminhos da Palavra</a></h1></div>
+      <nav class="site-nav-host" aria-label="Menu principal"></nav>
+    </div>
+  </header>
+  <script src="./site-menu.js?v=20261108-doutrina1"></script>
+  <main class="shell study-shell" id="conteudo-principal">
+    <nav class="study-breadcrumb" aria-label="Você está aqui">
+      <a href="./index.html#inicio">Início</a><span aria-hidden="true"> / </span>
+      <a href="./index.html#biblia">Bíblia Sagrada</a><span aria-hidden="true"> / </span>
+      <strong>Bíblia para estudo</strong>
+    </nav>
+    <section class="study-hero study-hero-compact" aria-labelledby="study-main-title">
+      <div>
+        <p class="eyebrow">Sagrada Escritura · Doutrina católica</p>
+        <h2 id="study-main-title">Ler e aprofundar a fé</h2>
+        <p>Palavra de Deus, Catecismo da Igreja Católica e São Pio X.</p>
+      </div>
+      <details class="study-edition-details">
+        <summary>Sobre a edição bíblica</summary>
+        <p>Bíblia Sagrada Ave-Maria, 2ª edição. Direitos da tradução: Editora Ave-Maria. Leitura no Caminhos da Palavra.</p>
+      </details>
+    </section>
+
+    <section class="study-search card" aria-label="Pesquisa por referência">
+      <form id="studyReferenceForm" class="study-search-row">
+        <label for="studyReferenceInput">Pesquisar referência bíblica</label>
+        <input id="studyReferenceInput" type="search" autocomplete="off" maxlength="110" placeholder="Ex.: Jo 3,16-18 · Gn 1 · 1Cor 13,4-7">
+        <button class="primary-action" type="submit">Ir à referência</button>
+      </form>
+      
+      <details class="study-search-more">
+        <summary>Buscar palavras na Bíblia</summary>
+        <div class="study-text-search">
+        <label for="studyTextQuery">Palavra ou expressão</label>
+        <input id="studyTextQuery" type="search" placeholder="Ex.: amor, misericórdia, esperança">
+        <button id="studyTextButton" class="secondary-button" type="button">Buscar texto</button>
+        <p id="studyTextStatus" class="study-help"></p>
+        <div id="studyTextResults" aria-live="polite"></div>
+        </div>
+      </details>
+      <p id="studyFeedback" role="status" aria-live="polite"></p>
+    </section>
+
+    <div class="study-layout">
+      <aside class="study-catalog card" aria-labelledby="study-catalog-title">
+        <details id="studyCatalogDisclosure" open>
+        <summary id="study-catalog-title">Escolher outro livro</summary>
+        <div class="study-catalog-filters">
+          <label for="studyBookFilter">Filtrar livro</label>
+          <input id="studyBookFilter" type="search" placeholder="Nome ou abreviatura">
+          <label for="studyTestamentFilter">Testamento</label>
+          <select id="studyTestamentFilter">
+            <option value="">Antigo e Novo Testamento</option>
+            <option value="AT">Antigo Testamento</option>
+            <option value="NT">Novo Testamento</option>
+          </select>
+        </div>
+        <div id="studyBookList" class="study-book-list" aria-label="Catálogo de 73 livros"></div>
+        </details>
+      </aside>
+
+      <div class="study-main">
+        <section class="card study-picker" aria-labelledby="study-chapter-title">
+          <h3 id="study-chapter-title">Escolher a passagem</h3>
+          <div class="study-picker-grid">
+            <label>Livro
+              <select id="studyBookSelect" aria-label="Livro bíblico"></select>
+            </label>
+            <label>Capítulo
+              <select id="studyChapterSelect" aria-label="Capítulo bíblico"></select>
+            </label>
+            <label>Do versículo
+              <input id="studyVerseStart" type="number" min="1" step="1" inputmode="numeric" placeholder="Início">
+            </label>
+            <label>Até o versículo
+              <input id="studyVerseEnd" type="number" min="1" step="1" inputmode="numeric" placeholder="Fim">
+            </label>
+          </div>
+          <p id="studyVerseLimit" class="study-help" role="status"></p>
+          <div class="study-selection-actions" role="group" aria-label="Navegação entre capítulos">
+            <button id="studyPrevChapter" class="secondary-button" type="button">Capítulo anterior</button>
+            <button id="studyNextChapter" class="secondary-button" type="button">Próximo capítulo</button>
+          </div>
+          <div class="study-selection">
+            <div>
+              <strong id="studyCurrentReference">Selecione uma referência</strong>
+              <span id="studyCurrentEdition">Bíblia Sagrada — Ave-Maria · 2ª edição</span>
+            </div>
+            <div class="study-selection-actions">
+              <a id="studyOpenSource" class="primary-link" href="#studyVerseText">Ler a passagem</a>
+              <button id="studyCopyReference" type="button" class="secondary-button">Copiar referência</button>
+              <button id="studyBookmark" type="button" class="secondary-button" aria-pressed="false">Marcar passagem</button>
+            </div>
+          </div>
+          <div class="study-plan-strip" aria-live="polite">
+            <div><strong id="studyPlanDay">Plano de leitura</strong><p id="studyPlanText"></p></div>
+            <label class="study-plan-check"><input type="checkbox" id="studyPlanComplete"> Capítulo concluído</label>
+            <a href="./index.html#plano-de-leitura">Abrir plano de 365 dias</a>
+          </div>
+        </section>
+
+        <nav class="study-context-links study-context-tabs" aria-label="Leitura e formação">
+          <a href="#studyTextPane">Bíblia</a>
+          <a href="#studyCicPane">CIC</a>
+          <a href="#studyPiusPane">São Pio X</a>
+          <a href="#studyTheologySection">Aprofundar</a>
+          <a href="#studyNotesPane">Minhas notas</a>
+        </nav>
+
+        <section class="study-content-grid" aria-label="Leitura bíblica e formação na fé">
+          <article class="card study-pane study-text-pane" id="studyTextPane" aria-labelledby="study-text-title">
+            <h3 id="study-text-title">Bíblia Sagrada Ave-Maria</h3>
+            <p class="study-pane-meta" id="studyReadingReference">Selecione o capítulo ou os versículos para ler.</p>
+            <div id="studyVerseText" aria-live="polite" tabindex="-1"></div>
+            <aside id="studyFootnotes" class="study-footnotes" aria-labelledby="studyFootnotesTitle">
+              <h4 id="studyFootnotesTitle">Notas e referências da leitura</h4>
+              <p id="studyFootnotesStatus" class="study-help" role="status" aria-live="polite">Carregando as referências vinculadas ao trecho...</p>
+              <div id="studyFootnotesList"></div>
+              <div id="studyChapterReferences"></div>
+            </aside>
+            <div class="study-selection-actions" role="group" aria-label="Leitura em voz alta">
+              <button id="studyReadAloud" class="secondary-button" type="button" disabled>Ouvir capítulo ou passagem</button>
+              <button id="studyStopAloud" class="secondary-button" type="button" disabled>Parar leitura</button>
+            </div>
+            
+          </article>
+          <article class="card study-pane study-doctrine-pane" id="studyCicPane" aria-labelledby="study-cic-title">
+            <p class="eyebrow">Doutrina católica · depois do Concílio Vaticano II</p>
+            <h3 id="study-cic-title">Catecismo da Igreja Católica</h3>
+            <p id="studyCicReferences" class="study-doctrine-reference" aria-live="polite"></p>
+            <details class="study-doctrine-details">
+              <summary>Ver contexto da referência</summary>
+              <div id="studyCicScope"></div>
+              <p class="study-doctrine-note">Referências do Mapa Bíblico Mestre. O texto integral do catecismo ainda não está incorporado ao acervo local.</p>
+            </details>
+          </article>
+          <article class="card study-pane study-doctrine-pane" id="studyPiusPane" aria-labelledby="study-pius-title">
+            <p class="eyebrow">Doutrina cristã · Catecismo Maior</p>
+            <h3 id="study-pius-title">Catecismo de São Pio X</h3>
+            <p id="studyPiusSummary" class="study-doctrine-reference" aria-live="polite"></p>
+            <details class="study-doctrine-details">
+              <summary>Ver referência e contexto</summary>
+              <p id="studyPiusReferences"></p>
+              <div id="studyPiusScope"></div>
+              <p class="study-doctrine-note">Referências do Mapa Bíblico Mestre. O texto integral da edição do catecismo ainda não está incorporado ao acervo local.</p>
+            </details>
+          </article>
+          <section class="card study-theology-pane" id="studyTheologySection" aria-labelledby="study-theology-title">
+            <div class="study-theology-heading">
+              <div>
+                <p class="eyebrow">Mapa Bíblico Mestre · estudo do capítulo</p>
+                <h3 id="study-theology-title">Compreender a Palavra</h3>
+              </div>
+              <span class="study-theology-id" id="studyTheologyId"></span>
+            </div>
+            <div id="studyThemeTags" class="study-theme-tags" aria-label="Temas e contexto bíblico"></div>
+            <details class="study-theology-study">
+              <summary>Ver temas, conexões e explicações</summary>
+              <div id="studyTheologyFields" class="study-theology-fields"></div>
+            </details>
+            <details class="study-theology-method">
+              <summary>Fontes e critérios da pesquisa</summary>
+              <p id="studyTheologyStatus" class="study-help" role="status"></p>
+              <dl id="studyTheologyTrace" class="study-theology-trace"></dl>
+            </details>
+          </section>
+          <article class="card study-pane study-note-pane" id="studyNotesPane" aria-labelledby="study-note-title">
+            <h3 id="study-note-title">Minhas marcações e anotações</h3>
+            
+            <label for="studyPersonalNote">Anotação para a referência selecionada</label>
+            <textarea id="studyPersonalNote" maxlength="5000" rows="6" placeholder="Registre suas observações de estudo…"></textarea>
+            <div class="study-note-actions">
+              <button id="studySaveNote" type="button" class="primary-action">Salvar anotação</button>
+              <button id="studyExportNotes" type="button" class="secondary-button">Exportar anotações (JSON)</button>
+            </div>
+            <p id="studyNoteStatus" aria-live="polite"></p>
+            <details><summary>Minhas passagens marcadas</summary><div id="studyBookmarksList"></div></details>
+            <details class="study-privacy"><summary>Privacidade das anotações</summary><p>Suas anotações ficam neste navegador. Exporte cópias antes de limpar os dados.</p></details>
+          </article>
+          <details class="card study-appendix">
+            <summary>Glosas para Libras — material de apoio</summary>
+            <div class="study-appendix-body">
+            <div id="studyGlosaContent"></div>
+            <p><a href="./index.html#liturgia-e-libras">Consultar repertório litúrgico</a></p>
+            </div>
+          </details>
+        </section>
+      </div>
+    </div>
+  </main>
+  <footer class="app-footer"><p>© 2026 Caminhos da Palavra. Todos os direitos reservados.</p><a href="./index.html#inicio">Voltar ao início</a></footer>
+  <dialog id="studyFootnoteDialog" class="study-footnote-dialog" aria-labelledby="studyFootnoteDialogTitle">
+    <div class="study-footnote-dialog-head">
+      <div>
+        <p class="eyebrow">Nota contextual da Bíblia</p>
+        <h3 id="studyFootnoteDialogTitle"></h3>
+      </div>
+      <button id="studyFootnoteDialogClose" type="button" class="secondary-button">Fechar</button>
+    </div>
+    <p id="studyFootnoteDialogScope" class="study-footnote-dialog-scope"></p>
+    <div id="studyFootnoteDialogBody"></div>
+  </dialog>
+  <script src="./bible-data.js"></script>
+  <script src="./verse-index.js?v=20261107-17b"></script>
+  <script src="./glosa-psalms.js"></script>
+  <script src="./glosa-gospels.js"></script>
+  <script src="./glosa-new-testament.js"></script>
+  <script src="./glosa-old-testament.js"></script>
+  <script src="./glosas-revisadas-ano-a.js"></script>
+  <script src="./glosas-revisadas-ano-b.js"></script>
+  <script src="./glosas-revisadas-ano-c.js"></script>
+  <script src="./biblia-estudo-core.js?v=20261107-17b"></script>
+  <script src="./vinculos-estudo-core.js?v=20261108-notas1"></script>
+  <script src="./theology-data.js?v=20261108-estudo1"></script>
+  <script src="./publication-control.js?v=20261108-estudo1"></script>
+  <script src="./biblia-estudo.js?v=20261108-doutrina1"></script>
+  <script src="./ux2.js?v=20261108-2"></script>
+</body>
+</html>
