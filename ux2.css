@@ -13,8 +13,8 @@ body.cdp-ux2 .shell{width:min(1280px,calc(100% - 46px))}
 .cdp-side-nav a,.cdp-side-nav button{width:100%;display:flex;gap:12px;align-items:center;padding:10px 10px;border:0;border-radius:6px;color:#fff;background:transparent;text-align:left;font:500 15px Arial,sans-serif;text-decoration:none;cursor:pointer}
 .cdp-side-nav a:hover,.cdp-side-nav button:hover,.cdp-side-nav .is-current{background:#8e1a14}
 .cdp-side-nav svg{width:23px;height:23px;flex:none;color:#efbd4f;fill:none;stroke:currentColor;stroke-width:1.6}
-.cdp-sidebar-art{margin-top:auto;min-height:145px;background:linear-gradient(0deg,#2207063b,#35070520),url('./assets/ux2/hero.svg') 87% 66%/auto 260px no-repeat}
-body.cdp-ux2 .site-header{position:relative;top:auto;z-index:50;min-height:165px;background:#402019 url('./assets/ux2/hero.svg') center 41%/cover no-repeat;border:0;backdrop-filter:none}
+.cdp-sidebar-art{margin-top:auto;min-height:145px;background:linear-gradient(0deg,#2207063b,#35070520),url('./assets/ux2/hero-foto.webp') 87% 66%/auto 260px no-repeat,url('./assets/ux2/hero.svg') 87% 66%/auto 260px no-repeat}
+body.cdp-ux2 .site-header{position:relative;top:auto;z-index:50;min-height:165px;background:#402019 url('./assets/ux2/hero-foto.webp') center 41%/cover no-repeat,url('./assets/ux2/hero.svg') center 41%/cover no-repeat;border:0;backdrop-filter:none}
 body.cdp-ux2 .site-header::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,transparent 0%,#1c09062a 24%,#240c0899 51%,#18090625 100%);pointer-events:none}
 body.cdp-ux2 .site-header .header-inner{position:relative;z-index:2;display:flex;flex-direction:column;justify-content:flex-start;gap:7px;padding:10px 0 14px;min-height:165px}
 body.cdp-ux2 .site-header .brand-block h1{font:700 clamp(30px,3vw,44px)/1.1 Georgia,serif;color:#fff6df;text-shadow:0 3px 9px #160805}
@@ -36,12 +36,12 @@ body.cdp-ux2 .history-grid{gap:16px}
 body.cdp-ux2 .hs-stage,body.cdp-ux2 .journey-chapter,body.cdp-ux2 .study-pane{border-radius:10px}
 body.cdp-ux2 .chapter-index,body.cdp-ux2 .hs-life-sidebar{top:12px}
 .cdp-feature-cards{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:10px;max-width:1650px;margin:0 auto;padding:16px 20px 23px;background:#f4ebdf}
-.cdp-feature-card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:0;min-height:146px;text-align:center;padding:12px 5px 10px;border:1px solid #be8e51;border-radius:8px;overflow:hidden;background:linear-gradient(0deg,#170b08eb,#160a0800 80%),url('./assets/ux2/biblia.svg') center/cover;color:#fff;text-shadow:0 2px 5px #000}
-.cdp-feature-card:nth-child(2){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/estudo.svg')}
-.cdp-feature-card:nth-child(3){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/liturgia.svg')}
-.cdp-feature-card:nth-child(4){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/missa.svg')}
-.cdp-feature-card:nth-child(5){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/formacao.svg')}
-.cdp-feature-card:nth-child(6){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/jornada.svg')}
+.cdp-feature-card{position:relative;display:flex;flex-direction:column;justify-content:flex-end;align-items:center;min-width:0;min-height:146px;text-align:center;padding:12px 5px 10px;border:1px solid #be8e51;border-radius:8px;overflow:hidden;background:linear-gradient(0deg,#170b08eb,#160a0800 80%),url('./assets/ux2/biblia-foto.webp'),url('./assets/ux2/biblia.svg') center/cover;color:#fff;text-shadow:0 2px 5px #000}
+.cdp-feature-card:nth-child(2){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/estudo-foto.webp'),url('./assets/ux2/estudo.svg')}
+.cdp-feature-card:nth-child(3){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/liturgia-foto.webp'),url('./assets/ux2/liturgia.svg')}
+.cdp-feature-card:nth-child(4){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/missa-foto.webp'),url('./assets/ux2/missa.svg')}
+.cdp-feature-card:nth-child(5){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/formacao-foto.webp'),url('./assets/ux2/formacao.svg')}
+.cdp-feature-card:nth-child(6){background-image:linear-gradient(0deg,#170b08ef,#160a0800 80%),url('./assets/ux2/jornada-foto.webp'),url('./assets/ux2/jornada.svg')}
 .cdp-feature-card strong{font:700 18px/1.15 Georgia,serif}.cdp-feature-card small{font:12px/1.3 Arial,sans-serif;margin-top:4px}.cdp-feature-card:focus-visible,.cdp-side-nav a:focus-visible{outline:3px solid #f2c45c;outline-offset:2px}
 .cdp-mobile-nav{display:none}
 .cdp-feature-study{padding:13px 0 20px}.cdp-study-titlebar{display:flex;align-items:center;justify-content:space-between;gap:15px;border-bottom:1px solid #d9c3a5;padding-bottom:13px;margin-bottom:15px}
