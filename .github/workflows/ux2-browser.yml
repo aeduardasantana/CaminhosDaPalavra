@@ -25,9 +25,11 @@ jobs:
         run: |
           npm install --no-save playwright@1.58.0
           npx playwright install --with-deps chromium
+      - name: Preparar pacote público conforme a publicação existente
+        run: node scripts/preparar-publicacao.mjs --output dist/ux2-preview
       - name: Testar em servidor local sem publicar
         run: |
-          python3 -m http.server 8765 --bind 127.0.0.1 >/tmp/ux2-http.log 2>&1 &
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist/ux2-preview >/tmp/ux2-http.log 2>&1 &
           sleep 3
           node tests/ux2-browser.mjs
       - name: Guardar capturas do navegador
