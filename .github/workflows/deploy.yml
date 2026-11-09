@@ -42,6 +42,7 @@ jobs:
           node --check app.js
           node --check biblia-estudo-core.js
           node --check biblia-estudo.js
+          node --check ux2.js
           node --check acessibilidade.js
           node --check theology-data.js
           node --check publication-control.js
@@ -62,6 +63,9 @@ jobs:
           node --check scripts/gerar-vinculos-estudo.mjs
           node --check vinculos-estudo-core.js
           python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
+
+      - name: Validar integração UX 2.0
+        run: node tests/ux2.test.mjs
 
       - name: Validar Mapa Bíblico Mestre e controle editorial
         run: |
