@@ -72,12 +72,14 @@ jobs:
         env:
           PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
         run: |
-          BASE="https://raw.githack.com/aeduardasantana/CaminhosDaPalavra/$PREVIEW_SHA"
+          BASE="https://raw.githack.com/aeduardasantana/CaminhosDaPalavra/$PREVIEW_SHA/dist/ux2-preview"
           curl --fail --location --silent --show-error --retry 4 --retry-delay 3 "$BASE/historia-da-salvacao.html" -o /tmp/cdp-ux2-preview.html
           grep -q 'ux2.css' /tmp/cdp-ux2-preview.html
           curl --fail --location --silent --show-error "$BASE/ux2.css" -o /tmp/cdp-ux2.css
           curl --fail --location --silent --show-error "$BASE/ux2.js" -o /tmp/cdp-ux2.js
-          curl --fail --location --silent --show-error "$BASE/assets/ux2/hero.svg" -o /tmp/cdp-ux2-hero.svg
+          curl --fail --location --silent --show-error "$BASE/assets/ux2/hero-foto.webp" -o /tmp/cdp-ux2-hero.webp
+          curl --fail --location --silent --show-error "$BASE/dados/biblia-ave-maria/GEN.json" -o /tmp/cdp-gen.json
+          test $(wc -c </tmp/cdp-gen.json) -gt 10000
           grep -q 'cdp-feature-study' /tmp/cdp-ux2.js
           echo "Pré-visualização HTTP, CSS, JavaScript e imagem acessíveis."
 
