@@ -62,3 +62,48 @@ body.cdp-ux2 .cdp-feature-study~*{scroll-margin-top:30px}
 @media(max-width:950px){body.cdp-ux2{padding-left:0}.cdp-sidebar{display:none}.cdp-feature-cards{grid-template-columns:repeat(3,1fr)}body.cdp-ux2 .site-header{min-height:165px}body.cdp-ux2 .site-header .header-inner{min-height:165px}.cdp-study-columns{grid-template-columns:1fr}}
 @media(max-width:700px){body.cdp-ux2{padding-bottom:62px}body.cdp-ux2 .shell{width:calc(100% - 26px)}body.cdp-ux2 .site-header{min-height:155px;background-position:26% center}body.cdp-ux2 .site-header .header-inner{min-height:155px;padding-top:10px;align-items:stretch}body.cdp-ux2 .site-header .brand-block{margin-top:3px;text-align:center}body.cdp-ux2 .site-header .brand-block h1{font-size:24px}body.cdp-ux2 .site-header .brand-block::after{font-size:9px;letter-spacing:1.7px}body.cdp-ux2 .site-nav-host{position:absolute;left:3px;right:auto;top:5px}body.cdp-ux2 .site-menu-trigger{font-size:0;background:#620e0ddb;color:#fff;border:0;padding:6px 10px}body.cdp-ux2 .site-menu-trigger .site-menu-symbol{font-size:24px}.cdp-hero-search{width:100%;margin-top:8px}.cdp-hero-search button{padding:7px 8px}.cdp-feature-cards{grid-template-columns:repeat(2,1fr);padding:12px;gap:8px}.cdp-feature-card{min-height:120px}.cdp-feature-card strong{font-size:15px}.cdp-feature-card small{font-size:11px}.cdp-mobile-nav{display:grid;grid-template-columns:repeat(5,1fr);position:fixed;z-index:95;bottom:0;left:0;right:0;background:#fffaf2;border-top:2px solid #b99865;box-shadow:0 -4px 18px #0002}.cdp-mobile-nav a{min-height:59px;display:flex;flex-direction:column;align-items:center;justify-content:center;font:11px Arial,sans-serif;color:#4a1a15;text-decoration:none}.cdp-mobile-nav .active{background:#690c0b;color:#fff;border-radius:6px}.cdp-mobile-nav span{font-size:21px}.cdp-study-titlebar{display:block}.cdp-study-titlebar h2{font-size:24px}.cdp-study-titlebar p{font-size:12px}.cdp-study-titlebar .cdp-book{font-size:29px}.cdp-study-steps{margin-top:11px}.cdp-study-steps button{flex:1;padding:7px;font-size:12px}.cdp-study-left{display:none}.cdp-stage-picker{display:block}.cdp-reader-tabs button{padding:8px 3px;font-size:11px}.cdp-reader-panel{padding:12px 12px 0}.cdp-reader-text{font-size:16px}.cdp-study-titlebar>div:first-child{gap:8px}}
 @media print{.cdp-sidebar,.cdp-mobile-nav,.cdp-feature-cards,.cdp-hero-search{display:none!important}body.cdp-ux2{padding:0!important}.cdp-reader-text{max-height:none!important;overflow:visible!important}}
+
+/* Ajustes verificados nas capturas reais (desktop e celular). */
+body.cdp-ux2 .site-header{
+ background-color:#432116;
+ background-image:linear-gradient(90deg,rgba(25,8,6,.04),rgba(48,18,11,.42) 47%,rgba(29,9,7,.10)),url('./assets/ux2/hero-foto.webp'),url('./assets/ux2/hero.svg');
+ background-position:center,center 40%,center 40%;
+ background-repeat:no-repeat;
+ background-size:cover,cover,cover;
+}
+.cdp-feature-card{background-size:cover,cover,cover!important;background-position:center!important;background-repeat:no-repeat!important}
+.cdp-study-left li{font-size:14px;line-height:1.55;margin-bottom:5px}
+.cdp-study-left h4{margin:8px 0}
+.cdp-study-left .cdp-study-theme p{font-size:14px;margin:0;line-height:1.55}
+.cdp-mobile-search-button{display:none}
+@media(max-width:700px){
+ body.cdp-ux2 .site-header{
+  min-height:198px;
+  background-position:center,20% center,20% center;
+  background-size:cover,auto 205px,auto 205px;
+ }
+ body.cdp-ux2 .site-header .header-inner{
+  min-height:61px;
+  height:61px;
+  width:100%;
+  padding:8px 53px 7px;
+  background:linear-gradient(90deg,#4c0809,#620e0d);
+ }
+ body.cdp-ux2 .site-header .brand-block{margin:0}
+ body.cdp-ux2 .site-header .brand-block h1{font-size:19px;white-space:nowrap}
+ body.cdp-ux2 .site-header .brand-block::after{font-size:8px;letter-spacing:1px}
+ body.cdp-ux2 .site-nav-host{left:7px;top:6px}
+ body.cdp-ux2 .site-menu-trigger{background:transparent;border:0}
+ .cdp-mobile-search-button{
+  display:grid;place-items:center;position:absolute;right:7px;top:7px;width:43px;height:43px;
+  border:0;background:transparent;color:white;font-size:24px;
+ }
+ body.cdp-ux2 .cdp-hero-search{
+  display:none;position:absolute;left:3%;right:3%;top:69px;width:94%;z-index:5;
+  box-shadow:0 8px 25px #18080599;
+ }
+ body.cdp-ux2 .site-header.cdp-search-open .cdp-hero-search{display:flex}
+ .cdp-reader-tabs{display:flex;overflow-x:auto;scrollbar-width:thin}
+ .cdp-reader-tabs button{flex:0 0 32%;min-width:100px}
+ .cdp-reader-text{max-height:270px}
+}
