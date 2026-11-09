@@ -1,0 +1,44 @@
+name: Teste visual UX 2.0 (desktop e celular)
+
+on:
+  pull_request:
+    paths:
+      - "ux2.css"
+      - "ux2.js"
+      - "tests/ux2-browser.mjs"
+      - "assets/ux2/**"
+      - ".github/workflows/ux2-browser.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  navegador:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 18
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Instalar Playwright e Chromium
+        run: |
+          npm install --no-save playwright@1.58.0
+          npx playwright install --with-deps chromium
+      - name: Preparar pacote público conforme a publicação existente
+        run: |
+          rm -rf dist/ux2-preview
+          node scripts/preparar-publicacao.mjs --output dist/ux2-preview
+      - name: Testar em servidor local sem publicar
+        run: |
+          python3 -m http.server 8765 --bind 127.0.0.1 --directory dist/ux2-preview >/tmp/ux2-http.log 2>&1 &
+          sleep 3
+          node tests/ux2-browser.mjs
+      - name: Guardar capturas do navegador
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: ux2-desktop-mobile
+          path: ux2-capturas/
+          if-no-files-found: ignore
+          retention-days: 15

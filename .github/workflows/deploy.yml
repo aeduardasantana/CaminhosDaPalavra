@@ -42,6 +42,7 @@ jobs:
           node --check app.js
           node --check biblia-estudo-core.js
           node --check biblia-estudo.js
+          node --check ux2.js
           node --check acessibilidade.js
           node --check theology-data.js
           node --check publication-control.js
@@ -62,6 +63,25 @@ jobs:
           node --check scripts/gerar-vinculos-estudo.mjs
           node --check vinculos-estudo-core.js
           python3 -c "import ast; ast.parse(open('scripts/limpar-artefatos-ftp.py', encoding='utf-8').read())"
+
+      - name: Validar integração UX 2.0
+        run: node tests/ux2.test.mjs
+
+      - name: Verificar URL HTTP da pré-visualização (somente PR)
+        if: github.event_name == 'pull_request'
+        env:
+          PREVIEW_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          BASE="https://raw.githack.com/aeduardasantana/CaminhosDaPalavra/$PREVIEW_SHA/dist/ux2-preview"
+          curl --fail --location --silent --show-error --retry 4 --retry-delay 3 "$BASE/historia-da-salvacao.html" -o /tmp/cdp-ux2-preview.html
+          grep -q 'ux2.css' /tmp/cdp-ux2-preview.html
+          curl --fail --location --silent --show-error "$BASE/ux2.css" -o /tmp/cdp-ux2.css
+          curl --fail --location --silent --show-error "$BASE/ux2.js" -o /tmp/cdp-ux2.js
+          curl --fail --location --silent --show-error "$BASE/assets/ux2/hero-foto.webp" -o /tmp/cdp-ux2-hero.webp
+          curl --fail --location --silent --show-error "$BASE/dados/biblia-ave-maria/GEN.json" -o /tmp/cdp-gen.json
+          test $(wc -c </tmp/cdp-gen.json) -gt 10000
+          grep -q 'cdp-feature-study' /tmp/cdp-ux2.js
+          echo "Pré-visualização HTTP, CSS, JavaScript e imagem acessíveis."
 
       - name: Validar Mapa Bíblico Mestre e controle editorial
         run: |

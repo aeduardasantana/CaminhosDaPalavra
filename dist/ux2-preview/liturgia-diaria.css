@@ -1,0 +1,516 @@
+/* Aparência catequética da Liturgia Diária — acessibilidade, cores com rótulos. */
+.calendar-day { position:relative; border-left: 4px solid var(--day-tone, transparent); }
+.calendar-day.daily-theme-verde {--day-tone:#287346;background:#f4faf5}
+.calendar-day.daily-theme-roxo {--day-tone:#76569e;background:#faf6ff}
+.calendar-day.daily-theme-branco {--day-tone:#b6a36d;background:#fbfaf4}
+.calendar-day.daily-theme-vermelho {--day-tone:#b23f3f;background:#fff7f6}
+.calendar-day.daily-theme-rosa {--day-tone:#d47399;background:#fff5f9}
+.calendar-day.daily-theme-nenhum {--day-tone:#666;background:#f6f6f6}
+.calendar-day.is-selected {background:var(--deep);color:#fff}
+.calendar-day .day-color-name {display:block;color:#4c594f;font-size:.66rem;font-weight:800;margin-top:5px}
+.calendar-day.is-selected .day-color-name {color:#fff}
+.daily-liturgy {--daily-color:#287346}
+.daily-theme-verde {--daily-color:#287346}.daily-theme-roxo {--daily-color:#76569e}
+.daily-theme-branco {--daily-color:#b6a36d}.daily-theme-vermelho {--daily-color:#b23f3f}
+.daily-theme-rosa {--daily-color:#d47399}.daily-theme-nenhum {--daily-color:#666}
+.daily-title-block {border-left:5px solid var(--daily-color);padding-left:14px;margin-bottom:16px}
+.daily-title-block h3 {font-size:clamp(1.2rem,2.4vw,1.65rem);margin:6px 0}
+.daily-kicker {font-weight:800;font-size:.8rem;text-transform:capitalize;color:#5a5347!important}
+.daily-metadata {font-size:.84rem}
+.daily-color-note {display:flex;gap:12px;align-items:start;border:1px solid #d9d5cb;background:#fff;padding:13px;border-radius:12px}
+.daily-color-dot {background:var(--daily-color);width:24px;height:24px;min-width:24px;border:1px solid #978b6f;border-radius:50%}
+.daily-color-note p {margin:4px 0 0}
+.daily-liturgical-year {font-size:.83rem;margin:12px 0!important}
+.daily-references,.daily-catechesis,.daily-historical {margin-top:17px;padding-top:15px;border-top:1px solid #e6ded0}
+.daily-references h4,.daily-catechesis h4,.daily-historical h4 {margin:0 0 12px;color:var(--deep)}
+.daily-readings-list {display:grid;grid-template-columns:minmax(95px,145px) minmax(0,1fr);gap:7px 12px;margin:12px 0}
+.daily-readings-list dt {font-weight:750;color:#5a554d}.daily-readings-list dd {margin:0;color:#26231e;font-weight:800}
+.daily-validation,.daily-note,.daily-pending {font-size:.86rem;line-height:1.55}
+.daily-pending {padding:12px;background:#fff9ed;border:1px solid #e9dcbf;border-radius:10px}
+.daily-catechesis {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.daily-catechesis>h4 {grid-column:1/-1}
+.daily-catechesis-card {padding:14px;background:#fff;border:1px solid #ddd7cd;border-radius:12px}
+.daily-catechesis-card h4 {font-size:.94rem;margin:0 0 6px}
+.daily-catechesis-card p {font-size:.87rem;line-height:1.55}
+.daily-source-link {font-size:.78rem;margin-top:10px}
+.daily-footnote {border-top:1px solid #e6ded0;margin-top:17px!important;padding-top:12px;font-size:.8rem}
+.daily-liturgy a {color:#674f17;font-weight:750;text-decoration:underline;text-underline-offset:2px}
+.liturgical-year-bar {margin:14px 0;padding:12px 15px;border:1px solid #d9d0be;border-radius:12px;background:#f8f5ed}
+.liturgical-year-bar strong {display:block}.liturgical-year-bar p {margin:4px 0;font-size:.83rem}
+.liturgical-year-bar label {display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-top:10px;font-weight:750}
+.liturgical-year-bar select {max-width:250px}
+/* Ação de consulta visível no fluxo das leituras; não após santos e fontes. */
+.calendar-reading-tools{display:flex;flex-wrap:wrap;align-items:center;gap:9px 12px;margin:11px 0 15px}
+.calendar-reading-tools button{font:inherit;font-weight:750;cursor:pointer;max-width:100%;min-height:44px;white-space:normal;padding:9px 13px;text-align:center}
+.calendar-reading-tools .primary-action{background:var(--deep);border:1px solid var(--deep);color:#fff}
+.calendar-reading-tools .primary-action:hover{filter:brightness(1.13)}
+.calendar-reading-tools .calendar-reading-notice{flex-basis:100%;font-size:.83rem;line-height:1.55;color:#635b50;margin:0}
+@media(max-width:680px) {.daily-catechesis{grid-template-columns:1fr}.daily-readings-list{grid-template-columns:1fr;gap:4px}.daily-readings-list dd{margin:0 0 8px}.calendar-reading-tools{align-items:stretch;flex-direction:column}.calendar-reading-tools button{width:100%}}
+@media(prefers-reduced-motion:reduce) {.calendar-day{transition:none}}
+
+/* Competência 01/36: alternativas, pareamento de estudo e vocabulário visual. */
+.daily-alternatives,.daily-dictionary{margin-top:19px;padding-top:15px;border-top:1px solid #e6ded0}
+.daily-alternatives h4,.daily-dictionary h4{margin:0 0 12px;color:var(--deep)}
+.daily-notes{padding-left:18px;font-size:.86rem;line-height:1.55;color:#554e43}
+.daily-option,.daily-dictionary-entry{background:#fff;border:1px solid #ded6c9;border-radius:10px;padding:13px;margin:10px 0}
+.daily-option a,.daily-option strong{display:block}
+.daily-dictionary-entry p{margin:8px 0;line-height:1.6}
+.daily-dictionary-entry small{display:block;color:#5a544a}
+@media print {
+  body.printing-nov-2025 *{visibility:hidden!important}
+  body.printing-nov-2025 #calendarDetail,body.printing-nov-2025 #calendarDetail *{visibility:visible!important}
+  body.printing-nov-2025 #calendarDetail{position:absolute;inset:0 auto auto 0;width:100%;max-width:100%;margin:0;padding:0}
+  .daily-source-link,.daily-footnote,.calendar-action{display:none!important}
+  @page{size:A4;margin:12mm}
+}
+
+/* Refrão e primeira estrofe em português brasileiro, com glosa pendente por unidade. */
+.psalm-br-partial{display:grid;gap:8px;align-content:start}
+.psalm-br-partial .psalm-stanza{border:1px solid #ded6c8;border-radius:5px;background:#fff;padding:12px;margin:0;white-space:pre-line}
+.psalm-br-partial .psalm-part-label{display:block;font-size:.84rem;color:#5c4b2e;margin-bottom:6px}
+.psalm-br-partial .psalm-part-text{line-height:1.65}
+.psalm-br-partial .glosa-pending{background:#fbf8ef;border-left:3px solid #a47728}
+
+/* Competência 01/36: acesso diário e pares semânticos não confundidos com texto oficial. */
+.monthly-reading-alert{display:block;border-left:3px solid #a47c2d;background:#fbf5e9;color:#56472d;padding:12px 16px;margin:10px 0 16px;font-size:.9rem;line-height:1.55}
+.monthly-study-sequence{display:grid;gap:8px;align-content:start}
+.monthly-study-unit{border:1px solid #e2d7c7;background:white;padding:12px 14px;margin:0;line-height:1.6;min-width:0}
+.monthly-study-unit .psalm-part-label{display:block;font-size:.77rem;letter-spacing:.03em;color:#755a27;margin-bottom:6px}
+.monthly-study-unit .psalm-part-text{white-space:pre-line;overflow-wrap:anywhere}
+.monthly-study-unit.study-glosa{background:#fff8e9;border-left:3px solid #a57a2f;font-weight:650}
+@media (max-width:640px){.monthly-study-unit{padding:10px}.monthly-reading-alert{padding:10px 12px}}
+
+/* A revisão exige a leitura real: sínteses anteriores só aparecem em notas recolhidas. */
+.monthly-original-pending{border-left:3px solid #ac8240;background:#fbf7ef;padding:12px 14px;line-height:1.7;color:#5a4b39}
+.monthly-confirmed-refrain{font-weight:750;color:#47361c;border:1px solid #d4c5a5;padding:12px;background:#fff}
+.monthly-editorial-details{border-top:1px solid #d9c8aa;margin-top:18px;padding-top:11px}
+.monthly-editorial-details summary{cursor:pointer;font-weight:700;line-height:1.5;color:#765115}
+.monthly-editorial-details ol{padding-left:22px}.monthly-editorial-details li{padding:8px 0;border-bottom:1px solid #ece2cf}
+.monthly-editorial-details li p{font-size:.9rem;line-height:1.6;margin:4px 0}
+.monthly-draft-note{font-weight:700;overflow-wrap:anywhere}
+.lce-pdf-button:disabled{cursor:not-allowed;opacity:.65}
+
+/* Acesso à leitura efetiva da fonte brasileira, caso o serviço responda e a referência coincida. */
+.monthly-remote-status{background:#f7f2e8;border-left:3px solid #a7844e;padding:12px 15px;line-height:1.65}
+.monthly-remote-text{font-size:1rem;line-height:1.85;white-space:pre-wrap;overflow-wrap:anywhere}
+.monthly-remote-text .monthly-remote-title{display:block;margin-bottom:16px}
+.monthly-remote-text .monthly-remote-scripture,.monthly-remote-text .monthly-remote-stanza{margin:0 0 1.25rem}
+.monthly-remote-refrain{font-weight:760;padding:9px 12px;background:#f5eedf;border-left:3px solid #a77e30;margin:12px 0}
+.monthly-remote-options{border:1px solid #d6cab3;padding:13px;display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+.monthly-remote-options p{flex-basis:100%;margin:0;font-size:.88rem}
+.monthly-remote-options button{font:inherit;padding:9px 12px;background:#fff;cursor:pointer;border:1px solid #ad9369;border-radius:4px}
+.monthly-remote-options button[aria-pressed=true]{background:#553f19;color:#fff}
+
+
+/* Experiência de leitura: hierarquia discreta, sem banners e avisos repetidos. */
+.liturgy-editorial-caption{font-size:.88rem;line-height:1.5;color:#726652;margin:9px 0 0}
+.monthly-selection-note{margin:0 0 12px;font-size:.86rem;color:#675a43}
+.accordion-item[data-editorial-study="true"] .status-pill{
+  background:transparent;border:0;color:#74654d;font-size:.72rem;font-weight:650;padding:0;
+}
+.accordion-item[data-editorial-study="true"] .source-version:empty{display:none}
+.accordion-item[data-editorial-study="true"] .pane-label{
+  font-size:.86rem;line-height:1.3;font-weight:750;letter-spacing:0;
+  text-transform:none;color:#3c3020;background:transparent;padding:0;border-radius:0;
+  margin:0 0 15px;
+}
+.accordion-item[data-editorial-study="true"] .glosa-pane .pane-label{color:#765115;background:none}
+.accordion-item[data-editorial-study="true"] .text-pane{padding:25px 27px 24px}
+.accordion-item[data-editorial-study="true"] .glosa-pane{background:#fcfaf6}
+.monthly-glosa-list{display:grid;gap:0}
+.monthly-glosa-unit{margin:0;padding:12px 0;border-bottom:1px solid #e6dfd3}
+.monthly-glosa-unit:first-child{padding-top:0}
+.monthly-glosa-unit:last-child{border-bottom:0}
+.monthly-glosa-reference{display:block;color:#876019;font-size:.83rem;font-weight:750;margin-bottom:6px}
+.monthly-glosa-draft{font-size:.98rem;line-height:1.7;font-weight:650;color:#302920;margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.monthly-editorial-details{margin-top:20px;padding:12px 0 0;border-top:1px solid #e0d5c4}
+.monthly-editorial-details summary{color:#6e5d3c;font-size:.85rem;font-weight:650;cursor:pointer}
+.monthly-editorial-details ol{margin:12px 0 0;padding:0 0 0 19px}
+.monthly-editorial-details li{padding:8px 0;font-size:.88rem}
+.monthly-editorial-details li p{font-weight:400;color:#5d564c;margin:4px 0;font-size:.88rem}
+.reading-source-details{padding:12px 0 0;margin-top:18px;border-top:1px solid #e9e2d8;font-size:.82rem;line-height:1.6;color:#746b5d}
+.reading-source-details summary{cursor:pointer;font-size:.82rem;color:#766a55;font-weight:650}
+.reading-source-details a{display:inline-block;margin-top:9px;font-size:.82rem;font-weight:650;color:#775519}
+.reading-source-note,.reading-source-extra p{margin:8px 0 0;color:#756b5b;font-size:.8rem;line-height:1.55}
+.reading-source-details .original-source-link[hidden]{display:none}
+.accordion-panel>.share-liturgy-link{
+  display:block;width:auto;margin:4px 26px 17px auto;padding:5px 0;
+  border:0;background:transparent;box-shadow:none;text-decoration:underline;
+  text-decoration-color:#c5b9a7;color:#766551;font-size:.79rem;font-weight:650;
+}
+.accordion-panel>.share-liturgy-link:hover{background:transparent;color:#493618}
+.accordion-panel>.share-liturgy-link:focus-visible,
+.reading-source-details summary:focus-visible,.monthly-editorial-details summary:focus-visible{outline:2px solid #936c28;outline-offset:3px}
+.accordion-item[data-editorial-study="true"] .monthly-remote-text{line-height:1.72;white-space:normal}
+.accordion-item[data-editorial-study="true"] .monthly-remote-title{display:block;margin:0 0 16px;font-size:.95rem}
+.accordion-item[data-editorial-study="true"] .monthly-remote-scripture,
+.accordion-item[data-editorial-study="true"] .monthly-remote-stanza{font-size:1rem;line-height:1.72;margin:0 0 1rem}
+.monthly-remote-verse{padding:0}
+.monthly-verse-number{font-size:.7em;font-weight:750;color:#8b682b;vertical-align:super;margin-right:5px}
+.accordion-item[data-editorial-study="true"] .monthly-remote-refrain{
+  background:transparent;padding:5px 0;border:0;font-weight:750;margin:5px 0 10px
+}
+.accordion-item[data-editorial-study="true"] .monthly-remote-status{
+  padding:9px 0;background:transparent;border:0;color:#766a57;font-size:.88rem
+}
+@media(max-width:800px){
+  .accordion-item[data-editorial-study="true"] .text-pane{padding:21px 19px}
+}
+@media(max-width:650px){
+  .accordion-item[data-editorial-study="true"] .parallel-view{grid-template-columns:1fr}
+  .accordion-item[data-editorial-study="true"] .text-pane{padding:20px 16px}
+  .accordion-item[data-editorial-study="true"] .glosa-pane{
+    border-left:0;border-top:1px solid #ddd2c0
+  }
+  .accordion-panel>.share-liturgy-link{margin-right:16px}
+}
+@media print{
+  .reading-source-details,.monthly-editorial-details,.accordion-panel>.share-liturgy-link{display:none!important}
+}
+
+/* Notas fora da comparação: ocupam largura integral, sem esticar apenas a glosa. */
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes{
+  border-top:1px solid #e7ded0;
+  padding:0 26px;
+  background:#fffdf8;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes .monthly-editorial-details{
+  border:0;margin:0;padding:0;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes summary{
+  display:list-item;list-style:disclosure-closed;
+  font-weight:650;font-size:.85rem;
+  padding:13px 4px;color:#715a33;
+  cursor:pointer;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes details[open] summary{list-style:disclosure-open}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:0 28px;margin:0;padding:0 0 14px 20px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li{
+  break-inside:avoid;padding:8px 0 9px;border-bottom:1px solid #e9e1d4;
+  line-height:1.6;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .liturgy-study-notes{padding:0 16px}
+  .accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{grid-template-columns:1fr}
+}
+@media print{.liturgy-study-notes{display:none!important}}
+
+/* Separação semântica do material de estudo: sinalização ≠ instrução ≠ análise. */
+.accordion-item[data-editorial-study="true"] .monthly-glosa-legend {
+  color:#65707b;font-size:.77rem;font-weight:550;line-height:1.5;
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-draft{
+  display:flex;flex-direction:column;align-items:flex-start;
+  gap:7px;margin:0;font-size:1rem;line-height:1.65;font-weight:500;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-signs{
+  display:block;width:100%;
+  font-size:1rem;font-weight:780;line-height:1.65;
+  color:#332719;white-space:pre-wrap;overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction{
+  display:block;align-self:stretch;
+  padding:8px 11px;background:#edf2f6;
+  border-left:3px solid #8da3b8;border-radius:3px;
+  color:#425768;font-size:.79rem;line-height:1.55;
+  font-style:normal;font-weight:430;letter-spacing:0;
+  white-space:normal;overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction-label{
+  display:block;margin-bottom:2px;
+  font-size:.7rem;line-height:1.4;font-weight:760;
+  color:#425d73;letter-spacing:.015em;
+}
+.accordion-item[data-editorial-study="true"] .monthly-glosa-direction-text{
+  display:block;font-weight:450;line-height:1.5;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes{
+  background:#f1f4f6;border-top:2px solid #cbd4dc;
+  color:#344453;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes summary{
+  color:#304b60;font-weight:760;font-size:.9rem;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes .monthly-analysis-intro{
+  color:#465967;font-size:.82rem;line-height:1.55;
+  margin:0 0 8px;padding:0 4px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes ol{
+  padding-bottom:18px;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li{
+  border-bottom:1px solid #d1dae1;
+  color:#344553;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li>strong{
+  display:block;font-size:.84rem;margin-bottom:5px;color:#2c455b;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li p{
+  color:#344553;font-size:.85rem;line-height:1.6;
+}
+.accordion-item[data-editorial-study="true"] .liturgy-study-notes li p strong{
+  font-weight:740;color:#344e62;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .monthly-glosa-direction{font-size:.83rem}
+  .accordion-item[data-editorial-study="true"] .monthly-glosa-signs{font-size:1rem}
+}
+@media print{
+  .monthly-glosa-direction{background:#edf2f6!important;color:#394f60!important}
+}
+
+/* Salmo responsorial: refrão único e estrofes com referências verificáveis.
+   Mantém a estrutura responsorial pela instrução 'repetir após cada estrofe'. */
+.accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box{
+  padding:14px 16px;
+  background:#f8f1e4;
+  border:1px solid #d8c39c;
+  border-left:4px solid #a27827;
+  border-radius:6px;
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-box-label{
+  display:block;margin:0 0 9px;
+  color:#725015;font-size:.83rem;font-weight:800;
+  line-height:1.4;letter-spacing:.01em;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box .monthly-remote-refrain{
+  background:transparent;border:0;
+  padding:0;margin:0 0 6px;
+  color:#2f281e;font-size:1rem;line-height:1.6;font-weight:760;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-repeat-note{
+  display:block;font-size:.78rem;line-height:1.45;
+  color:#746449;font-weight:550;margin:9px 0 0;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanzas{
+  display:grid;grid-template-columns:minmax(0,1fr);
+  gap:12px;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanza{
+  padding:15px 16px;margin:0;
+  background:#fff;border:1px solid #e3d8c7;
+  border-radius:6px;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-stanza .monthly-remote-stanza{
+  margin:0;line-height:1.75;font-size:1rem;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse{
+  padding:8px 0;border-bottom:1px solid #e5dfd6;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse:first-of-type{padding-top:0}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse:last-child{border-bottom:0;padding-bottom:0}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-glosa-verse .monthly-glosa-reference{
+  font-size:.74rem;margin:0 0 6px;color:#6a593c;
+}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-study .monthly-psalm-stanza{background:#fffcf6}
+.accordion-item[data-editorial-study="true"] .monthly-psalm-study .monthly-psalm-refrain-box{
+  background:#f8f1e4;
+}
+@media(max-width:680px){
+  .accordion-item[data-editorial-study="true"] .monthly-psalm-refrain-box,
+  .accordion-item[data-editorial-study="true"] .monthly-psalm-stanza{padding:12px}
+}
+@media print{
+  .monthly-psalm-refrain-box,.monthly-psalm-stanza{break-inside:avoid}
+}
+
+/* Aclamações: palavras do leitor e resposta da assembleia sem confundir com versículos. */
+.liturgical-dialogue{
+  margin:20px 0 0;padding:13px 16px;background:#f9f5eb;
+  border:1px solid #ded3bd;border-left:3px solid #a67c31;
+  border-radius:5px;line-height:1.55;color:#3a3021;
+}
+.liturgical-dialogue-title{
+  display:block;margin:0 0 9px;font-size:.76rem;
+  line-height:1.4;font-weight:750;color:#715329;
+}
+.liturgical-dialogue-line{
+  margin:5px 0;font-size:.95rem;line-height:1.5;
+}
+.liturgical-dialogue-line strong{
+  font-weight:750;color:#51412a;
+}
+.liturgical-dialogue-study{
+  background:#edf2f6;border-color:#c6d3de;
+  border-left-color:#829cb3;color:#354b5e;
+}
+.liturgical-dialogue-study .liturgical-dialogue-title,
+.liturgical-dialogue-study .liturgical-dialogue-line strong{color:#34516c}
+.liturgical-dialogue-study small{display:block;margin-top:9px;font-size:.76rem;color:#597082}
+@media(max-width:650px){.liturgical-dialogue{margin-top:16px;padding:12px}}
+
+/* Edição: selecionar tradução das leituras, mantendo o salmo CNBB. */
+.liturgia-edition-choice{display:flex;align-items:center;flex-wrap:wrap;gap:10px 20px;
+ padding:14px 16px;margin:16px 0 8px;border:1px solid #d7c7ab;border-radius:8px;background:#faf8f4}
+.liturgia-edition-choice legend{font-weight:750;padding:0 5px;color:#473720}
+.liturgia-edition-choice label{display:flex;align-items:center;gap:8px;font-weight:650;cursor:pointer}
+.liturgia-edition-choice input{width:17px;height:17px;accent-color:#7d5924}
+.liturgia-edition-choice small{flex-basis:100%;font-size:.78rem;color:#685e50}
+.liturgia-edicao-pendente{padding:16px 12px;margin:4px 0;background:#eef3f7;border-left:3px solid #8197aa;
+ color:#355164;font-size:.95rem;line-height:1.6}
+.liturgia-ave-maria-texto{white-space:pre-wrap;line-height:1.8}
+.liturgia-ave-maria-glosa{padding:10px 0;border-bottom:1px solid #e3d8cd}
+.liturgy-study-notes[hidden]{display:none!important}
+@media(max-width:680px){.liturgia-edition-choice{padding:11px;gap:10px}}
+
+/* Leitura paralela sincronizada: cada trecho mantém lado a lado texto e glosa.
+   Linhas sutis, sem cartões coloridos excessivos; responsivo por trecho. */
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  align-items:start;column-gap:0;
+}
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.text-pane{
+  min-width:0;align-self:stretch;padding:22px 27px 13px;
+  border-bottom:1px solid #e6ded1;
+}
+.accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.glosa-pane{
+  border-left:1px solid #e6ded1;
+}
+.parallel-view[data-aligned="true"] .original-pane .original-text,
+.parallel-view[data-aligned="true"] .glosa-pane .glosa-text{display:none!important}
+.accordion-item[data-editorial-study="true"] .lce-parallel-rows{
+  grid-column:1/-1;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-row{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  border-bottom:1px solid #e3ded7;break-inside:avoid;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-row:nth-child(even){background:#f8f8f7}
+.accordion-item[data-editorial-study="true"] .lce-parallel-original,
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+  min-width:0;padding:18px 27px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa{border-left:1px solid #e6ded1}
+.accordion-item[data-editorial-study="true"] .lce-parallel-reference{
+  display:block;font-size:.83rem;font-weight:760;color:#76541f;margin:0 0 9px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-title{
+  display:block;color:#372e20;font-weight:700;margin:0 0 8px;line-height:1.5;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-text{
+  margin:0;font-size:1rem;line-height:1.75;color:#2e2a24;white-space:pre-wrap;
+  overflow-wrap:anywhere;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-glosa .monthly-glosa-draft{margin:0 0 8px}
+.accordion-item[data-editorial-study="true"] .lce-parallel-unit-reference{
+  display:block;margin:8px 0 6px;color:#6e5c42;font-size:.77rem;font-weight:690;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-mobile-label{display:none}
+.accordion-item[data-editorial-study="true"] .lce-parallel-repeat{
+  display:block;color:#746449;font-size:.8rem;line-height:1.5;margin-top:8px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer{
+  grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-original,
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+  padding:18px 27px;min-width:0;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+  border-left:1px solid #e6ded1;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer .liturgical-dialogue{
+  margin:0 0 14px;
+}
+.accordion-item[data-editorial-study="true"] .lce-parallel-footer .reading-source-details{
+  margin-top:8px;
+}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]{
+    grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;
+  }
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"]>.text-pane{
+    padding:14px 13px 11px!important;font-size:.86rem;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-row{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-original,
+  .accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+    padding:15px 17px;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-glosa{
+    border-left:0;border-top:1px dashed #e0d7ca;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-mobile-label{
+    display:block;font-size:.74rem;color:#76541f;font-weight:760;margin:0 0 8px;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer{
+    grid-template-columns:minmax(0,1fr);
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-original,
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+    padding:15px 17px;border-left:0;
+  }
+  .accordion-item[data-editorial-study="true"] .lce-parallel-footer-glosa{
+    border-top:1px solid #e6ded1;
+  }
+}
+@media print{
+  .lce-parallel-row{break-inside:avoid}
+  .lce-parallel-rows{page-break-inside:auto}
+}
+
+
+/* Paralelo aprovado: dois cabeçalhos, um bloco horizontal por unidade comum.
+   Os pares têm um único limite de linha; conteúdo original preservado em nós ocultos. */
+.parallel-view[data-aligned="true"]{
+  display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);background:#fff
+}
+.parallel-view[data-aligned="true"]>.original-pane,
+.parallel-view[data-aligned="true"]>.glosa-pane{
+  padding:17px 24px 7px;min-width:0;border-bottom:1px solid #ddd6c8
+}
+.parallel-view[data-aligned="true"]>.glosa-pane{border-left:1px solid #ddd6c8}
+.parallel-view[data-aligned="true"]>.original-pane .original-text,
+.parallel-view[data-aligned="true"]>.glosa-pane .glosa-text{display:none!important}
+.parallel-view[data-aligned="true"]>.original-pane .source-version{display:none}
+.parallel-view[data-aligned="true"] .pane-label{margin:0 0 9px}
+.lce-parallel-rows{grid-column:1/-1;min-width:0}
+.lce-parallel-row{
+  display:grid;grid-template-columns:repeat(2,minmax(0,1fr));
+  border-bottom:1px solid #e0d8cc;break-inside:avoid
+}
+.lce-parallel-row:nth-child(even){background:#faf8f4}
+.lce-parallel-row:last-child{border-bottom:0}
+.lce-parallel-original,.lce-parallel-glosa{min-width:0;padding:17px 24px 19px;overflow-wrap:anywhere}
+.lce-parallel-glosa{border-left:1px solid #ded8cd;background:rgba(246,241,231,.23)}
+.lce-parallel-reference{display:block;color:#85611f;font-size:.81rem;font-weight:800;margin-bottom:10px}
+.lce-parallel-title{display:block;line-height:1.5;margin-bottom:10px;font-size:.91rem}
+.lce-parallel-text{font-size:1.02rem;line-height:1.78;white-space:pre-line;margin:0}
+.lce-parallel-glosa .monthly-glosa-draft{margin:0 0 9px;gap:6px}
+.lce-parallel-glosa .monthly-glosa-signs{font-weight:760}
+.lce-parallel-mobile-label{display:none}
+.lce-parallel-unit-reference{display:block;color:#775d37;font-size:.8rem;font-weight:650;margin:7px 0 5px}
+.lce-parallel-repeat,.lce-refrain-instruction{display:block;margin-top:9px;font-size:.79rem;color:#75644b;font-weight:600}
+.lce-parallel-footer{display:grid;grid-column:1/-1;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid #e0d8cc}
+.lce-parallel-footer-original,.lce-parallel-footer-glosa{min-width:0;padding:14px 24px}
+.lce-parallel-footer-glosa{background:rgba(246,241,231,.23);border-left:1px solid #ded8cd}
+.lce-parallel-footer .liturgical-dialogue{margin:0 0 12px}
+.lce-legacy-psalm-rows .psalm-refrain,.lce-legacy-psalm-rows .psalm-stanza{
+ border:0;box-shadow:none;margin:0;padding:0;background:transparent
+}
+.lce-legacy-psalm-rows .psalm-header{margin-bottom:12px}
+.lce-legacy-psalm-rows .psalm-part-text{white-space:pre-line}
+@media(max-width:720px){
+  .accordion-item[data-editorial-study="true"] .parallel-view[data-aligned="true"],
+  .parallel-view[data-aligned="true"]{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .parallel-view[data-aligned="true"]>.original-pane,
+  .parallel-view[data-aligned="true"]>.glosa-pane{padding:12px 10px 7px}
+  .lce-parallel-row{grid-template-columns:minmax(0,1fr)}
+  .lce-parallel-original,.lce-parallel-glosa{padding:13px 15px}
+  .lce-parallel-glosa{border-left:0;border-top:1px dashed #ded3c1}
+  .lce-parallel-mobile-label{display:block;margin:0 0 7px;color:#7c5a23;font-size:.75rem;font-weight:800}
+  .lce-parallel-footer{grid-template-columns:minmax(0,1fr)}
+  .lce-parallel-footer-original,.lce-parallel-footer-glosa{padding:12px 15px}
+  .lce-parallel-footer-glosa{border-left:0;border-top:1px solid #ded8cd}
+}
+@media print{
+  .lce-parallel-row{break-inside:avoid}
+  .lce-parallel-original,.lce-parallel-glosa{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
