@@ -1,0 +1,55 @@
+name: BLOCO 18 — Homologação da experiência bíblica
+
+on:
+  pull_request:
+    paths:
+      - 'tests/homologacao-bloco18.cjs'
+      - '.github/workflows/homologacao-bloco18.yml'
+      - 'biblia-estudo*'
+      - 'scripts/preparar-publicacao.mjs'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  homologacao:
+    name: Mobile, acessibilidade, links, teologia e desempenho
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Instalar ferramentas de navegador e auditoria WCAG
+        run: npm install --no-save --no-package-lock playwright-core @axe-core/playwright
+      - name: Preparar pacote de homologação isolado
+        run: node scripts/preparar-publicacao.mjs --output dist
+      - name: Iniciar servidor local sem publicação FTP
+        run: |
+          python3 -m http.server 8765 --directory dist > /tmp/cdp-b18-http.log 2>&1 &
+          sleep 3
+          curl --fail --silent --head http://127.0.0.1:8765/biblia-estudo.html
+      - name: Executar testes Chromium em quatro telas
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+          B18_BASE_URL: http://127.0.0.1:8765
+        run: node tests/homologacao-bloco18.cjs
+      - name: Verificar respostas da versão publicada na Locaweb
+        if: always()
+        continue-on-error: true
+        run: |
+          for path in biblia-estudo.html verse-index.js dados/biblia-ave-maria/GEN.json; do
+            echo "PUBLICO $path"
+            curl --location --silent --show-error --output /dev/null --max-time 15 \
+              --write-out 'HTTP=%{http_code}; TTFB=%{time_starttransfer}s; TOTAL=%{time_total}s; BYTES=%{size_download}\\n' \
+              "https://caminhosdapalavra.compassrosesystems.com.br/$path" || true
+          done
+      - name: Preservar relatório técnico (não inclui texto bíblico)
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: bloco18-homologacao-relatorio
+          path: reports/bloco18/homologacao.json
+          if-no-files-found: warn
