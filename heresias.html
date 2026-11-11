@@ -62,6 +62,7 @@ function norm(s){return String(s||"").normalize("NFD").replace(/[\u0300-\u036f]/
 function addText(el,tag,text,className){const child=document.createElement(tag);child.textContent=text;if(className)child.className=className;el.appendChild(child);return child}
 function family(r){
  const s=norm(r.classificacao);
+ if(s.includes("divergencia doutrinal"))return "Correntes e tradições em divergência doutrinal";
  if(s.startsWith("heresia")||s.includes("heresia e"))return "Heresias históricas";
  if(s.includes("cisma"))return "Cismas e controvérsias sacramentais";
  if(s.includes("associacao"))return "Associações incompatíveis";

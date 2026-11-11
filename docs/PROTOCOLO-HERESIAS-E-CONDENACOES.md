@@ -1,10 +1,10 @@
 # Catálogo de heresias, controvérsias e posições doutrinais — protocolo editorial
 
-**Estado:** página incorporada ao site, revisão documental contínua. **Data de referência:** 12/10/2026.
+**Estado:** página incorporada ao site, revisão documental contínua. **Data de referência:** 11/11/2026.
 
 ## Alcance desta proposta
 
-O arquivo `dados/heresias-controversias.json` reúne **88 entradas** históricas e temáticas. `heresias.html` oferece busca textual e filtros por tipo de pronunciamento e período, com documentos de referência. A página está vinculada ao menu lateral do site. O inventário é continuamente ampliado e revisado, sem pretensão de exaustividade.
+O arquivo `dados/heresias-controversias.json` reúne **90 entradas** históricas e temáticas. `heresias.html` oferece busca textual e filtros por tipo de pronunciamento e período, com documentos de referência. A página está vinculada ao menu lateral do site. O inventário é continuamente ampliado e revisado, sem pretensão de exaustividade.
 
 A seção integra os estudos sobre **Escritura, Tradição e Magistério**. **Não** há glosas de Libras nesta área. O recurso transversal de acessibilidade é o VLibras. A elaboração de glosas permanece restrita à **liturgia dominical**, conforme diretriz do projeto. **Oração Visual é produto separado**.
 
@@ -38,6 +38,13 @@ Os tópicos abaixo são **pistas de pesquisa documental, não uma lista de heres
 
 ## Observações de integridade
 
-Este inventário **não pretende esgotar a história das heresias** nem substituir obras de referência especializadas. Os 88 registros representam temas diferentes, inclusive proposições específicas, e **não equivalem a 88 heresias formalmente condenadas**. É fundamental preservar a classificação registrada em cada ficha.
+Este inventário **não pretende esgotar a história das heresias** nem substituir obras de referência especializadas. Os 90 registros representam temas diferentes, inclusive proposições específicas, e **não equivalem a 88 heresias formalmente condenadas**. É fundamental preservar a classificação registrada em cada ficha.
 
 A página funciona como catálogo referenciado, com contextualização e aviso editorial de revisão contínua. As fontes documentais deverão ser revisitadas e detalhadas progressivamente, preservando classificações corretas. Não inserir oração nem anunciar tradução integral em Libras.
+
+## Inclusão editorial — 11/11/2026
+
+- **Noaquismo / noachismo / noahidismo (id 89):** tradição religiosa não cristã associada às Sete Leis de Noé, com raízes na tradição rabínica e expressões contemporâneas. Registrar a divergência cristológica quando comprovada em fontes dos próprios grupos; não confundir com a aliança bíblica com Noé, positivamente reconhecida no Catecismo (nn. 56–58). Não atribuir condenação formal ou animosidade contra católicos sem documento específico.
+- **Deísmo (id 90):** corrente filosófico-religiosa, tratada expressamente no Catecismo (n. 285) e comparada ao ensino católico sobre Revelação e Providência (nn. 50–73 e 301–324). Não classificar indistintamente todos os deístas como adeptos de uma única tese.
+- **Crescimento:** sem estimativa quantitativa verificável para esses dois grupos no Brasil, não afirmar aumento percentual, representatividade ou tendência nacional.
+- **Fonte e proveniência:** Santa Sé para a posição católica; fontes judaicas e autodescrição de organizações noaítas para caracterizar o movimento. O registro no catálogo é comparativo, não um novo juízo formal do Magistério.

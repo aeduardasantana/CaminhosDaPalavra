@@ -1,10 +1,10 @@
 {
   "titulo": "Heresias, controvérsias e condenações doutrinais",
   "subtitulo": "Busca documentada de heresias, correntes e práticas condenadas ou criticadas; cada tipo é diferenciado.",
-  "data_de_referencia": "2026-10-12",
+  "data_de_referencia": "2026-11-11",
   "estado": "acervo público de consulta: entradas com documentos de referência; revisão editorial contínua",
   "criterio": "Não classificar como heresia o que a fonte apresenta apenas como prática proibida, incompatibilidade associativa ou tese censurada. Cada resumo exige revisão contextual e histórica.",
-  "total": 88,
+  "total": 90,
   "registros": [
     {
       "id": 1,
@@ -1071,6 +1071,63 @@
         "titulo": "Conselhos Pontifícios, Jesus Cristo, portador da água da vida (2003)",
         "url": "https://www.vatican.va/roman_curia/pontifical_councils/interelg/documents/rc_pc_interelg_doc_20030203_new-age_en.html"
       }
+    },
+    {
+      "id": 89,
+      "titulo": "Noaquismo (noachismo ou noahidismo)",
+      "periodo": "XX–XXI",
+      "classificacao": "Tradição religiosa não cristã em divergência doutrinal",
+      "aliases": [
+        "noachismo",
+        "noahidismo",
+        "noaquismo",
+        "noaísmo",
+        "movimento noaíta",
+        "noahide",
+        "Bnei Noach",
+        "benê noach",
+        "sete leis de Noé"
+      ],
+      "descricao": "Expressões contemporâneas de um caminho religioso para não judeus baseado nas Sete Leis de Noé, segundo a tradição rabínica. Algumas organizações noaítas não reconhecem Jesus como revelação divina nem o Novo Testamento como Escritura. Não se deve confundir o movimento atual com a aliança bíblica de Deus com Noé.",
+      "posicao": "O Catecismo reconhece a aliança de Deus com Noé (nn. 56–58), mas professa que a Revelação chega à sua plenitude em Jesus Cristo (nn. 65–67 e 73). Essa divergência cristológica não constitui, por si só, declaração eclesial de heresia formal nem condenação específica de todo o movimento.",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 56–58, 65–67 e 73",
+        "url": "https://www.vatican.va/archive/cathechism_po/index_new/p1s1c2_50-141_po.html"
+      },
+      "fontes_adicionais": [
+        {
+          "titulo": "My Jewish Learning — The Noahide Laws (contexto da tradição judaica)",
+          "url": "https://www.myjewishlearning.com/article/the-noahide-laws/"
+        },
+        {
+          "titulo": "Noahide Nations — FAQ (autodescrição de uma organização noaíta)",
+          "url": "https://noahidenations.com/index.php/i-m-new-to-this/803-faq"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "titulo": "Deísmo",
+      "periodo": "XVII–XXI",
+      "classificacao": "Corrente filosófico-religiosa em divergência doutrinal",
+      "aliases": [
+        "deismo",
+        "deísta",
+        "deista",
+        "deism"
+      ],
+      "descricao": "Corrente filosófico-religiosa que reconhece um Criador, mas, em formulações clássicas, dispensa a Revelação sobrenatural e concebe Deus como não interveniente na ordem criada. Há diferenças entre autores e vertentes deístas.",
+      "posicao": "O Catecismo (n. 285) distingue o deísmo da doutrina cristã da criação. A Igreja ensina que Deus sustenta o universo e o conduz por sua Providência (nn. 301–324) e que se revelou plenamente em Jesus Cristo (nn. 65–67 e 73).",
+      "fonte": {
+        "titulo": "Catecismo da Igreja Católica, nn. 285 e 301–324",
+        "url": "https://www.vatican.va/content/dam/wss/archive/cathechism_po/index_new/p1s2c1_198-421_po.html"
+      },
+      "fontes_adicionais": [
+        {
+          "titulo": "Catecismo da Igreja Católica, nn. 50–73 — Revelação divina",
+          "url": "https://www.vatican.va/archive/cathechism_po/index_new/p1s1c2_50-141_po.html"
+        }
+      ]
     }
   ]
 }

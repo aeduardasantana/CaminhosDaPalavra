@@ -20,12 +20,13 @@ O ambiente também serve a cristãos que desejam ler a Bíblia, manter uma camin
 
 A assinatura **por Libras com Eduarda** preserva a origem e a autoria do projeto sem limitar a plataforma exclusivamente à Libras.
 
-## Heresias, teorias e condenações documentadas (12/10/2026)
+## Heresias, teorias e condenações documentadas (atualização 11/11/2026)
 
-A página `heresias.html` é um catálogo público de pesquisa e estudo com **88 registros editoriais**, pesquisáveis por nome, tese, documento, autoridade e texto; possui filtros por período e família de pronunciamento. Cada registro identifica **a doutrina ou prática examinada, a posição da Igreja, sua classificação e uma fonte documental**. É um acervo em expansão, não uma lista exaustiva nem uma declaração de que todos os registros sejam heresias formais.
+A página `heresias.html` é um catálogo público de pesquisa e estudo com **90 registros editoriais**, pesquisáveis por nome, tese, documento, autoridade e texto; possui filtros por período e família de pronunciamento. Cada registro identifica **a doutrina ou prática examinada, a posição da Igreja, sua classificação e uma fonte documental**. É um acervo em expansão, não uma lista exaustiva nem uma declaração de que todos os registros sejam heresias formais.
 
 - `dados/heresias-controversias.json`: dados das fichas, com link de consulta e descrição.
 - `docs/PROTOCOLO-HERESIAS-E-CONDENACOES.md`: regras de revisão e classificação.
+- **Noaquismo/noachismo e deísmo** foram incluídos como correntes em divergência doutrinal, sem atribuição automática de heresia formal ou oposição pessoal à Igreja; ver protocolo editorial.
 - **Maçonaria** é enquadrada como associação considerada incompatível, com referências de 1884, 1983 e 2023; **gnosticismo** e as escolas antigas aparecem em contexto histórico. Não se equiparam cismas, heresias, opiniões condenadas, ideologias e práticas.
 - O conteúdo permanece sujeito a revisão contínua do teor e do alcance de cada pronunciamento e de todos os links de fonte.
 - O **VLibras** é transversal às páginas do projeto; **não** foram criadas glosas para esta seção. A glosa própria é recurso reservado à liturgia dominical.
