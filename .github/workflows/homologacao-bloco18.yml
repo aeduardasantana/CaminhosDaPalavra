@@ -36,6 +36,16 @@ jobs:
           CHROME_PATH: /usr/bin/google-chrome
           B18_BASE_URL: http://127.0.0.1:8765
         run: node tests/homologacao-bloco18.cjs
+      - name: Verificar respostas da versão publicada na Locaweb
+        if: always()
+        continue-on-error: true
+        run: |
+          for path in biblia-estudo.html verse-index.js dados/biblia-ave-maria/GEN.json; do
+            echo "PUBLICO $path"
+            curl --location --silent --show-error --output /dev/null --max-time 15 \
+              --write-out 'HTTP=%{http_code}; TTFB=%{time_starttransfer}s; TOTAL=%{time_total}s; BYTES=%{size_download}\\n' \
+              "https://caminhosdapalavra.compassrosesystems.com.br/$path" || true
+          done
       - name: Preservar relatório técnico (não inclui texto bíblico)
         if: always()
         uses: actions/upload-artifact@v4
