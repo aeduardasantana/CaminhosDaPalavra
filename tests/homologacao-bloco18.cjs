@@ -144,7 +144,7 @@ async function exercise(browser,label,width,height){
     judge('ACESSIBILIDADE-SEMANTICA-'+label,doc.lang==='pt-BR'&&doc.main===1&&doc.missingLabels===0,
       'lang='+doc.lang+', main='+doc.main+', campos sem rótulo='+doc.missingLabels);
     const accessibility=await new AxeBuilder({page}).withTags(['wcag2a','wcag2aa','wcag21a','wcag21aa','wcag22aa']).analyze();
-    const violations=accessibility.violations.map(v=>({id:v.id,impact:v.impact,ocorrencias:v.nodes.length}));
+    const violations=accessibility.violations.map(v=>({id:v.id,impact:v.impact,ocorrencias:v.nodes.length,alvos:v.nodes.slice(0,3).map(n=>n.target.join(' > '))}));
     judge('ACESSIBILIDADE-AXE-'+label,violations.length===0,
       violations.length+' regras infringidas: '+JSON.stringify(violations));
     const focus=await page.keyboard.press('Tab').then(()=>page.evaluate(()=>document.activeElement?.tagName));
@@ -188,6 +188,8 @@ async function run(){
   fs.writeFileSync(path.join(folder,'homologacao.json'),JSON.stringify(report,null,2)+'\n');
   console.log('BLOCO 18 — '+report.conclusao+'; '+JSON.stringify(counts));
   for(const r of results.filter(x=>x.status!=='APROVADO'))console.log(r.status+' | '+r.id+' | '+r.detail.slice(0,400));
+  for(const m of metrics)console.log('METRICA | '+m.viewport+' | '+JSON.stringify(m.doc)+' | totalMs='+m.totalMs);
+  for(const l of links)console.log('LINKS | '+l.pagina+' | internos='+l.internos+' | quebrados='+l.quebrados.length);
   if(counts.BLOQUEANTE||counts.FALHA)process.exitCode=1;
 }
 run().catch(error=>{console.error('B18 falhou sem relatório:',error);process.exitCode=1;});
